@@ -1,0 +1,6 @@
+owner = TKG
+controller = TKG
+add_core = TKG
+terrain = urban
+trade_goods = grain
+life_rating = 40

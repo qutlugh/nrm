@@ -1,0 +1,3 @@
+add_core = CNG
+trade_goods = fruit
+life_rating = 15

@@ -1,0 +1,169 @@
+country_event = {
+
+	id = 95903
+
+	title = "EVTNAME95902"
+	desc = "EVTDESC95902"
+	picture = "mahdi"
+
+	trigger = {
+		NOT = { exists = SNR }
+		any_owned_province = { is_core = SNR }
+	}
+	fire_only_once = yes
+
+	immediate = {
+		SNR = {
+			all_core = {
+				add_core = SUD
+				remove_core = SNR
+				remove_core = EGY
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA95901"
+	}
+}
+country_event = {
+	id = 19500
+	title = "EVTNAME19500"
+	desc  = "EVTDESC19500"
+	news = yes
+	news_desc_long = "EVTDESC19500_NEWS_LONG"
+	news_desc_medium = "EVTDESC19500_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19500_NEWS_SHORT"
+	picture = "zulu"
+	
+	trigger = {
+		OR = {
+			tag = ORA
+			tag = TRN
+		}
+		exists = ZUL
+		has_global_flag = piet_retief_massacre
+		NOT = { has_country_flag = zul_cb_taken }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA19500"
+		casus_belli = {
+			target = ZUL
+			type = cut_down_to_size
+		}
+		set_country_flag = zul_cb_taken
+	}
+}
+# Witwatersrand Goldrush
+country_event = {
+	id = 19501
+	title = "EVTNAME19501"
+	desc = "EVTDESC19501"
+	news = yes
+	news_desc_long = "EVTDESC19501_NEWS_LONG"
+	news_desc_medium = "EVTDESC19501_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19501_NEWS_SHORT"
+	picture = "goldrush"
+	
+	trigger = {
+		is_greater_power = yes
+		any_neighbor_country = {
+			has_country_modifier = witwatersrand_gold_rush
+			is_greater_power = no
+			NOT = {
+				num_of_cities = 10
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "EVTOPTA19501"
+		any_country = {
+			limit = {
+				has_country_modifier = witwatersrand_gold_rush
+			}
+			add_casus_belli = {
+				target = THIS
+				type = conquest
+			}
+			remove_country_modifier = witwatersrand_gold_rush
+		}
+	}
+}
+country_event = {
+	id = 38500
+	news = yes
+	news_desc_long = "EVTDESC38500_NEWS_LONG"
+	news_desc_medium = "EVTDESC38500_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC38500_NEWS_SHORT"
+
+	trigger = {
+		tag = OMA
+		year = 1840
+		war = no
+		NOT = { year = 1843 }
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1841
+		}
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1842
+		}
+	}
+
+	title = "EVTNAME38500"
+	desc = "EVTDESC38500"
+	picture = "sultan"
+
+	option = {
+		name = "EVTOPTA34500" 
+		prestige = 20
+		relation = { who = USA value = 100 }
+	}
+
+}
+province_event = {
+	id = 38501
+	title = "ѕо€вление западной медицины в регионе $STATENAME$"
+	desc = "¬ регионе $STATENAME$ аборигены впервые смогут получить хоть и очень базовую, но всЄ же передовую западную медицинскую помощь!"
+
+	trigger = {
+		OR = {
+			continent = africa
+			is_core = PAU
+			is_core = INO
+		}
+		NOT = { life_rating = 20 }
+		OR = {
+			owner = { invention = colonial_negotiations }
+			any_greater_power = { invention = colonial_negotiations }
+		}
+	}
+	mean_time_to_happen = { months = 12 }
+
+	option = {
+		name = "ѕусть плод€тс€, нам нужны рабочие руки!"
+		state_scope = { any_owned = {
+			limit = { NOT = { life_rating = 20 } }
+			life_rating = 25
+		}}
+	}
+}

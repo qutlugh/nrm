@@ -1,0 +1,86 @@
+army = {
+	name = "Chilean 1st liberation army"
+	location = 2324
+
+	regiment = {
+		name= "1. Brigada de Infantería"
+		type = infantry
+		home = 2324
+	}
+	regiment = {
+		name= "2. Brigada de Infantería"
+		type = infantry
+		home = 2324
+	}
+	regiment = {
+		name= "3. Brigada de Infantería"
+		type = infantry
+		home = 2326
+	}
+	regiment = {
+		name= "4. Brigada de Infantería"
+		type = infantry
+		home = 2324
+	}
+	regiment = {
+		name= "5. Brigada de Infantería"
+		type = infantry
+		home = 2324
+	}
+	regiment = {
+		name= "6. Brigada de Infantería"
+		type = engineer
+		home = 2322
+	}
+	regiment = {
+		name= "7. Brigada de Infantería"
+		type = engineer
+		home = 2323
+	}
+	regiment = {
+		name= "8. Brigada de Infantería"
+		type = dragoon
+		home = 2324
+	}
+}
+
+army = {
+	name = "Chilean 2nd liberation army"
+	location = 2325
+
+	regiment = {
+		name= "1. Brigada de Infantería"
+		type = infantry
+		home = 2324
+	}
+	regiment = {
+		name= "2. Brigada de Infantería"
+		type = infantry
+		home = 2325
+	}
+	regiment = {
+		name= "3. Brigada de Infantería"
+		type = infantry
+		home = 2325
+	}
+	regiment = {
+		name= "4. Brigada de Infantería"
+		type = infantry
+		home = 2325
+	}
+	regiment = {
+		name= "5. Brigada de Infantería"
+		type = infantry
+		home = 2328
+	}
+	regiment = {
+		name= "6. Brigada de Infantería"
+		type = engineer
+		home = 2330
+	}
+	regiment = {
+		name= "7. Brigada de Infantería"
+		type = dragoon
+		home = 2330
+	}
+}

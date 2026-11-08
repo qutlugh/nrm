@@ -1,0 +1,905 @@
+country_event = {
+
+	id = 32500
+	news = yes
+	news_desc_long = "EVTDESC32500_NEWS_LONG"
+	news_desc_medium = "EVTDESC32500_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC32500_NEWS_SHORT"
+
+	trigger = {
+		tag = RUS
+		year = 1837
+		war = no
+		NOT = { year = 1840 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1838
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1839
+		}
+	}
+
+	title = "EVTNAME32500"
+	desc = "EVTDESC32500"
+	picture = "Pushkin"
+
+	option = {
+		name = "EVTOPTA32500" 
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 32502
+
+	trigger = {
+		tag = RUS
+		year = 1849
+		war = no
+		NOT = { year = 1852 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1850
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1851
+		}
+	}
+
+	title = "EVTNAME32502"
+	desc = "EVTDESC32502"
+	picture = "Execution"
+
+	option = {
+		name = "EVTOPTA32502"
+		plurality = -2 
+		capitalists = { consciousness = -1 }
+		aristocrats = { consciousness = -1 }
+		bureaucrats = { consciousness = -1 }	
+	}
+}
+country_event = {
+
+	id = 32503
+
+	trigger = {
+		tag = RUS
+		year = 1852
+		NOT = { year = 1855 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1853
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1854
+		}
+	}
+
+	title = "EVTNAME32503"
+	desc = "EVTDESC32503"
+	picture = "hermitage"
+
+	option = {
+		name = "EVTOPTA32503" 
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 32504
+
+	trigger = {
+		tag = RUS
+		year = 1874
+		NOT = { year = 1877 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1875
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1876
+		}
+	}
+
+	title = "EVTNAME32504"
+	desc = "EVTDESC32504"
+	picture = "Godunov"
+
+	option = {
+		name = "EVTOPTA32504" 
+		prestige = 10
+		any_pop = {
+			limit = { has_pop_culture = russian }
+			consciousness = 1
+		}	
+	}
+}
+country_event = {
+
+	id = 32505
+	news = yes
+	news_desc_long = "EVTDESC32505_NEWS_LONG"
+	news_desc_medium = "EVTDESC32505_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC32505_NEWS_SHORT"
+
+	trigger = {
+		tag = RUS
+		year = 1880
+		NOT = { year = 1883 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1881
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1882
+		}
+	}
+
+	title = "EVTNAME32505"
+	desc = "EVTDESC32505"
+	picture = "Dostoevsky"
+
+	option = {
+		name = "EVTOPTA32505" 
+		prestige = 10
+		any_pop = {
+			limit = { has_pop_culture = russian }
+			consciousness = 1
+		}	
+	}
+}
+country_event = {
+
+	id = 32506
+	trigger = {
+		tag = RUS
+		year = 1837
+		experimental_railroad = 1
+		994 = { has_building = railroad }
+		NOT = { year = 1850 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1839
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1842
+		}
+	}
+
+	title = "EVTNAME32506"
+	desc = "EVTDESC32506"
+	picture = "train"
+
+	option = {
+		name = "EVTOPTA32506" 
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 32507
+
+	trigger = {
+		tag = RUS
+		owns = 1087 #Ootomari
+		JAP = { owns = 1642 }
+		NOT = { war_with = JAP }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			NOT = { year = 1850 }
+		}
+		modifier = {
+			factor = 2 #increase likelihood to happen
+			year = 1850
+		}
+	}
+
+	title = "EVTNAME32507"
+	desc = "EVTDESC32507"
+	picture = "kurils"
+
+	option = {
+		name = "EVTOPTA32507" 
+		1649 = { owner = { relation = { who = THIS value = 200 }}}
+		prestige = 20
+		badboy = -5
+		JAP = { country_event = 1500104 }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB32507" 
+		relation = { who = JAP value = -400 }
+		badboy = 10
+		JAP = { country_event = 1500105 }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVTOPTC32507"
+		relation = { who = JAP value = -200 }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 32508
+
+	trigger = {
+		tag = RUS
+		year = 1899
+		NOT = { year = 1902 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1900
+		}
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1901
+		}
+	}
+
+	title = "EVTNAME32508"
+	desc = "EVTDESC32508"
+	picture = "theatre"
+
+	option = {
+		name = "EVTOPTA32508" 
+		prestige = 10
+	}
+}
+
+# Alaska Purchase 1/3
+country_event = {
+	id = 32509
+	title = "EVTNAME32509"
+	desc = "EVTDESC32509"
+	picture = "alaska"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA32509"
+		money = 200000
+		USA = {
+			country_event = 32510
+		}
+		any_owned = {
+			limit = { continent = north_america }
+			remove_core = THIS
+			secede_province = USA
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "EVTOPTB32509"
+		USA = {
+			set_country_flag = you_did_try
+			country_event = 32511
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+# Alaska Purchase 2/3 Russia Accepts 
+country_event = {
+	id = 32510
+	title = "EVTNAME32510"
+	desc = "EVTDESC32510"
+	picture = "alaska"
+	
+	is_triggered_only = yes
+
+	immediate = {
+		money = -200000
+	}
+	
+	option = {
+		name = "EVTOPTA32510"
+		any_pop = { consciousness = 2 }
+	}
+}
+# Alaska Purchase 3/3 Russia Denies
+country_event = {
+	id = 32511
+	title = "EVTNAME32511"
+	desc = "EVTDESC32511"
+	picture = "alaska"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA32511"
+		relation = {
+			who = FROM
+			value = -400
+		}
+	}
+}
+# Convention of Peking
+country_event = {
+	id = 80000
+	title = "EVTNAME80000"
+	desc = "EVTDESC80000"
+	picture = "expansion"
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { set_country_flag = peking_convention }
+	}
+
+	option = {
+		name = "EVTOPTA80000"
+		FROM = { country_event = 80002 }
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "EVTOPTB80000"
+		FROM = { country_event = 80001 }
+		ai_chance = { factor = 0 }
+	}
+}
+# China refuses
+country_event = {
+	id = 80001
+	title = "EVTNAME80001"
+	desc = "EVTDESC80001"
+	picture = "expansion"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA80001"
+		relation = { who = CHI value = -400 }
+		leave_alliance = CHI
+		war = {
+			target = CHI
+			attacker_goal = {
+				casus_belli = acquire_state_event
+				state_province_id = 1082
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "Лучше сейчас пока не лезть"
+		relation = { who = CHI value = 100 }
+		prestige_factor = -0.05
+		ai_chance = { factor = 0 }
+	}
+}
+# China accept
+country_event = {
+	id = 80002
+	title = "EVTNAME80002"
+	desc = "EVTDESC80002"
+	picture = "expansion"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA80002"
+		CHI_1082 = {
+			remove_core = MCK
+			remove_core = CHI
+			secede_province = THIS
+		}
+		prestige = 20
+		relation = { who = CHI value = 100 }
+	}
+}
+country_event = {
+	id = 80008
+	title = "Польское восстание $YEAR$ года!"
+	desc = "Шляхтичи устроили в Польше восстание. Они требуют полной независимости своей державы! В случае победы, они могут попытаться восстановить границы Речь Посполитой - нам необходимо решить вопрос польской независимости."
+	picture = "Polish_uprising"
+
+	trigger = {
+		tag = RUS
+		any_owned_province = { is_core = POL }
+		NOT = { any_owned_province = { NOT = { controlled_by = THIS } is_core = POL }}
+		year = 1863
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 24
+	}
+
+	immediate = {
+                release = POL
+		POL = { add_country_modifier = { name = war_for_independance duration = 1825 }}
+		any_country = {
+			limit = {
+				capital_scope = { continent = europe }
+				is_greater_power = yes
+			}
+			country_event = 80009
+		}
+	}
+
+	option = {
+		name = "Польши никогда не будет на карте!"
+		casus_belli = { target=POL type = conquest months = 12 }
+		war = {
+			target = POL
+			attacker_goal = { casus_belli = conquest }
+			#defender_goal = { casus_belli = status_quo }
+		}
+		badboy = 10
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "У нас нет для этого сил..."
+		prestige_factor = -0.25
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 80009
+
+	is_triggered_only = yes
+
+	title = "Польское восстание"
+	desc = "В Российской империи шляхтичи подняли восстание за независимость Польши. Они просят у нас помощи, как нам поступить?"
+	picture = "Polish_uprising"
+
+	option = {
+		name = "Поддержать поляков"
+		POL = { relation = { who=THIS value=200 }}
+		create_alliance = POL
+		THIS = { military_access = POL }
+		RUS = { relation = { who=THIS value=-200 }}
+		leave_alliance = RUS
+		casus_belli={target=RUS type=prepare_war months=12}
+		any_pop={limit={is_primary_culture=no}militancy=9}
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Поддержать русских"
+		POL = { relation = { who=THIS value=-200 }}
+		RUS = { relation = { who=THIS value=200 }}
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 80010
+
+	trigger = {
+		tag = SOV
+		has_country_flag = soviet_industrialisation_started
+		NOT = {
+			OR = {
+				has_country_modifier = soviet_industrialisation
+				government = proletarian_dictatorship
+			}
+		}
+	}
+
+	title = "Окончание $THISCOUNTRY_ADJ$ индустриализации"
+	desc = "EVTDESC80010"
+	picture = "soviet_industrialisation"
+
+	immediate = {
+		clr_country_flag = soviet_industrialisation_started
+	}
+
+	option = {
+		name = "Вперёд, в светлое будущее!"
+	}
+}
+country_event = {
+	id = 80011
+	title = "Получен контроль над Приморьем"
+	desc = "Наша великая империя получила контроль над Внешней Маньчжурией. Теперь нам необходимо заселить данную территорию русскими людьми, а так же начать развитие инфраструктуры и строительство укреплений на границе."
+	picture = "russian_vladivostok"
+
+	trigger = {
+		owns = 1085
+		owns = 1084
+		owns = 2617
+		owns = 1083
+		owns = 1082
+		owns = 2232
+		owns = 2228
+		owns = 2231
+		tag = RUS
+		NOT = { has_global_flag = russian_vladivostok }
+	}
+
+        option = {
+		name = "Давайте переименуем регион"
+		set_global_flag = russian_vladivostok
+		1085 = { change_province_name = "Благовещенск" }
+		1084 = { change_province_name = "Николаевск-на-Амуре" }
+		1083 = { change_province_name = "Хабаровск" }
+		2617 = { change_province_name = "Пашково" }
+		2232 = { change_province_name = "Дальнереченск" }
+		2228 = { change_province_name = "Дальнегорск" }
+		2231 = { change_province_name = "Нельма" }
+		1082 = { change_province_name = "Владивосток" state_scope = { change_region_name = "§R(Дре-5)§! Приморье" }}
+		CHI_1082 = {
+			life_rating = 5
+			add_core = THIS
+			remove_core = CHI
+			remove_core = MCK
+		}
+		prestige = 20
+		ai_chance = { factor = 1 }
+        }
+        option = {
+		name = "Думаю стоит оставить старые названия"
+		set_global_flag = russian_vladivostok
+                CHI_1082 = {
+			remove_core = RUS
+			add_core = CHI
+			add_core = MCK
+		}
+		prestige_factor = -0.25
+		ai_chance = { factor = 0 }
+        }
+}
+country_event = {
+	id = 80012
+	title = "Окончание экспансии в Средней Азии"
+	desc = "Мы закончили округление наших южных границ в Средней Азии, на которые мы вполне законно предъявили свои претензии. Это должно значительно усилить наши оборонительные южные позиции от возможного вторжения из Персии или Индии."
+	picture = "skirmish_in_central_asia"
+
+	trigger = {
+		tag = RUS
+		NOT = { OR = {
+			exists = KHI
+			exists = BUK
+			exists = KOK
+		}}
+		KHI = { all_core = { owned_by = THIS }}
+		BUK = { all_core = { owned_by = THIS }}
+		KOK = { all_core = { owned_by = THIS }}
+	}
+	fire_only_once = yes
+
+	immediate = {
+		KHI = { all_core = { remove_core = KHI }}
+		BUK = { all_core = { remove_core = BUK }}
+		KOK = { all_core = { remove_core = KOK }}
+	}
+
+        option = {
+		name = "Великолепно!"
+		prestige = 20
+        }
+}
+country_event = {
+	id = 80013
+	title = "Основание РСДРП"
+	desc = "EVTDESC80015"
+	picture = "RSDRP"
+
+	trigger = {
+		tag = RUS
+		year = 1896
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { months = 6 }
+
+	immediate = {
+		any_pop = {
+			limit = { NOT = { strata = rich }}
+			ideology = { value = socialist factor = 0.10 }
+		}
+	}
+
+        option = {
+		name = "Будем тщательнее присматривать за ними"
+        }
+}
+country_event = {
+	id = 80014
+	title = "Раскол РСДРП"
+	desc = "EVTDESC80016"
+	picture = "RSDRP"
+
+	trigger = {
+		tag = RUS
+		year = 1912
+		NOT = { exists = SOV }
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { months = 6 }
+
+	immediate = {
+		any_pop = {
+			limit = { NOT = { strata = rich }}
+			ideology = { value = communist factor = 0.50 }
+		}
+	}
+
+        option = {
+		name = "Надеюсь это к лучшему для нашей власти?"
+        }
+}
+country_event = {
+	id = 80018
+	title = "Польское восстание $YEAR$ года"
+	desc = "EVTDESC80018"
+	picture = "Polish_uprising_1830"
+
+	trigger = {
+		tag = RUS
+		POL = { vassal_of = THIS }
+		year = 1830
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  { months = 6 }
+
+	immediate = {
+		release_vassal = POL
+	}
+	option = {
+		name = "Оставить Польшу в покое"
+		relation = { who = POL value = 400 }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Никакой независимости!"
+		POL = { add_country_modifier = { name = war_for_independance duration = 1825 }}
+		casus_belli = { target = POL type = conquest months = 1 }
+		war = { target = POL attacker_goal = { casus_belli = conquest }}
+		relation = { who = POL value = -400 }
+		ai_chance = { factor = 1 }
+	}
+}
+# Treaty of Tarbagatai
+country_event = {
+	id = 80019
+	title = "EVTNAME80019"
+	desc = "EVTDESC80019"
+	picture = "expansion"
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { set_country_flag = treaty_of_tarbagatai_flag }
+	}
+
+	option = {
+		name = "EVTOPTA80019"
+		FROM = { country_event = 80021 }
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "EVTOPTB80019"
+		FROM = { country_event = 80020 }
+		ai_chance = { factor = 0 }
+	}
+}
+# China refuses
+country_event = {
+	id = 80020
+	title = "EVTNAME80020"
+	desc = "EVTDESC80020"
+	picture = "expansion"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA80020"
+		relation = { who = CHI value = -400 }
+		leave_alliance = CHI
+		war = {
+			target = CHI
+			attacker_goal = {
+				casus_belli = acquire_state_event
+				state_province_id = 1186
+			}
+			attacker_goal = {
+				casus_belli = acquire_state_event
+				state_province_id = 1190
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB80020"
+		relation = { who = CHI value = 100 }
+		prestige_factor = -0.05
+		ai_chance = { factor = 0 }
+	}
+}
+# China accept
+country_event = {
+	id = 80021
+	title = "EVTNAME80021"
+	desc = "EVTDESC80021"
+	picture = "expansion"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA80021"
+		1188 = {
+			remove_core = XIN
+			remove_core = CHI
+			secede_province = THIS
+		}
+		1186 = {
+			remove_core = XIN
+			remove_core = CHI
+			secede_province = THIS
+		}
+		1190 = {
+			remove_core = XIN
+			remove_core = CHI
+			secede_province = THIS
+		}
+		prestige = 20
+		relation = { who = CHI value = 100 }
+	}
+}
+
+country_event = {
+
+	id = 80022
+
+	trigger = {
+		tag = SOV
+		NOT = { government = proletarian_dictatorship }
+	}
+
+	title = "EVTNAME80022"
+	desc = "EVTDESC80022"
+	picture = "yeltsin"
+
+        immediate = {
+                remove_country_modifier = five_year_plan_navy_modifier
+                remove_country_modifier = five_year_plan_army_modifier
+                remove_country_modifier = five_year_plan_industry_modifier
+                remove_country_modifier = five_year_plan_culture_modifier
+                remove_country_modifier = five_year_plan_likbez_modifier
+                remove_country_modifier = five_year_plan_recovery_after_war_modifier
+                any_owned = {
+			limit = { has_province_modifier = five_year_plan_navy_local_modifier }
+			remove_province_modifier = five_year_plan_navy_local_modifier
+		}
+		release = EST
+		release = LAT
+		release = LIT
+		release = UKR
+		release = BYE
+		release = ARM
+		release = AZB
+		release = GEO
+		release = KAZ
+		release = KYR
+		release = TAJ
+		release = TKM
+		release = UZB
+		release = MOL
+		release_vassal = EST
+		release_vassal = LAT
+		release_vassal = LIT
+		release_vassal = UKR
+		release_vassal = BYE
+		UKR = { all_core = { remove_core = RUS }}
+		BYE = { all_core = { remove_core = RUS }}
+		release_vassal = ARM
+		release_vassal = AZB
+		release_vassal = GEO
+		release_vassal = KAZ
+		release_vassal = KYR
+		release_vassal = TAJ
+		release_vassal = TKM
+		release_vassal = UZB
+		release_vassal = MOL
+		SOV = { all_core = { remove_core = SOV }}
+		prestige_factor = -0.5
+                government = presidential_dictatorship
+                tech_school = traditional_academic
+                EST = { government = democracy }
+                LAT = { government = democracy }
+                LIT = { government = democracy }
+                MOL = { government = democracy }
+                UKR = { government = democracy }
+                BYE = { government = presidential_dictatorship }
+                KAZ = { government = presidential_dictatorship }
+                AZB = { government = presidential_dictatorship }
+                ARM = { government = presidential_dictatorship }
+                GEO = { government = presidential_dictatorship }
+                UZB = { government = presidential_dictatorship }
+                KYR = { government = presidential_dictatorship }
+                TAJ = { government = presidential_dictatorship }
+                TKM = { government = presidential_dictatorship }
+		change_tag = RUS
+		remove_accepted_culture = ukrainian
+		remove_accepted_culture = byelorussian
+		remove_accepted_culture = tatar
+		remove_accepted_culture = north_caucasian
+		remove_accepted_culture = ashkenazi
+		remove_accepted_culture = georgian
+		remove_accepted_culture = armenian
+		remove_accepted_culture = azerbaijani
+		remove_accepted_culture = uzbek
+		remove_accepted_culture = turkmen
+	        remove_accepted_culture = kazak
+		remove_accepted_culture = kirgiz
+		998={change_province_name="Тверь" state_scope={change_region_name="Тверь"}}
+		972 = { change_province_name = "Днепр" }
+		994 = { change_province_name = "Санкт-Петербург"}
+		975 = { change_province_name = "Угледар" }
+		1020 = { change_province_name = "Нижний Новгород" }
+		1039 = { change_province_name = "Волгоград" }
+		1058 = { change_province_name = "Екатеринбург" }
+		1207 = { change_province_name = "Душанбе" }
+		1034 = { change_province_name = "Самара" state_scope={change_region_name="Самара"}}
+		980 = { change_province_name = "Луганск" }
+		976 = { change_province_name = "Мариуполь" }
+		1105 = { change_province_name = "Гянджа" }
+		1194 = { change_province_name = "Актау" }
+		1184 = { change_province_name = "Кокшетау" }
+		1186 = { change_province_name = "Алматы" }
+		1185 = { change_province_name = "Тараз" }
+		1189 = { change_province_name = "Бишкек" }
+		1201 = { change_province_name = "Ходжент" }
+		1196 = { change_province_name = "Дашогуз" }
+		1205 = { change_province_name = "Кизыл-Арват" }
+		1099 = { change_province_name = "Гюмри" }
+		1026 = { change_province_name = "Пермь" state_scope={change_region_name="Пермь"}}
+        }
+
+	option = {
+		name = "EVTOPTA80022"
+	}
+}

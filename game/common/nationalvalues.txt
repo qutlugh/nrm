@@ -1,0 +1,52 @@
+nv_archaic_economy = {
+	global_population_growth = 0.001
+	poor_luxury_needs = -0.2
+	middle_luxury_needs = -0.2
+        org_regain = -0.20
+	badboy = -0.05
+	war_exhaustion = -0.05
+	factory_throughput = -0.30
+	global_immigrant_attract = -0.12
+}
+nv_commercial_capitalism = {
+	war_exhaustion = -0.10
+	badboy = -0.10
+	supply_consumption = 0.05
+	factory_throughput = -0.10
+	global_immigrant_attract = 0.06
+}
+nv_industrial_capitalism = {
+	poor_luxury_needs = 0.05
+	middle_luxury_needs = 0.10
+	rich_luxury_needs = 0.15
+	supply_consumption = 0.10
+	ruling_party_support = -0.10
+	war_exhaustion = -0.15
+	badboy = -0.15
+	global_immigrant_attract = 0.12
+}
+nv_imperialism = {
+	poor_luxury_needs = 0.10
+	middle_luxury_needs = 0.20
+	rich_luxury_needs = 0.30
+	cb_generation_speed_modifier = 0.25
+	influence_modifier = 0.25
+	supply_consumption = 0.15
+	ruling_party_support = -0.20
+	war_exhaustion = -0.20
+	badboy = -0.20
+	diplomatic_points_modifier = 0.25
+	factory_throughput = -0.15
+	global_immigrant_attract = 0.18
+}
+nv_socialism = {
+	global_population_growth = 0.001
+	poor_luxury_needs = -0.20
+	middle_luxury_needs = -0.20
+	poor_everyday_needs = -0.10
+	core_pop_militancy_modifier = -0.05
+	supply_consumption = -0.10
+	war_exhaustion = -0.40
+	badboy = -0.05
+	factory_throughput = -0.15
+}

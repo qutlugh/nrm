@@ -1,0 +1,6 @@
+owner = BRZ
+controller = BRZ
+add_core = BRZ
+terrain = urban
+trade_goods = coal
+life_rating = 40

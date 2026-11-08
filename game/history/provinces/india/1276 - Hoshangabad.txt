@@ -1,0 +1,6 @@
+owner = BHO
+controller = BHO
+add_core = HND
+add_core = BHO
+trade_goods = precious_metal
+life_rating = 35

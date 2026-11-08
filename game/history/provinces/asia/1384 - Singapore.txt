@@ -1,0 +1,9 @@
+owner = ENG
+controller = ENG
+add_core = JOH
+add_core = MLY
+naval_base = 1
+trade_goods = dye
+life_rating = 40
+colonial = 2
+terrain = urban

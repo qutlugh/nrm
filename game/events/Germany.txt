@@ -1,0 +1,2297 @@
+country_event = {
+
+	id = 33800
+
+	trigger = {
+		tag = HAM
+		year = 1842
+		NOT = { year = 1845 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1843
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1844
+		}
+	}
+
+	title = "EVTNAME33800"
+	desc = "EVTDESC33800"
+	picture = "cityfire"
+
+	option = {
+		name = "EVTOPTA33800" 
+		528 = { infrastructure = -1 }
+		treasury = -100
+	}
+}
+country_event = {
+
+	id = 33801
+
+	trigger = {
+		tag = HAM
+		year = 1858
+		NOT = { year = 1861 }
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1859
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1860
+		}
+	}
+
+	title = "EVTNAME33801"
+	desc = "EVTDESC33801"
+	picture = "sinkingship"
+
+	option = {
+		name = "EVTOPTA33801" 
+		treasury = -50
+	}
+
+}
+country_event = {
+
+	id = 33802
+
+	trigger = {
+		owns = 528 #Hamburg
+		year = 1850
+		NOT = { year = 1853 }	
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1851
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1852
+		}
+	}
+
+	title = "EVTNAME33802"
+	desc = "EVTDESC33802"
+	picture = "emigration"
+
+	option = {
+		name = "EVTOPTA33802"
+		prestige = 10
+	}
+
+}
+country_event = {
+
+	id = 35000
+	news = yes
+	news_desc_long = "EVTDESC35000_NEWS_LONG"
+	news_desc_medium = "EVTDESC35000_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC35000_NEWS_SHORT"
+	trigger = {
+		tag = COB 
+		year = 1836
+		has_global_flag = ENGRoyalHouseAnglified
+		NOT = {
+			year = 1936
+			has_country_flag = ENGRoyalHouseSplits
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1860
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1880
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1900
+		}
+	}
+
+	title = "EVTNAME35000"
+	desc = "EVTDESC35000"
+	picture = "SaxeCoburgGotha"
+
+	option = {
+		name = "EVTOPTA35000" 
+		set_country_flag = ENGRoyalHouseSplits
+		prestige = -40	
+	}
+}
+country_event = {
+
+	id = 33400
+	news = yes
+	news_desc_long = "EVTDESC33400_NEWS_LONG"
+	news_desc_medium = "EVTDESC33400_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33400_NEWS_SHORT"
+
+	trigger = {
+		tag = BAV
+		year = 1841
+		classicism_n_early_romanticism = 1 #has the romanticism tech
+		NOT = {
+			year = 1844
+			has_country_flag = Walhalla
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1842
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1843
+		}
+	}
+
+	title = "EVTNAME33400"
+	desc = "EVTDESC33400"
+	picture = "Walhalla"
+
+	option = {
+		name = "EVTOPTA33400" 
+		prestige = 10
+		set_country_flag = Walhalla
+	}
+}
+country_event = {
+
+	id = 33401
+	news = yes
+	news_desc_long = "EVTDESC33401_NEWS_LONG"
+	news_desc_medium = "EVTDESC33401_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33401_NEWS_SHORT"
+
+	trigger = {
+		tag = BAV
+		year = 1846
+		government = absolute_monarchy
+		NOT = { year = 1849 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1847
+		}
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1848
+		}
+	}
+
+	title = "EVTNAME33401"
+	desc = "EVTDESC33401"
+	picture = "Lola"
+
+	option = {
+		name = "EVTOPTA33401" 
+		prestige = -40
+		any_pop = {
+			consciousness = 1
+			scaled_militancy = {
+				factor = 2
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = 2
+				ideology = anarcho_liberal
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 33402
+	news = yes
+	news_desc_long = "EVTDESC33402_NEWS_LONG"
+	news_desc_medium = "EVTDESC33402_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33402_NEWS_SHORT"
+
+	trigger = {
+		tag = BAV
+		year = 1852
+		realism = 1 #has the realism tech
+		OR = {
+			government = absolute_monarchy
+			government = hms_government
+		}
+		NOT = { year = 1855 }
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1853
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1854
+		}
+	}
+
+	title = "EVTNAME33402"
+	desc = "EVTDESC33402"
+	picture = "Bayern"
+
+	option = {
+		name = "EVTOPTA33402" 
+		prestige = 10
+		treasury = -500
+	}
+}
+country_event = {
+
+	id = 33403 #parallel event is GER 33003
+	news = yes
+	news_desc_long = "EVTDESC33403_NEWS_LONG"
+	news_desc_medium = "EVTDESC33403_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33403_NEWS_SHORT"
+
+	trigger = {
+		tag = BAV
+		year = 1875
+		nationalism_n_imperialism = 1 #has the nationalism tech
+		owns = 598 #Bayreuth
+		NOT = {
+			year = 1885
+			has_global_flag = RichardWagner
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1876
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1877
+		}
+	}
+
+	title = "EVTNAME33403"
+	desc = "EVTDESC33403"
+	picture = "wagner"
+
+	option = {
+		name = "EVTOPTA33403" 
+		prestige = 10
+		treasury = -200
+		set_global_flag = RichardWagner
+	}
+}
+country_event = {
+
+	id = 33404
+
+	trigger = {
+		tag = BAV
+		year = 1838
+		war = no
+		has_global_flag = MozartFest1838
+		NOT = {
+			has_country_flag = MozartFest1838
+			year = 1841
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1839
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1840
+		}
+	}
+
+	title = "EVTNAME34100"
+	desc = "EVTDESC34100"
+	picture = "Mozart"
+
+	option = {
+		name = "EVTOPTA34100" 
+		set_country_flag = MozartFest1838
+		plurality = 1
+		farmers = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		clerks = { consciousness = 1 }
+		labourers = { consciousness = 1 }
+	}
+}
+country_event = {
+
+	id = 33300
+	news = yes
+	news_desc_long = "EVTDESC33300_NEWS_LONG"
+	news_desc_medium = "EVTDESC33300_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33300_NEWS_SHORT"
+
+	trigger = {
+		tag = BAD
+		year = 1846
+		NOT = { year = 1849 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1847
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1848
+		}
+	}
+
+	title = "EVTNAME33300"
+	desc = "EVTDESC33300"
+	picture = "theatre"
+
+	option = {
+		name = "EVTOPTA33300" 
+		prestige = -20
+		treasury = -100
+	}
+}
+country_event = {
+
+	id = 33301
+
+	trigger = {
+		tag = BAD
+		year = 1838
+		war = no
+		has_global_flag = MozartFest1838
+		NOT = {
+			has_country_flag = MozartFest1838
+			year = 1841
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1839
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1840
+		}
+	}
+
+	title = "EVTNAME34100"
+	desc = "EVTDESC34100"
+	picture = "Mozart"
+
+	option = {
+		name = "EVTOPTA34100" 
+		set_country_flag = MozartFest1838
+		plurality = 2
+		farmers = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		clerks = { consciousness = 1 }
+		labourers = { consciousness = 1 }
+	}
+}
+country_event = {
+
+	id = 48300 
+	news = yes
+	news_title = "EVTNAME48300_NEWS_TITLE"
+	news_desc_long = "EVTDESC48300_NEWS_LONG"
+	news_desc_medium = "EVTDESC48300_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC48300_NEWS_SHORT"
+
+	trigger = {
+		tag = ANH #only for Anhalt
+		year = 1862
+		NOT = {
+			year = 1865
+			has_country_flag = LeopoldIVAnhalt
+			}
+		war = no
+		OR = {
+			government = absolute_monarchy 
+			government = hms_government
+		} 
+	}
+ 
+	mean_time_to_happen =  {
+		months = 8
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1863
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1864
+		}
+	}
+
+	title = "EVTNAME48300"
+	desc = "EVTDESC48300"
+	picture = "leopoldiv"
+
+	option = {
+		name = "EVTOPTA48300" 
+		prestige = 10
+		set_country_flag = LeopoldIVAnhalt
+	}
+
+}
+country_event = {
+
+	id = 34100
+
+	trigger = {
+		tag = FRM
+		year = 1838
+		war = no
+		NOT = { year = 1841 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1839
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1840
+		}
+	}
+
+	title = "EVTNAME34100"
+	desc = "EVTDESC34100"
+	picture = "Mozart"
+
+	option = {
+		name = "EVTOPTA34100" 
+		plurality = 2
+		set_global_flag = MozartFest1838
+		farmers = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		clerks = { consciousness = 1 }
+		labourers = { consciousness = 1 }
+	}
+}
+country_event = {
+
+	id = 34103
+
+	trigger = {
+		tag = NAS
+		year = 1838
+		war = no
+		has_global_flag = MozartFest1838
+		NOT = {
+			has_country_flag = MozartFest1838
+			year = 1841
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1839
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1840
+		}
+	}
+
+	title = "EVTNAME34100"
+	desc = "EVTDESC34100"
+	picture = "Mozart"
+
+	option = {
+		name = "EVTOPTA34100" 
+		set_country_flag = MozartFest1838
+		plurality = 2
+		farmers = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		clerks = { consciousness = 1 }
+		labourers = { consciousness = 1 }
+	}
+}
+country_event = {
+
+	id = 34102
+
+	trigger = {
+		tag = HES
+		year = 1838
+		war = no
+		has_global_flag = MozartFest1838
+		NOT = {
+			has_country_flag = MozartFest1838
+			year = 1841
+		}
+		
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1839
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1840
+		}
+	}
+
+	title = "EVTNAME34100"
+	desc = "EVTDESC34100"
+	picture = "Mozart"
+
+	option = {
+		name = "EVTOPTA34100" 
+		set_country_flag = MozartFest1838
+		plurality = 2
+		farmers = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		clerks = { consciousness = 1 }
+		labourers = { consciousness = 1 }
+	}
+}
+country_event = {
+
+	id = 34101
+
+	trigger = {
+		tag = HEK
+		year = 1838
+		war = no
+		has_global_flag = MozartFest1838
+		NOT = {
+			has_country_flag = MozartFest1838
+			year = 1841
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1839
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1840
+		}
+	}
+
+	title = "EVTNAME34100"
+	desc = "EVTDESC34100"
+	picture = "Mozart"
+
+	option = {
+		name = "EVTOPTA34100" 
+		set_country_flag = MozartFest1838
+		plurality = 2
+		farmers = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		clerks = { consciousness = 1 }
+		labourers = { consciousness = 1 }
+	}
+}
+country_event = {
+
+	id = 34500
+
+	trigger = {
+		tag = OLD
+		year = 1853
+		government = absolute_monarchy
+		NOT = { year = 1856 }	
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1854
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1855
+		}
+	}
+
+	title = "EVTNAME34500"
+	desc = "EVTDESC34500"
+	picture = "oldenburg"
+
+	option = {
+		name = "EVTOPTA34500" 
+		prestige = 10
+	}
+
+}
+country_event = {
+
+	id = 33003 #parallel event is BAY 33403
+	news = yes
+	news_desc_long = "EVTDESC33403_NEWS_LONG"
+	news_desc_medium = "EVTDESC33403_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33403_NEWS_SHORT"
+
+	trigger = {
+		tag = GER
+		year = 1875
+		nationalism_n_imperialism = 1 #has the nationalism tech
+		owns = 598 #Bayreuth
+		NOT = {
+			exists = BAV
+			year = 1885
+			has_global_flag = RichardWagner
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1876
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1877
+		}
+	}
+
+	title = "EVTNAME33403"
+	desc = "EVTDESC33403"
+	picture = "wagner"
+
+	option = {
+		name = "EVTOPTA33403" 
+		prestige = 10
+		treasury = -200
+		set_global_flag = RichardWagner
+	}
+}
+province_event = {
+
+	id = 33004 #will set up DAN36206
+	news = yes
+	news_desc_long = "EVTDESC33004_NEWS_LONG"
+	news_desc_medium = "EVTDESC33004_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33004_NEWS_SHORT"
+
+	trigger = {
+		province_id = 371 #Aabenra/North Schleswig
+		owned_by = GER
+		year = 1896
+		culture = danish
+		NOT = {
+			year = 1899
+			has_global_flag = GermanizeSchlewsigDanes
+			has_global_flag = NOGermanizeSchlewsigDanes
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1897
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1898
+		}
+	}
+
+	title = "EVTNAME33004"
+	desc = "EVTDESC33004"
+
+	option = {
+		name = "EVTOPTA33004" 
+		any_pop = {
+			limit = { has_pop_culture = danish }
+			militancy = 2
+		}
+		relation = { who = DEN value = -100 }
+		set_global_flag = GermanizeSchlewsigDanes
+	}
+
+	option = {
+		name = "EVTOPTB33004" 
+		any_pop = {
+			dominant_issue = {
+				value = jingoism
+				factor = 0.1
+			}
+		}
+		relation = { who = DEN value = 100 }
+		set_global_flag = NOGermanizeSchlewsigDanes
+	}
+}
+country_event = {
+
+	id = 33000
+	news = yes
+	news_desc_long = "EVTDESC33000_NEWS_LONG"
+	news_desc_medium = "EVTDESC33000_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33000_NEWS_SHORT"
+
+	trigger = {
+		tag = GER
+		year = 1916
+		NOT = { year = 1920 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1917
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1918
+		}
+	}
+
+	title = "EVTNAME33000"
+	desc = "EVTDESC33000"
+	picture = "theatre"
+
+	option = {
+		name = "EVTOPTA33000" 
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 33001
+	news = yes
+	news_desc_long = "EVTDESC33001_NEWS_LONG"
+	news_desc_medium = "EVTDESC33001_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33001_NEWS_SHORT"
+
+	trigger = {
+		tag = GER
+		year = 1874
+		NOT = { year = 1877 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1875
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1876
+		}
+	}
+
+	title = "EVTNAME33001"
+	desc = "EVTDESC33001"
+	picture = "Circus"
+
+	option = {
+		name = "EVTOPTA33001" 
+		prestige = 10
+		any_pop = { consciousness = 1 }
+	}
+}
+country_event = {
+
+	id = 33002
+	news = yes
+	news_desc_long = "EVTDESC33002_NEWS_LONG"
+	news_desc_medium = "EVTDESC33002_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33002_NEWS_SHORT"
+
+	trigger = {
+		tag = GER
+		year = 1880
+		NOT = { year = 1883 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1881
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1882
+		}
+	}
+
+	title = "EVTNAME33002"
+	desc = "EVTDESC33002"
+	picture = "School"
+
+	option = {
+		name = "EVTOPTA33002" 
+		prestige = 10
+	}
+
+}
+country_event = {
+
+	id = 33005
+	news = yes
+	news_desc_long = "EVTDESC33005_NEWS_LONG"
+	news_desc_medium = "EVTDESC33005_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC33005_NEWS_SHORT"
+
+	trigger = {
+		tag = GER
+		year = 1903
+		is_greater_power = yes
+		TUR = {
+			war = no
+			owns = 926 #Baghdad
+			is_vassal = no
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+		}
+		NOT = {
+			year = 1910
+			has_global_flag = BerlinBaghdadRail
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1904
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1908
+		}
+	}
+
+	title = "EVTNAME33005"
+	desc = "EVTDESC33005"
+	picture = "bagdadrailway"
+	
+
+	option = {
+		name = "EVTOPTA33005" 
+		prestige = 10
+		set_global_flag = BerlinBaghdadRail
+		relation = { who = TUR value = 100 }
+		relation = { who = ENG value = -75 }
+		relation = { who = RUS value = -75 }
+	}
+
+	option = {
+		name = "EVTOPTB33005" 
+		relation = { who = TUR value = -50 }
+		relation = { who = ENG value = 75 }
+		relation = { who = RUS value = 75 }
+		officers = { consciousness = 2 }
+		capitalists = { consciousness = 2 }
+	}
+
+}
+country_event = {
+
+	id = 34600
+	news = yes
+	news_desc_long = "EVTDESC34600_NEWS_LONG"
+	news_desc_medium = "EVTDESC34600_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34600_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = PRU
+			capital = 549
+		}
+		year = 1836
+		war = no
+		NOT = { year = 1839 }	
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1837
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1838
+		}
+	}
+
+	title = "EVTNAME34600"
+	desc = "EVTDESC34600"
+	picture = "Diesterweg"
+
+	option = {
+		name = "EVTOPTA34600" 
+		prestige = 10
+		years_of_research = 0.5
+	}
+}
+country_event = {
+
+	id = 34601
+	news = yes
+	news_desc_long = "EVTDESC34601_NEWS_LONG"
+	news_desc_medium = "EVTDESC34601_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34601_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = PRU
+			capital = 549
+		}
+		year = 1841
+		war = no
+		NOT = { year = 1844 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1842
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1843
+		}
+	}
+
+	title = "EVTNAME34601"
+	desc = "EVTDESC34601"
+	picture = "Deutschlandlied"
+
+	option = {
+		name = "EVTOPTA34601" 
+		any_pop = {
+			limit = { has_pop_culture = north_german }
+			consciousness = 1
+		}
+	}
+}
+country_event = {
+
+	id = 34602
+	news = yes
+	news_desc_long = "EVTDESC34602_NEWS_LONG"
+	news_desc_medium = "EVTDESC34602_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34602_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = PRU
+			capital = 549
+		}
+		year = 1840
+		war = no
+		NOT = { year = 1843 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1841
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1842
+		}
+	}
+
+	title = "EVTNAME34602"
+	desc = "EVTDESC34602"
+	picture = "WilhelmIV"
+
+	option = {
+		name = "EVTOPTA34602" 
+		any_pop = {
+			scaled_consciousness = {
+				factor = 2
+				ideology = liberal
+			}	
+		}
+	}
+}
+country_event = {
+
+	id = 34603
+	news = yes
+	news_desc_long = "EVTDESC34603_NEWS_LONG"
+	news_desc_medium = "EVTDESC34603_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34603_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = PRU
+			capital = 549
+		}
+		year = 1844
+		war = no
+		NOT = { year = 1847 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1844
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1845
+		}
+	}
+
+	title = "EVTNAME34603"
+	desc = "EVTDESC34603"
+	picture = "berlinzoo"
+
+	option = {
+		name = "EVTOPTA34603" 
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 34604
+	news = yes
+	news_desc_long = "EVTDESC34604_NEWS_LONG"
+	news_desc_medium = "EVTDESC34604_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34604_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = PRU
+			capital = 549
+		}
+		year = 1845
+		NOT = { year = 1848 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1846
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1847
+		}
+	}
+
+	title = "EVTNAME34604"
+	desc = "EVTDESC34604"
+	picture = "jews"
+
+	option = {
+		name = "EVTOPTA34604" 
+		prestige = 10
+		any_pop = {
+			limit = { has_pop_religion = jewish }
+			consciousness = 1
+		}	
+	}
+}
+country_event = {
+
+	id = 34605
+	news = yes
+	news_desc_long = "EVTDESC34605_NEWS_LONG"
+	news_desc_medium = "EVTDESC34605_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34605_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = PRU
+			capital = 549
+		}
+		year = 1846
+		NOT = { year = 1849 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1847
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1848
+		}
+	}
+
+	title = "EVTNAME34605"
+	desc = "EVTDESC34605"
+	picture = "Gottlieb"
+
+	immediate = {
+		any_country = { limit = { ai = no } country_event = 23216 }
+	}
+
+	option = {
+		name = "EVTOPTA34605"
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 34606
+	news = yes
+	news_desc_long = "EVTDESC34606_NEWS_LONG"
+	news_desc_medium = "EVTDESC34606_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34606_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = PRU
+			capital = 549
+		}
+		year = 1849
+		NOT = { year = 1852 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1850
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1851
+		}
+	}
+
+	title = "EVTNAME34606"
+	desc = "EVTDESC34606"
+	picture = "theatre"
+
+	option = {
+		name = "EVTOPTA34606" 
+		prestige = 10
+	}	
+}
+country_event = {
+
+	id = 34607
+	news = yes
+	news_desc_long = "EVTDESC34607_NEWS_LONG"
+	news_desc_medium = "EVTDESC34607_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34607_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = PRU
+			capital = 549
+		}
+		year = 1856
+		safety_regulations = no_safety
+		NOT = { year = 1859 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1850
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1851
+		}
+	}
+
+	title = "EVTNAME34607"
+	desc = "EVTDESC34607"
+	picture = "krupp"
+
+	option = {
+		name = "EVTOPTA34607" 
+		social_reform = trinket_safety
+		capitalists = { consciousness = 2 }
+		aristocrats = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+	}	
+
+	option = {
+		name = "EVTOPTB34607" 
+		labourers = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		clerks = { consciousness = 1 }
+	}	
+}
+country_event = {
+
+	id = 34608
+	news = yes
+	news_desc_long = "EVTDESC34608_NEWS_LONG"
+	news_desc_medium = "EVTDESC34608_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34608_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = PRU
+			capital = 549
+		}
+		year = 1839
+		NOT = { year = 1843 }
+	}
+ 	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1840
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1841
+		}
+	}
+
+	title = "EVTNAME34608"
+	desc = "EVTDESC34608"
+	picture = "Childlabor2"
+
+	option = {
+		name = "EVTOPTA34608" 
+		prestige = 5
+		social_reform = child_labour_regulated
+		any_pop = {
+			limit = { has_pop_culture = north_german }
+			consciousness = 1
+		}
+	}	
+}
+country_event = {
+
+	id = 34609
+	news = yes
+	news_desc_long = "EVTDESC34609_NEWS_LONG"
+	news_desc_medium = "EVTDESC34609_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34609_NEWS_SHORT"
+
+	trigger = {
+		OR = {
+			tag = PRU
+			capital = 549
+		}
+		year = 1838
+		war = no
+		has_global_flag = MozartFest1838
+		NOT = {
+			has_country_flag = MozartFest1838
+			year = 1841
+		}
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1839
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1840
+		}
+	}
+
+	title = "EVTNAME34100"
+	desc = "EVTDESC34100"
+	picture = "Mozart"
+
+	option = {
+		name = "EVTOPTA34100" 
+		set_country_flag = MozartFest1838
+		plurality = 1
+		farmers = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		clerks = { consciousness = 1 }
+		labourers = { consciousness = 1 }
+	}
+}
+country_event = {
+
+	id = 34700
+	news = yes
+	news_desc_long = "EVTDESC34700_NEWS_LONG"
+	news_desc_medium = "EVTDESC34700_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34700_NEWS_SHORT"
+
+	trigger = {
+		tag = SAX
+		year = 1837
+		war = no
+		NOT = { year = 1840 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1838
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1839
+		}
+	}
+
+	title = "EVTNAME34700"
+	desc = "EVTDESC34700"
+	picture = "theatre"
+
+	option = {
+		name = "EVTOPTA34700" 
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 34701
+	news = yes
+	news_desc_long = "EVTDESC34701_NEWS_LONG"
+	news_desc_medium = "EVTDESC34701_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC34701_NEWS_SHORT"
+
+	trigger = {
+		tag = SAX
+		year = 1841
+		war = no
+		NOT = { year = 1844 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1842
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1843
+		}
+	}
+
+	title = "EVTNAME34701"
+	desc = "EVTDESC34701"
+	picture = "Dresdenopera"
+
+	option = {
+		name = "EVTOPTA34701" 
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 31300
+
+	trigger = {
+		tag = SWI
+		year = 1837
+		NOT = { year = 1840 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1838
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1839
+		}
+	}
+
+	title = "EVTNAME31300"
+	desc = "EVTDESC31300"
+	picture = "census"
+
+	option = {
+		name = "EVTOPTA31300" 
+		prestige = 5
+		any_pop = { consciousness = 1 }
+	}
+
+}
+country_event = {
+
+	id = 31301
+
+	trigger = {
+		tag = SWI
+		has_global_flag = LouisNapoleonExtradite
+		year = 1837
+		NOT = {
+			year = 1840
+			war_with = FRA
+			has_country_flag = LouisNapoleonExtradited
+		}
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1838
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1840
+		}
+	}
+
+	title = "EVTNAME31301"
+	desc = "EVTDESC31301"
+	picture = "napoleon3"
+
+	option = {
+		name = "EVTOPTA31301" 
+		relation = { who = FRA value = -50 }
+		set_country_flag = LouisNapoleonExtradited
+	}
+}
+country_event = {
+
+	id = 31302
+
+	trigger = {
+		tag = SWI
+		year = 1852
+		NOT = { year = 1855 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1853
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1854
+		}
+	}
+
+	title = "EVTNAME31302"
+	desc = "EVTDESC31302"
+	picture = "telegraph"
+
+	option = {
+		name = "EVTOPTA31302" 
+		prestige = 5
+	}
+}
+country_event = {
+
+	id = 31303
+
+	trigger = {
+		tag = SWI
+		government = democracy
+		year = 1898
+		NOT = { year = 1902 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1899
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1900
+		}
+	}
+
+	title = "EVTNAME31303"
+	desc = "EVTDESC31303"
+	picture = "train"
+
+	option = {
+		name = "EVTOPTA31303" 
+		plurality = 3
+	}
+
+}
+country_event = {
+
+	id = 31304
+
+	trigger = {
+		tag = SWI
+		government = democracy
+		year = 1866
+		NOT = { year = 1869 }		
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1867
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1868
+		}
+	}
+
+	title = "EVTNAME31304"
+	desc = "EVTDESC31304"
+	picture = "jews"
+	
+	option = {
+		name = "EVTOPTA31303" 
+		plurality = 3
+		any_pop = {
+			limit = {  has_pop_religion = jewish }
+			consciousness = 1
+		}
+	}
+}
+country_event = {
+
+	id = 31305
+
+	trigger = {
+		tag = SWI
+		government = democracy
+		year = 1887
+		NOT = { year = 1890 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1888
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1889
+		}
+	}
+
+	title = "EVTNAME31305"
+	desc = "EVTDESC31305"
+	picture = "liquor"
+
+	option = {
+		name = "EVTOPTA31303" 
+		plurality = 3
+	}
+}
+country_event = {
+
+	id = 31306
+
+	trigger = {
+		tag = SWI
+		owns = 2568 #Lugano Ticino
+		year = 1890
+		NOT = {
+			year = 1893
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1888
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1889
+		}
+	}
+
+	title = "EVTNAME31306"
+	desc = "EVTDESC31306"
+	picture = "Upperhouse"
+
+	option = {
+		name = "EVTOPTA31306" 
+		2568 = {
+			any_pop = {
+				scaled_militancy = {
+					factor = 8
+			       		ideology = liberal
+				}
+			}
+			any_pop = {
+				scaled_consciousness = {
+					factor = 2
+					ideology = conservative
+				}
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 31307
+	news = yes
+	news_desc_long = "EVTDESC31307_NEWS_LONG"
+	news_desc_medium = "EVTDESC31307_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC31307_NEWS_SHORT"
+
+	trigger = {
+		tag = SWI
+		year = 1898
+		exists = AUS
+		AUS = {
+			OR = {
+				government = absolute_monarchy
+				government = hms_government
+			}
+		}
+		NOT = { year = 1902 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1899
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1900
+		}
+	}
+
+	title = "EVTNAME31307"
+	desc = "EVTDESC31307"
+	picture = "sisiassassination"
+
+	option = {
+		name = "EVTOPTA31307" 
+		prestige = -40
+	}
+}
+country_event = {
+
+	id = 31308
+	news = yes
+	news_desc_long = "EVTDESC31308_NEWS_LONG"
+	news_desc_medium = "EVTDESC31308_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC31308_NEWS_SHORT"
+
+	trigger = {
+		tag = SWI
+		government = democracy
+		war = no
+		year = 1915
+		NOT = {
+			year = 1918
+			has_country_flag = 1stSocCon
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1916
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1917
+		}
+	}
+
+	title = "EVTNAME31308"
+	desc = "EVTDESC31308"
+	picture = "anticorn"
+
+	option = {
+		name = "EVTOPTA31308" 
+		plurality = 1
+		set_country_flag = 1stSocCon
+		labourers = { consciousness = 1  }	
+		craftsmen = { consciousness = 1  }	
+	}
+}
+
+country_event = {
+
+	id = 31309
+
+	trigger = {
+		tag = SWI
+		government = democracy
+		war = no
+		year = 1916
+		has_country_flag = 1stSocCon
+		NOT = {
+			year = 1919
+			has_country_flag = 2ndSocCon
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1916
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1917
+		}
+	}
+
+	title = "EVTNAME31309"
+	desc = "EVTDESC31309"
+	picture = "Prosper"
+
+	option = {
+		name = "EVTOPTA31308" 
+		plurality = 1
+		set_country_flag = 2ndSocCon
+		labourers = {
+			scaled_militancy = {
+				factor = 1
+				ideology = socialist
+			}
+		}	
+		craftsmen = {
+			scaled_militancy = {
+				factor = 1
+				ideology = socialist
+			}
+		}	
+	}
+
+}
+country_event = {
+
+	id = 31310
+	news = yes
+	news_desc_long = "EVTDESC31310_NEWS_LONG"
+	news_desc_medium = "EVTDESC31310_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC31310_NEWS_SHORT"
+
+	trigger = {
+		tag = SWI
+		has_global_flag = geneva_convention_held
+		war = no
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1864
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1865
+		}
+	}
+
+	title = "EVTNAME31310"
+	desc = "EVTDESC31310"
+	picture = "genevaconvention"
+
+	option = {
+		name = "EVTOPTA31310" 
+		prestige = 20
+	}
+}
+country_event = {
+
+	id = 31311
+
+	is_triggered_only = yes
+
+	title = "Германская военно-морская программа"
+	desc = "EVTDESC31311"
+	picture = "german_naval_program"
+
+	option = {
+		name = "Нам тоже стоит задуматься о флоте"
+	}
+}
+country_event = {
+
+	id = 31312
+
+	trigger = {
+		tag = GER
+		ai = yes
+		year = 1870
+		540 = { NOT = { has_building = naval_base }}
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1874
+		}
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1878
+		}
+	}
+
+	title = "Программа колонизации Африки"
+	desc = "EVTDESC31312"
+	picture = "german_naval_program"
+
+	option = {
+		name = "Великолепно!"
+		540 = { naval_base = 5 }
+	}
+}
+country_event = {
+
+	id = 31313
+
+	trigger = {
+		primary_culture = north_german
+		has_country_modifier = german_customs_union
+		PRU = { is_greater_power = yes }
+		NOT = {
+			in_sphere = PRU
+			tag = PRU
+		}
+	}
+
+	title = "Германский таможенный союз"
+	desc = "EVTDESC31313"
+	picture = "Deutschlandlied"
+
+	option = {
+		name = "Хорошо"
+		any_greater_power = {
+			limit = { NOT = { tag = PRU }}
+                	diplomatic_influence = { who = THIS value = -400 }
+		}
+		PRU = {
+                	diplomatic_influence = { who = THIS value = 400 }
+		}
+	}
+}
+country_event = {
+
+	id = 31314
+
+	title = "Ehre sei dem Deutschen Reich!"
+	desc = "EVTDESC31314"
+	picture = "Deutschlandlied"
+
+	trigger = {
+		primary_culture = north_german
+		has_global_flag = liberal_revolutions_should_now_fire
+		NOT = { has_global_flag = german_unification }
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			year = 1849
+		}
+		modifier = {
+			factor = 0.5
+			year = 1850
+		}
+		modifier = {
+			factor = 0.5
+			year = 1851
+		}
+		modifier = {
+			factor = 0.5
+			year = 1852
+		}
+		modifier = {
+			factor = 0.5
+			year = 1853
+		}
+	}
+
+	immediate = {
+		set_global_flag = german_unification
+		any_country = {
+			limit = { AI = no }
+			country_event = 31315
+		}
+	}
+
+	option = {
+		name = "Объединение Германии необходимо!"
+	}
+}
+country_event = {
+
+	id = 31315
+
+	title = "Подъём немецкого национального самосознания"
+	desc = "EVTDESC31314"
+	picture = "Deutschlandlied"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Весьма тревожно..."
+	}
+}
+country_event = {
+
+	id = 31316
+
+	title = "Объединение Германии"
+	desc = "EVTDESC31316"
+	picture = "Deutschlandlied"
+
+	trigger = {
+		has_global_flag = german_unification
+		primary_culture = north_german
+		capital_scope = { is_core = NGF }
+		OR = {
+			is_independant = yes
+			overlord = { primary_culture = north_german }
+		}
+		NOT = {
+			tag = PRU
+			tag = NGF
+			tag = GER
+			exists = NGF
+			exists = GER
+		}
+
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.50
+			year = 1850
+		}
+		modifier = {
+			factor = 0.50
+			year = 1851
+		}
+		modifier = {
+			factor = 0.50
+			year = 1852
+		}
+		modifier = {
+			factor = 0.50
+			year = 1853
+		}
+		modifier = {
+			factor = 0.50
+			year = 1854
+		}
+		modifier = {
+			factor = 0.50
+			year = 1855
+		}
+		modifier = {
+			factor = 0.01
+			year = 1860
+		}
+	}
+
+	option = {
+		name = "Объединение Германии необходимо!"
+		random_country = {
+			limit = {
+				OR = {
+					tag = PRU
+					AND = {
+						primary_culture = north_german
+						NOT = { exists = PRU }
+					}
+				}
+			}
+			inherit = THIS
+		}
+	}
+}
+country_event = {
+
+	id = 31317
+
+	title = "Объединение Германии"
+	desc = "EVTDESC31317"
+	picture = "Deutschlandlied"
+
+	trigger = {
+		has_global_flag = german_unification
+		primary_culture = north_german
+		capital_scope = { is_core = SGF }
+		exists = NGF
+		NOT = {
+			tag = AUS
+			tag = KUK
+			tag = SGF
+			AUS = { has_country_modifier = austrian_leadership_in_germany }
+		}
+		OR = {
+			is_independant = yes
+			overlord = { primary_culture = north_german }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.50
+			year = 1855
+		}
+		modifier = {
+			factor = 0.50
+			year = 1856
+		}
+		modifier = {
+			factor = 0.50
+			year = 1857
+		}
+		modifier = {
+			factor = 0.50
+			year = 1858
+		}
+		modifier = {
+			factor = 0.50
+			year = 1859
+		}
+		modifier = {
+			factor = 0.50
+			year = 1860
+		}
+		modifier = {
+			factor = 0.01
+			year = 1865
+		}
+	}
+
+	option = {
+		name = "Объединение Германии необходимо!"
+		NGF = { inherit = THIS }
+	}
+}
+country_event = {
+
+	id = 31318
+
+	title = "Объединение Германии"
+	desc = "EVTDESC31318"
+	picture = "Deutschlandlied"
+
+	trigger = {
+		has_global_flag = german_unification
+		primary_culture = north_german
+		capital_scope = { is_core = SGF }
+		AUS = {
+			exists = yes
+			has_country_modifier = austrian_leadership_in_germany
+		}
+		OR = {
+			is_independant = yes
+			overlord = { primary_culture = north_german }
+		}
+		NOT = {
+			tag = AUS
+			tag = KUK
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.50
+			year = 1855
+		}
+		modifier = {
+			factor = 0.50
+			year = 1856
+		}
+		modifier = {
+			factor = 0.50
+			year = 1857
+		}
+		modifier = {
+			factor = 0.50
+			year = 1858
+		}
+		modifier = {
+			factor = 0.50
+			year = 1859
+		}
+		modifier = {
+			factor = 0.50
+			year = 1860
+		}
+		modifier = {
+			factor = 0.01
+			year = 1865
+		}
+	}
+
+	option = {
+		name = "Объединение Германии необходимо!"
+		AUS = { inherit = THIS }
+	}
+}
+country_event = {
+
+	id = 31320
+
+	title = "$FROMCOUNTRY$ требует от нас отказаться от лидерства в Германии!"
+	desc = "EVTDESC31320"
+	picture = "OttoVonBismarck"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Похоже, что мы вынуждены согласиться"
+		remove_country_modifier = austrian_leadership_in_germany
+		prestige_factor = -0.25
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Этого никогда не будет!"
+		FROM = {
+			casus_belli = { target = THIS type = take_away_leadership months = 12 }
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = take_away_leadership }
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 31321
+
+	title = "$FROMCOUNTRY$ распустила Германский торговый союз"
+	desc = "EVTDESC31321"
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = {
+			diplomatic_influence = { who = THIS value = -400 }
+			relation = { who = THIS value = -400 }
+			leave_alliance = THIS
+		}
+	}
+
+	option = {
+		name = "Будем искать другие пути интеграции"
+	}
+}

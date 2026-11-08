@@ -1,0 +1,7 @@
+owner = TUR
+controller = TUR
+add_core = SER
+add_core = YUG
+terrain = urban
+trade_goods = grain
+life_rating = 35

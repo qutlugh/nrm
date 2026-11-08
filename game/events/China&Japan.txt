@@ -1,0 +1,945 @@
+##################################################################
+########################     China     ###########################
+##################################################################
+country_event = {
+	id = 90906
+	title = "Синьхайская революция"
+	desc = "EVTDESC90906"
+	picture = "chinese_revolution_army"
+
+	is_triggered_only = yes
+
+	trigger = { tag = CHI }
+
+        immediate = {
+		any_pop = { militancy = -9 consciousness = -9 }
+		primary_culture = beifaren
+		remove_accepted_culture = manchu
+		remove_country_modifier = manchu_power
+		remove_country_modifier = educational_reform
+		remove_country_modifier = military_reform
+		remove_country_modifier = western_influences
+		remove_country_modifier = uncivilized_isolationism
+		remove_country_modifier = sayings_of_the_dutch
+		remove_country_modifier = extraterritoriality_granted
+		remove_country_modifier = self_strengthening_movement_modifier
+		any_owned = {
+			remove_province_modifier = western_presence
+			remove_province_modifier = foreign_smugglers
+			remove_province_modifier = foreign_trading_post
+			remove_province_modifier = european_military_mission
+			remove_province_modifier = legation_quarter
+			remove_province_modifier = kettler_denkmal
+		}
+                government = presidential_dictatorship
+		activate_technology = napoleonic_thought
+		activate_technology = flintlock_rifles
+		activate_technology = bronze_muzzle_loaded_artillery
+		activate_technology = military_staff_system
+		activate_technology = army_command_principle
+		activate_technology = nelsonian_thought
+		activate_technology = clipper_design
+		activate_technology = marine_engineering_basics
+		activate_technology = marine_chronometers
+		activate_technology = the_command_principle
+		activate_technology = sentimentalism
+		activate_technology = late_enlightenment_philosophy
+		activate_technology = malthusian_thought
+		activate_technology = constitutionalism_thought
+		activate_technology = fundamentals_of_psychology
+		activate_technology = joint-stock_companies
+		activate_technology = no_standard
+		activate_technology = physiocracy
+		activate_technology = state_mercantilism
+		activate_technology = division_of_labour
+		activate_technology = water_wheel_power
+		activate_technology = manufactories
+		activate_technology = mechanized_mining
+		activate_technology = animal-powered_railroad
+		activate_technology = basic_chemistry
+		release_vassal = KOR
+		release = MGL
+		release = TIB
+		release = MCK
+		release = XIN
+		release = YNN
+		release = XBI
+		release = GXI
+		release = SXI
+                MGL = {
+			civilized = yes
+			activate_technology = napoleonic_thought
+			activate_technology = flintlock_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = military_staff_system
+			activate_technology = army_command_principle
+			activate_technology = nelsonian_thought
+			activate_technology = clipper_design
+			activate_technology = marine_engineering_basics
+			activate_technology = marine_chronometers
+			activate_technology = the_command_principle
+			activate_technology = sentimentalism
+			activate_technology = late_enlightenment_philosophy
+			activate_technology = malthusian_thought
+			activate_technology = constitutionalism_thought
+			activate_technology = fundamentals_of_psychology
+			activate_technology = joint-stock_companies
+			activate_technology = no_standard
+			activate_technology = physiocracy
+			activate_technology = state_mercantilism
+			activate_technology = division_of_labour
+			activate_technology = water_wheel_power
+			activate_technology = manufactories
+			activate_technology = mechanized_mining
+			activate_technology = animal-powered_railroad
+			activate_technology = basic_chemistry
+		}
+                TIB = {
+			civilized = yes
+			activate_technology = napoleonic_thought
+			activate_technology = flintlock_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = military_staff_system
+			activate_technology = army_command_principle
+			activate_technology = nelsonian_thought
+			activate_technology = clipper_design
+			activate_technology = marine_engineering_basics
+			activate_technology = marine_chronometers
+			activate_technology = the_command_principle
+			activate_technology = sentimentalism
+			activate_technology = late_enlightenment_philosophy
+			activate_technology = malthusian_thought
+			activate_technology = constitutionalism_thought
+			activate_technology = fundamentals_of_psychology
+			activate_technology = joint-stock_companies
+			activate_technology = no_standard
+			activate_technology = physiocracy
+			activate_technology = state_mercantilism
+			activate_technology = division_of_labour
+			activate_technology = water_wheel_power
+			activate_technology = manufactories
+			activate_technology = mechanized_mining
+			activate_technology = animal-powered_railroad
+			activate_technology = basic_chemistry
+		}
+                MCK = {
+			civilized = yes
+			activate_technology = napoleonic_thought
+			activate_technology = flintlock_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = military_staff_system
+			activate_technology = army_command_principle
+			activate_technology = nelsonian_thought
+			activate_technology = clipper_design
+			activate_technology = marine_engineering_basics
+			activate_technology = marine_chronometers
+			activate_technology = the_command_principle
+			activate_technology = sentimentalism
+			activate_technology = late_enlightenment_philosophy
+			activate_technology = malthusian_thought
+			activate_technology = constitutionalism_thought
+			activate_technology = fundamentals_of_psychology
+			activate_technology = joint-stock_companies
+			activate_technology = no_standard
+			activate_technology = physiocracy
+			activate_technology = state_mercantilism
+			activate_technology = division_of_labour
+			activate_technology = water_wheel_power
+			activate_technology = manufactories
+			activate_technology = mechanized_mining
+			activate_technology = animal-powered_railroad
+			activate_technology = basic_chemistry
+		}
+                XIN = {
+			civilized = yes
+			activate_technology = napoleonic_thought
+			activate_technology = flintlock_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = military_staff_system
+			activate_technology = army_command_principle
+			activate_technology = nelsonian_thought
+			activate_technology = clipper_design
+			activate_technology = marine_engineering_basics
+			activate_technology = marine_chronometers
+			activate_technology = the_command_principle
+			activate_technology = sentimentalism
+			activate_technology = late_enlightenment_philosophy
+			activate_technology = malthusian_thought
+			activate_technology = constitutionalism_thought
+			activate_technology = fundamentals_of_psychology
+			activate_technology = joint-stock_companies
+			activate_technology = no_standard
+			activate_technology = physiocracy
+			activate_technology = state_mercantilism
+			activate_technology = division_of_labour
+			activate_technology = water_wheel_power
+			activate_technology = manufactories
+			activate_technology = mechanized_mining
+			activate_technology = animal-powered_railroad
+			activate_technology = basic_chemistry
+		}
+                YNN = {
+			civilized = yes
+			activate_technology = napoleonic_thought
+			activate_technology = flintlock_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = military_staff_system
+			activate_technology = army_command_principle
+			activate_technology = nelsonian_thought
+			activate_technology = clipper_design
+			activate_technology = marine_engineering_basics
+			activate_technology = marine_chronometers
+			activate_technology = the_command_principle
+			activate_technology = sentimentalism
+			activate_technology = late_enlightenment_philosophy
+			activate_technology = malthusian_thought
+			activate_technology = constitutionalism_thought
+			activate_technology = fundamentals_of_psychology
+			activate_technology = joint-stock_companies
+			activate_technology = no_standard
+			activate_technology = physiocracy
+			activate_technology = state_mercantilism
+			activate_technology = division_of_labour
+			activate_technology = water_wheel_power
+			activate_technology = manufactories
+			activate_technology = mechanized_mining
+			activate_technology = animal-powered_railroad
+			activate_technology = basic_chemistry
+		}
+                XBI = {
+			civilized = yes
+			activate_technology = napoleonic_thought
+			activate_technology = flintlock_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = military_staff_system
+			activate_technology = army_command_principle
+			activate_technology = nelsonian_thought
+			activate_technology = clipper_design
+			activate_technology = marine_engineering_basics
+			activate_technology = marine_chronometers
+			activate_technology = the_command_principle
+			activate_technology = sentimentalism
+			activate_technology = late_enlightenment_philosophy
+			activate_technology = malthusian_thought
+			activate_technology = constitutionalism_thought
+			activate_technology = fundamentals_of_psychology
+			activate_technology = joint-stock_companies
+			activate_technology = no_standard
+			activate_technology = physiocracy
+			activate_technology = state_mercantilism
+			activate_technology = division_of_labour
+			activate_technology = water_wheel_power
+			activate_technology = manufactories
+			activate_technology = mechanized_mining
+			activate_technology = animal-powered_railroad
+			activate_technology = basic_chemistry
+		}
+                GXI = {
+			civilized = yes
+			activate_technology = napoleonic_thought
+			activate_technology = flintlock_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = military_staff_system
+			activate_technology = army_command_principle
+			activate_technology = nelsonian_thought
+			activate_technology = clipper_design
+			activate_technology = marine_engineering_basics
+			activate_technology = marine_chronometers
+			activate_technology = the_command_principle
+			activate_technology = sentimentalism
+			activate_technology = late_enlightenment_philosophy
+			activate_technology = malthusian_thought
+			activate_technology = constitutionalism_thought
+			activate_technology = fundamentals_of_psychology
+			activate_technology = joint-stock_companies
+			activate_technology = no_standard
+			activate_technology = physiocracy
+			activate_technology = state_mercantilism
+			activate_technology = division_of_labour
+			activate_technology = water_wheel_power
+			activate_technology = manufactories
+			activate_technology = mechanized_mining
+			activate_technology = animal-powered_railroad
+			activate_technology = basic_chemistry
+		}
+                SXI = {
+			civilized = yes
+			activate_technology = napoleonic_thought
+			activate_technology = flintlock_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = military_staff_system
+			activate_technology = army_command_principle
+			activate_technology = nelsonian_thought
+			activate_technology = clipper_design
+			activate_technology = marine_engineering_basics
+			activate_technology = marine_chronometers
+			activate_technology = the_command_principle
+			activate_technology = sentimentalism
+			activate_technology = late_enlightenment_philosophy
+			activate_technology = malthusian_thought
+			activate_technology = constitutionalism_thought
+			activate_technology = fundamentals_of_psychology
+			activate_technology = joint-stock_companies
+			activate_technology = no_standard
+			activate_technology = physiocracy
+			activate_technology = state_mercantilism
+			activate_technology = division_of_labour
+			activate_technology = water_wheel_power
+			activate_technology = manufactories
+			activate_technology = mechanized_mining
+			activate_technology = animal-powered_railroad
+			activate_technology = basic_chemistry
+		}
+		capital_scope = { state_scope = { any_owned = {
+			add_province_modifier = { name = mastered_region duration = -1 }
+		}}}
+        }
+
+	option = {
+		name = "Этому народу нужна крепкая рука!"
+		nationalvalue = nv_commercial_capitalism
+                government = presidential_dictatorship
+		SXI = { annex_to = THIS }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Китайцам нужна демократия"
+		nationalvalue = nv_commercial_capitalism
+                government = democracy
+		political_reform = universal_voting
+		political_reform = population_equal_weight
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = all_trade_unions
+		political_reform = no_draft
+		political_reform = secret_ballots
+		political_reform = proportional_representation
+		political_reform = protected
+		political_reform = appointed
+		political_reform = enshrined
+		political_reform = reverence_for_religion
+		add_country_modifier = { name = liberal_reforms_boost duration = 1825 }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 90908
+	title = "Аренда Даляня державой $FROMCOUNTRY$"
+	desc = "$FROMCOUNTRY_ADJ$ посланник в нашей столице, городе $CAPITAL$ обратился к нам с предложением об аренде Даляня на 99 лет за 500 тысяч рублей."
+	picture = "russian_vladivostok"
+	is_triggered_only = yes
+
+	option = {
+		name = "Согласиться"
+		money = 300000
+		1481 = { secede_province = RUS }
+		FROM = { country_event = 90909 }
+		relation = { who = FROM value = 100 }
+	}
+	option = {
+		name = "Отказаться"
+		FROM = { country_event = 909099 }
+		relation = { who = FROM value = -200 }
+	}
+}
+country_event = {
+	id = 90909
+	title = "Согласие Китая на аренду Даляня"
+	desc = "$FROMCOUNTRY_ADJ$ император согласился предоставить порт Даляня нам в аренду на 99 лет за 300 тысяч рублей."
+	picture = "russian_vladivostok"
+	is_triggered_only = yes
+
+	immediate = {
+		1481 = { change_province_name = "Порт-Артур" }
+	}
+	option = {
+		name = "Прекрасно"
+	}
+}
+country_event = {
+	id = 909099
+	title = "В аренда Даляня отказано!"
+	desc = "$FROMCOUNTRY_ADJ$ император отказался предоставить порт Даляня нам в аренду. Это неслыханное оскорбление!"
+	picture = "russian_vladivostok"
+	is_triggered_only = yes
+
+	immediate = {
+		money = 300000
+	}
+	option = {
+		name = "Они об этом ещё пожалеют"
+	}
+}
+#Taiping Rebellion
+country_event = {
+	id = 160001
+	title = "EVTNAME160001"
+	desc = "EVTDESC160001"
+	picture = "rebellion"
+	news = yes
+	news_desc_long = "EVTDESC160001_NEWS_LONG"
+	news_desc_medium = "EVTDESC160001_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC160001_NEWS_SHORT"
+
+	trigger = {
+		tag = CHI
+                year = 1850
+                NOT = {
+			civilized = yes
+			year = 1880
+		}
+		has_country_modifier = opium_war_defeated
+	}
+        fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.75
+			year = 1860
+			NOT = { year = 1870 }
+		}
+		modifier = {
+			factor = 0.50
+			year = 1870
+			NOT = { year = 1880 }
+		}
+	}
+	
+        immediate = {
+		leadership = 1200
+ 		add_country_modifier = { name = civil_war duration = 365 }
+		set_global_flag = taiping_insurgents_rised
+		release = TPG
+		TPG = {
+			add_country_modifier = { name = civil_war duration = 365 }
+			any_pop = {
+				consciousness = -9
+				militancy = -9
+			}
+			leadership = 1200
+		}
+		CHI = { all_core = { add_core = TPG }}
+		set_global_flag = taiping_has_happened
+		any_country = {
+			limit = {
+				colonial_nation = yes
+				any_owned_province = { continent = asia is_colonial = yes }
+			}
+			country_event = 160004
+		}
+        }
+	option = {
+		name = "EVTOPTA160001"
+		casus_belli = { target = TPG type = conquest months = 12 }
+		war = {
+			target = TPG
+			attacker_goal = { casus_belli = conquest }
+			#defender_goal = { casus_belli = status_quo }
+		}
+	}
+}
+country_event = {
+	id = 160002
+	title = "Тайпинское восстание подавлено"
+	desc = "Путём огромнейших усилий, наше государство сумело победить Тайпинское восстание. Вся наша нация надеется, что эта ужасная страница в её истории навсегда закрыта."
+	picture = "rebellion"
+
+	trigger = {
+		tag = CHI
+		TPG = { exists = no }
+		has_global_flag = taiping_insurgents_rised
+	}
+        fire_only_once = yes
+
+        immediate = {
+		TPG = { all_core = { remove_core = TPG }}
+        }
+
+	option = {
+		name = "Это была настоящая бойня!"
+	}
+}
+country_event = {
+	id = 160003
+	title = "Победа Тайпинского восстания"
+	desc = "Тайпинское восстание в Китае выиграло гражданскую войну. Повстанцы освободили от иностранного влияния существенную часть Китая. Это очень серьёзно ударит по нашим интересам и престижу как в регионе, так и во всём мире."
+	picture = "rebellion"
+
+	trigger = {
+		colonial_nation = yes
+		any_owned_province = {
+			is_colonial = yes
+			continent = asia
+		}
+		TPG = {
+			NOT = { war_with = CHI }
+			exists = yes
+		}
+		has_global_flag = taiping_insurgents_rised
+		NOT = { has_country_flag = victory_of_taiping }
+	}
+
+	option = {
+		name = "Мы их позже уничтожим!"
+		prestige_factor = -0.25
+		set_country_flag = victory_of_taiping
+	}
+}
+country_event = {
+	id = 160004
+	title = "Тайпинское восстание в Китае"
+	desc = "В Китае восстало местное население, которое не в силах больше терпеть неравноправные торговые договоры с иностранцами. Их победа очень серьёзно ударит по нашему международному престижу."
+	picture = "rebellion"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Поможем им"
+		relation = { who = TPG value = -400 }
+		casus_belli = { target = TPG type = prepare_war months = 60 }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Они сами по себе"
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 160005
+
+	is_triggered_only = yes
+
+	title = "Восстание в Монголии"
+	desc = "В Монголии на днях вспыхнуло небывалое по масштабу восстание. Судя по всему это всё произошло не без влияния России. Что мы собираемся делать?"
+	picture = "mongolian_rebellion"
+
+	option = {
+		name = "Уничтожить повстанцев"
+		badboy = 10
+		casus_belli = {
+			target = MGL
+			type = conquest
+			months = 1
+		}
+		war = {
+			target = MGL
+			attacker_goal = { casus_belli = conquest }
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "Смириться"
+		relation = { who = MGL value = 200 }
+		prestige_factor = -0.25
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 160006
+
+	is_triggered_only = yes
+
+	title = "Япония оккупировала остров Формоза!"
+	desc = "Японская военщина уже не скрывая своих намерений внаглую оккупировала наш остров - Формозу, и разместила там свои войска и морской флот. Как мы на это отреагируем?"
+	picture = "japanese_commanders_at_audi"
+
+	option = {
+		name = "Мы этого так не оставим!"
+		war = {
+			target = JAP
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 1485 }
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "Смириться"
+		prestige_factor = -0.25
+		ai_chance = { factor = 0 }
+	}
+}
+# McMahon Line treaty
+country_event = {
+	id = 160007
+	title = "EVTNAME160007"
+	desc = "EVTDESC160007"
+	picture = "british_india"
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { set_country_flag = mcmahon_line_was_drew }
+	}
+
+	option = {
+		name = "EVTOPTA160007"
+		FROM = { country_event = 160009 }
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "EVTOPTB160007"
+		FROM = { country_event = 160008 }
+		ai_chance = { factor = 0 }
+	}
+}
+# China refuses
+country_event = {
+	id = 160008
+	title = "EVTNAME160008"
+	desc = "EVTDESC160008"
+	picture = "british_india"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA160008"
+		relation = { who = CHI value = -400 }
+		leave_alliance = CHI
+		war = {
+			target = CHI
+			attacker_goal = {
+				casus_belli = acquire_state_event
+				state_province_id = 1593
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB160008"
+		relation = { who = CHI value = 100 }
+		prestige_factor = -0.05
+		ai_chance = { factor = 0 }
+	}
+}
+# China accept
+country_event = {
+	id = 160009
+	title = "EVTNAME160009"
+	desc = "EVTDESC160009"
+	picture = "british_india"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA160009"
+		1593 = {
+			remove_core = TIB
+			remove_core = CHI
+			add_core = HND
+			secede_province = THIS
+		}
+		prestige = 20
+		relation = { who = CHI value = 100 }
+	}
+}
+##################################################################
+########################     Japan     ###########################
+##################################################################
+country_event = {
+	id = 1500101
+
+	trigger = { tag = TKG }
+	is_triggered_only = yes
+
+	title = "Победа императорских сил в войне Босин"
+	desc = "EVTDESC1500101"
+        picture = "japanese_power"
+	news = yes
+	news_desc_long = "the_meiji_restoration_NEWS_LONG"
+	news_desc_medium = "the_meiji_restoration_NEWS_MEDIUM"
+	news_desc_short = "the_meiji_restoration_NEWS_SHORT"
+
+	immediate = {
+		any_pop = { militancy = -9 consciousness = -9 }
+		remove_country_modifier = educational_reform
+		remove_country_modifier = military_reform
+		remove_country_modifier = western_influences
+		remove_country_modifier = uncivilized_isolationism
+		remove_country_modifier = sayings_of_the_dutch
+		remove_country_modifier = extraterritoriality_granted
+		any_owned = {
+			remove_province_modifier = western_presence
+			remove_province_modifier = foreign_smugglers
+			remove_province_modifier = foreign_trading_post
+			remove_province_modifier = european_military_mission
+			remove_province_modifier = legation_quarter
+			remove_province_modifier = kettler_denkmal
+		}
+		change_tag = JAP
+		TKG = { all_core = { remove_core = TKG }}
+		activate_technology = napoleonic_thought
+		activate_technology = flintlock_rifles
+		activate_technology = bronze_muzzle_loaded_artillery
+		activate_technology = military_staff_system
+		activate_technology = army_command_principle
+		activate_technology = nelsonian_thought
+		activate_technology = clipper_design
+		activate_technology = marine_engineering_basics
+		activate_technology = marine_chronometers
+		activate_technology = the_command_principle
+		activate_technology = sentimentalism
+		activate_technology = late_enlightenment_philosophy
+		activate_technology = malthusian_thought
+		activate_technology = enlightenment_thought
+		activate_technology = fundamentals_of_psychology
+		activate_technology = joint-stock_companies
+		activate_technology = no_standard
+		activate_technology = physiocracy
+		activate_technology = state_mercantilism
+		activate_technology = division_of_labour
+		activate_technology = water_wheel_power
+		activate_technology = manufactories
+		activate_technology = mechanized_mining
+		activate_technology = animal-powered_railroad
+		activate_technology = basic_chemistry
+		CHI_1086 = { add_core = THIS }
+		JAP_1654 = { add_core = THIS }
+        }
+
+	option = {
+		name = "За императора!"
+		nationalvalue = nv_commercial_capitalism
+	}
+}
+country_event = {
+	id = 1500104
+
+	is_triggered_only = yes
+
+	title = "Симодский договор"
+	desc = "Россия предлагает нам соглашение, по которому она отказывается от претензий на Хоккайдо, а так же передаёт нам южный Сахалин и южные Курилы, но мы в таком случае не будем претендовать на их владения."
+	picture = "kurils"
+
+	option = {
+		name = "Заключить договор"
+		FROM = {
+			1087 = { secede_province = THIS }
+			1089 = { secede_province = THIS }
+		}
+	}
+}
+country_event = {
+	id = 1500105
+
+	is_triggered_only = yes
+
+	title = "Россия претендует на наши территории!"
+	desc = "Совсем недавно посол России предъявил требования нашей стране на остров Хоккайдо. Как мы поступим?"
+	picture = "kurils"
+
+	option = {
+		name = "Это наша земля!"
+                FROM = { country_event = 1500106 }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "Согласиться"
+                FROM = { country_event = 1500107 }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 1500106
+
+	is_triggered_only = yes
+
+	title = "Японцы сопротивляются!"
+	desc = "Посол из державы $FROMCOUNTRY$ выразил нам протест в связи с нашими агрессивными намерениями относительно их исконных земель на острове Хоккайдо."
+	picture = "kurils"
+
+	option = {
+		name = "Сделаем вид, что ничего не было"
+                prestige = -80
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Объявить войну!"
+                prestige = 40
+                war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = acquire_state_event
+				state_province_id = 1642
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 1500107
+
+	is_triggered_only = yes
+
+	title = "Японцы нас боятся!"
+	desc = "Посол из державы $FROMCOUNTRY$ официально признал претензии нашей страны на остров Хоккайдо!"
+	picture = "kurils"
+
+	option = {
+		name = "Просто прекрасно!"
+                JAP_1642 = { secede_province = THIS }
+	}
+}
+country_event = {
+	id = 1500108
+
+	trigger = {
+		tag = JAP
+		civilized = yes
+		war = no
+		ai = yes
+		KOR = {
+			exists = yes
+			is_independant = yes
+			civilized = no
+			NOT = { truce_with = THIS }
+		}
+	}
+
+	title = "Экспансия в Корею"
+	desc = "Корея - самый очевидный объект нашей экспансии в самом его начале! Нам жизненно необходимо её захватить. Получить такую важную базу на континенте, мы смогли бы дальше продолжать нашу экспансию и на континент."
+	major = yes
+
+	option = {
+		name = "Подготовьте транспорты!"
+		casus_belli = { target = KOR type = conquest months = 1 }
+                war = { target = KOR attacker_goal = { casus_belli = conquest }}
+	}
+}
+country_event = {
+	id = 1500109
+	title = "Проникновение коммунизма на Японский архипелаг"
+	desc = "Наша славная социалистическая держава имеет по соседству с собой буржуазное государство, пролетариям которого нужно нести свет знаний и надежду на освобождение от гнёта!"
+	picture = "bolshevik"
+
+	trigger = {
+		government = proletarian_dictatorship
+		1632 = {
+			owned_by = THIS
+			has_province_modifier = core_reg
+		}
+		1661 = {
+			has_province_modifier = core_reg
+			owner = {
+				NOT = { government = proletarian_dictatorship }
+			}
+		}
+	}
+
+        mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 2
+			NOT = { communist = 0.10 }
+		}
+		modifier = {
+			factor = 1.75
+			communist = 0.10
+			NOT = { communist = 0.20 }
+		}
+		modifier = {
+			factor = 1.5
+			communist = 0.20
+			NOT = { communist = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			communist = 0.40
+			NOT = { communist = 0.50 }
+		}
+		modifier = {
+			factor = 0.75
+			communist = 0.50
+			NOT = { communist = 0.60 }
+		}
+		modifier = {
+			factor = 0.5
+			communist = 0.60
+			NOT = { communist = 0.70 }
+		}
+		modifier = {
+			factor = 0.25
+			communist = 0.70
+		}
+	}
+
+        option = {
+		name = "Конечно!"
+		1661 = {
+			owner = {
+				country_event = 1810068
+				relation = { who = THIS value = -400 }
+			}
+		}
+        }
+}
+country_event = {
+	id = 1500110
+
+	trigger = {
+		primary_culture = japanese
+		year = 1833
+		NOT = { has_country_flag = tenpo_famine }
+	}
+
+	mean_time_to_happen = {
+		months = 5
+	}
+
+	title = "Великий голод Тэмпо"
+	desc = "EVTDESC1500110"
+	picture = "tenpo_famine"
+
+	option = {
+		name = "Какой ужас!"
+		any_pop = {
+			limit = { location = { is_core = THIS }}
+			reduce_pop=0.955
+		}
+		set_country_flag = tenpo_famine
+	}
+}
+province_event = {
+	id = 1500111
+
+	trigger = {
+		OR = {
+			is_core = TKG
+			is_core = JAP
+		}
+		owner = { has_country_flag = danger_of_starvation_flag }
+		NOT = { has_province_modifier = danger_of_starvation }
+	}
+
+	title = "Угроза голода в регионе $STATENAME$"
+	desc = "Регион $STATENAME$ не имеет достаточных земельных ресурсов для прокорма населения при ведении архаичного сельского хозяйства."
+
+	option = {
+		name = "Необходим технологический рывок"
+		state_scope = {
+			any_owned = {
+				add_province_modifier = {
+					name = danger_of_starvation
+					duration = -1
+				}
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 1500112
+
+	is_triggered_only = yes
+
+	title = "Японская военно-морская программа"
+	desc = "EVTDESC1500112"
+	picture = "japanese_naval_program"
+
+	option = {
+		name = "У нас новый конкурент в Тихоокеанском регионе?"
+	}
+}

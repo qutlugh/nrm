@@ -1,0 +1,8 @@
+owner = NET
+controller = NET
+add_core = BEL
+
+
+add_core = NET
+trade_goods = iron_ore
+life_rating = 35

@@ -1,0 +1,9 @@
+army = {
+	name = "Army of the King of Hawaii"
+	location = 2218
+	regiment = {
+		name= "1.Hawaii Royal Guard"
+		type = irregular
+		home = 2218
+	}
+}

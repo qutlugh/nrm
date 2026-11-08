@@ -1,0 +1,537 @@
+#Sphere of Influence
+SWE = {
+	value = 50		#relation
+	level = 2		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+FIN = {
+	value = 200		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 100
+	military_access = yes
+}
+MON = {
+	value = 200		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 100
+}
+GRE = {
+	value = 100
+	level = 2
+	influence_value = 0
+}
+POL = {
+	value = 200
+	level = 5
+	influence_value = 100
+	military_access = yes
+}
+KRA = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+CHI = {
+	value = -50
+}
+PRU = {
+	value = 100
+}
+AUS = {
+	value = -50
+}
+KAZ = {
+	value = -200
+	level = 0
+	influence_value = 0
+}
+KOK = {
+	value = -200
+	level = 0
+	influence_value = 0
+}
+KHI = {
+	value = -200
+	level = 0
+	influence_value = 0
+}
+BUK = {
+	value = -200
+	level = 0
+	influence_value = 0
+}
+CIR = {
+	value = -200
+	level = 0
+	influence_value = 0
+}
+DAG = {
+	value = -200
+	level = 0
+	influence_value = 0
+}
+PER = {
+	value = -200
+	level = 0
+	influence_value = 0
+}
+army = {
+	name = "Гвардейский корпус"
+	location = 994
+	regiment = {
+		name= "1-я гвардейская бригада"
+		type = dragoon
+		home = 1060
+	}
+	regiment = {
+		name= "2-я гвардейская бригада"
+		type = infantry
+		home = 1060
+	}
+	regiment = {
+		name= "3-я гвардейская бригада"
+		type = infantry
+		home = 1060
+	}
+	regiment = {
+		name= "4-я гвардейская бригада"
+		type = infantry
+		home = 718
+	}
+	regiment = {
+		name= "5-я гвардейская бригада"
+		type = infantry
+		home = 943
+	}
+	regiment = {
+		name= "6-я гвардейская бригада"
+		type = engineer
+		home = 943
+	}
+	regiment = {
+		name= "8-я гвардейская бригада"
+		type = engineer
+		home = 943
+	}
+}
+army = {
+	name = "Московский гарнизон"
+	location = 1008
+	regiment = {
+		name= "1-я гвардейская бригада"
+		type = dragoon
+		home = 944
+	}
+	regiment = {
+		name= "2-я гвардейская бригада"
+		type = infantry
+		home = 944
+	}
+	regiment = {
+		name= "3-я гвардейская бригада"
+		type = infantry
+		home = 958
+	}
+	regiment = {
+		name= "4-я гвардейская бригада"
+		type = infantry
+		home = 958
+	}
+	regiment = {
+		name= "5-я гвардейская бригада"
+		type = infantry
+		home = 977
+	}
+	regiment = {
+		name= "6-я гвардейская бригада"
+		type = engineer
+		home = 977
+	}
+	regiment = {
+		name= "8-я гвардейская бригада"
+		type = engineer
+		home = 977
+	}
+}
+army = {
+	name = "1-ая украинская армия"
+	location = 958
+	regiment = {
+		name= "1-я гвардейская бригада"
+		type = dragoon
+		home = 977
+	}
+	regiment = {
+		name= "2-я гвардейская бригада"
+		type = infantry
+		home = 978
+	}
+	regiment = {
+		name= "3-я гвардейская бригада"
+		type = infantry
+		home = 978
+	}
+	regiment = {
+		name= "4-я гвардейская бригада"
+		type = infantry
+		home = 978
+	}
+	regiment = {
+		name= "5-я гвардейская бригада"
+		type = infantry
+		home = 994
+	}
+	regiment = {
+		name= "6-я гвардейская бригада"
+		type = engineer
+		home = 994
+	}
+	regiment = {
+		name= "8-я гвардейская бригада"
+		type = engineer
+		home = 994
+	}
+}
+army = {
+	name = "2-ая украинская армия"
+	location = 978
+	regiment = {
+		name= "1-я гвардейская бригада"
+		type = dragoon
+		home = 979
+	}
+	regiment = {
+		name= "2-я гвардейская бригада"
+		type = infantry
+		home = 990
+	}
+	regiment = {
+		name= "3-я гвардейская бригада"
+		type = infantry
+		home = 998
+	}
+	regiment = {
+		name= "4-я гвардейская бригада"
+		type = infantry
+		home = 998
+	}
+	regiment = {
+		name= "5-я гвардейская бригада"
+		type = infantry
+		home = 1003
+	}
+	regiment = {
+		name= "6-я гвардейская бригада"
+		type = engineer
+		home = 1003
+	}
+	regiment = {
+		name= "8-я гвардейская бригада"
+		type = engineer
+		home = 1008
+	}
+}
+army = {
+	name = "Кавказская армия"
+	location = 1047
+	regiment = {
+		name= "1-я гвардейская бригада"
+		type = dragoon
+		home = 1008
+	}
+	regiment = {
+		name= "2-я гвардейская бригада"
+		type = infantry
+		home = 1008
+	}
+	regiment = {
+		name= "3-я гвардейская бригада"
+		type = infantry
+		home = 1009
+	}
+	regiment = {
+		name= "4-я гвардейская бригада"
+		type = infantry
+		home = 1009
+	}
+	regiment = {
+		name= "5-я гвардейская бригада"
+		type = infantry
+		home = 1009
+	}
+	regiment = {
+		name= "6-я гвардейская бригада"
+		type = engineer
+		home = 1037
+	}
+	regiment = {
+		name= "8-я гвардейская бригада"
+		type = engineer
+		home = 1037
+	}
+}
+army = {
+	name = "Рижский гарнизон"
+	location = 354
+	regiment = {
+		name= "1-я гвардейская бригада"
+		type = dragoon
+		home = 1037
+	}
+	regiment = {
+		name= "2-я гвардейская бригада"
+		type = infantry
+		home = 1020
+	}
+	regiment = {
+		name= "3-я гвардейская бригада"
+		type = infantry
+		home = 1020
+	}
+	regiment = {
+		name= "4-я гвардейская бригада"
+		type = infantry
+		home = 1020
+	}
+	regiment = {
+		name= "5-я гвардейская бригада"
+		type = infantry
+		home = 1026
+	}
+	regiment = {
+		name= "6-я гвардейская бригада"
+		type = engineer
+		home = 1026
+	}
+	regiment = {
+		name= "8-я гвардейская бригада"
+		type = engineer
+		home = 1041
+	}
+}
+army = {
+	name = "Крымская армия"
+	location = 967
+	regiment = {
+		name= "1-я гвардейская бригада"
+		type = dragoon
+		home = 1041
+	}
+	regiment = {
+		name= "2-я гвардейская бригада"
+		type = infantry
+		home = 1048
+	}
+	regiment = {
+		name= "3-я гвардейская бригада"
+		type = infantry
+		home = 1048
+	}
+	regiment = {
+		name= "4-я гвардейская бригада"
+		type = infantry
+		home = 1048
+	}
+	regiment = {
+		name= "5-я гвардейская бригада"
+		type = infantry
+		home = 2244
+	}
+	regiment = {
+		name= "6-я гвардейская бригада"
+		type = engineer
+		home = 2244
+	}
+}
+navy = {
+	name = "Черноморская эскадра"
+	location = 967
+	ship = {
+		name= "Гавриил"
+		type = manowar
+	}
+	ship = {
+		name= "Селафаил"
+		type = manowar
+	}
+	ship = {
+		name= "Уриил"
+		type = manowar
+	}
+	ship = {
+		name= "Ягудиил"
+		type = manowar
+	}
+	ship = {
+		name= "Ростислав"
+		type = manowar
+	}
+	ship = {
+		name= "Мария"
+		type = frigate
+	}
+	ship = {
+		name= "Пимен"
+		type = frigate
+	}
+	ship = {
+		name= "Пармен"
+		type = frigate
+	}
+	ship = {
+		name= "Пантелеймон"
+		type = frigate
+	}
+	ship = {
+		name= "Пётр Великий"
+		type = frigate
+	}
+	ship = {
+		name= "Измаил"
+		type = frigate
+	}
+	ship = {
+		name= "Севастополь"
+		type = frigate
+	}
+	ship = {
+		name= "Екатерина Великая"
+		type = frigate
+	}
+	ship = {
+		name= "Звезда"
+		type = frigate
+	}
+	ship = {
+		name= "Варшава"
+		type = frigate
+	}
+}
+navy = {
+	name = "Военный транспорт"
+	location = 976
+	ship = {
+		name= "1-я транспортная флотилия"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2-я транспортная флотилия"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2-я транспортная флотилия"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2-я транспортная флотилия"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2-я транспортная флотилия"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2-я транспортная флотилия"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2-я транспортная флотилия"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2-я транспортная флотилия"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2-я транспортная флотилия"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2-я транспортная флотилия"
+		type = clipper_transport
+	}
+}
+navy = {
+	name = "Кронштадтская эскадра"
+	location = 994
+	ship = {
+		name= "Царь Константин"
+		type = manowar
+	}
+	ship = {
+		name= "Иезеркиль"
+		type = manowar
+	}
+	ship = {
+		name= "Азов"
+		type = manowar
+	}
+	ship = {
+		name= "Александр Невский"
+		type = manowar
+	}
+	ship = {
+		name= "Великий князь Михаил"
+		type = manowar
+	}
+	ship = {
+		name= "Память Азова"
+		type = manowar
+	}
+	ship = {
+		name= "Орел"
+		type = manowar
+	}
+	ship = {
+		name= "Красной"
+		type = manowar
+	}
+	ship = {
+		name= "Нарва"
+		type = manowar
+	}
+	ship = {
+		name= "Лесное"
+		type = manowar
+	}
+	ship = {
+		name= "Кемь"
+		type = frigate
+	}
+	ship = {
+		name= "Юг"
+		type = frigate
+	}
+	ship = {
+		name= "Межа"
+		type = frigate
+	}
+	ship = {
+		name= "Сестра"
+		type = frigate
+	}
+	ship = {
+		name= "Дон"
+		type = frigate
+	}
+	ship = {
+		name= "Терек"
+		type = frigate
+	}
+	ship = {
+		name= "Истра"
+		type = frigate
+	}
+	ship = {
+		name= "Дубна"
+		type = frigate
+	}
+	ship = {
+		name= "Обь"
+		type = frigate
+	}
+	ship = {
+		name= "Индигирка"
+		type = frigate
+	}
+}

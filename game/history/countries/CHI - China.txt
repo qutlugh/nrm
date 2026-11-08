@@ -1,0 +1,41 @@
+capital = 1612
+primary_culture = manchu
+culture = beifaren
+religion = mahayana
+government = absolute_monarchy
+plurality = 10
+nationalvalue = nv_archaic_economy
+literacy = 0.08
+prestige = 200
+
+ruling_party = CHI_conservative
+upper_house = {
+	fascist = 0
+	liberal = 0
+	conservative = 100
+	reactionary = 0
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}
+
+# Starting Consciousness
+consciousness = 0
+nonstate_consciousness = 0
+
+# Technologies
+sentimentalism = 1
+
+# Inventions
+asian_backwardness = yes
+
+schools = traditional_academic
+
+oob = "CHI_oob.txt"
+
+# Unciv reforms
+
+# Political reforms
+slavery = no_slavery
+public_meetings = no_meeting
+upper_house_composition = party_appointed

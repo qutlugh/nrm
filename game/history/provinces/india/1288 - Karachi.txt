@@ -1,0 +1,8 @@
+owner = SIN
+controller = SIN
+add_core = HND
+add_core = PAK
+add_core = SIN
+trade_goods = coal
+terrain = urban
+life_rating = 35

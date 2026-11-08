@@ -1,0 +1,366 @@
+political_decisions = {
+   	ministry_cabinet_on = { 
+		alert = no 
+		picture = govrnmt
+        	potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+ 				has_country_flag = sell_and_buy_window
+ 				has_country_flag = politics_des_window
+ 				has_country_flag = givemoney
+ 				has_country_flag = nuke_des_window
+ 				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+        	}
+		allow = {}
+		effect = { set_country_flag = ministry_cabinet_opened }
+		ai_will_do = { factor = 0 }
+	}
+   	ministry_cabinet_off = {
+		alert = no
+		picture = govrnmt
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = { clr_country_flag = ministry_cabinet_opened }
+		ai_will_do = { factor = 1 }
+	}
+	dissolve_the_government_decision = {
+		alert = no
+		picture = court_yard_speech
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = cabinet_of_ministry_assigned
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = dissolved_the_government
+				AND = {
+					government = democracy
+					NOT = { war_exhaustion = 10 }
+				}
+				AND = {
+					government = hms_government
+					NOT = { war_exhaustion = 10 }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = { name = dissolved_the_government duration = 3650 }
+			set_country_flag = cabinet_of_ministry_not_assigned
+			remove_country_modifier = assigning_cabinet_of_ministry
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					war = no
+					AND = {
+						war = yes
+						NOT = { war_exhaustion = 20 }
+					}
+					AND = {
+						war = yes
+						is_greater_power = yes
+						NOT = { war_countries = { is_greater_power = yes }}
+					}
+				}
+			}
+		}
+	}
+	breaker_of_the_concert_of_europe = {
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_global_flag = breakdown_of_the_concert_of_europe
+			NOT = {
+				has_country_flag = breaking_of_the_concert_of_europe
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			random_country = {
+				limit = { has_country_flag = breaking_of_the_concert_of_europe }
+				country_event = 19429
+			}
+		}
+	}
+	minister_of_foreign_affairs1_decision = {
+		picture = ministry_of_foreign_affairs
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_foreign_affairs1flag
+			NOT = {
+				has_country_flag = resources_des_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_foreign_affairs1 duration = 1 }
+		}
+	}
+	minister_of_foreign_affairs2_decision = {
+		picture = ministry_of_foreign_affairs
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_foreign_affairs2flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_foreign_affairs2 duration = 1 }
+		}
+	}
+	minister_of_foreign_affairs3_decision = {
+		picture = ministry_of_foreign_affairs
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_foreign_affairs3flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_foreign_affairs3 duration = 1 }
+		}
+	}
+	minister_of_foreign_affairs4_decision = {
+		picture = ministry_of_foreign_affairs
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_foreign_affairs4flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_foreign_affairs4 duration = 1 }
+		}
+	}
+	minister_of_defence1_decision = {
+		picture = ministry_of_defence
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_defence1flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_defence1 duration = 1 }
+		}
+	}
+	minister_of_defence2_decision = {
+		picture = ministry_of_defence
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_defence2flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_defence2 duration = 1 }
+		}
+	}
+	minister_of_defence3_decision = {
+		picture = ministry_of_defence
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_defence3flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_defence3 duration = 1 }
+		}
+	}
+	minister_of_defence4_decision = {
+		picture = ministry_of_defence
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_defence4flag
+			NOT = {
+				has_country_flag = resources_des_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_defence4 duration = 1 }
+		}
+	}
+	minister_of_defence5_decision = {
+		picture = ministry_of_defence
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_defence5flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_defence5 duration = 1 }
+		}
+	}
+	minister_of_economics1_decision = {
+		picture = ministry_of_economics
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_economics1flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_economics1 duration = 1 }
+		}
+	}
+	minister_of_economics2_decision = {
+		picture = ministry_of_economics
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_economics2flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_economics2 duration = 1 }
+		}
+	}
+	minister_of_economics3_decision = {
+		picture = ministry_of_economics
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_economics3flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_economics3 duration = 1 }
+		}
+	}
+	minister_of_economics4_decision = {
+		picture = ministry_of_economics
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_economics4flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_economics4 duration = 1 }
+		}
+	}
+	minister_of_economics5_decision = {
+		picture = ministry_of_economics
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_economics5flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_economics5 duration = 1 }
+		}
+	}
+	minister_of_culture_and_education1_decision = {
+		picture = ministry_of_education
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_culture_and_education1flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_culture_and_education1 duration = 1 }
+		}
+	}
+	minister_of_culture_and_education2_decision = {
+		picture = ministry_of_education
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_culture_and_education2flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_culture_and_education2 duration = 1 }
+		}
+	}
+	minister_of_culture_and_education3_decision = {
+		picture = ministry_of_education
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_culture_and_education3flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_culture_and_education3 duration = 1 }
+		}
+	}
+	minister_of_culture_and_education4_decision = {
+		picture = ministry_of_education
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_culture_and_education4flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_culture_and_education4 duration = 1 }
+		}
+	}
+	minister_of_culture_and_education5_decision = {
+		picture = ministry_of_education
+		potential = {
+			has_country_flag = ministry_cabinet_opened
+			has_country_flag = minister_of_culture_and_education5flag
+			NOT = {
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = { NOT = { year = 1800 }}
+		effect = {
+			add_country_modifier = { name = minister_of_culture_and_education5 duration = 1 }
+		}
+	}
+}

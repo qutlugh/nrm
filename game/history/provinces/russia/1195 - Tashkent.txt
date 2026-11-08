@@ -1,0 +1,7 @@
+owner = KOK
+controller = KOK
+add_core = UZB
+add_core = KOK
+trade_goods = precious_metal
+life_rating = 40
+terrain = urban

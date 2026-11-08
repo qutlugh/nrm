@@ -1,0 +1,1151 @@
+country_event = {
+
+	id = 46300
+	news = yes
+	news_desc_long = "EVTDESC46300_NEWS_LONG"
+	news_desc_medium = "EVTDESC46300_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC46300_NEWS_SHORT"
+
+	trigger = {
+		tag = BRZ 
+		year = 1864
+		slavery = yes_slavery
+		NOT = { year = 1872 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 6
+
+		modifier = {
+			factor = 0.85 #increase likelihood to happen
+			year = 1865
+		}
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1867
+		}
+	}
+
+	title = "EVTNAME46300"
+	desc = "EVTDESC46300"
+	picture = "NavioNegreiro"
+
+	option = {
+		name = "EVTOPTA46300" 
+		any_pop = {
+			limit = { consciousness = 4 }
+			dominant_issue = {
+				value = no_slavery
+				factor = 0.4
+			}
+		}
+		slaves = { consciousness = 4 }
+	}
+}
+country_event = {
+
+	id = 46301
+	news = yes
+	news_desc_long = "EVTDESC46301_NEWS_LONG"
+	news_desc_medium = "EVTDESC46301_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC46301_NEWS_SHORT"
+
+	trigger = {
+		tag = BRZ 
+		year = 1895
+		NOT = { year = 1910 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 18
+
+		modifier = {
+			factor = 0.55 #increase likelihood to happen
+			year = 1898
+		}
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1902
+		}
+	}
+
+	title = "EVTNAME46301"
+	desc = "EVTDESC46301"
+	picture = "football"
+
+	option = {
+		name = "EVTOPTA46301" 
+		set_country_flag = JogoBonito
+		prestige = 5
+		poor_strata = { militancy = 2 }
+	}
+}
+country_event = {
+
+	id = 46302
+	news = yes
+	news_desc_long = "EVTDESC46302_NEWS_LONG"
+	news_desc_medium = "EVTDESC46302_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC46302_NEWS_SHORT"
+
+	trigger = {
+		tag = BRZ
+		owns = 2436 #Bahia
+		year = 1837
+		slavery = yes_slavery
+		NOT = { year = 1840 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 18
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1838
+		}
+		modifier = {
+			factor = 0.80 #increase likelihood to happen
+			year = 1839
+		}
+	}
+
+	title = "EVTNAME46302"
+	desc = "EVTDESC46302"
+	picture = "Slaves"
+
+	option = {
+		name = "EVTOPTA46302" 
+		set_country_flag = Sabinada
+		2436 = {
+			slaves = { militancy = 6 }
+		}
+		slaves = { militancy = 3 }		
+	}
+}
+country_event = {
+
+	id = 46600 
+	news = yes
+	news_desc_long = "EVTDESC46600_NEWS_LONG"
+	news_desc_medium = "EVTDESC46600_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC46600_NEWS_SHORT"
+
+	trigger = {
+		tag = ARG
+		year = 1851
+		NOT = {
+			year = 1855
+			has_country_flag = Alberdi
+		}
+		war = no
+		is_ideology_enabled = anarcho_liberal
+		government = democracy #only fire if ARG is a republic 
+	}
+ 
+	mean_time_to_happen =  {
+		months = 8
+
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1852
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1853
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1854
+		}
+	}
+
+	title = "EVTNAME46600"
+	desc = "EVTDESC46600"
+	picture = "Alberdi"
+	
+	option = {
+		name = "EVTOPTA46600" 
+		prestige = 10
+		any_pop = {
+			consciousness = 1
+			militancy = -1
+		}
+		bureaucrats = { consciousness = 1 }
+		officers = { consciousness = 1 }
+		aristocrats = { consciousness = 1 }
+		clergymen = { consciousness = 1 }
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.1
+			}
+		}
+		set_country_flag = Alberdi
+	}
+
+	option = {
+		name = "EVTOPTB46600" 
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.1
+			}
+			consciousness = 2
+			scaled_militancy = {
+				factor = 2
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = 2
+				ideology = anarcho_liberal
+			}
+		}
+		set_country_flag = Alberdi
+	}
+}
+country_event = {
+
+	id = 46601
+	news = yes
+	news_desc_long = "EVTDESC46601_NEWS_LONG"
+	news_desc_medium = "EVTDESC46601_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC46601_NEWS_SHORT" 
+
+	trigger = {
+		tag = ARG  
+		year = 1844
+		NOT = {
+			year = 1850
+			has_country_flag = Facundo
+		}
+		OR = {
+			government = presidential_dictatorship  #book is reaction against strong-man rule
+			government = absolute_monarchy
+		}  
+	}
+ 
+	mean_time_to_happen =  {
+		months = 8
+
+		modifier = {
+			factor = 0.8 #increase likelihood to happen
+			year = 1845
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1846
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1847
+		}
+	}
+
+	title = "EVTNAME46601"
+	desc = "EVTDESC46601"
+	picture = "Facundo"
+
+	option = {
+		name = "EVTOPTA46601" 
+		any_pop = {
+			consciousness = 1
+			ideology = {
+				value = liberal
+				factor = 0.2
+			}
+			scaled_consciousness = {
+				factor = 2
+				ideology = liberal
+			}
+			scaled_consciousness = {
+				factor = 2
+				ideology = anarcho_liberal
+			}
+		}
+		set_country_flag = Facundo
+	}
+
+}
+country_event = {
+
+	id = 46400
+	news = yes
+	news_desc_long = "EVTDESC46400_NEWS_LONG"
+	news_desc_medium = "EVTDESC46400_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC46400_NEWS_SHORT"
+
+	trigger = {
+		tag = URU
+		year = 1911
+		government = democracy
+		NOT = { year = 1916 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1912
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1913
+		}
+	}
+
+	title = "EVTNAME46400"
+	desc = "EVTDESC46400"
+	picture = "Prosper"
+
+	option = {
+		name = "EVTOPTA46400"
+		plurality = 5 
+		farmers = { consciousness = 1 }
+		labourers = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		artisans = { consciousness = 1 }		
+		farmers = { militancy = -1 }
+		labourers = { militancy = -1 }
+		craftsmen = { militancy = -1 }
+		artisans = { militancy = -1 }		
+	}
+
+}
+country_event = {
+
+	id = 45100
+
+	trigger = {
+		tag = HAI
+		year = 1860
+		exists = PAP
+		NOT = { year = 1863 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1861
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1862
+		}
+	}
+
+	title = "EVTNAME45100"
+	desc = "EVTDESC45100"
+	picture = "pope"
+
+	option = {
+		name = "EVTOPTA45100" 
+		prestige = 10
+		relation = { who = PAP value = 50 }
+		clergymen = { militancy = -3 }
+	}
+}
+country_event = {
+
+	id = 44800
+
+	trigger = {
+		tag = MEX
+		year = 1909
+		NOT = {
+			year = 1913
+			government = democracy
+		}
+	}
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1911
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1912
+		}
+	}
+
+	title = "EVTNAME44800"
+	desc = "EVTDESC44800"
+	picture = "Madero"
+
+	immediate = {
+		add_country_modifier = { name = civil_war2 duration = 1825 }
+	}
+
+	option = {
+		name = "EVTOPTA44800" 
+		farmers = { militancy=3 consciousness=3 }
+		labourers = { militancy=3 consciousness=3 }
+		craftsmen = { militancy=3 consciousness=3 }
+		artisans = { militancy=3 consciousness=3 }
+		set_country_flag = Madero
+	}
+}
+country_event = {
+
+	id = 44801
+
+	trigger = {
+		tag = MEX
+		year = 1911
+		has_country_flag = Madero
+		NOT = {
+			year = 1914
+			government = democracy
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 4
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1912
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1913
+		}
+	}
+
+	title = "EVTNAME44801"
+	desc = "EVTDESC44801"
+	picture = "Riot"
+
+	option = {
+		name = "EVTOPTA44801" 
+		2137 = { any_pop = { militancy = 8 }} #Hermosillo Sonora
+		2139 = { any_pop = { militancy = 8 }} #N Baja
+		2142 = { any_pop = { militancy = 8 }} #Chihuahua
+		2143 = { any_pop = { militancy = 8 }} #Nogales
+		set_country_flag = MaderoRevolt
+	}
+}
+country_event = {
+
+	id = 44802
+
+	trigger = {
+		tag = MEX
+		year = 1911
+		has_country_flag = MaderoRevolt
+		NOT = { year = 1915 }
+	}
+ 	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1912
+		}
+
+
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1913
+		}
+	}
+
+	title = "EVTNAME44802"
+	desc = "EVTDESC44802"
+	picture = "churchmexico"
+
+	option = {
+		name = "EVTOPTA44802" 
+		2177 = { any_pop = { militancy = 8 }}
+		2178 = { any_pop = { militancy = 8 }}
+	}
+
+}
+country_event = {
+
+	id = 44803
+
+	trigger = {
+		tag = MEX
+		has_country_flag = MaderoRevolt
+		year = 1911
+		NOT = { year = 1915 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1912
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1913
+		}
+	}
+
+	title = "EVTNAME44803"
+	desc = "EVTDESC44803"
+	picture = "Posada"
+
+	option = {
+		name = "EVTOPTA44803" 
+		farmers = { consciousness = 1 }
+		labourers = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+	}
+}
+country_event = {
+
+	id = 46800
+	news = yes
+	news_desc_long = "EVTDESC46800_NEWS_LONG"
+	news_desc_medium = "EVTDESC46800_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC46800_NEWS_SHORT"
+
+	trigger = {
+		tag = PEU
+		year = 1911
+		owns = 2302 #Cusco
+		NOT = { year = 1914 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1912
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1913
+		}
+	}
+
+	title = "EVTNAME46800"
+	desc = "EVTDESC46800"
+	picture = "Machupicchu"
+
+	option = {
+		name = "EVTOPTA46800" 
+		prestige = 20
+	}
+}
+country_event = {
+
+	id = 46801
+	news = yes
+	news_desc_long = "EVTDESC46801_NEWS_LONG"
+	news_desc_medium = "EVTDESC46801_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC46801_NEWS_SHORT"
+
+	trigger = {
+		tag = PEU
+		year = 1845
+		NOT = { year = 1848 }
+	}
+ 	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1846
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1847
+		}
+	}
+
+	title = "EVTNAME46801"
+	desc = "EVTDESC46801"
+	picture = "Thermopylae"
+
+	option = {
+		name = "EVTOPTA46801" 
+		money = 50000
+	}
+}
+country_event = {
+
+	id = 46802
+
+	trigger = {
+		tag = MEX
+		vassal_of = FRA
+		FRA = { has_country_flag = has_invaded_mexico_fra }
+		NOT = { has_country_flag = second_mexican_empire_was_created }
+	}
+
+	title = "Вторая Мексиканская Империя"
+	desc = "В $YEAR$ году от Рождества Христова, было провозглашено создание Второй Мексиканской Империи! Максимиллиан I, наш император, взошёл на престол и согласился править этой землёй по справедливости."
+	picture = "ascension_to_the_throne_mex"
+
+	option = {
+		name = "Похоже, что это только начало борьбы..."
+		government = absolute_monarchy
+		set_country_flag = second_mexican_empire_was_created
+		add_country_modifier = { name = civil_war2 duration = 3650 }
+	}
+}
+country_event = {
+
+	id = 46803
+
+	trigger = {
+		tag = MEX
+		has_country_flag = second_mexican_empire_was_created
+		NOT = {
+			vassal_of = FRA
+			has_country_flag = second_mexican_empire_has_fallen
+		}
+	}
+
+	title = "Падение Второй Мексиканской Империи"
+	desc = "Французские интервенты были изгнаны из страны и монархия Габсбурга Максимиллиана I пала. Самопровозглашённый император был осуждён военно полевым судом, и согласно ранее принятому закону был казнён через расстрел."
+	picture = "maximillian_execution"
+
+	immediate = {
+		any_country = { limit = { ai = no } country_event = 46804 }
+	}
+
+	option = {
+		name = "Национально-освободительная борьба окончена!"
+		government = democracy
+		remove_country_modifier = civil_war2
+		set_country_flag = second_mexican_empire_has_fallen
+	}
+}
+country_event = {
+
+	id = 46804
+
+	is_triggered_only = yes
+
+	title = "Падение Второй Мексиканской Империи"
+	desc = "Французские интервенты были изгнаны из Мексики и монархия Габсбурга Максимиллиана I пала. Самопровозглашённый император был осуждён военно полевым судом, и согласно ранее принятому в Мексике закону был казнён через расстрел."
+	picture = "maximillian_execution"
+
+	option = {
+		name = "Убийство монарха было лишним"
+	}
+}
+country_event = {
+
+	id = 46805
+
+	is_triggered_only = yes
+
+	title = "Провозглашение Второй Мексиканской Империи"
+	desc = "EVTDESC46805"
+	picture = "ascension_to_the_throne_mex"
+
+	option = {
+		name = "Добром это не кончится..."
+	}
+}
+country_event = {
+
+	id = 46806
+
+	trigger = {
+		owns = 2395
+		year = 1875
+		NOT = { has_country_flag = patagonia_colonized }
+	}
+
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1876
+		}
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1877
+		}
+		modifier = {
+			factor = 0.01 #increase likelihood to happen
+			year = 1878
+		}
+	}
+
+	title = "Колонизация Патагонии"
+	desc = "В нашей стране давно настала пора заняться заселением наших необъятных южных пустынных территорий с целью увеличения сельскохозяйственных угодий."
+	picture = "patagonia"
+
+	option = {
+		name = "Нужно привлечь туда мигрантов"
+		set_country_flag = patagonia_colonized
+		ARG_2391 = {
+			secede_province = THIS
+			life_rating = 39
+		}
+	}
+}
+country_event = {
+
+	id = 46807
+
+	trigger = {
+		owns = 2328
+		year = 1875
+		NOT = { has_country_flag = patagonia_colonized }
+	}
+
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1876
+		}
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1877
+		}
+		modifier = {
+			factor = 0.01 #increase likelihood to happen
+			year = 1878
+		}
+	}
+
+	title = "Колонизация Араукании"
+	desc = "Наша страна может увеличить сельскохозяйственные угодия за счёт покорения необжитых южных территорий, населённых патагонцами."
+	picture = "patagonia"
+
+	option = {
+		name = "Приступаем к захвату земель!"
+		set_country_flag = patagonia_colonized
+		CHL_2332 = {
+			secede_province = THIS
+			life_rating = 39
+		}
+	}
+}
+country_event = {
+
+	id = 46808
+
+	trigger = {
+		tag = MEX
+		NOT = { war_with = SPA }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 12
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1822
+		}
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1823
+		}
+		modifier = {
+			factor = 0.01 #increase likelihood to happen
+			year = 1824
+		}
+	}
+
+	title = "Республиканское восстание!"
+	desc = "EVTDESC46808"
+	major = yes
+
+	immediate = {
+		release = UCA
+		remove_accepted_culture = central_american
+		any_pop = { militancy = 9 consciousness = 9 }
+		add_country_modifier = { name = civil_war2 duration = 1825 }
+	}
+	option = {
+		name = "Каналья! Отправить армию!"
+		badboy = 30
+		UCA = { add_country_modifier = { name = war_for_independance duration = 1825 }}
+		casus_belli = { target = UCA type = conquest months = 1 }
+		war = { target = UCA attacker_goal = { casus_belli = conquest }}
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Нам сейчас не до сепаратистов"
+		relation = { who = UCA value = 200 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 46809
+
+	trigger = {
+		tag = GCO
+		NOT = {
+			war_with = SPA
+			exists = CLM
+			exists = VNZ
+			exists = ECU
+		}
+		year = 1830
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 12
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1822
+		}
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1823
+		}
+		modifier = {
+			factor = 0.01 #increase likelihood to happen
+			year = 1824
+		}
+	}
+
+	title = "Распад Великой Колумбии"
+	desc = "EVTDESC46809"
+	major = yes
+
+	immediate = {
+		change_tag = CLM
+		release = VNZ
+		release = ECU
+		political_reform = unitary
+		government = presidential_dictatorship
+		political_reform = appointed
+		political_reform = not_prohibited
+		political_reform = religious_state
+		political_reform = no_slavery
+		political_reform = none_voting
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = state_press
+		political_reform = no_trade_unions
+		political_reform = underground_parties
+		political_reform = oppression
+		political_reform = mandatory_service
+		primary_culture = colombian
+		remove_accepted_culture = venezuelan
+		remove_accepted_culture = ecuadorian
+	}
+
+	option = {
+		name = "Но ведь вместе мы сильнее!"
+	}
+}
+country_event = {
+
+	id = 46810
+
+	trigger = {
+		tag = MEX
+		year = 1830
+		OR = {
+			average_militancy = 4
+			NOT = { government = democracy }
+		}
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1836
+		}
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1837
+		}
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1838
+		}
+	}
+
+	title = "Сепаратиские восстания на севере и юге"
+	desc = "EVTDESC46810"
+	major = yes
+
+	immediate = {
+		release = YUC
+		release = RGR
+	}
+
+	option = {
+		name = "Отправить войска"
+		casus_belli = { target = YUC type = conquest months = 1 }
+		war = { target = YUC attacker_goal = { casus_belli = conquest }}
+		YUC = { add_country_modifier = { name = war_for_independance duration = 1825 }}
+		relation = { who = YUC value = -400 }
+		casus_belli = { target = RGR type = conquest months = 1 }
+		war = { target = RGR attacker_goal = { casus_belli = conquest }}
+		RGR = { add_country_modifier = { name = war_for_independance duration = 1825 }}
+		relation = { who = RGR value = -400 }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "Пусть будут независимыми, пока что..."
+		relation = { who = YUC value = 400 }
+		relation = { who = RGR value = 400 }
+		relation = { who = TEX value = 400 }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 46811
+
+	trigger = {
+		tag = BRZ
+		year = 1822
+		vassal_of = POR
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.01 #increase likelihood to happen
+			year = 1823
+		}
+	}
+
+	title = "День Фику"
+	desc = "EVTDESC46811"
+	picture = "Dia do Fico"
+
+	immediate = {
+		POR = {
+			release_vassal = THIS
+			casus_belli = { target = THIS type = make_puppet months = 1 }
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = become_independent }
+			}
+			add_country_modifier = {
+				name = the_likelihood_of_a_financial_crisis_alt
+				duration = 1460
+			}
+		}
+		release = URU
+		any_owned = {
+			limit = { is_core = URU }
+			remove_core = THIS
+		}
+		any_owned = {
+			remove_province_modifier = mastering_region_mark
+			remove_province_modifier = mastering_the_region
+			remove_province_modifier = mastered_region
+		}
+		remove_country_modifier = mastered_country_market
+		add_country_modifier = { name = war_for_independance duration = 1825 }
+	}
+
+	option = {
+		name = "Готовимся к вторжению португальцев!"
+	}
+}
+country_event = {
+
+	id = 46812
+
+	trigger = {
+		tag = MEX
+		year = 1830
+		slavery = no_slavery
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 6
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1836
+		}
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1837
+		}
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1838
+		}
+	}
+
+	title = "Восстание в Техасе!"
+	desc = "EVTDESC46812"
+	picture = "texas_revolution"
+
+	immediate = {
+		132 = { secede_province = TEX }
+		2136 = { secede_province = TEX }
+		827 = { secede_province = TEX }
+		134 = { secede_province = TEX }
+		2133 = { secede_province = TEX }
+		133 = { secede_province = TEX }
+		2132 = { secede_province = TEX }
+		137 = { secede_province = TEX }
+	}
+
+	option = {
+		name = "Уничтожить повстанцев!"
+		casus_belli = { target = TEX type = conquest months = 1 }
+		war = { target = TEX attacker_goal = { casus_belli = conquest }}
+		TEX = { add_country_modifier = { name = war_for_independance duration = 1825 }}
+		relation = { who = TEX value = -400 }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "Оставить Техас в покое"
+		relation = { who = TEX value = 400 }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 46813
+
+	trigger = {
+		tag = GCO
+		OR = {
+			exists = CLM
+			exists = VNZ
+			exists = ECU
+		}
+		NOT = {
+			war_with = SPA
+		}
+		year = 1830
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  {
+		months = 12
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1822
+		}
+		modifier = {
+			factor = 0.5 #increase likelihood to happen
+			year = 1823
+		}
+		modifier = {
+			factor = 0.01 #increase likelihood to happen
+			year = 1824
+		}
+	}
+
+	title = "Распад Великой Колумбии"
+	desc = "EVTDESC46809"
+	major = yes
+
+	immediate = {
+		inherit = CLM
+		inherit = VNZ
+		inherit = ECU
+		release = VNZ
+		release = ECU
+		change_tag = CLM
+		political_reform = unitary
+		government = presidential_dictatorship
+		political_reform = appointed
+		political_reform = not_prohibited
+		political_reform = religious_state
+		political_reform = no_slavery
+		political_reform = none_voting
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = state_press
+		political_reform = no_trade_unions
+		political_reform = underground_parties
+		political_reform = oppression
+		political_reform = mandatory_service
+		primary_culture = colombian
+		remove_accepted_culture = venezuelan
+		remove_accepted_culture = ecuadorian
+	}
+
+	option = {
+		name = "Но ведь вместе мы сильнее!"
+	}
+}
+country_event = {
+
+	id = 46814
+
+	trigger = {
+		AI = yes
+		war = no
+		tag = MEX
+		war_exhaustion = 0
+		RGR = {
+			exists = yes
+			is_independant = yes
+		}
+	}
+
+	mean_time_to_happen =  { months = 6 }
+
+	title = "Решение вопроса северных мятежников"
+	desc = "Рио-Гранде недавно получила фактически независимость от нас, но формально это наша суверенная территория. Необходимо силовым путём решить проблему независимости Рио-Гранде."
+	major = yes
+
+	option = {
+		name = "Выдвигаем армию!"
+		war = {
+			target = RGR
+			attacker_goal = { casus_belli = civil_war }
+		}
+	}
+}
+country_event = {
+
+	id = 46815
+
+	trigger = {
+		AI = yes
+		war = no
+		tag = MEX
+		war_exhaustion = 0
+		YUC = {
+			exists = yes
+			is_independant = yes
+		}
+	}
+
+	mean_time_to_happen =  { months = 6 }
+
+	title = "Решение вопроса южных мятежников"
+	desc = "Юкатан недавно получил фактически независимость от нас, но формально это наша суверенная территория. Необходимо силовым путём решить проблему независимости Юкатана."
+	major = yes
+
+	option = {
+		name = "Выдвигаем армию!"
+		war = {
+			target = YUC
+			attacker_goal = { casus_belli = civil_war }
+		}
+	}
+}

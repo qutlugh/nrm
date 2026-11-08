@@ -1,0 +1,244 @@
+#############################
+#        GOLD EVENTS        #
+#############################
+province_event = {
+	
+	id = 11010
+
+	trigger = {
+		year = 1848
+		or = {
+			province_id = 88			# Mariposa
+			province_id = 844			# Modesto
+			province_id = 843			# Bakersfield
+			province_id = 86			# Sacramento
+			province_id = 2154			# Santa Maria del Oro
+			province_id = 2293			# Huanuco
+			province_id = 2300			# Pucallpa
+			province_id = 2401			# Marabitanas
+			province_id = 2549			# Tarauaca
+			province_id = 1707			# Mascara
+			province_id = 1715			# Naama
+			province_id = 1691			# Casablanca
+			province_id = 1692			# Huribka
+		}
+		not = { trade_goods = precious_metal }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+
+	}
+
+	title = "EVTNAME1100"
+	desc = "EVTDESC1100"
+
+	option = {
+		name = "EVTOPTA1100"
+		trade_goods = precious_metal
+		add_province_modifier = {
+			name = gold_rush
+			duration = 7200
+		}
+	}
+}
+province_event = {
+	
+	id = 11030
+
+	trigger = {
+		year = 1880
+		OR = {
+			province_id = 2101		# Bloemfontein
+			province_id = 2504		# Esperance
+			province_id = 1357 		# Vientiane
+			province_id = 1985		# Kumbana
+			province_id = 2082		# Otjinene
+			province_id = 2397		# Esquel
+			province_id = 1080		# Chernomin
+			province_id = 1085		# Blagoveshensk
+			province_id = 2676		# Kirensk
+			province_id = 2644		# Olekminsk
+			province_id = 1553		# Aigun
+			
+		}
+		not = { trade_goods = precious_metal }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+
+	}
+
+	title = "EVTNAME1100"
+	desc = "EVTDESC1100"
+
+	option = {
+		name = "EVTOPTA1100"
+		trade_goods = precious_metal
+		add_province_modifier = {
+			name = gold_rush
+			duration = 5475
+		}
+	}
+}
+#Witwatersrand Gold Rush
+province_event = {
+	id = 11390
+	
+	trigger = {
+		year = 1880
+		province_id = 2106
+		NOT = { trade_goods = precious_metal }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	title = "EVTNAME1139"
+	desc = "EVTDESC1139"
+	
+	option = {
+		name = "EVTOPTA1139"
+		trade_goods = precious_metal
+		add_province_modifier = {
+			name = gold_rush
+			duration = 5475
+		}
+		change_province_name = "Йоханнесбург"
+		owner = {
+			add_country_modifier = {
+				name = witwatersrand_gold_rush
+				duration = 1460
+			}
+		}
+	}
+}
+province_event = {
+	
+	id = 11040
+
+	trigger = {
+		year = 1890
+		or = {
+			province_id = 2645		# Chilchi
+			province_id = 2696		# Aldan
+			province_id = 2644		# Olyekminsk
+			province_id = 1077		# Krasnoyarsk
+			province_id = 1076		# Bratsk
+			province_id = 1084		# Utchan
+			
+		}
+		not = { trade_goods = precious_metal }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+
+	}
+
+	title = "EVTNAME1100"
+	desc = "EVTDESC1100"
+
+	option = {
+		name = "EVTOPTA1100"
+		trade_goods = precious_metal
+		add_province_modifier = {
+			name = gold_rush
+			duration = 7200
+		}
+	}
+}
+################################
+#        DIAMOND EVENTS        #
+################################
+province_event = {
+	
+	id = 11050
+
+	trigger = {
+		year = 1836
+		or = {
+			province_id = 2068			# Salisbury
+		}
+		not = { trade_goods = precious_metal }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+
+	}
+
+	title = "EVTNAME1105"
+	desc = "EVTDESC1105"
+	picture = ""
+
+	option = {
+		name = "EVTOPTA1105"
+		trade_goods = precious_metal
+		add_province_modifier = {
+			name = gold_rush
+			duration = 7200
+		}
+	}
+}
+################################
+#        URANUS EVENTS        #
+################################
+province_event = {
+	id = 11077
+	trigger = {
+		year = 1930
+                OR = {
+			province_id = 25	   	# Banff
+			province_id = 2078   		# Windhoek
+			province_id = 1813   		# Arlit
+			province_id = 1079   		# Nerchinsk
+			province_id = 1479   		# Mukden
+			province_id = 2612   		# Aktash
+			province_id = 2492   		# Port Lincolon
+			province_id = 2102		# Winburg
+                }
+		not = { has_province_modifier = uranium_deposits }
+	}
+
+	mean_time_to_happen = { months = 24 }
+
+	title = "Месторождение урана"
+	desc = "Наши геологи недавно обнаружили крупные залежи урановой руды в провинции $PROVINCENAME$. Эта руда пригодится нам для разработки ядерного оружия."
+
+	option = {
+		name = "Начинаем добычу!"
+		add_province_modifier = { name = uranium_deposits duration = -1 }
+	}
+}
+##################################
+#        SUBSIDIARY FARMS        #
+##################################
+province_event = {
+	id = 11078
+	trigger = {
+                owner = { NOT = { any_owned_province = { has_province_modifier = subsidiary_farm_cooldown }}}
+		OR = {
+			unemployment_by_type = { type=farmers value=0.10 }
+			unemployment_by_type = { type=labourers value=0.10 }
+		}
+		NOT = {
+			trade_goods = subsidiary_farm
+			trade_goods = precious_metal
+			COM = { capital_scope = { has_province_modifier = subsidiary_farm_cooldown }}
+		}
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	title = "EVTNAME11078"
+	desc = "EVTDESC11078"
+
+	option = {
+		name = "Надеюсь это поможет им выжить"
+		trade_goods = subsidiary_farm
+		add_province_modifier = { name = subsidiary_farm_cooldown duration = 30 }
+	}
+}

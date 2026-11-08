@@ -1,0 +1,5 @@
+owner = PEU
+controller = SPA
+add_core = PEU
+trade_goods = wool
+life_rating = 40

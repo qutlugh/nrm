@@ -1,0 +1,4 @@
+owner = USAcontroller = USAadd_core = USA
+trade_goods = grain
+life_rating = 40
+terrain = urbanstate_building = { level = 2 building = fishing_wharf_10 upgrade = yes }state_building = { level = 1 building = ammunition_factory upgrade = yes }state_building = { level = 1 building = packing_plant upgrade = yes }state_building = { level = 1 building = artillery_factory upgrade = yes }state_building = { level = 1 building = canned_fish_factory upgrade = yes }state_building = { level = 2 building = lumber_mill upgrade = yes }state_building = { level = 1 building = clipper_shipyard upgrade = yes }state_building = { level = 1 building = bakery upgrade = yes }naval_base = 1

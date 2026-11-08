@@ -1,0 +1,647 @@
+political_decisions = {
+	form_italy = {
+		news = yes
+		news_desc_long = "form_italy_NEWS_LONG"
+		news_desc_medium = "form_italy_NEWS_MEDIUM"
+		news_desc_short = "form_italy_NEWS_SHORT"
+		potential = {
+			NOT = {
+				exists = ITA
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = italy_formed
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = italian
+		}
+		allow = {
+			ITA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							OR = { in_sphere = THIS vassal_of = THIS }
+							primary_culture = italian
+						}
+						owner = { NOT = { primary_culture = italian }}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 100
+			change_tag = ITA
+			set_global_flag = italy_formed
+			remove_country_modifier = risorgimento
+			any_country = {
+				limit = {
+					primary_culture = italian
+					OR = { in_sphere = THIS vassal_of = THIS }
+				}
+				country_event = 1800945
+			}
+			political_reform = unitary
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					OR = { 
+						pop_type = artisans
+						pop_type = clerks
+						pop_type = craftsmen
+						pop_type = farmers
+						pop_type = aristocrats
+						pop_type = capitalists
+					}
+				}
+				money = 1000
+			}
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					NOT = { location = { trade_goods = precious_metal }}
+					OR = {
+						pop_type = labourers
+						pop_type = skilledworker
+					}
+				}
+				money = 1000
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	cavours_diplomacy = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = cavour_has_done_this
+				any_owned_province = { has_building = selector }
+			}
+			owns = 465 owns = 466 owns = 472
+			primary_culture = italian
+			FRA = { exists = yes is_greater_power = yes }
+			729 = { owner = { OR = { tag = AUS tag = KUK }}}
+		}
+		allow = {
+			tag = ITA
+			FRA = {
+				NOT = {
+					war_with = AUS
+					war_with = KUK
+					truce_with = AUS
+					truce_with = KUK
+				}
+			}
+                        NOT = {
+				war_with = AUS
+				war_with = KUK
+				truce_with = AUS
+				truce_with = KUK
+			}
+		}
+		effect = {
+			FRA = { country_event = { id = 35303 days = 5 }}
+			set_country_flag = cavour_has_done_this
+		}
+	}
+	award_order_of_st_francis = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = order_awarded
+				any_owned_province = { has_building = selector }
+			}
+			tag = SIC
+			government = absolute_monarchy
+		}
+		
+		allow = {
+			prestige = 50
+		}
+		
+		effect = {
+			years_of_research = 1
+			prestige = 25
+			set_country_flag = order_awarded
+		}
+	}
+	statuto_albertino = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = get_your_statuto_albertino_here
+				any_owned_province = { has_building = selector }
+			}
+			tag = SAR
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+			}
+		}
+		allow = {
+			average_militancy = 3
+		}
+		effect = {
+			any_pop = { militancy = -3 }
+			prestige = 50
+			set_country_flag = get_your_statuto_albertino_here
+		}
+	}
+	build_vittoriano = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = vittoriano_built
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+		}
+		allow = {
+			money = 100000
+			expressionism = 1
+		}
+		effect = {
+			money = -100000
+			prestige = 100
+			any_pop = { militancy = -3 }
+			set_country_flag = vittoriano_built
+		}
+	}
+	the_case_of_edgardo_mortara = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = edgardo_mortara
+				any_owned_province = { has_building = selector }
+			}
+			tag = PAP
+			government = absolute_monarchy
+			year = 1858
+			owns = 741
+		}
+		allow = {
+			idealism = 1
+		}
+		effect = {
+			prestige = 50
+			badboy = 10
+			any_greater_power = {
+				relation = { value=-200 who=THIS }
+			}
+			set_country_flag = edgardo_mortara
+		}
+	}
+	the_first_vatican_council = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = first_vatican_council_held
+				any_owned_province = { has_building = selector }
+			}
+			tag = PAP
+			government = absolute_monarchy
+		}
+		allow = {
+			empiricism = 1
+		}
+		effect = {
+			prestige = 25
+			badboy = 1
+			any_country = {
+				limit = { religion = catholic }
+				relation = { who=THIS value=50 }
+			}
+			set_country_flag = first_vatican_council_held
+		}
+	}
+	law_of_guarantees = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = law_of_guarantees
+				capital = 749
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+		}
+		allow = {
+			owns = 749
+		}
+		effect = {
+			capital = 749
+			prestige = 50
+			set_country_flag = law_of_guarantees
+		}
+	}
+	italia_irredenta = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = italia_ulterior
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+		}
+		allow = {
+			owns = 726
+			owns = 729
+		}
+		effect = {
+                        prestige = 150
+			research_points = 30000
+                        add_country_modifier = { name = liberal_reforms_boost duration = 14600 }
+			set_country_flag = italia_ulterior
+			AUS_726 = {
+				remove_core = AUS
+				remove_core = KUK
+				remove_core = SGF
+			}
+			AUS_729 = {
+				remove_core = AUS
+				remove_core = KUK
+				remove_core = SGF
+			}
+			AUS_734 = { add_core = ITA }
+			854 = { add_core = ITA }
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					OR = { 
+						pop_type = artisans
+						pop_type = clerks
+						pop_type = craftsmen
+						pop_type = farmers
+						pop_type = aristocrats
+						pop_type = capitalists
+					}
+				}
+				money=1000
+			}
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					NOT = { location = { trade_goods = precious_metal }}
+					OR = {
+						pop_type = labourers
+						pop_type = skilledworker
+					}
+				}
+				money=1000
+			}
+		}
+	}
+	import_substitution = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = import_substitution_program_completed
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+		}
+		allow = {
+			market_regulations = 1
+			trade_policy = protectionism
+			industrial_score = 200
+			money = 100000
+		}
+		effect = {
+			money = -100000
+			tech_school = commerce_tech_school
+			add_country_modifier = { name = import_substitution_program duration = 14600 }
+			set_country_flag = import_substitution_program_completed
+			prestige = 25
+		}
+	}
+	build_vittorio_emanuel_gallery = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = vittorio_emanuel_gallery_was_built
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+		}
+		allow = {
+			realism = 1
+			money = 200000
+		}
+		effect = {
+			money = -200000
+			set_country_flag = vittorio_emanuel_gallery_was_built
+			prestige = 150
+		}
+	}
+	reform_the_tax_system = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = tax_system_was_reformed
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+		}
+		allow = {
+			private_bank_money_bill_printing = 1
+		}
+		effect = {
+			any_pop = { militancy = 4 }
+			add_country_modifier = { name = italian_tax_reforms duration = 5475 }
+			set_country_flag = tax_system_was_reformed
+		}
+	}
+	start_expansion_to_africa = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = has_started_expansion_to_africa
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+			1868 = { empty = yes }
+		}
+		allow = {
+			money = 100000
+			rank = 16
+			invention = mission_to_civilize
+			invention = colonial_negotiations
+		}
+		effect = {
+			money = -100000
+			ENG_1868 = { secede_province = THIS add_core = AAA }
+			release = AAA
+			AAA = { civilized = no all_core = { remove_core = AAA }}
+			inherit = AAA
+			set_country_flag = has_started_expansion_to_africa
+		}
+	}
+	develop_a_new_criminal_code = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = new_criminal_code_was_developed
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+		}
+		allow = {
+			state_n_government = 1
+		}
+		effect = {
+			poor_strata = { militancy = -6 }
+			middle_strata = { militancy = -3 }
+			rich_strata = { militancy = 3 }
+			prestige = 50
+			set_country_flag = new_criminal_code_was_developed
+		}
+	}
+	italian_naval_program = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = italian_naval_program_carried_out
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+		}
+		allow = {
+			is_greater_power = yes
+			state_n_government = 1
+			naval_decision_making = 1
+		}
+		effect = {
+			add_country_modifier = { name = italian_naval_program1 duration = 5475 }
+			any_owned = {
+				limit = { has_province_modifier = core_reg is_coastal = yes }
+				add_province_modifier = { name = italian_naval_program2 duration = 5475 }
+			}
+			any_greater_power = { country_event = 11105 }
+			set_country_flag = italian_naval_program_carried_out
+		}
+	}
+	present_savoy_to_france = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = presented_savoy_to_france
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = italian
+			465 = {
+				owned_by = THIS
+				is_core = THIS
+				is_core = FRA
+			}
+			466 = {
+				owned_by = THIS
+				is_core = THIS
+				is_core = FRA
+			}
+			472 = {
+				owned_by = THIS
+				is_core = THIS
+				is_core = FRA
+			}
+		}
+		allow = {
+			relation = {
+				who = FRA
+				value = 100
+			}
+		}
+		effect = {
+			465 = {
+				secede_province = FRA
+				remove_core = THIS
+			}
+			466 = {
+				secede_province = FRA
+				remove_core = THIS
+			}
+			472 = {
+				secede_province = FRA
+				remove_core = THIS
+			}
+			relation = {
+				who = FRA
+				value = 100
+			}
+			set_country_flag = presented_savoy_to_france
+		}
+		ai_will_do = { factor = 0 }
+	}
+	garibaldis_raid_into_lombardia = {
+		picture = garibaldi
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = garibaldis_raid_into_lombardia_was_done
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+			AUS = { owns = 726 }
+		}
+		allow = {
+			NOT = {
+				AUS = {
+					OR = {
+						relation = { who = THIS value = 0 }
+						war_with = THIS
+						truce_with = THIS
+						alliance_with = THIS
+						military_access = THIS
+					}
+				}
+			}
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			AUS = { country_event = 11108 }
+			set_country_flag = garibaldis_raid_into_lombardia_was_done
+		}
+		ai_will_do = { factor = 1 }
+	}
+	garibaldis_raid_into_venice = {
+		picture = garibaldi
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = garibaldis_raid_into_venice_was_done
+				any_owned_province = { has_building = selector }
+			}
+			tag = ITA
+			has_country_flag = garibaldis_raid_into_lombardia_was_done
+			AUS = { owns = 729 }
+		}
+		allow = {
+			NOT = {
+				AUS = {
+					OR = {
+						relation = { who = THIS value = 0 }
+						war_with = THIS
+						truce_with = THIS
+						alliance_with = THIS
+						military_access = THIS
+					}
+				}
+			}
+			state_n_government = 1
+		}
+		effect = {
+			AUS = { country_event = 11109 }
+			set_country_flag = garibaldis_raid_into_venice_was_done
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

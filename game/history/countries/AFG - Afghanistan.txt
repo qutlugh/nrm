@@ -1,0 +1,29 @@
+capital = 1209
+primary_culture = pashtun
+culture = hazara
+religion = sunni
+government = absolute_monarchy
+plurality = 0.0
+nationalvalue = nv_archaic_economy
+literacy = 0.10
+
+ruling_party = AFG_conservative
+upper_house = {
+	fascist = 0
+	liberal = 15
+	conservative = 75
+	reactionary = 10
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}
+
+# Starting Consciousness
+consciousness = 0
+nonstate_consciousness = 0
+
+oob = "AFG_oob.txt"
+
+# Technologies
+
+slavery = no_slavery

@@ -1,0 +1,99 @@
+HOL = {
+	value = 200 		#relation
+	level = 3 		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+army = {
+	name = "Danske Haeren"
+	location = 372
+	regiment = {
+		name= "1.1. Infanteridivision"
+		type = infantry
+		home = 372
+	}
+	regiment = {
+		name= "2.1. Infanteridivision"
+		type = infantry
+		home = 372
+	}
+	regiment = {
+		name= "3.1. Infanteridivision"
+		type = infantry
+		home = 372
+	}
+	regiment = {
+		name= "4.1. Infanteridivision"
+		type = infantry
+		home = 372
+	}
+	regiment = {
+		name= "1.2. Infanteridivision"
+		type = infantry
+		home = 372
+	}
+	regiment = {
+		name= "2.2. Infanteridivision"
+		type = infantry
+		home = 372
+	}
+	regiment = {
+		name= "3.2. Infanteridivision"
+		type = engineer
+		home = 367
+	}
+	regiment = {
+		name= "1.1. Kavalleridivision"
+		type = dragoon
+		home = 367
+	}
+	regiment = {
+		name= "2.1. Kavalleridivision"
+		type = dragoon
+		home = 367
+	}
+}
+navy = {
+	name = "Royal Navy"
+	location = 372
+	ship = {
+		name= "Danmark"
+		type = manowar
+	}
+	ship = {
+		name= "Dronning Marie"
+		type = manowar
+	}
+	ship = {
+		name= "Frederik den sjette"
+		type = manowar
+	}
+	ship = {
+		name= "Bellona"
+		type = frigate
+	}
+	ship = {
+		name= "Diana"
+		type = frigate
+	}
+	ship = {
+		name= "Freja"
+		type = frigate
+	}
+	ship = {
+		name= "Fylla"
+		type = frigate
+	}
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+}

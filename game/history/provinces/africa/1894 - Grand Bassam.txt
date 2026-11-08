@@ -1,0 +1,6 @@
+owner = NET
+controller = NET
+add_core = IVC
+trade_goods = cattle
+life_rating = 15
+colonial = 2

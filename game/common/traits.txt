@@ -1,0 +1,390 @@
+#
+# Allowed variables 
+#
+# attack = + or - on dice roll in combat when attacking. (like skill in eu3)
+# defence = + or - on dice roll in combat. (like skill in eu3)
+# morale = % modifier on morale.
+# organisation = % bonus on org.
+# reconnaissance = % bonus on reconaissance.
+# speed = % bonus on movement
+# attrition = penalty on attrition. (negative is good)
+# experience = % bonus on experience gain.
+# reliability = mil gain or loss for pop associated.
+#
+
+personality = {
+	no_personality = {
+		attack = -2
+		speed = -0.25
+		reconnaissance = -0.50
+		experience = -0.25
+	}
+	trait_offensive_1 = {
+		attack = 5
+		speed = 0.25
+		reconnaissance = 0.50
+	}
+	trait_offensive_2 = {
+		attack = 4
+		speed = 0.20
+		reconnaissance = 0.40
+	}
+	trait_offensive_3 = {
+		attack = 3
+		speed = 0.15
+		reconnaissance = 0.30
+	}
+	trait_offensive_4 = {
+		attack = 3
+		speed = 0.15
+		reconnaissance = 0.30
+	}
+	trait_offensive_5 = {
+		attack = 3
+		speed = 0.15
+		reconnaissance = 0.30
+	}
+	trait_offensive_6 = {
+		attack = 2
+		speed = 0.10
+		reconnaissance = 0.20
+		experience = 0.20
+	}
+	trait_offensive_7 = {
+		attack = 2
+		speed = 0.10
+		reconnaissance = 0.20
+	}
+	trait_offensive_8 = {
+		attack = 2
+		speed = 0.10
+		reconnaissance = 0.20
+		experience = 0.20
+	}
+	trait_offensive_9 = {
+		attack = 2
+		speed = 0.10
+		reconnaissance = 0.20
+	}
+	trait_offensive_10 = {
+		attack = 2
+		speed = 0.10
+		reconnaissance = 0.20
+	}
+	trait_offensive_11 = {
+		attack = 2
+		speed = 0.10
+		reconnaissance = 0.20
+	}
+	trait_offensive_12 = {
+		attack = 1
+		speed = 0.05
+		reconnaissance = 0.10
+	}
+	trait_offensive_13 = {
+		attack = 1
+		speed = 0.05
+		reconnaissance = 0.10
+	}
+	trait_offensive_14 = {
+		attack = 1
+		speed = 0.05
+		reconnaissance = 0.10
+	}
+	trait_offensive_15 = {
+		attack = 1
+		speed = 0.05
+		reconnaissance = 0.10
+	}
+	trait_offensive_16 = {
+		attack = 1
+		speed = 0.05
+		reconnaissance = 0.10
+	}
+	trait_offensive_17 = {
+		attack = 1
+		speed = 0.05
+		reconnaissance = 0.10
+	}
+	trait_offensive_18 = {
+		attack = 1
+		speed = 0.05
+		reconnaissance = 0.10
+	}
+	trait_offensive_19 = {
+		attack = 1
+		speed = 0.05
+		reconnaissance = 0.10
+	}
+	trait_offensive_20 = {
+		attack = 1
+		speed = 0.05
+		reconnaissance = 0.10
+	}
+	trait_offensive_21 = {
+	}
+	trait_offensive_22 = {
+	}
+	trait_offensive_23 = {
+	}
+	trait_offensive_24 = {
+	}
+	trait_offensive_25 = {
+	}
+	trait_offensive_26 = {
+	}
+	trait_offensive_27 = {
+	}
+	trait_offensive_28 = {
+	}
+	trait_offensive_29 = {
+	}
+	trait_offensive_30 = {
+	}
+	trait_offensive_31 = {
+	}
+	trait_offensive_32 = {
+	}
+	trait_offensive_33 = {
+	}
+	trait_offensive_34 = {
+	}
+	trait_offensive_35 = {
+	}
+	trait_offensive_36 = {
+	}
+	trait_offensive_37 = {
+	}
+	trait_offensive_38 = {
+	}
+	trait_offensive_39 = {
+	}
+	trait_offensive_40 = {
+	}
+	trait_offensive_41 = {
+	}
+	trait_offensive_42 = {
+	}
+	trait_offensive_43 = {
+	}
+	trait_offensive_44 = {
+	}
+	trait_offensive_45 = {
+	}
+	trait_offensive_46 = {
+	}
+	trait_offensive_47 = {
+	}
+	trait_offensive_48 = {
+	}
+	trait_offensive_49 = {
+	}
+	trait_offensive_50 = {
+	}
+	trait_offensive_51 = {
+	}
+	trait_offensive_52 = {
+	}
+	trait_offensive_53 = {
+	}
+	trait_offensive_54 = {
+	}
+	trait_offensive_55 = {
+	}
+	trait_offensive_56 = {
+	}
+	trait_offensive_57 = {
+	}
+	trait_offensive_58 = {
+	}
+	trait_offensive_59 = {
+	}
+	trait_offensive_60 = {
+	}
+}
+
+background = {
+	no_background = {
+		defence = -2
+		morale = -0.20
+		organisation = -0.20
+		experience = -0.25
+	}
+	trait_defence_1 = {
+		defence = 4
+		morale = 0.20
+		organisation = 0.20
+	}
+	trait_defence_2 = {
+		defence = 4
+		morale = 0.20
+		organisation = 0.20
+	}
+	trait_defence_3 = {
+		defence = 3
+		morale = 0.15
+		organisation = 0.15
+	}
+	trait_defence_4 = {
+		defence = 3
+		morale = 0.15
+		organisation = 0.15
+	}
+	trait_defence_5 = {
+		defence = 3
+		morale = 0.15
+		organisation = 0.15
+	}
+	trait_defence_6 = {
+		defence = 2
+		morale = 0.10
+		organisation = 0.10
+	}
+	trait_defence_7 = {
+		defence = 2
+		morale = 0.10
+		organisation = 0.10
+	}
+	trait_defence_8 = {
+		defence = 2
+		morale = 0.10
+		organisation = 0.10
+	}
+	trait_defence_9 = {
+		defence = 2
+		morale = 0.10
+		organisation = 0.10
+	}
+	trait_defence_10 = {
+		defence = 2
+		morale = 0.10
+		organisation = 0.10
+	}
+	trait_defence_11 = {
+		defence = 1
+		morale = 0.05
+		organisation = 0.05
+	}
+	trait_defence_12 = {
+		defence = 1
+		morale = 0.05
+		organisation = 0.05
+	}
+	trait_defence_13 = {
+		defence = 1
+		morale = 0.10
+		organisation = 0.05
+	}
+	trait_defence_14 = {
+		defence = 1
+		morale = 0.05
+		organisation = 0.05
+	}
+	trait_defence_15 = {
+		defence = 1
+		morale = 0.05
+		organisation = 0.05
+	}
+	trait_defence_16 = {
+		defence = 1
+		morale = 0.05
+		organisation = 0.05
+	}
+	trait_defence_17 = {
+		defence = 1
+		morale = 0.05
+		organisation = 0.05
+	}
+	trait_defence_18 = {
+		defence = 1
+		morale = 0.05
+		organisation = 0.05
+	}
+	trait_defence_19 = {
+		defence = 1
+		morale = 0.05
+		organisation = 0.05
+	}
+	trait_defence_20 = {
+	}
+	trait_defence_21 = {
+	}
+	trait_defence_22 = {
+	}
+	trait_defence_23 = {
+	}
+	trait_defence_24 = {
+	}
+	trait_defence_25 = {
+	}
+	trait_defence_26 = {
+	}
+	trait_defence_27 = {
+	}
+	trait_defence_28 = {
+	}
+	trait_defence_29 = {
+	}
+	trait_defence_30 = {
+	}
+	trait_defence_31 = {
+	}
+	trait_defence_32 = {
+	}
+	trait_defence_33 = {
+	}
+	trait_defence_34 = {
+	}
+	trait_defence_35 = {
+	}
+	trait_defence_36 = {
+	}
+	trait_defence_37 = {
+	}
+	trait_defence_38 = {
+	}
+	trait_defence_39 = {
+	}
+	trait_defence_40 = {
+	}
+	trait_defence_41 = {
+	}
+	trait_defence_42 = {
+	}
+	trait_defence_43 = {
+	}
+	trait_defence_44 = {
+	}
+	trait_defence_45 = {
+	}
+	trait_defence_46 = {
+	}
+	trait_defence_47 = {
+	}
+	trait_defence_48 = {
+	}
+	trait_defence_49 = {
+	}
+	trait_defence_50 = {
+	}
+	trait_defence_51 = {
+	}
+	trait_defence_52 = {
+	}
+	trait_defence_53 = {
+	}
+	trait_defence_54 = {
+	}
+	trait_defence_55 = {
+	}
+	trait_defence_56 = {
+	}
+	trait_defence_57 = {
+	}
+	trait_defence_58 = {
+	}
+	trait_defence_59 = {
+	}
+	trait_defence_60 = {
+	}
+}

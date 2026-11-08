@@ -1,0 +1,5 @@
+trade_goods = tropical_wood
+life_rating = 40
+owner = NET
+add_core = INO
+controller = NET

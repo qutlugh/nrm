@@ -1,0 +1,579 @@
+#Sphere of Influence
+KRA = {
+	value = -100
+	level = 5
+	influence_value = 0
+}
+SER = {
+	value = -200
+	level = 1
+	influence_value = 0
+}
+SAR = {
+	value = -200
+	level = 1
+	influence_value = 0
+}
+SWI = {
+	value = 100
+	level = 3
+	influence_value = 0
+}
+PAR = {
+	value = 200
+	level = 5
+	influence_value = 0
+}
+PAP = {
+	value = -50
+	level = 2
+}
+SIC = {
+	value = -50
+	level = 2
+}
+MOD = {
+	value = 200
+	level = 5
+	influence_value = 0
+}
+TUS = {
+	value = 200
+	level = 5
+	influence_value = 0
+}
+LUC = {
+	value = 200
+	level = 5
+	influence_value = 0
+}
+### Germany
+# South Germany
+BAD = {	
+	value = 200
+	level = 3
+	influence_value = 0
+	military_access = yes
+}
+BAV = {
+	value = 200
+	level = 3
+	influence_value = 0
+	military_access = yes
+}
+WUR = {
+	value = 200
+	level = 3
+	influence_value = 0
+	military_access = yes
+}
+# North Germany
+ANH = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+BRA = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+BRE = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+COB = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+FRM = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+HAM = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+HES = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+HAN = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+HES = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+HEK = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+HOL = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+LIP = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+LUB = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+MEC = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+MEI = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+NAS = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+OLD = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+SAX = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+WEI = {
+	value = 200
+	level = 3
+	influence_value = 0
+}
+### Others
+DEN = {
+	value = 60
+} 
+PRU = {
+	value = -100
+}
+RUS = {
+	value = -100
+}
+
+army = {
+	name = "I. Armee"
+	location = 619
+	regiment = {
+		name= "1. Kavalleriedivision"
+		type = infantry
+		home = 619
+	}
+	regiment = {
+		name= "2. Kavalleriedivision"
+		type = infantry
+		home = 619
+	}
+	regiment = {
+		name= "3. Kavalleriedivision"
+		type = infantry
+		home = 619
+	}
+	regiment = {
+		name= "4. Infanteriedivision"
+		type = infantry
+		home = 619
+	}
+	regiment = {
+		name= "5. Infanteriedivision"
+		type = infantry
+		home = 619
+	}
+	regiment = {
+		name= "6. Infanteriedivision"
+		type = infantry
+		home = 619
+	}
+	regiment = {
+		name= "7. Infanteriedivision"
+		type = engineer
+		home = 619
+	}
+	regiment = {
+		name= "8. Infanteriedivision"
+		type = engineer
+		home = 619
+	}
+	regiment = {
+		name= "9. Infanteriedivision"
+		type = engineer
+		home = 619
+	}
+	regiment = {
+		name= "10. Infanteriedivision"
+		type = engineer
+		home = 616
+	}
+	regiment = {
+		name= "11. Infanteriedivision"
+		type = dragoon
+		home = 622
+	}
+}
+army = {
+	name = "II. Armee"
+	location = 625
+	regiment = {
+		name= "1. Infanteriedivision"
+		type = infantry
+		home = 623
+	}
+	regiment = {
+		name= "2. Infanteriedivision"
+		type = infantry
+		home = 623
+	}
+	regiment = {
+		name= "3. Infanteriedivision"
+		type = infantry
+		home = 623
+	}
+	regiment = {
+		name= "4. Infanteriedivision"
+		type = infantry
+		home = 623
+	}
+	regiment = {
+		name= "5. Infanteriedivision"
+		type = infantry
+		home = 623
+	}
+	regiment = {
+		name= "6. Infanteriedivision"
+		type = infantry
+		home = 623
+	}
+	regiment = {
+		name= "7. Infanteriedivision"
+		type = engineer
+		home = 625
+	}
+	regiment = {
+		name= "8. Infanteriedivision"
+		type = engineer
+		home = 625
+	}
+	regiment = {
+		name= "9. Infanteriedivision"
+		type = engineer
+		home = 625
+	}
+	regiment = {
+		name= "10. Infanteriedivision"
+		type = engineer
+		home = 622
+	}
+	regiment = {
+		name= "11. Infanteriedivision"
+		type = dragoon
+		home = 622
+	}
+}
+army = {
+	name = "III. Armee"
+	location = 950
+	regiment = {
+		name= "1. Infanteriedivision"
+		type = infantry
+		home = 623
+	}
+	regiment = {
+		name= "2. Infanteriedivision"
+		type = infantry
+		home = 631
+	}
+	regiment = {
+		name= "3. Infanteriedivision"
+		type = infantry
+		home = 616
+	}
+	regiment = {
+		name= "4. Infanteriedivision"
+		type = infantry
+		home = 616
+	}
+	regiment = {
+		name= "5. Infanteriedivision"
+		type = infantry
+		home = 612
+	}
+	regiment = {
+		name= "6. Infanteriedivision"
+		type = infantry
+		home = 735
+	}
+	regiment = {
+		name= "7. Infanteriedivision"
+		type = engineer
+		home = 626
+	}
+	regiment = {
+		name= "8. Infanteriedivision"
+		type = engineer
+		home = 626
+	}
+	regiment = {
+		name= "9. Infanteriedivision"
+		type = engineer
+		home = 626
+	}
+	regiment = {
+		name= "10. Infanteriedivision"
+		type = engineer
+		home = 627
+	}
+	regiment = {
+		name= "11. Infanteriedivision"
+		type = dragoon
+		home = 627
+	}
+}
+army = {
+	name = "IV. Armee"
+	location = 729
+	regiment = {
+		name= "1. Infanteriedivision"
+		type = infantry
+		home = 619
+	}
+	regiment = {
+		name= "2. Infanteriedivision"
+		type = infantry
+		home = 628
+	}
+	regiment = {
+		name= "3. Infanteriedivision"
+		type = infantry
+		home = 625
+	}
+	regiment = {
+		name= "4. Infanteriedivision"
+		type = infantry
+		home = 628
+	}
+	regiment = {
+		name= "5. Infanteriedivision"
+		type = infantry
+		home = 629
+	}
+	regiment = {
+		name= "6. Infanteriedivision"
+		type = infantry
+		home = 629
+	}
+	regiment = {
+		name= "7. Infanteriedivision"
+		type = engineer
+		home = 2236
+	}
+	regiment = {
+		name= "8. Infanteriedivision"
+		type = engineer
+		home = 2236
+	}
+	regiment = {
+		name= "9. Infanteriedivision"
+		type = engineer
+		home = 2236
+	}
+	regiment = {
+		name= "10. Infanteriedivision"
+		type = engineer
+		home = 632
+	}
+	regiment = {
+		name= "11. Infanteriedivision"
+		type = dragoon
+		home = 632
+	}
+}
+army = {
+	name = "V. Armee"
+	location = 641
+	regiment = {
+		name= "1. Infanteriedivision"
+		type = infantry
+		home = 629
+	}
+	regiment = {
+		name= "2. Infanteriedivision"
+		type = infantry
+		home = 629
+	}
+	regiment = {
+		name= "3. Infanteriedivision"
+		type = infantry
+		home = 630
+	}
+	regiment = {
+		name= "4. Infanteriedivision"
+		type = infantry
+		home = 630
+	}
+	regiment = {
+		name= "5. Infanteriedivision"
+		type = infantry
+		home = 652
+	}
+	regiment = {
+		name= "6. Infanteriedivision"
+		type = infantry
+		home = 652
+	}
+	regiment = {
+		name= "7. Infanteriedivision"
+		type = engineer
+		home = 631
+	}
+	regiment = {
+		name= "8. Infanteriedivision"
+		type = engineer
+		home = 2584
+	}
+	regiment = {
+		name= "9. Infanteriedivision"
+		type = engineer
+		home = 2584
+	}
+	regiment = {
+		name= "10. Infanteriedivision"
+		type = engineer
+		home = 643
+	}
+	regiment = {
+		name= "11. Infanteriedivision"
+		type = dragoon
+		home = 631
+	}
+}
+navy = {
+	name = "Austrian Imperial Navy"
+	location = 729
+	ship = {
+		name= "Гуэррьера"
+		type = manowar
+	}
+	ship = {
+		name= "Беллона"
+		type = manowar
+	}
+	ship = {
+		name= "Медея"
+		type = manowar
+	}
+	ship = {
+		name= "Адмирал Шпаун"
+		type = manowar
+	}
+	ship = {
+		name= "Шварценберг"
+		type = manowar
+	}
+	ship = {
+		name= "Принципессе Аугуста"
+		type = frigate
+	}
+	ship = {
+		name= "Марос"
+		type = frigate
+	}
+	ship = {
+		name= "Лейта"
+		type = frigate
+	}
+	ship = {
+		name= "Самош"
+		type = frigate
+	}
+	ship = {
+		name= "Керес"
+		type = frigate
+	}
+	ship = {
+		name= "Река"
+		type = frigate
+	}
+	ship = {
+		name= "Геа"
+		type = frigate
+	}
+	ship = {
+		name= "Гигант"
+		type = frigate
+	}
+	ship = {
+		name= "Хум"
+		type = frigate
+	}
+	ship = {
+		name= "Трабант"
+		type = frigate
+	}
+}
+navy = {
+	name = "Transport fleet"
+	location = 780
+	ship = {
+		name= "1. Klipperflottille"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2. Klipperflottille"
+		type = clipper_transport
+	}
+	ship = {
+		name= "3. Klipperflottille"
+		type = clipper_transport
+	}
+	ship = {
+		name= "4. Klipperflottille"
+		type = clipper_transport
+	}
+	ship = {
+		name= "5. Klipperflottille"
+		type = clipper_transport
+	}
+	ship = {
+		name= "6. Klipperflottille"
+		type = clipper_transport
+	}
+	ship = {
+		name= "7. Klipperflottille"
+		type = clipper_transport
+	}
+	ship = {
+		name= "8. Klipperflottille"
+		type = clipper_transport
+	}
+	ship = {
+		name= "9. Klipperflottille"
+		type = clipper_transport
+	}
+	ship = {
+		name= "10. Klipperflottille"
+		type = clipper_transport
+	}
+}

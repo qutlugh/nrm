@@ -1,0 +1,12 @@
+owner = ENG
+controller = ENG
+add_core = ENG
+trade_goods = coal
+life_rating = 40
+railroad = 1
+state_building = { level = 9 building = coal_mine_10 upgrade = yes }
+state_building = { level = 6 building = coke_oven upgrade = yes }
+state_building = { level = 5 building = coal_energy_factory upgrade = yes }
+state_building = { level = 4 building = ironworks upgrade = yes }
+state_building = { level = 8 building = steel_factory upgrade = yes }
+state_building = { level = 2 building = cement_factory upgrade = yes }

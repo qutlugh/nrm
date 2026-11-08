@@ -1,0 +1,254 @@
+political_decisions = {
+	fatherland_volunteers = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = pedro_said_it_best
+				any_owned_province = { has_building = selector }
+			}
+			tag = BRZ
+			OR = {
+				government = hms_government
+				government = prussian_constitutionalism
+			}
+		}
+		allow = {
+			army_decision_making = 1
+			war = yes
+		}
+		effect = {
+			war_exhaustion = -50
+			set_country_flag = pedro_said_it_best
+		}
+		ai_will_do = { factor = 1 }
+	}
+	law_1420_of_general_common_education = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = 1420_passed
+				any_owned_province = { has_building = selector }
+			}
+			tag = ARG
+		}
+		allow = {
+			social_science = 1
+			ruling_party_ideology = conservative
+		}
+		effect = {
+			years_of_research = 3
+			set_country_flag = 1420_passed
+		}
+		ai_will_do = { factor = 1 }
+	}
+	claim_uruguay = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = uruguay_claimed
+				any_owned_province = { has_building = selector }
+			}
+			tag = BRZ
+			exists = URU
+		}
+		allow = {
+			URU = {
+				all_core = { NOT = { is_core = THIS }}
+			}
+			NOT = {
+				relation = { who=ARG value=100 }
+				badboy = 0.1
+			}
+		}
+		effect = {
+			URU = {
+				all_core = {
+					add_core = THIS
+					add_core = ARG
+				}
+				create_alliance = ARG
+				relation = { who=ARG value=400 }
+				add_country_modifier = { name = war_for_independance duration = 1825 }
+			}
+			ARG = {
+				add_country_modifier = { name = war_for_independance duration = 1825 }
+			}
+			add_casus_belli = {
+				target = URU
+				type = humiliate
+				months = 12
+			}
+			war = {
+				target = URU
+				attacker_goal = { casus_belli = acquire_core_state state_province_id = 2344 }
+				defender_goal = { casus_belli = humiliate }
+			}
+			badboy = 25
+			set_country_flag = uruguay_claimed
+		}
+		ai_will_do = { factor = 0 }
+	}
+	secure_acquire_of_guyana = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = guyana_secured
+				any_owned_province = { has_building = selector }
+			}
+			tag = BRZ
+		}
+		allow = {
+			ENG_1979 = { owned_by = THIS }
+			NET_2240 = { owned_by = THIS }
+			FRA_2241 = { owned_by = THIS }
+		}
+		effect = {
+			ENG_1979 = { add_core = THIS }
+			NET_2240 = { add_core = THIS }
+			FRA_2241 = { add_core = THIS }
+			set_country_flag = guyana_secured
+		}
+		ai_will_do = { factor = 1 }
+	}
+	build_christ_the_redeemer = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = christ_the_redeemer_has_been_built
+				any_owned_province = { has_building = selector }
+			}
+			tag = BRZ
+		}
+		allow = {
+			social_alienation = 1
+			money = 200000
+		}
+		effect = {
+			money = -200000
+			prestige = 100
+			2447 = { add_province_modifier = { name = christ_the_redeemer duration = -1 }}
+			set_country_flag = christ_the_redeemer_has_been_built
+		}
+		ai_will_do = { factor = 1 }
+	}
+	abolish_slavery_in_brazil = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = abolished_slavery_in_brazil
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			slavery = yes_slavery
+			tag = BRZ
+		}
+		allow = {
+			USA = { slavery = no_slavery }
+			year = 1880
+		}
+		effect = {
+			political_reform = no_slavery
+			prestige = 50
+			set_country_flag = abolished_slavery_in_brazil
+		}
+		ai_will_do = { factor = 1 }
+	}
+	adopt_federal_constitution = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = adopted_federal_constitution
+				state_structure = federation
+				any_owned_province = { has_building = selector }
+			}
+			tag = BRZ
+		}
+		allow = {
+			year = 1900
+			government = democracy
+		}
+		effect = {
+			prestige = 50
+			political_reform = federation
+			set_country_flag = adopted_federal_constitution
+		}
+		ai_will_do = { factor = 1 }
+	}
+	declare_independence = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = recognized_independence
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				tag = CHL
+				tag = PEU
+				tag = BOL
+				tag = GCO
+				tag = MEX
+			}
+			ai = yes
+		}
+		allow = {
+			NOT = { war_with = SPA }
+		}
+		effect = {
+			prestige = 150
+			set_country_flag = recognized_independence
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

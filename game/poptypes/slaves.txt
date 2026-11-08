@@ -1,0 +1,59 @@
+sprite = 10
+strata = poor
+allowed_to_vote = no
+is_slave = yes
+color = { 17 17 17 }
+unemployment = yes
+
+rebel =
+{
+	infantry = 1
+}
+
+everyday_needs = {
+	food_products = 0.2
+}
+luxury_needs = {
+	opium = 0.5
+}
+
+ideologies = {
+	liberal = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				is_ideology_enabled = socialist
+				is_ideology_enabled = communist
+			}
+		}
+	}
+	conservative = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				is_ideology_enabled = socialist
+				is_ideology_enabled = communist
+			}
+		}
+	}
+	socialist = {
+		factor = 1
+		modifier = {
+			factor = 0
+			is_ideology_enabled = communist
+		}
+	}
+	communist = {
+		factor = 1
+	}
+}
+issues = {
+	full_citizenship = {
+		factor = 3
+	}
+	no_slavery = {
+		factor = 3
+	}
+} 

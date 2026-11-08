@@ -1,0 +1,19 @@
+army = {
+	name = "Черкесы"
+	location = 1056
+	regiment = {
+		name= "1-ая бригада черкесов"
+		type = infantry
+		home = 1056
+	}
+	regiment = {
+		name= "2-ая бригада черкесовe"
+		type = infantry
+		home = 1056
+	}
+	regiment = {
+		name= "3-я бригада черкесов"
+		type = infantry
+		home = 1056
+	}
+}

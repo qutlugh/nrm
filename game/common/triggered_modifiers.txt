@@ -1,0 +1,940 @@
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+#AI_debuff = {
+#	trigger = { ai = yes }
+#	tax_efficiency = -0.30
+#}
+COM_tag_debuff = {
+	trigger = { capital = 2123 }
+	prestige = -5
+	research_points = -5
+	diplomatic_points_modifier = -2
+}
+non_american_country = {
+	trigger = {
+		exists = yes
+		capital_scope = {
+			OR = {
+				continent = asia
+				continent = europe
+				continent = africa
+			}
+		}
+	}
+	global_immigrant_attract = -0.60
+}
+small_country = {
+	trigger = {
+		exists = yes
+		NOT = { number_of_states = 3 }
+                total_pops = 200000
+	}
+	global_immigrant_attract = -5
+}
+AI_boost = {
+	trigger = {
+		exists = yes
+        	ai = yes
+	}
+	education_efficiency_modifier = 0.50
+	naval_organisation = 0.30
+	land_organisation = 0.30
+        org_regain = 0.30
+	reinforce_speed = 0.06
+	land_unit_start_experience = 50
+	naval_unit_start_experience = 50
+	max_loan_modifier = -5
+}
+vassal_state_modifier = {
+	trigger = { is_vassal = yes }
+	global_pop_militancy_modifier = -0.08
+}
+era_of_superpowers = {
+	trigger = {
+		exists = yes
+                OR = {
+                	has_global_flag = has_capitalists_world_leader
+                	has_global_flag = has_communist_world_leader
+		}
+		NOT = {
+			has_country_flag = communist_world_leader
+			has_country_flag = capitalists_world_leader
+		}
+	}
+        influence_modifier = -5
+}
+AI_migration_deboost = {
+	trigger = {
+        	ai = yes
+        	NOT = {
+			has_country_flag = is_united_states
+			has_country_flag = is_argentina
+		}
+	}
+	global_immigrant_attract = -0.24
+}
+communist_country = {
+	trigger = { government = proletarian_dictatorship }
+	max_loan_modifier = -5
+}
+###################### Standard of living ####################
+Standard_of_living0 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		NOT = { OR = {
+			poor_strata_life_needs = 0.9
+			poor_strata_everyday_needs = 0.02
+			poor_strata_luxury_needs = 0.02
+		}}
+	}
+	global_immigrant_attract = -10
+	ruling_party_support = -0.05
+}
+Standard_of_living1 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_life_needs = 0.9
+			poor_strata_everyday_needs = 0.02
+			poor_strata_luxury_needs = 0.02
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.04
+			poor_strata_luxury_needs = 0.04
+		}}
+	}
+	global_immigrant_attract = 0.03
+	ruling_party_support = -0.04
+}
+Standard_of_living2 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.04
+			poor_strata_luxury_needs = 0.04
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.06
+			poor_strata_luxury_needs = 0.06
+		}}
+	}
+	global_immigrant_attract = 0.06
+	ruling_party_support = -0.03
+}
+Standard_of_living3 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.06
+			poor_strata_luxury_needs = 0.06
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.08
+			poor_strata_luxury_needs = 0.08
+		}}
+	}
+	global_immigrant_attract = 0.09
+	ruling_party_support = -0.02
+}
+Standard_of_living4 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.08
+			poor_strata_luxury_needs = 0.08
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.10
+			poor_strata_luxury_needs = 0.10
+		}}
+	}
+	global_immigrant_attract = 0.12
+	ruling_party_support = -0.01
+}
+Standard_of_living5 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.10
+			poor_strata_luxury_needs = 0.10
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.12
+			poor_strata_luxury_needs = 0.12
+		}}
+	}
+	global_immigrant_attract = 0.15
+}
+Standard_of_living6 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.12
+			poor_strata_luxury_needs = 0.12
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.14
+			poor_strata_luxury_needs = 0.14
+		}}
+	}
+	global_immigrant_attract = 0.18
+	ruling_party_support = 0.01
+}
+Standard_of_living7 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.14
+			poor_strata_luxury_needs = 0.14
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.16
+			poor_strata_luxury_needs = 0.16
+		}}
+	}
+	global_immigrant_attract = 0.21
+	ruling_party_support = 0.02
+}
+Standard_of_living8 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.16
+			poor_strata_luxury_needs = 0.16
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.18
+			poor_strata_luxury_needs = 0.18
+		}}
+	}
+	global_immigrant_attract = 0.24
+	ruling_party_support = 0.03
+}
+Standard_of_living9 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.18
+			poor_strata_luxury_needs = 0.18
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.20
+			poor_strata_luxury_needs = 0.20
+		}}
+	}
+	global_immigrant_attract = 0.27
+	ruling_party_support = 0.04
+}
+Standard_of_living10 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.20
+			poor_strata_luxury_needs = 0.20
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.22
+			poor_strata_luxury_needs = 0.22
+		}}
+	}
+	global_immigrant_attract = 0.30
+	ruling_party_support = 0.05
+}
+Standard_of_living11 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.22
+			poor_strata_luxury_needs = 0.22
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.24
+			poor_strata_luxury_needs = 0.24
+		}}
+	}
+	global_immigrant_attract = 0.33
+	ruling_party_support = 0.06
+}
+Standard_of_living12 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.24
+			poor_strata_luxury_needs = 0.24
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.26
+			poor_strata_luxury_needs = 0.26
+		}}
+	}
+	global_immigrant_attract = 0.36
+	ruling_party_support = 0.07
+}
+Standard_of_living13 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.26
+			poor_strata_luxury_needs = 0.26
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.28
+			poor_strata_luxury_needs = 0.28
+		}}
+	}
+	global_immigrant_attract = 0.39
+	ruling_party_support = 0.08
+}
+Standard_of_living14 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.28
+			poor_strata_luxury_needs = 0.28
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.30
+			poor_strata_luxury_needs = 0.30
+		}}
+	}
+	global_immigrant_attract = 0.42
+	ruling_party_support = 0.09
+}
+Standard_of_living15 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.30
+			poor_strata_luxury_needs = 0.30
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.32
+			poor_strata_luxury_needs = 0.32
+		}}
+	}
+	global_immigrant_attract = 0.45
+	ruling_party_support = 0.10
+}
+Standard_of_living16 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.32
+			poor_strata_luxury_needs = 0.32
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.34
+			poor_strata_luxury_needs = 0.34
+		}}
+	}
+	global_immigrant_attract = 0.48
+	ruling_party_support = 0.11
+}
+Standard_of_living17 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.34
+			poor_strata_luxury_needs = 0.34
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.36
+			poor_strata_luxury_needs = 0.36
+		}}
+	}
+	global_immigrant_attract = 0.51
+	ruling_party_support = 0.12
+}
+Standard_of_living18 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.36
+			poor_strata_luxury_needs = 0.36
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.38
+			poor_strata_luxury_needs = 0.38
+		}}
+	}
+	global_immigrant_attract = 0.54
+	ruling_party_support = 0.13
+}
+Standard_of_living19 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.38
+			poor_strata_luxury_needs = 0.38
+		}
+		NOT = { OR = {
+			poor_strata_everyday_needs = 0.40
+			poor_strata_luxury_needs = 0.40
+		}}
+	}
+	global_immigrant_attract = 0.57
+	ruling_party_support = 0.14
+}
+Standard_of_living20 = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			poor_strata_everyday_needs = 0.40
+			poor_strata_luxury_needs = 0.40
+		}
+	}
+	global_immigrant_attract = 0.60
+	ruling_party_support = 0.15
+}
+##################### Ministry cabinet #######################################
+minister_of_foreign_affairs1 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_foreign_affairs1flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	badboy = -0.05
+}
+minister_of_foreign_affairs2 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_foreign_affairs2flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	diplomatic_points_modifier = 0.75
+}
+minister_of_foreign_affairs3 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_foreign_affairs3flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	cb_generation_speed_modifier = 0.75
+}
+minister_of_foreign_affairs4 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_foreign_affairs4flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	influence_modifier = 0.50
+}
+minister_of_defence1 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_defence1flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	army_tech_research_bonus = 0.10
+	navy_tech_research_bonus = 0.10
+	supply_consumption = 0.20
+	min_military_spending = 0.25
+	max_military_spending = 0.25
+}
+minister_of_defence2 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_defence2flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	supply_consumption = -0.10
+	reinforce_speed = 0.04
+}
+minister_of_defence3 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_defence3flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	army_tech_research_bonus = 0.05
+	land_unit_start_experience = 5
+}
+minister_of_defence4 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_defence4flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	naval_unit_start_experience = 30
+	naval_organisation = 0.10
+}
+minister_of_defence5 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_defence5flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	org_regain = 0.20
+	land_organisation = 0.10
+}
+minister_of_economics1 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_economics1flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	unemployment_benefit = 1.00
+	poor_everyday_needs = -0.25
+	middle_everyday_needs = -0.15
+	core_pop_militancy_modifier = -0.03
+}
+minister_of_economics2 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_economics2flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+        tax_efficiency = 0.05
+	max_military_spending = -0.25
+	#min_social_spending = -0.25
+}
+minister_of_economics3 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_economics3flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	industry_tech_research_bonus = 0.10
+	commerce_tech_research_bonus = 0.10
+        tax_efficiency = -0.10
+}
+minister_of_economics4 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_economics4flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	factory_owner_cost = -0.20
+}
+minister_of_economics5 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_economics5flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	war_exhaustion = -0.30
+	mobilisation_economy_impact = -1.5
+}
+minister_of_culture_and_education1 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_culture_and_education1flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+        research_points = 0.50
+	education_efficiency_modifier = -0.10
+	culture_tech_research_bonus = -0.10
+}
+minister_of_culture_and_education2 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_culture_and_education2flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	education_efficiency_modifier = 0.15
+	culture_tech_research_bonus = 0.10
+}
+minister_of_culture_and_education3 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_culture_and_education3flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	core_pop_consciousness_modifier = -0.20
+	cb_generation_speed_modifier = 0.25
+	non_accepted_pop_militancy_modifier = 0.05
+	badboy = -0.10
+}
+minister_of_culture_and_education4 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_culture_and_education4flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	global_immigrant_attract = 0.12
+}
+minister_of_culture_and_education5 = {
+        trigger = {
+        	exists = yes
+		has_country_flag = minister_of_culture_and_education5flag
+		has_country_flag = cabinet_of_ministry_assigned
+        }
+	global_population_growth = 0.001
+	ruling_party_support = 0.20
+        research_points = -0.50
+}
+############################# NRM Consciousness ####################################
+consciousness_triggered_modifier1 = {
+        trigger = {
+        	exists = yes
+		average_consciousness = 1
+		NOT = { average_consciousness = 2 }
+        }
+	global_immigrant_attract = 0.03
+	goods_demand = -0.05
+}
+consciousness_triggered_modifier2 = {
+        trigger = {
+        	exists = yes
+		average_consciousness = 2
+		NOT = { average_consciousness = 3 }
+        }
+	global_immigrant_attract = 0.06
+	goods_demand = -0.10
+}
+consciousness_triggered_modifier3 = {
+        trigger = {
+        	exists = yes
+		average_consciousness = 3
+		NOT = { average_consciousness = 4 }
+        }
+	global_immigrant_attract = 0.09
+	goods_demand = -0.15
+}
+consciousness_triggered_modifier4 = {
+        trigger = {
+        	exists = yes
+		average_consciousness = 4
+		NOT = { average_consciousness = 5 }
+        }
+	global_immigrant_attract = 0.12
+	goods_demand = -0.20
+}
+consciousness_triggered_modifier5 = {
+        trigger = {
+        	exists = yes
+		average_consciousness = 5
+		NOT = { average_consciousness = 6 }
+        }
+	global_immigrant_attract = 0.15
+	goods_demand = -0.25
+}
+consciousness_triggered_modifier6 = {
+        trigger = {
+        	exists = yes
+		average_consciousness = 6
+		NOT = { average_consciousness = 7 }
+        }
+	global_immigrant_attract = 0.18
+	goods_demand = -0.30
+}
+consciousness_triggered_modifier7 = {
+        trigger = {
+        	exists = yes
+		average_consciousness = 7
+		NOT = { average_consciousness = 8 }
+        }
+	global_immigrant_attract = 0.21
+	goods_demand = -0.35
+}
+consciousness_triggered_modifier8 = {
+        trigger = {
+        	exists = yes
+		average_consciousness = 8
+		NOT = { average_consciousness = 9 }
+        }
+	global_immigrant_attract = 0.24
+	goods_demand = -0.40
+}
+consciousness_triggered_modifier9 = {
+        trigger = {
+        	exists = yes
+		average_consciousness = 9
+		NOT = { average_consciousness = 9.5 }
+        }
+	global_immigrant_attract = 0.27
+	goods_demand = -0.45
+}
+consciousness_triggered_modifier10 = {
+        trigger = {
+        	exists = yes
+		average_consciousness = 9.5
+        }
+	global_immigrant_attract = 0.30
+	goods_demand = -0.50
+}
+####################################################################################
+peace_modifier = {
+        trigger = {
+		NOT = {
+			AND = {
+				any_owned_province = {
+					NOT = {
+						controlled_by = THIS
+						controlled_by = REB
+					}
+				}
+				war = yes
+			}
+			AND = {
+				any_owned_province = {
+					is_overseas = no
+					is_coastal = yes
+					is_blockaded = yes
+				}
+				war = yes
+			}
+			war_countries = {
+				any_owned_province = {
+					controlled_by = THIS
+				}
+			}
+			war_countries = {
+				any_owned_province = {
+					is_overseas = no
+					is_coastal = yes
+					is_blockaded = yes
+				}
+			}
+		}
+		OR = {
+			NOT = {
+				war_countries = {
+					any_owned_province = {
+						is_overseas = no
+						any_neighbor_province = {
+							is_overseas = no
+							owner = { tag = THIS }
+						}
+					}
+				}
+			}
+			war = no
+		}
+        }
+	war_exhaustion = -1
+}
+### excessive capital accumulation
+excessive_capital_accumulation_1 = {
+	trigger = {
+		money = 2000000
+		NOT = { money = 3000000 }
+	}
+        tax_efficiency = -0.05
+}
+excessive_capital_accumulation_2 = {
+	trigger = {
+		money = 3000000
+		NOT = { money = 4000000 }
+	}
+        tax_efficiency = -0.10
+}
+excessive_capital_accumulation_3 = {
+	trigger = {
+		money = 4000000
+		NOT = { money = 5000000 }
+	}
+        tax_efficiency = -0.15
+}
+excessive_capital_accumulation_4 = {
+	trigger = {
+		money = 5000000
+		NOT = { money = 6000000 }
+	}
+        tax_efficiency = -0.20
+}
+excessive_capital_accumulation_5 = {
+	trigger = {
+		money = 6000000
+		NOT = { money = 7000000 }
+	}
+        tax_efficiency = -0.25
+}
+excessive_capital_accumulation_6 = {
+	trigger = {
+		money = 7000000
+		NOT = { money = 8000000 }
+	}
+        tax_efficiency = -0.30
+}
+excessive_capital_accumulation_7 = {
+	trigger = {
+		money = 8000000
+		NOT = { money = 9000000 }
+	}
+        tax_efficiency = -0.35
+}
+excessive_capital_accumulation_8 = {
+	trigger = {
+		money = 9000000
+		NOT = { money = 10000000 }
+	}
+        tax_efficiency = -0.40
+}
+excessive_capital_accumulation_9 = {
+	trigger = {
+		money = 10000000
+		NOT = { money = 11000000 }
+	}
+        tax_efficiency = -0.45
+}
+excessive_capital_accumulation_10 = {
+	trigger = {
+		money = 11000000
+		NOT = { money = 12000000 }
+	}
+        tax_efficiency = -0.50
+}
+excessive_capital_accumulation_11 = {
+	trigger = {
+		money = 12000000
+		NOT = { money = 13000000 }
+	}
+        tax_efficiency = -0.55
+}
+excessive_capital_accumulation_12 = {
+	trigger = {
+		money = 13000000
+		NOT = { money = 14000000 }
+	}
+        tax_efficiency = -0.60
+}
+excessive_capital_accumulation_13 = {
+	trigger = {
+		money = 14000000
+		NOT = { money = 15000000 }
+	}
+        tax_efficiency = -0.65
+}
+excessive_capital_accumulation_14 = {
+	trigger = {
+		money = 15000000
+		NOT = { money = 16000000 }
+	}
+        tax_efficiency = -0.70
+}
+excessive_capital_accumulation_15 = {
+	trigger = {
+		money = 16000000
+		NOT = { money = 17000000 }
+	}
+        tax_efficiency = -0.75
+}
+excessive_capital_accumulation_16 = {
+	trigger = {
+		money = 17000000
+		NOT = { money = 18000000 }
+	}
+        tax_efficiency = -0.80
+}
+excessive_capital_accumulation_17 = {
+	trigger = {
+		money = 18000000
+		NOT = { money = 19000000 }
+	}
+        tax_efficiency = -0.85
+}
+excessive_capital_accumulation_18 = {
+	trigger = {
+		money = 19000000
+		NOT = { money = 20000000 }
+	}
+        tax_efficiency = -0.90
+}
+excessive_capital_accumulation_19 = {
+	trigger = {
+		money = 20000000
+		NOT = { money = 21000000 }
+	}
+        tax_efficiency = -0.95
+}
+excessive_capital_accumulation_20 = {
+	trigger = {
+		money = 21000000
+	}
+        tax_efficiency = -1.00
+}
+### taxes modifiers
+## taxes on poor
+low_poor_taxes = {
+	trigger = {
+		NOT = { poor_tax = 0.31 }
+	}
+	global_pop_militancy_modifier = -0.07
+}
+high_poor_taxes = {
+	trigger = {
+		ai = no
+		poor_tax = 0.70
+	}
+	global_pop_militancy_modifier = 0.07
+}
+## taxes on middle class
+low_middle_taxes = {
+	trigger = {
+		NOT = { middle_tax = 0.31 }
+	}
+	research_points = 0.20
+	global_immigrant_attract = 0.12
+}
+high_middle_taxes = {
+	trigger = {
+        	ai = no
+		middle_tax = 0.70
+	}
+	research_points = -0.20
+	global_immigrant_attract = -0.12
+}
+## taxes on rich
+low_rich_taxes = {
+	trigger = {
+		NOT = { rich_tax = 0.36 }
+	}
+}
+medium_rich_taxes = {
+	trigger = {
+        	ai = no
+		rich_tax = 0.35
+		NOT = { rich_tax = 0.50 }
+	}
+	factory_owner_cost = 0.50
+}
+high_rich_taxes = {
+	trigger = {
+        	ai = no
+		rich_tax = 0.50
+	}
+	factory_owner_cost = 1.0
+}
+########################### Canal's owner buffs #################################################
+panama_canal_controller = {
+	trigger = {
+		is_canal_enabled = 3
+		1723 = {
+			controlled_by = THIS
+		}
+	}
+	factory_input = -0.01
+}
+suez_canal_controller = {
+	trigger = {
+		is_canal_enabled = 2
+		1755 = {
+			controlled_by = THIS
+		}
+	}
+	factory_input = -0.01
+}

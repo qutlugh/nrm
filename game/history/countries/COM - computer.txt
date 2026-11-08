@@ -1,0 +1,41 @@
+capital = 2123
+primary_culture = africans
+religion = coptic
+government = absolute_monarchy
+plurality = 0.5
+nationalvalue = nv_archaic_economy
+literacy = 0
+civilized = yes
+
+# Political reforms
+slavery = no_slavery
+vote_franschise = none_voting
+voting_system = first_past_the_post
+public_meetings = yes_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+political_parties = underground_parties
+minorities_reform = protected
+conscription = no_draft
+upper_house_composition = party_appointed
+private_property = not_prohibited
+state_religion = religious_state
+state_structure = unitary
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = no_safety
+unemployment_subsidies = no_subsidies
+pensions = no_pensions
+health_care = no_health_care
+school_reforms = no_schools
+child_labour = child_labour_allowed
+
+decision = enable_start_canals
+decision = start_of_the_game
+decision = setting_start_core_regions
+decision = mastered_regions_at_start
+
+ruling_party = COM_party
+upper_house = {
+	conservative = 100
+}

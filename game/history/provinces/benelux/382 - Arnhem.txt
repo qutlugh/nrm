@@ -1,0 +1,13 @@
+owner = NET
+controller = NET
+add_core = NET
+trade_goods = coal
+life_rating = 40
+state_building = { level = 1 building = coal_mine_2 upgrade = yes }
+state_building = { level = 1 building = coke_oven upgrade = yes }
+state_building = { level = 1 building = ironworks upgrade = yes }
+state_building = { level = 1 building = steel_factory upgrade = yes }
+state_building = { level = 1 building = coal_energy_factory upgrade = yes }
+state_building = { level = 1 building = cement_factory upgrade = yes }
+state_building = { level = 1 building = building_materials_factory upgrade = yes }
+state_building = { level = 1 building = bakery upgrade = yes }

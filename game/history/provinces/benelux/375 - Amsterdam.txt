@@ -1,0 +1,12 @@
+owner = NET
+controller = NET
+add_core = NET
+trade_goods = cattle
+life_rating = 40
+terrain = urban
+state_building = { level = 1 building = fishing_wharf_5 upgrade = yes }
+state_building = { level = 1 building = clipper_shipyard upgrade = yes }
+state_building = { level = 1 building = fertilizer_factory upgrade = yes }
+state_building = { level = 2 building = explosives_factory upgrade = yes }
+state_building = { level = 2 building = tools_factory upgrade = yes }
+state_building = { level = 1 building = steel_factory upgrade = yes }

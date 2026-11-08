@@ -1,0 +1,352 @@
+political_decisions = {
+   	politics_dec_on = {
+		alert = no
+        	potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+ 				has_country_flag = sell_and_buy_window
+ 				has_country_flag = politics_des_window
+ 				has_country_flag = givemoney
+ 				has_country_flag = nuke_des_window
+ 				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+        	}
+		effect = { set_country_flag = politics_des_window }
+		ai_will_do = { factor = 0 }
+	}
+   	politics_dec_off = {
+		alert = no 
+        	potential = {
+			has_country_flag = politics_des_window
+		}
+		effect = { clr_country_flag = politics_des_window }
+		ai_will_do = { factor = 1 }
+	}
+	establish_military_reform = {
+		alert = no
+		potential = {
+                        has_country_flag = politics_des_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+               		money = 300000
+			military_plans = 1
+			has_country_flag = military_academy_was_founded
+			NOT = { has_country_modifier = military_reform_established }
+		}
+		effect = {
+			country_event = 4714
+		}
+		ai_will_do = { factor = 0 }
+	}
+	leave_soi = {
+		alert = no
+		potential = {
+                        has_country_flag = politics_des_window
+			part_of_sphere = yes
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			is_secondary_power = yes
+			sphere_owner = {
+				NOT = {
+					relation = { who=THIS value=0 }
+					truce_with=THIS
+				}
+			}
+		}
+		effect = {
+			sphere_owner = {
+				diplomatic_influence = { who=THIS value=-200 }
+				country_event = 13201
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			# Ai will do, if sphere owner has LESS than thrice our brigades.
+			modifier = {
+				factor = 0
+				sphere_owner = { brigades_compare = 3 }
+			}
+		}
+	}	
+	nationalize = {
+		alert = no
+		potential = {
+                        has_country_flag = politics_des_window
+			can_nationalize = yes
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			NOT = { OR = {
+				has_country_modifier = bad_debter
+				part_of_sphere = yes
+			}}
+		}
+		effect = {
+			nationalize = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	switch_to_army_tech = {
+		alert = no
+		potential = {
+                        has_country_flag = politics_des_window
+			civilized = yes
+			tech_school = traditional_academic
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+		}
+		effect = {
+			add_country_modifier = { name = academic_confusion duration = 1825 }
+			tech_school = army_tech_school
+		}
+		ai_will_do = { factor = 0 }
+	}
+	switch_to_navy_tech = {
+		alert = no
+		potential = {
+                        has_country_flag = politics_des_window
+			civilized = yes
+			tech_school = traditional_academic
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+		}
+		effect = {
+			add_country_modifier = { name = academic_confusion duration = 1825 }
+			tech_school = naval_tech_school
+		}
+		ai_will_do = { factor = 0 }
+	}
+	switch_to_culture_tech = {
+		alert = no
+		potential = {
+                        has_country_flag = politics_des_window
+			civilized = yes
+			tech_school = traditional_academic
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+		}
+		effect = {
+			add_country_modifier = { name = academic_confusion duration = 1825 }
+			tech_school = culture_tech_school
+		}
+		ai_will_do = { factor = 0 }
+	}
+	switch_to_trade_tech = {
+		alert = no
+		potential = {
+                        has_country_flag = politics_des_window
+			civilized = yes
+			tech_school = traditional_academic
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+		}
+		effect = {
+			add_country_modifier = { name = academic_confusion duration = 1825 }
+			tech_school = commerce_tech_school
+		}
+		ai_will_do = { factor = 0 }
+	}
+	switch_to_industry_tech = {
+		alert = no
+		potential = {
+                        has_country_flag = politics_des_window
+			civilized = yes
+			tech_school = traditional_academic
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+		}
+		effect = {
+			add_country_modifier = { name = academic_confusion duration = 1825 }
+			tech_school = industrial_tech_school
+		}
+		ai_will_do = { factor = 0 }
+	}
+	switch_to_traditional_academic = {
+		alert = no
+		potential = {
+                        has_country_flag = politics_des_window
+			NOT = {
+				tech_school = traditional_academic
+				tech_school = prussian_tech_school
+				tech_school = american_tech_school
+				tech_school = soviet_tech_school
+			}
+			civilized = yes
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			NOT = { has_country_modifier = academic_confusion }
+		}
+		effect = {
+			prestige = -50
+			add_country_modifier = { name = academic_confusion duration = 1825 }
+			tech_school = traditional_academic
+		}
+		ai_will_do = { factor = 0 }
+	}
+        release_vassal = {
+                alert = no
+		potential = {
+                        has_country_flag = politics_des_window
+		        num_of_vassals = 1
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			random_country = {
+				limit = {
+					vassal_of = THIS
+					alliance_with = THIS
+				}
+				country_event = 1800953
+			}
+		}
+		ai_will_do = { factor = 0 }
+        }
+	nuclear_disarmament = {
+                alert = no
+		potential = {
+                	has_country_flag = politics_des_window
+                 	OR = {
+                 		has_country_modifier = nuclear_weapons
+                 		has_country_modifier = nuke_research_starts
+			}
+			NOT = { any_owned_province = { has_building = selector }}
+                }
+		allow = {}
+		effect = {
+                	money = 300000
+                	badboy = -50
+			prestige_factor = -0.50
+                	any_country = {
+               			relation = { who = THIS value = 400 }
+                	}
+                	remove_country_modifier = nuclear_weapons
+                	remove_country_modifier = nuke_research_starts
+                	clr_country_flag = nuke_research
+                	clr_country_flag = nuke_research1
+                	clr_country_flag = nuke_research2
+                	clr_country_flag = nuke_research3
+                }
+		ai_will_do = { factor = 0 }
+        }
+	institute_central_bank = {
+                alert = yes
+		potential = {
+			has_country_flag = politics_des_window
+			NOT = {
+				has_country_flag = central_bank_established
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {
+			central_bank_money_bill_printing = 1
+			NOT = { has_country_modifier = central_bank_closed }
+		}
+		effect = {
+			set_country_flag = central_bank_established
+		}
+		ai_will_do = { factor = 1 }
+	}
+	close_central_bank = {
+                alert = no
+                picture = institute_central_bank
+		potential = {
+			has_country_flag = politics_des_window
+                        has_country_flag = central_bank_established
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {}
+		effect = {
+			add_country_modifier = {
+				name = central_bank_closed
+				duration = 1825
+			}
+			clr_country_flag = central_bank_established
+		}
+		ai_will_do = { factor = 0 }
+	}
+	currency_denomination_start = {
+		alert = no 
+		potential = {
+			has_country_flag = politics_des_window
+			has_country_flag = central_bank_established
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = little_denomination
+				has_country_modifier = middle_denomination
+				has_country_modifier = large_denomination
+				economic_policy = planned_economy
+				has_country_modifier = bad_debter
+			}
+		}
+		effect = {
+			country_event = 100100
+		}
+		ai_will_do = { factor = 0 }
+	}
+	currency_devaluation_start = {
+		alert = no 
+		potential = {
+			has_country_flag = politics_des_window
+			has_country_flag = central_bank_established
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = little_devaluation
+				has_country_modifier = middle_devaluation
+				has_country_modifier = large_devaluation
+				economic_policy = planned_economy
+				has_country_modifier = bad_debter
+			}
+		}
+		effect = {
+			country_event = 100101
+		}
+		ai_will_do = { factor = 0 }
+	}
+	end_military_access = {
+                alert = no
+		potential = {
+			has_country_flag = politics_des_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {}
+		effect = {
+			random_country = {
+				limit = {
+					military_access = THIS
+					NOT = { OR = {
+						truce_with = THIS
+						alliance_with = THIS
+						relation = {
+							who = THIS
+							value = -190
+						}
+					}}
+				}
+				country_event = 19408
+			}
+		}
+	        ai_will_do = { factor = 0 }
+	}
+}

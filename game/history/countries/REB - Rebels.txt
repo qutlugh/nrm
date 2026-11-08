@@ -1,0 +1,6 @@
+civilized = yes
+
+#Inventions
+rebelsbuff = yes
+
+oob = "REB_oob.txt"

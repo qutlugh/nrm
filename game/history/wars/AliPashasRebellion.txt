@@ -1,0 +1,12 @@
+name = "Восстание Али Паши"
+
+1821.1.1 = {
+	add_attacker = TUR
+	add_defender = ALB
+	
+	war_goal = {
+		casus_belli = conquest
+		actor = TUR
+		receiver = ALB
+	}
+}

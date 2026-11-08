@@ -1,0 +1,2044 @@
+##################################################################################################
+# scriptable and usable for event-system below.
+##################################################################################################
+##### POLITICAL EVENTS ######
+government_sanitarium = {
+	population_growth = 0.001
+	icon = 19
+}
+sepoy_rebellion_modifier = {
+	pop_militancy_modifier = 1
+	icon = 42
+}
+patriots = {
+	icon = 20
+}
+expanded_javan_plantations = {
+	icon = 19
+        farm_rgo_size = 0.55
+}
+offlimit = {
+	icon = 58
+}
+assimilation_of_swiss_nation = {
+	badboy = 0.02
+	icon = 15
+}
+assimilation_of_portuguese_nation = {
+	badboy = 0.05
+	icon = 15
+}
+progress_of_assimilation = {
+	icon = 19
+}
+dutch_total_military_mobilisation = {
+	army_tech_research_bonus = 0.15
+        land_organisation = 0.05
+        max_military_spending = 0.75
+	icon = 15
+}
+##### TECH SCHOOLS ######
+academic_confusion = {
+	research_points = -0.10
+	icon = 6
+}
+##### LIBERAL REVOLUTIONS #####
+liberal_agitation = {
+	pop_consciousness_modifier = 0.03
+	icon = 42
+}
+springtime_of_nations = {
+	core_pop_militancy_modifier = 0.10
+	core_pop_consciousness_modifier = 1
+	icon = 40
+}
+global_liberal_agitation = {
+	core_pop_consciousness_modifier = 0.03
+	icon = 40
+}
+potato_blight = {
+	life_rating = -0.50
+	pop_militancy_modifier = 0.10
+	icon = 20
+}
+great_famine = {
+	population_growth = -0.001
+	life_rating = -0.50
+	pop_militancy_modifier = 0.10
+	immigrant_push = 8
+	icon = 20
+}
+anti_jacobin_tract = {
+	core_pop_consciousness_modifier = -0.05
+	icon = 3
+}
+cholera_epidemic_small = {
+	life_rating = -0.25
+	icon = 20
+}
+cholera_epidemic_big = {
+	life_rating = -0.50
+	icon = 20
+}
+conservative_reaction = {
+	pop_consciousness_modifier = 0.01
+	icon = 4
+}
+liberal_reaction = {
+	pop_consciousness_modifier = 0.01
+	icon = 4
+}
+##### CIVILIZATION AND GUNBOATS #####
+western_influences = {
+	global_pop_militancy_modifier = 0.03
+	research_points_modifier = 0.50
+	icon = 10
+}
+self_strengthening_movement_modifier = {
+	civilization_progress_modifier = 0.15
+	icon = 15
+}
+uncivilized_isolationism = {
+	global_pop_militancy_modifier = -0.1
+	global_pop_consciousness_modifier = -0.1
+	icon = 10
+}
+western_presence = {
+	pop_militancy_modifier = 0.1
+	research_points_modifier = 0.02
+	icon = 9
+}
+foreign_smugglers = {
+	poor_life_needs = -0.05
+	middle_life_needs = -0.05
+	rich_life_needs = -0.05
+	icon = 12
+}
+country_is_starving = {
+	icon = 20
+}
+foreign_trading_post = {
+	poor_life_needs = -0.1
+	middle_life_needs = -0.1
+	rich_life_needs = -0.1
+	icon = 11
+}
+naval_school = {
+	research_points_modifier = 0.02
+	icon = 17
+}
+colonial_dry_spell = {
+	pop_militancy_modifier = 0.05
+	farm_RGO_eff = -0.20
+	icon = 14
+}
+anti_colonial_league_works = {
+	icon = 42
+}
+colonial_recruitment = {
+	immigrant_attract = 1		#100%
+	life_rating = 0.15
+	population_growth = 0.001
+	icon = 9
+}
+baby_boom = {
+	population_growth = 0.001
+	icon = 19
+}
+muhammad_alis_reforms = {
+	research_points_modifier = 0.5
+	pop_consciousness_modifier = 0.05
+	icon = 5
+}
+##### SUFFRAGETTE MOVEMENTS #####
+female_suffrage = {
+	poor_vote = 0.5
+	icon = 55
+}
+##### SOCIALISM AND FACISM #####
+labor_union = {
+	core_pop_militancy_modifier = 0.05
+	farm_rgo_eff = 0.05
+	mine_rgo_eff = 0.05
+	icon = 4
+}
+worker_union = {
+	poor_everyday_needs = -0.1
+	farm_rgo_eff = -0.05
+	mine_rgo_eff = -0.05
+	pop_militancy_modifier = 0.2
+	icon = 4
+}
+strike_solution = {
+	farm_rgo_eff = 0.25
+	mine_rgo_eff = 0.25
+	icon = 4
+}
+province_strike = {
+	pop_militancy_modifier = 0.2
+	icon = 4
+}
+national_workshops = {
+	farm_rgo_eff = -0.02
+	mine_rgo_eff = -0.02
+	prestige = 0.20
+	icon = 13
+}
+black_shirts = {
+	pop_militancy_modifier = 0.4
+	icon = 18
+}
+free_corps = {
+	pop_militancy_modifier = 0.2
+	icon = 18
+}
+am_everywhere = {
+	prestige = 0.20
+	icon = 16
+}
+the_massacre = {
+	poor_everyday_needs = -0.20
+	life_rating = -0.50
+	icon = 18
+}
+beer_hall_putsch = {
+	life_rating = -0.50
+	pop_militancy_modifier = 0.2
+	icon = 18
+}
+##### Civilization & Gunboats #####
+sayings_of_the_dutch = {
+	research_points_modifier = 0.05
+	icon = 5
+}
+european_military_mission = {
+	research_points_modifier = 0.02
+	pop_militancy_modifier = 0.02
+	icon = 17
+}
+extraterritoriality_granted = {
+	pop_militancy_modifier = 0.05
+	icon = 10
+}
+military_reform = {
+	research_points_modifier = 0.10
+	pop_militancy_modifier = 0.02
+	icon = 18
+}
+educational_reform = {
+	research_points_modifier = 0.20
+	pop_militancy_modifier = 0.02
+	icon = 5
+}
+legation_quarter = {
+	pop_militancy_modifier = 0.03
+	icon = 8
+}
+kettler_denkmal = {
+	prestige = -0.28
+	pop_militancy_modifier = 0.03
+	icon = 8
+}
+local_economic_downturn = {
+	local_RGO_output = -0.2
+	pop_consciousness_modifier = 0.5
+	icon = 12
+}
+##### AMERICAN CIVIL WAR #####
+anaconda_plan = {
+        org_regain = -0.50
+	icon = 18
+}
+the_homestead_act = {
+	global_immigrant_attract = 0.24
+	global_assimilation_rate = 1
+        prestige = 0.20
+	icon = 91
+}
+the_homestead_act_local = {
+	life_rating = 0.06
+	icon = 93
+}
+the_slavery_debate = {
+	core_pop_consciousness_modifier = 0.05
+	icon = 59
+}
+##### NATIONALIST UPRISINGS #####
+minority_building_restrictions = {
+	non_accepted_pop_militancy_modifier = 0.05
+	icon = 16
+}
+dryzymalas_wagon = {
+	pop_militancy_modifier = 0.05
+	pop_consciousness_modifier = 0.02
+	icon = 8
+}
+discriminatory_school_system = {
+	research_points_modifier = -0.20
+	icon = 8
+}
+flying_university = {
+	research_points_modifier = 0.02
+	pop_consciousness_modifier = 0.2
+	pop_militancy_modifier = 0.2
+	icon = 5
+}
+organic_work = {
+	farm_rgo_eff = 0.04
+	mine_rgo_eff = 0.04
+	icon = 13
+}
+##### GREAT POWERS #####
+protector_of_eastern_christendom = {
+	prestige = 0.20
+	icon = 17
+}
+egyptian_excavations = {
+	prestige = 0.20
+	icon = 5
+}
+international_negotiations = {
+	icon = 17
+}
+the_statue_of_liberty = {
+	prestige = 0.20
+	global_immigrant_attract = 0.12
+	global_assimilation_rate = 1
+	icon = 21
+}
+christ_the_redeemer = {
+	prestige = 0.20
+	global_immigrant_attract = 0.12
+	global_assimilation_rate = 1
+	icon = 13
+}
+reichstag = {
+	prestige = 0.20
+	icon = 13
+}
+recent_revolution = {
+	icon = 40
+}
+multinational_empire = {
+	education_efficiency_modifier = -0.15
+        land_organisation = -0.10
+	org_regain = -0.15
+	icon = 53
+}
+bohemian_indust_boom = {
+	industry_tech_research_bonus = 0.10
+	commerce_tech_research_bonus = 0.10
+	culture_tech_research_bonus = 0.05
+	navy_tech_research_bonus = 0.05
+	army_tech_research_bonus = 0.05
+	icon = 27
+}
+### GER - GERMANY, PRU - PRUSSIA ###
+germania_werft = {
+        local_ship_build = -0.25
+	local_repair = 0.50
+	icon = 67
+}
+german_naval_program1 = {
+	navy_tech_research_bonus = 0.10
+	icon = 65
+}
+german_naval_program2 = {
+        local_ship_build = -0.25
+	icon = 67
+}
+ruhr_boom = {
+	factory_owner_cost = -0.05
+	navy_tech_research_bonus = 0.15
+	army_tech_research_bonus = 0.15
+	industry_tech_research_bonus = 0.15
+	commerce_tech_research_bonus = 0.15
+	culture_tech_research_bonus = 0.15
+	government_tech_research_bonus = 0.15
+	icon = 27
+}
+german_philosophy = {
+	education_efficiency_modifier = 0.10
+	culture_tech_research_bonus = 0.10
+	government_tech_research_bonus = 0.05
+	icon = 74
+}
+prussian_militarism = {
+        land_organisation = 0.05
+	land_unit_start_experience = 5
+	army_tech_research_bonus = 0.05
+	leadership = 0.50
+	icon = 23
+}
+prussian_general_staff = {
+        land_organisation = 0.075
+	land_unit_start_experience = 10
+	army_tech_research_bonus = 0.10
+	leadership = 1.00
+	icon = 23
+}
+hokaido_japanese_resettlement = {
+	immigrant_attract = 5		#500%
+	immigrant_push = -1		# -100%
+	icon = 19
+}
+##### Boer War #####
+trek_boers = {
+	immigrant_attract = 2		#200%
+	icon = 19
+}
+gold_rush = {
+	immigrant_attract = 3		#300%
+	life_rating = 0.5
+	icon = 11
+}
+witwatersrand_gold_rush = {
+	prestige = 0.20
+	icon = 11
+}
+##### Diseases & Famines #####
+pandemic_influenza = {
+	#global_population_growth = -0.01
+	poor_life_needs = 0.50
+	middle_life_needs = 0.50
+	global_pop_consciousness_modifier = 0.1
+	icon = 18
+}
+tuberculosis_pandemic = {
+	life_rating = -0.50
+	pop_militancy_modifier = 0.10
+	icon = 20
+}
+local_famine = {
+	life_rating = -0.50
+	pop_militancy_modifier = 0.10
+	icon = 20
+}
+typhoid_fever = {
+	life_rating = -0.50
+	pop_militancy_modifier = 0.10
+	icon = 20
+}
+smallpox = {
+	life_rating = -0.50
+	pop_militancy_modifier = 0.10
+	icon = 20
+}
+##### Crime & Punishment #####
+trustee_system = {
+	pop_militancy_modifier = 0.1
+	pop_consciousness_modifier = 0.2
+	farm_RGO_eff = 0.1
+	mine_RGO_eff = 0.1
+	icon = 20
+}
+penal_colonies = {
+	core_pop_militancy_modifier = -0.02
+	icon = 61
+}
+#### ENG - ENGLAND #####
+corn_laws = {
+	core_pop_militancy_modifier = 0.02
+	poor_life_needs = 0.10
+	middle_life_needs = 0.10
+	icon = 94
+}
+corn_laws_local = {
+	farm_RGO_eff = 0.30
+	icon = 96
+}
+the_yard = {
+	prestige = 0.20
+	icon = 1
+}
+#### SPA - Spain ####
+la_guardia_civil = {
+	core_pop_militancy_modifier = -0.01
+	icon = 15
+}
+#### FRA - France ####
+the_french_foreign_legion = {
+        land_organisation = 0.05
+	army_tech_research_bonus = 0.05
+	leadership = 0.25
+	icon = 32
+}
+bankers_power = {
+        tax_efficiency = -0.05
+	core_pop_consciousness_modifier = 0.03
+	icon = 43
+}
+the_eiffel_tower = {
+	prestige = 0.20
+	icon = 22
+}
+the_bigben = {
+	prestige = 0.20
+	icon = 23
+}
+#### SWI - Switzerland ####
+signed_the_geneva_convention = {
+	prestige = 0.80
+	war_exhaustion = -0.1
+	badboy = -0.05
+	diplomatic_points_modifier = 0.25
+	supply_consumption = 0.10
+	icon = 60
+}
+#### SWE - Sweden ####
+folkis_educates = {
+	research_points_modifier = 0.20
+	icon = 5
+}
+motala_verkstad = {
+	factory_output = 0.05
+	icon = 13
+}
+### BAV - Bavaria ###
+the_walhalla = {
+	prestige = 0.20
+	icon = 15
+}
+######CB generation######
+CB_gen_plus = {
+	cb_generation_speed_modifier = 0.25
+}
+CB_gen_minus = {
+	cb_generation_speed_modifier = -0.25
+}
+##more event modifiers
+free_press_promised = {
+	prestige = 0.01
+	icon = 17
+}
+yes_meeting_promised = {
+	prestige = 0.01
+	icon = 17
+}
+trade_unions_promised = {
+	prestige = 0.01
+	icon = 17
+}
+end_war_promised = {
+	prestige = 0.01
+	icon = 17
+}
+#######################################################################################################################
+subsidiary_farm_cooldown = {
+	icon = 47
+}
+#######################################################################################################################
+meiji_industrialisation = {
+	factory_owner_cost = -0.20
+	industry_tech_research_bonus = 0.15
+	commerce_tech_research_bonus = 0.15
+	icon = 27
+}
+zaibatsu = {
+	factory_output = 0.05
+	icon = 64
+}
+japanese_naval_program1 = {
+	navy_tech_research_bonus = 0.10
+	icon = 65
+}
+japanese_naval_program2 = {
+        local_ship_build = -0.25
+	icon = 67
+}
+japanese_agrarian_reform_completed = {
+	tax_efficiency = 0.06
+	icon = 9
+}
+japanese_military_reform = {
+	army_tech_research_bonus = 0.20
+	navy_tech_research_bonus = 0.20
+	icon = 15
+}
+iwakura_mission_completed = {
+	culture_tech_research_bonus = 0.20
+	government_tech_research_bonus = 0.20
+	icon = 7
+}
+dar_al_funun = {
+	education_efficiency_modifier = 0.10
+	icon = 5
+}
+italian_tax_reforms = {
+	tax_efficiency = 0.06
+	icon = 9
+}
+######
+peasant_revolt = {
+	pop_consciousness_modifier = 0.2
+	pop_militancy_modifier = 0.25
+	icon = 18
+}
+gateway_to_harbor = {
+	immigrant_attract = 1
+	population_growth = 0.002
+	icon = 9
+}
+##
+hellenistic_politic = {
+	non_accepted_pop_militancy_modifier = 0.2
+	icon = 17
+}
+######### Revolution & Nationalism ##########
+colonial_chaos = {
+	prestige = -0.04
+	local_RGO_throughput = -0.5
+	icon = 2
+}
+loss_of_control = {
+	icon = 2
+}
+### China ###
+boxer_rebellion = {
+	pop_militancy_modifier = 0.1
+	local_RGO_throughput = -0.25
+	immigrant_attract = -0.25
+	immigrant_push = 0.75
+	population_growth = -0.002
+	icon = 18
+}
+drive_to_reunify = {
+	prestige = -0.08
+	war_exhaustion = -0.05
+	global_pop_militancy_modifier = -0.2
+	icon = 15
+}
+###TAIPING###
+anti_manchu_sentiment = {
+	pop_consciousness_modifier = 0.1
+	pop_militancy_modifier = 0.2
+	icon = 18
+}
+###Nuclear Attack###
+nuclear_bombs_on_the_enemy = {
+	prestige = 0.20
+	icon = 93
+}
+nuclear_bomb_demoralisation = {
+	org_regain = -1
+	land_organisation = -0.3
+	naval_organisation = -0.3
+	icon = 93
+}
+nuclear_contamination = {
+        population_growth = -0.001
+	icon = 95
+}
+sanction = {
+	factory_owner_cost = 0.75
+	factory_input = 0.075
+	icon = 2
+}
+has_chartered_ships = {
+        icon = 15
+}
+############################ AMP Economical decisions, edited by NRM ###################################
+## Деноминация
+little_denomination = {
+	icon = 10
+        tax_efficiency = -0.03
+        import_cost = -0.05
+        factory_output = -0.03
+	factory_owner_cost = 0.03
+	goods_demand = -0.05
+	supply_consumption = -0.05
+}
+middle_denomination = {
+	icon = 10
+        tax_efficiency = -0.06
+        import_cost = -0.10
+        factory_output = -0.06
+	factory_owner_cost = 0.06
+	goods_demand = -0.10
+	supply_consumption = -0.10
+}
+large_denomination = {
+	icon = 10
+        tax_efficiency = -0.09
+        import_cost = -0.15
+        factory_output = -0.09
+	factory_owner_cost = 0.09
+	goods_demand = -0.15
+	supply_consumption = -0.15
+}
+## Девальвация
+little_devaluation = {
+	icon = 9
+        tax_efficiency = 0.03
+        import_cost = 0.05
+        factory_output = 0.03
+	factory_owner_cost = -0.03
+	goods_demand = 0.05
+	supply_consumption = 0.05
+}
+middle_devaluation = {
+	icon = 9
+        tax_efficiency = 0.06
+        import_cost = 0.10
+        factory_output = 0.06
+	factory_owner_cost = -0.06
+	goods_demand = 0.10
+	supply_consumption = 0.10
+}
+large_devaluation = {
+	icon = 9
+        tax_efficiency = 0.09
+        import_cost = 0.15
+        factory_output = 0.09
+	factory_owner_cost = -0.09
+	goods_demand = 0.15
+	supply_consumption = 0.15
+}
+##########################################  New Realism Mod  ###########################################
+strike = {
+        icon = 18
+        factory_output = -0.2
+	factory_throughput = -0.5
+}
+strike_crushed = {
+        icon = 18
+	core_pop_militancy_modifier = 0.05
+}
+uranium_deposits = {
+        icon = 43
+}
+project_manhattan_starts = {
+        icon = 41
+}
+nuke_research_starts = {
+       	icon = 41
+}
+nuclear_weapons = {
+        icon = 33
+}
+we_have_radar_stations = {
+        icon = 35
+}
+socialist_homeland_is_in_danger_modifier = {
+	org_regain = 0.20
+	reinforce_speed = 0.06
+	war_exhaustion = -0.50
+	max_war_exhaustion = -25
+        icon = 15
+}
+soviet_industrialisation = {
+        tax_efficiency = 0.05
+        research_points = 0.25
+	industry_tech_research_bonus = 0.10
+	commerce_tech_research_bonus = 0.10
+	culture_tech_research_bonus = 0.10
+	army_tech_research_bonus = 0.10
+	navy_tech_research_bonus = 0.10
+        icon = 27
+}
+disarmed = {
+        unit_recruitment_time = 10
+        icon = 70
+}
+ready_to_trade = {
+      icon = 88
+}
+american_industrial_revolution = {
+	factory_owner_cost = -0.05
+	education_efficiency_modifier = 0.10
+	culture_tech_research_bonus = 0.05
+	industry_tech_research_bonus = 0.05
+	commerce_tech_research_bonus = 0.05
+	government_tech_research_bonus = 0.05
+	icon = 27
+}
+you_did_try_to_buy_patent = {
+	icon = 16
+}
+norfolk_shipyard = {
+        local_ship_build = -0.25
+	local_repair = 0.50
+	icon = 67
+}
+the_land_of_immigrants = {
+	global_immigrant_attract = 0.06
+	global_assimilation_rate = 1
+	icon = 87
+}
+city_upon_a_hill = {
+	global_immigrant_attract = 0.30
+	global_assimilation_rate = 1
+        prestige = 0.20
+	icon = 22
+}
+supports_irish_immigration = {
+	global_immigrant_attract = 1
+	global_assimilation_rate = 1
+	icon = 17
+}
+############## Manchu power over China
+manchu_power = {
+	diplomatic_points_modifier = -2
+	supply_consumption = 0.2
+	education_efficiency_modifier = -0.20
+        land_organisation = -0.30
+        min_military_spending = 0.25
+	core_pop_militancy_modifier = -0.05
+	core_pop_consciousness_modifier = -0.10
+	icon = 89
+}
+opium_war_defeated = {
+        prestige = -0.40
+	civilization_progress_modifier = -0.30
+	icon = 54
+}
+local_opium_habit = {
+	pop_consciousness_modifier = -0.20
+	pop_militancy_modifier = -0.20
+	population_growth = -0.001
+	icon = 56
+}
+caucasian_wars = {
+	prestige = -0.40
+	badboy = 0.05
+	icon = 95
+}
+serfdom_not_abolished_rus = {
+	education_efficiency_modifier = -0.30
+	core_pop_consciousness_modifier = -0.10
+	culture_tech_research_bonus = -0.10
+	industry_tech_research_bonus = -0.15
+	commerce_tech_research_bonus = -0.15
+	core_pop_consciousness_modifier = -0.10
+	rgo_output = 0.30
+	factory_output = -0.05
+	factory_owner_cost = 0.30
+	icon = 37
+}
+colonization_of_central_asia_modifier = {
+	core_pop_militancy_modifier = -0.05
+	icon = 83
+}
+offended_other_nation = {
+        prestige = 0.80
+	icon = 5
+}
+central_bank_closed = {
+	icon = 10
+}
+###################################################
+financial_crisis = {
+        icon = 76
+	factory_input = 0.30
+	factory_throughput = -0.75
+	education_efficiency_modifier = -1.0
+}
+recent_financial_crisis = {
+        icon = 83
+}
+the_likelihood_of_a_financial_crisis = {
+        icon = 77
+}
+the_likelihood_of_a_financial_crisis_alt = {
+        icon = 81
+}
+cut_taxes = {
+	icon = 43
+	max_tax = -0.40
+}
+mastering_region_mark = {
+        icon = 80
+}
+mastering_the_region = {
+	local_RGO_output = 0.50
+        icon = 28
+}
+mastered_region = {
+	icon = 82
+}
+mastering_country_market = {
+        icon = 79
+}
+mastering_vassal_market = {
+        icon = 80
+}
+mastered_country_market = {
+        icon = 80
+}
+waiting_for_next_event = {
+        icon = 81
+}
+country_market_is_open = {
+        icon = 76
+	factory_input = 0.05
+	factory_throughput = -0.30
+}
+mastering_market_of_great_power = {
+        icon = 80
+}
+####################################################
+metropoly_blockaded1 = {
+	factory_owner_cost = 0.30
+	factory_input = 0.075
+	global_immigrant_attract = -0.50
+        icon = 8
+}
+no_outlet_to_the_sea = {
+	factory_owner_cost = 0.30
+	factory_input = 0.075
+	self_unciv_economic_modifier = 1
+	self_unciv_military_modifier = 1
+        icon = 8
+}
+continental_blockade = {
+	factory_owner_cost = 0.30
+	factory_input = 0.075
+        icon = 8
+}
+metropoly_blockaded = {
+	local_artisan_output = -2
+	local_factory_output = -2
+	local_RGO_throughput = -2
+	icon = 10
+}
+liberal_reforms_boost = {
+        research_points = 0.25
+	education_efficiency_modifier = 0.10
+	navy_tech_research_bonus = 0.05
+	army_tech_research_bonus = 0.05
+	industry_tech_research_bonus = 0.05
+	commerce_tech_research_bonus = 0.05
+	culture_tech_research_bonus = 0.05
+	government_tech_research_bonus = 0.05
+	icon = 19
+}
+algerian_pirates = {
+	factory_owner_cost = 0.10
+	factory_output = -0.05
+        tax_efficiency = -0.05
+	icon = 92
+}
+surrendered_country = {
+	org_regain = -5
+	icon = 68
+}
+revanchism = {
+	org_regain = 0.20
+	land_organisation = 0.05
+	naval_organisation = 0.05
+	unit_start_experience = 10
+	army_tech_research_bonus = 0.05
+	navy_tech_research_bonus = 0.05
+	war_exhaustion = -0.25
+	leadership_modifier = 0.50
+	core_pop_militancy_modifier = -0.05
+	core_pop_consciousness_modifier = -0.05
+	icon = 40
+}
+civil_war = {
+	icon = 15
+}
+american_civil_war = {
+	org_regain = 0.10
+	supply_consumption = -0.10
+	reinforce_speed = 0.06
+	icon = 15
+}
+latin_american_war_for_independance = {
+	org_regain = 0.10
+	reinforce_speed = 0.04
+	supply_consumption = -0.10
+	max_war_exhaustion = -25
+	war_exhaustion = -1
+	icon = 15
+}
+war_for_independance = {
+	org_regain = 0.10
+	reinforce_speed = 0.04
+	supply_consumption = -0.10
+	max_war_exhaustion = -25
+	war_exhaustion = -1
+	icon = 15
+}
+paris_peace_treaty = {
+	icon = 69
+}
+forced_to_continental_blockade = {
+        icon = 6
+}
+cancel_continental_blockade = {
+        icon = 6
+}
+angry_people_modifier = {
+	icon = 18
+	core_pop_militancy_modifier = 0.20
+	core_pop_consciousness_modifier = 0.40
+}
+war_modifier = {
+	icon = 16
+}
+unmobilised_country = {
+	icon = 38
+}
+################ NRM Political Leaders & Ministry cabinet ###################################
+leader_imperialist = {
+	badboy = -0.05
+        diplomatic_points_modifier = 0.50
+	navy_tech_research_bonus = 0.10
+	culture_tech_research_bonus = -0.10
+	industry_tech_research_bonus = -0.10
+	government_tech_research_bonus = 0.10
+	cb_generation_speed_modifier = 0.25
+	global_assimilation_rate = -0.5
+	icon = 26
+}
+leader_expansionist = {
+	reinforce_speed = 0.04
+	cb_generation_speed_modifier = 0.25
+	army_tech_research_bonus = 0.10
+	navy_tech_research_bonus = 0.10
+	culture_tech_research_bonus = -0.10
+	commerce_tech_research_bonus = -0.10
+	global_assimilation_rate = -0.5
+	icon = 26
+}
+leader_general = {
+	war_exhaustion = -0.20
+	land_organisation = 0.10
+	org_regain = 0.30
+	reinforce_speed = 0.06
+	land_unit_start_experience = 20
+	industry_tech_research_bonus = -0.10
+	commerce_tech_research_bonus = -0.10
+	culture_tech_research_bonus = -0.10
+	icon = 26
+}
+leader_administrator = {
+        tax_efficiency = 0.05
+	supply_consumption = -0.10
+	industry_tech_research_bonus = 0.10
+	commerce_tech_research_bonus = 0.10
+	culture_tech_research_bonus = -0.10
+	government_tech_research_bonus = 0.15
+	army_tech_research_bonus = -0.10
+	diplomatic_points_modifier = -0.25
+	icon = 26
+}
+leader_trader = {
+	import_cost = -0.10
+	commerce_tech_research_bonus = 0.20
+	navy_tech_research_bonus = 0.15
+	army_tech_research_bonus = -0.10
+	culture_tech_research_bonus = -0.10
+	cb_generation_speed_modifier = -0.10
+	icon = 26
+}
+leader_capitalist = {
+	factory_owner_cost = -0.10
+        tax_efficiency = -0.05
+	commerce_tech_research_bonus = 0.10
+	industry_tech_research_bonus = 0.10
+	cb_generation_speed_modifier = -0.10
+	icon = 26
+}
+leader_diplomat = {
+	diplomatic_points_modifier = 0.75
+        prestige = 0.80
+	culture_tech_research_bonus = 0.10
+	cb_generation_speed_modifier = 0.25
+	government_tech_research_bonus = -0.10
+	icon = 26
+}
+leader_scientist = {
+        research_points = 0.75
+	education_efficiency_modifier = 0.10
+	cb_generation_speed_modifier = -0.25
+	icon = 26
+}
+leader_art_lover = {
+        prestige = 0.40
+	culture_tech_research_bonus = 0.15
+	navy_tech_research_bonus = -0.05
+	army_tech_research_bonus = -0.05
+	government_tech_research_bonus = -0.05
+	global_assimilation_rate = 0.25
+	icon = 26
+}
+leader_free_thinker = {
+	non_accepted_pop_militancy_modifier = 0.10
+	literacy_con_impact = 1
+        political_reform_desire = 1
+	culture_tech_research_bonus = 0.10
+	navy_tech_research_bonus = 0.10
+	army_tech_research_bonus = 0.10
+	commerce_tech_research_bonus = 0.10
+	industry_tech_research_bonus = 0.10
+	government_tech_research_bonus = 0.10
+	diplomatic_points_modifier = -0.50
+	global_assimilation_rate = -0.75
+	icon = 26
+}
+leader_lawgiver = {
+        tax_efficiency = 0.05
+	culture_tech_research_bonus = -0.10
+	diplomatic_points_modifier = -0.25
+	government_tech_research_bonus = 0.15
+	icon = 26
+}
+leader_favorite = {
+	global_pop_militancy_modifier = -0.05
+	global_pop_consciousness_modifier = -0.20
+	org_regain = 0.20
+        tax_efficiency = -0.05
+	commerce_tech_research_bonus = -0.10
+	industry_tech_research_bonus = -0.10
+	culture_tech_research_bonus = -0.10
+	government_tech_research_bonus = -0.10
+	icon = 26
+}
+leader_tolerant = {
+	non_accepted_pop_militancy_modifier = -0.20
+	global_pop_militancy_modifier = 0.05
+	culture_tech_research_bonus = 0.10
+	cb_generation_speed_modifier = -0.25
+	global_assimilation_rate = -2
+	icon = 26
+}
+leader_fair = {
+	global_pop_militancy_modifier = -0.10
+        tax_efficiency = -0.05
+	global_assimilation_rate = 0.75
+	government_tech_research_bonus = -0.05
+	icon = 26
+}
+leader_cowardly = {
+	land_organisation = -0.10
+	naval_organisation = -0.10
+	org_regain = -0.30
+	reinforce_speed = -0.06
+	cb_generation_speed_modifier = -0.50
+	government_tech_research_bonus = 0.05
+	icon = 26
+}
+leader_out_of_politics = {
+	culture_tech_research_bonus = 0.20
+	diplomatic_points_modifier = -0.50
+	industry_tech_research_bonus = -0.05
+	commerce_tech_research_bonus = -0.05
+	navy_tech_research_bonus = -0.05
+	army_tech_research_bonus = -0.05
+	government_tech_research_bonus = -0.10
+	global_assimilation_rate = -0.5
+	icon = 26
+}
+leader_stupid = {
+	diplomatic_points_modifier = -0.50
+	industry_tech_research_bonus = -0.10
+	commerce_tech_research_bonus = -0.10
+	army_tech_research_bonus = -0.10
+	navy_tech_research_bonus = -0.10
+	culture_tech_research_bonus = -0.10
+	government_tech_research_bonus = -0.10
+	icon = 26
+}
+leader_insane = {
+	navy_tech_research_bonus = 0.20
+	army_tech_research_bonus = 0.20
+	diplomatic_points_modifier = -0.75
+	global_pop_militancy_modifier = 0.05
+	global_pop_consciousness_modifier = 0.10
+	commerce_tech_research_bonus = -0.10
+	industry_tech_research_bonus = -0.10
+	culture_tech_research_bonus = -0.10
+	icon = 26
+}
+minister_of_foreign_affairs1 = {
+	badboy = -0.05
+	icon = 7
+}
+minister_of_foreign_affairs2 = {
+	diplomatic_points_modifier = 0.75
+	icon = 7
+}
+minister_of_foreign_affairs3 = {
+	cb_generation_speed_modifier = 0.75
+	icon = 7
+}
+minister_of_foreign_affairs4 = {
+	influence_modifier = 0.50
+	icon = 7
+}
+minister_of_defence1 = {
+	army_tech_research_bonus = 0.10
+	navy_tech_research_bonus = 0.10
+	supply_consumption = 0.20
+	min_military_spending = 0.25
+	max_military_spending = 0.25
+	icon = 15
+}
+minister_of_defence2 = {
+	supply_consumption = -0.10
+	reinforce_speed = 0.04
+	icon = 15
+}
+minister_of_defence3 = {
+	army_tech_research_bonus = 0.05
+	land_unit_start_experience = 5
+	icon = 15
+}
+minister_of_defence4 = {
+	naval_unit_start_experience = 30
+	naval_organisation = 0.10
+	icon = 15
+}
+minister_of_defence5 = {
+	org_regain = 0.20
+	land_organisation = 0.10
+	icon = 15
+}
+minister_of_economics1 = {
+	unemployment_benefit = 1.00
+	poor_everyday_needs = -0.25
+	middle_everyday_needs = -0.15
+	core_pop_militancy_modifier = -0.03
+	icon = 9
+}
+minister_of_economics2 = {
+        tax_efficiency = 0.05
+	max_military_spending = -0.25
+	#min_social_spending = -0.25
+	icon = 9
+}
+minister_of_economics3 = {
+	industry_tech_research_bonus = 0.10
+	commerce_tech_research_bonus = 0.10
+        tax_efficiency = -0.05
+	icon = 9
+}
+minister_of_economics4 = {
+	factory_owner_cost = -0.10
+	icon = 9
+}
+minister_of_economics5 = {
+	war_exhaustion = -0.30
+	icon = 9
+}
+minister_of_culture_and_education1 = {
+        research_points = 0.50
+	education_efficiency_modifier = -0.10
+	culture_tech_research_bonus = -0.10
+	icon = 5
+}
+minister_of_culture_and_education2 = {
+	education_efficiency_modifier = 0.15
+	culture_tech_research_bonus = 0.10
+	icon = 5
+}
+minister_of_culture_and_education3 = {
+	core_pop_consciousness_modifier = -0.20
+	cb_generation_speed_modifier = 0.25
+	non_accepted_pop_militancy_modifier = 0.05
+	badboy = -0.10
+	icon = 5
+}
+minister_of_culture_and_education4 = {
+	global_immigrant_attract = 0.12
+	icon = 5
+}
+minister_of_culture_and_education5 = {
+	global_population_growth = 0.001
+	ruling_party_support = 0.20
+        research_points = -0.5
+	icon = 5
+}
+changed_politics_of_annexation = {
+	icon = 8
+}
+changed_politics_of_liberation = {
+	icon = 8
+}
+dissolved_the_government = {
+	global_pop_militancy_modifier = 0.03
+	icon = 36
+}
+########################################################################
+building_materials_for_bots = {
+	icon = 5
+}
+############### New Realism mod - Ideological war ######################
+komintern_is_working = {
+	diplomatic_points_modifier = 0.50
+	prestige = 0.20
+	icon = 28
+}
+red_infection = {
+        social_reform_desire = 0.5
+	core_pop_consciousness_modifier = 0.10
+        icon = 30
+}
+fascist_boost = {
+	non_accepted_pop_militancy_modifier = 0.2
+	global_pop_consciousness_modifier = -0.5
+	badboy = -1
+	icon = 34
+}
+SS = {
+        land_organisation = 0.10
+	land_unit_start_experience = 15
+	army_tech_research_bonus = 0.15
+	leadership = 1.5
+	icon = 31
+}
+cheka = {
+	core_pop_militancy_modifier = -0.20
+	core_pop_consciousness_modifier = -1
+	icon = 24
+}
+gestapo = {
+	non_accepted_pop_militancy_modifier = 0.10
+	global_pop_militancy_modifier = -0.10
+	icon = 25
+}
+supporting_colonial_administration = {
+        tax_efficiency = -0.15
+	icon = 18
+}
+################################################################
+province_ready_to_transfer = {
+        icon = 10
+}
+########### NRM Advisors #######################################
+has_sent_scientists = {
+	research_points = -1
+	icon = 4
+}
+scientists_is_working1 = {
+	research_points = 0.5
+	icon = 3
+}
+scientists_is_working2 = {
+	research_points = 0.5
+	icon = 3
+}
+scientists_is_working3 = {
+	research_points = 0.5
+	icon = 3
+}
+scientists_is_working4 = {
+	research_points = 0.5
+	icon = 3
+}
+scientists_is_working5 = {
+	research_points = 0.5
+	icon = 3
+}
+has_sent_military_advisors = {
+	icon = 15
+}
+military_advisors_is_working = {
+	army_tech_research_bonus = 0.30
+	icon = 15
+}
+has_sent_navy_advisors = {
+	icon = 7
+}
+navy_advisors_is_working = {
+	navy_tech_research_bonus = 0.30
+	icon = 7
+}
+has_sent_economical_advisors = {
+        icon = 5
+}
+economical_advisors_is_working = {
+	commerce_tech_research_bonus = 0.30
+	icon = 5
+}
+has_sent_industrial_advisors = {
+	icon = 11
+}
+industrial_advisors_is_working = {
+	industry_tech_research_bonus = 0.30
+	icon = 11
+}
+has_sent_culture_advisors = {
+	icon = 4
+}
+culture_advisors_is_working = {
+	culture_tech_research_bonus = 0.30
+	icon = 4
+}
+######################## Soviet five year plans ############################################
+five_year_plan_navy_modifier = {
+        naval_organisation = 0.10
+        naval_unit_start_experience = 10
+	navy_tech_research_bonus = 0.15
+	commerce_tech_research_bonus = 0.15
+	icon = 44
+}
+five_year_plan_navy_local_modifier = {
+	local_repair = 0.20
+        local_ship_build = -0.20
+	icon = 46
+}
+five_year_plan_army_modifier = {
+        org_regain = 0.30
+        land_organisation = 0.10
+        max_military_spending = 0.25
+	land_unit_start_experience = 10
+	army_tech_research_bonus = 0.15
+	icon = 44
+}
+five_year_plan_industry_modifier = {
+        factory_output = 0.05
+	factory_throughput = 0.10
+	industry_tech_research_bonus = 0.15
+	icon = 44
+}
+five_year_plan_culture_modifier = {
+	prestige = 1
+	culture_tech_research_bonus = 0.15
+	government_tech_research_bonus = 0.15
+	icon = 44
+}
+five_year_plan_likbez_modifier = {
+        education_efficiency_modifier = 1
+	icon = 44
+}
+five_year_plan_recovery_after_war_modifier = {
+	war_exhaustion = -1
+        tax_efficiency = 0.10
+	army_tech_research_bonus = 0.05
+	navy_tech_research_bonus = 0.05
+	commerce_tech_research_bonus = 0.05
+	culture_tech_research_bonus = 0.05
+	industry_tech_research_bonus = 0.05
+	government_tech_research_bonus = 0.05
+	icon = 44
+}
+#######################################################################################
+submarine_war_started = {
+	icon = 42
+}
+started_submarine_war_with_uk = {
+	icon = 42
+}
+submarine_war_is_on = {
+	icon = 16
+}
+assigning_cabinet_of_ministry = {
+	icon = 13
+}
+pax_britannica = {
+	prestige = 0.20
+	leadership = 0.25
+        diplomatic_points_modifier = 0.25
+	cb_generation_speed_modifier = 0.10
+	commerce_tech_research_bonus = 0.05
+	navy_tech_research_bonus = 0.05
+	culture_tech_research_bonus = 0.05
+	factory_owner_cost = 0.30
+	icon = 39
+}
+british_colonial_migration = {
+	immigrant_attract = 100		#10000%
+	icon = 41
+}
+region_occupied_1 = {
+	icon = 85
+}
+region_occupied_2 = {
+	icon = 86
+}
+capital_occupied_1 = {
+	icon = 85
+}
+capital_occupied_2 = {
+	icon = 86
+}
+reg_transfer = {
+	icon = 18
+}
+reg_transfer_500k = {
+	icon = 18
+}
+reg_transfer_1kk = {
+	icon = 18
+}
+reg_transfer_2kk = {
+	icon = 18
+}
+############################## Weather ################################################
+mild_winter = {
+	icon = 53
+	max_attrition = 7.5
+	movement_cost = 0.50
+	local_repair = -2
+	local_ship_build = 2.0
+}
+cold_winter = {
+	icon = 51
+	max_attrition = 15
+	movement_cost = 1.0
+	local_repair = -2
+	local_ship_build = 3.0
+}
+eternal_frost = {
+	icon = 54
+	max_attrition = 20
+	pop_militancy_modifier = -1
+	local_repair = -2
+	local_ship_build = 10.0
+	life_rating = -0.5
+}
+mud = {
+	icon = 49
+	max_attrition = 2.5
+	movement_cost = 0.75
+}
+hot = {
+	icon = 52
+	max_attrition = 2.5
+}
+monsoons = {
+	icon = 50
+	max_attrition = 5
+	movement_cost = 0.50
+	local_repair = -0.75
+	local_ship_build = 2.0
+}
+######################################################################################
+annexation_in_progress = {
+	icon = 4
+}
+money_transferred = {
+	icon = 10
+}
+risorgimento = {
+	core_pop_militancy_modifier = 0.5
+	icon = 40
+}
+import_substitution_program = {
+	factory_input = -0.02
+	icon = 11
+}
+ottoman_bank = {
+	factory_owner_cost = -0.05
+        tax_efficiency = 0.05
+	core_pop_militancy_modifier = 0.03
+	icon = 5
+}
+military_parade_was_held = {
+	prestige = 0.20
+	icon = 17
+}
+prepare_to_hold_military_drills = {
+	supply_consumption = 0.10
+	icon = 15
+}
+military_drills_was_held = {
+	prestige = 0.20
+	org_regain = 0.30
+	reinforce_speed = 0.06
+	unit_start_experience = 0.20
+	army_tech_research_bonus = 0.10
+	navy_tech_research_bonus = 0.10
+	icon = 62
+}
+supported_national_science = {
+        tax_efficiency = -0.05
+	research_points = 0.50
+	icon = 63
+}
+supporting_military_education = {
+        tax_efficiency = -0.05
+	leadership = 3
+	icon = 29
+}
+military_reform_established = {
+	icon = 29
+}
+supported_advanced_training_centers = {
+        tax_efficiency = -0.10
+	icon = 72
+}
+patronage_of_science = {
+	research_points_modifier = 0.5
+	prestige = 0.80
+	icon = 63
+}
+troubles_with_science = {
+	research_points = -2
+	education_efficiency_modifier = -0.5
+	icon = 4
+}
+rogue_state = {
+	badboy = 0.05
+	prestige = -0.40
+	icon = 6
+}
+law_of_neutrality = {
+	icon = 7
+}
+law_of_neutrality_was_declined = {
+	icon = 3
+}
+law_of_neutrality_was_canceled = {
+	icon = 3
+}
+civil_war2 = {
+	core_pop_militancy_modifier = 0.2
+	core_pop_consciousness_modifier = 0.2
+	icon = 40
+}
+##############    NRM 1.26.4 - 1.26.5   ####################
+main_fleet_base = {
+	local_repair = 0.50
+	icon = 67
+}
+underground = {
+	life_rating = 0.02
+	icon = 19
+}
+naval_defence_act_modifier = {
+        local_ship_build = -0.25
+	icon = 67
+}
+italian_naval_program1 = {
+	navy_tech_research_bonus = 0.10
+	icon = 65
+}
+italian_naval_program2 = {
+        local_ship_build = -0.25
+	icon = 67
+}
+winners_of_napoleon = {
+	prestige = 0.20
+	leadership = 0.50
+        land_organisation = -0.10
+	naval_organisation = -0.10
+        org_regain = 0.10
+	army_tech_research_bonus = -0.10
+	navy_tech_research_bonus = -0.10
+	icon = 66
+}
+fleet_weakness = {
+	army_tech_research_bonus = -0.30
+	icon = 65
+}
+army_weakness = {
+	navy_tech_research_bonus = -0.30
+	icon = 70
+}
+angry_capitalists = {
+	tax_efficiency = -0.15
+	ruling_party_support = -0.30
+	core_pop_militancy_modifier = 0.05
+	icon = 10
+}
+metropolis = {
+	prestige = 0.10
+	immigrant_attract = 2
+	life_rating = 0.03
+	icon = 75
+}
+healthcare_innovation_implementation = {
+	icon = 62
+}
+vaccinated_state = {
+	life_rating = 0.03
+	icon = 100
+}
+antiseptics_implemented = {
+	life_rating = 0.03
+	icon = 103
+}
+x_rays_implemented = {
+	life_rating = 0.03
+	icon = 101
+}
+antibiotics_implemented = {
+	life_rating = 0.03
+	icon = 102
+}
+###################### NRM Parliament ################################
+strategy_trading = {
+	cb_generation_speed_modifier = 0.10
+	commerce_tech_research_bonus = 0.10
+	navy_tech_research_bonus = 0.15
+	army_tech_research_bonus = -0.10
+	culture_tech_research_bonus = -0.10
+	government_tech_research_bonus = 0.10
+	icon = 67
+}
+strategy_economy = {
+	industry_tech_research_bonus = 0.10
+	commerce_tech_research_bonus = 0.10
+	army_tech_research_bonus = -0.10
+	navy_tech_research_bonus = -0.10
+	government_tech_research_bonus = -0.05
+	education_efficiency_modifier = -0.10
+	cb_generation_speed_modifier = -0.25
+	supply_consumption = 0.10
+	icon = 67
+}
+strategy_defence = {
+	supply_consumption = -0.10
+	army_tech_research_bonus = 0.15
+	navy_tech_research_bonus = 0.15
+	reinforce_speed = 0.04
+	industry_tech_research_bonus = -0.10
+	culture_tech_research_bonus = -0.10
+	commerce_tech_research_bonus = -0.10
+	diplomatic_points_modifier = -0.25
+	influence_modifier = -0.25
+	badboy = 0.05
+	icon = 67
+}
+strategy_diplomacy = {
+	prestige = 0.20
+	influence_modifier = 0.25
+	diplomatic_points_modifier = 0.50
+	core_pop_militancy_modifier = -0.05
+	cb_generation_speed_modifier = -0.25
+	commerce_tech_research_bonus = 0.05
+	army_tech_research_bonus = -0.10
+	navy_tech_research_bonus = -0.10
+	government_tech_research_bonus = -0.10
+	icon = 67
+}
+strategy_expansion = {
+	badboy = -0.10
+	army_tech_research_bonus = 0.05
+	supply_consumption = -0.10
+	cb_generation_speed_modifier = 0.25
+	diplomatic_points_modifier = 0.25
+	influence_modifier = -0.50
+	prestige = -0.20
+	culture_tech_research_bonus = -0.10
+	commerce_tech_research_bonus = -0.10
+	government_tech_research_bonus = 0.10
+	icon = 67
+}
+strategy_science = {
+	education_efficiency_modifier = 0.10
+	culture_tech_research_bonus = 0.15
+	government_tech_research_bonus = 0.10
+	commerce_tech_research_bonus = -0.10
+	industry_tech_research_bonus = -0.10
+	army_tech_research_bonus = -0.05
+	navy_tech_research_bonus = -0.05
+	core_pop_consciousness_modifier = 0.05
+	icon = 67
+}
+no_strategy = {
+	education_efficiency_modifier = -0.10
+	army_tech_research_bonus = -0.05
+	navy_tech_research_bonus = -0.05
+	culture_tech_research_bonus = -0.05
+	commerce_tech_research_bonus = -0.05
+	industry_tech_research_bonus = -0.05
+	government_tech_research_bonus = -0.05
+	icon = 67
+}
+choice_of_strategy = {
+	icon = 2
+}
+end_of_elections = {
+	icon = 2
+}
+#building canals
+building_kiel_canal = {
+	icon = 14
+}
+building_suez_canal = {
+	icon = 14
+}
+building_panama_canal = {
+	icon = 14
+}
+core_reg = {
+        icon = 73
+}
+calculation_of_core_regions = {
+	icon = 9
+}
+international_propaganda_modifier = {
+        tax_efficiency = -0.10
+	badboy = -0.15
+	icon = 82
+}
+####################################################
+literacy_0 = {
+	icon = 76
+}
+literacy_5 = {
+	icon = 76
+	life_rating = -0.013
+}
+literacy_10 = {
+	icon = 76
+	life_rating = -0.026
+}
+literacy_15 = {
+	icon = 76
+	life_rating = -0.039
+}
+literacy_20 = {
+	icon = 76
+	life_rating = -0.052
+}
+literacy_25 = {
+	icon = 76
+	life_rating = -0.065
+}
+literacy_30 = {
+	icon = 76
+	life_rating = -0.078
+}
+literacy_35 = {
+	icon = 76
+	life_rating = -0.091
+}
+literacy_40 = {
+	icon = 76
+	life_rating = -0.104
+}
+literacy_45 = {
+	icon = 76
+	life_rating = -0.117
+}
+literacy_50 = {
+	icon = 76
+	life_rating = -0.130
+}
+literacy_55 = {
+	icon = 76
+	life_rating = -0.143
+}
+literacy_60 = {
+	icon = 76
+	life_rating = -0.156
+}
+literacy_65 = {
+	icon = 76
+	life_rating = -0.169
+}
+literacy_70 = {
+	icon = 76
+	life_rating = -0.182
+}
+literacy_75 = {
+	icon = 76
+	life_rating = -0.195
+}
+literacy_80 = {
+	icon = 76
+	life_rating = -0.208
+}
+literacy_85 = {
+	icon = 76
+	life_rating = -0.221
+}
+literacy_90 = {
+	icon = 76
+	life_rating = -0.234
+}
+literacy_95 = {
+	icon = 76
+	life_rating = -0.247
+}
+literacy_100 = {
+	icon = 76
+	life_rating = -0.260
+}
+colonial_state_birthrate = {
+	life_rating = -0.200
+	icon = 59
+}
+changing_birthrate_of_some_country = {
+	icon = 74
+}
+danger_of_starvation = {
+	life_rating = -0.30
+	icon = 77
+}
+################ Fairs
+world_fair_organised = {
+        tax_efficiency = -0.06
+	icon = 56
+}
+regional_fair_organised = {
+        tax_efficiency = -0.02
+	icon = 56
+}
+colonial_fair_organised = {
+        tax_efficiency = -0.04
+	icon = 57
+}
+################ Expeditions
+botanical_expedition_funded = {
+        tax_efficiency = -0.02
+	icon = 85
+}
+botanical_expedition_funded_again = {
+        tax_efficiency = -0.04
+	icon = 85
+}
+botanical_expedition_funded_twice = {
+        tax_efficiency = -0.06
+	icon = 85
+}
+expedition_to_source_of_nile_mod = {
+        tax_efficiency = -0.02
+	icon = 86
+}
+expedition_to_source_of_nile_supported = {
+        tax_efficiency = -0.04
+	icon = 86
+}
+expedition_to_source_of_nile_supported_twice = {
+        tax_efficiency = -0.06
+	icon = 86
+}
+congo_river_expedition_mod = {
+        tax_efficiency = -0.02
+	icon = 86
+}
+congo_river_expedition_supported = {
+        tax_efficiency = -0.04
+	icon = 86
+}
+congo_river_expedition_supported_twice = {
+        tax_efficiency = -0.06
+	icon = 86
+}
+expedition_to_north_pole_mod = {
+        tax_efficiency = -0.02
+	icon = 86
+}
+expedition_to_north_pole_supported = {
+        tax_efficiency = -0.04
+	icon = 86
+}
+expedition_to_north_pole_supported_twice = {
+        tax_efficiency = -0.06
+	icon = 86
+}
+expedition_to_south_pole_mod = {
+        tax_efficiency = -0.02
+	icon = 86
+}
+expedition_to_south_pole_supported = {
+        tax_efficiency = -0.04
+	icon = 86
+}
+expedition_to_south_pole_supported_twice = {
+        tax_efficiency = -0.06
+	icon = 86
+}
+first_transatlantic_flight_mod = {
+        tax_efficiency = -0.02
+	icon = 86
+}
+first_transatlantic_flight_supported = {
+        tax_efficiency = -0.04
+	icon = 86
+}
+first_transatlantic_flight_supported_twice = {
+        tax_efficiency = -0.06
+	icon = 86
+}
+############## The sick man of Europe
+ottoman_reforms_boost = {
+        research_points = 0.10
+        tax_efficiency = 0.10
+	education_efficiency_modifier = 0.15
+	navy_tech_research_bonus = 0.10
+	army_tech_research_bonus = 0.10
+	industry_tech_research_bonus = 0.10
+	commerce_tech_research_bonus = 0.10
+	culture_tech_research_bonus = 0.10
+	government_tech_research_bonus = 0.10
+	icon = 74
+}
+sick_man_of_europe_1 = {
+	core_pop_consciousness_modifier = -0.12
+        tax_efficiency = -0.10
+	diplomatic_points_modifier = -0.50
+	supply_consumption = 0.20
+	education_efficiency_modifier = -0.30
+        land_organisation = -0.15
+	army_tech_research_bonus = -0.15
+	navy_tech_research_bonus = -0.15
+	government_tech_research_bonus = -0.15
+	culture_tech_research_bonus = -0.15
+	industry_tech_research_bonus = -0.15
+	commerce_tech_research_bonus = -0.15
+	icon = 90
+}
+sick_man_of_europe_2 = {
+	core_pop_consciousness_modifier = -0.10
+        tax_efficiency = -0.10
+	diplomatic_points_modifier = -0.50
+	supply_consumption = 0.10
+	education_efficiency_modifier = -0.20
+        land_organisation = -0.10
+	army_tech_research_bonus = -0.10
+	navy_tech_research_bonus = -0.10
+	government_tech_research_bonus = -0.10
+	culture_tech_research_bonus = -0.15
+	industry_tech_research_bonus = -0.15
+	commerce_tech_research_bonus = -0.15
+	icon = 90
+}
+sick_man_of_europe_3 = {
+	core_pop_consciousness_modifier = -0.08
+        tax_efficiency = -0.10
+	diplomatic_points_modifier = -0.25
+	supply_consumption = 0.10
+	education_efficiency_modifier = -0.20
+        land_organisation = -0.10
+	army_tech_research_bonus = -0.10
+	navy_tech_research_bonus = -0.10
+	government_tech_research_bonus = -0.10
+	culture_tech_research_bonus = -0.10
+	industry_tech_research_bonus = -0.10
+	commerce_tech_research_bonus = -0.10
+	icon = 90
+}
+################# Concert of Europe #################
+concert_of_europe = {
+	core_pop_militancy_modifier = -0.03
+	core_pop_consciousness_modifier = -0.03
+	prestige = 0.40
+	influence_modifier = 0.25
+	diplomatic_points_modifier = 0.50
+	cb_generation_speed_modifier = 0.10
+	diplomatic_points_modifier = 0.50
+	badboy = -0.05
+	icon = 97
+}
+breakdown_of_the_concert_of_europe = {
+	badboy = 0.10
+	icon = 40
+}
+shame_of_external_policy = {
+	badboy = 0.05
+	prestige = -0.40
+	diplomatic_points_modifier = -0.50
+	influence_modifier = -0.50
+	cb_generation_speed_modifier = -0.25
+	core_pop_militancy_modifier = 0.05
+	research_points_modifier = -0.50
+        icon = 70
+}
+austrian_leadership_in_germany = {
+        tax_efficiency = 0.05
+        max_military_spending = 0.25
+	icon = 96
+}
+german_customs_union = {
+	industry_tech_research_bonus = 0.05
+	commerce_tech_research_bonus = 0.05
+	icon = 27
+}

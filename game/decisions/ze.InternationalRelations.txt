@@ -1,0 +1,2525 @@
+political_decisions = {
+	international_des_on = {
+		alert = no
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+ 				has_country_flag = sell_and_buy_window
+ 				has_country_flag = politics_des_window
+ 				has_country_flag = givemoney
+ 				has_country_flag = nuke_des_window
+ 				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = { set_country_flag = international_des_window }
+		ai_will_do = { factor = 0 }
+	}
+	international_des_off = {
+		picture = international_des_on
+		alert = no
+		potential = {
+			has_country_flag = international_des_window
+			NOT = {
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = { clr_country_flag = international_des_window }
+		ai_will_do = { factor = 1 }
+	}
+        open_lend_lease_window = {
+		picture = lend_lease_window
+		alert = no
+		potential = {
+			has_country_flag = international_des_window
+			NOT = {
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			set_country_flag = opened_lend_lease_window
+		}
+		ai_will_do = { factor = 0 }
+        }
+        close_lend_lease_window = {
+		picture = lend_lease_window
+		alert = no
+		potential = {
+			has_country_flag = opened_lend_lease_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {}
+		effect = {
+			clr_country_flag = opened_lend_lease_window
+		}
+		ai_will_do = { factor = 1 }
+        }
+	lend_lease_military_supplies = {
+		picture = military_supplies_lend_lease
+		alert = no
+		potential = {
+			has_country_flag = opened_lend_lease_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			military_supplies = 1000
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 400055
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	lend_lease_steamer_convoy = {
+		picture = steamer_convoy_lend_lease
+		alert = no
+		potential = {
+			has_country_flag = opened_lend_lease_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			steamer_convoy = 1000
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 400056
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	lend_lease_navy_supplies = {
+		picture = navy_supplies_lend_lease
+		alert = no
+		potential = {
+			has_country_flag = opened_lend_lease_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			navy_supplies = 1000
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 4000566
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	lend_lease_tanks = {
+		picture = tanks_lend_lease
+		alert = no
+		potential = {
+			has_country_flag = opened_lend_lease_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			barrels = 1000
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 4000567
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	lend_lease_military_aeroplanes = {
+		picture = military_aeroplanes_lend_lease
+		alert = no
+		potential = {
+			has_country_flag = opened_lend_lease_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			military_aeroplanes = 1000
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 4000568
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+        share_building_materials = {
+		alert = no
+		potential = {
+			has_country_flag = opened_lend_lease_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {
+			building_materials = 1000
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 400089
+			}
+		}
+		ai_will_do = { factor = 0 }
+        }
+        share_nuclear_technologies = {
+		alert = no
+		potential = {
+			has_country_flag = international_des_window
+			has_global_flag = project_manhattan_ends
+			has_country_modifier = nuclear_weapons
+			NOT = {
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {
+			has_country_flag = has_produced_uranium
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810106
+			}
+		}
+		ai_will_do = { factor = 0 }
+        }
+	offend_other_nation = {
+		alert = no
+		potential = {
+			has_country_flag = international_des_window
+			NOT = {
+				ai = yes
+				is_vassal = yes
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+ 			war = no
+		}
+		allow = {
+			prestige = 500
+			is_independant = yes
+			NOT = { has_country_modifier = offended_other_nation }
+			any_greater_power = {
+				NOT = { OR = { truce_with = THIS alliance_with = THIS }}
+				prestige = 500
+			}
+		}
+		effect = {
+                	random_country = {
+				limit = {
+					is_greater_power = yes
+					prestige = 500
+					NOT = {
+						OR = {
+							alliance_with = THIS
+							has_country_modifier = offlimit
+							truce_with = THIS
+						}
+						relation = { who = THIS value = -190 }
+					}
+				}
+                        	country_event = 1800960
+                	}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	continental_blockde_uk = {
+		picture = continental_blockade_decision
+		alert = no
+		potential = {
+			has_country_flag = international_des_window
+			NOT = {
+				has_country_flag = continental_blockade_uk
+				has_country_flag = opened_lend_lease_window
+				tag = ENG
+				any_owned_province = { has_building = selector }
+			}
+			is_greater_power = yes
+			capital_scope = { continent = europe }
+		}
+		allow = {
+			NOT = { relation = { who = ENG value = -185 }}
+		}
+		effect = {
+			badboy = 5
+			set_country_flag = continental_blockade_uk
+			ENG = { country_event = 1800992 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	disable_continental_blockde_uk = {
+		picture = continental_blockade_decision
+		alert = no
+		potential = {
+			has_country_flag = international_des_window
+			has_country_flag = continental_blockade_uk
+			NOT = {
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {
+			relation = { who = ENG value = 185 }
+			NOT = { has_country_modifier = forced_to_continental_blockade }
+		}
+		effect = {
+			clr_country_flag = continental_blockade_uk
+			ENG = { country_event = 1800993 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	permit_annexation = {
+		picture = colonial_wars
+		alert = no
+		potential = {
+			NOT = {
+				has_country_flag = occupation_permitted
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+                    	has_country_flag = international_des_window
+			civilized = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = changed_politics_of_annexation }
+		}
+		effect = {
+			set_country_flag = occupation_permitted
+			any_country = { limit = { ai = no } country_event = 19363 }
+			add_country_modifier = { name = changed_politics_of_annexation duration = 365 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	prohibit_annexation = {
+		picture = colonial_wars
+		alert = no
+		potential = {
+			NOT = {
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+                    	has_country_flag = international_des_window
+			has_country_flag = occupation_permitted
+		}
+		allow = {
+			NOT = { has_country_modifier = changed_politics_of_annexation }
+		}
+		effect = {
+			clr_country_flag = occupation_permitted
+			any_country = { limit = { ai = no } country_event = 19364 }
+			add_country_modifier = { name = changed_politics_of_annexation duration = 365 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	liberate_occupied_land = {
+		alert = no
+		potential = {
+			has_country_flag = occupation_permitted
+			NOT = {
+				has_country_flag = liberate_not_conquer
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+                    	has_country_flag = international_des_window
+			civilized = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = changed_politics_of_liberation }
+		}
+		effect = {
+			set_country_flag = liberate_not_conquer
+			add_country_modifier = { name = changed_politics_of_liberation duration = 365 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	conquer_occupied_land = {
+		picture = liberate_occupied_land
+		alert = no
+		potential = {
+			has_country_flag = occupation_permitted
+			has_country_flag = liberate_not_conquer
+			NOT = {
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+                    	has_country_flag = international_des_window
+			civilized = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = changed_politics_of_liberation }
+		}
+		effect = {
+			clr_country_flag = liberate_not_conquer
+			add_country_modifier = { name = changed_politics_of_liberation duration = 365 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_ENG = {
+		alert = no
+		picture = givemoney_ENG
+		potential = {
+			has_country_flag = international_des_window
+			ENG = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = ENG
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = ENG }
+				secede_province = ENG
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_USA = {
+		alert = no
+		picture = givemoney_USA
+		potential = {
+			has_country_flag = international_des_window
+			USA = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = USA
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = USA }
+				secede_province = USA
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_RUS = {
+		alert = no
+		picture = givemoney_RUS
+		potential = {
+			has_country_flag = international_des_window
+			RUS = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = RUS
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = RUS }
+				secede_province = RUS
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_FRA = {
+		alert = no
+		picture = givemoney_FRA
+		potential = {
+			has_country_flag = international_des_window
+			FRA = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = FRA
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = FRA }
+				secede_province = FRA
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_PRU = {
+		alert = no
+		picture = givemoney_PRU
+		potential = {
+			has_country_flag = international_des_window
+			PRU = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = PRU
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = PRU }
+				secede_province = PRU
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_NGF = {
+		alert = no
+		picture = givemoney_NGF
+		potential = {
+			has_country_flag = international_des_window
+			NGF = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = NGF
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = NGF }
+				secede_province = NGF
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SGF = {
+		alert = no
+		picture = givemoney_SGF
+		potential = {
+			has_country_flag = international_des_window
+			SGF = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SGF
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SGF }
+				secede_province = SGF
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_GER = {
+		alert = no
+		picture = givemoney_GER
+		potential = {
+			has_country_flag = international_des_window
+			GER = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = GER
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = GER }
+				secede_province = GER
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_AUS = {
+		alert = no
+		picture = givemoney_AUS
+		potential = {
+			has_country_flag = international_des_window
+			AUS = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = AUS
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = AUS }
+				secede_province = AUS
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_KUK = {
+		alert = no
+		picture = givemoney_KUK
+		potential = {
+			has_country_flag = international_des_window
+			KUK = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = KUK
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = KUK }
+				secede_province = KUK
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_ITA = {
+		alert = no
+		picture = givemoney_ITA
+		potential = {
+			has_country_flag = international_des_window
+			ITA = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = ITA
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = ITA }
+				secede_province = ITA
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_TUR = {
+		alert = no
+		picture = givemoney_TUR
+		potential = {
+			has_country_flag = international_des_window
+			TUR = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = TUR
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = TUR }
+				secede_province = TUR
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_JAP = {
+		alert = no
+		picture = givemoney_JAP
+		potential = {
+			has_country_flag = international_des_window
+			JAP = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = JAP
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = JAP }
+				secede_province = JAP
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_DEN = {
+		alert = no
+		picture = givemoney_DEN
+		potential = {
+			has_country_flag = international_des_window
+			DEN = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = DEN
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = DEN }
+				secede_province = DEN
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SWE = {
+		alert = no
+		picture = givemoney_SWE
+		potential = {
+			has_country_flag = international_des_window
+			SWE = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SWE
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SWE }
+				secede_province = SWE
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SCA = {
+		alert = no
+		picture = givemoney_SCA
+		potential = {
+			has_country_flag = international_des_window
+			SCA = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SCA
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SCA }
+				secede_province = SCA
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SER = {
+		alert = no
+		picture = givemoney_SER
+		potential = {
+			has_country_flag = international_des_window
+			SER = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SER
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SER }
+				secede_province = SER
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_BEL = {
+		alert = no
+		picture = givemoney_BEL
+		potential = {
+			has_country_flag = international_des_window
+			BEL = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = BEL
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = BEL }
+				secede_province = BEL
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_POR = {
+		alert = no
+		picture = givemoney_POR
+		potential = {
+			has_country_flag = international_des_window
+			POR = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = POR
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = POR }
+				secede_province = POR
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_NET = {
+		alert = no
+		picture = givemoney_NET
+		potential = {
+			has_country_flag = international_des_window
+			NET = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = NET
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = NET }
+				secede_province = NET
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SPA = {
+		alert = no
+		picture = givemoney_SPA
+		potential = {
+			has_country_flag = international_des_window
+			SPA = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SPA
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SPA }
+				secede_province = SPA
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SWI = {
+		alert = no
+		picture = givemoney_SWI
+		potential = {
+			has_country_flag = international_des_window
+			SWI = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SWI
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SWI }
+				secede_province = SWI
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_GRE = {
+		alert = no
+		picture = givemoney_GRE
+		potential = {
+			has_country_flag = international_des_window
+			GRE = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = GRE
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = GRE }
+				secede_province = GRE
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_PER = {
+		alert = no
+		picture = givemoney_PER
+		potential = {
+			has_country_flag = international_des_window
+			PER = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = PER
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = PER }
+				secede_province = PER
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_HND = {
+		alert = no
+		picture = givemoney_HND
+		potential = {
+			has_country_flag = international_des_window
+			HND = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = HND
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = HND }
+				secede_province = HND
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_PAK = {
+		alert = no
+		picture = givemoney_PAK
+		potential = {
+			has_country_flag = international_des_window
+			PAK = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = PAK
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = PAK }
+				secede_province = PAK
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_CHI = {
+		alert = no
+		picture = givemoney_CHI
+		potential = {
+			has_country_flag = international_des_window
+			CHI = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = CHI
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = CHI }
+				secede_province = CHI
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_CAN = {
+		alert = no
+		picture = givemoney_CAN
+		potential = {
+			has_country_flag = international_des_window
+			CAN = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = CAN
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = CAN }
+				secede_province = CAN
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_AST = {
+		alert = no
+		picture = givemoney_AST
+		potential = {
+			has_country_flag = international_des_window
+			AST = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = AST
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = AST }
+				secede_province = AST
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_NZL = {
+		alert = no
+		picture = givemoney_NZL
+		potential = {
+			has_country_flag = international_des_window
+			NZL = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = NZL
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = NZL }
+				secede_province = NZL
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SAF = {
+		alert = no
+		picture = givemoney_SAF
+		potential = {
+			has_country_flag = international_des_window
+			SAF = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SAF
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SAF }
+				secede_province = SAF
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_MEX = {
+		alert = no
+		picture = givemoney_MEX
+		potential = {
+			has_country_flag = international_des_window
+			MEX = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = MEX
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = MEX }
+				secede_province = MEX
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_BRZ = {
+		alert = no
+		picture = givemoney_BRZ
+		potential = {
+			has_country_flag = international_des_window
+			BRZ = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = BRZ
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = BRZ }
+				secede_province = BRZ
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_ARG = {
+		alert = no
+		picture = givemoney_ARG
+		potential = {
+			has_country_flag = international_des_window
+			ARG = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = ARG
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = ARG }
+				secede_province = ARG
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_CLM = {
+		alert = no
+		picture = givemoney_CLM
+		potential = {
+			has_country_flag = international_des_window
+			CLM = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = CLM
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = CLM }
+				secede_province = CLM
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_UCA = {
+		alert = no
+		picture = givemoney_UCA
+		potential = {
+			has_country_flag = international_des_window
+			UCA = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = UCA
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = UCA }
+				secede_province = UCA
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SOV = {
+		alert = no
+		picture = givemoney_SOV
+		potential = {
+			has_country_flag = international_des_window
+			SOV = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SOV
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SOV }
+				secede_province = SOV
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_POL = {
+		alert = no
+		picture = givemoney_POL
+		potential = {
+			has_country_flag = international_des_window
+			POL = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = POL
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = POL }
+				secede_province = POL
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_ROM = {
+		alert = no
+		picture = givemoney_ROM
+		potential = {
+			has_country_flag = international_des_window
+			ROM = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = ROM
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = ROM }
+				secede_province = ROM
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_BOL = {
+		alert = no
+		picture = givemoney_BOL
+		potential = {
+			has_country_flag = international_des_window
+			BOL = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = BOL
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = BOL }
+				secede_province = BOL
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_PEU = {
+		alert = no
+		picture = givemoney_PEU
+		potential = {
+			has_country_flag = international_des_window
+			PEU = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = PEU
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = PEU }
+				secede_province = PEU
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_VNZ = {
+		alert = no
+		#picture = givemoney_VNZ
+		potential = {
+			has_country_flag = international_des_window
+			VNZ = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = VNZ
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = VNZ }
+				secede_province = VNZ
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_PRG = {
+		alert = no
+		#picture = givemoney_PRG
+		potential = {
+			has_country_flag = international_des_window
+			PRG = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = PRG
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = PRG }
+				secede_province = PRG
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_KOR = {
+		alert = no
+		picture = givemoney_KOR
+		potential = {
+			has_country_flag = international_des_window
+			KOR = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = KOR
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = KOR }
+				secede_province = KOR
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_BUR = {
+		alert = no
+		#picture = givemoney_BUR
+		potential = {
+			has_country_flag = international_des_window
+			BUR = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = BUR
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = BUR }
+				secede_province = BUR
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_DAI = {
+		alert = no
+		#picture = givemoney_DAI
+		potential = {
+			has_country_flag = international_des_window
+			DAI = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = DAI
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = DAI }
+				secede_province = DAI
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_UKR = {
+		alert = no
+		picture = givemoney_UKR
+		potential = {
+			has_country_flag = international_des_window
+			UKR = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = UKR
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = UKR }
+				secede_province = UKR
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_BYE = {
+		alert = no
+		#picture = givemoney_BYE
+		potential = {
+			has_country_flag = international_des_window
+			BYE = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = BYE
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = BYE }
+				secede_province = BYE
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_NOR = {
+		alert = no
+		#picture = givemoney_NOR
+		potential = {
+			has_country_flag = international_des_window
+			NOR = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = NOR
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = NOR }
+				secede_province = NOR
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SAU = {
+		alert = no
+		picture = givemoney_SAU
+		potential = {
+			has_country_flag = international_des_window
+			SAU = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SAU
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SAU }
+				secede_province = SAU
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_IRQ = {
+		alert = no
+		#picture = givemoney_IRQ
+		potential = {
+			has_country_flag = international_des_window
+			IRQ = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = IRQ
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = IRQ }
+				secede_province = IRQ
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SYR = {
+		alert = no
+		#picture = givemoney_SYR
+		potential = {
+			has_country_flag = international_des_window
+			SYR = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SYR
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SYR }
+				secede_province = SYR
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_ALD = {
+		alert = no
+		#picture = givemoney_ALD
+		potential = {
+			has_country_flag = international_des_window
+			ALD = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = ALD
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = ALD }
+				secede_province = ALD
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_MOR = {
+		alert = no
+		#picture = givemoney_MOR
+		potential = {
+			has_country_flag = international_des_window
+			MOR = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = MOR
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = MOR }
+				secede_province = MOR
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_BOH = {
+		alert = no
+		#picture = givemoney_BOH
+		potential = {
+			has_country_flag = international_des_window
+			BOH = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = BOH
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = BOH }
+				secede_province = BOH
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SLO = {
+		alert = no
+		#picture = givemoney_SLO
+		potential = {
+			has_country_flag = international_des_window
+			SLO = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SLO
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SLO }
+				secede_province = SLO
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_YUG = {
+		alert = no
+		picture = givemoney_YUG
+		potential = {
+			has_country_flag = international_des_window
+			YUG = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = YUG
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = YUG }
+				secede_province = YUG
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_HUN = {
+		alert = no
+		#picture = givemoney_HUN
+		potential = {
+			has_country_flag = international_des_window
+			HUN = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = HUN
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = HUN }
+				secede_province = HUN
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_CRO = {
+		alert = no
+		#picture = givemoney_CRO
+		potential = {
+			has_country_flag = international_des_window
+			CRO = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = CRO
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = CRO }
+				secede_province = CRO
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_CZH = {
+		alert = no
+		#picture = givemoney_CZH
+		potential = {
+			has_country_flag = international_des_window
+			CZH = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = CZH
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = CZH }
+				secede_province = CZH
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_KAZ = {
+		alert = no
+		#picture = givemoney_KAZ
+		potential = {
+			has_country_flag = international_des_window
+			KAZ = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = KAZ
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = KAZ }
+				secede_province = KAZ
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_SIA = {
+		alert = no
+		#picture = givemoney_SIA
+		potential = {
+			has_country_flag = international_des_window
+			SIA = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = SIA
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = SIA }
+				secede_province = SIA
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	release_INO = {
+		alert = no
+		picture = givemoney_INO
+		potential = {
+			has_country_flag = international_des_window
+			INO = { exists = yes any_core = { owned_by = THIS }}
+			NOT = {
+				tag = INO
+				has_country_flag = opened_lend_lease_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = { NOT = { is_core = THIS } is_core = INO }
+				secede_province = INO
+			}
+			any_owned = {
+				limit = { NOT = { state_scope = { any_owned_province = {
+					is_capital = yes
+				}}}}
+				remove_province_modifier = core_reg
+			}
+			any_owned = {
+				add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			}
+			add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

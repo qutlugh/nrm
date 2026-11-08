@@ -1,0 +1,470 @@
+political_decisions = {
+	an_elephant_for_america = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = sent_an_elephant_to_america
+				any_owned_province = { has_building = selector }
+			}
+			tag = SIA
+			year = 1861
+			exists = USA
+		}
+		allow = {}
+		effect = {
+			USA = { country_event = { id=13350 days=0 }}
+			set_country_flag = sent_an_elephant_to_america
+		}
+	}
+	torching_of_the_summer_palace = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+				year = 1850
+			}
+			CHI = {
+				owns = 1612
+				civilized = no
+				has_country_flag = opium_war_started
+                                NOT = { OR = {
+					has_country_modifier = opium_war_defeated
+					has_country_flag = summer_palace_torched
+				}}
+			}
+                        tag = ENG
+			war_with = CHI
+		}
+		allow = {
+			controls = 1612
+		}
+		effect = {
+			CHI = {
+				set_country_flag = summer_palace_torched
+				country_event = 13355
+			}
+		}
+	}
+	clear_out_the_manchu_elite = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = manchu_elite_cleared_out
+				any_owned_province = { has_building = selector }
+			}
+			tag = CHI
+			government = absolute_monarchy
+			is_greater_power = no
+			civilized = no
+			year = 1860
+		}
+		allow = {
+			average_consciousness = 3
+		}
+		effect = {
+			prestige = 100
+			years_of_research = 0.5
+			any_pop = {
+				limit = { has_pop_culture = manchu }
+				militancy = 9
+				consciousness = 9
+			}
+			set_country_flag = manchu_elite_cleared_out
+		}
+	}
+	support_boxers = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = supported_boxers
+				any_owned_province = { has_building = selector }
+			}
+			tag = CHI
+			government = absolute_monarchy
+			is_greater_power = no
+			civilized = no
+			year = 1860
+			any_owned_province = {
+				OR = {
+					has_province_modifier = western_presence
+					has_province_modifier = foreign_smugglers
+					has_province_modifier = foreign_trading_post
+					has_province_modifier = local_opium_habit
+					has_province_modifier = european_military_mission
+				}
+			}
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						has_province_modifier = western_presence
+						has_province_modifier = foreign_smugglers
+						has_province_modifier = foreign_trading_post
+						has_province_modifier = local_opium_habit
+						has_province_modifier = european_military_mission
+					}
+				}
+				any_pop = {
+					militancy = 9
+					ideology = { value = reactionary factor = 0.9 }
+				}
+			}
+			prestige = 150
+			set_country_flag = supported_boxers
+		}
+	}
+	enact_muhammad_alis_reforms = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = muhammad_alis_reforms_enacted
+				any_owned_province = { has_building = selector }
+			}
+			tag = EGY
+			civilized = no
+		}
+		allow = {
+			prestige = 25
+			average_consciousness = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = muhammad_alis_reforms
+				duration = 3650
+			}
+			set_country_flag = muhammad_alis_reforms_enacted
+		}
+	}
+	establish_the_dar_al_funun = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = dar_al_funun_built
+				any_owned_province = { has_building = selector }
+			}
+			tag = PER
+			civilized = no
+		}
+		allow = {
+			education_reform = yes_education_reform
+		}
+		effect = {
+			any_pop = { consciousness = 2 }
+			set_country_flag = dar_al_funun_built
+			add_country_modifier = {
+				name = dar_al_funun
+				duration = -1
+			}
+		}
+	}
+	annals_of_the_fulani_jihad = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = that_book_written
+				any_owned_province = { has_building = selector }
+			}
+			tag = SOK
+		}
+		allow = {
+			year = 1840
+		}
+		effect = {
+			set_country_flag = that_book_written
+			prestige = 50
+		}
+	}
+	become_negusa_nagast = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = is_negusa_nagast
+				any_owned_province = { has_building = selector }
+			}
+			tag = ETH
+			government = absolute_monarchy
+		}
+		allow = {
+			prestige = 25
+			NOT = { average_militancy = 2 }
+		}
+		effect = {
+			set_country_flag = is_negusa_nagast
+			any_pop = { militancy = -9 }
+			prestige = 100
+			years_of_research = 5
+		}
+	}
+	integrate_tibet = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = tibet_integrated
+				TIB = { all_core = { is_core = THIS }}
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+			primary_culture = beifaren
+			tag = CHI
+		}
+		allow = {
+			TIB_1591 = { owned_by = THIS }
+		}
+		effect = {
+			prestige = 25
+			TIB_1591 = { add_core = THIS }
+			set_country_flag = tibet_integrated
+		}
+		ai_will_do = { factor = 1 }
+	}
+	protect_korea = {
+		picture = annex_korea
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = protected_korea
+				any_owned_province = { has_building = selector }
+			}
+			tag = CHI
+			civilized = no
+			exists = KOR
+			exists = JAP
+		}
+		allow = {
+			KOR = {
+				is_independant = yes
+				civilized = no
+				relation = { who = THIS value = 100 }
+			}
+		}
+		effect = {
+			add_casus_belli = {
+				target = JAP
+				type = prepare_war
+				months = 24
+			}
+			relation = { who = JAP value = -400 }
+			set_country_flag = protected_korea
+			create_vassal = KOR
+			create_alliance = KOR
+		}
+		ai_will_do = { factor = 1 }
+	}
+	claim_manchukuo = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = manchukuo_claimed
+				MCK = { all_core = { is_core = THIS }}
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+			primary_culture = beifaren
+			tag = CHI
+		}
+		allow = {
+			CHI_1553 = { owned_by = THIS }
+		}
+		effect = {
+			prestige = 100
+			CHI_1553 = { add_core = THIS }
+			set_country_flag = manchukuo_claimed
+		}
+		ai_will_do = { factor = 1 }
+	}
+	integrate_xinjiang = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = xinjiang_integrated
+				XIN = { all_core = { is_core = THIS }}
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+			primary_culture = beifaren
+			tag = CHI
+		}
+		allow = {
+			CHI_1600 = { owned_by = THIS }
+		}
+		effect = {
+			prestige = 25
+			CHI_1600 = { add_core = THIS }
+			any_neighbor_country = {
+				relation = { who = THIS value = -100 }
+			}
+			set_country_flag = xinjiang_integrated
+		}
+		ai_will_do = { factor = 1 }
+	}
+	self_strengthening_movement = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_modifier = self_strengthening_movement_modifier
+				civilized = yes
+				any_owned_province = { has_building = selector }
+			}
+			tag = CHI
+			has_country_modifier = opium_war_defeated
+		}
+		allow = {
+			money = 200000
+		}
+		effect = {
+			money = -200000
+			add_country_modifier = {
+				name = self_strengthening_movement_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	ban_the_opium_trade  = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = CHI
+			has_country_modifier = opium_war_defeated
+		}
+		allow = {
+			is_greater_power = yes
+		}
+		effect = {
+			remove_country_modifier = opium_war_defeated
+			prestige = 100
+			any_owned = {
+				limit = { has_province_modifier = local_opium_habit }
+				remove_province_modifier = local_opium_habit
+			}
+			
+		}
+		ai_will_do = { factor = 1 }
+	}
+	chinese_unification = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = china_is_united
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+			primary_culture = beifaren
+			tag = CHI
+		}
+		allow = {
+			GXI = { all_core = { owned_by = THIS }}
+			SXI = { all_core = { owned_by = THIS }}
+			YNN = { all_core = { owned_by = THIS }}
+			XBI = { all_core = { owned_by = THIS }}
+			XIN = { all_core = { owned_by = THIS }}
+			MCK = { all_core = { owned_by = THIS }}
+			CHI_1532 = { owned_by = THIS }
+		}
+		effect = {
+			GXI = { all_core = { remove_core = GXI }}
+			SXI = { all_core = { remove_core = SXI }}
+			YNN = { all_core = { remove_core = YNN }}
+			XBI = { all_core = { remove_core = XBI }}
+			MCK = { all_core = { remove_core = MCK }}
+			CHI_1532 = { remove_core = MGL }
+			prestige = 300
+			set_country_flag = china_is_united
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

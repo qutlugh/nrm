@@ -1,0 +1,3 @@
+add_core = MAU
+trade_goods = grain
+life_rating = 15

@@ -1,0 +1,6 @@
+owner = BRZ
+controller = BRZ
+add_core = BRZ
+trade_goods = coal
+naval_base = 1
+life_rating = 40

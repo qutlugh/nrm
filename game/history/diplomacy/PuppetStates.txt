@@ -1,0 +1,185 @@
+# Egypt
+vassal = {
+	first = EGY
+	second = HDJ
+	start_date = 1821.1.1
+	end_date = 2000.1.1
+}
+# Denmark
+vassal = {
+	first = DEN
+	second = HOL
+	start_date = 1821.1.1
+	end_date = 2000.1.1
+}
+# British India
+vassal = {
+	first = ENG
+	second = KUT
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = TRA
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = SIK
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = JOD
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = JAS
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = JAI
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = BIK
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = MEW
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = IND
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = GWA
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = BHO
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = BUN
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = ORI
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = NAG
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = MYS
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = BER
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = HYD
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+vassal = {
+	first = ENG
+	second = AWA
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}
+
+# The United Kingdom
+vassal = {
+	first = ENG
+	second = HAN
+	start_date = 1814.10.1
+	end_date = 1837.1.1
+}
+
+# Portugal — Brazil
+substate = {
+	first = POR
+	second = BRZ
+	start_date = 1821.1.1
+	end_date = 1824.3.8
+}
+
+# Sweden
+substate = {
+	first = SWE
+	second = NOR
+	start_date = 1821.1.1
+	end_date = 2000.1.1
+}
+
+# Russia
+substate = {
+	first = RUS
+	second = FIN
+	start_date = 1821.1.1
+	end_date = 2000.1.1
+}
+substate = {
+	first = RUS
+	second = POL
+	start_date = 1821.1.1
+	end_date = 2000.1.1
+}
+
+# NET-LUX
+vassal = {
+	first = NET
+	second = LUX
+	start_date = 1815.1.1
+	end_date = 1890.11.23
+}
+
+#The United States of America
+vassal = {
+	first = USA
+	second = LIB
+	start_date = 1821.1.1
+	end_date = 1945.1.1
+}
+
+#Dai Nam
+vassal = {
+	first = DAI
+	second = CAM
+	start_date = 1821.1.1
+	end_date = 1900.1.1
+}

@@ -1,0 +1,57 @@
+army = {
+ 
+	name = "Army of Texas"
+	
+	location = 133
+
+	regiment = {
+		name= "1st Regiment of Infantry"
+		type = infantry
+		home = 3261
+	}
+	regiment = {
+		name= "2nd Regiment of Infantry"
+		type = infantry
+		home = 134
+	}
+	regiment = {
+		name= "3rd Regiment of Infantry"
+		type = infantry
+		home = 137
+	}
+	regiment = {
+		name= "4th Regiment of Infantry"
+		type = infantry
+		home = 133
+	}
+	regiment = {
+		name= "5th Regiment of Infantry"
+		type = infantry
+		home = 137
+	}
+	regiment = {
+		name= "6th Regiment of Infantry"
+		type = infantry
+		home = 133
+	}
+	regiment = {
+		name= "1st Cavalry Regiment"
+		type = dragoon
+		home = 134
+	}
+	regiment = {
+		name= "1st Regiment of Artillery"
+		type = engineer
+		home = 134
+	}
+	regiment = {
+		name= "2nd Regiment of Artillery"
+		type = engineer
+		home = 133
+	}
+	regiment = {
+		name= "3rd Regiment of Artillery"
+		type = engineer
+		home = 137
+	}
+}

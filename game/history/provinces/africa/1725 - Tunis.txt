@@ -1,0 +1,6 @@
+owner = TUN
+controller = TUN
+add_core = TUN
+trade_goods = grain
+terrain = urban
+life_rating = 40

@@ -1,0 +1,4813 @@
+country_event = {
+
+	id = 27551
+	
+	trigger = {
+        	has_country_modifier = project_manhattan_starts
+        	has_country_flag = manhattan_project1
+        }
+
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	title = "EVTNAME27551"
+	desc = "EVTDESC27551"
+	picture = "Einstein"
+
+	immediate = {
+                set_country_flag = manhattan_project2
+                clr_country_flag = manhattan_project1
+	}
+
+	option = {
+		name = "EVTOPTA27551"
+	}
+}
+country_event = {
+
+	id = 27552
+
+	trigger = {
+		has_country_modifier = project_manhattan_starts
+                has_country_flag = manhattan_project2
+	}
+
+	mean_time_to_happen = {
+		months = 2		
+	}
+
+	title = "EVTNAME27552"
+	desc = "EVTDESC27552"
+	picture = "uranium_ore_mining"
+
+	immediate = {
+                set_country_flag = manhattan_project3
+                clr_country_flag = manhattan_project2
+	}
+
+	option = {
+		name = "EVTOPTA27552"
+	}
+}
+country_event = {
+
+	id = 27553
+	
+	trigger = {
+		has_country_modifier = project_manhattan_starts
+                has_country_flag = manhattan_project3
+	}
+
+	mean_time_to_happen = {
+		months = 2	
+	}
+
+	title = "EVTNAME27553"
+	desc = "EVTDESC27553"
+	picture = "K25"
+
+	immediate = {
+		clr_country_flag = manhattan_project3
+		set_country_flag = manhattan_project4
+	}
+
+	option = {
+		name = "EVTOPTA27553"
+	}
+}
+country_event = {
+	id = 27554
+	
+	trigger = {
+		has_country_flag = manhattan_project4
+		has_country_modifier = project_manhattan_starts
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	title = "EVTNAME27554"
+	desc = "EVTDESC27554"
+	picture = "pluton_bomb"
+
+	immediate = {
+		clr_country_flag = manhattan_project4
+		set_country_flag = manhattan_project5
+	}
+
+	option = {
+		name = "EVTOPTA27554"
+	}
+}
+country_event = {
+	id = 27555
+	
+	trigger = {
+		has_country_flag = manhattan_project5
+		has_country_modifier = project_manhattan_starts
+	}
+		
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	title = "EVTNAME27555"
+	desc = "EVTDESC27555"
+	picture = "nuclear_explosion"
+
+	immediate = {
+		clr_country_flag = manhattan_project5
+		remove_country_modifier = project_manhattan_starts
+		set_global_flag = project_manhattan_ends
+                add_country_modifier = { name = nuclear_weapons duration = -1 }
+		any_country = {
+			limit = { ai = no }
+			country_event = 27565
+		}
+	}
+
+	option = {
+		name = "EVTOPTA27555"
+		prestige = 1000
+		research_points = 50000
+	}
+}
+country_event = {
+
+	id = 27561
+	
+	trigger = {
+        	has_country_modifier = nuke_research_starts
+        	has_country_flag = nuke_research
+        }
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	title = "EVTNAME27561"
+	desc = "EVTDESC27561"
+	picture = "pluton_bomb"
+
+	immediate = {
+                set_country_flag = nuke_research1
+                clr_country_flag = nuke_research
+	}
+
+	option = {
+		name = "EVTOPTA27561"
+	}
+}
+country_event = {
+
+	id = 27562
+	
+	trigger = {
+                has_country_modifier = nuke_research_starts
+                has_country_flag = nuke_research1
+	}
+		
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	title = "EVTNAME27562"
+	desc = "EVTDESC27562"
+	picture = "uranium_ore_mining"
+
+	immediate = {
+                set_country_flag = nuke_research2
+                clr_country_flag = nuke_research1
+	}
+
+	option = {
+		name = "EVTOPTA27562"
+	}
+}
+country_event = {
+
+	id = 27563
+	
+	trigger = {
+                has_country_modifier = nuke_research_starts
+                has_country_flag = nuke_research2
+	}
+		
+	mean_time_to_happen = {
+		months = 1	
+	}
+	
+	title = "EVTNAME27563"
+	desc = "EVTDESC27563"
+	picture = "K25"
+
+	immediate = {
+		clr_country_flag = nuke_research2
+		set_country_flag = nuke_research3
+	}
+
+	option = {
+		name = "EVTOPTA27563"
+	}
+}
+country_event = {
+	id = 27564
+	
+	trigger = {
+		has_country_flag = nuke_research3
+                has_country_modifier = nuke_research_starts
+	}
+		
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	title = "EVTNAME27564"
+	desc = "EVTDESC27564"
+	picture = "nuclear_explosion"
+
+	immediate = {
+		remove_country_modifier = nuke_research_starts
+                add_country_modifier = { name = nuclear_weapons duration = -1 }
+		clr_country_flag = nuke_research3
+		any_country = {
+			limit = { ai = no }
+			country_event = 27565
+		}
+	}
+
+	option = {
+		name = "EVTOPTA27564"
+		prestige = 500
+		research_points = 50000
+	}
+}
+country_event = {
+	id = 27565
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME27565"
+	desc = "EVTDESC27565"
+	picture = "nuclear_explosion"
+
+	option = {
+		name = "EVTOPTA27565"
+	}
+}
+country_event = {
+
+	id = 1800904
+	
+        is_triggered_only = yes
+        major = yes
+	
+	title = "Нас разоружили!"
+	desc = "Страна $FROMCOUNTRY$ заставила нас уничтожить наш ядерный арсенал! Это великая трагедия для нашего народа!"
+
+	immediate = {
+		remove_country_modifier = nuclear_weapons
+		clr_country_flag = nuke_research
+		clr_country_flag = nuke_research1
+		clr_country_flag = nuke_research2
+		clr_country_flag = nuke_research3
+		clr_country_flag = nuke_research4
+		remove_country_modifier = nuke_research_starts
+		prestige_factor = -0.75
+        }
+
+	option = {
+		name = "Национальная гордость подорвана! Какой позор!"
+	}
+}
+country_event = {
+
+	id = 1800925
+
+        is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	title = "Ядерная программа страны $FROMCOUNTRY$!"
+	desc = "Нашим шпионам стало известно о том, что в стране $FROMCOUNTRY$ ведётся разработка ядерного оружия. Масштаб программы к сожалению, неизвестен."
+        picture = "nuke_4"
+
+	option = {
+		name = "Мы проинформированы"
+	}
+}
+country_event = {
+
+	id = 1800927
+
+	trigger = {
+		government = proletarian_dictatorship
+                part_of_sphere = yes
+                sphere_owner = {
+			NOT = { government = proletarian_dictatorship }
+			ai = no
+                }
+	}
+
+	title = "Капиталисты лезут к нам!"
+	desc = "Капиталистические свиньи лезут в нашу страну, чтобы нагло грабить наш насытившийся их властью народ! Мы должны немедленно выслать их агентуру из нашей страны!"
+        picture = "newrmsocialism"
+
+	option = {
+		name = "Закрыть посольство империалистов!"
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.05
+			}
+			consciousness = 3
+		}
+                sphere_owner = { country_event = 1800929 }
+                
+	}
+}
+country_event = {
+
+	id = 1800928
+
+	trigger = {
+                part_of_sphere = yes
+		NOT = { government = proletarian_dictatorship }
+                sphere_owner = {
+			government = proletarian_dictatorship
+			ai = no
+                }
+	}
+
+	title = "Коммунисты лезут к нам!"
+	desc = "Нищие, но наглые и мерзкие рабочие и крестьяне, под видом благодеятельных мотивов пытаются открыть у нас своё посольство, чтобы нести нам разрушительную идеологию коммунистов!"
+        picture = "newrmsocialism"
+
+	option = {
+		name = "Закрыть посольство! Начать репрессии!!!"
+		any_pop = {
+			limit = { NOT = { strata = rich }}
+			ideology = {
+				value = communist
+				factor = 0.05
+			}
+			consciousness = 3
+		}
+                sphere_owner = { country_event = 1800930 }
+	}
+}
+country_event = {
+
+	id = 1800929
+
+        is_triggered_only = yes
+
+	title = "Нашего посла выслали!"
+	desc = "Люмпены из страны $FROMCOUNTRY$ выслали нашего посла. Официальной причиной была объявлена якобы подрывная контр-революционная деятельность нашего посольства."
+        picture = "newrmsocialism"
+
+	option = {
+		name = "Надо убрать оттуда коммунистов!"
+                diplomatic_influence = { who = FROM value = -400 }
+		relation = { who = FROM value = -400 } 
+	}
+}
+country_event = {
+
+	id = 1800930
+
+        is_triggered_only = yes
+
+	title = "Империалисты наносят ответный удар!"
+	desc = "Правящая верхушка страны $FROMCOUNTRY$, находясь в приступе бешенства от нашей революционной деятельности выслали нашего посла из своей страны вон и перед этим умудрились его ещё оскорбить."
+        picture = "newrmsocialism"
+
+	option = {
+		name = "Этой стране нужна диктатура пролетариата!"
+                diplomatic_influence = { who = FROM value = -400 }
+		relation = { who = FROM value = -400 }
+	}
+}
+country_event = {
+
+	id = 1800934
+
+	is_triggered_only = yes
+
+	title = "Патент на производство химического оружия"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас патент на производство химического оружия."
+        picture = "gas_attack_event_patent"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1800937 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём оружие массового поражения!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1800935
+
+	is_triggered_only = yes
+
+	title = "Патент на производство противогазов"
+	desc = "Страна $FROMCOUNTRY$ хочет купить у нас патент на производство защиты от химического оружия."
+        picture = "gas_defence_event_patent"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 18009377 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Плохая сделка"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1800936
+
+	is_triggered_only = yes
+
+	title = "Отказ на продажу патента"
+	desc = "Страна $FROMCOUNTRY$ отказала нам в продаже патента."
+        picture = "burning_money"
+
+	option = {
+		name = "Жаль"
+	}
+}
+country_event = {
+
+	id = 1800937
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала патент"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на производство химического оружия. Теперь мы сможем производить его сами, всю необходимую документацию мы от них уже получили."
+        picture = "gas_attack_event_patent"
+
+	option = {
+		name = "Отличная сделка"
+                set_country_flag = gas_attack_patent
+	}
+}
+country_event = {
+
+	id = 18009377
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала патент"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на производство противогазов. Теперь мы сможем производить их сами, всю необходимую документацию мы от них уже получили."
+        picture = "gas_defence_event_patent"
+
+	option = {
+		name = "Отличная сделка"
+                set_country_flag = gas_defence_patent
+	}
+}
+country_event = {
+	id = 1800943
+	title = "EVTNAME1800943"
+	desc = "EVTDESC1800943"
+	picture = "central_america"
+
+	trigger = {
+		tag = UCA
+		year = 1840
+	}
+	fire_only_once = yes
+
+        immediate = {
+        	UCA = { all_core = { remove_core = UCA }}
+		ELS = { set_country_flag = is_exists }
+		release = ELS
+		HON = { set_country_flag = is_exists }
+		release = HON
+		NIC = { set_country_flag = is_exists }
+		release = NIC
+		COS = { set_country_flag = is_exists }
+		release = COS
+		change_tag = GUA
+        }
+
+	option = {
+		name = "EVTOPTA1800943"
+	}
+}
+country_event = {
+	id = 1800945
+	title = "EVTNAME11101"
+	desc = "EVTDESC11101"
+	picture = "Celebration"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA11101"
+		FROM = { inherit = THIS }
+	}
+}
+country_event = {
+	id = 1800947
+	title = "EVNTNAME1800947"
+	desc = "EVNTDESC1800947"
+	picture = "opium_addiction"
+
+	trigger = {
+		tag = CHI
+		year = 1840
+		civilized = no
+		NOT = {
+			has_country_flag = opium_war_started
+			has_country_flag = opium_war_not_started
+		}
+        }
+
+	option = {
+		name = "Начать активную борьбу с контрабандой"
+		set_country_flag = opium_war_started
+		ENG = { country_event = 1800948 }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "Я сам курю опиум и предлагаю полностью узаконить его продажу!"
+		set_country_flag = opium_war_not_started
+		1496 = { secede_province = ENG }
+		any_pop = { militancy = 7 }
+		add_country_modifier = { name = opium_war_defeated duration = -1 }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 1800948
+	title = "EVNTNAME1800948"
+	desc = "EVNTDESC1800948"
+	picture = "second_opiumwar_begins"
+
+	is_triggered_only = yes
+
+        immediate = {
+		set_global_flag = opium_war_started1
+		casus_belli = {
+			target = CHI
+			type = opium_war_cb
+			months = 12
+		}
+	}
+
+	option = {
+		name = "EVNTOPTA1800948"
+		set_country_flag = started_opium_war_with_china
+		war = {
+			target = CHI
+			attacker_goal = { casus_belli = opium_war_cb }
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVNTOPTB1800948"
+		prestige_factor = -0.50
+		CHI = { prestige = 200 }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 18009488
+	title = "Поражение китайцев в опиумной войне!"
+	desc = "EVTDESC18009488"
+	picture = "opium_war"
+
+	trigger = {
+		tag = ENG
+		CHI = { has_country_modifier = opium_war_defeated }
+	}
+	fire_only_once = yes
+
+	immediate = {
+		prestige = 600
+	}
+
+	option = {
+		name = "Британская империя - величайшая из империй!"
+	}
+}
+country_event = {
+	id = 1800949
+	title = "EVNTNAME1800949"
+	desc = "EVNTDESC1800949"
+	picture = "concession"
+
+	is_triggered_only = yes
+
+        immediate = {
+		set_global_flag = opium_war_started1
+		casus_belli = { target = CHI type = opium_war_cb months = 12 }
+	}
+
+	option = {
+		name = "EVNTOPTA1800949"
+                prestige = 20
+		set_country_flag = started_opium_war_with_china
+		war = { target = FROM attacker_goal = { casus_belli = opium_war_cb }}
+                relation = { who = FROM value = -400 }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVNTOPTB1800949"
+                prestige_factor = -0.25
+                relation = { who = FROM value = 400 }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 1800953
+	
+	is_triggered_only = yes
+	major = yes
+	
+	title = "EVNTNAME1800953"
+	desc = "EVNTDESC1800953"
+        picture = "freedom"
+	option = {
+		name = "EVNTOPTA1800953"
+		FROM = {
+			release_vassal = THIS
+			country_event = 1800954
+			add_country_modifier = {
+				name = the_likelihood_of_a_financial_crisis_alt
+				duration = 1460
+			}
+		}
+		ai_chance = {
+			factor = 99
+			modifier = {
+				factor = 0
+				NOT = { relation = { who = from value = 100 }}
+			}
+		}
+	}
+	option = {
+		name = "EVNTOPTB1800953"
+		FROM = {
+			country_event = 1810010
+			add_country_modifier = {
+				name = the_likelihood_of_a_financial_crisis_alt
+				duration = 1460
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1800954
+	
+	is_triggered_only = yes
+	major = yes
+	
+	title = "EVNTNAME1800954"
+	desc = "EVNTDESC1800954"
+        picture = "freedom"
+
+	option = {
+		name = "EVNTOPTA1800954"
+		relation = { who = FROM value = 400 }
+		war_exhaustion = -20
+		any_pop = { limit = { is_accepted_culture = yes } militancy = -5 }
+	}
+}
+country_event = {
+
+	id = 1810010
+	
+	is_triggered_only = yes
+	major = yes
+	
+	title = "EVNTNAME1810010"
+	desc = "EVNTDESC1810010"
+        picture = "freedom"
+
+        immediate = {
+		FROM = { war = { target = THIS attacker_goal = { casus_belli = become_independent }}}
+        }
+
+	option = {
+		name = "EVNTOPTA1810010"
+ 		relation = { who = FROM value = -400 }
+		war_exhaustion = 20
+		any_pop = { limit = { is_accepted_culture = yes } militancy = 3 }
+	}
+}
+country_event = {
+
+	id = 1800958
+
+	trigger = {
+		government = proletarian_dictatorship
+		NOT = { has_country_flag = rising_against_commie }
+	}
+
+	mean_time_to_happen = { months = 36 }
+
+	title = "$COUNTRY_ADJ$ гражданская война"
+	desc = "EVTDESC1800958"
+	picture = "Riot"
+
+        immediate = {
+                add_country_modifier = { name = civil_war2 duration = 1825 }
+		any_pop = {
+			ideology = { value = liberal factor = 0.20 }
+			ideology = { value = fascist factor = 0.40 }
+			scaled_militancy = { ideology = liberal factor = 6 }
+			scaled_militancy = { ideology = fascist factor = 6 }
+		}
+		set_country_flag = rising_against_commie
+        }
+
+	option = {
+		name = "Мы раздавим их, как грязь под ботинками!"
+	}
+}
+country_event = {
+
+	id = 1800960
+
+	is_triggered_only = yes
+
+	title = "EVTNAME1800960"
+	desc = "EVTDESC1800960"
+	picture = "crisis"
+
+        immediate = {
+		FROM = { add_country_modifier = { name = offended_other_nation duration = 1825 }}
+        }
+
+	option = {
+		name = "EVTOPTA1800960"
+		FROM = { country_event = 1810125 }
+                ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB1800960"
+                prestige_factor = -0.20
+                add_tax_relative_income = -50
+		add_country_modifier = { name = offlimit duration = 1095 }
+                FROM = { prestige_factor = -0.1 }
+                ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVTOPTC1800960"
+                prestige_factor = -0.50
+		add_country_modifier = { name = offlimit duration = 1095 }
+                ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 1810016
+
+	trigger = {
+		war = yes
+		OR = {
+			any_owned_province = {
+				has_province_modifier = core_reg
+				is_coastal = yes
+			}
+			has_country_modifier = submarine_war_started
+		}
+		civilized = yes
+		NOT = {
+			OR = {
+				AND = {
+					any_owned_province = {
+						is_coastal = yes
+						has_province_modifier = core_reg
+						is_blockaded = no
+						controlled_by = THIS
+						NOT = {
+							AND = {
+								OR = {
+									province_id = 817
+									province_id = 674
+									province_id = 968
+									province_id = 967
+									province_id = 976
+									province_id = 979
+									province_id = 1049
+									province_id = 1096
+									province_id = 886
+									province_id = 882
+									province_id = 883
+									province_id = 862
+								}
+								owner = { war_countries = {
+									has_country_flag = blockade_of_black_sea
+								}}
+							}
+							AND = {
+								OR = {
+									province_id = 369
+									province_id = 372
+									province_id = 547
+									province_id = 546
+									province_id = 690
+									province_id = 695
+									province_id = 365
+									province_id = 354
+									province_id = 350
+									province_id = 994
+									province_id = 343
+									province_id = 338
+									province_id = 318
+									province_id = 317
+									province_id = 322
+									province_id = 335
+									province_id = 331
+								}
+								owner = { war_countries = {
+									has_country_flag = blockade_of_baltic_sea
+								}}
+							}
+						}
+					}
+					NOT = { has_country_modifier = submarine_war_started }
+				}
+				OR = {
+					has_country_modifier = metropoly_blockaded1
+					has_country_modifier = continental_blockade
+				}
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = { owner = {
+						NOT = { tag = THIS }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							is_coastal = yes
+							is_blockaded = no
+							NOT = {
+								AND = {
+									OR = {
+										province_id = 817
+										province_id = 674
+										province_id = 968
+										province_id = 967
+										province_id = 976
+										province_id = 979
+										province_id = 1049
+										province_id = 1096
+										province_id = 886
+										province_id = 882
+										province_id = 883
+										province_id = 862
+									}
+									owner = { war_countries = {
+										has_country_flag = blockade_of_black_sea
+									}}
+								}
+								AND = {
+									OR = {
+										province_id = 369
+										province_id = 372
+										province_id = 547
+										province_id = 546
+										province_id = 690
+										province_id = 695
+										province_id = 365
+										province_id = 354
+										province_id = 350
+										province_id = 994
+										province_id = 343
+										province_id = 338
+										province_id = 318
+										province_id = 317
+										province_id = 322
+										province_id = 335
+										province_id = 331
+									}
+									owner = { war_countries = {
+										has_country_flag = blockade_of_baltic_sea
+									}}
+								}
+							}
+						}
+						alliance_with = THIS
+					}}
+				}
+				AND = { has_country_modifier = submarine_war_started steamer_convoy = 1000 }
+				any_owned_province = { has_province_modifier = calculation_of_core_regions }
+			}
+		}
+	}
+
+	immediate = {
+		add_country_modifier = { name = metropoly_blockaded1 duration = -1 }
+		set_country_flag = metropoly_blockaded1_flag
+		any_owned = {
+			limit = { NOT = { has_province_modifier = core_reg }}
+			add_province_modifier = { name = metropoly_blockaded duration = -1 }
+		}
+	}
+
+	title = "Блокада метрополии"
+	desc = "Враг установил блокаду наших метропольных портов!"
+        picture = "opium_war"
+
+	option = {
+		name = "Нужно срочно снять блокаду!"
+		any_country = {
+			limit = { ai = no war_with = THIS }
+			country_event = 1800974
+		}
+	}
+}
+country_event = {
+
+	id = 1800974
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	title = "Блокада державы $FROMCOUNTRY$"
+	desc = "Все порты нашего врага - державы $FROMCOUNTRY$ находятся в морской блокаде."
+        picture = "opium_war"
+
+	option = {
+		name = "Прекрасно!"
+	}
+}
+country_event = {
+
+	id = 1800975
+
+	trigger = {
+		has_country_modifier = metropoly_blockaded1
+		OR = {
+			any_owned_province = {
+				is_coastal = yes
+				has_province_modifier = core_reg
+				is_blockaded = no
+				controlled_by = THIS
+				NOT = {
+					AND = {
+						OR = {
+							province_id = 817
+							province_id = 674
+							province_id = 968
+							province_id = 967
+							province_id = 976
+							province_id = 979
+							province_id = 1049
+							province_id = 1096
+							province_id = 886
+							province_id = 882
+							province_id = 883
+							province_id = 862
+						}
+						owner = { war_countries = {
+							has_country_flag = blockade_of_black_sea
+						}}
+					}
+					AND = {
+						OR = {
+							province_id = 369
+							province_id = 372
+							province_id = 547
+							province_id = 546
+							province_id = 690
+							province_id = 695
+							province_id = 365
+							province_id = 354
+							province_id = 350
+							province_id = 994
+							province_id = 343
+							province_id = 338
+							province_id = 318
+							province_id = 317
+							province_id = 322
+							province_id = 335
+						}
+						owner = { war_countries = {
+							has_country_flag = blockade_of_baltic_sea
+						}}
+					}
+				}
+			}
+			NOT = { any_owned_province = { has_province_modifier = core_reg is_coastal = yes }}
+			AND = { has_country_modifier = submarine_war_started steamer_convoy = 1000 }
+			any_owned_province = {
+				has_province_modifier = core_reg
+				any_neighbor_province = {
+					owner = {
+						NOT = { tag = THIS }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							is_coastal = yes
+							is_blockaded = no
+							NOT = {
+								AND = {
+									OR = {
+										province_id = 817
+										province_id = 674
+										province_id = 968
+										province_id = 967
+										province_id = 976
+										province_id = 979
+										province_id = 1049
+										province_id = 1096
+										province_id = 886
+										province_id = 882
+										province_id = 883
+										province_id = 862
+									}
+									owner = { war_countries = {
+										has_country_flag = blockade_of_black_sea
+									}}
+								}
+								AND = {
+									OR = {
+										province_id = 369
+										province_id = 372
+										province_id = 547
+										province_id = 546
+										province_id = 690
+										province_id = 695
+										province_id = 365
+										province_id = 354
+										province_id = 350
+										province_id = 994
+										province_id = 343
+										province_id = 338
+										province_id = 318
+										province_id = 317
+										province_id = 322
+										province_id = 335
+									}
+									owner = { war_countries = {
+										has_country_flag = blockade_of_baltic_sea
+									}}
+								}
+							}
+						}
+						alliance_with = THIS
+					}
+				}
+			}
+		}
+        }
+
+	immediate = {
+		remove_country_modifier = metropoly_blockaded1
+		clr_country_flag = metropoly_blockaded1_flag
+		any_owned = {
+			limit = { has_province_modifier = metropoly_blockaded }
+			remove_province_modifier = metropoly_blockaded
+		}
+	}
+
+	title = "Снятие блокады"
+	desc = "Наши военно-морские силы успешно сняли блокаду побережья метрополии, установленную врагом."
+        picture = "opium_war"
+
+	option = {
+		name = "Прекрасно!"
+		any_country = {
+			limit = {
+				ai = no
+				war_with = THIS
+			}
+			country_event = 1800976
+		}
+	}
+}
+country_event = {
+
+	id = 1800976
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	title = "Прорыв блокады державой $FROMCOUNTRY$"
+	desc = "Держава $FROMCOUNTRY$ прорвала нашу блокаду её метрополии!"
+        picture = "opium_war"
+
+	option = {
+		name = "Печально"
+	}
+}
+country_event = {
+
+	id = 1800982
+	trigger = {
+		tag = ENG
+		NOT = {
+			any_greater_power = {
+				capital_scope = { continent = europe }
+				NOT = { AND = {
+					tag = ENG
+					has_country_flag = continental_blockade_uk
+				}}
+			}
+			has_country_modifier = continental_blockade
+		}
+	}
+
+	title = "Континентальная блокада"
+	desc = "Нам объявили континентальную блокаду"
+        picture = "europa"
+
+	option = {
+		name = "Неудачи дипломатии"
+		add_country_modifier = { name = continental_blockade duration = -1 }
+	}
+}
+country_event = {
+
+	id = 1800983
+
+	trigger = {
+		tag = ENG
+		any_greater_power = {
+			capital_scope = { continent = europe }
+			NOT = { AND = {
+				tag = ENG
+				has_country_flag = continental_blockade_uk
+			}}
+		}
+		has_country_modifier = continental_blockade
+	}
+
+	title = "Континентальная блокада СНЯТА"
+	desc = "Одна из континентальных держав решила снять так называемую континентальную блокаду нашей державы. Думаю нам это только на пользу!"
+        picture = "europa"
+
+	option = {
+		name = "Божественная дипломатия!"
+		remove_country_modifier = continental_blockade
+	}
+}
+country_event = {
+
+	id = 1800992
+
+        is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ объявила нам континентальную блокаду"
+	desc = "Дипломаты из державы $FROMCOUNTRY$ только что переслали нашему послу весточку о том, что их страна объявила о континентальной блокаде против нас."
+        picture = "europa"
+
+	option = {
+		name = "Где моя сабля?!"
+	}
+}
+country_event = {
+
+	id = 1800993
+
+        is_triggered_only = yes
+
+	title = "Снятие континентальной блокады державой $FROMCOUNTRY$"
+	desc = "Нам только что стало известно о том, что страна $FROMCOUNTRY$ прекратила континентальную блокаду против нас!"
+        picture = "europa"
+
+	option = {
+		name = "Торжество фритрейдерства!"
+	}
+}
+country_event = {
+
+	id = 1800997
+
+	title = "Коммунистическое влияние"
+	desc = "В державе $FROMCOUNTRY$ недавно произошла коммунстическая революция, в связи с чем идея всеобщего равенства становится очень популярной у народных масс."
+        picture = "ilich2"
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	immediate = {
+		add_country_modifier = { name = red_infection duration = 1825 }
+	}
+	option = {
+		name = "Закрыть глаза"
+		any_pop = {
+			limit = { NOT = { strata = rich }}
+			ideology = {
+				value = communist
+				factor = 0.10
+			}
+			scaled_militancy = {
+				ideology = communist
+				factor = 3
+			}
+			dominant_issue = {
+				value = state_controlled
+				factor = 0.10
+			}
+			dominant_issue = {
+				value = non_socialist
+				factor = 0.10
+			}
+			dominant_issue = {
+				value = all_trade_unions
+				factor = 0.10
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+        option = {
+		name = "Бороться с коммунистами"
+		any_pop = {
+			scaled_militancy = {
+				ideology = communist
+				factor = 3
+			}
+			scaled_consciousness = {
+				ideology = communist
+				factor = 3
+			}
+			dominant_issue = {
+				value = state_controlled
+				factor = 0.05
+			}
+			dominant_issue = {
+				value = non_socialist
+				factor = 0.05
+			}
+			dominant_issue = {
+				value = all_trade_unions
+				factor = 0.05
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810002
+
+	title = "Коммунистическая революция в стране $FROMCOUNTRY$"
+	desc = "Нам приходят новости из страны $FROMCOUNTRY$ о том, что там недавно произошла не то коммунистическая революция, не то государственный переворот. Мы могли бы точнее выяснить обстоятельства, дав убежище правительству в изгнании."
+        picture = "ilich3"
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	immediate = {
+        	add_country_modifier = { name = red_infection duration = 1825 }
+	}
+
+	option = {
+		name = "Поддержать революцию!"
+                prestige = -80
+                FROM = {
+                	relation = { who = THIS value = 200 }
+			any_pop = {
+			limit = { NOT = { strata = rich }}
+				ideology = {
+					value = communist
+					factor = 0.25
+				}
+				scaled_militancy = {
+					ideology = communist
+					factor = -9
+				}
+				scaled_militancy = {
+					ideology = reactionary
+					factor = -9
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = -9
+				}
+			}
+                }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "Дать им убежище и финансирование"
+                FROM = {
+                	add_country_modifier = { name = civil_war2 duration = 730 }
+                	relation = { who = THIS value = -400 }
+			any_pop = {
+				ideology = {
+					value = reactionary
+					factor = 0.50
+				}
+				scaled_militancy = {
+					ideology = communist
+					factor = -9
+				}
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 9
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = 9
+				}
+			}
+                }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 1810003
+
+	title = "Реакционное движение после коммунистической революции"
+	desc = "В нашей стране недавно захватили власть коммунисты с чем категорически не согласна часть нашего населения. Они уже собираются в отряды, вооружаются и ждут поддержки из-за рубежа!"
+        picture = "ilich2"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ужасно!"
+		any_pop = {
+			ideology = {
+				value = reactionary
+				factor = 0.30
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 9
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 9
+			}
+		}
+		any_country = {
+			limit = {
+				NOT = {
+					government = proletarian_dictatorship
+					has_global_flag = has_capitalists_world_leader
+					has_global_flag = anti_communist_committe_formed
+				}
+				has_global_flag = komintern_is_worked
+			}
+			country_event = 1800997
+		}
+		random_country = {
+			limit = {
+				NOT = { government = proletarian_dictatorship }
+				has_country_flag = capitalists_world_leader
+				has_global_flag = has_capitalists_world_leader
+			}
+			country_event = 1810002
+		}
+		random_country = {
+			limit = {
+				government = proletarian_dictatorship
+				has_country_flag = communist_world_leader
+				has_global_flag = has_communist_world_leader
+				has_global_flag = komintern_is_worked
+			}
+			country_event = 1810024
+		}
+	}
+}
+country_event = {
+
+	id = 1810024
+
+	title = "Коммунисты приходят к власти в державе $FROMCOUNTRY$"
+	desc = "Наши братья и сёстры по идеологии из державы $FROMCOUNTRY$ смогли наконец сбросить с себя гнёт буржуазии и готовы помогать нам в общем деле борьбы пролетариата!"
+        picture = "ilich3"
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	option = {
+		name = "Помочь нашим братьям и сёстрам!"
+		FROM = {
+			relation = { who = THIS value = 400 }
+			any_pop = {
+			limit = { NOT = { strata = rich }}
+				ideology = {
+					value = communist
+					factor = 0.25
+ 				}
+				scaled_militancy = {
+					ideology = communist
+					factor = -9
+				}
+			}
+                }
+                diplomatic_influence = { who = FROM value = 400 }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Мы пока ничем не можем помочь..."
+                prestige = -80
+                FROM = {
+			relation = { who = THIS value = -400 }
+			any_pop = {
+				ideology = {
+					value = reactionary
+					factor = 0.25
+				}
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 9
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = 9
+				}
+			}
+                }
+                diplomatic_influence = { who = FROM value = -400 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810004
+
+	title = "Красная армия в стране $FROMCOUNTRY$!!!"
+	desc = "Красная зараза распространяется с невиданной скоростью! Теперь уже коммунистическая армия шагает по планете, и давит своим сапогом независимые режимы - нужно срочно принять меры!"
+        picture = "red_alert"
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+        immediate = {
+		add_country_modifier = { name = red_infection duration = 1825 }
+        }
+
+	option = {
+		name = "Повесить коммунистов на площади!"
+		any_pop = {
+			scaled_militancy = {
+				ideology = communist
+				factor = 9
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = 9
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = -6
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = -6
+			}
+		}
+                relation = { who = FROM value = -400 }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Коммунизм это добро!"
+		any_pop = {
+			limit = { NOT = { strata = rich }}
+			ideology = {
+				value = communist
+				factor = 0.10
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 9
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 9
+			}
+			dominant_issue = {
+				value = state_controlled
+				factor = 0.10
+			}
+			dominant_issue = {
+				value = non_socialist
+				factor = 0.10
+			}
+			dominant_issue = {
+				value = all_trade_unions
+				factor = 0.10
+			}
+		}
+                relation = { who = FROM value = 400 }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 1810005
+
+	title = "Коммунстическое вторжение в страну $FROMCOUNTRY$"
+	desc = "Генеральный штаб, а так же военная разведка и секретные службы подтверждают факт ввода войск коммунистами в страну $FROMCOUNTRY$ и установление там красного режима. Что будем делать?"
+        picture = "red_alert"
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	immediate = {
+		add_country_modifier = { name = red_infection duration = 1825 }
+	}
+
+	option = {
+		name = "Помочь реакционерам в стране"
+		FROM = {
+			any_pop = {
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 9
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = 6
+				}
+			}
+                }
+                relation = { who = FROM value = -400 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Устроить там гражданскую войну"
+                FROM = {
+			add_country_modifier = { name = civil_war2 duration = 1825 }
+			any_pop = {
+				ideology = {
+					value = reactionary
+					factor = 0.75
+				}
+				scaled_militancy = {
+					ideology = communist
+					factor = 9
+				}
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 9
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = 9
+				}
+			}
+                }
+                relation = { who = FROM value = -400 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Сложить руки"
+                prestige = -80
+                FROM = {
+			any_pop = {
+				scaled_militancy = {
+					ideology = communist
+					factor = -9
+				}
+				scaled_militancy = {
+					ideology = reactionary
+		         		factor = -9
+		      		}
+				scaled_militancy = {
+					ideology = conservative
+					factor = -9
+				}
+			}
+                }
+                relation = { who = FROM value = 400 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 18100005
+
+	title = "Вторжение империалистов в державу $FROMCOUNTRY$"
+	desc = "До нас дошли сведения, что в страну $FROMCOUNTRY$ совершили вторжение антиреволюционные силы и свергли прокоммунистичскую власть!"
+        picture = "imperialist_invasion"
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	option = {
+		name = "Уничтожить оппозицию!"
+		any_pop = {
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 9
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 9
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 9
+			}
+			scaled_militancy = {
+				ideology = communist
+				factor = -6
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Забудем про это"
+		any_pop = {
+			ideology = {
+				value = reactionary
+				factor = 0.50
+			}
+			scaled_militancy = {
+				ideology = reactionary
+				factor = 9
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 9
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 9
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 18100006
+
+	title = "Империалисты вторглись в державу $FROMCOUNTRY$"
+	desc = "Военные в генеральном штабе встревожены известиями, поступающими к нам от военной разведки и секретных служб, оперативно собирающих данные в державе $FROMCOUNTRY$. Получены достоверные сведения о вторжении империалистических сил в эту державу!"
+        picture = "imperialist_invasion"
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	option = {
+		name = "Помочь коммунистам в стране"
+		FROM = {
+			any_pop = {
+			limit = { NOT = { strata = rich }}
+				ideology = {
+					value = communist
+					factor = 0.50
+				}
+				scaled_militancy = {
+					ideology = communist
+					factor = 9
+				}
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 3
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = 3
+				}
+			}
+                }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Устроить там гражданскую войну"
+		FROM = {
+			add_country_modifier = { name = civil_war2 duration = 1825 }
+			any_pop = {
+			limit = { NOT = { strata = rich }}
+				ideology = {
+					value = communist
+					factor = 0.75
+				}
+				scaled_militancy = {
+					ideology = communist
+					factor = 9
+				}
+				scaled_militancy = {
+					ideology = reactionary
+					factor = 9
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = 9
+				}
+			}
+                }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Сложить руки"
+		prestige = -80
+		FROM = {
+			any_pop = {
+				ideology = {
+					value = reactionary
+					factor = 0.50
+				}
+				scaled_militancy = {
+					ideology = communist
+					factor = -9
+				}
+				scaled_militancy = {
+					ideology = reactionary
+					factor = -9
+				}
+				scaled_militancy = {
+					ideology = conservative
+					factor = -9
+				}
+			}
+                }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810007
+
+	title = "EVTNAME1810006"
+	desc = "EVTDESC1810006"
+        picture = "fascist_ss"
+
+	trigger = {
+		government = fascist_dictatorship
+		NOT = {
+			OR = {
+				has_country_flag = fascist_country
+				has_country_modifier = fascist_boost
+			}
+		}
+        }
+
+	option = {
+		name = "EVTOPTA1810006"
+                add_country_modifier = { name = fascist_boost duration = -1 }
+                set_country_flag = fascist_country
+	}
+}
+country_event = {
+
+	id = 1810008
+
+	title = "EVTNAME1810008"
+	desc = "EVTDESC1810008"
+        picture = "fascist_ss"
+
+	trigger = {
+		NOT = {
+			government = fascist_dictatorship
+			ruling_party_ideology = fascist
+		}
+		has_country_modifier = fascist_boost
+		has_country_flag = fascist_country
+        }
+
+	option = {
+		name = "EVTOPTA1810008"
+		remove_country_modifier = fascist_boost
+		remove_country_modifier = gestapo
+		remove_country_modifier = SS
+		clr_country_flag = fascist_country
+	}
+}
+country_event = {
+
+	id = 1810025
+
+	title = "Красная интервенция"
+	desc = "Недавно в нашу страну была осуществлена интервенция одной из коммунистических держав с целью смены нашего режима"
+        picture = "red_alert"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Пролетарии всех стран, соединяйтесь!"
+		any_country = {
+			limit = {
+				NOT = {
+					government = proletarian_dictatorship
+					has_country_flag = capitalists_world_leader
+				}
+			}
+			country_event = 1810004
+		}
+		any_country = {
+			limit = {
+				NOT = { government = proletarian_dictatorship }
+				has_country_flag = capitalists_world_leader
+			}
+			country_event = 1810005
+		}
+		any_country = {
+			limit = { NOT = { government = proletarian_dictatorship }}
+			relation = { who = THIS value = -400 }
+		}
+		any_country = {
+			limit = { government = proletarian_dictatorship }
+			relation = { who = THIS value = 400 }
+		}
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = THIS }
+			}
+			diplomatic_influence = { who = THIS value = -400 }
+		}
+	}
+}
+country_event = {
+
+	id = 1810027
+
+        is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	title = "Построена сеть радаров в стране $FROMCOUNTRY$!"
+	desc = "Посол державы $FROMCOUNTRY$ официально заявил нашему министру иностранных дел о том, что в его стране работает огромная сеть радарных баз, и они готовы в любой момент ответить на ядерный удар стратегической авиации с любой стороны!"
+        picture = "radar"
+
+	option = {
+		name = "Мы проинформированы"
+	}
+}
+country_event = {
+
+	id = 1810030
+
+        is_triggered_only = yes
+
+	title = "Свержение коммунистического режима"
+	desc = "Недавно было произведено военное вторжение в нашу страну и физическая ликвидация красного режима!"
+        picture = "newrmsocialism"
+
+        immediate = {
+		remove_country_modifier = cheka
+		government = presidential_dictatorship
+		ruling_party_ideology = conservative
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = enshrined
+		political_reform = reverence_for_religion
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = state_press
+		political_reform = no_trade_unions
+		political_reform = underground_parties
+		social_reform = no_minimum_wage
+		social_reform = no_work_hour_limit
+		social_reform = no_safety
+		social_reform = no_subsidies
+		social_reform = no_pensions
+		social_reform = no_health_care
+		social_reform = low_schools
+        }
+
+	option = {
+		name = "Теперь мы понимаем вред коммунизма"
+		any_country = {
+			limit = {
+				NOT = { government = proletarian_dictatorship }
+			}
+			relation = { who = THIS value = 200 }
+		}
+		any_country = {
+			limit = {
+				NOT = { has_country_flag = communist_world_leader }
+				government = proletarian_dictatorship
+			}
+			country_event = 1810006
+		}
+		any_country = {
+			limit = {
+				government = proletarian_dictatorship
+				has_country_flag = communist_world_leader
+			}
+			country_event = 1810007
+		}
+	}
+}
+country_event = {
+	id = 1810044
+	title = "Перехвачено лидерство державой $FROMCOUNTRY$!"
+	desc = "Держава $FROMCOUNTRY$ перехватила наше лидерство в социалистическом лагере, обладая невероятным могуществом во всех сферах."
+	picture = "ilich2"
+
+	is_triggered_only = yes
+
+        immediate = {
+                FROM={country_event=18100444 set_country_flag=communist_world_leader remove_country_modifier=sanction}
+                clr_country_flag = communist_world_leader
+        }
+
+        option = {
+		name = "Наше время прошло..."
+        }
+}
+country_event = {
+	id = 18100444
+	title = "Перехвачено лидерство у державы $FROMCOUNTRY$!"
+	desc = "Теперь мы являемся лидером всего социалистического мира, а не прогнившая партноменклатура державы $FROMCOUNTRY$!"
+	picture = "ilich2"
+
+	is_triggered_only = yes
+
+        immediate = {
+                any_country = {
+			limit = {
+				NOT = { tag = FROM }
+				ai = no
+			}
+			country_event = 1810046
+		}
+        }
+
+        option = {
+		name = "Пролетарии всех стран - соединяйтесь!"
+        }
+}
+country_event = {
+	id = 1810045
+	title = "Перехвачено лидерство державой $FROMCOUNTRY$!"
+	desc = "Держава $FROMCOUNTRY$ перехватила наше лидерство в капиталистическом лагере, обладая невероятным могуществом во всех сферах."
+	picture = "newrmcapitalism"
+
+	is_triggered_only = yes
+
+        immediate = {
+                FROM={country_event=18100455 set_country_flag=capitalists_world_leader remove_country_modifier=sanction}
+                clr_country_flag = capitalists_world_leader
+        }
+
+        option = {
+		name = "Наше время прошло..."
+        }
+}
+country_event = {
+	id = 18100455
+	title = "Успешно перехвачено лидерство у державы $FROMCOUNTRY$!"
+	desc = "Мы успешно перехватили лидерство в демократическом мире. Теперь, тайно сочувствующие коммунистам предатели, из верхушки $FROMCOUNTRY_ADJ$ правительства не смогут закабалить свободные народы мира - мы их защитим!"
+	picture = "newrmcapitalism"
+
+	is_triggered_only = yes
+
+        immediate = {
+                any_country = {
+			limit = {
+				NOT = { tag = FROM }
+				ai = no
+			}
+			country_event = 1810047
+		}
+        }
+
+        option = {
+		name = "Время этой коммунистической марионетки прошло"
+        }
+}
+country_event = {
+	id = 1810046
+	title = "Новый лидер социалистического лагеря, держава $FROMCOUNTRY$!"
+	desc = "Держава $FROMCOUNTRY$ перехватила лидерство в социалистическом лагере, обладая невероятным могуществом во всех сферах."
+	picture = "ilich2"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Мы осведомлены"
+        }
+}
+country_event = {
+	id = 1810047
+	title = "Новый лидер капиталистического лагеря, держава $FROMCOUNTRY$!"
+	desc = "Держава $FROMCOUNTRY$ перехватила лидерство в капиталистическом лагере, обладая невероятным могуществом во всех сферах."
+	picture = "newrmcapitalism"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Мы осведомлены"
+        }
+}
+country_event = {
+	id = 1810048
+	title = "Потеря статуса социалистической сверхдержавы"
+	desc = "Нами был утерян статус лидера социалистического мира, ввиду жалкого состояния нашего государства и полного отсутствия уважения со стороны мирового сообщества!"
+	picture = "ilich2"
+
+	trigger = {
+		has_global_flag = has_communist_world_leader
+		has_country_flag = communist_world_leader
+                OR = {
+			is_greater_power = no
+			NOT = { government = proletarian_dictatorship }
+		}
+        }
+
+        immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 1810049
+		}
+		clr_global_flag = has_communist_world_leader
+		clr_country_flag = communist_world_leader
+		clr_global_flag = anticolonial_league_formed
+		clr_country_flag = anticolonial_league_works_here
+		clr_global_flag = anticolonial_league_south_asia_chosen
+		clr_global_flag = anticolonial_league_south_east_asia_chosen
+		clr_global_flag = anticolonial_league_middle_east_chosen
+		clr_global_flag = anticolonial_league_east_asia_chosen
+		clr_global_flag = anticolonial_league_equatorial_africa_chosen
+		clr_global_flag = anticolonial_league_latin_america_chosen
+		clr_global_flag = anticolonial_league_maghreb_chosen
+		clr_global_flag = anticolonial_league_balkan_chosen
+		clr_global_flag = komintern_is_worked
+		remove_country_modifier = komintern_is_working
+        }
+
+        option = {
+		name = "Наше время прошло..."
+        }
+}
+country_event = {
+	id = 1810049
+	title = "Утеря статуса сверхдержавы страной $FROMCOUNTRY$!"
+	desc = "Держава $FROMCOUNTRY$ больше не является лидером социалистического лагеря ввиду жалкого состояния государства на фоне других мировых держав."
+	picture = "ilich2"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Мы осведомлены"
+        }
+}
+country_event = {
+	id = 1810050
+	title = "Потеря статуса капиталистической сверхдержавы"
+	desc = "Нами был утерян статус лидера капиталистического мира, ввиду жалкого состояния нашего государства и полного отсутствия уважения со стороны мирового сообщества!"
+	picture = "newrmcapitalism"
+
+	trigger = {
+                has_global_flag = has_capitalists_world_leader
+                has_country_flag = capitalists_world_leader
+                OR = {
+			is_greater_power = no
+			government = proletarian_dictatorship
+			government = fascist_dictatorship
+		}
+        }
+
+        immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 1810051
+		}
+		clr_global_flag = has_capitalists_world_leader
+		clr_country_flag = capitalists_world_leader
+        }
+
+        option = {
+		name = "Наше время прошло..."
+        }
+}
+country_event = {
+	id = 1810051
+	title = "Утеря статуса сверхдержавы страной $FROMCOUNTRY$!"
+	desc = "Держава $FROMCOUNTRY$ больше не является лидером капиталистического лагеря ввиду жалкого состояния государства на фоне других мировых держав."
+	picture = "newrmcapitalism"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Мы осведомлены"
+        }
+}
+country_event = {
+	id = 1810052
+	title = "$FROMCOUNTRY$ становится социалистической сверхдержавой!"
+	desc = "Держава $FROMCOUNTRY$ взяла на себя роль лидера всего мирового коммунистического движения."
+	picture = "ilich2"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Новая эра дипломатии"
+        }
+}
+country_event = {
+	id = 1810053
+	title = "$FROMCOUNTRY$ становится капиталистической сверхдержавой!"
+	desc = "Держава $FROMCOUNTRY$ взяла на себя роль защитника мира от ультралевых идей."
+	picture = "newrmcapitalism"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Новая эра дипломатии"
+        }
+}
+country_event = {
+	id = 1810054
+	title = "Оккупация"
+	desc = "Наша метрополия, находясь вместе с нами в войне против неприятеля, не смогла защитить нас и мы подверглись вражеской оккупации!"
+	picture = "barricade"
+
+	trigger = {
+                is_vassal = yes
+                war = yes
+                capital_scope = {
+			has_province_modifier = capital_occupied_1
+			NOT = { has_province_modifier = capital_occupied_2 }
+			controller = { NOT = { tag = THIS }}
+		}
+        }
+
+        immediate = {
+		capital_scope = {
+			remove_province_modifier = capital_occupied_1
+			remove_province_modifier = capital_occupied_2
+		}
+        }
+
+        option = {
+		name = "Мы теперь свободны?"
+                overlord = { country_event = 1810055 }
+                capital_scope = { controller = { country_event = 1810056 }}
+        }
+}
+country_event = {
+	id = 1810055
+	title = "$FROMCOUNTRY$ под вражеской оккупацией!"
+	desc = "Одна из наших зависимых территорий была оккупирована врагом и перешла под его контроль."
+	picture = "colonialseparatism"
+
+	is_triggered_only = yes
+
+        immediate = {
+		add_country_modifier = { name = the_likelihood_of_a_financial_crisis_alt duration = 1460 }
+                release_vassal = FROM
+                leave_alliance = FROM
+		end_military_access = FROM
+                diplomatic_influence = { who = FROM value = -200 }
+                relation = { who = FROM value = -400 }
+        }
+
+        option = {
+		name = "Мы ещё вернёмся туда"
+                prestige = -80
+        }
+}
+country_event = {
+	id = 1810056
+	title = "Оккупация зависимой державы $FROMCOUNTRY$!"
+	desc = "Держава $FROMCOUNTRY$ являлась до сего дня зависимой державой. Теперь же, находясь под нашей оккупацией, мы освободили её от угнетателей и получили нового друга."
+	picture = "colonialseparatism"
+
+	is_triggered_only = yes
+
+        immediate = {
+                end_war = FROM
+                FROM = { create_alliance = THIS }
+                diplomatic_influence = { who = FROM value = 200 }
+                relation = { who = FROM value = 400 }
+        }
+
+        option = {
+		name = "Мы освободители!"
+		prestige = 20
+        }
+
+        option = {
+		name = "Мы поработители"
+		badboy = 7.5
+                create_vassal = FROM
+		FROM = {
+			set_country_flag = not_mastered_yet_vassal
+		}
+        }
+}
+country_event = {
+	id = 1810059
+	title = "Захват колонии $FROMCOUNTRY$"
+	desc = "$FROMCOUNTRY$, протекторат одной из великих колониальных держав, подвергся нашей оккупации и был нами аннексирован."
+	picture = "colonial_uprising"
+
+	is_triggered_only = yes
+
+        immediate = {
+                FROM = { annex_to = THIS }
+        }
+
+        option = {
+		name = "Победа!"
+        }
+}
+country_event = {
+	id = 1810060
+	title = "Санкции - выберите державу"
+	desc = " "
+	picture = "sanction"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Великобритания"
+                random_country={limit={tag=ENG NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Франция"
+                random_country={limit={tag=FRA NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Германия"
+                random_country={limit={OR={tag=GER tag=PRU tag=NGF}NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Россия"
+                random_country={limit={tag=RUS NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Австрия"
+                random_country={limit={OR={tag=AUS tag=KUK}NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Италия"
+                random_country={limit={tag=ITA NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Испания"
+                random_country={limit={tag=SPA NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Япония"
+                random_country={limit={tag=JAP NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "США"
+                random_country={limit={tag=USA NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Турция"
+                random_country={limit={tag=TUR NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Бразилия"
+                random_country={limit={tag=BRZ NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Китай"
+                random_country={limit={tag=CHI NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Швеция"
+                random_country={limit={OR={tag=SWE tag=SCA}NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+        option = {
+		name = "Нидерланды"
+                random_country={limit={tag=NET NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810061}
+        }
+}
+country_event = {
+	id = 1810061
+	title = "Сверхдержава $FROMCOUNTRY$ наложила на нас санкции!"
+	desc = "Держава $FROMCOUNTRY$ обладая невероятным могуществом на мировой арене, решила использовать его против нас, введя экономические санкции."
+	picture = "sanction"
+
+	is_triggered_only = yes
+
+        immediate = {
+                add_country_modifier={name=sanction duration=-1}
+        }
+
+        option = {
+		name = "Ерунда! Мы это переживём"
+        }
+}
+country_event = {
+	id = 1810062
+	title = "Санкции - выберите державу"
+	desc = " "
+	picture = "sanction"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Великобритания"
+                random_country={limit={tag=ENG government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Франция"
+                random_country={limit={tag=FRA government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Германия"
+                random_country={limit={OR={tag=PRU tag=NGF tag=GER}government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Россия"
+                random_country={limit={tag=RUS government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Австрия"
+                random_country={limit={OR={tag=AUS tag=KUK}government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Италия"
+                random_country={limit={tag=ITA government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Испания"
+                random_country={limit={tag=SPA government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Япония"
+                random_country={limit={tag=JAP government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "США"
+                random_country={limit={tag=USA government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Турция"
+                random_country={limit={tag=TUR government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Бразилия"
+                random_country={limit={tag=BRZ government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Китай"
+                random_country={limit={tag=CHI government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Швеция"
+                random_country={limit={OR={tag=SWE tag=SCA}government=proletarian_dictatorship}country_event=1810061}
+        }
+        option = {
+		name = "Нидерланды"
+                random_country={limit={tag=NET government=proletarian_dictatorship}country_event=1810061}
+        }
+}
+country_event = {
+	id = 1810063
+	title = "Снять санкции - выберите державу"
+	desc = " "
+	picture = "sanction"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Великобритания"
+                random_country={limit={has_country_modifier=sanction tag=ENG NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Франция"
+                random_country={limit={has_country_modifier=sanction tag=FRA NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Германия"
+                random_country={limit={has_country_modifier=sanction OR={tag=GER tag=PRU tag=NGF}NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Россия"
+                random_country={limit={has_country_modifier=sanction tag=RUS NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Австрия"
+                random_country={limit={has_country_modifier=sanction OR={tag=AUS tag=KUK}NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Италия"
+                random_country={limit={has_country_modifier=sanction tag=ITA NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Испания"
+                random_country={limit={has_country_modifier=sanction tag=SPA NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Япония"
+                random_country={limit={has_country_modifier=sanction tag=JAP NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "США"
+                random_country={limit={has_country_modifier=sanction tag=USA NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Турция"
+                random_country={limit={has_country_modifier=sanction tag=TUR NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Бразилия"
+                random_country={limit={has_country_modifier=sanction tag=BRZ NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Мексика"
+                random_country={limit={has_country_modifier=sanction tag=MEX NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Швеция"
+                random_country={limit={has_country_modifier=sanction OR={tag=SWE tag=SCA}NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+        option = {
+		name = "Нидерланды"
+                random_country={limit={has_country_modifier=sanction tag=NET NOT={OR={government=proletarian_dictatorship government=fascist_dictatorship}}}country_event=1810065}
+        }
+}
+country_event = {
+	id = 1810064
+	title = "Снять санкции - выберите державу"
+	desc = " "
+	picture = "sanction"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Великобритания"
+                random_country={limit={has_country_modifier=sanction tag=ENG government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Франция"
+                random_country={limit={has_country_modifier=sanction tag=FRA government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Германия"
+                random_country={limit={has_country_modifier=sanction OR={tag=PRU tag=NGF tag=GER}government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Россия"
+                random_country={limit={has_country_modifier=sanction tag=RUS government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Австрия"
+                random_country={limit={has_country_modifier=sanction OR={tag=AUS tag=KUK}government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Италия"
+                random_country={limit={has_country_modifier=sanction tag=ITA government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Испания"
+                random_country={limit={has_country_modifier=sanction tag=SPA government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Япония"
+                random_country={limit={has_country_modifier=sanction tag=JAP government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "США"
+                random_country={limit={has_country_modifier=sanction tag=USA government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Турция"
+                random_country={limit={has_country_modifier=sanction tag=TUR government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Бразилия"
+                random_country={limit={has_country_modifier=sanction tag=BRZ government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Мексика"
+                random_country={limit={has_country_modifier=sanction tag=MEX government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Швеция"
+                random_country={limit={has_country_modifier=sanction OR={tag=SWE tag=SCA}government=proletarian_dictatorship}country_event=1810065}
+        }
+        option = {
+		name = "Нидерланды"
+                random_country={limit={has_country_modifier=sanction tag=NET government=proletarian_dictatorship}country_event=1810065}
+        }
+}
+country_event = {
+	id = 1810065
+	title = "Сверхдержава $FROMCOUNTRY$ сняла с нас санкции!"
+	desc = "Держава $FROMCOUNTRY$ решила отменить, введённые против нас, экономические санкции."
+	picture = "sanction"
+
+	is_triggered_only = yes
+
+        immediate = {
+                remove_country_modifier = sanction
+        }
+
+        option = {
+		name = "Разум возобладал"
+        }
+}
+########################################## NRM Проникновение идеологий в соседние государства ##############################################################################################
+country_event = {
+	id = 1810067
+	title = "Распространение коммунистического влияния"
+	desc = "Наша славная социалистическая держава имеет по соседству с собой буржуазное государство, пролетариям которого нужно нести свет знаний и надежду на освобождение от гнёта!"
+	picture = "bolshevik"
+
+	trigger = {
+		government = proletarian_dictatorship
+		any_neighbor_country = {
+			civilized = yes
+			any_owned_province = {
+				#has_province_modifier = core_reg
+				any_neighbor_province = { owner = { tag = THIS }}
+			}
+			NOT = {
+				government = proletarian_dictatorship
+				war_with = THIS
+			}
+		}
+	}
+
+        mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 2
+			NOT = { communist = 0.10 }
+		}
+		modifier = {
+			factor = 1.75
+			communist = 0.10
+			NOT = { communist = 0.20 }
+		}
+		modifier = {
+			factor = 1.5
+			communist = 0.20
+			NOT = { communist = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			communist = 0.40
+			NOT = { communist = 0.50 }
+		}
+		modifier = {
+			factor = 0.75
+			communist = 0.50
+			NOT = { communist = 0.60 }
+		}
+		modifier = {
+			factor = 0.5
+			communist = 0.60
+			NOT = { communist = 0.70 }
+		}
+		modifier = {
+			factor = 0.25
+			communist = 0.70
+		}
+	}
+
+        option = {
+		name = "Конечно!"
+		random_country = {
+			limit = {
+				civilized = yes
+				any_owned_province = {
+					#has_province_modifier = core_reg
+					any_neighbor_province = { owner = { tag = THIS }}
+				}
+				NOT = {
+					government = proletarian_dictatorship
+					war_with = THIS
+				}
+			}
+			country_event = 1810068
+			relation = { who = THIS value = -400 }
+		}
+        }
+}
+country_event = {
+	id = 1810068
+	title = "Коммунистическое влияние из державы $FROMCOUNTRY$"
+	desc = "$FROMCOUNTRY_ADJ$ коммунисты оказывают поддержку левым движениям в нашей стране. Это крайне негативно сказывается на стабильности нашего государства. Эти грязные коммунисты пытаются расшатать нашу лодку!"
+	picture = "bolshevik"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Найти и посадить всех агентов влияния"
+                any_pop = {
+			limit = { NOT = { strata = rich }}
+			ideology = {
+				value = communist
+				factor = 0.05
+			}
+			scaled_militancy = {
+				ideology = communist
+				factor = 3
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = 3
+			}
+			scaled_consciousness = {
+				ideology = communist
+				factor = 3
+			}
+			scaled_consciousness = {
+				ideology = socialist
+				factor = 3
+			}
+		}
+		FROM = { country_event = 1810069 }
+		ai_chance = { factor = 0 }
+        }
+        option = {
+		name = "Пришло время решить эту проблему"
+		casus_belli = {
+			target = FROM
+			type = uninstall_communist_gov_cb
+			months = 1
+		}
+		FROM = {
+			casus_belli = {
+				target = FROM
+				type = install_communist_gov_cb
+				months = 1
+			}
+		}
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = uninstall_communist_gov_cb }
+			defender_goal = { casus_belli = install_communist_gov_cb }
+		}
+		ai_chance = { factor = 1 }
+        }
+}
+country_event = {
+	id = 1810069
+	title = "$FROMCOUNTRY_ADJ$ буржуазия применила силу к нашим пролетарским братьям!"
+	desc = "$FROMCOUNTRY_ADJ$ капиталисты уже настолько обнаглели от своей вседозволенности, что они, опьянённые своей силой, применяют её абсолютно везде, по поводу и без него!"
+	picture = "guerilla"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Отправить оружие нашим братьям"
+		FROM = { country_event = 1810070 }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Мы пока не готовы помогать"
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 1810070
+	title = "$FROMCOUNTRY_ADJ$ коммунисты контрабандой ввозят оружие в нашу страну и организовывают повстанческое движение!"
+	desc = "$FROMCOUNTRY_ADJ$ коммунисты ввозят оружие в нашу державу! Это может привести к массовому восстанию коммунистов!"
+	picture = "guerilla"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Перекрыть поставки любой ценой!"
+                any_pop = {
+			scaled_militancy = {
+				ideology = communist
+				factor = 1
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = 1
+			}
+		}
+		ai_chance = { factor = 1 }
+        }
+        option = {
+		name = "Ничего не будем предпринимать"
+                any_pop = {
+			limit = { NOT = { strata = rich }}
+			ideology = {
+				value = communist
+				factor = 0.25
+			}
+			scaled_militancy = {
+				ideology = communist
+				factor = 9
+			}
+			scaled_militancy = {
+				ideology = socialist
+				factor = 9
+			}
+		}
+		add_country_modifier = { name = civil_war2 duration = 1825 }
+		ai_chance = { factor = 0 }
+        }
+}
+country_event = {
+	id = 1810072
+	title = "$FROMCOUNTRY_ADJ$ милитаристы начинают против нас подводную войну"
+	desc = "Кровожадные $FROMCOUNTRY_ADJ$ милитаристы начали применять против нас свою варварскую стратегию подводной войны. Они топят все наши торговые суда, следующие из или в порты нашей метрополии. Это может привести к голоду на островах!"
+	picture = "submarine_war"
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = {
+			add_country_modifier = { name = started_submarine_war_with_uk duration = -1 }
+			set_country_flag = submarine_war1
+		}
+		add_country_modifier = { name = submarine_war_started duration = -1 }
+	}
+
+        option = {
+		name = "Британия никогда не сдастся!"
+        }
+}
+country_event = {
+	id = 1810073
+	title = "Начало нового раунда подводной войны"
+	desc = "Мы начинаем новый раунд подводной войны против Великобритании. Через три месяца мы получим результаты нашей борьбы."
+	picture = "submarine_war"
+
+	trigger = {
+		has_country_flag = submarine_war1
+		has_country_modifier = started_submarine_war_with_uk
+		steamer_convoy = 1000
+	}
+
+	immediate = {
+		add_country_modifier = { name = submarine_war_is_on duration = 90 }
+		clr_country_flag = submarine_war1
+		clr_country_flag = submarine_war2
+		steamer_convoy = -1000
+	}
+
+        option = {
+		name = "Потопите их столько, сколько сможете!"
+        }
+}
+country_event = {
+	id = 1810074
+	title = "Окончание подводной войны с Британией"
+	desc = "Наша подводная борьба с Британией закончилась, в связи с окончанием военных действий между нашими странами."
+	picture = "submarine_war"
+
+	trigger = {
+		has_country_modifier = started_submarine_war_with_uk
+		NOT = { war_with = ENG }
+	}
+
+	immediate = {
+		remove_country_modifier = started_submarine_war_with_uk
+		remove_country_modifier = submarine_war_is_on
+		ENG = { country_event = 1810075 }
+	}
+
+        option = {
+		name = "Долгожданный мир наступил"
+        }
+}
+country_event = {
+	id = 1810075
+	title = "Окончание подводной войны"
+	desc = "Наша борьба с $FROMCOUNTRY_ADJ$ подлодками завершена в связи с окончанием военных действий между нашими державами."
+	picture = "submarine_war"
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_modifier = submarine_war_started
+	}
+
+        option = {
+		name = "Долгожданный мир наступил"
+        }
+}
+country_event = {
+	id = 1810076
+	title = "Итоги подводной войны"
+	desc = "Наше военно-морское ведомство определяет степень наших успехов в подводной войне за прошедшие три месяца."
+	picture = "submarine_war"
+
+	trigger = {
+		has_country_modifier = started_submarine_war_with_uk
+		NOT = {
+			has_country_modifier = submarine_war_is_on
+			has_country_flag = submarine_war2
+		}
+	}
+
+        option = {
+		name = "Ну и что же там?"
+		set_country_flag = submarine_war2
+		random_list = {
+			20 = { country_event = 1810077 }
+			20 = { country_event = 1810078 }
+			20 = { country_event = 1810079 }
+			20 = { country_event = 1810080 }
+			20 = { country_event = 1810081 }
+		}
+        }
+}
+country_event = {
+	id = 1810077
+	title = "Хорошие результаты"
+	desc = "В общей сложности, потери сторон, выраженные в ресурсах, составляют 500 конвоя пароходов с нашей стороны и 1000 конвоя пароходов с вражеской"
+	picture = "submarine_war_is_going"
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = submarine_war1
+		steamer_convoy = -500
+	}
+
+        option = {
+		name = "§RНам нужно 1000 конвоя пароходов для начала нового раунда§W"
+		ENG = { country_event = 1810082 }
+        }
+}
+country_event = {
+	id = 1810078
+	title = "Удовлетворительные результаты"
+	desc = "В общей сложности, потери сторон, выраженные в ресурсах, составляют 600 конвоя пароходов с нашей стороны и 1000 конвоя пароходов с вражеской"
+	picture = "submarine_war_is_going"
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = submarine_war1
+		steamer_convoy = -600
+	}
+
+        option = {
+		name = "§RНам нужно 1000 конвоя пароходов для начала нового раунда§W"
+		ENG = { country_event = 1810083 }
+        }
+}
+country_event = {
+	id = 1810079
+	title = "Плохие результаты"
+	desc = "В общей сложности, потери сторон, выраженные в ресурсах, составляют 700 конвоя пароходов с нашей стороны и 1000 конвоя пароходов с вражеской"
+	picture = "submarine_war_is_going"
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = submarine_war1
+		steamer_convoy = -700
+	}
+
+        option = {
+		name = "§RНам нужно 1000 конвоя пароходов для начала нового раунда§W"
+		ENG = { country_event = 1810084 }
+        }
+}
+country_event = {
+	id = 1810080
+	title = "Ужасные результаты"
+	desc = "В общей сложности, потери сторон, выраженные в ресурсах, составляют 800 конвоя пароходов с нашей стороны и 1000 конвоя пароходов с вражеской"
+	picture = "submarine_war_is_going"
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = submarine_war1
+		steamer_convoy = -800
+	}
+
+        option = {
+		name = "§RНам нужно 1000 конвоя пароходов для начала нового раунда§W"
+		ENG = { country_event = 1810085 }
+        }
+}
+country_event = {
+	id = 1810081
+	title = "Кошмарные результаты"
+	desc = "В общей сложности, потери сторон, выраженные в ресурсах, составляют 900 конвоя пароходов с нашей стороны и 1000 конвоя пароходов с вражеской"
+	picture = "submarine_war_is_going"
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = submarine_war1
+		steamer_convoy = -900
+	}
+
+        option = {
+		name = "§RНам нужно 1000 конвоя пароходов для начала нового раунда§W"
+		ENG = { country_event = 1810086 }
+        }
+}
+country_event = {
+	id = 1810082
+	title = "Кошмарные итоги подводной войны"
+	desc = "В общей сложности, потери сторон, выраженные в ресурсах, составляют 1000 конвоя пароходов с нашей стороны и 500 конвоя пароходов с вражеской"
+	picture = "submarine_war_is_going"
+
+	is_triggered_only = yes
+
+	immediate = {
+		steamer_convoy = -1000
+	}
+
+        option = {
+		name = "Продолжаем борьбу..."
+        }
+}
+country_event = {
+	id = 1810083
+	title = "Ужасные итоги подводной войны"
+	desc = "В общей сложности, потери сторон, выраженные в ресурсах, составляют 1000 конвоя пароходов с нашей стороны и 600 конвоя пароходов с вражеской"
+	picture = "submarine_war_is_going"
+
+	is_triggered_only = yes
+
+	immediate = {
+		steamer_convoy = -1000
+	}
+
+        option = {
+		name = "Продолжаем борьбу..."
+        }
+}
+country_event = {
+	id = 1810084
+	title = "Неприемлимые итоги подводной войны"
+	desc = "В общей сложности, потери сторон, выраженные в ресурсах, составляют 1000 конвоя пароходов с нашей стороны и 700 конвоя пароходов с вражеской"
+	picture = "submarine_war_is_going"
+
+	is_triggered_only = yes
+
+	immediate = {
+		steamer_convoy = -1000
+	}
+
+        option = {
+		name = "Продолжаем борьбу..."
+        }
+}
+country_event = {
+	id = 1810085
+	title = "Удовлетворительные итоги подводной войны"
+	desc = "В общей сложности, потери сторон, выраженные в ресурсах, составляют 1000 конвоя пароходов с нашей стороны и 800 конвоя пароходов с вражеской"
+	picture = "submarine_war_is_going"
+
+	is_triggered_only = yes
+
+	immediate = {
+		steamer_convoy = -1000
+	}
+
+        option = {
+		name = "Продолжаем борьбу..."
+        }
+}
+country_event = {
+	id = 1810086
+	title = "Хорошие итоги подводной войны"
+	desc = "В общей сложности, потери сторон, выраженные в ресурсах, составляют 1000 конвоя пароходов с нашей стороны и 900 конвоя пароходов с вражеской"
+	picture = "submarine_war_is_going"
+
+	is_triggered_only = yes
+
+	immediate = {
+		steamer_convoy = -1000
+	}
+
+        option = {
+		name = "Продолжаем борьбу..."
+        }
+}
+country_event = {
+	id = 1810091
+	title = "Окончание $COUNTRY_ADJ$ революции"
+	desc = "Произошедшая ровно пять лет назад $COUNTRY_ADJ$ революция была наконец окончена. Весь разброд и шатания в стране были окончены, власть централизована, с бандитизмом и прочей анархией покончено, жизнь в стране возвращяется в нормальное мирное русло."
+	picture = "Revolution"
+
+	trigger = {
+		NOT = { has_country_modifier = recent_revolution }
+		has_country_flag = recent_revolution
+	}
+
+	immediate = {
+		clr_country_flag = recent_revolution
+	}
+
+        option = {
+		name = "Наша держава отныне едина и неделима!"
+        }
+}
+country_event = {
+	id = 1810092
+	title = "Иностранное влияние"
+	desc = "Одна из великих держав включила нашу славную страну в сферу своего влияния, с чем мы категорически не согласны. Мы будем этому противодействовать!"
+
+	trigger = {
+		OR = {
+			ai = no
+			tag = USA
+			tag = FRA
+			tag = ENG
+			tag = TUR
+			tag = JAP
+			tag = GER
+			tag = RUS
+			tag = SOV
+			tag = NGF
+			tag = PRU
+			tag = KUK
+			tag = ITA
+			tag = SPA
+		}
+		number_of_states = 3
+		part_of_sphere = yes
+	}
+	major = yes
+
+	immediate = {
+		sphere_owner = { country_event = 1810093 }
+	}
+
+        option = {
+		name = "Выгнать их послов из страны!"
+        }
+}
+country_event = {
+	id = 1810093
+	title = "Держава $FROMCOUNTRY$ выслала наших послов"
+	desc = "Наши послы, находящиеся в $FROMCOUNTRY_ADJ$ столице, были высланы после того, как стало известно о том, что мы пытаемся повлиять на внутреннюю политику их страны."
+
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+                diplomatic_influence = { who = FROM value = -200 }
+		relation = { who = FROM value = -200 }
+		remove_alliance = FROM
+	}
+
+        option = {
+		name = "Мы им это припомним"
+        }
+}
+country_event = {
+
+	id = 1810094
+
+	is_triggered_only = yes
+
+	title = "Патент на производство искусственного красителя"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас патент на производство искусственного красителя."
+        picture = "synthetic_dye_patent"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810095 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810095
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала патент"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на производство искусственного красителя. Теперь мы сможем производить его сами, всю необходимую документацию мы от них уже получили."
+        picture = "synthetic_dye_patent"
+
+	option = {
+		name = "Отличная сделка"
+                set_country_flag = synthetic_dye_patent
+	}
+}
+country_event = {
+
+	id = 1810097
+
+	is_triggered_only = yes
+
+	title = "Патент на производство электроприборов"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас патент на производство электроприборов."
+        picture = "electric_gear_patent"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810098 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810098
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала патент"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на производство электроприборов. Теперь мы сможем производить их сами, всю необходимую документацию мы от них уже получили."
+        picture = "electric_gear_patent"
+
+	option = {
+		name = "Отличная сделка"
+                set_country_flag = electric_gear_patent
+	}
+}
+country_event = {
+
+	id = 1810100
+
+	is_triggered_only = yes
+
+	title = "Патент на производство заменителя нефти"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас патент на производство заменителя нефти."
+        picture = "synthetic_oil_patent"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810101 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810101
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала патент"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на производство заменителя нефти. Теперь мы сможем производить его сами, всю необходимую документацию мы от них уже получили."
+        picture = "synthetic_oil_patent"
+
+	option = {
+		name = "Отличная сделка"
+                set_country_flag = synthetic_oil_patent
+	}
+}
+country_event = {
+
+	id = 1810103
+
+	is_triggered_only = yes
+
+	title = "Захват $FROMCOUNTRY_ADJ$ технологии"
+	desc = "Мы захватили $FROMCOUNTRY_ADJ$ технологию по производству искусственного красителя. Мы теперь можем производить его сами, все необходимые данные по технологии мы уже получили."
+        picture = "synthetic_dye_patent"
+
+	immediate = {
+                set_country_flag = synthetic_dye_patent
+		release_vassal = FROM
+	}
+
+	option = {
+		name = "Не можешь изобрести - забери!"
+		release_vassal = FROM
+	}
+}
+country_event = {
+
+	id = 1810105
+
+	is_triggered_only = yes
+
+	title = "Захват $FROMCOUNTRY_ADJ$ технологии"
+	desc = "Мы захватили $FROMCOUNTRY_ADJ$ технологию по производству заменителя нефти. Мы теперь можем производить его сами, все необходимые данные по технологии мы уже получили."
+        picture = "synthetic_oil_patent"
+
+	immediate = {
+                set_country_flag = synthetic_oil_patent
+		release_vassal = FROM
+	}
+
+	option = {
+		name = "Не можешь изобрести - забери!"
+		release_vassal = FROM
+	}
+}
+country_event = {
+
+	id = 1810106
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ делится с нами ядерными технологиями!"
+	desc = "EVTDESC1810106"
+        picture = "nuclear_explosion"
+
+	immediate = {
+                FROM = { electric_gear = -5000 }
+		set_country_flag = got_nuclear_technologies
+		set_country_flag = has_produced_uranium
+	}
+
+	option = {
+		name = "Невероятная щедрость!"
+	}
+}
+province_event = {
+
+	id = 1810112
+
+	trigger = {
+		has_building = railroad
+		NOT = {
+			state_scope = {
+				any_owned_province = { controlled_by = THIS }
+			}
+			owner = {
+				has_country_modifier = surrendered_country
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	title = "Разрушение инфраструктуры в регионе $STATENAME$"
+	desc = "Инфраструктура, построенная нашей державой ранее в регионе $STATENAME$, была разрушена в ходе проходивших ранее боевых действий и оккупации противника."
+
+	immediate = {
+                state_scope = {
+			any_owned = { infrastructure = -1 }
+		}
+	}
+
+	option = {
+		name = "Это варварство!"
+	}
+}
+country_event = {
+
+	id = 1810125
+
+	is_triggered_only = yes
+
+	title = "$FROMCOUNTRY_ADJ$ дипломаты бросили нам вызов!"
+	desc = "Дипломаты из державы $FROMCOUNTRY$ резво откликнулись на наше оскорбление и бросают нам вызов на поле брани!"
+	picture = "crisis"
+
+	option = {
+		name = "Снизить обороты"
+                prestige_factor = -0.25
+                ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Продолжить эскалацию"
+		add_casus_belli = { target = FROM type = humiliate months = 1 }
+		war = { target = FROM attacker_goal = { casus_belli = humiliate }}
+                ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 1810126
+
+	trigger = {
+		tag = COM
+		war = yes
+	}
+
+	title = "Перемирие"
+	desc = " "
+	major = yes
+
+	option = {
+		name = " "
+		any_country = { limit = { war_with = THIS } end_war = COM }
+	}
+}
+country_event = {
+
+	id = 1810128
+
+	is_triggered_only = yes
+
+	title = "$FROMCOUNTRY_ADJ$ военный парад!"
+	desc = "EVTDESC1810128"
+	picture = "military_parade"
+
+	option = {
+		name = "Отправить делегацию"
+		FROM = { prestige = 20 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					relation = { who = FROM value = 100 }
+					alliance_with = FROM
+				}
+			}
+		}
+	}
+	option = {
+		name = "Отправить гвардию для участия"
+		relation = { who = FROM value = 100 }
+		FROM = { prestige = 40 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { alliance_with = FROM }
+			}
+		}
+	}
+	option = {
+		name = "Заклеймить милитаризмом"
+		relation = { who = FROM value = -200 }
+		leave_alliance = FROM
+		FROM = {
+			badboy = 1
+			prestige = -50
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					alliance_with = FROM
+					relation = { who = FROM value = 100 }
+				}
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 1810129
+
+	trigger = {
+		has_country_flag = prepare_to_hold_military_drills
+		NOT = { has_country_modifier = prepare_to_hold_military_drills }
+        }
+
+        immediate = {
+		clr_country_flag = prepare_to_hold_military_drills
+		add_country_modifier = { name = military_drills_was_held duration = 3650 }
+        }
+
+	title = "Проведение военных учений"
+	desc = "EVTDESC1810129"
+	picture = "military_drill"
+
+	option = {
+		name = "Так держать!"
+		any_neighbor_country = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = { is_overseas = no owned_by = THIS }
+				}
+			}
+			add_casus_belli = { target = THIS type = prepare_war months = 1 }
+		}
+	}
+}
+country_event = {
+
+	id = 1810130
+
+	is_triggered_only = yes
+
+	title = "Подготовка к проведению $FROMCOUNTRY_ADJ$ военных учений"
+	desc = "EVTDESC1810130"
+	picture = "military_drill"
+
+	option = {
+		name = "Нужно быть готовыми ко всему..."
+	}
+}
+province_event = {
+
+	id = 1810131
+
+	trigger = {
+		NOT = {
+			has_province_modifier = core_reg
+			has_province_modifier = metropoly_blockaded
+		}
+		owner = { has_country_modifier = metropoly_blockaded1 }
+	}
+
+	title = "Потеряна связь с метрополией в регионе $STATENAME$"
+	desc = "Регион $STATENAME$ потерял связь с $COUNTRY_ADJ$ метрополией, что не позволит отправить производимые в этом регионы товары. Экономическая жизнь региона $STATENAME$ встала..."
+
+	immediate = {
+		state_scope = {
+			any_owned = {
+				limit = { NOT = { has_province_modifier = core_reg }}
+				add_province_modifier = { name = metropoly_blockaded duration = -1 }
+			}
+		}
+	}
+
+	option = {
+		name = "Необходимо срочно восстановить связь с метрополией!"
+	}
+}
+province_event = {
+
+	id = 1810132
+
+	trigger = {
+		NOT = { has_province_modifier = core_reg }
+		has_province_modifier = metropoly_blockaded
+		owner = { NOT = { has_country_modifier = metropoly_blockaded1 }}
+	}
+
+	title = "Восстановлена связь с метрополией в регионе $STATENAME$"
+	desc = "Регион $STATENAME$ восстановил связь с $COUNTRY_ADJ$ метрополией. Экономика региона возобновила свою работу и начала поставлять товары в метрополию."
+
+	immediate = {
+		state_scope = {
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = core_reg }
+					has_province_modifier = metropoly_blockaded
+				}
+				remove_province_modifier = metropoly_blockaded
+			}
+		}
+	}
+
+	option = {
+		name = "Наконец-то!"
+	}
+}
+country_event = {
+
+	id = 1810133
+
+	is_triggered_only = yes
+
+	title = "Нидерланды объявили о своём нейтралитете!"
+	desc = "Нидерланды недавно во всеуслышание объявили о своём полном нейтралитете во внешней политике на следующие 30 лет, что не даёт им возможности вмешиваться в войны против Великих держав на этот момент."
+	major = yes
+
+	option = {
+		name = "Прекрасно! Они не вступят против нас."
+	}
+}
+country_event = {
+
+	id = 1810134
+
+	trigger = {
+		NET = {
+			has_country_modifier = offlimit
+			war_with = THIS
+			has_country_flag = declared_neutrality
+		}
+		OR = { is_greater_power = yes ai = no }
+	}
+
+	title = "Голландский нейтралитет"
+	desc = "Нидерланды являются нейтральной страной во внешней политике и не могут участвовать в войнах."
+	picture = "neutrality"
+
+	option = {
+		name = "Ok"
+		end_war = NET
+		military_access = NET
+		NET = { country_event = 1810135 }
+	}
+}
+country_event = {
+
+	id = 1810135
+
+	is_triggered_only = yes
+
+	title = "Голландский нейтралитет"
+	desc = "Мы объявили недавно о своём нейтралитете и являемся нейтральной страной во внешней политике, не имея возможности участвовать в войнах. Это негативно скажется на нашем международном авторитете."
+	picture = "neutrality"
+
+	option = {
+		name = "Это была ошибка"
+		badboy = 3
+	}
+}
+country_event = {
+
+	id = 1810136
+
+	trigger = {
+		has_country_flag = supported_national_science_flag
+		NOT = { has_country_modifier = supported_national_science }
+	}
+
+	title = "Окончание поддержки науки"
+	desc = "Наше государство растратило все ранее выделенные фонды на поддержку науки выделением грантом и улучшением условий научных изысканий в университетских кампусах. Для дальнейшей поддержки науки нам необходимо будет выделить новые денежные средства."
+	picture = "scientist"
+
+	immediate = {
+		clr_country_flag = supported_national_science_flag
+	}
+
+	option = {
+		name = "Продолжить поддержку науки"
+		plurality = 1
+		set_country_flag = supported_national_science_flag
+		add_country_modifier = { name = supported_national_science duration = 1825 }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Надо будет подумать..."
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810137
+
+	trigger = {
+		ai = no
+		ai = yes
+		NOT = {
+			OR = {
+				has_country_modifier = troubles_with_science
+				education_spending = 0.79
+				war_exhaustion = 20
+			}
+		}
+	}
+
+	title = "Проблемы $COUNTRY_ADJ$ науки"
+	desc = "EVTDESC1810137"
+	picture = "scientist"
+
+	mean_time_to_happen = {
+		months = 150
+		modifier = {
+			factor = 0.9
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.25
+			has_country_modifier = supported_national_science
+		}
+		modifier = {
+			factor = 1.25
+			war = yes
+		}
+		modifier = {
+			factor = 0.9
+			prestige = 1000
+		}
+		modifier = {
+			factor = 0.9
+			prestige = 2000
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.79 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.75 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.70 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.65 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.60 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.55 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.50 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.45 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.40 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.35 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.30 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.25 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.20 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.15 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { education_spending = 0.10 }
+		}
+		modifier = {
+			factor = 0.01
+			NOT = { education_spending = 0.05 }
+		}
+	}
+
+	immediate = {
+		add_country_modifier = { name = troubles_with_science duration = 1460 }
+	}
+
+	option = {
+		name = "Надо срочно выделить средства на науку!"
+	}
+}
+country_event = {
+
+	id = 1810138
+
+	trigger = {
+		civilized = yes
+		badboy = 0.75
+		NOT = { has_country_modifier = rogue_state }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.85
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.9
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.80
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.85
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.90
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.95
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 1.00
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 1.05
+		}
+		modifier = {
+			factor = 0.1
+			badboy = 1.10
+		}
+	}
+
+	title = "$COUNTRY_ADJ$ агрессивная внешняя политика"
+	desc = "EVTDESC1810138"
+	picture = "militarism"
+
+	immediate = {
+		add_country_modifier = { name = rogue_state duration = 2190 }
+	}
+
+	option = {
+		name = "Маленькое недоразумение..."
+		prestige = -80
+	}
+}
+country_event = {
+
+	id = 1810139
+
+	trigger = {
+		ai = yes
+		tag = USA
+		has_country_flag = manifest_destiny_flag
+		NOT = {
+			AND = {
+				owns = 84
+				owns = 103
+				owns = 1876
+				owns = 97
+			}
+		}
+	}
+	fire_only_once = yes
+
+	title = "Manifest destiny"
+	desc = "Сама судьба предопределила наше неумолимое движение на запад. Наша великая держава раскинется от океана до океана!"
+	picture = "mdest2"
+
+	option = {
+		name = "Нас не остановить!"
+		war = {
+			target = MEX
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 84 }
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 103 }
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 1876 }
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 97 }
+		}
+	}
+}
+country_event = {
+
+	id = 1810140
+
+	is_triggered_only = yes
+
+	title = "Гигантский телескоп построен в державе $FROMCOUNTRY$"
+	desc = "Из державы $FROMCOUNTRY$ приходят известия о строительстве гигантского телескопа. Он будет ещё долгое время являться предметом гордости $FROMCOUNTRY_ADJ$ науки!"
+	picture = "first_giant_telescope"
+
+	option = {
+		name = "Они нас опередили..."
+	}
+}
+country_event = {
+
+	id = 1810141
+
+	is_triggered_only = yes
+
+	title = "Первый радиотелескоп построен в державе $FROMCOUNTRY$"
+	desc = "В державе $FROMCOUNTRY$ недавно был построен первый в истории радиотелескоп, позволяющий изучать вселенную при помощи приёма радиоизлучения её далёких объектов!"
+	picture = "first_radiotelescope"
+
+	option = {
+		name = "Они нас опередили..."
+	}
+}
+country_event = {
+
+	id = 1810142
+
+	is_triggered_only = yes
+
+	title = "$FROMCOUNTRY_ADJ$ исследовательский центр ядерных технологий"
+	desc = "В державе $FROMCOUNTRY$ недавно был построен первый в мире исследовательский центр по изучению ядерных технологий. Похоже, что держава $FROMCOUNTRY$ сейчас находится на вершине современной научной мысли!"
+	picture = "nuclear_technology_research_complex"
+
+	option = {
+		name = "Они нас опередили..."
+	}
+}
+country_event = {
+
+	id = 1810143
+
+	trigger = {
+		any_owned_province = { is_coastal = yes }
+		OR = {
+			AND = {
+				OR = {
+					point_defense_system = 1
+					breech_loaded_rifles = 1
+					flying_artillery = 1
+					military_statistics = 1
+					army_decision_making = 1
+				}
+				NOT = {
+					AND = {
+						post_nelsonian_thought = 1
+						steamers_with_paddle_wheel = 1
+						naval_design_bureaus = 1
+						alphabetic_flag_signaling = 1
+						naval_professionalism = 1
+					}
+				}
+			}
+			AND = {
+				OR = {
+					deep_defense_system = 1
+					bolt_action_rifles = 1
+					rifled_field_guns = 1
+					military_logistics = 1
+					army_risk_management = 1
+				}
+				NOT = {
+					AND = {
+						battleship_column_doctrine = 1
+						steamers = 1
+						fire_control_systems = 1
+						naval_plans = 1
+						naval_academies = 1
+					}
+				}
+			}
+			AND = {
+				OR = {
+					trench_warfare = 1
+					machine_guns = 1
+					indirect_artillery_fire = 1
+					military_directionism = 1
+					army_nco_training = 1
+				}
+				NOT = {
+					AND = {
+						raider_group_doctrine = 1
+						iron_steamers = 1
+						weapon_platforms = 1
+						naval_statistics = 1
+						naval_decision_making = 1
+					}
+				}
+			}
+			AND = {
+				OR = {
+					infiltration = 1
+					light_machine_gun = 1
+					heavy_armament_dunno = 1
+					aeronautics = 1
+					great_war_experience = 1
+				}
+				NOT = {
+					AND = {
+						blue_and_brown_water_schools = 1
+						steel_steamers = 1
+						main_armament = 1
+						naval_logistics = 1
+						naval_risk_management = 1
+					}
+				}
+			}
+			AND = {
+				OR = {
+					interwar_doctrine = 1
+					automatic_rifles = 1
+					rocket_artillery = 1
+					radar_stations = 1
+					interwar_experience = 1
+				}
+				NOT = {
+					AND = {
+						high_sea_battle_fleet = 1
+						steam_turbine_ships = 1
+						advanced_naval_design = 1
+						naval_directionism = 1
+						naval_nco_training = 1
+					}
+				}
+			}
+			AND = {
+				OR = {
+					tank_attacks_doctrine = 1
+					modern_equipment = 1
+					strategic_aviation = 1
+					nuclear_strategy = 1
+					second_great_war_experience = 1
+				}
+				NOT = {
+					AND = {
+						doctrine_of_raider_warfare = 1
+						oil_driven_ships = 1
+						modern_naval_design = 1
+						naval_integration = 1
+						modern_naval_training = 1
+					}
+				}
+			}
+		}
+		NOT = { has_country_modifier = fleet_weakness }
+	}
+
+	title = "EVTNAME1810143"
+	desc = "EVTDESC1810143"
+	picture = "weak_fleet"
+
+	immediate = {
+		add_country_modifier = { name = fleet_weakness duration = -1 }
+		remove_country_modifier = military_advisors_is_working
+		set_country_flag = fleet_weakness
+	}
+
+	option = {
+		name = "Придётся заняться флотом"
+	}
+}
+country_event = {
+
+	id = 1810144
+
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					raider_group_doctrine = 1
+					iron_steamers = 1
+					weapon_platforms = 1
+					naval_statistics = 1
+					naval_decision_making = 1
+				}
+				NOT = {
+					AND = {
+						post_napoleonic_thought = 1
+						muzzle_loaded_rifles = 1
+						iron_muzzle_loaded_artillery = 1
+						improved_communication_systems = 1
+						army_professionalism = 1
+					}
+				}
+			}
+			AND = {
+				OR = {
+					blue_and_brown_water_schools = 1
+					steel_steamers = 1
+					main_armament = 1
+					naval_logistics = 1
+					naval_risk_management = 1
+				}
+				NOT = {
+					AND = {
+						strategic_mobility = 1
+						caplock_rifles = 1
+						light_field_artillery = 1
+						military_plans = 1
+						military_academies = 1
+					}
+				}
+			}
+			AND = {
+				OR = {
+					high_sea_battle_fleet = 1
+					steam_turbine_ships = 1
+					advanced_naval_design = 1
+					naval_directionism = 1
+					naval_nco_training = 1
+				}
+				NOT = {
+					AND = {
+						point_defense_system = 1
+						breech_loaded_rifles = 1
+						flying_artillery = 1
+						military_statistics = 1
+						army_decision_making = 1
+					}
+				}
+			}
+			AND = {
+				OR = {
+					doctrine_of_raider_warfare = 1
+					oil_driven_ships = 1
+					modern_naval_design = 1
+					naval_integration = 1
+					modern_naval_training = 1
+				}
+				NOT = {
+					AND = {
+						deep_defense_system = 1
+						bolt_action_rifles = 1
+						rifled_field_guns = 1
+						military_logistics = 1
+						army_risk_management = 1
+					}
+				}
+			}
+			AND = {
+				OR = {
+					modern_naval_doctrine = 1
+					turboshaft_ships = 1
+					large_caliber = 1
+					navy_system_based = 1
+					modern_communication_system = 1
+				}
+				NOT = {
+					AND = {
+						trench_warfare = 1
+						machine_guns = 1
+						indirect_artillery_fire = 1
+						military_directionism = 1
+						army_nco_training = 1
+					}
+				}
+			}
+			AND = {
+				OR = {
+					nuclear_navy_doctrine = 1
+					hovercraft = 1
+					modern_targeting_systems = 1
+					rent_of_navy_bases = 1
+					strategic_command = 1
+				}
+				NOT = {
+					AND = {
+						infiltration = 1
+						light_machine_gun = 1
+						heavy_armament_dunno = 1
+						aeronautics = 1
+						great_war_experience = 1
+					}
+				}
+			}
+		}
+		NOT = { has_country_modifier = army_weakness }
+	}
+
+	title = "EVTNAME1810144"
+	desc = "EVTDESC1810144"
+	picture = "weak_army"
+
+	immediate = {
+		add_country_modifier = { name = army_weakness duration = -1 }
+		remove_country_modifier = navy_advisors_is_working
+		set_country_flag = army_weakness
+	}
+
+	option = {
+		name = "Придётся заняться армией"
+	}
+}
+country_event = {
+
+	id = 1810145
+
+	trigger = {
+		has_country_modifier = fleet_weakness
+		OR = {
+			AND = {
+				post_nelsonian_thought = 1
+				steamers_with_paddle_wheel = 1
+				naval_design_bureaus = 1
+				alphabetic_flag_signaling = 1
+				naval_professionalism = 1
+				NOT = {
+					deep_defense_system = 1
+					bolt_action_rifles = 1
+					rifled_field_guns = 1
+					military_logistics = 1
+					army_risk_management = 1
+				}
+			}
+			AND = {
+				battleship_column_doctrine = 1
+				steamers = 1
+				fire_control_systems = 1
+				naval_plans = 1
+				naval_academies = 1
+				NOT = {
+					trench_warfare = 1
+					machine_guns = 1
+					indirect_artillery_fire = 1
+					military_directionism = 1
+					army_nco_training = 1
+				}
+			}
+			AND = {
+				raider_group_doctrine = 1
+				iron_steamers = 1
+				weapon_platforms = 1
+				naval_statistics = 1
+				naval_decision_making = 1
+				NOT = {
+					infiltration = 1
+					light_machine_gun = 1
+					heavy_armament_dunno = 1
+					aeronautics = 1
+					great_war_experience = 1
+				}
+			}
+			AND = {
+				blue_and_brown_water_schools = 1
+				steel_steamers = 1
+				main_armament = 1
+				naval_logistics = 1
+				naval_risk_management = 1
+				NOT = {
+					interwar_doctrine = 1
+					automatic_rifles = 1
+					rocket_artillery = 1
+					radar_stations = 1
+					interwar_experience = 1
+				}
+			}
+			AND = {
+				high_sea_battle_fleet = 1
+				steam_turbine_ships = 1
+				advanced_naval_design = 1
+				naval_directionism = 1
+				naval_nco_training = 1
+				NOT = {
+					tank_attacks_doctrine = 1
+					modern_equipment = 1
+					strategic_aviation = 1
+					nuclear_strategy = 1
+					second_great_war_experience = 1
+				}
+			}
+			AND = {
+				doctrine_of_raider_warfare = 1
+				oil_driven_ships = 1
+				modern_naval_design = 1
+				naval_integration = 1
+				modern_naval_training = 1
+			}
+		}
+	}
+
+	title = "EVTNAME1810145"
+	desc = "EVTDESC1810145"
+	picture = "modern_fleet"
+
+	immediate = {
+		remove_country_modifier = fleet_weakness
+		clr_country_flag = fleet_weakness
+	}
+
+	option = {
+		name = "Отличная работа правительства!"
+	}
+}
+country_event = {
+
+	id = 1810146
+
+	trigger = {
+		has_country_modifier = army_weakness
+		OR = {
+			AND = {
+				post_napoleonic_thought = 1
+				muzzle_loaded_rifles = 1
+				iron_muzzle_loaded_artillery = 1
+				improved_communication_systems = 1
+				army_professionalism = 1
+				NOT = {
+					blue_and_brown_water_schools = 1
+					steel_steamers = 1
+					main_armament = 1
+					naval_logistics = 1
+					naval_risk_management = 1
+				}
+			}
+			AND = {
+				strategic_mobility = 1
+				caplock_rifles = 1
+				light_field_artillery = 1
+				military_plans = 1
+				military_academies = 1
+				NOT = {
+					high_sea_battle_fleet = 1
+					steam_turbine_ships = 1
+					advanced_naval_design = 1
+					naval_directionism = 1
+					naval_nco_training = 1
+				}
+			}
+			AND = {
+				point_defense_system = 1
+				breech_loaded_rifles = 1
+				flying_artillery = 1
+				military_statistics = 1
+				army_decision_making = 1
+				NOT = {
+					doctrine_of_raider_warfare = 1
+					oil_driven_ships = 1
+					modern_naval_design = 1
+					naval_integration = 1
+					modern_naval_training = 1
+				}
+			}
+			AND = {
+				deep_defense_system = 1
+				bolt_action_rifles = 1
+				rifled_field_guns = 1
+				military_logistics = 1
+				army_risk_management = 1
+				NOT = {
+					modern_naval_doctrine = 1
+					turboshaft_ships = 1
+					large_caliber = 1
+					navy_system_based = 1
+					modern_communication_system = 1
+				}
+			}
+			AND = {
+				trench_warfare = 1
+				machine_guns = 1
+				indirect_artillery_fire = 1
+				military_directionism = 1
+				army_nco_training = 1
+				NOT = {
+					nuclear_navy_doctrine = 1
+					hovercraft = 1
+					modern_targeting_systems = 1
+					rent_of_navy_bases = 1
+					strategic_command = 1
+				}
+			}
+			AND = {
+				infiltration = 1
+				light_machine_gun = 1
+				heavy_armament_dunno = 1
+				aeronautics = 1
+				great_war_experience = 1
+			}
+		}
+	}
+
+	title = "EVTNAME1810146"
+	desc = "EVTDESC1810146"
+	picture = "modern_army"
+
+	immediate = {
+		remove_country_modifier = army_weakness
+		clr_country_flag = army_weakness
+	}
+
+	option = {
+		name = "Отличная работа правительства!"
+	}
+}
+country_event = {
+
+	id = 1810147
+
+	trigger = {
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = core_reg
+				NOT = { has_province_modifier = calculation_of_core_regions }
+				OR = {
+					is_coastal = yes
+					any_neighbor_province = {
+						owner = {
+							OR = {
+								alliance_with = THIS
+								is_our_vassal = THIS
+							}
+							num_of_ports = 1
+						}
+					}
+				}
+			}
+			has_country_modifier = german_customs_union
+			has_country_modifier = no_outlet_to_the_sea
+			tag = COM
+		}
+	}
+
+	title = "Нет доступа в мировой океан"
+	desc = "EVTDESC1810147"
+        picture = "ship_in_storm"
+
+	immediate = { add_country_modifier = { name = no_outlet_to_the_sea duration = -1 }}
+
+	option = {
+		name = "Думаю это некритично!"
+	}
+}
+country_event = {
+
+	id = 1810148
+
+	trigger = {
+		has_country_modifier = no_outlet_to_the_sea
+		OR = {
+			has_country_modifier = german_customs_union
+			any_owned_province = {
+				has_province_modifier = core_reg
+				NOT = { has_province_modifier = calculation_of_core_regions }
+				OR = {
+					is_coastal = yes
+					any_neighbor_province = {
+						owner = {
+							OR = {
+								alliance_with = THIS
+								is_our_vassal = THIS
+							}
+							num_of_ports = 1
+						}
+					}
+				}
+			}
+		}
+		NOT = { tag = COM }
+	}
+
+	title = "Появился доступ в мировой океан"
+	desc = "EVTDESC1810148"
+        picture = "ship_in_storm"
+
+	immediate = { remove_country_modifier = no_outlet_to_the_sea }
+
+	option = {
+		name = "Наконец-то!"
+	}
+}
+country_event = {
+
+	id = 1810154
+
+	is_triggered_only = yes
+
+	title = "Патент на производство высокоточной оптики"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас патент на производство высокоточной оптики."
+        picture = "high_precision_optics"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810155 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810155
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала патент"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на производство высокоточной оптики. Теперь мы сможем производить её сами, всю необходимую документацию мы от них уже получили."
+        picture = "high_precision_optics"
+
+	option = {
+		name = "Отличная сделка"
+                set_country_flag = high_precision_optics_patent
+	}
+}
+country_event = {
+
+	id = 1810156
+
+	is_triggered_only = yes
+
+	title = "Захват $FROMCOUNTRY_ADJ$ технологии"
+	desc = "Мы захватили $FROMCOUNTRY_ADJ$ технологию по производству высокоточной оптики. Мы теперь можем производить её сами, все необходимые данные по технологии мы уже получили."
+        picture = "high_precision_optics"
+
+	immediate = {
+                set_country_flag = high_precision_optics_patent
+		release_vassal = FROM
+	}
+
+	option = {
+		name = "Не можешь изобрести - забери!"
+		release_vassal = FROM
+	}
+}
+country_event = {
+
+	id = 1810157
+
+	is_triggered_only = yes
+
+	title = "Патент на производство механизмов"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас патент на производство механизмов."
+        picture = "precision_work_patent"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810158 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810158
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала патент"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на производство механизмов. Теперь мы сможем производить их сами, всю необходимую документацию мы от них уже получили."
+        picture = "precision_work_patent"
+
+	option = {
+		name = "Отличная сделка"
+                set_country_flag = machine_parts_patent
+	}
+}
+country_event = {
+
+	id = 1810159
+
+	trigger = {
+		has_country_flag = supported_advanced_training_centers_flag
+		NOT = { has_country_modifier = supported_advanced_training_centers }
+	}
+
+	title = "Бюджет программы повышения квалификации исчерпан"
+	desc = "EVTDESC1810159"
+	picture = "worker"
+
+	immediate = {
+		clr_country_flag = supported_advanced_training_centers_flag
+	}
+
+	option = {
+		name = "Выделить деньги на поддержку снова"
+		set_country_flag = supported_advanced_training_centers_flag
+		add_country_modifier = { name = supported_advanced_training_centers duration = 1825 }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Необходимо срочно найти на это средства снова!"
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810160
+
+	is_triggered_only = yes
+
+	title = "Патент на технологию крекинга"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас патент на технологию нефтепереработки."
+        picture = "cracking_patent_evt_image"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810161 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810161
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала патент"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на технологию крекинга. Теперь мы сможем самостоятельно разделять нефть на фракции для использования в качестве топлива."
+        picture = "cracking_patent_evt_image"
+
+	option = {
+		name = "Отличная сделка"
+                set_country_flag = cracking_patent
+	}
+}
+country_event = {
+
+	id = 1810162
+
+	is_triggered_only = yes
+
+	title = "Патент на лицензионное производство рейдеров"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас лицензию на производство рейдеров."
+        picture = "commerce_raider"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810163 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810163
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала лицензию"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на лицензионное производство рейдеров. Мы можем теперь сами собирать рейдеры на наших верфях."
+        picture = "commerce_raider"
+
+	option = {
+		name = "Наш флот станет сильнее!"
+                set_country_flag = commerce_raiders_flag
+	}
+}
+country_event = {
+
+	id = 1810164
+
+	is_triggered_only = yes
+
+	title = "Патент на лицензионное производство броненосцев"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас лицензию на производство броненосцев."
+        picture = "ironclad"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810165 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810165
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала лицензию"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на лицензионное производство броненосцев. Мы можем теперь сами собирать броненосцы на наших верфях."
+        picture = "ironclad"
+
+	option = {
+		name = "Наш флот станет сильнее!"
+                set_country_flag = ironclads_flag
+	}
+}
+country_event = {
+
+	id = 1810166
+
+	is_triggered_only = yes
+
+	title = "Патент на лицензионное производство крейсеров"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас лицензию на производство крейсеров."
+        picture = "cruiser"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810167 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810167
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала лицензию"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на лицензионное производство крейсеров. Мы можем теперь сами собирать крейсеры на наших верфях."
+        picture = "cruiser"
+
+	option = {
+		name = "Наш флот станет сильнее!"
+                set_country_flag = cruisers_flag
+	}
+}
+country_event = {
+
+	id = 1810168
+
+	is_triggered_only = yes
+
+	title = "Патент на лицензионное производство линкоров"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас лицензию на производство линкоров."
+        picture = "battleship"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810169 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810169
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала лицензию"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на лицензионное производство линкоров. Мы можем теперь сами собирать линкоры на наших верфях."
+        picture = "battleship"
+
+	option = {
+		name = "Наш флот станет сильнее!"
+                set_country_flag = battleships_flag
+	}
+}
+country_event = {
+
+	id = 1810170
+
+	is_triggered_only = yes
+
+	title = "Патент на лицензионное производство дредноутов"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас лицензию на производство дредноутов."
+        picture = "dreadnought"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810171 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810171
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала лицензию"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на лицензионное производство дредноутов. Мы можем теперь сами собирать дредноуты на наших верфях."
+        picture = "dreadnought"
+
+	option = {
+		name = "Наш флот станет сильнее!"
+                set_country_flag = dreadnoughts_flag
+	}
+}
+country_event = {
+
+	id = 1810172
+
+	is_triggered_only = yes
+
+	title = "Патент на лицензионное производство транспортных пароходов"
+	desc = "Страна $FROMCOUNTRY$ предлагает купить у нас лицензию на производство транспортных пароходов."
+        picture = "steamer_transport"
+
+	immediate = {
+		FROM = { add_country_modifier = { name = you_did_try_to_buy_patent duration = 180 }}
+	}
+
+	option = {
+		name = "Продать"
+		prestige_factor = -0.05
+                FROM = { country_event = 1810173 }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Мы не продаём наши секреты!"
+		FROM = { country_event = 1800936 }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 1810173
+
+	is_triggered_only = yes
+
+	title = "Держава $FROMCOUNTRY$ продала лицензию"
+	desc = "Держава $FROMCTOUNRY$ продала нам патент на лицензионное производство транспортных пароходов. Мы можем теперь сами собирать транспортные пароходы на наших верфях."
+        picture = "steamer_transport"
+
+	option = {
+		name = "Наш флот станет сильнее!"
+                set_country_flag = steamer_transports_flag
+	}
+}
+country_event = {
+
+	id = 1810174
+
+	trigger = {
+		has_country_flag = supported_military_education
+		NOT = { has_country_modifier = supporting_military_education }
+	}
+
+	title = "EVTNAME1810173"
+	desc = "EVTDESC1810173"
+	picture = "military_academy"
+
+	immediate = {
+		clr_country_flag = supported_military_education
+	}
+
+	option = {
+		name = "EVTOPTA1810173"
+		set_country_flag = supported_military_education
+		add_country_modifier = { name = supporting_military_education duration = 1825 }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "EVTOPTB1810173"
+		ai_chance = { factor = 1 }
+	}
+}

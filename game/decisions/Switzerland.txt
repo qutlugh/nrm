@@ -1,0 +1,138 @@
+political_decisions = {
+	call_geneva_convention = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = geneva_convention_held
+				any_owned_province = { has_building = selector }
+			}
+			tag = SWI
+			owns = 607
+		}
+		allow = {
+			any_greater_power = {
+				war_exhaustion = 30
+			}
+			empiricism = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = signed_the_geneva_convention
+				duration = -1
+			}
+			set_global_flag = geneva_convention_held
+			prestige = 50
+		}
+	}
+	sign_the_geneva_convention = {
+		picture = call_geneva_convention
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_modifier = signed_the_geneva_convention
+                                has_country_flag = signed_the_geneva_convention1
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+			has_global_flag = geneva_convention_held
+		}
+		allow = {
+			NOT = { OR = {
+				badboy = 0.25
+				government = fascist_dictatorship
+			}}
+		}
+		effect = {
+			prestige = 50
+			add_country_modifier = {
+				name = signed_the_geneva_convention
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0
+				tag = USA
+			}
+		}
+	}
+	resign_the_geneva_convention = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			has_country_modifier = signed_the_geneva_convention
+		}
+		allow = {
+			NOT = { badboy = 0.5 }
+		}
+		effect = {
+			remove_country_modifier = signed_the_geneva_convention
+			badboy = 20
+			prestige_factor = -0.1
+                        any_pop = { limit = { is_accepted_culture = no } militancy = 6 }
+			any_country = { limit = { ai = no } country_event = 19384 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { is_greater_power = yes war_countries = { is_greater_power = yes }}
+			}
+			modifier = {
+				factor = 0
+				NOT = { prestige = 200 }
+			}
+		}
+	}
+	build_gotthard_tunnel = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = gotthard_tunnel_built
+				any_owned_province = { has_building = selector }
+			}
+			tag = SWI
+			owns = 606
+		}
+		allow = {
+			invention = machine_tools
+		}
+		effect = {
+			SWI_603 = { infrastructure = 1 }
+			SWI_605 = { infrastructure = 1 }
+			prestige = 25
+			set_country_flag = gotthard_tunnel_built
+		}
+	}
+}

@@ -1,0 +1,5 @@
+owner = BUR
+controller = BUR
+add_core = BUR
+trade_goods = precious_metal
+life_rating = 40

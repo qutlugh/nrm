@@ -1,0 +1,36 @@
+capital = 1236
+primary_culture = indian
+religion = hindu
+government = democracy
+plurality = 10
+nationalvalue = nv_archaic_economy
+literacy = 0.10
+civilized = yes
+#is_releasable_vassal = no
+schools = traditional_academic
+
+ruling_party = HND_liberal
+
+# Political reforms
+upper_house_composition = appointed
+private_property = enshrined
+state_religion = reverence_for_religion
+slavery = no_slavery
+vote_franschise = universal_weighted_voting
+voting_system = proportional_representation
+public_meetings = yes_meeting
+press_rights = free_press
+trade_unions = all_trade_unions
+political_parties = secret_ballots
+minorities_reform = protected
+conscription = one_year_draft
+
+# Social reforms
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = no_safety
+unemployment_subsidies = no_subsidies
+pensions = no_pensions
+health_care = no_health_care
+school_reforms = no_schools
+child_labour = child_labour_regulated

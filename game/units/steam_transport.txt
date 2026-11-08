@@ -1,0 +1,42 @@
+steam_transport = {
+	icon = 7
+	naval_icon = 4
+	
+	type = naval
+	sprite = Steam_Transport
+	transport = yes
+	active = no
+	capital = yes
+	unit_type = transport
+	move_sound = steam_move
+	select_sound = steam_selected
+	floating_flag = yes
+
+	#Core Abilities
+	priority = 10
+	max_strength = 100
+	default_organisation = 5
+	maximum_speed = 12
+	weighted_value = 4.0
+	can_build_overseas = no
+
+	#Building Costs
+	build_time = 150
+	build_cost = {
+		steamer_convoy = 500
+	}
+	limit_per_port = -1
+	supply_consumption_score = 0
+	min_port_level = 2
+
+	supply_consumption = 1.0
+	supply_cost = {
+		steamer_convoy = 0.8
+	}
+
+	#Naval Abilties
+	hull = 20
+	gun_power = 0
+	fire_range = 0
+	evasion = 0
+}

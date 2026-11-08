@@ -1,0 +1,15 @@
+owner = BRZ
+controller = BRZ
+add_core = BRZ
+trade_goods = coffee
+life_rating = 40
+naval_base = 1
+terrain = urban
+state_building = { level = 1 building = coffee_plantation_10 upgrade = yes }
+state_building = { level = 1 building = coke_oven upgrade = yes }
+state_building = { level = 1 building = ironworks upgrade = yes }
+state_building = { level = 1 building = steel_factory upgrade = yes }
+state_building = { level = 1 building = coal_energy_factory upgrade = yes }
+state_building = { level = 1 building = cement_factory upgrade = yes }
+state_building = { level = 1 building = building_materials_factory upgrade = yes }
+state_building = { level = 1 building = bakery upgrade = yes }

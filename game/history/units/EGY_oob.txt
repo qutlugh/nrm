@@ -1,0 +1,136 @@
+navy = {
+	name = "Taba"
+	location = 1751
+	ship = {
+		name= "Toushka"
+		type = manowar
+	}
+	ship = {
+		name= "Sharm El-Sheikh"
+		type = manowar
+	}
+	ship = {
+		name= "Damyat"
+		type = manowar
+	}
+	ship = {
+		name= "Rasheed"
+		type = manowar
+	}
+	ship = {
+		name= "El Suez"
+		type = manowar
+	}
+	ship = {
+		name= "Najim al Zafir"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Cairo"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Al Iskandariyah"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Aswan"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Port Said"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Marsa Matruh"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Bur Tawfiq"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Al Ghardaqah"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Bur Safajah"
+		type = clipper_transport
+	}
+	ship = {
+		name= "1st transport flotilla"
+		type = clipper_transport
+	}
+}
+army = {
+	name = "Army of Cairo"
+	location = 1745
+	regiment = {
+		name= "1.1 Sipahis"
+		type = infantry
+		home = 1745
+	}
+	regiment = {
+		name= "2.1 Sipahis"
+		type = infantry
+		home = 1745
+	}
+	regiment = {
+		name= "3.1 Sipahis"
+		type = infantry
+		home = 1745
+	}
+	regiment = {
+		name= "1.1 Infantry"
+		type = infantry
+		home = 1745
+	}
+	regiment = {
+		name= "2.1 Infantry"
+		type = infantry
+		home = 1751
+	}
+}
+army = {
+	name = "Army of Alexandria"
+	location = 1751
+	regiment = {
+		name= "1.1 Sipahis"
+		type = infantry
+		home = 1751
+	}
+	regiment = {
+		name= "2.1 Sipahis"
+		type = infantry
+		home = 1751
+	}
+	regiment = {
+		name= "3.1 Sipahis"
+		type = infantry
+		home = 1751
+	}
+	regiment = {
+		name= "1.1 Infantry"
+		type = infantry
+		home = 1751
+	}
+	regiment = {
+		name= "2.1 Infantry"
+		type = infantry
+		home = 1762
+	}
+}
+army = {
+	name = "Army of Luxor"
+	location = 1762
+	regiment = {
+		name= "1.1 Sipahis"
+		type = infantry
+		home = 1151
+	}
+	regiment = {
+		name= "2.1 Sipahis"
+		type = infantry
+		home = 1151
+	}
+}

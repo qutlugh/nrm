@@ -1,0 +1,2701 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new buildings, make sure they are uniquely named.
+#
+# Order in here matters for selection priority if icons are overlapping,
+# so leave bases on top
+
+# 
+# cost = x #==> extra construction cost (added to goods cost estimations)
+# time = x #==> number of days to build.
+#
+############# LATE GAME FACTORIES
+aeroplane_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 1135
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = aeroplane_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+military_aeroplanes_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 1135
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = military_aeroplanes_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+barrel_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 1135
+	}
+
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = barrel_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+automobile_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 1135
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = automobile_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+radio_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 1115
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = radio_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+telephone_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 1115
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = telephone_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+############# STRATEGIC FACTORIES
+electric_gear_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 940
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = electric_gear_factory
+	pop_build_factory = yes
+}
+locomotives_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 1000
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = locomotives_factory
+	pop_build_factory = yes
+}
+machine_parts_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 1000
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = machine_parts_factory
+	pop_build_factory = yes
+}
+fuel_refinery = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 800
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = fuel_refinery
+	pop_build_factory = yes
+}
+rubber_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 800
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = rubber_factory
+	pop_build_factory = yes
+}
+ñlaus_process_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 805
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = ñlaus_process_factory
+	pop_build_factory = yes
+}
+synthetic_oil_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 870
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = synthetic_oil_factory
+	pop_build_factory = yes
+}
+############# NAVAL FACTORIES
+navy_supplies_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 615
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = navy_supplies_factory
+	pop_build_factory = yes
+}
+steamer_shipyard = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 965
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = steamer_shipyard
+	pop_build_factory = yes
+}
+clipper_shipyard = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 800
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = clipper_shipyard
+	pop_build_factory = yes
+}
+############# LUXURY GOODS FACTORIES
+luxury_clothes_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 795
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = luxury_clothes_factory
+	pop_build_factory = yes
+}
+luxury_furniture_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 795
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = luxury_furniture_factory
+	pop_build_factory = yes
+}
+############# MEDIUM FACTORIES
+silk_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 810
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = silk_factory
+	pop_build_factory = yes
+}
+steel_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 810
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+	
+	default_enabled = yes
+	production_type = steel_factory
+	pop_build_factory = yes
+}
+artillery_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 810
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = artillery_factory
+	pop_build_factory = yes
+}
+############# ENERGY FACTORIES
+coal_energy_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 550
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = coal_energy_factory
+	pop_build_factory = yes
+}
+oil_energy_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 650
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = oil_energy_factory
+	pop_build_factory = yes
+}
+timber_energy_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 350
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = timber_energy_factory
+	pop_build_factory = yes
+}
+############# COMMON FACTORIES
+furniture_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 720
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = furniture_factory
+	pop_build_factory = yes
+}
+paper_mill = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 720
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = paper_mill
+	pop_build_factory = yes
+}
+regular_clothes_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 755
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = regular_clothes_factory
+	pop_build_factory = yes
+}
+explosives_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 720
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = explosives_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+explosives_nitroglycerin_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 720
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = explosives_nitroglycerin_factory
+	pop_build_factory = yes
+}
+explosives_tnt_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 720
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = explosives_tnt_factory
+	pop_build_factory = yes
+}
+############# CHEAP FACTORIES
+packing_plant = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 615
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = packing_plant
+	pop_build_factory = yes
+}
+ammunition_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 755
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = ammunition_factory
+	pop_build_factory = yes
+}
+canned_cattle_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 755
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = canned_cattle_factory
+	pop_build_factory = yes
+}
+canned_fish_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 755
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = canned_fish_factory
+	pop_build_factory = yes
+}
+pyrite_roasting_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 810
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = pyrite_roasting_factory
+	pop_build_factory = yes
+}
+dye_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 810
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	production_type = dye_factory
+	pop_build_factory = yes
+}
+liquor_distillery = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 615
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = liquor_distillery
+	pop_build_factory = yes
+}
+winery = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 615
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = winery
+	pop_build_factory = yes
+}
+############# BASIC FACTORIES
+bakery = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 490
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = bakery
+	pop_build_factory = yes
+}
+meat_processor = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 490
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = meat_processor
+	pop_build_factory = yes
+}
+fish_processor = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 490
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = fish_processor
+	pop_build_factory = yes
+}
+lumber_mill = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 625
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = lumber_mill
+	pop_build_factory = yes
+}
+fabric_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 625
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = fabric_factory
+	pop_build_factory = yes
+}
+cement_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 595
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = cement_factory
+	pop_build_factory = yes
+}
+coke_oven = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 595
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = coke_oven
+	pop_build_factory = yes
+}
+charcoal_from_timber = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 350
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = charcoal_from_timber
+	pop_build_factory = yes
+}
+charcoal_from_tropical_wood = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 350
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = charcoal_from_tropical_wood
+	pop_build_factory = yes
+}
+ironworks = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 595
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = ironworks
+	pop_build_factory = yes
+}
+glass_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 615
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+	
+	default_enabled = yes
+	production_type = glass_factory
+	pop_build_factory = yes
+}
+fertilizer_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 615
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = fertilizer_factory
+	pop_build_factory = yes
+}
+tobacco_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 580
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = tobacco_factory
+	pop_build_factory = yes
+}
+polygraphy_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 575
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = polygraphy_factory
+	pop_build_factory = yes
+}
+building_materials_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 560
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = building_materials_factory
+	pop_build_factory = yes
+}
+############# RESOURCE PRODUCTION
+tools_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		building_materials = 700
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	production_type = tools_factory
+	pop_build_factory = yes
+}
+
+# hydroelectric dam
+hydroelectric_dam_3 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		building_materials = 2500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	provinces = {
+		100 580 599 203 734 732 1675 1665 2580 1001 500
+		261 620 1555 2062 1620
+	}
+	production_type = hydroelectric_dam_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+hydroelectric_dam_6 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		building_materials = 5000
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	provinces = {
+		196 80 482 613 1766 321 2451
+	}
+	production_type = hydroelectric_dam_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+hydroelectric_dam_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 15
+	goods_cost =
+	{
+		building_materials = 10000
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	provinces = {
+		96 972 1521 2437
+	}
+	production_type = hydroelectric_dam_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## coal
+coal_mine_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		765 605 2137 2153 2358 2293 2079 2084 2012
+		2075 2071 2016 1869 1288 1219
+	}
+	production_type = coal_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+coal_mine_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		408 452 475 747 379 612 638 881 712 1463
+		1011 2147 2102 1861 1862 1664 1643 794
+		1857 2105 2116
+	}
+	production_type = coal_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+coal_mine_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		401 496 389 567 580 628 620 333 533 1148
+		1075 1181 221 2460 2465 1510 1573 2062
+		1621 277
+	}
+	production_type = coal_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+coal_mine_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		282 574 1077 1411 2471
+	}
+	production_type = coal_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+coal_mine_15 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 15
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		974 1325 171
+	}
+	production_type = coal_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## iron ore
+iron_mine_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		848 2326 2312 1708
+	}
+	production_type = iron_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+iron_mine_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		295 411 1058 95 2412 1880 1812
+		2097 2104
+	}
+	production_type = iron_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+iron_mine_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		275 409 722 398 579 682 2236 319 879
+		1017 1034 1701 1811 1525 1670 519
+		2497 1262 885 1118
+	}
+	production_type = iron_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+iron_mine_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	default_enabled = yes
+	provinces = {
+		489 326 1031 226 2443 1552 2485 963
+	}
+	production_type = iron_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+iron_mine_15 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 15
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		174
+	}
+	production_type = iron_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## sulphur
+sulphur_mine_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2217 2304 2369
+	}
+	production_type = sulphur_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+sulphur_mine_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	#default_enabled = yes
+	#provinces = { }
+	production_type = sulphur_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+sulphur_mine_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		509 484 559 633 924 1422
+	}
+	production_type = sulphur_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+sulphur_mine_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1196 2339 1675 1419
+	}
+	production_type = sulphur_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+sulphur_mine_15 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 15
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		762 193
+	}
+	production_type = sulphur_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## oil
+oil_rig_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1756 
+	}
+	production_type = oil_rig_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+oil_rig_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		535 951 664 1171 1167 1055 1087 30 2159 2270
+		1925 1929 2001 2008 1532 1409 1399 1395
+	}
+	production_type = oil_rig_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+oil_rig_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		929 1164 1131 1182 1735
+	}
+	production_type = oil_rig_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+oil_rig_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1103 801
+	}
+	production_type = oil_rig_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+oil_rig_15 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 15
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1955
+	}
+	production_type = oil_rig_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## grain
+grain_farm_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2361 2383 2396 2330 2240 1835
+		1685 1728 1839
+	}
+	production_type = grain_farm_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+grain_farm_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		264 425 445 385 549 595 699 650 647 769
+		655 860 863 1343 254 300 705 288 1830
+		521 1933 1937 849
+	}
+	production_type = grain_farm_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+grain_farm_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		743 1121 46 2179 1571 1550 1607 418 554
+		2126 2093 372 961
+	}
+	production_type = grain_farm_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+grain_farm_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		971 1046 1050 2134 2450 2478
+	}
+	production_type = grain_farm_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+grain_farm_15 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 15
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		151 127
+	}
+	production_type = grain_farm_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## cattle
+cattle_ranch_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		696 603 1190 2395 2302 1939 2516 2509 1588
+		1948 1803
+	}
+	production_type = cattle_ranch_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+cattle_ranch_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1209 1021 104 2345 2348 2317 642 772 706 262
+		1557
+	}
+	production_type = cattle_ranch_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+cattle_ranch_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1041 1465 2491 1490
+	}
+	production_type = cattle_ranch_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+cattle_ranch_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		121 107
+	}
+	production_type = cattle_ranch_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## fish
+fishing_wharf_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		527 646 770 251 331 2630 1773 1775 2573 1792
+		1824 2454 1097
+	}
+	production_type = fishing_wharf_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+fishing_wharf_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		369 252 350 354 364 1678
+	}
+	production_type = fishing_wharf_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+fishing_wharf_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		298 421 516 760 378 870 74 1536 1651
+		1438 1638 367
+	}
+	production_type = fishing_wharf_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+fishing_wharf_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		72 243 
+	}
+	production_type = fishing_wharf_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## fruit
+orchard_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		855 676 964 2281 2239 1690 1683 1922
+		1917 1910 2064 2067 1851
+	}
+	production_type = orchard_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+orchard_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		601 589 813 1094 1098 1207 670 834 832
+	}
+	production_type = orchard_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+orchard_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		468 458 500 503 732 2235 2173 1583
+		1248 2089 1245
+	}
+	production_type = orchard_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+orchard_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		751 143
+	}
+	production_type = orchard_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## timber
+timber_lodge_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		269 2577 806 956 981 2377 1976 1819
+		2385 2294 2310 2261 2286 2241 1965
+	}
+	production_type = timber_lodge_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+timber_lodge_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		267 433 434 480 586 544 679 617 311 313 305 336
+		344 893 1014 1003 339 943 2168 1960 1959 939
+		1630 1666 1646 718 1615 1614 1478 2121 735 789
+		802
+	}
+	production_type = timber_lodge_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+timber_lodge_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1108 1064 1081 1082 1586
+	}
+	production_type = timber_lodge_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+timber_lodge_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1020 1001 991 64 13 3232 2127 93
+	}
+	production_type = timber_lodge_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## tropical wood
+tropical_wood_lodge_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2317 2337 1485 2531 2218
+	}
+	production_type = tropical_wood_lodge_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+tropical_wood_lodge_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2185 1982 1357 1350 1349 1339 1455
+	}
+	production_type = tropical_wood_lodge_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+tropical_wood_lodge_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1996 1504 1347 1335
+	}
+	production_type = tropical_wood_lodge_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+tropical_wood_lodge_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2413
+	}
+	production_type = tropical_wood_lodge_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## cotton
+cotton_plantation_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2222 1797 1902 1951 2019
+	}
+	production_type = cotton_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+cotton_plantation_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		894 897 2432 2430 1799 1844 1266 1301 1304
+		1283 1277 1270 1214
+	}
+	production_type = cotton_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+cotton_plantation_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1140 1197 1747 1381 2559 1227
+	}
+	production_type = cotton_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+cotton_plantation_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1198 2556 2555 2607
+	}
+	production_type = cotton_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## tobacco
+tobacco_plantation_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		823 2029
+	}
+	production_type = tobacco_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+tobacco_plantation_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2209 2043 2058
+	}
+	production_type = tobacco_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+tobacco_plantation_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1305 2041
+	}
+	production_type = tobacco_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+tobacco_plantation_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		218
+	}
+	production_type = tobacco_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## coffee
+coffee_plantation_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2204 1878 1897 1896 1885 1887 2051
+	}
+	production_type = coffee_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+coffee_plantation_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2252 2257 2276
+	}
+	production_type = coffee_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+coffee_plantation_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1414
+	}
+	production_type = coffee_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+coffee_plantation_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2437 2447
+	}
+	production_type = coffee_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## dye
+dye_plantation_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		913 919 908
+	}
+	production_type = dye_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+dye_plantation_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		757 2247 2266 1364
+	}
+	production_type = dye_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+dye_plantation_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1152 1178 2215 1331 1432 1258
+	}
+	production_type = dye_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+dye_plantation_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2176 1256 1253
+	}
+	production_type = dye_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+
+## rubber
+rubber_plantation_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 1
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2188 2195 2191 2198 2203 1454 2529
+	}
+	production_type = rubber_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+rubber_plantation_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1988 1323
+	}
+	production_type = rubber_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+rubber_plantation_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2404 2418 1992 1994 1373
+	}
+	production_type = rubber_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+rubber_plantation_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1335
+	}
+	production_type = rubber_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+## silk
+silk_plantation_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		462 1318
+	}
+	production_type = silk_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+silk_plantation_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1313
+	}
+	production_type = silk_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+silk_plantation_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		203 1494 1539 1658
+	}
+	production_type = silk_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+## tea
+tea_plantation_1 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1326
+	}
+	production_type = tea_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+tea_plantation_2 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 2
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2032 2026 1224
+	}
+	production_type = tea_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+tea_plantation_5 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 5
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		1505 1493 1470 1518 1519 1657 1295 1238
+	}
+	production_type = tea_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+tea_plantation_10 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 10
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	#default_enabled = yes
+	#provinces = { }
+	production_type = tea_plantation_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+############### Province buildings ##########################
+fort = {
+	type = fort
+	goods_cost =
+	{
+		building_materials = 1200
+	}
+	time = 365
+	visibility = yes
+	onmap = yes
+	max_level = 6
+	province = yes
+	fort_level = 1
+}
+naval_base = {
+	type = naval_base
+	goods_cost =
+	{
+		building_materials = 3700
+        }
+	time = 365
+	naval_capacity = 1
+	capital = yes
+	onmap = yes
+	port = yes
+	visibility = yes
+	max_level = 6
+	province = yes
+	one_per_state = yes
+	colonial_range = 150
+	local_repair = 0.05
+}
+railroad = {
+	type = infrastructure
+	goods_cost =
+	{
+		building_materials = 1200
+	}
+	time = 90
+	visibility = yes
+	onmap = yes
+	max_level = 10
+	province = yes
+
+	infrastructure = 0.10
+
+	pop_build_factory = yes
+	spawn_railway_track = yes
+}
+selector = {
+	type = selector
+	goods_cost =
+	{
+	}
+	time = 1
+	max_level = 1
+	province = yes
+	visibility = no
+	onmap = no
+}

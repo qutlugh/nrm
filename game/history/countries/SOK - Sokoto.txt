@@ -1,0 +1,20 @@
+capital = 1948
+primary_culture = africans
+religion = sunni
+government = absolute_monarchy
+plurality = 0.0
+nationalvalue = nv_archaic_economy
+literacy = 0.003
+
+ruling_party = SOK_conservative
+upper_house = {
+	fascist = 0
+	liberal = 16
+	conservative = 63
+	reactionary = 21
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}
+
+oob = "SOK_oob.txt"

@@ -1,0 +1,3 @@
+add_core = KNY
+trade_goods = tea
+life_rating = 15

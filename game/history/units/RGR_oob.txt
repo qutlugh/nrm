@@ -1,0 +1,32 @@
+army = {
+	name = "Army of Rio Grande"
+	location = 2148
+	regiment = {
+		name= "1.Division Comonfort"
+		type = infantry
+		home = 2148
+	}
+
+	regiment = {
+		name= "2.Division Comonfort"
+		type = infantry
+		home = 2146
+	}
+
+	regiment = {
+		name= "3.Division Comonfort"
+		type = infantry
+		home = 2151
+	}
+	regiment = {
+		name= "1.Division Cos"
+		type = infantry
+		home = 2147
+	}
+
+	regiment = {
+		name= "2.Division Cos"
+		type = infantry
+		home = 2152
+	}
+}

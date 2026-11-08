@@ -1,0 +1,87 @@
+#Relations
+PEU=
+{
+	value=200
+}
+
+army = {
+	name = "Bolivian 1st liberation army"
+	location = 2368
+
+	regiment = {
+		name= "1. Brigada de Infanteria"
+		type = infantry
+		home = 2310
+	}
+	regiment = {
+		name= "2. Brigada de Infanteria"
+		type = infantry
+		home = 2310
+	}
+	regiment = {
+		name= "3. Brigada de Infanteria"
+		type = infantry
+		home = 2310
+	}
+	regiment = {
+		name= "4. Brigada de Infanteria"
+		type = infantry
+		home = 2310
+	}
+	regiment = {
+		name= "5. Brigada de Infanteria"
+		type = infantry
+		home = 2310
+	}
+	regiment = {
+		name= "6. Brigada de Infanteria"
+		type = engineer
+		home = 2311
+	}
+	regiment = {
+		name= "7. Brigada de Infanteria"
+		type = dragoon
+		home = 2311
+	}
+}
+
+army = {
+	name = "Bolivian 2nd liberation army"
+	location = 2314
+
+	regiment = {
+		name= "1. Brigada de Infanteria"
+		type = infantry
+		home = 2311
+	}
+	regiment = {
+		name= "2. Brigada de Infanteria"
+		type = infantry
+		home = 2311
+	}
+	regiment = {
+		name= "3. Brigada de Infanteria"
+		type = infantry
+		home = 2311
+	}
+	regiment = {
+		name= "4. Brigada de Infanteria"
+		type = infantry
+		home = 2313
+	}
+	regiment = {
+		name= "5. Brigada de Infanteria"
+		type = infantry
+		home = 2313
+	}
+	regiment = {
+		name= "6. Brigada de Infanteria"
+		type = engineer
+		home = 2313
+	}
+	regiment = {
+		name= "7. Brigada de Infanteria"
+		type = dragoon
+		home = 2314
+	}
+}

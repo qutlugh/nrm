@@ -1,0 +1,440 @@
+political_decisions = {
+	set_ready_to_trade = {
+                alert = no
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+ 				has_country_flag = sell_and_buy_window
+ 				has_country_flag = politics_des_window
+ 				has_country_flag = givemoney
+ 				has_country_flag = nuke_des_window
+ 				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+                	NOT = { has_country_modifier = ready_to_trade }
+                }
+		effect = {
+                        add_country_modifier = { name = ready_to_trade duration = 90 }
+                }
+	        ai_will_do = { factor = 0 }
+        }
+	remove_selection_of_provinces = {
+		alert = yes
+		potential = {
+			any_owned_province = { has_building = selector }
+		}
+		allow = {}
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						has_province_modifier = province_ready_to_transfer
+						has_building = selector
+					}
+				}
+				remove_province_modifier = province_ready_to_transfer
+				selector = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	mark_regions_for_transfer = {
+                alert = no
+                picture = transfer_provinces
+		potential = {
+			any_owned_province = { has_building = selector }
+                }
+		allow = {
+			any_owned_province = {
+				has_building = selector
+				has_province_modifier = mastered_region
+				NOT = { is_core = THIS }
+			}
+		}
+		effect = {
+			random_state = {
+				limit = {
+					any_owned_province = {
+						has_building = selector
+						has_province_modifier = mastered_region
+					}
+					NOT = { OR = {
+						any_owned_province = {
+							NOT = { controlled_by = THIS }
+						}
+						any_owned_province = {
+							is_core = THIS
+						}
+					}}
+				}
+				any_owned = { add_province_modifier = { name = province_ready_to_transfer duration = -1 }}
+			}
+                }
+		ai_will_do = { factor = 0 }
+        }
+	transfer_provinces = {
+                alert = no
+		potential = {
+			any_owned_province = { has_province_modifier = province_ready_to_transfer }
+                }
+		allow = {
+			NOT = { has_country_modifier = surrendered_country }
+		}
+		effect = {
+			random_country = {
+				limit = {
+					NOT = { has_country_flag = prepare_to_hold_military_drills }
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+				}
+				country_event = 100171
+			}
+                }
+		ai_will_do = { factor = 0 }
+        }
+	dismantle_infrastructure = {
+                alert = no
+		potential = {
+			any_owned_province = { has_building = selector }
+		}
+		allow = {
+			any_owned_province = {
+				has_building = selector
+				has_building = railroad
+			}
+		}
+		effect = {
+			random_state = {
+				limit = {
+					any_owned_province = {
+						has_building = selector
+						has_building = railroad
+					}
+				}
+				any_owned = {
+					infrastructure = -10
+					selector = -1
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	delete_marked_forts = {
+                alert = no
+		potential = {
+			any_owned_province = { has_building = selector }
+		}
+		allow = {
+			any_owned_province = {
+				has_building = selector
+				OR = {
+					has_building = fort
+					has_building = naval_base
+				}
+			}
+		}
+		effect = {
+                        any_owned = {
+				limit = {
+					has_building = selector
+					has_building = naval_base
+				}
+				naval_base = -6
+				selector = -1
+			}
+                        any_owned = {
+				limit = {
+					has_building = selector
+					has_building = fort
+				}
+				fort = -6
+				selector = -1
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	make_colony_from_region1 = {
+		picture = colonial_factory
+		alert = no
+		potential = {
+			any_owned_province = {
+				NOT = { has_province_modifier = mastered_region }
+				has_building = selector
+			}
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = mastered_region
+					has_building = selector
+				}
+			}
+		}
+		allow = {
+			civilized = yes
+			any_owned_province = {
+				has_building = selector
+				NOT = {
+					has_province_modifier = mastered_region
+					is_core = THIS
+				}
+				state_scope = {
+					has_factories = no
+					is_colonial = no
+				}
+			}
+		}
+		effect = {
+			random_state = {
+				limit = {
+					NOT = {
+						any_owned_province = { is_core = THIS }
+						any_owned_province = { has_province_modifier = great_famine }
+						any_owned_province = { has_province_modifier = corn_laws }
+					}
+					any_owned_province = {
+						has_building = selector
+						NOT = { has_province_modifier = mastered_region }
+					}
+					has_factories = no
+					is_colonial = no
+				}
+				any_owned = {
+					any_pop = {
+						limit = { pop_type = bureaucrats }
+						pop_type = farmers
+					}
+				}
+				any_owned = { add_core = AAA selector = -1 }
+			}
+			release = AAA
+			AAA = { civilized = no }
+			inherit = AAA
+			any_owned = {
+				limit = { is_core = AAA }
+				remove_core = AAA
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	make_colony_from_region2 = {
+		picture = colonial_factory
+		alert = no
+		potential = {
+			any_owned_province = {
+				has_province_modifier = mastered_region
+				has_building = selector
+			}
+		}
+		allow = {
+			civilized = yes
+			any_owned_province = {
+				has_building = selector
+				has_province_modifier = mastered_region
+				NOT = { is_core = THIS }
+				state_scope = {
+					has_factories = no
+					is_colonial = no
+				}
+			}
+		}
+		effect = {
+			random_state = {
+				limit = {
+					NOT = {
+						any_owned_province = { is_core = THIS }
+						any_owned_province = { has_province_modifier = great_famine }
+						any_owned_province = { has_province_modifier = corn_laws }
+					}
+					any_owned_province = {
+						has_building = selector
+						has_province_modifier = mastered_region
+					}
+					has_factories = no
+					is_colonial = no
+				}
+				any_owned = {
+					any_pop = {
+						limit = { pop_type = bureaucrats }
+						pop_type = farmers
+					}
+				}
+				any_owned = { add_core = AAA selector = -1 }
+			}
+			release = AAA
+			AAA = { civilized = no }
+			inherit = AAA
+			any_owned = {
+				limit = { is_core = AAA }
+				add_province_modifier = { name = mastered_region duration = -1 }
+				remove_core = AAA
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	fire_clergymen_in_state = {
+                alert = no
+		potential = {
+			any_owned_province = {
+				has_building = selector
+				NOT = { has_province_modifier = province_ready_to_transfer }
+			}
+                }
+		allow = {}
+		effect = {
+			random_state = {
+				limit = {
+					any_owned_province = { has_building = selector }
+					any_pop = { has_pop_type = clergymen }
+				}
+				any_owned = {
+					any_pop = {
+						limit = { pop_type = clergymen }
+						pop_type = farmers
+					}
+				}
+				any_owned = {
+					limit = { has_building = selector }
+					selector = -1
+				}
+			}
+                }
+		ai_will_do = { factor = 0 }
+        }
+	fire_scientists_in_state = {
+                alert = no
+		potential = {
+			any_owned_province = {
+				has_building = selector
+				NOT = { has_province_modifier = province_ready_to_transfer }
+			}
+                }
+		allow = {}
+		effect = {
+			random_state = {
+				limit = {
+					any_owned_province = { has_building = selector }
+					any_pop = { has_pop_type = scientists }
+				}
+				any_owned = {
+					any_pop = {
+						limit = { pop_type = scientists }
+						pop_type = farmers
+					}
+				}
+				any_owned = {
+					limit = { has_building = selector }
+					selector = -1
+				}
+			}
+                }
+		ai_will_do = { factor = 0 }
+        }
+	fire_soldiers_in_state = {
+                alert = no
+		potential = {
+			any_owned_province = {
+				has_building = selector
+				NOT = { has_province_modifier = province_ready_to_transfer }
+			}
+                }
+		allow = {}
+		effect = {
+			random_state = {
+				limit = {
+					any_owned_province = { has_building = selector }
+					any_pop = { has_pop_type = soldiers }
+					NOT = {
+						owner = { tag = USA }
+						is_core = CSA
+					}
+				}
+				any_owned = {
+					any_pop = {
+						limit = { pop_type = soldiers }
+						pop_type = farmers
+					}
+				}
+				any_owned = {
+					limit = { has_building = selector }
+					selector = -1
+				}
+			}
+                }
+		ai_will_do = { factor = 0 }
+        }
+	fire_non_accepted_bureaucrats_in_state = {
+                alert = no
+		potential = {
+			any_owned_province = {
+				has_building = selector
+				NOT = { has_province_modifier = province_ready_to_transfer }
+			}
+                }
+		allow = {}
+		effect = {
+			random_state = {
+				limit = {
+					any_owned_province = { has_building = selector }
+					any_pop = {
+						has_pop_type = bureaucrats
+						is_accepted_culture = no
+					}
+				}
+				any_owned = {
+					any_pop = {
+						limit = {
+							pop_type = bureaucrats
+							is_accepted_culture = no
+						}
+						pop_type = farmers
+					}
+				}
+				any_owned = {
+					limit = { has_building = selector }
+					selector = -1
+				}
+			}
+                }
+		ai_will_do = { factor = 0 }
+        }
+	fire_accepted_bureaucrats_in_state = {
+		picture = fire_non_accepted_bureaucrats_in_state
+                alert = no
+		potential = {
+			any_owned_province = {
+				has_building = selector
+				NOT = { has_province_modifier = province_ready_to_transfer }
+			}
+                }
+		allow = {}
+		effect = {
+			random_state = {
+				limit = {
+					any_owned_province = {
+						has_building = selector
+						NOT = { is_core = THIS }
+					}
+					any_pop = {
+						has_pop_type = bureaucrats
+						is_accepted_culture = yes
+					}
+				}
+				any_owned = {
+					any_pop = {
+						limit = {
+							pop_type = bureaucrats
+							is_accepted_culture = yes
+						}
+						pop_type = farmers
+					}
+				}
+				any_owned = {
+					limit = { has_building = selector }
+					selector = -1
+				}
+			}
+                }
+		ai_will_do = { factor = 0 }
+        }
+}

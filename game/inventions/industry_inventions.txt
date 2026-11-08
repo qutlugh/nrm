@@ -1,0 +1,2509 @@
+#water_wheel_power
+tulls_seed_drill = {
+	limit = {
+		water_wheel_power = 1
+		literacy = 0.20
+	}
+	chance = {
+		base = 5
+		modifier = {
+			factor = -5
+			NOT = { literacy = 0.20 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { grain = 0.05 }
+		factory_goods_throughput = { fruit = 0.05 }
+	}
+}
+#practical_steam_engine
+rotherham_plough = {
+	limit = {
+		practical_steam_engine = 1
+		literacy = 0.30
+	}
+	chance = {
+		base = 5
+		modifier = {
+			factor = -5
+			NOT = { literacy = 0.30 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { grain = 0.05 }
+	}
+}
+#steam_turbine
+coalcutter = {
+	limit = {
+		literacy = 0.6
+		steam_turbine = 1
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			cheap_steel = 1
+		}
+		modifier = {
+			factor = 2
+			steel_railroad = 1
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.6 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coal = 0.10 }
+		factory_goods_throughput = { iron_ore = 0.10 }
+		factory_goods_throughput = { sulphur = 0.10 }
+	}
+}
+#combustion_engine
+combustion_engine_invention = {
+	limit = {
+		combustion_engine = 1
+		literacy = 0.80
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 10
+                        assembly_line = 1
+		}
+		modifier = {
+			factor = -10
+			NOT = { literacy = 0.80 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coal = 0.10 }
+		factory_goods_throughput = { iron_ore = 0.10 }
+		factory_goods_throughput = { sulphur = 0.10 }
+		factory_goods_throughput = { oil = 0.10 }
+	}
+}
+daimlers_automobile = {
+	limit = {
+		combustion_engine = 1
+		invention = combustion_engine_invention
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 10
+			electricity = 1
+		}
+		modifier = {
+			factor = -10
+                        NOT = { assembly_line = 1 }
+		}
+		modifier = {
+			factor = -10
+			NOT = { invention = combustion_engine_invention }
+		}
+	}
+	effect = {
+		activate_building = automobile_factory 
+	}
+}
+wright_n_langleys_aeroplanes = {
+	limit = {
+		combustion_engine = 1
+		invention = combustion_engine_invention
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 10
+			electricity = 1
+		}
+		modifier = {
+			factor = -10
+			NOT = { invention = combustion_engine_invention }
+		}
+		modifier = {
+			factor = -10
+                        NOT = { assembly_line = 1 }
+		}
+	}
+	effect = {
+		activate_building = aeroplane_factory
+	}
+}
+tractors = {
+	limit = {
+		combustion_engine = 1
+		invention = daimlers_automobile
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			invention = daimlers_automobile
+		}
+	}
+	effect = {
+		factory_goods_throughput = { grain = 0.30 }
+		factory_goods_throughput = { fruit = 0.30 }
+		factory_goods_throughput = { cotton = 0.30 }
+		factory_goods_throughput = { dye = 0.30 }
+		factory_goods_throughput = { tobacco = 0.30 }
+		factory_goods_throughput = { tea = 0.30 }
+		factory_goods_throughput = { coffee = 0.30 }
+	}
+}
+#electrical_power_generation
+direct_current = {
+	limit = {
+		electrical_power_generation = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			invention = edison_light_bulb
+		}
+	}
+	effect = {
+		factory_goods_throughput = { energy = 0.05 }
+	}
+}
+alternating_current = {
+	limit = {
+		electrical_power_generation = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			invention = edison_light_bulb
+		}
+	}
+	effect = {
+		factory_goods_throughput = { energy = 0.05 }
+	}
+}
+polyphase_system = {
+	limit = {
+		electrical_power_generation = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			invention = edison_light_bulb
+		}
+	}
+	effect = {
+		factory_goods_throughput = { energy = 0.05 }
+	}
+}
+small_hydroelectric_dam = {
+	limit = {
+		electrical_power_generation = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 20
+		modifier = {
+			factor = -20
+			NOT = { invention = ferroconcrete }
+		}
+		modifier = {
+			factor = -20
+			NOT = { invention = edison_light_bulb }
+		}
+	}
+	effect = {
+		activate_building = hydroelectric_dam_3
+	}
+}
+medium_hydroelectric_dam = {
+	limit = {
+		electrical_power_generation = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 15
+		modifier = {
+			factor = -15
+			NOT = { invention = ferroconcrete }
+		}
+		modifier = {
+			factor = -15
+			NOT = { invention = edison_light_bulb }
+		}
+	}
+	effect = {
+		activate_building = hydroelectric_dam_6
+	}
+}
+huge_hydroelectric_dam = {
+	limit = {
+		electrical_power_generation = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 10
+		modifier = {
+			factor = -10
+			NOT = { invention = ferroconcrete }
+		}
+		modifier = {
+			factor = -10
+			NOT = { invention = edison_light_bulb }
+		}
+	}
+	effect = {
+		activate_building = hydroelectric_dam_10
+	}
+}
+#electric_machine
+electric_pump = {
+	limit = {
+		electric_machine = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = -6
+			NOT = { invention = edison_light_bulb }
+		}
+		modifier = {
+			factor = 2
+			invention = direct_current
+		}
+		modifier = {
+			factor = 2
+			invention = alternating_current
+		}
+		modifier = {
+			factor = 2
+			invention = polyphase_system
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coal = 0.10 }
+		factory_goods_throughput = { iron_ore = 0.10 }
+		factory_goods_throughput = { sulphur = 0.10 }
+		factory_goods_throughput = { oil = 0.10 }
+	}
+}
+#atom_energy
+nuclear_reaction = {
+	limit = {
+		atom_energy = 1
+		invention = edison_light_bulb
+		invention = nuclear_reaction_tests
+		literacy = 0.90
+		industrial_score = 4000
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 100
+			invention = edison_light_bulb
+			invention = nuclear_reaction_tests
+			literacy = 0.90
+			industrial_score = 4000
+		}
+	}
+	effect = {
+		shared_prestige = 300
+	}
+}
+#Manufactories
+ammunition_production = {
+	limit = { manufactories = 1 }
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			invention = whitney_n_colts_standardized_small_arms
+		}
+		modifier = {
+			factor = 2
+			army_professionalism = 1
+		}
+	}
+	effect = {
+		activate_building = ammunition_factory 
+	}
+}
+explosives_production = {
+	limit = { manufactories = 1 }
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			medicine = 1
+		}
+		modifier = {
+			factor = 2
+			invention = nitroglycerin
+		}
+	}
+	effect = {
+		activate_building = explosives_factory 
+	}
+}
+artillery_production = {
+	limit = { manufactories = 1 }
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			invention = explosives_production
+		}
+		modifier = {
+			factor = 2
+			iron_muzzle_loaded_artillery = 1
+		}
+	}
+	effect = {
+		activate_building = artillery_factory
+	}
+}
+canning_fish = {
+	limit = { manufactories = 1 }
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			medicine = 1
+		}
+		modifier = {
+			factor = 2
+			army_professionalism = 1
+		}
+	}
+	effect = {
+	        activate_building = canned_fish_factory
+	}
+}
+canning_meat = {
+	limit = { manufactories = 1 }
+	chance = {
+		base = 5
+		modifier = {
+			factor = 2
+			medicine = 1
+		}
+		modifier = {
+			factor = 2
+			army_professionalism = 1
+		}
+	}
+	effect = {
+	        activate_building = canned_cattle_factory
+	}
+}
+#Publishing industry
+cotton_gin = {
+	limit = {
+		publishing_industry = 1
+		literacy = 0.30
+		NOT = {
+			tag = USA
+			tag = ENG
+		}
+	}
+	chance = {
+		base = 5
+		modifier = {
+			factor = -5
+			NOT = { literacy = 0.30 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { cotton = 0.20 }
+	}
+}
+precision_work = {
+	limit = {
+		publishing_industry = 1
+		OR = {
+			literacy = 0.40
+			has_country_flag = machine_parts_patent
+		}
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			invention = mechanical_precision_saw
+		}
+		modifier = {
+			factor = 5
+			early_railroad = 1
+		}
+		modifier = {
+			factor = 100
+			has_country_flag = machine_parts_patent
+		}
+		modifier = {
+			factor = -10
+                        NOT = { OR = {
+				literacy = 0.40
+				has_country_flag = machine_parts_patent
+			}}
+		}
+	}
+	effect = {
+		activate_building = machine_parts_factory
+	}
+}
+#mechanical_production
+sharp_n_roberts_power_loom = {
+	limit = {
+		mechanical_production = 1
+		literacy = 0.30
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = work_classification
+		}
+		modifier = {
+			factor = 2
+			stock_exchange = 1
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.30 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { fabric = 0.05 }
+	}
+}
+jacquard_power_loom = {
+	limit = {
+		mechanical_production = 1
+		literacy = 0.30
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = sharp_n_roberts_power_loom
+		}
+		modifier = {
+			factor = 2
+			invention = insurance_companies
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.30 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { fabric = 0.05 }
+	}
+}
+northrop_power_loom = {
+	limit = {
+		mechanical_production = 1
+		literacy = 0.30
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.30 }
+		}
+		modifier = {
+			factor = 2
+			invention = jacquard_power_loom
+		}
+		modifier = {
+			factor = 2
+			invention = insurance_companies
+		}
+	}
+	effect = {
+		factory_goods_throughput = { fabric = 0.05 }
+	}
+}
+mechanical_saw = {
+	limit = {
+		mechanical_production = 1
+		literacy = 0.30
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.30 }
+		}
+		modifier = {
+			factor = 2
+			clean_coal = 1
+		}
+		modifier = {
+			factor = 2
+			organized_factories = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { timber = 0.10 }
+		factory_goods_throughput = { tropical_wood = 0.10 }
+	}
+}
+mechanical_precision_saw = {
+	limit = {
+		mechanical_production = 1
+		literacy = 0.30
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.30 }
+		}
+		modifier = {
+			factor = 2
+			invention = mechanical_saw
+		}
+		modifier = {
+			factor = 2
+			practical_steam_engine = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { timber = 0.10 }
+		factory_goods_throughput = { tropical_wood = 0.10 }
+	}
+}
+hussey_n_mccormicks_reaping_machine = {
+	limit = {
+		mechanical_production = 1
+		literacy = 0.30
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.30 }
+		}
+		modifier = {
+			factor = 2
+			early_railroad = 1
+		}
+		modifier = {
+			factor = 2
+			invention = work_specialization
+		}
+	}
+	effect = {
+		factory_goods_throughput = { grain = 0.05 }
+		factory_goods_throughput = { fruit = 0.05 }
+		factory_goods_throughput = { tea = 0.05 }
+		factory_goods_throughput = { coffee = 0.05 }
+		factory_goods_throughput = { cotton = 0.05 }
+	}
+}
+pitts_threshing_machine = {
+	limit = {
+		mechanical_production = 1
+		literacy = 0.30
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.30 }
+		}
+		modifier = {
+			factor = 2
+			invention = hussey_n_mccormicks_reaping_machine
+		}
+		modifier = {
+			factor = 2
+			practical_steam_engine = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { grain = 0.05 }
+		factory_goods_throughput = { fruit = 0.05 }
+		factory_goods_throughput = { tea = 0.05 }
+		factory_goods_throughput = { coffee = 0.05 }
+		factory_goods_throughput = { cotton = 0.05 }
+	}
+}
+mechanized_slaughtering_block = {
+	limit = {
+		mechanical_production = 1
+		literacy = 0.30
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.30 }
+		}
+		modifier = {
+			factor = 2
+			medicine = 1
+		}
+		modifier = {
+			factor = 2
+			clean_coal = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { cattle = 0.10 }
+	}
+}
+#interchangeable_parts
+machine_tools = {
+	limit = { interchangeable_parts = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 3
+			invention = precision_work
+			early_railroad = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { machine_parts = 0.10 }
+	}
+}
+whitney_n_colts_standardized_small_arms = {
+	limit = { interchangeable_parts = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			breech_loaded_rifles = 1
+		}
+		modifier = {
+			factor = 2
+			invention = manifest_destiny
+		}
+	}
+	effect = {
+		factory_goods_throughput = { artillery1 = 0.10 }
+		factory_goods_throughput = { ammunition = 0.10 }
+	}
+}
+food_packing_system = {
+	limit = { interchangeable_parts = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = distribution_channels
+		}
+		modifier = {
+			factor = 2
+			invention = limited_partnership_company
+		}
+	}
+	effect = {
+		factory_goods_throughput = { canned_food = 0.10 }
+	}
+}
+integral_distillery_process = {
+	limit = { interchangeable_parts = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			scientific_management = 1
+		}
+		modifier = {
+			factor = 2
+			market_structure = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { liquor = 0.10 }
+	}
+}
+jiggs = {
+	limit = { interchangeable_parts = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 1
+			high_n_low_pressure_steam_engines = 1
+		}
+		modifier = {
+			factor = 2
+			invention = sequence_planning
+		}
+	}
+	effect = {
+		factory_goods_throughput = { furniture = 0.05 }
+		factory_goods_throughput = { luxury_furniture = 0.05 }
+	}
+}
+minie_ball = {
+	limit = {
+		OR = {
+			literacy = 0.50
+			industrial_score = 750
+		}
+		interchangeable_parts = 1
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			muzzle_loaded_rifles = 1
+		}
+		modifier = {
+			factor = 5
+			caplock_rifles = 1
+		}
+		modifier = {
+			factor = -10
+			NOT = { OR = {
+				literacy = 0.50
+				industrial_score = 750
+			}}
+		}
+	}
+	effect = {
+		infantry = {
+			attack = 1
+                        defence = 1
+			supply_consumption = 0.05
+		}
+		irregular = {
+			attack = 0.5
+                        defence = 0.5
+			supply_consumption = 0.05
+		}
+		col_inf = {
+			attack = 0.5
+                        defence = 0.5
+			supply_consumption = 0.05
+		}
+	}
+}
+#semi_automatization
+electric_machinery = {
+	limit = {
+		semi_automatization = 1
+		literacy = 0.40
+	}
+	chance = {
+		base = 3
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.40 }
+		}
+		modifier = {
+			factor = 3
+			electricity = 1
+			invention = machine_tools
+		}
+	}
+	effect = {
+		factory_goods_throughput = { timber = 0.10 }
+		factory_goods_throughput = { tropical_wood = 0.10 }
+	}
+}
+oil_pumping_machinery = {
+	limit = { semi_automatization = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			iron_railroad = 1
+		}
+		modifier = {
+			factor = 2
+			cheap_steel = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { oil = 0.10 }
+	}
+}
+drying_techniques = {
+	limit = {
+		literacy = 0.40
+		semi_automatization = 1
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.40 }
+		}
+		modifier = {
+			factor = 2
+			invention = distribution_channels
+		}
+		modifier = {
+			factor = 2
+			invention = industrial_rnd_investments
+		}
+	}
+	effect = {
+		factory_goods_throughput = { tea = 0.05 }
+		factory_goods_throughput = { coffee = 0.05 }
+		factory_goods_throughput = { tobacco = 0.05 }
+	}
+}
+#assembly_line
+fordism = {
+	limit = {
+		assembly_line = 1
+		invention = daimlers_automobile
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 4
+			invention = daimlers_automobile
+			invention = distribution_channels
+		}
+		modifier = {
+			factor = -6
+			NOT = { invention = daimlers_automobile }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { automobiles = 0.10 }
+		factory_goods_throughput = { barrels = 0.10 }
+		factory_goods_throughput = { aeroplanes = 0.10 }
+		factory_goods_throughput = { military_aeroplanes = 0.10 }
+	}
+}
+industrialized_armament_industry = {
+	limit = { assembly_line = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = precision_work
+		}
+		modifier = {
+			factor = 2
+			invention = whitney_n_colts_standardized_small_arms
+		}
+	}
+	effect = {
+		factory_goods_throughput = { ammunition = 0.10 }
+		factory_goods_throughput = { artillery1 = 0.10 }
+		factory_goods_throughput = { explosives = 0.10 }
+	}
+}
+refrigerator_technology = {
+	limit = {
+		assembly_line = 1
+		literacy = 0.50
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.50 }
+		}
+		modifier = {
+			factor = 2
+			invention = food_packing_system
+		}
+		modifier = {
+			factor = 2
+			integral_rail_system = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { cattle = 0.10 }
+		factory_goods_throughput = { fish = 0.10 }
+		factory_goods_throughput = { fruit = 0.10 }
+	}
+}
+chainsaw = {
+	limit = {
+		assembly_line = 1
+		literacy = 0.50
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.50 }
+		}
+		modifier = {
+			factor = 6
+			combustion_engine = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { timber = 0.10 }
+		factory_goods_throughput = { tropical_wood = 0.10 }
+	}
+}
+#shift_work
+transport_automation = {
+	limit = { shift_work = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			integral_rail_system = 1
+		}
+		modifier = {
+			factor = 2
+			electricity = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { machine_parts = 0.10 }
+		factory_goods_throughput = { electric_gear = 0.10 }
+		factory_goods_throughput = { luxury_clothes = 0.10 }
+		factory_goods_throughput = { regular_clothes = 0.10 }
+	}
+}
+high_precision_optics = {
+	limit = {
+		shift_work = 1
+		OR = {
+			AND = {
+				literacy = 0.7
+				tech_school = prussian_tech_school
+			}
+			AND = {
+				literacy = 0.7
+				GER = { NOT = { invention = high_precision_optics }}
+				year = 1930
+			}
+			has_country_flag = high_precision_optics_patent
+		}
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 10
+			tech_school = prussian_tech_school
+			literacy = 0.70
+		}
+		modifier = {
+			factor = 10
+			year = 1930
+			GER = { NOT = { invention = high_precision_optics } }
+			literacy = 0.70
+		}
+		modifier = {
+			factor = 100
+			has_country_flag = high_precision_optics_patent
+		}
+	}
+	effect = {
+		infantry = {
+			attack = 2
+			defence = 2
+			supply_consumption = 0.05
+		}
+		irregular = {
+			attack = 1
+			defence = 1
+			supply_consumption = 0.05
+		}
+		col_inf = {
+			attack = 1
+			defence = 1
+			supply_consumption = 0.05
+		}
+		storm_troopers = {
+			attack = 2
+			defence = 1
+			supply_consumption = 0.05
+		}
+		tank = {
+			attack = 5
+			defence = 5
+			supply_consumption = 0.05
+		}
+		cruiser = {
+			gun_power = 5
+			supply_consumption = 0.05
+		}
+		battleship = {
+			gun_power = 10
+			supply_consumption = 0.05
+		}
+		dreadnought = {
+			gun_power = 15
+			supply_consumption = 0.05
+		}
+	}
+}
+barbwire = {
+	limit = {
+		shift_work = 1
+		literacy = 0.50
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			advanced_metallurgy = 1
+		}
+		modifier = {
+			factor = 2
+			hydrometallurgy = 1
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.50 }
+		}
+	}
+	effect = {
+		dig_in_cap = 1
+		army_base = { supply_consumption = 0.05 }
+		factory_goods_throughput = { cattle = 0.10 }
+	}
+}
+mass_production_helmets = {
+	limit = {
+		shift_work = 1
+		OR = {
+			AND = {
+				war_exhaustion = 30
+				war = yes
+			}
+			any_greater_power = { invention = mass_production_helmets }
+		}
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 25
+			war_exhaustion = 30
+			is_greater_power = yes
+			any_greater_power = { war_with = THIS }
+		}
+		modifier = {
+			factor = 1
+			any_greater_power = { invention = mass_production_helmets }
+		}
+	}
+	effect = {
+		soldier_to_pop_loss = 0.03
+		land_attrition = -0.05
+	}
+}
+#modern_automation
+automated_electric_drive = {
+	limit = { modern_automation = 1 }
+	chance = {
+		base = 4
+		modifier = {
+			factor = 2
+			invention = transport_automation
+		}
+	}
+	effect = {
+		factory_goods_throughput = { automobiles = 0.10 }
+		factory_goods_throughput = { barrels = 0.10 }
+		factory_goods_throughput = { aeroplanes = 0.10 }
+		factory_goods_throughput = { military_aeroplanes = 0.10 }
+	}
+}
+electric_saw = {
+	limit = {
+		modern_automation = 1
+		literacy = 0.70
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.70 }
+		}
+		modifier = {
+			factor = 6
+			electric_machine = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { timber = 0.10 }
+		factory_goods_throughput = { tropical_wood = 0.10 }
+	}
+}
+#industial_robotization
+industrial_robots = {
+	limit = { industial_robotization = 1 }
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			invention = automated_electric_drive
+			invention = transport_automation
+			invention = transistor_computer
+		}
+	}
+	effect = {
+		factory_throughput = 0.10
+	}
+}
+#clean_coal
+pit_coal = {
+	limit = { clean_coal = 1 }
+	chance = {
+		base = 6
+		modifier = {
+			factor = 3
+			practical_steam_engine = 1
+		}
+		modifier = {
+			factor = 3
+			early_railroad = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coal = 0.20 }
+	}
+}
+coke = {
+	limit = { clean_coal = 1 }
+	chance = {
+		base = 6
+		modifier = {
+			factor = 3
+			invention = pit_coal
+		}
+		modifier = {
+			factor = 3
+			early_railroad = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coking_coal = 0.05 }
+	}
+}
+#ferrous_metallurgy
+secondary_processing_of_metals = {
+	limit = { ferrous_metallurgy = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			thermodynamics = 1
+		}
+		modifier = {
+			factor = 2
+			early_railroad = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { iron = 0.05 }
+	}
+}
+rolling = {
+	limit = { ferrous_metallurgy = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = continuous_casting
+		}
+		modifier = {
+			factor = 2
+			mechanical_production = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { steel = 0.05 }
+	}
+}
+continuous_casting = {
+	limit = { ferrous_metallurgy = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = pit_coal
+		}
+		modifier = {
+			factor = 2
+			mechanical_production = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { steel = 0.05 }
+	}
+}
+#cheap_iron
+advanced_ore_roasting_processes = {
+	limit = { cheap_iron = 1 }
+	chance = {
+		base = 2
+		modifier = {	
+			factor = 2
+			interchangeable_parts = 1
+		}
+		modifier = {
+			factor = 2
+			inorganic_chemistry = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { iron = 0.05 }
+	}
+}
+advanced_ore_grinding_processes = {
+	limit = { cheap_iron = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = advanced_ore_roasting_processes
+		}
+		modifier = {
+			factor = 2
+			organized_factories = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { iron = 0.05 }
+	}
+}
+advanced_ore_smelting_processes = {
+	limit = { cheap_iron = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = advanced_ore_grinding_processes
+		}
+		modifier = {
+			factor = 2
+			iron_railroad = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { iron = 0.05 }
+	}
+}
+bessemer_steel = {
+	limit = { cheap_iron = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			high_n_low_pressure_steam_engines = 1
+		}
+		modifier = {
+			factor = 2
+			steel_breech_loaded_artillery = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { steel = 0.05 }
+	}
+}
+#cheap_steel
+martin_steel = {
+	limit = { cheap_steel = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = bessemer_steel
+		}
+		modifier = {
+			factor = 2
+			steel_railroad = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { steel = 0.05 }
+	}
+}
+thomas_steel = {
+	limit = { cheap_steel = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = martin_steel
+		}
+		modifier = {
+			factor = 2
+			advanced_metallurgy = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { steel = 0.05 }
+	}
+}
+ferroconcrete = {
+	limit = {
+		cheap_steel = 1
+		literacy = 0.60
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			semi_automatization = 1
+		}
+		modifier = {
+			factor = 5
+			organic_chemistry = 1
+		}
+		modifier = {
+			factor = 5
+			steam_turbine = 1
+		}
+		modifier = {
+			factor = -15
+			NOT = { literacy = 0.60 }
+		}
+	}
+	effect = {
+	}
+}
+#advanced_metallurgy
+electric_rolling_techniques = {
+	limit = { advanced_metallurgy = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			electricity = 1
+		}
+		modifier = {
+			factor = 2
+			invention = thomas_steel
+		}
+	}
+	effect = {
+		factory_goods_throughput = { steel = 0.05 }
+	}
+}
+steel_alloys = {
+	limit = { advanced_metallurgy = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = thomas_steel
+		}
+		modifier = {
+			factor = 2
+			inorganic_chemistry = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { steel = 0.05 }
+	}
+}
+ñlaus_process = {
+	limit = {
+		advanced_metallurgy = 1
+		literacy = 0.70
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			combustion_engine = 1
+		}
+		modifier = {
+			factor = 2
+			assembly_line = 1
+		}
+		modifier = {
+			factor = 2
+			organic_chemistry = 1
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.70 }
+		}
+	}
+	effect = {
+                activate_building = ñlaus_process_factory
+	}
+}
+structural_steel = {
+	limit = {
+		advanced_metallurgy = 1
+		literacy = 0.70
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			invention = electric_rolling_techniques
+		}
+		modifier = {
+			factor = 5
+			invention = steel_alloys
+		}
+		modifier = {
+			factor = 5
+			invention = ferroconcrete
+		}
+		modifier = {
+			factor = -15
+			NOT = { literacy = 0.70 }
+		}
+	}
+	effect = {
+		cruiser = {
+			hull = 25
+		}
+		dreadnought = {
+			hull = 50
+		}
+		battleship = {
+			hull = 100
+		}
+	}
+}
+#hydrometallurgy
+stainless_steel = {
+	limit = { hydrometallurgy = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			electrical_power_generation = 1
+		}
+		modifier = {
+			factor = 2
+			assembly_line = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { steel = 0.05 }
+	}
+}
+#electrometallurgy
+induction_melting = {
+	limit = { electrometallurgy = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			electrical_power_generation = 1
+		}
+		modifier = {
+			factor = 2
+			invention = automated_electric_drive
+		}
+	}
+	effect = {
+		factory_goods_throughput = { steel = 0.05 }
+	}
+}
+electric_arc_smelting = {
+	limit = { electrometallurgy = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			electrical_power_generation = 1
+		}
+		modifier = {
+			factor = 2
+			invention = automated_electric_drive
+		}
+	}
+	effect = {
+		factory_goods_throughput = { steel = 0.05 }
+	}
+}
+ore_restoration_melting = {
+	limit = { electrometallurgy = 1 }
+	chance = {
+		base = 1
+		modifier = {
+			factor = 2
+			invention = electric_arc_smelting
+		}
+		modifier = {
+			factor = 2
+			invention = induction_melting
+		}
+	}
+	effect = {
+		factory_goods_throughput = { iron = 0.05 }
+	}
+}
+#animal-powered_railroad
+locomotives_industry = {
+	limit = {
+		animal-powered_railroad = 1
+		literacy = 0.30
+	}
+	chance = {
+		base = 20
+		modifier = {
+			factor = -20
+                        NOT = { literacy = 0.30 }
+		}
+	}
+	effect = {
+		activate_building = locomotives_factory
+	}
+}
+#experimental_railroad
+#early_railroad
+#iron_railroad
+#steel_railroad
+#integral_rail_system
+#limited_access_roads
+#modern_infrastructure
+#diesel_locomotives
+#electric_locomotives
+#thermodynamics
+nonequilibrium_processes = {
+	limit = { thermodynamics = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = analytical_theory_of_heat
+		}
+		modifier = {
+			factor = 2
+			invention = thermodynamics_phases
+		}
+	}
+	effect = {
+		factory_goods_throughput = { fertilizer = 0.10 }
+	}
+}
+thermodynamics_phases = {
+	limit = { thermodynamics = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = nonequilibrium_processes
+		}
+		modifier = {
+			factor = 2
+			invention = analytical_theory_of_heat
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coking_coal = 0.05 }
+	}
+}
+analytical_theory_of_heat = {
+	limit = { thermodynamics = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = nonequilibrium_processes
+		}
+		modifier = {
+			factor = 2
+			invention = thermodynamics_phases
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coking_coal = 0.05 }
+	}
+}
+steam_power_plants = {
+	limit = { thermodynamics = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			experimental_steam_engine = 1
+		}
+		modifier = {
+			factor = 2
+			clean_coal = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coking_coal = 0.05 }
+	}
+}
+pyrite_roasting = {
+	limit = { thermodynamics = 1 }
+	chance = {
+		base = 10
+	}
+	effect = {
+		activate_building = pyrite_roasting_factory
+	}
+}
+#medicine
+combat_medicine = {
+	limit = { medicine = 1 }
+	chance = {
+		base = 1
+		modifier = {
+			factor = 1
+			army_professionalism = 1
+		}
+		modifier = {
+			factor = 1
+			improved_communication_systems = 1
+		}
+		modifier = {
+			factor = 1
+			mechanical_production = 1
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+	}
+	effect = {
+		shared_prestige = 50
+	}
+}
+vaccination = {
+	limit = { medicine = 1 }
+	chance = {
+		base = 1
+		modifier = {
+			factor = 1
+			materialism = 1
+		}
+		modifier = {
+			factor = 1
+			stock_exchange = 1
+		}
+		modifier = {
+			factor = 1
+			mechanical_production = 1
+		}
+		modifier = {
+			factor = 1
+			ferrous_metallurgy = 1
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+	}
+	effect = {
+	}
+}
+chemotherapy = {
+	limit = { medicine = 1 }
+	chance = {
+		base = 1
+		modifier = {
+			factor = 1
+			empiricism = 1
+		}
+		modifier = {
+			factor = 1
+			market_structure = 1
+		}
+		modifier = {
+			factor = 1
+			mechanical_production = 1
+		}
+		modifier = {
+			factor = 1
+			cheap_iron = 1
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+	}
+	effect = {
+		shared_prestige = 50
+	}
+}
+genetics:_heredity = {
+	limit = { medicine = 1 }
+	chance = {
+		base = 1
+		modifier = {
+			factor = 1
+			inorganic_chemistry = 1
+		}
+		modifier = {
+			factor = 1
+			functionalism = 1
+		}
+		modifier = {
+			factor = 1
+			mechanical_production = 1
+		}
+		modifier = {
+			factor = 1
+			cheap_iron = 1
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+	}
+	effect = {
+		shared_prestige = 50
+	}
+}
+clinical_thermometers_and_binaural_stethoscopes = {
+	limit = { medicine = 1 }
+	chance = {
+		base = 1
+		modifier = {
+			factor = 1
+			inorganic_chemistry = 1
+		}
+		modifier = {
+			factor = 1
+			organized_factories = 1
+		}
+		modifier = {
+			factor = 1
+			mechanical_production = 1
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+	}
+	effect = {
+		shared_prestige = 50
+	}
+}
+prophylaxis_against_malaria = {
+	limit = { 
+		medicine = 1
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 3
+			any_greater_power = { invention = prophylaxis_against_malaria }
+		}
+		modifier = {
+			factor = 7
+			any_owned_province = { terrain = jungle }
+		}
+	}
+	effect = {
+		colonial_life_rating = -5
+	}
+}
+pressure_chambers_for_thorax_surgery = {
+	limit = { medicine = 1 }
+	chance = {
+		base = 1
+		modifier = {
+			factor = 1
+			mechanical_production = 1
+		}
+		modifier = {
+			factor = 1
+			cheap_iron = 1
+		}
+		modifier = {
+			factor = 1
+			inorganic_chemistry = 1
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+	}
+	effect = {
+		shared_prestige = 50
+	}
+}
+#inorganic_chemistry
+artificial_fertilizers = {
+	limit = {
+		inorganic_chemistry = 1
+		literacy = 0.40
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			interchangeable_parts = 1
+		}
+		modifier = {
+			factor = 2
+			invention = hussey_n_mccormicks_reaping_machine
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.40 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { fertilizer = 0.10 }
+		factory_goods_throughput = { grain = 0.10 }
+		factory_goods_throughput = { cotton = 0.10 }
+		factory_goods_throughput = { fruit = 0.10 }
+		factory_goods_throughput = { dye = 0.10 }
+		factory_goods_throughput = { rubber = 0.10 }
+		factory_goods_throughput = { tobacco = 0.10 }
+		factory_goods_throughput = { tea = 0.10 }
+		factory_goods_throughput = { coffee = 0.10 }
+	}
+}
+gaslights = {
+	limit = {
+		inorganic_chemistry = 1
+		literacy = 0.50
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = patent
+		}
+		modifier = {
+			factor = 2
+			investment_banks = 1
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.50 }
+		}
+	}
+	effect = {
+		factory_throughput = 0.05
+	}
+}
+nitroglycerin = {
+	limit = {
+		inorganic_chemistry = 1
+		literacy = 0.50
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			military_statistics = 1
+		}
+		modifier = {
+			factor = 2
+			scientific_management = 1
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.50 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coal = 0.10 }
+		factory_goods_throughput = { iron_ore = 0.10 }
+		factory_goods_throughput = { sulphur = 0.10 }
+		activate_building = explosives_nitroglycerin_factory
+	}
+}
+synthetic_dye = {
+	limit = {
+		OR = {
+			AND = {
+				literacy = 0.50
+				tech_school = prussian_tech_school
+			}
+			AND = {
+				literacy = 0.50
+				GER = { NOT = { invention = synthetic_dye } }
+				year = 1900
+			}
+			has_country_flag = synthetic_dye_patent
+		}
+		inorganic_chemistry = 1
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 20
+			tech_school = prussian_tech_school
+			literacy = 0.50
+		}
+		modifier = {
+			factor = 10
+			year = 1900
+			GER = { NOT = { invention = synthetic_dye } }
+			literacy = 0.50
+		}
+		modifier = {
+			factor = 100
+			has_country_flag = synthetic_dye_patent
+		}
+	}
+	effect = {
+		activate_building = dye_factory 
+	}
+}
+cracking = {
+	limit = {
+		OR = {
+			has_country_flag = cracking_patent
+			literacy = 0.60
+		}
+		inorganic_chemistry = 1
+	}
+	chance = {
+		base = 10
+		modifier = {
+			factor = -20
+			NOT = { OR = {
+				literacy = 0.60
+				has_country_flag = cracking_patent
+			}}
+		}
+		modifier = {
+			factor = 100
+			has_country_flag = cracking_patent
+		}
+		modifier = {
+			factor = 5
+			invention = oil_pumping_machinery
+		}
+		modifier = {
+			factor = 5
+			time_saving_measures = 1
+		}
+	}
+	effect = {
+		activate_building = fuel_refinery
+	}
+}
+fuel_oil_using = {
+	limit = {
+		invention = cracking
+		inorganic_chemistry = 1
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 100
+			invention = invention = cracking
+		}
+	}
+	effect = {
+		activate_building = oil_energy_factory
+	}
+}
+#organic_chemistry
+chemical_wood_pulp_process = {
+	limit = { organic_chemistry = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			semi_automatization = 1
+		}
+		modifier = {
+			factor = 2
+			invention = industrial_rnd_investments
+		}
+	}
+	effect = {
+		factory_goods_throughput = { paper = 0.40 }
+	}
+}
+dynamite = {
+	limit = {
+		organic_chemistry = 1
+		literacy = 0.70
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			investment_banks = 1
+		}
+		modifier = {
+			factor = 2
+			semi_automatization = 1
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.70 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coal = 0.10 }
+		factory_goods_throughput = { iron_ore = 0.10 }
+		factory_goods_throughput = { sulphur = 0.10 }
+	}
+}
+rubber_vulcanization = {
+	limit = {
+		organic_chemistry = 1
+		literacy = 0.50
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 4
+			business_banks = 1
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.50 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { rubber = 0.20 }
+	}
+}
+catalytic_fermentative_process = {
+	limit = { organic_chemistry = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			business_banks = 1
+		}
+		modifier = {
+			factor = 2
+			scientific_management = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = { wine = 0.05 }
+	}
+}
+carbon_soil_enrichment = {
+	limit = {
+		organic_chemistry = 1
+		literacy = 0.50
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = artificial_fertilizers
+		}
+		modifier = {
+			factor = 2
+			invention = capital_for_investors
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.50 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { fertilizer = 0.10 }
+		factory_goods_throughput = { grain = 0.10 }
+		factory_goods_throughput = { cotton = 0.10 }
+		factory_goods_throughput = { fruit = 0.10 }
+		factory_goods_throughput = { dye = 0.10 }
+		factory_goods_throughput = { rubber = 0.10 }
+		factory_goods_throughput = { tobacco = 0.10 }
+		factory_goods_throughput = { tea = 0.10 }
+		factory_goods_throughput = { coffee = 0.10 }
+	}
+}
+aerial_bacteria_and_antiseptic_principle = {
+	limit = { organic_chemistry = 1 }
+	chance = {
+		base = 1
+		modifier = {
+			factor = 1
+			biologism = 1
+		}
+		modifier = {
+			factor = 1
+			analytic_philosophy = 1
+		}
+		modifier = {
+			factor = 1
+			semi_automatization = 1
+		}
+		modifier = {
+			factor = 1
+			cheap_steel = 1
+		}
+		modifier = {
+			factor = 1
+			capital_scope = { continent = europe }
+		}
+	}
+	effect = {
+	}
+}
+#electricity
+x_rays = {
+	limit = {
+		electricity = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+	                invention = edison_light_bulb
+		}
+	}
+	effect = {
+	}
+}
+edison_light_bulb = {
+	limit = {
+		electricity = 1
+		OR = {
+			literacy = 0.70
+			has_country_flag = electric_gear_patent
+		}
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			literacy = 0.75
+                        assembly_line = 1
+		}
+		modifier = {
+			factor = 5
+			electrical_power_generation = 1
+                        assembly_line = 1
+			literacy = 0.70
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = { invention = edison_light_bulb }
+			literacy = 0.75
+		}
+		modifier = {
+			factor = 100
+			has_country_flag = electric_gear_patent
+		}
+	}
+	effect = {
+		activate_building = electric_gear_factory 
+	}
+}
+tnt_explosives = {
+	limit = {
+		electricity = 1
+		literacy = 0.70
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			semi_automatization = 1
+		}
+		modifier = {
+			factor = 2
+			cheap_steel = 1
+		}
+		modifier = {
+			factor = -6
+			NOT = { literacy = 0.70 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { coal = 0.10 }
+		factory_goods_throughput = { iron_ore = 0.10 }
+		factory_goods_throughput = { sulphur = 0.10 }
+		activate_building = explosives_tnt_factory
+	}
+}
+bell_n_greys_telephones = {
+	limit = {
+		electricity = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			electrical_power_generation = 1
+			invention = edison_light_bulb
+		}
+		modifier = {
+			factor = 5
+			invention = telegraph_coordination
+			invention = edison_light_bulb
+		}
+		modifier = {
+			factor = 5
+			invention = edison_light_bulb
+		}		
+                modifier = {
+			factor = 10
+			any_greater_power = { invention = bell_n_greys_telephones }
+			invention = edison_light_bulb
+		}
+	}
+	effect = {
+		activate_building = telephone_factory 
+	}
+}
+electrical_lighting = {
+	limit = {
+		electricity = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			invention = edison_light_bulb
+		}
+		modifier = {
+			factor = 5
+			invention = gaslights
+		}
+		modifier = {
+			factor = 5
+			electrical_power_generation = 1
+		}
+		modifier = {
+			factor = -15
+                        NOT = { invention = edison_light_bulb }
+		}
+	}
+	effect = {
+		factory_throughput = 0.05
+	}
+}
+vacuum_tube = {
+	limit = {
+		electricity = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			invention = edison_light_bulb
+		}
+		modifier = {
+			factor = 5
+			electrical_power_generation = 1
+			invention = edison_light_bulb
+		}			
+	}
+	effect = {
+		factory_goods_throughput = { radio = 0.05 }
+		factory_goods_throughput = { electric_gear = 0.05 }
+	}
+}
+telephone_switchboard = {
+	limit = {
+		electricity = 1
+		invention = edison_light_bulb
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 5
+			invention = bell_n_greys_telephones
+		}
+		modifier = {
+			factor = 5
+			invention = edison_light_bulb
+		}			
+	}
+	effect = {
+		factory_goods_throughput = { telephones = 0.05 }
+	}
+}
+#synthetic_polymers
+rayon = {
+	limit = {
+		synthetic_polymers = 1
+		literacy = 0.75
+	}
+	chance = {
+		base = 1
+		modifier = {
+			factor = 2
+			organizational_development = 1
+		}
+		modifier = {
+			factor = 2
+			mutual_funds = 1
+		}
+		modifier = {
+			factor = -2
+			shift_work = 1
+		}
+		modifier = {
+			factor = -7
+                        NOT = { literacy = 0.75 }
+		}
+	}
+	effect = {
+                activate_building = silk_factory
+	}
+}
+bakelite = {
+	limit = {
+		synthetic_polymers = 1
+		literacy = 0.75
+	}
+	chance = {
+		base = 1
+		modifier = {
+			factor = 2
+			shift_work = 1
+		}
+		modifier = {
+			factor = 2
+			invention = bell_n_greys_telephones
+		}
+		modifier = {
+			factor = 2
+			time_saving_measures = 1
+		}
+		modifier = {
+			factor = -7
+			NOT = { literacy = 0.75 }
+		}
+	}
+	effect = {
+		factory_goods_throughput = { radio = 0.05 }
+		factory_goods_throughput = { telephones = 0.05 }
+		factory_goods_throughput = { electric_gear = 0.05 }
+		factory_goods_throughput = { automobiles = 0.05 }
+	}
+}
+synthetic_rubber = {
+	limit = {
+		synthetic_polymers = 1
+		literacy = 0.75
+	}
+	chance = {
+		base = 1
+		modifier = {
+			factor = 2
+			shift_work = 1
+		}
+		modifier = {
+			factor = 2
+			invention = rubber_vulcanization
+		}
+		modifier = {
+			factor = 2
+			economic_responsibility = 1
+		}
+		modifier = {
+			factor = -7
+			NOT = { literacy = 0.75 }
+		}
+	}
+	effect = {
+                activate_building = rubber_factory
+	}
+}
+#quantum_chemistry
+computers = {
+	limit = {
+		quantum_chemistry = 1
+		literacy = 0.90
+		industrial_score = 3000
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			electric_machine = 1
+		}
+		modifier = {
+			factor = 2
+			modern_automation = 1
+		}
+		modifier = {
+			factor = 2
+			behaviorism = 1
+		}
+		modifier = {
+			factor = 2
+			radar_stations = 1
+		}
+		modifier = {
+			factor = 2
+			modern_communication_system = 1
+		}
+		modifier = {
+			factor = -10
+			NOT = { literacy = 0.90 }
+		}
+		modifier = {
+			factor = -10
+			NOT = { industrial_score = 3000 }
+		}
+	}
+	effect = {
+		increase_research = 1
+	}
+}
+#pharmaceutics
+penicillium = {
+	limit = {
+		pharmaceutics = 1
+		literacy = 0.90
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 1
+                        literacy = 0.90
+		}
+		modifier = {
+			factor = 10
+                        literacy = 0.95
+		}
+	}
+	effect = {
+		#pop_growth = 0.00012
+	}
+}
+#transistors
+transistor_computer = {
+	limit = {
+		transistors = 1
+		literacy = 0.98
+		industrial_score = 5000
+	}
+
+	chance = {
+		base = 0
+		modifier = {
+			factor = 3
+			industial_robotization = 1
+		}
+		modifier = {
+			factor = 3
+			advanced_ore_refining = 1
+		}
+		modifier = {
+			factor = 3
+			pragmatism = 1
+		}
+		modifier = {
+			factor = 3
+			post_industrial_society = 1
+		}
+		modifier = {
+			factor = -12
+			NOT = { literacy = 0.98 }
+		}
+		modifier = {
+			factor = -12
+			NOT = { industrial_score = 5000 }
+		}
+	}
+
+	effect = {
+		increase_research = 1
+	}
+}

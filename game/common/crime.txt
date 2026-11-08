@@ -1,0 +1,81 @@
+anarchic_bomb_throwers = {
+	pop_militancy_modifier = 0.15
+	pop_consciousness_modifier = 0.15
+	local_factory_output = -0.30
+	local_RGO_output = -0.60
+	icon = 1
+
+	trigger = {
+	}
+}
+citizen_guard = {
+	pop_militancy_modifier = 0.08
+	local_factory_output = -0.30
+	local_RGO_output = -0.60
+	icon = 2
+
+	trigger = {
+	}
+}
+immoral_business = {
+	active = yes
+	pop_militancy_modifier = 0.08
+	local_factory_output = -0.15
+	local_RGO_output = -0.30
+	icon = 3
+
+	trigger = {
+	}
+}
+machine_politics = {
+	active = yes
+	boost_strongest_party = 5.0
+	pop_consciousness_modifier = 0.08
+	local_factory_output = -0.15
+	local_RGO_output = -0.30
+	icon = 4
+
+	trigger = {
+	}
+}
+mafia = {
+	active = yes
+	pop_militancy_modifier = 0.08
+	local_factory_output = -0.25
+	local_RGO_output = -0.45
+	icon = 5
+
+	trigger = {
+	}
+}
+rotten_boroughs = {
+	active = yes
+	number_of_voters = 3.0	#triple voters.
+	pop_consciousness_modifier = 0.08
+	local_factory_output = -0.15
+	local_RGO_output = -0.30
+	icon = 6
+
+	trigger = {
+	}
+}
+spoil_system = {
+	active = yes
+	pop_militancy_modifier = 0.03
+	local_factory_output = -0.15
+	local_RGO_output = -0.30
+	icon = 7
+
+	trigger = {
+	}
+}
+terrorist_cells = {
+	pop_militancy_modifier = 0.15
+	pop_consciousness_modifier = 0.15
+	local_factory_output = -0.30
+	local_RGO_output = -0.60
+	icon = 8
+
+	trigger = {
+	}
+}

@@ -1,0 +1,19 @@
+army = {
+	name = "Army of Assam"
+	location = 1258
+	regiment = {
+		name = "Assam Infantry"
+		type = infantry
+		home = 1258
+	}
+	regiment = {
+		name = "Assam Infantry"
+		type = infantry
+		home = 1258
+	}
+	regiment = {
+		name = "Assam Infantry"
+		type = infantry
+		home = 1258
+	}
+}

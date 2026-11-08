@@ -1,0 +1,729 @@
+political_decisions = {
+	egyptological_excavations = {
+		potential = {
+			civilized = yes
+			exists = EGY
+			1767 = { owned_by = EGY }
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = tutankhamun_found
+				has_country_modifier = egyptian_excavations
+				tag = EGY
+				any_owned_province = { has_building = selector }
+			}
+		}
+
+		allow = {
+			money = 100000
+			nationalism_n_imperialism = 1
+			is_greater_power = yes
+			NOT = { has_country_modifier = international_negotiations }
+		}
+
+		effect = {
+			money = -100000
+			EGY = { country_event = { id=19040 days=0 }}
+			add_country_modifier = { name = international_negotiations duration = 730 }
+		}
+	}
+	forced_egyptological_excavations = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = tutankhamun_found
+				has_country_modifier = egyptian_excavations
+				year = 1900
+				any_owned_province = { has_building = selector }
+			}
+			is_greater_power = yes
+			owns = 1767
+		}
+
+		allow = {
+			money = 75000
+			nationalism_n_imperialism = 1
+		}
+
+		effect = {
+			money = -75000
+			add_country_modifier = { name = egyptian_excavations duration = -1 }
+		}
+	}
+	westernize_nation = {
+		potential = {
+			year = 2000
+			NOT = {
+				tag = TKG
+				tag = CHI
+			}
+		}
+		allow = {
+			war = no
+			enlightenment_thought = 1
+			publishing_industry = 1
+			freedom_of_trade = 1
+			private_banks = 1
+			post_napoleonic_thought = 1
+			military_score = 50
+			prestige = 40
+		}
+		effect = {
+			civilized = yes
+			prestige = 25
+			remove_country_modifier = educational_reform
+			remove_country_modifier = military_reform
+			remove_country_modifier = western_influences
+			remove_country_modifier = uncivilized_isolationism
+			remove_country_modifier = sayings_of_the_dutch
+			remove_country_modifier = extraterritoriality_granted
+			any_owned = {
+				remove_province_modifier = western_presence
+				remove_province_modifier = foreign_smugglers
+				remove_province_modifier = foreign_trading_post
+				remove_province_modifier = local_opium_habit
+				remove_province_modifier = european_military_mission
+				remove_province_modifier = legation_quarter
+				remove_province_modifier = kettler_denkmal
+			}
+		}
+	}
+	invest_in_malaya = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = invested_in_malaya
+				any_owned_province = { has_building = selector }
+			}
+			colonial_nation = yes
+		}
+		allow = {
+			JOH = { all_core = { owned_by = THIS }}
+		}
+		effect = {
+			set_global_flag = invested_in_malaya
+			ENG_1384 = {
+				remove_province_modifier = mastered_region
+				add_province_modifier = { name = colonial_recruitment duration = 3650 }
+			}
+			JOH = { all_core = { remove_core = JOH }}
+		}
+	}
+	make_iran_a_puppet = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = iran_is_a_puppet_now
+				any_owned_province = { has_building = selector }
+			}
+			year = 1830
+			PER = {
+				exists = yes
+				is_independant = yes
+				ai = yes
+			}
+			is_greater_power = yes
+			capital_scope = { OR = { continent = europe continent = asia }}
+		}
+		allow = {
+			any_owned_province = { any_neighbor_province = { owned_by = PER }}
+			PER = { NOT = { part_of_sphere = yes }}
+			NOT = {
+				alliance_with = PER
+				relation = { who = PER value = 0 }
+				military_access = PER
+				badboy = 0.75
+			}
+		}
+		effect = {
+			badboy = 10
+			casus_belli = { target = PER type = make_puppet months = 1 }
+			war = { target = PER attacker_goal = { casus_belli = make_puppet }}
+			set_global_flag = iran_is_a_puppet_now
+		}
+		ai_will_do = { factor = 0 }
+	}
+	annex_iran = {
+		picture = make_iran_a_puppet
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = iran_was_annexed
+				any_owned_province = { has_building = selector }
+			}
+			PER = {
+				vassal_of = THIS
+				ai = yes
+			}
+			is_greater_power = yes
+		}
+		allow = {
+			PER = { capital_scope = { country_units_in_province = THIS }}
+			military_access = PER
+			alliance_with = PER
+			relation = { who = PER value = 200 }
+			NOT = { badboy = 0.5 }
+		}
+		effect = {
+			badboy = 20
+			PER = { annex_to = THIS }
+			any_owned = { limit = { is_core = PER } any_pop = { militancy = 9 }}
+			any_greater_power = { relation = { who = THIS value = -200 }}
+			set_global_flag = iran_was_annexed
+		}
+		ai_will_do = { factor = 0 }
+	}
+	buy_suez_canal_zone = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = you_have_tried_to_buy_suez_canal
+				any_owned_province = { has_building = selector }
+			}
+			EGY = {
+				exists = yes
+				is_independant = yes
+				owns = 1755
+			}
+		}
+		allow = {
+			EGY = { war = no }
+			money = 100000
+			nationalism_n_imperialism = 1
+			total_amount_of_ships = 100
+		}
+		effect = {
+			money = -100000
+			EGY = { country_event = 19385 }
+			set_country_flag = you_have_tried_to_buy_suez_canal
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { AND = {
+					tag = ENG
+					is_greater_power = yes
+					year = 1850
+				}}
+			}
+		}
+	}
+	build_kiel_canal = {
+		news = yes
+		news_desc_long = "kiel_canal_NEWS_LONG"
+		news_desc_medium = "kiel_canal_NEWS_MEDIUM"
+		news_desc_short = "kiel_canal_NEWS_SHORT"
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				is_canal_enabled = 1
+				369 = { has_province_modifier = building_kiel_canal }
+				any_owned_province = { has_building = selector }
+			}
+			owns = 369
+		}
+		allow = {
+                        money = 150000
+			369 = {
+				OR = {
+					is_core = THIS
+					is_colonial = yes
+				}
+			}
+			interchangeable_parts = 1
+		}
+		effect = {
+                        money = -150000
+			set_country_flag = building_kiel_canal_flag
+			369 = { add_province_modifier = { name = building_kiel_canal duration = 1825 }}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	build_suez_canal = {
+		news = yes
+		news_desc_long = "suez_canal_NEWS_LONG"
+		news_desc_medium = "suez_canal_NEWS_MEDIUM"
+		news_desc_short = "suez_canal_NEWS_SHORT"
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				is_canal_enabled = 2
+				1755 = { has_province_modifier = building_suez_canal }
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {
+        		money = 250000
+			owns = 1755
+			1755 = {
+				OR = {
+					is_core = THIS
+					is_colonial = yes
+				}
+			}
+			mechanical_production = 1
+		}
+		effect = {
+        		money = -250000
+			set_country_flag = building_suez_canal_flag
+			1755 = { add_province_modifier = { name = building_suez_canal duration = 3650 }}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	build_panama_canal = {
+		news = yes
+		news_desc_long = "panama_canal_NEWS_LONG"
+		news_desc_medium = "panama_canal_NEWS_MEDIUM"
+		news_desc_short = "panama_canal_NEWS_SHORT"
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				is_canal_enabled = 3
+				1723 = { has_province_modifier = building_panama_canal }
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {
+        		money = 400000
+			owns = 1723
+			1723 = {
+				OR = {
+					is_core = THIS
+					is_colonial = yes
+				}
+			}
+			semi_automatization = 1
+			invention = nitroglycerin
+			invention = prophylaxis_against_malaria
+		}
+		effect = {
+        		money = -400000
+			set_country_flag = building_panama_canal_flag
+			1723 = { add_province_modifier = { name = building_panama_canal duration = 3650 }}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	unconditional_surrender = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_modifier = surrendered_country
+				any_owned_province = { has_building = selector }
+			}
+        		war = yes
+		}
+		allow = {
+			any_owned_province = {
+				is_core = THIS
+				controller = {
+					ai = no
+					war_with = THIS
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = { name = surrendered_country duration = 365 }
+			random_owned = {
+				limit = {
+					is_core = THIS
+					controller = {
+						ai = no
+						war_with = THIS
+					}
+				}
+				controller = {
+					country_event = 19403
+				}
+			}
+			any_country = {
+				limit = { ai = no }
+				country_event = 19404
+			}
+			war_exhaustion = 50
+		}
+	        ai_will_do = { factor = 0 }
+	}
+	botanical_expedition = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = botanical_expedition_organized
+				has_global_flag = victoria_regina_found
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+		}
+		allow = {
+			money = 100000
+			year = 1830
+			is_greater_power = yes
+			any_owned_province = {
+				is_colonial = yes
+				terrain = jungle
+			}
+		}
+		effect = {
+			money = -100000
+			add_country_modifier = {
+				name = botanical_expedition_funded
+				duration = -1
+			}
+			any_country = {
+				limit = {
+					civilized = yes
+					rank = 14
+				}
+				country_event = 19022
+			}
+			set_country_flag = botanical_expedition_organized
+		}
+	        ai_will_do = { factor = 0 }
+	}
+	expedition_to_source_of_nile = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = expedition_to_nile_organized
+				has_global_flag = nile_discovered
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+			has_global_flag = victoria_regina_found
+		}
+		allow = {
+			money = 200000
+			year = 1860
+			OR = {
+				is_greater_power = yes
+				capital_scope = { continent = europe }
+			}
+		}
+		effect = {
+			money = -200000
+			add_country_modifier = {
+				name = expedition_to_source_of_nile_mod
+				duration = -1
+			}
+			set_country_flag = expedition_to_nile_organized
+		}
+	        ai_will_do = { factor = 0 }
+	}
+	congo_river_expedition = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = congo_river_expedition_organized
+				has_global_flag = congo_river_discovered
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+			has_global_flag = nile_discovered
+		}
+		allow = {
+			money = 300000
+			year = 1880
+			OR = {
+				is_greater_power = yes
+				capital_scope = { continent = europe }
+			}
+		}
+		effect = {
+			money = -300000
+			add_country_modifier = {
+				name = congo_river_expedition_mod
+				duration = -1
+			}
+			set_country_flag = congo_river_expedition_organized
+		}
+	        ai_will_do = { factor = 0 }
+	}
+	expedition_to_north_pole = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = expedition_to_north_pole_organized
+				has_global_flag = north_pole_discovered
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+			has_global_flag = congo_river_discovered
+		}
+		allow = {
+			money = 400000
+			year = 1890
+			OR = {
+				is_greater_power = yes
+				capital_scope = { continent = europe }
+			}
+		}
+		effect = {
+			money = -400000
+			add_country_modifier = {
+				name = expedition_to_north_pole_mod
+				duration = -1
+			}
+			set_country_flag = expedition_to_north_pole_organized
+		}
+	        ai_will_do = { factor = 0 }
+	}
+	expedition_to_south_pole = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = expedition_to_south_pole_organized
+				has_global_flag = south_pole_discovered
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+			has_global_flag = north_pole_discovered
+		}
+		allow = {
+			money = 500000
+			year = 1900
+			OR = {
+				is_greater_power = yes
+				capital_scope = { continent = europe }
+			}
+		}
+		effect = {
+			money = -500000
+			add_country_modifier = {
+				name = expedition_to_south_pole_mod
+				duration = -1
+			}
+			set_country_flag = expedition_to_south_pole_organized
+		}
+	        ai_will_do = { factor = 0 }
+	}
+	first_transatlantic_flight = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = first_transatlantic_flight_organized
+				has_global_flag = first_transatlantic_flight_completed
+				any_owned_province = { has_building = selector }
+			}
+			civilized = yes
+			has_global_flag = south_pole_discovered
+		}
+		allow = {
+			money = 600000
+			invention = wright_n_langleys_aeroplanes
+			year = 1915
+			OR = {
+				is_greater_power = yes
+				capital_scope = { continent = europe }
+			}
+		}
+		effect = {
+			money = -600000
+			add_country_modifier = {
+				name = first_transatlantic_flight_mod
+				duration = -1
+			}
+			set_country_flag = first_transatlantic_flight_organized
+		}
+		ai_will_do = { factor = 0 }
+	}
+	put_the_end_of_piracy = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = puted_algerian_piracy_to_the_end
+				tag = ALD
+				any_owned_province = { has_building = selector }
+			}
+			has_country_modifier = algerian_pirates
+		}
+		allow = {
+			civilized = yes
+			1700 = {
+				controlled_by = THIS
+				owned_by = THIS
+			}
+			ALD = {
+				OR = {
+					exists = no
+					NOT = { num_of_ports = 1 }
+				}
+			}
+		}
+		effect = {
+			prestige = 50
+			remove_country_modifier = algerian_pirates
+			set_global_flag = puted_algerian_piracy_to_the_end
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	breake_the_concert_of_europe = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = breakdown_of_the_concert_of_europe
+				any_owned_province = { has_building = selector }
+			}
+			has_country_modifier = concert_of_europe
+		}
+		allow = {
+			ideological_thought = 1
+			NOT = { badboy = 0.5 }
+		}
+		effect = {
+			badboy = 20
+			remove_country_modifier = concert_of_europe
+			any_country = {
+				limit = {
+					has_country_modifier = concert_of_europe
+				}
+				country_event = 19427
+			}
+			set_country_flag = breaking_of_the_concert_of_europe
+			set_global_flag = breakdown_of_the_concert_of_europe
+		}
+	        ai_will_do = { factor = 0 }
+	}
+	protect_bourgeois_property = {
+		picture = factories
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				private_property = enshrined
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				primary_culture = north_german
+				primary_culture = japanese
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					tag = GER
+					tech_school = prussian_tech_school
+				}
+				AND = {
+					tag = JAP
+					has_country_modifier = zaibatsu
+				}
+			}
+		}
+		effect = {
+			political_reform = enshrined
+		}
+	        ai_will_do = { factor = 1 }
+	}
+}

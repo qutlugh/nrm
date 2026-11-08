@@ -1,0 +1,7 @@
+owner = KAL
+controller = KAL
+add_core = HND
+add_core = PAK
+add_core = KAL
+trade_goods = coal
+life_rating = 35

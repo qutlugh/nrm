@@ -1,0 +1,50 @@
+political_decisions = {
+	mobilize_nrm_dec = {
+		alert = no
+		potential = {
+			NOT = {
+				has_country_modifier = unmobilised_country
+			}
+			OR = {
+				conscription = two_year_draft
+				conscription = one_year_draft
+			}
+			any_owned_province = {
+				any_pop = { has_pop_type = reservists }
+			}
+			civilized = yes
+		}
+		effect = {
+			any_pop = {
+				limit = { is_accepted_culture = yes }
+				militancy = 3
+			}
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					pop_type = reservists
+				}
+				pop_type = mobilized
+			}
+		}
+	        ai_will_do = { factor = 0 }
+	}
+	unmobilize_nrm_dec = {
+		alert = no
+		effect = {
+			any_pop = {
+				limit = { is_accepted_culture = yes }
+				militancy = -3
+			}
+			any_pop = {
+				limit = { pop_type = mobilized }
+				pop_type = reservists
+			}
+                        add_country_modifier = {
+				name = unmobilised_country
+				duration = 720
+			}
+		}
+	        ai_will_do = { factor = 0 }
+	}
+}

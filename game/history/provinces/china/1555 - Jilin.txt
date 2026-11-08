@@ -1,0 +1,5 @@
+owner = CHI
+controller = CHI
+add_core = MCK
+trade_goods = iron_ore
+life_rating = 30

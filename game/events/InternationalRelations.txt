@@ -1,0 +1,1016 @@
+########################################################## NRM Advisors ###################################################################################
+country_event = {
+
+	id = 400043
+
+	is_triggered_only=yes
+
+	title = "Прибытие военных советников!"
+	desc = "Правительство державы $FROMCOUNTRY$ решило отправить в нашу страну своих военных советников на 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                FROM = { country_event = 400044 }
+                add_country_modifier = { name = military_advisors_is_working duration = 1825 }
+        }
+
+	option = {
+		name = "Тяжело в учении, легко в бою!"
+	}
+}
+country_event = {
+
+	id = 400044
+
+	is_triggered_only=yes
+
+	title = "Военные советинки прибыли в точку назначения"
+	desc = "Наши военные советники прибыли целыми и невредимыми на военные базы страны $FROMCOUNTRY$, где они будут работать в течении 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                add_country_modifier = { name = has_sent_military_advisors duration = 1825 }
+        }
+
+	option = {
+		name = "Пусть работают"
+	}
+}
+country_event = {
+
+	id = 400045
+
+	is_triggered_only=yes
+
+	title = "Прибытие морских офицеров!"
+	desc = "Правительство державы $FROMCOUNTRY$ решило отправить в нашу страну своих морских офицеров на 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                FROM = { country_event = 400046 }
+                add_country_modifier = { name = navy_advisors_is_working duration = 1825 }
+        }
+
+	option = {
+		name = "Тяжело в учении, легко в бою!"
+	}
+}
+country_event = {
+
+	id = 400046
+
+	is_triggered_only=yes
+
+	title = "Морские офицеры прибыли в точку назначения"
+	desc = "Наши морские офицеры прибыли целыми и невредимыми на морские базы страны $FROMCOUNTRY$, где они будут работать в течении 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                add_country_modifier = { name = has_sent_navy_advisors duration = 1825 }
+        }
+
+	option = {
+		name = "Пусть работают"
+	}
+}
+country_event = {
+
+	id = 400047
+
+	is_triggered_only=yes
+
+	title = "Прибытие советников по экономике!"
+	desc = "Правительство державы $FROMCOUNTRY$ решило отправить в нашу страну своих экономистов на 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                FROM = { country_event = 400048 }
+                add_country_modifier = { name = economical_advisors_is_working duration = 1825 }
+        }
+
+	option = {
+		name = "Экономика - фундамент страны!"
+	}
+}
+country_event = {
+
+	id = 400048
+
+	is_triggered_only=yes
+
+	title = "Экономисты прибыли в точку назначения"
+	desc = "Наши экономисты прибыли целыми и невредимыми в министерство экономики страны $FROMCOUNTRY$, где они будут работать в течении 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                add_country_modifier = { name = has_sent_economical_advisors duration = 1825 }
+        }
+
+	option = {
+		name = "Пусть работают"
+	}
+}
+country_event = {
+
+	id = 400049
+
+	is_triggered_only=yes
+
+	title = "Прибытие промышленных советников!"
+	desc = "Правительство державы $FROMCOUNTRY$ решило отправить в нашу страну своих советников по промышленности на 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                FROM = { country_event = 400050 }
+                add_country_modifier = { name = industrial_advisors_is_working duration = 1825 }
+        }
+
+	option = {
+		name = "Нам необходима современная промышленность!"
+	}
+}
+country_event = {
+
+	id = 400050
+
+	is_triggered_only=yes
+
+	title = "Советники по промышленности прибыли в точку назначения"
+	desc = "Наши советники в области промышленности прибыли целыми и невредимыми на предприятия страны $FROMCOUNTRY$, где они будут работать в течении 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                add_country_modifier = { name = has_sent_industrial_advisors duration = 1825 }
+        }
+
+	option = {
+		name = "Пусть работают"
+	}
+}
+country_event = {
+
+	id = 400051
+
+	is_triggered_only=yes
+
+	title = "Прибытие советников по культуре!"
+	desc = "Правительство державы $FROMCOUNTRY$ решило отправить в нашу страну своих советников в области культуры на 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                FROM = { country_event = 400052 }
+                add_country_modifier = { name = culture_advisors_is_working duration = 1825 }
+        }
+
+	option = {
+		name = "Будем обучать наше население"
+	}
+}
+country_event = {
+
+	id = 400052
+
+	is_triggered_only=yes
+
+	title = "Советники по культуре прибыли в точку назначения"
+	desc = "Наши советники в области культуры прибыли целыми и невредимыми в министерство культуры страны $FROMCOUNTRY$, где они будут работать в течении 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                add_country_modifier = { name = has_sent_culture_advisors duration = 1825 }
+        }
+
+	option = {
+		name = "Пусть работают"
+	}
+}
+country_event = {
+
+	id = 400055
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	title = "Поставки военных припасов из державы $FROMCOUNTRY$"
+	desc = "$FROMCOUNTRY_ADJ$ правительство решило помочь нашей армии в военное время, поставив в нашу страну военные припасы."
+        picture = "lend_lease_image"
+
+        immediate = {
+		FROM = { military_supplies = -1000 }
+		military_supplies = 1000
+        }
+
+	option = {
+		name = "Спасибо!"
+	}
+}
+country_event = {
+
+	id = 400056
+
+	is_triggered_only = yes
+
+	title = "Поставки конвоя пароходов из державы $FROMCOUNTRY$"
+	desc = "$FROMCOUNTRY_ADJ$ правительство решило помочь нашему флота в военное время, поставив в нашу страну конвой пароходов."
+        picture = "lend_lease_image"
+
+        immediate = {
+		FROM = { steamer_convoy = -1000 }
+                steamer_convoy = 1000
+        }
+
+	option = {
+		name = "Спасибо!"
+	}
+}
+country_event = {
+
+	id = 4000566
+
+	is_triggered_only = yes
+
+	title = "Поставки морских припасов из державы $FROMCOUNTRY$"
+	desc = "$FROMCOUNTRY_ADJ$ правительство решило помочь нашему флоту в военное время, поставив в нашу страну морские припасы."
+        picture = "lend_lease_image"
+
+        immediate = {
+		FROM = { navy_supplies = -1000 }
+                navy_supplies = 1000
+        }
+
+	option = {
+		name = "Спасибо!"
+	}
+}
+country_event = {
+
+	id = 4000567
+
+	is_triggered_only = yes
+
+	title = "Поставки танков из державы $FROMCOUNTRY$"
+	desc = "$FROMCOUNTRY_ADJ$ правительство решило помочь нашей армии в военное время, поставив в нашу страну танки."
+        picture = "lend_lease_image"
+
+        immediate = {
+		FROM = { barrels = -1000 }
+                barrels = 1000
+        }
+
+	option = {
+		name = "Спасибо!"
+	}
+}
+country_event = {
+
+	id = 4000568
+
+	is_triggered_only = yes
+
+	title = "Поставки военной авации из державы $FROMCOUNTRY$"
+	desc = "$FROMCOUNTRY_ADJ$ правительство решило помочь нашей армии в военное время, поставив в нашу страну военную авиацию."
+        picture = "lend_lease_image"
+
+        immediate = {
+		FROM = { military_aeroplanes = -1000 }
+                military_aeroplanes = 1000
+        }
+
+	option = {
+		name = "Спасибо!"
+	}
+}
+country_event = {
+
+	id = 400058
+
+	is_triggered_only=yes
+
+	title = "Учёные прибыли в точку назначения"
+	desc = "Наши учёные прибыли в исследовательские лаборатории державы $FROMCOUNTRY$, где они будут работать в течении 5 лет."
+        picture = "advisors"
+
+        immediate = {
+                add_country_modifier = { name = has_sent_scientists duration = 1825 }
+        }
+
+	option = {
+		name = "Пусть работают"
+	}
+}
+country_event = {
+
+	id = 400073
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1850
+				has_country_modifier = military_advisors_is_working
+				NOT = { year = 1851 }
+			}
+			AND = {
+				year = 1870
+				has_country_modifier = military_advisors_is_working
+				NOT = { year = 1871 }
+			}
+			AND = {
+				year = 1900
+				has_country_modifier = military_advisors_is_working
+				NOT = { year = 1901 }
+			}
+			AND = {
+				year = 1915
+				has_country_modifier = military_advisors_is_working
+				NOT = { year = 1921 }
+			}
+			AND = {
+				year = 1930
+				has_country_modifier = military_advisors_is_working
+				NOT = { year = 1931 }
+			}
+			AND = {
+				year = 1940
+				has_country_modifier = military_advisors_is_working
+				NOT = { year = 1941 }
+			}
+			AND = {
+				year = 1955
+				has_country_modifier = military_advisors_is_working
+				NOT = { year = 1956 }
+			}
+		}
+        }
+
+	title = "Отзыв военных советников"
+	desc = "Страна, приславшая нам военных их советников, была вынуждена их отозвать ввиду того, что появились новые способы ведения войны на суше."
+        picture = "advisors"
+
+        immediate = {
+                remove_country_modifier = military_advisors_is_working
+        }
+
+	option = {
+		name = "Пусть присылают новых"
+	}
+}
+country_event = {
+
+	id = 400074
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1850
+				has_country_modifier = navy_advisors_is_working
+				NOT = { year = 1851 }
+			}
+			AND = {
+				year = 1870
+				has_country_modifier = navy_advisors_is_working
+				NOT = { year = 1871 }
+			}
+			AND = {
+				year = 1900
+				has_country_modifier = navy_advisors_is_working
+				NOT = { year = 1901 }
+			}
+			AND = {
+				year = 1915
+				has_country_modifier = navy_advisors_is_working
+				NOT = { year = 1921 }
+			}
+			AND = {
+				year = 1930
+				has_country_modifier = navy_advisors_is_working
+				NOT = { year = 1931 }
+			}
+			AND = {
+				year = 1940
+				has_country_modifier = navy_advisors_is_working
+				NOT = { year = 1941 }
+			}
+			AND = {
+				year = 1955
+				has_country_modifier = navy_advisors_is_working
+				NOT = { year = 1956 }
+			}
+		}
+        }
+
+	title = "Отзыв морских советников"
+	desc = "Страна, приславшая нам морских советников, была вынуждена их отозвать ввиду того, что появились новые способы ведения войны на море."
+        picture = "advisors"
+
+        immediate = {
+                remove_country_modifier = navy_advisors_is_working
+        }
+
+	option = {
+		name = "Пусть присылают новых"
+	}
+}
+country_event = {
+
+	id = 400075
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1850
+				has_country_modifier = economical_advisors_is_working
+				NOT = { year = 1851 }
+			}
+			AND = {
+				year = 1870
+				has_country_modifier = economical_advisors_is_working
+				NOT = { year = 1871 }
+			}
+			AND = {
+				year = 1900
+				has_country_modifier = economical_advisors_is_working
+				NOT = { year = 1891 }
+			}
+			AND = {
+				year = 1915
+				has_country_modifier = economical_advisors_is_working
+				NOT = { year = 1911 }
+			}
+			AND = {
+				year = 1930
+				has_country_modifier = economical_advisors_is_working
+				NOT = { year = 1926 }
+			}
+			AND = {
+				year = 1940
+				has_country_modifier = economical_advisors_is_working
+				NOT = { year = 1941 }
+			}
+			AND = {
+				year = 1955
+				has_country_modifier = economical_advisors_is_working
+				NOT = { year = 1956 }
+			}
+		}
+        }
+
+	title = "Отзыв экономических советников"
+	desc = "Страна, приславшая нам экономических советников, была вынуждена их отозвать ввиду того, что появились новые способы народного хозяйства."
+        picture = "advisors"
+
+        immediate = {
+                remove_country_modifier=economical_advisors_is_working
+        }
+
+	option = {
+		name = "Пусть присылают новых"
+	}
+}
+country_event = {
+
+	id = 400076
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1850
+				has_country_modifier = industrial_advisors_is_working
+				NOT = { year = 1851 }
+			}
+			AND = {
+				year = 1870
+				has_country_modifier = industrial_advisors_is_working
+				NOT = { year = 1871 }
+			}
+			AND = {
+				year = 1900
+				has_country_modifier = industrial_advisors_is_working
+				NOT = { year = 1891 }
+			}
+			AND = {
+				year = 1915
+				has_country_modifier = industrial_advisors_is_working
+				NOT = { year = 1911 }
+			}
+			AND = {
+				year = 1930
+				has_country_modifier = industrial_advisors_is_working
+				NOT = { year = 1926 }
+			}
+			AND = {
+				year = 1940
+				has_country_modifier = industrial_advisors_is_working
+				NOT = { year = 1941 }
+			}
+			AND = {
+				year = 1955
+				has_country_modifier = industrial_advisors_is_working
+				NOT = { year = 1956 }
+			}
+		}
+        }
+
+	title = "Отзыв промышленных советников"
+	desc = "Страна, приславшая нам промышленных советников, была вынуждена их отозвать ввиду того, что появились новые способы производства."
+        picture = "advisors"
+
+        immediate = {
+                remove_country_modifier = industrial_advisors_is_working
+        }
+
+	option = {
+		name = "Пусть присылают новых"
+	}
+}
+country_event = {
+
+	id = 400077
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1850
+				has_country_modifier = culture_advisors_is_working
+				NOT = { year = 1851 }
+			}
+			AND = {
+				year = 1870
+				has_country_modifier = culture_advisors_is_working
+				NOT = { year = 1871 }
+			}
+			AND = {
+				year = 1900
+				has_country_modifier = culture_advisors_is_working
+				NOT = { year = 1891 }
+			}
+			AND = {
+				year = 1915
+				has_country_modifier = culture_advisors_is_working
+				NOT = { year = 1911 }
+			}
+			AND = {
+				year = 1930
+				has_country_modifier = culture_advisors_is_working
+				NOT = { year = 1926 }
+			}
+			AND = {
+				year = 1940
+				has_country_modifier = culture_advisors_is_working
+				NOT = { year = 1941 }
+			}
+			AND = {
+				year = 1955
+				has_country_modifier = culture_advisors_is_working
+				NOT = { year = 1956 }
+			}
+		}
+        }
+
+	title = "Отзыв культурных советников"
+	desc = "Страна, приславшая нам культурных советников, была вынуждена их отозвать ввиду того, что появилась новая научная мысль."
+        picture = "advisors"
+
+        immediate = {
+                remove_country_modifier = culture_advisors_is_working
+        }
+
+	option = {
+		name = "Пусть присылают новых"
+	}
+}
+country_event = {
+
+	id = 400078
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1850
+				has_country_modifier = has_sent_military_advisors
+				NOT = { year = 1851 }
+			}
+			AND = {
+				year = 1870
+				has_country_modifier = has_sent_military_advisors
+				NOT = { year = 1871 }
+			}
+			AND = {
+				year = 1900
+				has_country_modifier = has_sent_military_advisors
+				NOT = { year = 1901 }
+			}
+			AND = {
+				year = 1915
+				has_country_modifier = has_sent_military_advisors
+				NOT = { year = 1916 }
+			}
+			AND = {
+				year = 1930
+				has_country_modifier = has_sent_military_advisors
+				NOT = { year = 1931 }
+			}
+			AND = {
+				year = 1940
+				has_country_modifier = has_sent_military_advisors
+				NOT = { year = 1941 }
+			}
+			AND = {
+				year = 1955
+				has_country_modifier = has_sent_military_advisors
+				NOT = { year = 1956 }
+			}
+		}
+        }
+
+	title = "Отзыв военных советников"
+	desc = "Мы отзываем своих военных советников ввиду того, что появились новые способы ведения войны на суше."
+        picture = "advisors"
+
+        immediate = {
+                remove_country_modifier = has_sent_military_advisors
+        }
+
+	option = {
+		name = "Будем обучаться по новой"
+	}
+}
+country_event = {
+
+	id = 400079
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1850
+				has_country_modifier = has_sent_navy_advisors
+				NOT = { year = 1851 }
+			}
+			AND = {
+				year = 1870
+				has_country_modifier = has_sent_navy_advisors
+				NOT = { year = 1871 }
+			}
+			AND = {
+				year = 1900
+				has_country_modifier = has_sent_navy_advisors
+				NOT = { year = 1901 }
+			}
+			AND = {
+				year = 1915
+				has_country_modifier = has_sent_navy_advisors
+				NOT = { year = 1916 }
+			}
+			AND = {
+				year = 1930
+				has_country_modifier = has_sent_navy_advisors
+				NOT = { year = 1931 }
+			}
+			AND = {
+				year = 1940
+				has_country_modifier = has_sent_navy_advisors
+				NOT = { year = 1941 }
+			}
+			AND = {
+				year = 1955
+				has_country_modifier = has_sent_navy_advisors
+				NOT = { year = 1956 }
+			}
+		}
+        }
+
+	title = "Отзыв морских советников"
+	desc = "Мы отзываем своих морских советников ввиду того, что появились новые способы ведения войны на море."
+        picture = "advisors"
+
+        immediate = {
+                remove_country_modifier = has_sent_navy_advisors
+        }
+
+	option = {
+		name = "Будем обучаться по новой"
+	}
+}
+country_event = {
+
+	id = 400080
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1850
+				has_country_modifier = has_sent_economical_advisors
+				NOT = { year = 1851 }
+			}
+			AND = {
+				year = 1870
+				has_country_modifier = has_sent_economical_advisors
+				NOT = { year = 1871 }
+			}
+			AND = {
+				year = 1900
+				has_country_modifier = has_sent_economical_advisors
+				NOT = { year = 1891 }
+			}
+			AND = {
+				year = 1915
+				has_country_modifier = has_sent_economical_advisors
+				NOT = { year = 1911 }
+			}
+			AND = {
+				year = 1930
+				has_country_modifier = has_sent_economical_advisors
+				NOT = { year = 1926 }
+			}
+			AND = {
+				year = 1940
+				has_country_modifier = has_sent_economical_advisors
+				NOT = { year = 1941 }
+			}
+			AND = {
+				year = 1955
+				has_country_modifier = has_sent_economical_advisors
+				NOT = { year = 1956 }
+			}
+		}
+        }
+
+	title = "Отзыв экономических советников"
+	desc = "Мы отзываем своих экономических советников ввиду того, что появились новые способы ведения народного хозяйства."
+        picture = "advisors"
+
+        immediate = {
+                remove_country_modifier = has_sent_economical_advisors
+        }
+
+	option = {
+		name = "Будем обучаться по новой"
+	}
+}
+country_event = {
+
+	id = 400081
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1850
+				has_country_modifier = has_sent_industrial_advisors
+				NOT = { year = 1851 }
+			}
+			AND = {
+				year = 1870
+				has_country_modifier = has_sent_industrial_advisors
+				NOT = { year = 1871 }
+			}
+			AND = {
+				year = 1900
+				has_country_modifier = has_sent_industrial_advisors
+				NOT = { year = 1891 }
+			}
+			AND = {
+				year = 1915
+				has_country_modifier = has_sent_industrial_advisors
+				NOT = { year = 1911 }
+			}
+			AND = {
+				year = 1930
+				has_country_modifier = has_sent_industrial_advisors
+				NOT = { year = 1926 }
+			}
+			AND = {
+				year = 1940
+				has_country_modifier = has_sent_industrial_advisors
+				NOT = { year = 1941 }
+			}
+			AND = {
+				year = 1955
+				has_country_modifier = has_sent_industrial_advisors
+				NOT = { year = 1956 }
+			}
+		}
+        }
+
+	title = "Отзыв промышленных советников"
+	desc = "Мы отзываем своих промышленных советников ввиду того, что появились новые способы производства."
+        picture = "advisors"
+
+        immediate = {
+                remove_country_modifier = has_sent_industrial_advisors
+        }
+
+	option = {
+		name = "Будем обучаться по новой"
+	}
+}
+country_event = {
+
+	id = 400082
+
+	trigger = {
+		OR = {
+			AND = {
+				year = 1850
+				has_country_modifier = has_sent_culture_advisors
+				NOT = { year = 1851 }
+			}
+			AND = {
+				year = 1870
+				has_country_modifier = has_sent_culture_advisors
+				NOT = { year = 1871 }
+			}
+			AND = {
+				year = 1900
+				has_country_modifier = has_sent_culture_advisors
+				NOT = { year = 1891 }
+			}
+			AND = {
+				year = 1915
+				has_country_modifier = has_sent_culture_advisors
+				NOT = { year = 1911 }
+			}
+			AND = {
+				year = 1930
+				has_country_modifier = has_sent_culture_advisors
+				NOT = { year = 1926 }
+			}
+			AND = {
+				year = 1940
+				has_country_modifier = has_sent_culture_advisors
+				NOT = { year = 1941 }
+			}
+			AND = {
+				year = 1955
+				has_country_modifier = has_sent_culture_advisors
+				NOT = { year = 1956 }
+			}
+		}
+        }
+
+	title = "Отзыв культурных советников"
+	desc = "Мы отзываем своих культурных советников ввиду того, что появилась новая научная мысль."
+        picture = "advisors"
+
+        immediate = {
+                remove_country_modifier = has_sent_culture_advisors
+        }
+
+	option = {
+		name = "Будем обучаться по новой"
+	}
+}
+country_event = {
+
+	id = 400083
+
+	is_triggered_only = yes
+
+	title = "Прибытие $FROMCOUNTRY_ADJ$ учёных!"
+	desc = "Правительство державы $FROMCOUNTRY$ решило оказать нам поддержку, отправив своих учёных на 5 лет в нашу страну."
+        picture = "edison"
+
+        immediate = {
+		FROM = { country_event = 400058 }
+		set_country_flag = scientists_arrived
+        }
+
+	option = {
+		name = "Прекрасный способ сотрудничества!"
+	}
+}
+country_event = {
+
+	id = 400084
+
+	trigger = {
+		has_country_flag = scientists_arrived
+		NOT = { has_country_modifier = scientists_is_working1 }
+	}
+
+	title = "Иностранные учёные приступают к работе"
+	desc = "Иностранные учённые, недавно прибывшие в нашу страну, приступают к своей работе и начинают приносить пользу нашей науке!"
+        picture = "Tesla"
+
+	immediate = {
+		add_country_modifier = { name = scientists_is_working1 duration = 1825 }
+		clr_country_flag = scientists_arrived
+	}
+
+
+	option = {
+		name = "Отлично"
+	}
+}
+country_event = {
+
+	id = 400085
+
+	trigger = {
+		has_country_flag = scientists_arrived
+		has_country_modifier = scientists_is_working1
+		NOT = { has_country_modifier = scientists_is_working2 }
+	}
+
+	title = "Иностранные учёные приступают к работе"
+	desc = "Иностранные учённые, недавно прибывшие в нашу страну, приступают к своей работе и начинают приносить пользу нашей науке!"
+        picture = "Tesla"
+
+	immediate = {
+		add_country_modifier = { name = scientists_is_working2 duration = 1825 }
+		clr_country_flag = scientists_arrived
+	}
+
+
+	option = {
+		name = "Отлично"
+	}
+}
+country_event = {
+
+	id = 400086
+
+	trigger = {
+		has_country_flag = scientists_arrived
+		has_country_modifier = scientists_is_working2
+		NOT = { has_country_modifier = scientists_is_working3 }
+	}
+
+	title = "Иностранные учёные приступают к работе"
+	desc = "Иностранные учённые, недавно прибывшие в нашу страну, приступают к своей работе и начинают приносить пользу нашей науке!"
+        picture = "Tesla"
+
+	immediate = {
+		add_country_modifier = { name = scientists_is_working3 duration = 1825 }
+		clr_country_flag = scientists_arrived
+	}
+
+
+	option = {
+		name = "Отлично"
+	}
+}
+country_event = {
+
+	id = 400087
+
+	trigger = {
+		has_country_flag = scientists_arrived
+		has_country_modifier = scientists_is_working3
+		NOT = { has_country_modifier = scientists_is_working4 }
+	}
+
+	title = "Иностранные учёные приступают к работе"
+	desc = "Иностранные учённые, недавно прибывшие в нашу страну, приступают к своей работе и начинают приносить пользу нашей науке!"
+        picture = "Tesla"
+
+	immediate = {
+		add_country_modifier = { name = scientists_is_working4 duration = 1825 }
+		clr_country_flag = scientists_arrived
+	}
+
+
+	option = {
+		name = "Отлично"
+	}
+}
+country_event = {
+
+	id = 400088
+
+	trigger = {
+		has_country_flag = scientists_arrived
+		has_country_modifier = scientists_is_working4
+		NOT = { has_country_modifier = scientists_is_working5 }
+	}
+
+	title = "Иностранные учёные приступают к работе"
+	desc = "Иностранные учённые, недавно прибывшие в нашу страну, приступают к своей работе и начинают приносить пользу нашей науке!"
+        picture = "Tesla"
+
+	immediate = {
+		add_country_modifier = { name = scientists_is_working5 duration = 1825 }
+		clr_country_flag = scientists_arrived
+	}
+
+	option = {
+		name = "Отлично"
+	}
+}
+country_event = {
+
+	id = 400089
+
+	is_triggered_only = yes
+
+	title = "EVTNAME400089"
+	desc = "EVTDESC400089"
+        picture = "building_materials"
+
+	immediate = {
+                FROM = { building_materials = -1000 }
+		building_materials = 1000
+	}
+
+	option = {
+		name = "Мы наконец сможем начать строить?"
+	}
+}

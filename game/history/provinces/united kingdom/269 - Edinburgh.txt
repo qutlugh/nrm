@@ -1,0 +1,14 @@
+owner = ENG
+controller = ENG
+add_core = ENG
+add_core = SCO
+trade_goods = grain
+life_rating = 35
+terrain = urban
+railroad = 1
+state_building = { level = 1 building = timber_lodge_1 upgrade = yes }
+state_building = { level = 2 building = bakery upgrade = yes }
+state_building = { level = 4 building = cement_factory upgrade = yes }
+state_building = { level = 2 building = building_materials_factory upgrade = yes }
+state_building = { level = 4 building = coal_energy_factory upgrade = yes }
+state_building = { level = 3 building = ironworks upgrade = yes }

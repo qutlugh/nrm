@@ -1,0 +1,145 @@
+army = {
+	name = "Liberation army of Mexico"
+	location = 2174
+	regiment = {
+		name= "1.Division Comonfort"
+		type = infantry
+		home = 2194
+	}
+	regiment = {
+		name= "2.Division Comonfort"
+		type = infantry
+		home = 2188
+	}
+	regiment = {
+		name= "3.Division Comonfort"
+		type = infantry
+		home = 2197
+	}
+	regiment = {
+		name= "4.Division Comonfort"
+		type = infantry
+		home = 2197
+	}
+	regiment = {
+		name= "5.Division Comonfort"
+		type = infantry
+		home = 2173
+	}
+	regiment = {
+		name= "6.Division Comonfort"
+		type = infantry
+		home = 2173
+	}
+	regiment = {
+		name= "7.Division Cos"
+		type = engineer
+		home = 2183
+	}
+	regiment = {
+		name= "8.Division Cos"
+		type = engineer
+		home = 2170
+	}
+	regiment = {
+		name= "9.Division Cos"
+		type = engineer
+		home = 2170
+	}
+	regiment = {
+		name= "10.Division Cos"
+		type = engineer
+		home = 2172
+	}
+	regiment = {
+		name= "11.Division Cos"
+		type = dragoon
+		home = 2172
+	}
+}
+
+army = {
+	name = "Liberation army"
+	location = 2181
+	regiment = {
+		name= "1.Division Comonfort"
+		type = infantry
+		home = 2186
+	}
+	regiment = {
+		name= "2.Division Comonfort"
+		type = infantry
+		home = 2187
+	}
+	regiment = {
+		name= "3.Division Comonfort"
+		type = infantry
+		home = 2186
+	}
+	regiment = {
+		name= "4.Division Comonfort"
+		type = infantry
+		home = 2191
+	}
+	regiment = {
+		name= "5.Division Comonfort"
+		type = infantry
+		home = 2191
+	}
+	regiment = {
+		name= "6.Division Comonfort"
+		type = infantry
+		home = 2201
+	}
+	regiment = {
+		name= "7.Division Cos"
+		type = engineer
+		home = 2192
+	}
+	regiment = {
+		name= "8.Division Cos"
+		type = engineer
+		home = 2192
+	}
+	regiment = {
+		name= "9.Division Cos"
+		type = engineer
+		home = 2192
+	}
+	regiment = {
+		name= "10.Division Cos"
+		type = engineer
+		home = 2193
+	}
+	regiment = {
+		name= "11.Division Cos"
+		type = dragoon
+		home = 2193
+	}
+}
+
+
+army = {
+	name = "Reserve army"
+	location = 2195
+	regiment = {
+		name= "1.Division Comonfort"
+		type = infantry
+		home = 2186
+	}
+	regiment = {
+		name= "2.Division Comonfort"
+		type = infantry
+		home = 2191
+	}
+	regiment = {
+		name= "3.Division Comonfort"
+		type = infantry
+		home = 2193
+	}
+	regiment = {
+		name= "4.Division Comonfort"
+		type = infantry
+		home = 2197
+	}
+}

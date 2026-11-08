@@ -1,0 +1,1863 @@
+# Science
+magnetism = {
+	area = science
+	year = 1821
+	cost = 3000
+	increase_research = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			year = 1830
+		}
+		modifier = {
+			factor = 1.25
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.5
+		}
+	}
+}
+ohms_law = {
+	area = science
+	year = 1830
+	cost = 6000
+	increase_research = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			year = 1840
+		}
+		modifier = {
+			factor = 1.25
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.5
+		}
+	}
+}
+conservation_of_energy = {
+	area = science
+	year = 1840
+	cost = 8000
+	increase_research = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			year = 1855
+		}
+		modifier = {
+			factor = 1.25
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.5
+		}
+	}
+}
+entropy = {
+	area = science
+	year = 1855
+	cost = 10000
+	increase_research = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			year = 1870
+		}
+		modifier = {
+			factor = 1.25
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.6
+		}
+	}
+}
+darwinism_tech = {
+	area = science
+	year = 1870
+	cost = 12000
+	increase_research = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			year = 1885
+		}
+		modifier = {
+			factor = 1.25
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.6
+		}
+	}
+}
+periodic_trends = {
+	area = science
+	year = 1885
+	cost = 14000
+	increase_research = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			year = 1900
+		}
+		modifier = {
+			factor = 1.25
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.6
+		}
+	}
+}
+radioactive_decay = {
+	area = science
+	year = 1900
+	cost = 16000
+	increase_research = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			year = 1915
+		}
+		modifier = {
+			factor = 1.25
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.7
+		}
+	}
+}
+general_relativity = {
+	area = science
+	year = 1915
+	cost = 18000
+	increase_research = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			year = 1930
+		}
+		modifier = {
+			factor = 1.25
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.7
+		}
+	}
+}
+nuclear_reaction = {
+	area = science
+	year = 1930
+	cost = 20000
+	increase_research = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			year = 1930
+		}
+		modifier = {
+			factor = 1.100
+			is_greater_power = yes
+			industrial_score = 750
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.7
+		}
+	}
+}
+dna_sctructure = {
+	area = science
+	year = 1950
+	cost = 25000
+	increase_research = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			year = 1940
+		}
+		modifier = {
+			factor = 1.100
+			is_greater_power = yes
+			industrial_score = 1500
+		}
+		modifier = {
+			factor = 50
+			literacy = 0.8
+		}
+	}
+}
+# Education
+patriotic_education = {
+	area = education
+	year = 1821
+	cost = 3000
+	education_efficiency = 0.05
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 5
+			year = 1850
+			NOT = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 50
+			year = 1850
+			NOT = { literacy = 0.1 }
+		}
+		modifier = {
+			factor = 4
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = 1.100
+			capital_scope = { continent = asia }
+			NOT = { literacy = 0.3 }
+			year = 1900
+		}
+	}
+}
+university_autonomy = {
+	area = education
+	year = 1830
+	cost = 6000
+	education_efficiency = 0.05
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 5
+			year = 1850
+			NOT = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 50
+			year = 1850
+			NOT = { literacy = 0.1 }
+		}
+		modifier = {
+			factor = 4
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = 1.100
+			capital_scope = { continent = asia }
+			NOT = { literacy = 0.3 }
+			year = 1900
+		}
+	}
+}
+charity_schools = {
+	area = education
+	year = 1840
+	cost = 8000
+	education_efficiency = 0.05
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 5
+			year = 1850
+			NOT = { literacy = 0.4 }
+		}
+		modifier = {
+			factor = 50
+			year = 1850
+			NOT = { literacy = 0.2 }
+		}
+		modifier = {
+			factor = 4
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = 1.100
+			capital_scope = { continent = asia }
+			NOT = { literacy = 0.4 }
+			year = 1900
+		}
+	}
+}
+monitorial_system = {
+	area = education
+	year = 1855
+	cost = 10000
+	education_efficiency = 0.05
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 5
+			year = 1860
+			NOT = { literacy = 0.4 }
+		}
+		modifier = {
+			factor = 50
+			year = 1860
+			NOT = { literacy = 0.2 }
+		}
+		modifier = {
+			factor = 4
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = 1.100
+			capital_scope = { continent = asia }
+			NOT = { literacy = 0.4 }
+			year = 1900
+		}
+	}
+}
+compulsory_education = {
+	area = education
+	year = 1870
+	cost = 12000
+	education_efficiency = 0.05
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 5
+			year = 1875
+			NOT = { literacy = 0.6 }
+		}
+		modifier = {
+			factor = 50
+			year = 1875
+			NOT = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 4
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = 1.100
+			capital_scope = { continent = asia }
+			NOT = { literacy = 0.4 }
+			year = 1900
+		}
+	}
+}
+centralization_of_education = {
+	area = education
+	year = 1885
+	cost = 14000
+	education_efficiency = 0.05
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 5
+			year = 1890
+			NOT = { literacy = 0.6 }
+		}
+		modifier = {
+			factor = 50
+			year = 1890
+			NOT = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 4
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = 1.100
+			capital_scope = { continent = asia }
+			NOT = { literacy = 0.5 }
+			year = 1900
+		}
+	}
+}
+experiential_education = {
+	area = education
+	year = 1900
+	cost = 16000
+	education_efficiency = 0.05
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 5
+			year = 1905
+			NOT = { literacy = 0.7 }
+		}
+		modifier = {
+			factor = 50
+			year = 1905
+			NOT = { literacy = 0.4 }
+		}
+		modifier = {
+			factor = 4
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = 1.100
+			capital_scope = { continent = asia }
+			NOT = { literacy = 0.5 }
+			year = 1900
+		}
+	}
+}
+modernism_in_education = {
+	area = education
+	year = 1915
+	cost = 18000
+	education_efficiency = 0.05
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 5
+			year = 1920
+			NOT = { literacy = 0.7 }
+		}
+		modifier = {
+			factor = 50
+			year = 1920
+			NOT = { literacy = 0.4 }
+		}
+		modifier = {
+			factor = 4
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = 1.100
+			capital_scope = { continent = asia }
+			NOT = { literacy = 0.5 }
+			year = 1900
+		}
+	}
+}
+university_grants = {
+	area = education
+	year = 1930
+	cost = 20000
+	education_efficiency = 0.05
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 5
+			year = 1935
+			NOT = { literacy = 0.7 }
+		}
+		modifier = {
+			factor = 0.75
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = { continent = asia }
+		}
+	}
+}
+fight_against_segregation = {
+	area = education
+	year = 1950
+	cost = 25000
+	education_efficiency = 0.05
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 5
+			year = 1955
+			NOT = { literacy = 0.8 }
+		}
+		modifier = {
+			factor = 0.75
+			capital_scope = { continent = europe }
+		}
+		modifier = {
+			factor = 0
+			capital_scope = { continent = asia }
+		}
+	}
+}
+# Mass media
+lithography = {
+	area = mass_media
+	year = 1821
+	cost = 3000
+	max_national_focus = 1
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 20
+			number_of_states = 12
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { OR = {
+				government = democracy
+				government = hms_government
+			}}
+		}
+	}
+}
+rotary_printing_press = {
+	area = mass_media
+	year = 1830
+	cost = 6000
+	max_national_focus = 1
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 20
+			number_of_states = 13
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { OR = {
+				government = democracy
+				government = hms_government
+			}}
+		}
+	}
+}
+chromolithography = {
+	area = mass_media
+	year = 1840
+	cost = 8000
+	max_national_focus = 1
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 20
+			number_of_states = 14
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { OR = {
+				government = democracy
+				government = hms_government
+			}}
+		}
+	}
+}
+media_distribution = {
+	area = mass_media
+	year = 1855
+	cost = 10000
+	max_national_focus = 1
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 20
+			number_of_states = 15
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { OR = {
+				government = democracy
+				government = hms_government
+			}}
+		}
+	}
+}
+spread_of_information = {
+	area = mass_media
+	year = 1870
+	cost = 12000
+	max_national_focus = 1
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 20
+			number_of_states = 16
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { OR = {
+				government = democracy
+				government = hms_government
+			}}
+		}
+	}
+}
+offset_printing = {
+	area = mass_media
+	year = 1885
+	cost = 14000
+	max_national_focus = 1
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 20
+			number_of_states = 17
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { OR = {
+				government = democracy
+				government = hms_government
+			}}
+		}
+	}
+}
+radio_broadcasting = {
+	area = mass_media
+	year = 1900
+	cost = 16000
+	max_national_focus = 1
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 20
+			number_of_states = 18
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { OR = {
+				government = democracy
+				government = hms_government
+			}}
+		}
+	}
+}
+cinematography = {
+	area = mass_media
+	year = 1915
+	cost = 18000
+	max_national_focus = 1
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 20
+			number_of_states = 19
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { OR = {
+				government = democracy
+				government = hms_government
+			}}
+		}
+	}
+}
+ministry_of_propaganda = {
+	area = mass_media
+	year = 1930
+	cost = 20000
+	max_national_focus = 1
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 20
+			number_of_states = 20
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+		}
+	}
+}
+television = {
+	area = mass_media
+	year = 1950
+	cost = 25000
+	max_national_focus = 1
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 20
+			number_of_states = 20
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+		}
+	}
+}
+# Military logistics
+military_warehouses = {
+	area = military_logistics_gov
+	year = 1821
+	cost = 3000
+
+	soldier_to_pop_loss = 0.03
+	land_attrition = -0.05
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.9
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 1.0
+		}
+	}
+}
+five_transition_system = {
+	area = military_logistics_gov
+	year = 1830
+	cost = 6000
+
+	soldier_to_pop_loss = 0.03
+	land_attrition = -0.05
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.9
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 1.0
+		}
+	}
+}
+soldier_vaccination = {
+	area = military_logistics_gov
+	year = 1840
+	cost = 8000
+
+	soldier_to_pop_loss = 0.03
+	land_attrition = -0.05
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.9
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 1.0
+		}
+	}
+}
+supply_by_rail = {
+	area = military_logistics_gov
+	year = 1855
+	cost = 10000
+
+	soldier_to_pop_loss = 0.03
+	land_attrition = -0.05
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.9
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 1.0
+		}
+	}
+}
+mass_production_of_mre = {
+	area = military_logistics_gov
+	year = 1870
+	cost = 12000
+
+	soldier_to_pop_loss = 0.03
+	land_attrition = -0.05
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.9
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 1.0
+		}
+	}
+}
+rail_traffic_control = {
+	area = military_logistics_gov
+	year = 1885
+	cost = 14000
+
+	soldier_to_pop_loss = 0.03
+	land_attrition = -0.05
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.9
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 1.0
+		}
+	}
+}
+military_police = {
+	area = military_logistics_gov
+	year = 1900
+	cost = 16000
+
+	soldier_to_pop_loss = 0.03
+	land_attrition = -0.05
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.9
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 1.0
+		}
+		modifier = {
+			factor = 5
+			government = fascist_dictatorship
+		}
+	}
+}
+trucks_use = {
+	area = military_logistics_gov
+	year = 1915
+	cost = 18000
+
+	soldier_to_pop_loss = 0.03
+	land_attrition = -0.05
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.9
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 1.0
+		}
+		modifier = {
+			factor = 5
+			government = fascist_dictatorship
+		}
+	}
+}
+transport_aviation = {
+	area = military_logistics_gov
+	year = 1930
+	cost = 20000
+
+	soldier_to_pop_loss = 0.03
+	land_attrition = -0.05
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.9
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 1.0
+		}
+		modifier = {
+			factor = 5
+			government = fascist_dictatorship
+		}
+	}
+}
+modern_trucks = {
+	area = military_logistics_gov
+	year = 1950
+	cost = 25000
+
+	soldier_to_pop_loss = 0.03
+	land_attrition = -0.05
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.3
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.4
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 0.9
+		}
+		modifier = {
+			factor = 1.1
+			military_spending = 1.0
+		}
+		modifier = {
+			factor = 5
+			government = fascist_dictatorship
+		}
+	}
+}
+# Colonization
+expiditionary_forces = {
+	area = colonization
+	year = 1821
+	cost = 3000
+
+	influence = 0.10
+	colonial_points = 500
+	activate_unit = col_inf
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 0
+			is_secondary_power = no
+			NOT = { is_greater_power = yes }
+		}
+		modifier = {
+			factor = 0
+			is_greater_power = no
+			NOT = { is_secondary_power = yes }
+		}
+		modifier = {
+			factor = 4
+			is_greater_power = yes
+			colonial_nation = no
+		}
+		modifier = {
+			factor = 2
+			colonial_nation = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 30 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 70 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 110 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 130 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 150 }
+		}
+	}
+}
+colonial_trading_posts = {
+	area = colonization
+	year = 1830
+	cost = 6000
+
+	influence = 0.10
+	colonial_points = 500
+	col_inf = { default_organisation = 3 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 0
+			is_secondary_power = no
+			NOT = { is_greater_power = yes }
+		}
+		modifier = {
+			factor = 0
+			is_greater_power = no
+			NOT = { is_secondary_power = yes }
+		}
+		modifier = {
+			factor = 4
+			is_greater_power = yes
+			colonial_nation = no
+		}
+		modifier = {
+			factor = 2
+			colonial_nation = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 30 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 70 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 110 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 130 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 150 }
+		}
+	}
+}
+quinine = {
+	area = colonization
+	year = 1840
+	cost = 8000
+
+	influence = 0.10
+	colonial_points = 500
+	col_inf = { default_organisation = 3 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 0
+			is_secondary_power = no
+			NOT = { is_greater_power = yes }
+		}
+		modifier = {
+			factor = 0
+			is_greater_power = no
+			NOT = { is_secondary_power = yes }
+		}
+		modifier = {
+			factor = 4
+			is_greater_power = yes
+			colonial_nation = no
+		}
+		modifier = {
+			factor = 2
+			colonial_nation = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 30 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 70 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 110 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 130 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 150 }
+		}
+	}
+}
+establishing_protectorate = {
+	area = colonization
+	year = 1855
+	cost = 10000
+
+	influence = 0.10
+	colonial_points = 500
+	col_inf = { default_organisation = 3 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 0
+			is_secondary_power = no
+			NOT = { is_greater_power = yes }
+		}
+		modifier = {
+			factor = 0
+			is_greater_power = no
+			NOT = { is_secondary_power = yes }
+		}
+		modifier = {
+			factor = 4
+			is_greater_power = yes
+			colonial_nation = no
+		}
+		modifier = {
+			factor = 2
+			colonial_nation = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 30 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 70 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 110 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 130 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 150 }
+		}
+	}
+}
+use_of_steamboats = {
+	area = colonization
+	year = 1870
+	cost = 12000
+
+	influence = 0.10
+	colonial_points = 500
+	col_inf = { default_organisation = 3 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 0
+			is_secondary_power = no
+			NOT = { is_greater_power = yes }
+		}
+		modifier = {
+			factor = 0
+			is_greater_power = no
+			NOT = { is_secondary_power = yes }
+		}
+		modifier = {
+			factor = 4
+			is_greater_power = yes
+			colonial_nation = no
+		}
+		modifier = {
+			factor = 2
+			colonial_nation = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 30 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 70 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 110 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 130 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 150 }
+		}
+	}
+}
+gunboat_diplomacy = {
+	area = colonization
+	year = 1885
+	cost = 14000
+
+	influence = 0.10
+	colonial_points = 500
+	col_inf = { default_organisation = 3 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 0
+			is_secondary_power = no
+			NOT = { is_greater_power = yes }
+		}
+		modifier = {
+			factor = 0
+			is_greater_power = no
+			NOT = { is_secondary_power = yes }
+		}
+		modifier = {
+			factor = 4
+			is_greater_power = yes
+			colonial_nation = no
+		}
+		modifier = {
+			factor = 2
+			colonial_nation = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 30 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 70 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 110 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 130 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 150 }
+		}
+	}
+}
+big_stick_policy = {
+	area = colonization
+	year = 1900
+	cost = 16000
+
+	influence = 0.10
+	col_inf = { default_organisation = 3 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 0
+			is_secondary_power = no
+			NOT = { is_greater_power = yes }
+		}
+		modifier = {
+			factor = 0
+			is_greater_power = no
+			NOT = { is_secondary_power = yes }
+		}
+		modifier = {
+			factor = 4
+			is_greater_power = yes
+			colonial_nation = no
+		}
+		modifier = {
+			factor = 2
+			colonial_nation = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 30 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 70 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 110 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 130 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 150 }
+		}
+	}
+}
+machine_gun_against_natives = {
+	area = colonization
+	year = 1915
+	cost = 18000
+
+	influence = 0.10
+	seperatism = -0.50
+	col_inf = { default_organisation = 3 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 0
+			is_secondary_power = no
+			NOT = { is_greater_power = yes }
+		}
+		modifier = {
+			factor = 0
+			is_greater_power = no
+			NOT = { is_secondary_power = yes }
+		}
+		modifier = {
+			factor = 4
+			is_greater_power = yes
+			colonial_nation = no
+		}
+		modifier = {
+			factor = 2
+			colonial_nation = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 30 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 70 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 110 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 130 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_amount_of_ships = 150 }
+		}
+	}
+}
+neocolonialism = {
+	area = colonization
+	year = 1930
+	cost = 20000
+
+	influence = 0.20
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 0
+			is_secondary_power = no
+			NOT = { is_greater_power = yes }
+		}
+		modifier = {
+			factor = 0
+			is_greater_power = no
+			NOT = { is_secondary_power = yes }
+		}
+		modifier = {
+			factor = 4
+			is_greater_power = yes
+			colonial_nation = no
+		}
+	}
+}
+private_military_companies = {
+	area = colonization
+	year = 1950
+	cost = 25000
+
+	col_inf = { default_organisation = 9 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 0
+			colonial_nation = no
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+	}
+}

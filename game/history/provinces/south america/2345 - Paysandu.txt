@@ -1,0 +1,6 @@
+owner = BRZ
+controller = BRZ
+add_core = URU
+add_core = ARG
+trade_goods = cattle
+life_rating = 40

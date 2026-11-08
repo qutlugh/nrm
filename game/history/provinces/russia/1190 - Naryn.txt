@@ -1,0 +1,6 @@
+owner = CHI
+controller = CHI
+add_core = KYR
+add_core = KOK
+trade_goods = grain
+life_rating = 40

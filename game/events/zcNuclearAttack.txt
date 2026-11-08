@@ -1,0 +1,104 @@
+country_event = {
+	id = 195000
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	major = yes
+
+	title = "EVTNAME195000"
+	desc = "EVTDESC195000"
+	picture = "trinity"
+
+        immediate = {
+		any_owned = {
+			limit = { has_province_modifier = core_reg }
+			infrastructure = -5
+			add_province_modifier = {
+				name = nuclear_contamination
+				duration = 1460
+			}
+		}
+		war_exhaustion = 50
+		add_country_modifier = {
+			name = nuclear_bomb_demoralisation
+			duration = 1825
+		}
+        }
+
+	option = {
+		name = "EVTOPTA195000"
+	}
+}
+country_event = {
+	id = 195001
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	major = yes
+
+	title = "EVTNAME195001"
+	desc = "EVTDESC195001"
+	picture = "trinity"
+
+        immediate = {
+		clr_country_flag = nuke_des_window
+		clr_country_flag = stratbomber_nuke_des_window
+		any_owned = {
+			limit = { has_province_modifier = core_reg }
+			infrastructure = -5
+			add_province_modifier = {
+				name = nuclear_contamination
+				duration = 1460
+			}
+		}
+		war_exhaustion = 100
+		remove_country_modifier = nuclear_weapons
+		add_country_modifier = {
+			name = nuclear_bomb_demoralisation
+			duration = 1825
+		}
+        }
+
+	option = {
+		name = "EVTOPTA195001"
+	}
+}
+country_event = {
+	id = 195003
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	major = yes
+
+	title = "EVTNAME195003"
+	desc = "EVTDESC195003"
+	picture = "trinity"
+
+        immediate = {
+		clr_country_flag = nuke_des_window
+		clr_country_flag = stratbomber_nuke_des_window
+		any_owned = {
+			limit = { has_province_modifier = core_reg }
+			infrastructure = -5
+			add_province_modifier = {
+				name = nuclear_contamination
+				duration = 1460
+			}
+		}
+		war_exhaustion = 100
+		remove_country_modifier = nuclear_weapons
+		add_country_modifier = {
+			name = nuclear_bomb_demoralisation
+			duration = 1825
+		}
+		any_country = {
+			limit = {
+				war_with = THIS
+				NOT = { tag = REB }
+				has_country_modifier = nuclear_bombs_on_the_enemy
+			}
+			country_event = 195000
+		}
+        }
+
+	option = {
+		name = "EVTOPTA195003"
+	}
+}

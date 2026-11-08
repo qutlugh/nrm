@@ -1,0 +1,80 @@
+capital = 2560
+primary_culture = north_german
+religion = protestant
+government = absolute_monarchy
+plurality = 0.0
+nationalvalue = nv_commercial_capitalism
+literacy = 0.55
+civilized = yes
+prestige = 1
+
+# Political reforms
+slavery = no_slavery
+upper_house_composition = appointed
+vote_franschise = none_voting
+public_meetings = yes_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+voting_system = first_past_the_post
+political_parties = underground_parties
+immigration_policy = nobody_gets_out
+conscription = four_year_draft
+minorities_reform = oppression
+
+# Social Reforms
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = no_safety
+health_care = no_health_care
+unemployment_subsidies = no_subsidies
+pensions = no_pensions
+pollution = no_controls
+child_labor = child_labor_legal
+education = church
+arts_endowment = no_endowment
+
+ruling_party = HED_reactionary
+upper_house = {
+	fascist = 0
+	liberal = 35
+	conservative = 55
+	reactionary = 10
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}
+
+# Technologies
+napoleonic_thought = 1
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
+military_staff_system = 1
+army_command_principle = 1
+nelsonian_thought = 1
+clipper_design = 1
+marine_engineering_basics = 1
+marine_chronometers = 1
+the_command_principle = 1
+joint-stock_companies = 1
+physiocracy = 1
+state_mercantilism = 1
+division_of_labour = 1
+no_standard = 1
+sentimentalism = 1
+late_enlightenment_philosophy = 1
+malthusian_thought = 1
+enlightenment_thought = 1
+fundamentals_of_psychology = 1
+water_wheel_power = 1
+manufactories = 1
+mechanized_mining = 1
+basic_chemistry = 1
+military_warehouses = 1
+
+#Inventions
+
+# Starting Consciousness
+consciousness = 3
+nonstate_consciousness = 1
+
+oob = "HES_oob.txt"

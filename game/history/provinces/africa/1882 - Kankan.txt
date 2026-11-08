@@ -1,0 +1,3 @@
+add_core = GNE
+trade_goods = iron_ore
+life_rating = 15

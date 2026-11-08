@@ -1,0 +1,2284 @@
+#tech_power
+water_wheel_power = {
+	area = tech_power
+	year = 1821
+	cost = 4000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { energy = 0.05 }
+	factory_goods_throughput = { grain = 0.05 }
+	factory_goods_throughput = { cotton = 0.05 }
+	factory_goods_throughput = { timber = 0.05 }
+	factory_goods_throughput = { fruit = 0.05 }
+	factory_goods_throughput = { dye = 0.05 }
+	factory_goods_throughput = { rubber = 0.05 }
+	factory_goods_throughput = { tobacco = 0.05 }
+	factory_goods_throughput = { tea = 0.05 }
+	factory_goods_throughput = { coffee = 0.05 }
+	factory_goods_throughput = { tropical_wood = 0.05 }
+	factory_goods_throughput = { silk = 0.05 }
+	factory_goods_throughput = { glass = 0.05 }
+	factory_goods_throughput = { cement = 0.05 }
+	factory_goods_throughput = { lumber = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			OR = {
+				big_producer = grain
+				big_producer = cotton
+				big_producer = cattle
+				big_producer = tea
+				big_producer = coffee
+				big_producer = silk
+				big_producer = tobacco
+				big_producer = fruit
+			}
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			year = 1835
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 25
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
+}
+experimental_steam_engine = {
+	area = tech_power
+	year = 1821
+	cost = 7000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { energy = 0.05 }
+	factory_goods_throughput = { grain = 0.05 }
+	factory_goods_throughput = { cotton = 0.05 }
+	factory_goods_throughput = { timber = 0.05 }
+	factory_goods_throughput = { fruit = 0.05 }
+	factory_goods_throughput = { dye = 0.05 }
+	factory_goods_throughput = { rubber = 0.05 }
+	factory_goods_throughput = { tobacco = 0.05 }
+	factory_goods_throughput = { tea = 0.05 }
+	factory_goods_throughput = { coffee = 0.05 }
+	factory_goods_throughput = { tropical_wood = 0.05 }
+	factory_goods_throughput = { silk = 0.05 }
+	factory_goods_throughput = { glass = 0.05 }
+	factory_goods_throughput = { cement = 0.05 }
+	factory_goods_throughput = { lumber = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			OR = {
+				big_producer = grain
+				big_producer = cotton
+				big_producer = cattle
+				big_producer = tea
+				big_producer = coffee
+				big_producer = silk
+				big_producer = tobacco
+				big_producer = fruit
+			}
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			year = 1845
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 25
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
+}
+practical_steam_engine = {
+	area = tech_power
+	year = 1830
+	cost = 10000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { energy = 0.05 }
+	factory_goods_throughput = { grain = 0.05 }
+	factory_goods_throughput = { cotton = 0.05 }
+	factory_goods_throughput = { timber = 0.05 }
+	factory_goods_throughput = { fruit = 0.05 }
+	factory_goods_throughput = { dye = 0.05 }
+	factory_goods_throughput = { rubber = 0.05 }
+	factory_goods_throughput = { tobacco = 0.05 }
+	factory_goods_throughput = { tea = 0.05 }
+	factory_goods_throughput = { coffee = 0.05 }
+	factory_goods_throughput = { tropical_wood = 0.05 }
+	factory_goods_throughput = { silk = 0.05 }
+	factory_goods_throughput = { glass = 0.05 }
+	factory_goods_throughput = { cement = 0.05 }
+	factory_goods_throughput = { lumber = 0.05 }
+
+	ai_chance = {
+		factor = 1.01
+		modifier = {
+			factor = 2
+			OR = {
+				big_producer = grain
+				big_producer = cotton
+				big_producer = cattle
+				big_producer = tea
+				big_producer = coffee
+				big_producer = silk
+				big_producer = tobacco
+				big_producer = fruit
+			}
+		}
+		modifier = {
+			factor = 2
+			year = 1850
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.02
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.02
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 1.02
+			industrial_score = 150
+		}
+	}
+}
+high_n_low_pressure_steam_engines = {
+	area = tech_power
+	year = 1850
+	cost = 14700
+
+	factory_cost = 0.03
+	factory_goods_throughput = { energy = 0.05 }
+	factory_goods_throughput = { grain = 0.05 }
+	factory_goods_throughput = { cotton = 0.05 }
+	factory_goods_throughput = { timber = 0.05 }
+	factory_goods_throughput = { fruit = 0.05 }
+	factory_goods_throughput = { dye = 0.05 }
+	factory_goods_throughput = { rubber = 0.05 }
+	factory_goods_throughput = { tobacco = 0.05 }
+	factory_goods_throughput = { tea = 0.05 }
+	factory_goods_throughput = { coffee = 0.05 }
+	factory_goods_throughput = { tropical_wood = 0.05 }
+	factory_goods_throughput = { silk = 0.05 }
+	factory_goods_throughput = { glass = 0.05 }
+	factory_goods_throughput = { cement = 0.05 }
+	factory_goods_throughput = { lumber = 0.05 }
+
+	ai_chance = {
+		factor = 1.01
+		modifier = {
+			factor = 2
+			OR = {
+				big_producer = grain
+				big_producer = cotton
+				big_producer = cattle
+				big_producer = tea
+				big_producer = coffee
+				big_producer = silk
+				big_producer = tobacco
+				big_producer = fruit
+			}
+		}
+		modifier = {
+			factor = 1.01
+			year = 1865
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 200
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 250
+		}
+	}
+}
+steam_turbine = {
+	area = tech_power
+	year = 1870
+	cost = 18900
+
+	factory_cost = 0.03
+	factory_goods_throughput = { energy = 0.05 }
+	factory_goods_throughput = { grain = 0.05 }
+	factory_goods_throughput = { cotton = 0.05 }
+	factory_goods_throughput = { timber = 0.05 }
+	factory_goods_throughput = { fruit = 0.05 }
+	factory_goods_throughput = { dye = 0.05 }
+	factory_goods_throughput = { rubber = 0.05 }
+	factory_goods_throughput = { tobacco = 0.05 }
+	factory_goods_throughput = { tea = 0.05 }
+	factory_goods_throughput = { coffee = 0.05 }
+	factory_goods_throughput = { tropical_wood = 0.05 }
+	factory_goods_throughput = { silk = 0.05 }
+	factory_goods_throughput = { glass = 0.05 }
+	factory_goods_throughput = { cement = 0.05 }
+	factory_goods_throughput = { lumber = 0.05 }
+
+	ai_chance = {
+		factor = 1.01
+		modifier = {
+			factor = 2
+			OR = {
+				big_producer = grain
+				big_producer = cotton
+				big_producer = cattle
+				big_producer = tea
+				big_producer = coffee
+				big_producer = silk
+				big_producer = tobacco
+				big_producer = fruit
+			}
+		}
+				modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			year = 1880
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 400
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 500
+		}
+	}
+}
+combustion_engine = {
+	area = tech_power
+	year = 1890
+	cost = 23100
+
+	factory_cost = 0.03
+	factory_goods_throughput = { energy = 0.05 }
+	factory_goods_throughput = { grain = 0.05 }
+	factory_goods_throughput = { cotton = 0.05 }
+	factory_goods_throughput = { timber = 0.05 }
+	factory_goods_throughput = { fruit = 0.05 }
+	factory_goods_throughput = { dye = 0.05 }
+	factory_goods_throughput = { rubber = 0.05 }
+	factory_goods_throughput = { tobacco = 0.05 }
+	factory_goods_throughput = { tea = 0.05 }
+	factory_goods_throughput = { coffee = 0.05 }
+	factory_goods_throughput = { tropical_wood = 0.05 }
+	factory_goods_throughput = { silk = 0.05 }
+	factory_goods_throughput = { glass = 0.05 }
+	factory_goods_throughput = { cement = 0.05 }
+	factory_goods_throughput = { lumber = 0.05 }
+
+	ai_chance = {
+		factor = 1.25
+		modifier = {
+			factor = 2
+			OR = {
+				big_producer = grain
+				big_producer = cotton
+				big_producer = cattle
+				big_producer = tea
+				big_producer = coffee
+				big_producer = silk
+				big_producer = tobacco
+				big_producer = fruit
+			}
+		}
+		modifier = {
+			factor = 2
+			year = 1900
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 500
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 750
+		}
+	}
+}
+electrical_power_generation = {
+	area = tech_power
+	year = 1910
+	cost = 27300
+
+	factory_cost = 0.03
+	factory_goods_throughput = { energy = 0.05 }
+	factory_goods_throughput = { grain = 0.05 }
+	factory_goods_throughput = { cotton = 0.05 }
+	factory_goods_throughput = { timber = 0.05 }
+	factory_goods_throughput = { fruit = 0.05 }
+	factory_goods_throughput = { dye = 0.05 }
+	factory_goods_throughput = { rubber = 0.05 }
+	factory_goods_throughput = { tobacco = 0.05 }
+	factory_goods_throughput = { tea = 0.05 }
+	factory_goods_throughput = { coffee = 0.05 }
+	factory_goods_throughput = { tropical_wood = 0.05 }
+	factory_goods_throughput = { silk = 0.05 }
+	factory_goods_throughput = { glass = 0.05 }
+	factory_goods_throughput = { cement = 0.05 }
+	factory_goods_throughput = { lumber = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			OR = {
+				big_producer = grain
+				big_producer = cotton
+				big_producer = cattle
+				big_producer = tea
+				big_producer = coffee
+				big_producer = silk
+				big_producer = tobacco
+				big_producer = fruit
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1500
+		}
+		modifier = {
+			factor = 1.4
+			is_greater_power = yes
+		}
+	}
+}
+electric_machine = {
+	area = tech_power
+	year = 1925
+	cost = 31500
+
+	factory_cost = 0.03
+	factory_goods_throughput = { energy = 0.05 }
+	factory_goods_throughput = { grain = 0.05 }
+	factory_goods_throughput = { cotton = 0.05 }
+	factory_goods_throughput = { timber = 0.05 }
+	factory_goods_throughput = { fruit = 0.05 }
+	factory_goods_throughput = { dye = 0.05 }
+	factory_goods_throughput = { rubber = 0.05 }
+	factory_goods_throughput = { tobacco = 0.05 }
+	factory_goods_throughput = { tea = 0.05 }
+	factory_goods_throughput = { coffee = 0.05 }
+	factory_goods_throughput = { tropical_wood = 0.05 }
+	factory_goods_throughput = { silk = 0.05 }
+	factory_goods_throughput = { glass = 0.05 }
+	factory_goods_throughput = { cement = 0.05 }
+	factory_goods_throughput = { lumber = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			OR = {
+				big_producer = coal
+				big_producer = iron_ore
+				big_producer = oil
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 3000
+		}
+		modifier = {
+			factor = 1.4
+			is_greater_power = yes
+		}
+	}	
+}
+atom_energy = {
+	area = tech_power
+	year = 1940
+	cost = 35700
+
+	factory_cost = 0.03
+	factory_goods_throughput = { energy = 0.05 }
+	factory_goods_throughput = { grain = 0.05 }
+	factory_goods_throughput = { cotton = 0.05 }
+	factory_goods_throughput = { timber = 0.05 }
+	factory_goods_throughput = { fruit = 0.05 }
+	factory_goods_throughput = { dye = 0.05 }
+	factory_goods_throughput = { rubber = 0.05 }
+	factory_goods_throughput = { tobacco = 0.05 }
+	factory_goods_throughput = { tea = 0.05 }
+	factory_goods_throughput = { coffee = 0.05 }
+	factory_goods_throughput = { tropical_wood = 0.05 }
+	factory_goods_throughput = { silk = 0.05 }
+	factory_goods_throughput = { glass = 0.05 }
+	factory_goods_throughput = { cement = 0.05 }
+	factory_goods_throughput = { lumber = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			OR = {
+				big_producer = grain
+				big_producer = cotton
+				big_producer = cattle
+				big_producer = tea
+				big_producer = coffee
+				big_producer = silk
+				big_producer = tobacco
+				big_producer = fruit
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 3000
+		}
+		modifier = {
+			factor = 1.4
+			is_greater_power = yes
+		}
+	}
+}
+modern_steam_turbine = {
+	area = tech_power
+	year = 1955
+	cost = 44200
+
+	factory_cost = 0.03
+	factory_goods_throughput = { energy = 0.05 }
+	factory_goods_throughput = { grain = 0.05 }
+	factory_goods_throughput = { cotton = 0.05 }
+	factory_goods_throughput = { timber = 0.05 }
+	factory_goods_throughput = { fruit = 0.05 }
+	factory_goods_throughput = { dye = 0.05 }
+	factory_goods_throughput = { rubber = 0.05 }
+	factory_goods_throughput = { tobacco = 0.05 }
+	factory_goods_throughput = { tea = 0.05 }
+	factory_goods_throughput = { coffee = 0.05 }
+	factory_goods_throughput = { tropical_wood = 0.05 }
+	factory_goods_throughput = { silk = 0.05 }
+	factory_goods_throughput = { glass = 0.05 }
+	factory_goods_throughput = { cement = 0.05 }
+	factory_goods_throughput = { lumber = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			OR = {
+				big_producer = grain
+				big_producer = cotton
+				big_producer = cattle
+				big_producer = tea
+				big_producer = coffee
+				big_producer = silk
+				big_producer = tobacco
+				big_producer = fruit
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 3000
+		}
+		modifier = {
+			factor = 1.4
+			is_greater_power = yes
+		}
+	}
+}
+#mechanization
+manufactories = {
+	area = mechanization
+	year = 1821
+	cost = 10000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { ammunition = 0.05 }
+	factory_goods_throughput = { canned_food = 0.05 }
+	factory_goods_throughput = { artillery1 = 0.05 }
+	factory_goods_throughput = { military_supplies = 0.05 }
+	factory_goods_throughput = { machine_parts = 0.05 }
+	factory_goods_throughput = { clipper_convoy = 0.05 }
+	factory_goods_throughput = { steamer_convoy = 0.05 }
+	factory_goods_throughput = { furniture = 0.05 }
+	factory_goods_throughput = { luxury_furniture = 0.05 }
+	factory_goods_throughput = { building_materials = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { fabric = 0.05 }
+	factory_goods_throughput = { regular_clothes = 0.05 }
+	factory_goods_throughput = { luxury_clothes = 0.05 }
+	factory_goods_throughput = { tobacco_products = 0.05 }
+	factory_goods_throughput = { tools = 0.05 }
+	factory_goods_throughput = { electric_gear = 0.05 }
+	factory_goods_throughput = { automobiles = 0.05 }
+	factory_goods_throughput = { telephones = 0.05 }
+	factory_goods_throughput = { aeroplanes = 0.05 }
+	factory_goods_throughput = { barrels = 0.05 }
+	factory_goods_throughput = { military_aeroplanes = 0.05 }
+
+	ai_chance = {
+		factor = 1.5
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+	}	
+
+}
+publishing_industry = {
+	area = mechanization
+	year = 1821
+	cost = 13000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { ammunition = 0.05 }
+	factory_goods_throughput = { canned_food = 0.05 }
+	factory_goods_throughput = { artillery1 = 0.05 }
+	factory_goods_throughput = { military_supplies = 0.05 }
+	factory_goods_throughput = { machine_parts = 0.05 }
+	factory_goods_throughput = { clipper_convoy = 0.05 }
+	factory_goods_throughput = { steamer_convoy = 0.05 }
+	factory_goods_throughput = { furniture = 0.05 }
+	factory_goods_throughput = { luxury_furniture = 0.05 }
+	factory_goods_throughput = { building_materials = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { fabric = 0.05 }
+	factory_goods_throughput = { regular_clothes = 0.05 }
+	factory_goods_throughput = { luxury_clothes = 0.05 }
+	factory_goods_throughput = { tobacco_products = 0.05 }
+	factory_goods_throughput = { tools = 0.05 }
+	factory_goods_throughput = { electric_gear = 0.05 }
+	factory_goods_throughput = { automobiles = 0.05 }
+	factory_goods_throughput = { telephones = 0.05 }
+	factory_goods_throughput = { aeroplanes = 0.05 }
+	factory_goods_throughput = { barrels = 0.05 }
+	factory_goods_throughput = { military_aeroplanes = 0.05 }
+
+	ai_chance = {
+		factor = 1.5
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 10
+		}
+	}	
+
+}
+mechanical_production = {
+	area = mechanization
+	year = 1830
+	cost = 16000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { ammunition = 0.05 }
+	factory_goods_throughput = { canned_food = 0.05 }
+	factory_goods_throughput = { artillery1 = 0.05 }
+	factory_goods_throughput = { military_supplies = 0.05 }
+	factory_goods_throughput = { machine_parts = 0.05 }
+	factory_goods_throughput = { clipper_convoy = 0.05 }
+	factory_goods_throughput = { steamer_convoy = 0.05 }
+	factory_goods_throughput = { furniture = 0.05 }
+	factory_goods_throughput = { luxury_furniture = 0.05 }
+	factory_goods_throughput = { building_materials = 0.05 }
+	factory_goods_throughput = { fabric = 0.05 }
+	factory_goods_throughput = { regular_clothes = 0.05 }
+	factory_goods_throughput = { luxury_clothes = 0.05 }
+	factory_goods_throughput = { tobacco_products = 0.05 }
+	factory_goods_throughput = { tools = 0.05 }
+	factory_goods_throughput = { electric_gear = 0.05 }
+	factory_goods_throughput = { automobiles = 0.05 }
+	factory_goods_throughput = { telephones = 0.05 }
+	factory_goods_throughput = { aeroplanes = 0.05 }
+	factory_goods_throughput = { barrels = 0.05 }
+	factory_goods_throughput = { military_aeroplanes = 0.05 }
+
+	ai_chance = {
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 20
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				big_producer = cotton
+				big_producer = wool
+				big_producer = fabric
+				big_producer = silk
+				big_producer = timber
+				big_producer = tropical_wood
+				big_producer = fruit
+				big_producer = grain
+				big_producer = tea
+				big_producer = cattle
+			}
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 50
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
+}
+interchangeable_parts = {
+	area = mechanization
+	year = 1850
+	cost = 21000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { ammunition = 0.05 }
+	factory_goods_throughput = { canned_food = 0.05 }
+	factory_goods_throughput = { artillery1 = 0.05 }
+	factory_goods_throughput = { military_supplies = 0.05 }
+	factory_goods_throughput = { machine_parts = 0.05 }
+	factory_goods_throughput = { clipper_convoy = 0.05 }
+	factory_goods_throughput = { steamer_convoy = 0.05 }
+	factory_goods_throughput = { furniture = 0.05 }
+	factory_goods_throughput = { luxury_furniture = 0.05 }
+	factory_goods_throughput = { building_materials = 0.05 }
+	factory_goods_throughput = { fabric = 0.05 }
+	factory_goods_throughput = { regular_clothes = 0.05 }
+	factory_goods_throughput = { luxury_clothes = 0.05 }
+	factory_goods_throughput = { tobacco_products = 0.05 }
+	factory_goods_throughput = { tools = 0.05 }
+	factory_goods_throughput = { electric_gear = 0.05 }
+	factory_goods_throughput = { automobiles = 0.05 }
+	factory_goods_throughput = { telephones = 0.05 }
+	factory_goods_throughput = { aeroplanes = 0.05 }
+	factory_goods_throughput = { barrels = 0.05 }
+	factory_goods_throughput = { military_aeroplanes = 0.05 }
+
+	ai_chance = {
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 150
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
+}
+semi_automatization = {
+	area = mechanization
+	year = 1870
+	cost = 25200
+
+	factory_cost = 0.03
+	factory_goods_throughput = { ammunition = 0.05 }
+	factory_goods_throughput = { canned_food = 0.05 }
+	factory_goods_throughput = { artillery1 = 0.05 }
+	factory_goods_throughput = { military_supplies = 0.05 }
+	factory_goods_throughput = { machine_parts = 0.05 }
+	factory_goods_throughput = { clipper_convoy = 0.05 }
+	factory_goods_throughput = { steamer_convoy = 0.05 }
+	factory_goods_throughput = { furniture = 0.05 }
+	factory_goods_throughput = { luxury_furniture = 0.05 }
+	factory_goods_throughput = { building_materials = 0.05 }
+	factory_goods_throughput = { fabric = 0.05 }
+	factory_goods_throughput = { regular_clothes = 0.05 }
+	factory_goods_throughput = { luxury_clothes = 0.05 }
+	factory_goods_throughput = { tobacco_products = 0.05 }
+	factory_goods_throughput = { tools = 0.05 }
+	factory_goods_throughput = { electric_gear = 0.05 }
+	factory_goods_throughput = { automobiles = 0.05 }
+	factory_goods_throughput = { telephones = 0.05 }
+	factory_goods_throughput = { aeroplanes = 0.05 }
+	factory_goods_throughput = { barrels = 0.05 }
+	factory_goods_throughput = { military_aeroplanes = 0.05 }
+
+	ai_chance = {
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 250
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 400
+		}
+		modifier = {
+			factor = 0.9 #0.1
+			not = { literacy = 0.2  }
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
+}
+assembly_line = {
+	area = mechanization
+	year = 1890
+	cost = 29400
+
+	factory_cost = 0.03
+	factory_goods_throughput = { ammunition = 0.05 }
+	factory_goods_throughput = { canned_food = 0.05 }
+	factory_goods_throughput = { artillery1 = 0.05 }
+	factory_goods_throughput = { military_supplies = 0.05 }
+	factory_goods_throughput = { machine_parts = 0.05 }
+	factory_goods_throughput = { clipper_convoy = 0.05 }
+	factory_goods_throughput = { steamer_convoy = 0.05 }
+	factory_goods_throughput = { furniture = 0.05 }
+	factory_goods_throughput = { luxury_furniture = 0.05 }
+	factory_goods_throughput = { building_materials = 0.05 }
+	factory_goods_throughput = { fabric = 0.05 }
+	factory_goods_throughput = { regular_clothes = 0.05 }
+	factory_goods_throughput = { luxury_clothes = 0.05 }
+	factory_goods_throughput = { tobacco_products = 0.05 }
+	factory_goods_throughput = { tools = 0.05 }
+	factory_goods_throughput = { electric_gear = 0.05 }
+	factory_goods_throughput = { automobiles = 0.05 }
+	factory_goods_throughput = { telephones = 0.05 }
+	factory_goods_throughput = { aeroplanes = 0.05 }
+	factory_goods_throughput = { barrels = 0.05 }
+	factory_goods_throughput = { military_aeroplanes = 0.10 }
+
+	ai_chance = {
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 500
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 750
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
+}
+shift_work = {
+	area = mechanization
+	year = 1910
+	cost = 33600
+
+	factory_cost = 0.03
+	factory_goods_throughput = { ammunition = 0.05 }
+	factory_goods_throughput = { canned_food = 0.05 }
+	factory_goods_throughput = { artillery1 = 0.05 }
+	factory_goods_throughput = { military_supplies = 0.05 }
+	factory_goods_throughput = { machine_parts = 0.05 }
+	factory_goods_throughput = { clipper_convoy = 0.05 }
+	factory_goods_throughput = { steamer_convoy = 0.05 }
+	factory_goods_throughput = { furniture = 0.05 }
+	factory_goods_throughput = { luxury_furniture = 0.05 }
+	factory_goods_throughput = { building_materials = 0.05 }
+	factory_goods_throughput = { fabric = 0.05 }
+	factory_goods_throughput = { regular_clothes = 0.05 }
+	factory_goods_throughput = { luxury_clothes = 0.05 }
+	factory_goods_throughput = { tobacco_products = 0.05 }
+	factory_goods_throughput = { tools = 0.05 }
+	factory_goods_throughput = { electric_gear = 0.05 }
+	factory_goods_throughput = { automobiles = 0.05 }
+	factory_goods_throughput = { telephones = 0.05 }
+	factory_goods_throughput = { aeroplanes = 0.05 }
+	factory_goods_throughput = { barrels = 0.05 }
+	factory_goods_throughput = { military_aeroplanes = 0.05 }
+
+	ai_chance = {
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1500
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
+}
+modern_automation = {
+	area = mechanization
+	year = 1925
+	cost = 37800
+
+	factory_cost = 0.03
+	factory_goods_throughput = { ammunition = 0.05 }
+	factory_goods_throughput = { canned_food = 0.05 }
+	factory_goods_throughput = { artillery1 = 0.05 }
+	factory_goods_throughput = { military_supplies = 0.05 }
+	factory_goods_throughput = { machine_parts = 0.05 }
+	factory_goods_throughput = { clipper_convoy = 0.05 }
+	factory_goods_throughput = { steamer_convoy = 0.05 }
+	factory_goods_throughput = { furniture = 0.05 }
+	factory_goods_throughput = { luxury_furniture = 0.05 }
+	factory_goods_throughput = { building_materials = 0.05 }
+	factory_goods_throughput = { fabric = 0.05 }
+	factory_goods_throughput = { regular_clothes = 0.05 }
+	factory_goods_throughput = { luxury_clothes = 0.05 }
+	factory_goods_throughput = { tobacco_products = 0.05 }
+	factory_goods_throughput = { tools = 0.05 }
+	factory_goods_throughput = { electric_gear = 0.05 }
+	factory_goods_throughput = { automobiles = 0.05 }
+	factory_goods_throughput = { telephones = 0.05 }
+	factory_goods_throughput = { aeroplanes = 0.05 }
+	factory_goods_throughput = { barrels = 0.05 }
+	factory_goods_throughput = { military_aeroplanes = 0.05 }
+
+	ai_chance = {
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 3000
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+advanced_machine_tools = {
+	area = mechanization
+	year = 1940
+	cost = 42000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { ammunition = 0.05 }
+	factory_goods_throughput = { canned_food = 0.05 }
+	factory_goods_throughput = { artillery1 = 0.05 }
+	factory_goods_throughput = { military_supplies = 0.05 }
+	factory_goods_throughput = { machine_parts = 0.05 }
+	factory_goods_throughput = { clipper_convoy = 0.05 }
+	factory_goods_throughput = { steamer_convoy = 0.05 }
+	factory_goods_throughput = { furniture = 0.05 }
+	factory_goods_throughput = { luxury_furniture = 0.05 }
+	factory_goods_throughput = { building_materials = 0.05 }
+	factory_goods_throughput = { fabric = 0.05 }
+	factory_goods_throughput = { regular_clothes = 0.05 }
+	factory_goods_throughput = { luxury_clothes = 0.05 }
+	factory_goods_throughput = { tobacco_products = 0.05 }
+	factory_goods_throughput = { tools = 0.05 }
+	factory_goods_throughput = { electric_gear = 0.05 }
+	factory_goods_throughput = { automobiles = 0.05 }
+	factory_goods_throughput = { telephones = 0.05 }
+	factory_goods_throughput = { aeroplanes = 0.05 }
+	factory_goods_throughput = { barrels = 0.05 }
+	factory_goods_throughput = { military_aeroplanes = 0.05 }
+
+	ai_chance = {
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 3000
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+industial_robotization = {
+	area = mechanization
+	year = 1955
+	cost = 52000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { ammunition = 0.05 }
+	factory_goods_throughput = { canned_food = 0.05 }
+	factory_goods_throughput = { artillery1 = 0.05 }
+	factory_goods_throughput = { military_supplies = 0.05 }
+	factory_goods_throughput = { machine_parts = 0.05 }
+	factory_goods_throughput = { clipper_convoy = 0.05 }
+	factory_goods_throughput = { steamer_convoy = 0.05 }
+	factory_goods_throughput = { furniture = 0.05 }
+	factory_goods_throughput = { luxury_furniture = 0.05 }
+	factory_goods_throughput = { building_materials = 0.05 }
+	factory_goods_throughput = { fabric = 0.05 }
+	factory_goods_throughput = { regular_clothes = 0.05 }
+	factory_goods_throughput = { luxury_clothes = 0.05 }
+	factory_goods_throughput = { tobacco_products = 0.05 }
+	factory_goods_throughput = { tools = 0.05 }
+	factory_goods_throughput = { electric_gear = 0.05 }
+	factory_goods_throughput = { automobiles = 0.05 }
+	factory_goods_throughput = { telephones = 0.05 }
+	factory_goods_throughput = { aeroplanes = 0.05 }
+	factory_goods_throughput = { barrels = 0.05 }
+	factory_goods_throughput = { military_aeroplanes = 0.05 }
+
+	ai_chance = {
+		factor = 1.05
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 3000
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+#metallurgy
+mechanized_mining = {
+	area = metallurgy
+	year = 1821
+	cost = 3000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { coal = 0.05 }
+	factory_goods_throughput = { iron_ore = 0.05 }
+	factory_goods_throughput = { sulphur = 0.05 }
+	factory_goods_throughput = { coking_coal = 0.05 }
+	factory_goods_throughput = { iron = 0.05 }
+	factory_goods_throughput = { steel = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = sulphur
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = sulphur
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = precious_metal
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+clean_coal = {
+	area = metallurgy
+	year = 1821
+	cost = 6000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { coal = 0.05 }
+	factory_goods_throughput = { iron_ore = 0.05 }
+	factory_goods_throughput = { sulphur = 0.05 }
+	factory_goods_throughput = { coking_coal = 0.05 }
+	factory_goods_throughput = { iron = 0.05 }
+	factory_goods_throughput = { steel = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = sulphur
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = sulphur
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = precious_metal
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+ferrous_metallurgy = {
+	area = metallurgy
+	year = 1830
+	cost = 9000
+
+	factory_cost = 0.03
+	factory_goods_throughput = { coal = 0.05 }
+	factory_goods_throughput = { iron_ore = 0.05 }
+	factory_goods_throughput = { sulphur = 0.05 }
+	factory_goods_throughput = { coking_coal = 0.05 }
+	factory_goods_throughput = { iron = 0.05 }
+	factory_goods_throughput = { steel = 0.05 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = sulphur
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = sulphur
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = precious_metal
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+cheap_iron = {
+	area = metallurgy
+	year = 1850
+	cost = 13650
+
+	factory_cost = 0.03
+	factory_goods_throughput = { coal = 0.05 }
+	factory_goods_throughput = { iron_ore = 0.05 }
+	factory_goods_throughput = { sulphur = 0.05 }
+	factory_goods_throughput = { coking_coal = 0.05 }
+	factory_goods_throughput = { iron = 0.05 }
+	factory_goods_throughput = { steel = 0.05 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = sulphur
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = sulphur
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = precious_metal
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+cheap_steel = {
+	area = metallurgy
+	year = 1870
+	cost = 17850
+
+	factory_cost = 0.03
+	factory_goods_throughput = { coal = 0.05 }
+	factory_goods_throughput = { iron_ore = 0.05 }
+	factory_goods_throughput = { sulphur = 0.05 }
+	factory_goods_throughput = { coking_coal = 0.05 }
+	factory_goods_throughput = { iron = 0.05 }
+	factory_goods_throughput = { steel = 0.05 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = sulphur
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = sulphur
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = precious_metal
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+advanced_metallurgy = {
+	area = metallurgy
+	year = 1890
+	cost = 22050
+
+	factory_cost = 0.03
+	factory_goods_throughput = { coal = 0.05 }
+	factory_goods_throughput = { iron_ore = 0.05 }
+	factory_goods_throughput = { sulphur = 0.05 }
+	factory_goods_throughput = { coking_coal = 0.05 }
+	factory_goods_throughput = { iron = 0.05 }
+	factory_goods_throughput = { steel = 0.05 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = sulphur
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = sulphur
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = precious_metal
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+hydrometallurgy = {
+	area = metallurgy
+	year = 1910
+	cost = 25200
+
+	factory_cost = 0.03
+	factory_goods_throughput = { coal = 0.05 }
+	factory_goods_throughput = { iron_ore = 0.05 }
+	factory_goods_throughput = { sulphur = 0.05 }
+	factory_goods_throughput = { coking_coal = 0.05 }
+	factory_goods_throughput = { iron = 0.05 }
+	factory_goods_throughput = { steel = 0.05 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = sulphur
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = sulphur
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = precious_metal
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+electrometallurgy = {
+	area = metallurgy
+	year = 1925
+	cost = 27300
+
+	factory_cost = 0.03
+	factory_goods_throughput = { coal = 0.05 }
+	factory_goods_throughput = { iron_ore = 0.05 }
+	factory_goods_throughput = { sulphur = 0.05 }
+	factory_goods_throughput = { coking_coal = 0.05 }
+	factory_goods_throughput = { iron = 0.05 }
+	factory_goods_throughput = { steel = 0.05 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = sulphur
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = sulphur
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = precious_metal
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+modern_metallurgy = {
+	area = metallurgy
+	year = 1940
+	cost = 29400
+
+	factory_cost = 0.03
+	factory_goods_throughput = { coal = 0.05 }
+	factory_goods_throughput = { iron_ore = 0.05 }
+	factory_goods_throughput = { sulphur = 0.05 }
+	factory_goods_throughput = { coking_coal = 0.05 }
+	factory_goods_throughput = { iron = 0.05 }
+	factory_goods_throughput = { steel = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = sulphur
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = sulphur
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = precious_metal
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
+}
+advanced_ore_refining = {
+	area = metallurgy
+	year = 1955
+	cost = 34500
+
+	factory_cost = 0.03
+	factory_goods_throughput = { coal = 0.05 }
+	factory_goods_throughput = { iron_ore = 0.05 }
+	factory_goods_throughput = { sulphur = 0.05 }
+	factory_goods_throughput = { coking_coal = 0.05 }
+	factory_goods_throughput = { iron = 0.05 }
+	factory_goods_throughput = { steel = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.6
+			big_producer = coal
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = iron
+		}
+		modifier = {
+			factor = 1.4
+			big_producer = sulphur
+		}
+		modifier = {
+			factor = 1.3
+			any_owned_province = {
+				produces = coal
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = iron
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = sulphur
+			}
+		}
+		modifier = {
+			factor = 1.1
+			any_owned_province = {
+				produces = precious_metal
+			}
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}	
+}
+#tech_infrastructure
+animal-powered_railroad = {
+	area = tech_infrastructure
+	year = 1821
+	cost = 6000
+
+	activate_building = railroad
+	factory_goods_throughput = { locomotives = 0.05 }
+
+	ai_chance = {
+		factor = 1.5 #1.1
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 1835
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+experimental_railroad = {
+	area = tech_infrastructure
+	year = 1821
+	cost = 7500
+
+	max_railroad = 1
+	factory_goods_throughput = { locomotives = 0.05 }
+
+	ai_chance = {
+		factor = 1.5 #1.1
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 1845
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+early_railroad = {
+	area = tech_infrastructure
+	year = 1830
+	cost = 9000
+
+	max_railroad = 1
+	factory_goods_throughput = { locomotives = 0.05 }
+
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 1855
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+iron_railroad = {
+	area = tech_infrastructure
+	year = 1850
+	cost = 13650
+
+	max_railroad = 1
+	factory_goods_throughput = { locomotives = 0.05 }
+
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 1865
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+steel_railroad = {
+	area = tech_infrastructure
+	year = 1870
+	cost = 17850
+
+	max_railroad = 1
+	factory_goods_throughput = { locomotives = 0.05 }
+
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 1885
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+integral_rail_system = {
+	area = tech_infrastructure
+	year = 1890
+	cost = 22050
+
+	max_railroad = 1
+	factory_goods_throughput = { locomotives = 0.05 }
+
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+			year = 1905
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+limited_access_roads = {
+	area = tech_infrastructure
+	year = 1910
+	cost = 25200
+
+	max_railroad = 1
+	factory_goods_throughput = { locomotives = 0.05 }
+
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+modern_infrastructure = {
+	area = tech_infrastructure
+	year = 1925
+	cost = 27300
+
+	max_railroad = 1
+	factory_goods_throughput = { locomotives = 0.05 }
+
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+diesel_locomotives = {
+	area = tech_infrastructure
+	year = 1940
+	cost = 29400
+
+	max_railroad = 1
+	factory_goods_throughput = { locomotives = 0.05 }
+
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+electric_locomotives = {
+	area = tech_infrastructure
+	year = 1955
+	cost = 34500
+
+	max_railroad = 1
+	factory_goods_throughput = { locomotives = 0.05 }
+
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+#chemistry_and_electricity
+basic_chemistry = {
+	area = chemistry_and_electricity
+	year = 1821
+	cost = 3000
+	supply_limit = 0.6
+
+	factory_goods_throughput = { fertilizer = 0.05 }
+	factory_goods_throughput = { explosives = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { paper = 0.05 }
+	factory_goods_throughput = { printing_products = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+	}
+}
+thermodynamics = {
+	area = chemistry_and_electricity
+	year = 1821
+	cost = 6000
+	supply_limit = 0.2
+
+	factory_goods_throughput = { fertilizer = 0.05 }
+	factory_goods_throughput = { explosives = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { paper = 0.05 }
+	factory_goods_throughput = { printing_products = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1000
+			ai = yes
+		}
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 100
+			tag = USA
+		}
+	}
+}
+medicine = {
+	area = chemistry_and_electricity
+	year = 1830
+	cost = 9000
+	supply_limit = 0.2
+
+	factory_goods_throughput = { fertilizer = 0.05 }
+	factory_goods_throughput = { explosives = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { paper = 0.05 }
+	factory_goods_throughput = { printing_products = 0.05 }
+	
+	ai_chance = {
+		factor = 1.5
+		modifier = {
+			factor = 1000
+			ai = yes
+		}
+		modifier = {
+			factor = 1.5
+			civilized = yes
+		}
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 99
+			tag = USA
+		}
+	}
+}
+inorganic_chemistry = {
+	area = chemistry_and_electricity
+	year = 1850
+	cost = 13650
+	supply_limit = 0.2
+
+	factory_goods_throughput = { fertilizer = 0.05 }
+	factory_goods_throughput = { explosives = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { paper = 0.05 }
+	factory_goods_throughput = { printing_products = 0.05 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 1.1
+			year = 1860
+		}
+		modifier = {
+			factor = 2
+			year = 1870
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 150
+		}
+	}
+}
+organic_chemistry = {
+	area = chemistry_and_electricity
+	year = 1870
+	cost = 17850
+	supply_limit = 0.2
+
+	factory_goods_throughput = { fertilizer = 0.05 }
+	factory_goods_throughput = { explosives = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { paper = 0.05 }
+	factory_goods_throughput = { printing_products = 0.05 }
+	
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 2
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 400
+		}
+		modifier = {
+			factor = 1.1
+			year = 1875
+		}
+		modifier = {
+			factor = 2
+			year = 1880
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 500
+		}
+	}
+}
+electricity = {
+	area = chemistry_and_electricity
+	year = 1890
+	cost = 22050
+	supply_limit = 0.2
+
+	factory_goods_throughput = { fertilizer = 0.05 }
+	factory_goods_throughput = { explosives = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { paper = 0.05 }
+	factory_goods_throughput = { printing_products = 0.05 }
+
+	ai_chance = {
+		factor = 2
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			year = 1890
+		}
+		modifier = {
+			factor = 2
+			year = 1900
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 500
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 750
+		}
+	}
+
+}
+synthetic_polymers = {
+	area = chemistry_and_electricity
+	year = 1910
+	cost = 25200
+	supply_limit = 0.2
+
+	factory_goods_throughput = { fertilizer = 0.05 }
+	factory_goods_throughput = { explosives = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { paper = 0.05 }
+	factory_goods_throughput = { printing_products = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 1500
+		}
+	}
+	
+}
+quantum_chemistry = {
+	area = chemistry_and_electricity
+	year = 1925
+	cost = 27300
+	supply_limit = 0.2
+
+	factory_goods_throughput = { fertilizer = 0.05 }
+	factory_goods_throughput = { explosives = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { paper = 0.05 }
+	factory_goods_throughput = { printing_products = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 3000
+		}
+	}
+	
+}
+pharmaceutics = {
+	area = chemistry_and_electricity
+	year = 1940
+	cost = 29400
+	supply_limit = 0.2
+
+	factory_goods_throughput = { fertilizer = 0.05 }
+	factory_goods_throughput = { explosives = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { paper = 0.05 }
+	factory_goods_throughput = { printing_products = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 3000
+		}
+	}	
+}
+transistors = {
+	area = chemistry_and_electricity
+	year = 1955
+	cost = 34500
+	supply_limit = 0.2
+
+	factory_goods_throughput = { fertilizer = 0.05 }
+	factory_goods_throughput = { explosives = 0.05 }
+	factory_goods_throughput = { wine = 0.05 }
+	factory_goods_throughput = { liquor = 0.05 }
+	factory_goods_throughput = { paper = 0.05 }
+	factory_goods_throughput = { printing_products = 0.05 }
+
+	ai_chance = {
+		factor = 1.1
+		modifier = {
+			factor = 1.02
+			tech_school = industrial_tech_school
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 1.2
+			industrial_score = 3000
+		}
+	}	
+}

@@ -1,0 +1,6 @@
+owner = ENG
+controller = ENG
+railroad = 1
+add_core = ENG
+trade_goods = wool
+life_rating = 40

@@ -1,0 +1,96 @@
+CHI = {
+	value = 125		#relation
+}
+army = {
+	name = "Exército Português"
+	location = 521
+	regiment = {
+		name= "1. Brigada de Infantaria"
+		type = infantry
+		home = 521
+	}
+	regiment = {
+		name= "2. Brigada de Infantaria"
+		type = infantry
+		home = 521
+	}
+	regiment = {
+		name= "3. Brigada de Infantaria"
+		type = infantry
+		home = 521
+	}
+	regiment = {
+		name= "4. Brigada de Infantaria"
+		type = infantry
+		home = 518
+	}
+	regiment = {
+		name= "5. Brigada de Infantaria"
+		type = infantry
+		home = 518
+	}
+}
+navy = {
+	name = "Portugese Royal Navy"
+	location = 521
+	ship = {
+		name= "Rainha de Portugal "
+		type = manowar
+	}
+	ship = {
+		name= "Dom João VI "
+		type = manowar
+	}
+	ship = {
+		name= "Nossa Senhora da Conceição"
+		type = manowar
+	}
+	ship = {
+		name= "São Sebastião"
+		type = manowar
+	}
+	ship = {
+		name= "Princesa Carlota"
+		type = manowar
+	}
+	ship = {
+		name= "1o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "3o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "4o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "5o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "6o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "7o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "8o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "9o Navios de Transporte"
+		type = clipper_transport
+	}
+	ship = {
+		name= "10o Navios de Transporte"
+		type = clipper_transport
+	}
+}

@@ -1,0 +1,1641 @@
+#############################
+#        Exploration        #
+#############################
+
+## Discovery of the Source of the Nile
+country_event = {
+	
+	id = 23200 # First attempt fails, try again?
+	
+	trigger = {
+		has_country_modifier = expedition_to_source_of_nile_mod
+		NOT = { has_global_flag = nile_discovered }
+	}
+	
+	mean_time_to_happen =  {
+		months = 60
+
+		modifier = {
+			factor = 0.9
+			year = 1863
+		}
+		modifier = {
+			factor = 0.9
+			year = 1866
+		}
+		modifier = {
+			factor = 0.9
+			year = 1869
+		}
+	}
+
+	title = "EVTNAME23200"
+	desc = "EVTDESC23200"
+	picture = "Nile"
+
+	option = {
+		name = "EVTOPTA23200" # Fund second attempt
+		remove_country_modifier = expedition_to_source_of_nile_mod
+		add_country_modifier = {
+			name = expedition_to_source_of_nile_supported
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23200" # Reject second attempt
+		remove_country_modifier = expedition_to_source_of_nile_mod
+		prestige = -80
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 23201 # Our Mission to the Nile is lost
+
+	trigger = {
+		has_country_modifier = expedition_to_source_of_nile_supported
+		NOT = { has_global_flag = nile_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 60
+
+		modifier = {
+			factor = 0.9
+			year = 1868
+		}
+		modifier = {
+			factor = 0.9
+			year = 1871
+		}
+		modifier = {
+			factor = 0.9
+			year = 1874
+		}
+	}
+
+	title = "EVTNAME23201"
+	desc = "EVTDESC23201"
+	picture = "Nile"
+
+	option = {
+		name = "EVTOPTA23200" # Fund third attempt
+		remove_country_modifier = expedition_to_source_of_nile_supported
+		add_country_modifier = {
+			name = expedition_to_source_of_nile_supported_twice
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23200" # Reject second attempt
+		remove_country_modifier = expedition_to_source_of_nile_supported
+		prestige = -80
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 23202 # The Nile Source is discovered!
+	news = yes
+	news_desc_long = "EVTDESC23202_NEWS_LONG"
+	news_desc_medium = "EVTDESC23202_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC23202_NEWS_SHORT"
+
+	trigger = {
+		has_country_modifier = expedition_to_source_of_nile_supported_twice
+		NOT = { has_global_flag = nile_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 60
+
+		modifier = {
+			factor = 0.9
+			year = 1873
+		}
+		modifier = {
+			factor = 0.9
+			year = 1876
+		}
+		modifier = {
+			factor = 0.9
+			year = 1879
+		}
+	}
+
+	title = "EVTNAME23202"
+	desc = "EVTDESC23202"
+	picture = "Nile"
+
+	option = {
+		name = "EVTOPTA23202" # Success!
+		prestige = 600
+		set_global_flag = nile_discovered
+		remove_country_modifier = expedition_to_source_of_nile_supported_twice
+		clr_country_flag = expedition_to_nile_organized
+		any_country = {
+			remove_country_modifier = expedition_to_source_of_nile_mod
+			remove_country_modifier = expedition_to_source_of_nile_supported
+			remove_country_modifier = expedition_to_source_of_nile_supported_twice
+			clr_country_flag = expedition_to_nile_organized
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 23203
+		}
+	}
+}
+country_event = {
+
+	id = 23203
+
+	is_triggered_only = yes
+
+	title = "EVTNAME23203"
+	desc = "EVTDESC23203"
+	picture = "Nile"
+
+	option = {
+		name = "EVTOPTA23203"
+	}
+}
+## Discovery of the North Pole
+country_event = {
+
+	id = 23204 # First attempt fails, try again?
+
+	trigger = {
+		has_country_modifier = expedition_to_north_pole_mod
+		NOT = { has_global_flag = north_pole_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1892
+		}
+		modifier = {
+			factor = 0.9
+			year = 1893
+		}
+		modifier = {
+			factor = 0.9
+			year = 1894
+		}
+	}
+
+	title = "EVTNAME23200"
+	desc = "EVTDESC23204"
+	picture = "NorthPole1"
+
+	option = {
+		name = "EVTOPTA23200" # Fund second attempt
+		remove_country_modifier = expedition_to_north_pole_mod
+		add_country_modifier = {
+			name = expedition_to_north_pole_supported
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23200" # Reject second attempt
+		remove_country_modifier = expedition_to_north_pole_mod
+		prestige = -80
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 23205 # Our Mission to the North Pole is lost
+
+	trigger = {
+		has_country_modifier = expedition_to_north_pole_supported
+		NOT = { has_global_flag = north_pole_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1895
+		}
+		modifier = {
+			factor = 0.9
+			year = 1896
+		}
+		modifier = {
+			factor = 0.9
+			year = 1897
+		}
+	}
+
+	title = "EVTNAME23201"
+	desc = "EVTDESC23205"
+	picture = "NorthPole2"
+
+	option = {
+		name = "EVTOPTA23200" # Fund third attempt
+		remove_country_modifier = expedition_to_north_pole_supported
+		add_country_modifier = {
+			name = expedition_to_north_pole_supported_twice
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23200" # Reject second attempt
+		remove_country_modifier = expedition_to_north_pole_supported
+		prestige = -80
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 23206 # The North Pole is discovered!
+	news = yes
+	news_desc_long = "EVTDESC23206_NEWS_LONG"
+	news_desc_medium = "EVTDESC23206_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC23206_NEWS_SHORT"
+
+	trigger = {
+		has_country_modifier = expedition_to_north_pole_supported_twice
+		NOT = { has_global_flag = north_pole_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1898
+		}
+		modifier = {
+			factor = 0.9
+			year = 1899
+		}
+		modifier = {
+			factor = 0.9
+			year = 1900
+		}
+	}
+
+	title = "EVTNAME23206"
+	desc = "EVTDESC23206"
+	picture = "NorthPole3"
+
+	option = {
+		name = "EVTOPTA23202" # Success!
+		prestige = 800
+		set_global_flag = north_pole_discovered
+		remove_country_modifier = expedition_to_north_pole_supported_twice
+		clr_country_flag = expedition_to_north_pole_organized
+		any_country = {
+			remove_country_modifier = expedition_to_north_pole_mod
+			remove_country_modifier = expedition_to_north_pole_supported
+			remove_country_modifier = expedition_to_north_pole_supported_twice
+			clr_country_flag = expedition_to_north_pole_organized
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 23207
+		}
+	}
+}
+country_event = {
+
+	id = 23207
+
+	is_triggered_only = yes
+
+	title = "EVTNAME23207"
+	desc = "EVTDESC23207"
+	picture = "NorthPole3"
+
+	option = {
+		name = "EVTOPTA23207"
+	}
+}
+## Discovery of the South Pole
+country_event = {
+
+	id = 23208 # First attempt fails, try again?
+
+	trigger = {
+		has_country_modifier = expedition_to_south_pole_mod
+		NOT = { has_global_flag = south_pole_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1902
+		}
+		modifier = {
+			factor = 0.9
+			year = 1903
+		}
+		modifier = {
+			factor = 0.9
+			year = 1904
+		}
+	}
+
+	title = "EVTNAME23200"
+	desc = "EVTDESC23208"
+	picture = "SouthPole1"
+
+	option = {
+		name = "EVTOPTA23200" # Fund second attempt
+		remove_country_modifier = expedition_to_south_pole_mod
+		add_country_modifier = {
+			name = expedition_to_south_pole_supported
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23200" # Reject second attempt
+		remove_country_modifier = expedition_to_south_pole_mod
+		prestige = -80
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 23209 # Our Mission to the South Pole is lost
+
+	trigger = {
+		has_country_modifier = expedition_to_south_pole_supported
+		NOT = { has_global_flag = south_pole_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1905
+		}
+		modifier = {
+			factor = 0.9
+			year = 1906
+		}
+		modifier = {
+			factor = 0.9
+			year = 1907
+		}
+	}
+
+	title = "EVTNAME23201"
+	desc = "EVTDESC23209"
+	picture = "SouthPole2"
+
+	option = {
+		name = "EVTOPTA23200" # Fund third attempt
+		remove_country_modifier = expedition_to_south_pole_supported
+		add_country_modifier = {
+			name = expedition_to_south_pole_supported_twice
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23200" # Reject second attempt
+		remove_country_modifier = expedition_to_south_pole_supported
+		prestige = -80
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 23210 # The South Pole is discovered!
+	news = yes
+	news_desc_long = "EVTDESC23210_NEWS_LONG"
+	news_desc_medium = "EVTDESC23210_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC23210_NEWS_SHORT"
+
+	trigger = {
+		has_country_modifier = expedition_to_south_pole_supported_twice
+		NOT = { has_global_flag = south_pole_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1908
+		}
+		modifier = {
+			factor = 0.9
+			year = 1909
+		}
+		modifier = {
+			factor = 0.9
+			year = 1910
+		}
+	}
+
+	title = "EVTNAME23210"
+	desc = "EVTDESC23210"
+	picture = "SouthPole3"
+
+	option = {
+		name = "EVTOPTA23202" # Success!
+		prestige = 1000
+		set_global_flag = south_pole_discovered
+		remove_country_modifier = expedition_to_south_pole_supported_twice
+		clr_country_flag = expedition_to_south_pole_organized
+		any_country = {
+			remove_country_modifier = expedition_to_south_pole_mod
+			remove_country_modifier = expedition_to_south_pole_supported
+			remove_country_modifier = expedition_to_south_pole_supported_twice
+			clr_country_flag = expedition_to_south_pole_organized
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 23211
+		}
+	}
+}
+country_event = {
+
+	id = 23211
+
+	is_triggered_only = yes
+
+	title = "EVTNAME23211"
+	desc = "EVTDESC23211"
+	picture = "SouthPole3"
+
+	option = {
+		name = "EVTOPTA23211"
+	}
+}
+
+## Congo river expedition
+country_event = {
+
+	id = 23212 # First attempt fails, try again?
+
+	trigger = {
+		has_country_modifier = congo_river_expedition_mod
+		NOT = { has_global_flag = congo_river_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1882
+		}
+		modifier = {
+			factor = 0.9
+			year = 1883
+		}
+		modifier = {
+			factor = 0.9
+			year = 1884
+		}
+	}
+
+	title = "EVTNAME23200"
+	desc = "EVTDESC23212"
+	picture = "CongoRiverExpedition"
+
+	option = {
+		name = "EVTOPTA23200" # Fund second attempt
+		remove_country_modifier = congo_river_expedition_mod
+		add_country_modifier = {
+			name = congo_river_expedition_supported
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23200" # Reject second attempt
+		remove_country_modifier = congo_river_expedition_mod
+		prestige = -80
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 23213 # Our Mission to the Congo river's source is lost
+
+	trigger = {
+		has_country_modifier = congo_river_expedition_supported
+		NOT = { has_global_flag = congo_river_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1885
+		}
+		modifier = {
+			factor = 0.9
+			year = 1886
+		}
+		modifier = {
+			factor = 0.9
+			year = 1887
+		}
+	}
+
+	title = "EVTNAME23201"
+	desc = "EVTDESC23213"
+	picture = "CongoRiverExpedition"
+
+	option = {
+		name = "EVTOPTA23200" # Fund third attempt
+		remove_country_modifier = congo_river_expedition_supported
+		add_country_modifier = {
+			name = congo_river_expedition_supported_twice
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23200" # Reject second attempt
+		remove_country_modifier = congo_river_expedition_supported
+		prestige = -80
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 23214 # Source of Congo river is discovered!
+	news = yes
+	news_desc_long = "EVTDESC23214_NEWS_LONG"
+	news_desc_medium = "EVTDESC23214_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC23214_NEWS_SHORT"
+
+	trigger = {
+		has_country_modifier = congo_river_expedition_supported_twice
+		NOT = { has_global_flag = congo_river_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1888
+		}
+		modifier = {
+			factor = 0.9
+			year = 1889
+		}
+		modifier = {
+			factor = 0.9
+			year = 1890
+		}
+	}
+
+	title = "EVTNAME23214"
+	desc = "EVTDESC23214"
+	picture = "CongoRiverExpedition"
+
+	option = {
+		name = "EVTOPTA23202" # Success!
+		prestige = 700
+		set_global_flag = congo_river_discovered
+		remove_country_modifier = congo_river_expedition_supported_twice
+		clr_country_flag = congo_river_expedition_organized
+		any_country = {
+			remove_country_modifier = congo_river_expedition_mod
+			remove_country_modifier = congo_river_expedition_supported
+			remove_country_modifier = congo_river_expedition_supported_twice
+			clr_country_flag = congo_river_expedition_organized
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 23215
+		}
+	}
+}
+country_event = {
+
+	id = 23215
+
+	is_triggered_only = yes
+
+	title = "EVTNAME23215"
+	desc = "EVTDESC23215"
+	picture = "CongoRiverExpedition"
+
+	option = {
+		name = "EVTOPTA23215"
+	}
+}
+
+############## NRM scientific explorations
+country_event = {
+	id = 23216
+	is_triggered_only = yes
+
+	title = "EVTNAME23216"
+	desc = "EVTDESC23216"
+	picture = "Gottlieb"
+
+	option = {
+		name = "EVTOPTA23216"
+	}
+}
+country_event = {
+	id = 23217
+
+	trigger = {
+		tag = FRA
+		year = 1839
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 7 }
+
+	title = "Первые снимки Луны!"
+	desc = "В астрономии начинает применяться фотография. Французский художник и химик Луи Дагер, вместе с физиком и астрономом Домиником Араго, впервые сделали снимки Луны."
+	picture = "first_moon_photo"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23218
+		}
+	}
+
+	option = {
+		name = "А мы сможем когда-нибудь туда полететь?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23218
+	is_triggered_only = yes
+
+	title = "Первые снимки Луны!"
+	desc = "В астрономии начинает применяться фотография. Французский художник и химик Луи Дагер, вместе с физиком и астрономом Домиником Араго, впервые сделали снимки Луны."
+	picture = "first_moon_photo"
+
+	option = {
+		name = "А мы сможем когда-нибудь туда полететь?"
+	}
+}
+country_event = {
+	id = 23219
+
+	trigger = {
+		tag = ENG
+		year = 1845
+		IRE = { exists = no all_core = { owned_by = THIS } }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 3 }
+
+	title = "Гигантский рефлектор начинает свою работу"
+	desc = "EVTDESC23219"
+	picture = "leviathan_telescope"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23220
+		}
+	}
+
+	option = {
+		name = "Может построить ещё один такой?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23220
+	is_triggered_only = yes
+
+	title = "Гигантский рефлектор начинает свою работу"
+	desc = "EVTDESC23219"
+	picture = "leviathan_telescope"
+
+	option = {
+		name = "Может построить ещё один такой?"
+	}
+}
+country_event = {
+	id = 23221
+
+	trigger = {
+		tag = FRA
+		year = 1851
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 12 }
+
+	title = "Маятник Фуко"
+	desc = "EVTDESC23221"
+	picture = "foucault_pendulum"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23222
+		}
+	}
+
+	option = {
+		name = "Так Земля всё-таки круглая?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23222
+	is_triggered_only = yes
+
+	title = "Маятник Фуко"
+	desc = "EVTDESC23221"
+	picture = "foucault_pendulum"
+
+	option = {
+		name = "Так Земля всё-таки круглая?"
+	}
+}
+country_event = {
+	id = 23223
+
+	trigger = {
+		OR = {
+			tag = GER
+			tag = NGF
+			tag = PRU
+		}
+		year = 1859
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 15 }
+
+	title = "Спектральный анализ"
+	desc = "Немецкие физики Кирхгоф и Бунзен разработали мощный метод удалённого исследования химического состава внеземных объектов — спектральный анализ. Уже в 1861 году Кирхгоф публикует предварительный химический состав солнечной атмосферы."
+	picture = "fraunhofer_lines"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23224
+		}
+	}
+
+	option = {
+		name = "Нужно заранее разведать полезные ископаемые!"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23224
+	is_triggered_only = yes
+
+	title = "Спектральный анализ"
+	desc = "Немецкие физики Кирхгоф и Бунзен разработали мощный метод удалённого исследования химического состава внеземных объектов — спектральный анализ. Уже в 1861 году Кирхгоф публикует предварительный химический состав солнечной атмосферы."
+	picture = "fraunhofer_lines"
+
+	option = {
+		name = "Нужно заранее разведать полезные ископаемые!"
+	}
+}
+country_event = {
+	id = 23225
+
+	trigger = {
+		tag = ENG
+		year = 1868
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 4 }
+
+	title = "Открытие гелия"
+	desc = "EVTDESC23225"
+	picture = "first_photo_of_sun"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23226
+		}
+	}
+
+	option = {
+		name = "Гелий полезен в народном хозяйстве?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23226
+	is_triggered_only = yes
+
+	title = "Открытие гелия"
+	desc = "EVTDESC23225"
+	picture = "first_photo_of_sun"
+
+	option = {
+		name = "Гелий полезен в народном хозяйстве?"
+	}
+}
+country_event = {
+	id = 23227
+
+	trigger = {
+		tag = USA
+		year = 1877
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 6 }
+
+	title = "Открытие спутников Марса"
+	desc = "Американский астроном Асаф Холл открывает спутники Марса - Фобос и Деймос. Это очень небольшие небесные тела, имеющие неправильную форму, причём Фобос приближается к Марсу и однажды на него упадёт!"
+	picture = "phobos"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23228
+		}
+	}
+
+	option = {
+		name = "Интересное открытие"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23228
+	is_triggered_only = yes
+
+	title = "Открытие спутников Марса"
+	desc = "Американский астроном Асаф Холл открывает спутники Марса - Фобос и Деймос. Это очень небольшие небесные тела, имеющие неправильную форму, причём Фобос приближается к Марсу и однажды на него упадёт!"
+	picture = "phobos"
+
+	option = {
+		name = "Интересное открытие"
+	}
+}
+country_event = {
+	id = 23229
+
+	trigger = {
+		OR = {
+			tag = CAN
+			AND = {
+				tag = ENG
+				CAN = {
+					exists = no
+					all_core = { owned_by = THIS }
+				}
+			}
+		}
+		year = 1880
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 14 }
+
+	title = "Введение часовых поясов"
+	desc = "EVTDESC23229"
+	picture = "world_time_zones"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23230
+		}
+	}
+
+	option = {
+		name = "Весьма полезное предложение сэра Флеминга!"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23230
+	is_triggered_only = yes
+
+	title = "Введение часовых поясов"
+	desc = "EVTDESC23229"
+	picture = "world_time_zones"
+
+	option = {
+		name = "Весьма полезное предложение сэра Флеминга!"
+	}
+}
+country_event = {
+	id = 23231
+
+	trigger = {
+		tag = USA
+		year = 1898
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 8 }
+
+	title = "Открытие Фебы"
+	desc = "Американский астроном Уильям Генри Пикеринг открывает Фебу, спутник Сатурна, и его удивительную особенность — обратное вращение по отношению к своей планете."
+	picture = "phoebe"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23232
+		}
+	}
+
+	option = {
+		name = "Особенность?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23232
+	is_triggered_only = yes
+
+	title = "Открытие Фебы"
+	desc = "Американский астроном Уильям Генри Пикеринг открывает Фебу, спутник Сатурна, и его удивительную особенность — обратное вращение по отношению к своей планете."
+	picture = "phoebe"
+
+	option = {
+		name = "Особенность?"
+	}
+}
+country_event = {
+	id = 23233
+
+	trigger = {
+		tag = USA
+		year = 1908
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 7 }
+
+	title = "Обнаружено магнитное поле Солнца"
+	desc = "Американский астроном и изобретатель Джордж Эллери Хейл обнаружил у первого внеземного объекта - Солнца, магнитное поле."
+	picture = "magnetic_field_of_sun"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23234
+		}
+	}
+
+	option = {
+		name = "Как он это сделал?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23234
+	is_triggered_only = yes
+
+	title = "Обнаружено магнитное поле Солнца"
+	desc = "Американский астроном и изобретатель Джордж Эллери Хейл обнаружил у первого внеземного объекта - Солнца, магнитное поле."
+	picture = "magnetic_field_of_sun"
+
+	option = {
+		name = "Как он это сделал?"
+	}
+}
+country_event = {
+	id = 23235
+
+	trigger = {
+		tag = USA
+		year = 1918
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 15 }
+
+	title = "Модель о структуре Млечного пути"
+	desc = "EVTDESC23235"
+	picture = "milky_way_galaxy"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23236
+		}
+	}
+
+	option = {
+		name = "На краю безопаснее! Так ведь?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23236
+	is_triggered_only = yes
+
+	title = "Модель о структуре Млечного пути"
+	desc = "EVTDESC23235"
+	picture = "milky_way_galaxy"
+
+	option = {
+		name = "На краю безопаснее! Так ведь?"
+	}
+}
+country_event = {
+	id = 23237
+
+	trigger = {
+		owns = 394
+		year = 1927
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 13 }
+
+	title = "Гипотеза расширения вселенной"
+	desc = "Бельгийский священник, астроном и математик Жорж Леметр публикует свою гипотезу расширения Вселенной. Чуть позже она подтвердится."
+	picture = "expansion_of_universe"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23238
+		}
+	}
+
+	option = {
+		name = "Так вот почему я расширяюсь?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23238
+	is_triggered_only = yes
+
+	title = "Гипотеза расширения вселенной"
+	desc = "Бельгийский священник, астроном и математик Жорж Леметр публикует свою гипотезу расширения Вселенной. Чуть позже она подтвердится."
+	picture = "expansion_of_universe"
+
+	option = {
+		name = "Так вот почему я расширяюсь?"
+	}
+}
+country_event = {
+	id = 23239
+
+	trigger = {
+		tag = USA
+		year = 1930
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 2 }
+
+	title = "Открытие Плутона"
+	desc = "19 февраля 1930 года, американским астрономом Клайдом Томбо открыта карликовая планета Плутон."
+	picture = "pluto"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23240
+		}
+	}
+
+	option = {
+		name = "Как он увидел этого карлика?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23240
+	is_triggered_only = yes
+
+	title = "Открытие Плутона"
+	desc = "19 февраля 1930 года, американским астрономом Клайдом Томбо открыта карликовая планета Плутон."
+	picture = "pluto"
+
+	option = {
+		name = "Как он увидел этого карлика?"
+	}
+}
+country_event = {
+
+	id = 23241
+	news = yes
+	news_desc_long = "EVTDESC36923_NEWS_LONG"
+	news_desc_medium = "EVTDESC36923_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC36923_NEWS_SHORT"
+
+	trigger = {
+		tag = ENG
+		year = 1858
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen =  { months = 2 }
+
+	title = "Чарльз Дарвин"
+	desc = "EVTDESC36941"
+	picture = "darwin"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23242
+		}
+	}
+
+	option = {
+		name = "Человек произошел от обезьяны? Смешно!"
+		prestige = 10
+		set_country_flag = Darwin
+	}
+}
+country_event = {
+
+	id = 23242
+
+	is_triggered_only = yes
+
+	title = "Чарльз Дарвин"
+	desc = "EVTDESC36941"
+	picture = "darwin"
+
+	option = {
+		name = "Человек произошел от обезьяны? Смешно!"
+	}
+}
+country_event = {
+	id = 23243
+
+	trigger = {
+		tag = FRA
+		year = 1882
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 2 }
+
+	title = "Изобретение вакцины от сибирской язвы"
+	desc = "EVTDESC23243"
+	picture = "pasteur"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23244
+		}
+	}
+
+	option = {
+		name = "Великое достижение науки!"
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 23244
+
+	is_triggered_only = yes
+
+	title = "Изобретение вакцины от сибирской язвы"
+	desc = "EVTDESC23243"
+	picture = "pasteur"
+
+	option = {
+		name = "Великое достижение науки!"
+	}
+}
+country_event = {
+	id = 23245
+
+	trigger = {
+		tag = FRA
+		year = 1886
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 2 }
+
+	title = "Изобретение вакцины от бешенства"
+	desc = "EVTDESC23245"
+	picture = "pasteur2"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23246
+		}
+	}
+
+	option = {
+		name = "Невероятно!"
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 23246
+
+	is_triggered_only = yes
+
+	title = "Изобретение вакцины от бешенства"
+	desc = "EVTDESC23245"
+	picture = "pasteur2"
+
+	option = {
+		name = "Невероятно!"
+	}
+}
+country_event = {
+	id = 23247
+
+	trigger = {
+		tag = GER
+		year = 1882
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 2 }
+
+	title = "Открытие возбудителя туберкулёза"
+	desc = "EVTDESC23247"
+	picture = "robert_koch"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23248
+		}
+	}
+
+	option = {
+		name = "Значит микробная теория верна?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23248
+
+	is_triggered_only = yes
+
+	title = "Открытие возбудителя туберкулёза"
+	desc = "EVTDESC23247"
+	picture = "robert_koch"
+
+	option = {
+		name = "Значит микробная теория верна?"
+	}
+}
+country_event = {
+	id = 23249
+
+	trigger = {
+		OR = {
+			tag = RUS
+			tag = SOV
+		}
+		year = 1903
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 2 }
+
+	title = "Формула Циолковского"
+	desc = "EVTDESC23247"
+	picture = "tsiolkovsky"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23250
+		}
+	}
+
+	option = {
+		name = "Мы вскоре покорим космос!"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23250
+
+	is_triggered_only = yes
+
+	title = "Формула Циолковского"
+	desc = "EVTDESC23247"
+	picture = "tsiolkovsky"
+
+	option = {
+		name = "Мы вскоре покорим космос!"
+	}
+}
+country_event = {
+
+	id = 23251
+
+	trigger = {
+		year = 1915
+		tag = GER
+        }
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 2 }
+
+	title = "Теория относительности"
+	desc = "EVTDESC23251"
+	picture = "theory_of_relativity"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23252
+		}
+	}
+
+	option = {
+		name = "В интересное время живём!"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23252
+
+	is_triggered_only = yes
+
+	title = "Теория относительности"
+	desc = "EVTDESC23251"
+	picture = "theory_of_relativity"
+
+	option = {
+		name = "В интересное время живём!"
+	}
+}
+country_event = {
+
+	id = 23253
+
+	trigger = {
+		year = 1912
+		tag = GER
+        }
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 2 }
+
+	title = "Теория дрейфа материков"
+	desc = "EVTDESC23253"
+	picture = "theory_of_mobilism"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23254
+		}
+	}
+
+	option = {
+		name = "Невероятно!"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23254
+
+	is_triggered_only = yes
+
+	title = "Теория дрейфа материков"
+	desc = "EVTDESC23253"
+	picture = "theory_of_mobilism"
+
+	option = {
+		name = "Невероятно!"
+	}
+}
+country_event = {
+
+	id = 23255
+
+	trigger = {
+		year = 1931
+		OR = {
+			AND = {
+				tag = RUS
+				NOT = { exists = SOV }
+			}
+			AND = {
+				tag = USA
+				NOT = { exists = RUS }
+			}
+		}
+        }
+	fire_only_once = yes
+
+	mean_time_to_happen = { months = 2 }
+
+	title = "Изобретение телевизора"
+	desc = "EVTDESC23255"
+	picture = "zworykin_tubes"
+
+	immediate = {
+		any_country = {
+			limit = { ai = no }
+			country_event = 23256
+		}
+	}
+
+	option = {
+		name = "И люди будут пялиться в ящик?"
+		prestige = 10
+	}
+}
+country_event = {
+	id = 23256
+
+	is_triggered_only = yes
+
+	title = "Изобретение телевизора"
+	desc = "EVTDESC23255"
+	picture = "zworykin_tubes"
+
+	option = {
+		name = "И люди будут пялиться в ящик?"
+	}
+}
+
+## First transatlantic flight
+country_event = {
+
+	id = 23257 # First attempt fails, try again?
+
+	trigger = {
+		has_country_modifier = first_transatlantic_flight_mod
+		NOT = { has_global_flag = congo_river_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1917
+		}
+		modifier = {
+			factor = 0.9
+			year = 1918
+		}
+		modifier = {
+			factor = 0.9
+			year = 1919
+		}
+	}
+
+	title = "EVTNAME23257"
+	desc = "EVTDESC23257"
+	picture = "TransatlanticFlight1"
+
+	option = {
+		name = "EVTOPTA23257" # Fund second attempt
+		remove_country_modifier = first_transatlantic_flight_supported
+		add_country_modifier = {
+			name = first_transatlantic_flight_mod
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23257" # Reject second attempt
+		remove_country_modifier = first_transatlantic_flight_mod
+		prestige = -80
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 23258 # Second attempt fails, try again?
+
+	trigger = {
+		has_country_modifier = first_transatlantic_flight_supported
+		NOT = { has_global_flag = congo_river_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1920
+		}
+		modifier = {
+			factor = 0.9
+			year = 1921
+		}
+		modifier = {
+			factor = 0.9
+			year = 1922
+		}
+	}
+
+	title = "EVTNAME23258"
+	desc = "EVTDESC23258"
+	picture = "TransatlanticFlight1"
+
+	option = {
+		name = "EVTOPTA23257" # Fund third attempt
+		remove_country_modifier = first_transatlantic_flight_supported
+		add_country_modifier = {
+			name = first_transatlantic_flight_supported_twice
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB23257" # Reject second attempt
+		remove_country_modifier = first_transatlantic_flight_supported
+		prestige = -80
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+
+	id = 23259 # First transatlantic flight completed!
+	news = yes
+	news_desc_long = "EVTDESC23259_NEWS_LONG"
+	news_desc_medium = "EVTDESC23259_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC23259_NEWS_SHORT"
+
+	trigger = {
+		has_country_modifier = first_transatlantic_flight_supported_twice
+		NOT = { has_global_flag = congo_river_discovered }
+	}
+
+	mean_time_to_happen =  {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1923
+		}
+		modifier = {
+			factor = 0.9
+			year = 1924
+		}
+		modifier = {
+			factor = 0.9
+			year = 1925
+		}
+	}
+
+	title = "EVTNAME23259"
+	desc = "EVTDESC23259"
+	picture = "TransatlanticFlight2"
+
+	option = {
+		name = "EVTOPTA23259" # Success!
+		prestige = 1200
+		set_global_flag = first_transatlantic_flight_completed
+		remove_country_modifier = first_transatlantic_flight_supported_twice
+		clr_country_flag = first_transatlantic_flight_organized
+		any_country = {
+			remove_country_modifier = first_transatlantic_flight_mod
+			remove_country_modifier = first_transatlantic_flight_supported
+			remove_country_modifier = first_transatlantic_flight_supported_twice
+			clr_country_flag = first_transatlantic_flight_organized
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 23260
+		}
+	}
+}
+country_event = {
+
+	id = 23260
+
+	is_triggered_only = yes
+
+	title = "EVTNAME23260"
+	desc = "EVTDESC23260"
+	picture = "TransatlanticFlight2"
+
+	option = {
+		name = "EVTOPTA23260"
+	}
+}

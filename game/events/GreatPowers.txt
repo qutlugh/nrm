@@ -1,0 +1,2868 @@
+# Event to Inherit
+country_event = {
+	id = 11101
+	title = "EVTNAME11101"
+	desc = "EVTDESC11101"
+	picture = "Celebration"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA11101"
+		FROM = { inherit = THIS }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "EVTOPTB11101"
+		prestige = 5
+		relation = {
+			who = FROM
+			value = -100
+		}
+		any_pop = {
+			militancy = 3
+			consciousness = 2
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+# Great Power Contention
+country_event = {
+	id = 19000
+	title = "EVTNAME19000"
+	desc = "EVTDESC19000"
+	picture = "greatpowers"
+
+	trigger = {
+		any_greater_power = {
+			diplomatic_influence = {
+				who = THIS
+				value = 30
+			}
+		}
+		any_greater_power = {
+			diplomatic_influence = {
+				who = THIS
+				value = 5
+			}
+			NOT = {
+				diplomatic_influence = {
+					who = THIS
+					value = 30
+				}
+			}
+		}
+		NOT = { tag = COM }
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.9
+			prestige = 40
+		}
+		modifier = {
+			factor = 0.9
+			prestige = 60
+		}
+		modifier = {
+			factor = 1.1
+			military_score = 5
+		}
+		modifier = {
+			factor = 1.2
+			military_score = 10
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19000"
+		any_greater_power = {
+			limit = {
+				diplomatic_influence = {
+					who = THIS
+					value = 5
+				}
+				NOT = {
+					diplomatic_influence = {
+						who = THIS
+ 						value = 75
+ 					}
+ 				}
+			}
+			country_event = 19005
+		}
+	}
+}
+
+# Reply to Above
+country_event = {
+	id = 19005
+	title = "EVTNAME19005"
+	desc = "EVTDESC19005"
+	picture = "greatpowers"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19005"
+		diplomatic_influence = {
+			who = FROM
+			value = 100
+		}
+		badboy = 1
+	}
+
+	option = {
+		name = "EVTOPTB19005"
+		prestige = -20
+		diplomatic_influence = {
+			who = FROM
+			value = -100
+		}
+	}
+}
+# Parade
+country_event = {
+	id = 19010
+	news = yes
+	news_desc_long = "EVTDESC19010_NEWS_LONG"
+	news_desc_medium = "EVTDESC19010_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19010_NEWS_SHORT"
+	title = "EVTNAME19010"
+	desc = "EVTDESC19010"
+	picture = "greatpowers"
+
+	trigger = {
+		is_greater_power = yes
+		colonial_nation = yes
+		prestige = 400
+	}
+
+	mean_time_to_happen = {
+		months = 240
+
+		modifier = {
+			factor = 0.75
+			prestige = 600
+		}
+		modifier = {
+			factor = 0.50
+			prestige = 800
+		}
+		modifier = {
+			factor = 1.25
+			badboy = 0.5
+		}
+		modifier = {
+			factor = 10
+			badboy = 0.75
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19010"
+		prestige = 20
+		capital_scope = {
+			any_pop = {
+				militancy = -1
+				consciousness = 7
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "EVTOPTB19010"
+		any_greater_power = {
+			prestige = -20
+		}
+		capital_scope = {
+			any_pop = {
+				militancy = -5
+				consciousness = -5
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+#Botanical Expedition
+country_event = {
+	id = 19022
+	title = "EVTNAME19022"
+	desc = "EVTDESC19022"
+	picture = "Botanic_expedition"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19022"
+		add_country_modifier = {
+			name = botanical_expedition_funded
+			duration = -1
+		}
+		set_country_flag = botanical_expedition_organized
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "EVTOPTB19022"
+		prestige = -40
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 19023
+	title = "EVTNAME19023"
+	desc = "EVTDESC19023"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		has_country_modifier = botanical_expedition_funded
+	}
+
+	mean_time_to_happen = {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1833
+		}
+		modifier = {
+			factor = 0.9
+			year = 1834
+		}
+		modifier = {
+			factor = 0.9
+			year = 1835
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19023"
+		remove_country_modifier = botanical_expedition_funded
+		prestige = -40
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "EVTOPTB19023"
+		remove_country_modifier = botanical_expedition_funded
+		add_country_modifier = {
+			name = botanical_expedition_funded_again
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = 19024
+	title = "EVTNAME19024"
+	desc = "EVTDESC19024"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		OR = {
+			has_country_modifier = botanical_expedition_funded
+			has_country_modifier = botanical_expedition_funded_again
+			has_country_modifier = botanical_expedition_funded_twice
+		}
+		upper_house = {
+			ideology = liberal
+			value = 0.3
+		}
+		NOT = {
+			has_country_flag = parliament_supported_botanic_expedition
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1836
+		}
+		modifier = {
+			factor = 0.9
+			year = 1837
+		}
+		modifier = {
+			factor = 0.9
+			year = 1838
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19024"
+		remove_country_modifier = botanical_expedition_funded
+		remove_country_modifier = botanical_expedition_funded_again
+		remove_country_modifier = botanical_expedition_funded_twice
+		prestige = -40
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "EVTOPTB19024"
+		set_country_flag = parliament_supported_botanic_expedition
+		any_pop = {
+			scaled_militancy = {
+				ideology = liberal
+				factor = 5
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = 19025
+	title = "EVTNAME19025"
+	desc = "EVTDESC19025"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		has_country_modifier = botanical_expedition_funded_again
+		NOT = {
+			has_country_flag = botanical_expedition_threatened
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 48
+
+		modifier = {
+			factor = 0.9
+			year = 1839
+		}
+		modifier = {
+			factor = 0.9
+			year = 1840
+		}
+		modifier = {
+			factor = 0.9
+			year = 1841
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19025"
+		prestige = 20
+		remove_country_modifier = botanical_expedition_funded_again
+		add_country_modifier = {
+			name = botanical_expedition_funded_twice
+			duration = -1
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "EVTOPTB19025"
+		set_country_flag = botanical_expedition_threatened
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 19026
+	title = "EVTNAME19026"
+	desc = "EVTDESC19026"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		OR = {
+			has_country_modifier = botanical_expedition_funded_again
+			has_country_modifier = botanical_expedition_funded_twice
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			has_country_flag = botanical_expedition_threatened
+			factor = 0.01
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19026"
+		remove_country_modifier = botanical_expedition_funded
+		remove_country_modifier = botanical_expedition_funded_again
+		clr_country_flag = botanical_expedition_threatened
+		clr_country_flag = parliament_supported_botanic_expedition
+		prestige = -50
+	}
+}
+
+country_event = {
+	id = 19027
+	title = "EVTNAME19027"
+	desc = "EVTDESC19027"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		OR = {
+			has_country_modifier = botanical_expedition_funded_again
+			has_country_modifier = botanical_expedition_funded_twice
+		}
+		NOT = { has_global_flag = victoria_regina_found }
+	}
+
+	mean_time_to_happen = {
+		months = 48
+
+		modifier = {
+			has_country_flag = botanical_expedition_threatened
+			factor = 2
+		}
+		modifier = {
+			factor = 0.9
+			year = 1842
+		}
+		modifier = {
+			factor = 0.9
+			year = 1843
+		}
+		modifier = {
+			factor = 0.9
+			year = 1844
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19027"
+		prestige = 400
+		years_of_research = 1
+		set_global_flag = victoria_regina_found
+		clr_global_flag = botanical_expedition_in_progress
+		remove_country_modifier = botanical_expedition_funded
+		remove_country_modifier = botanical_expedition_funded_again
+		remove_country_modifier = botanical_expedition_funded_twice
+		clr_country_flag = botanical_expedition_organized
+		clr_country_flag = botanical_expedition_threatened
+		clr_country_flag = parliament_supported_botanic_expedition
+		any_country = {
+			limit = {
+				OR = {
+					has_country_modifier = botanical_expedition_funded
+					has_country_modifier = botanical_expedition_funded_again
+					has_country_modifier = botanical_expedition_funded_twice
+					has_country_flag = botanical_expedition_threatened
+					has_country_flag = parliament_supported_botanic_expedition
+				}
+			}
+			remove_country_modifier = botanical_expedition_funded
+			remove_country_modifier = botanical_expedition_funded_again
+			remove_country_modifier = botanical_expedition_funded_twice
+			clr_country_flag = botanical_expedition_organized
+			clr_country_flag = botanical_expedition_threatened
+			clr_country_flag = parliament_supported_botanic_expedition
+			country_event = 19028
+		}
+	}
+}
+
+country_event = {
+	id = 19028
+	title = "EVTNAME19028"
+	desc = "EVTDESC19028"
+	picture = "Botanic_expedition"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19028"
+		prestige = -40
+	}
+}
+
+country_event = {
+	id = 19029
+	title = "EVTNAME19029"
+	desc = "EVTDESC19029"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		has_country_flag = botanical_expedition_in_progress
+	}
+
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 1.1
+			has_country_flag = botanical_expedition_threatened
+		}
+	}
+
+	option = {
+		name = "EVTNAME19029"
+		clr_country_flag = botanical_expedition_in_progress
+		clr_country_flag = botanical_expedition_threatened
+		prestige = 20
+		years_of_research = 0.1
+	}
+}
+# Crimean war
+country_event = {
+	id = 19030
+	news = yes
+	news_desc_long = "EVTDESC19030_NEWS_LONG"
+	news_desc_medium = "EVTDESC19030_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19030_NEWS_SHORT"
+	title = "EVTNAME19030"
+	desc = "EVTDESC19030"
+	picture = "Ottoman"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19030"
+		prestige = 10
+		relation = {
+			who = TUR
+			value = 30
+		}
+		FROM = {
+			country_event = 19031
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19030"
+		prestige = -20
+	}
+}
+country_event = {
+	id = 19031
+	title = "EVTNAME19031"
+	desc = "EVTDESC19031"
+	picture = "Orthodox"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19030"
+		FROM = {
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 12
+			}
+			country_event = 19032
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19030"
+		FROM = {
+			country_event = 19033
+		}
+		remove_country_modifier = protector_of_eastern_christendom
+		prestige = -80
+	}
+}
+country_event = {
+	id = 19032
+	title = "EVTNAME19032"
+	desc = "EVTDESC19032"
+	picture = "Orthodox"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19030"
+		prestige = -20
+	}
+}
+country_event = {
+	id = 19033
+	title = "EVTNAME19033"
+	desc = "EVTDESC19033"
+	picture = "Orthodox"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTB19030"
+		prestige = 10
+	}
+}
+# Valley of The Kings
+country_event = {
+	id = 19040
+	title = "EVTNAME19040"
+	desc = "EVTDESC19040"
+	picture = "ValleyoftheKings"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19040"
+		FROM = { country_event = 19041 }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.2
+				has_global_flag = egyptian_excavation_rights
+			}
+			modifier = {
+				factor = 2
+				FROM = { prestige = 800 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { prestige = 1600 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { prestige = 1800 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { rank = 4 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { rank = 1 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { military_score = THIS }
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19040"
+		FROM = { country_event = 19042 }
+		ai_chance = { factor = 1 }
+	}
+}
+#Egypt Allows
+country_event = {
+	id = 19041
+	title = "EVTNAME19041"
+	desc = "EVTDESC19041"
+	picture = "ValleyoftheKings"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19041"
+		add_country_modifier = {
+			name = egyptian_excavations
+			duration = -1
+		}
+		relation = {
+			who = FROM
+			value = 50
+		}
+		set_global_flag = egyptian_excavation_rights
+	}
+}
+#Egypt Refuses
+country_event = {
+	id = 19042
+	title = "EVTNAME19042"
+	desc = "EVTDESC19042"
+	picture = "ValleyoftheKings"
+
+	is_triggered_only = yes
+	immediate = { money = 100000 }
+
+	option = {
+		name = "EVTOPTA19042"
+		relation = {
+			who = FROM
+			value = -100
+		}
+		prestige = -20
+	}
+}
+# Excavation team gets into trouble
+country_event = {
+	id = 19043
+	title = "EVTNAME19043"
+	desc = "EVTDESC19043"
+	picture = "ValleyoftheKings"
+
+	trigger = {
+		has_country_modifier = egyptian_excavations
+		NOT = { OR = { owns = 1767 tag = EGY }}
+		exists = EGY
+	}
+
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 1.2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.8
+			NOT = {
+				prestige = 200
+			}
+		}
+		modifier = {
+			factor = 1.3
+			nationalism_n_imperialism = 1
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19043"
+		treasury = -50000
+	}
+
+	option = {
+		name = "EVTOPTB19043"
+		prestige = -40
+		relation = {
+			who = EGY
+			value = -200
+		}
+		clr_global_flag = egyptian_excavation_rights
+	}
+}
+# Tomb Found
+country_event = {
+	id = 19044
+	title = "EVTNAME19044"
+	desc = "EVTDESC19044"
+	picture = "Tomb"
+
+	trigger = {
+		has_country_modifier = egyptian_excavations
+	}
+
+	mean_time_to_happen = {
+		months = 200
+	}
+
+	option = {
+		name = "EVTOPTA19044"
+		prestige = 20
+		years_of_research = 0.1
+	}
+}
+#Curse of The Pharaos
+country_event = {
+	id = 19045
+	title = "EVTNAME19045"
+	desc = "EVTDESC19045"
+	picture = "Egyptian"
+
+	trigger = {
+		has_country_modifier = egyptian_excavations
+	}
+
+	mean_time_to_happen = {
+		months = 200
+	}
+
+	option = {
+		name = "EVTOPTA19045"
+		any_pop = { militancy = 2 }
+	}
+}
+#Tutankhamun's Tomb
+country_event = {
+	id = 19046
+	news = yes
+	news_desc_long = "EVTDESC19046_NEWS_LONG"
+	news_desc_medium = "EVTDESC19046_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19046_NEWS_SHORT"
+	title = "EVTNAME19046"
+	desc = "EVTDESC19046"
+	picture = "Egyptian"
+
+	trigger = {
+		has_country_modifier = egyptian_excavations
+		NOT = { has_global_flag = tutankhamun_found }
+	}
+	major = yes
+
+	mean_time_to_happen = {
+		months = 250
+	}
+
+	option = {
+		name = "EVTOPTA19046"
+		prestige = 200
+		years_of_research = 1
+		set_global_flag = tutankhamun_found
+		any_country = { remove_country_modifier = egyptian_excavations }
+		remove_country_modifier = egyptian_excavations
+		clr_global_flag = egyptian_excavation_rights
+	}
+}
+#Mummy Found
+country_event = {
+	id = 19047
+	title = "EVTNAME19047"
+	desc = "EVTDESC19047"
+	picture = "Egyptian"
+
+	trigger = {
+		has_country_modifier = egyptian_excavations
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+
+	option = {
+		name = "EVTOPTA19047"
+		prestige = 10
+		years_of_research = 0.05
+	}
+}
+#The Ems Dispatch (fired by Prussian decision)
+country_event = {
+	id = 19200
+	title = "EVTNAME19200"
+	desc = "EVTDESC19200"
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "EVTOPTA19200"
+		relation = {
+			who = FROM
+			value = -400
+		}
+		casus_belli = { target = FROM type = humiliate months = 12 }
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = humiliate
+			}
+			defender_goal = {
+				casus_belli = acquire_state_event
+                                state_province_id = 412
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "EVTOPTB19200"
+		prestige_factor = -0.75
+		FROM = { set_country_flag = france_has_given_up }
+                any_pop = {
+			limit = { is_accepted_culture = yes }
+			militancy = 8 consciousness = 8
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+# The Statue of Liberty (fired by French decision)
+country_event = {
+	id = 19300
+	title = "EVTNAME19300"
+	desc = "EVTDESC19300"
+	picture = "liberty_statue"
+
+	is_triggered_only = yes
+	immediate = {
+		232 = { add_province_modifier = { name = the_statue_of_liberty duration = -1 }}
+	}
+
+	option = {
+		name = "EVTOPTA19300"
+	}
+}
+
+# The Mandate of Heaven
+country_event = {
+	id = 19310
+	news = yes
+	news_desc_long = "EVTDESC19310_NEWS_LONG"
+	news_desc_medium = "EVTDESC19310_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19310_NEWS_SHORT"
+	title = "EVTNAME19310"
+	desc = "EVTDESC19310"
+	picture = "asian_ruler"
+
+	trigger = {
+		tag = CHI
+                is_greater_power = yes
+	}
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19310"
+		prestige = 100
+		any_pop = { militancy = -5 }
+	}
+}
+
+# The Empire of the Sun
+country_event = {
+	id = 19320
+	news = yes
+	news_desc_long = "EVTDESC19320_NEWS_LONG"
+	news_desc_medium = "EVTDESC19320_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19320_NEWS_SHORT"
+	title = "EVTNAME19320"
+	desc = "EVTDESC19320"
+	picture = "japanese_power"
+
+	trigger = {
+		tag = JAP
+                is_greater_power = yes
+	}
+	fire_only_once = yes
+
+	option = {
+		name = "EVTOPTA19320"
+		prestige = 100
+		any_pop = { militancy = -7 }
+	}
+}
+
+# Great wars
+country_event = {
+	id = 19355
+	news = yes
+	news_desc_long = "EVTDESC19355_NEWS_LONG"
+	news_desc_medium = "EVTDESC19355_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19355_NEWS_SHORT"
+	title = "EVTNAME19355"
+	desc = "EVTDESC19355"
+	major = yes
+	picture = "greatpowers"
+
+	trigger = {
+		great_wars_enabled = no
+		NOT = { has_global_flag = great_wars_enabled }
+		revolution_n_counterrevolution = 1
+		year = 2000 # Событие на данный момент отключено
+	}
+
+	mean_time_to_happen = {
+		months = 8
+	}
+
+        immediate = {
+		great_wars_enabled = yes
+		set_global_flag = great_wars_enabled
+        }
+
+	option = {
+		name = "EVTOPTA19355"
+	}
+}
+
+# World wars
+country_event = {
+	id = 19356
+	news = yes
+	news_desc_long = "EVTDESC19356_NEWS_LONG"
+	news_desc_medium = "EVTDESC19356_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19356_NEWS_SHORT"
+	title = "EVTNAME19356"
+	desc = "EVTDESC19356"
+	major = yes
+	picture = "greatpowers"
+
+	trigger = {
+		world_wars_enabled = no
+                has_global_flag = world_war_ends
+		NOT = { has_global_flag = world_wars_enabled }
+		year = 2000 # Событие на данный момент отключено
+	}
+
+	mean_time_to_happen = {
+		months = 8
+	}
+
+        immediate = {
+		world_wars_enabled = yes
+		set_global_flag = world_wars_enabled
+        }
+
+	option = {
+		name = "EVTOPTA19356"
+	}
+}
+country_event = {
+	id = 19362
+	title = "Назначение $COUNTRY_ADJ$ администрации"
+	desc = "Мы недавно получили контроль над территориями, которые считаем своими национальными, но они совершенно не имеют нормальной метропольной администрации. Мы исправим эту ошибку."
+	picture = "asian_administration"
+
+	trigger = {
+		has_global_flag = the_game_has_started
+		any_owned_province = {
+			is_core = THIS
+			is_colonial = yes
+			#has_province_modifier = core_reg
+		}
+	}
+
+	option = {
+		name = "Приступайте к назначениям"
+		any_state = {
+			limit = {
+				is_colonial = yes
+				any_owned_province = { is_core = THIS }
+			}
+			any_owned = { add_core = AAB }
+		}
+		release = AAB
+		AAB = { civilized = yes }
+		inherit = AAB
+		any_owned = { limit = { is_core = AAB } remove_core = AAB }
+	}
+}
+country_event = {
+	id = 19363
+	title = "Держава $FROMCOUNTRY$ заявила об аннексии оккупированных территорий!"
+	desc = "$FROMCOUNTRY_ADJ$ дипломаты открыто заявили на весь мир, что их страна будет аннесировать все заморские территории врагов, которые они смогли оккупировать."
+	picture = "crisis"
+
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+
+	option = {
+		name = "Они наши союзники"
+	}
+	option = {
+		name = "Пираты, не иначе!"
+		FROM = { relation = { who = THIS value = -100 }}
+	}
+}
+country_event = {
+	id = 19364
+	title = "Держава $FROMCOUNTRY$ отказалась от аннексии оккупированных территорий"
+	desc = "$FROMCOUNTRY_ADJ$ дипломаты открыто заявили на весь мир, что их страна будет аннесировать все заморские территории врагов, которые они смогли оккупировать."
+	picture = "crisis"
+
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+
+	option = {
+		name = "Разум возобладал над варварством"
+	}
+}
+country_event = {
+	id = 19365
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Лондоном. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = ENG
+		owns = 300
+		NOT = { capital = 300 }
+	}
+        immediate = { capital = 300 }
+
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19366
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Парижем. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = FRA
+		owns = 425
+		NOT = { capital = 425 }
+	}
+        immediate = { capital = 425 }
+
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19367
+	title = "Возвращение великой столицы"
+	desc = "Наша держава восстановила контроль над своей великой столицей - Вашингтоном. Мы немедленно перенесём туда свою столицу снова."
+	picture = "countryside"
+	trigger = {
+		tag = USA
+		owns = 220
+		NOT = { capital = 220 }
+	}
+        immediate = { capital = 220 }
+		
+	option = {
+		name = "Наследие отцов-основателей сохранено"
+	}
+}
+country_event = {
+	id = 19368
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Берлином. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		OR = {
+			tag = GER
+			tag = NGF
+			tag = PRU
+		}
+		owns = 549
+		NOT = { capital = 549 }
+	}
+        immediate = { capital = 549 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19369
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Веной. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		OR = {
+			tag = KUK
+			tag = SGF
+			tag = AUS
+		}
+		owns = 619
+		NOT = { capital = 619 }
+	}
+        immediate = { capital = 619 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19370
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Стокгольмом. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		OR = {
+			tag = SCA
+			tag = SWE
+		} 
+		owns = 322
+		NOT = { capital = 322 }
+	}
+        immediate = { capital = 322 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19371
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Амстердамом. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = NET
+		owns = 375
+		NOT = { capital = 375 }
+	}
+        immediate = { capital = 375 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19372
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Санкт-Петербургом. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = RUS
+		owns = 994
+		NOT = { capital = 994 }
+	}
+        immediate = { capital = 994 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19373
+	title = "Возвращение великой столицы"
+	desc = "Наша держава восстановила контроль над своей великой столицей - Рио-де-Жанейро. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = BRZ
+		owns = 2447
+		NOT = { capital = 2447 }
+	}
+        immediate = { capital = 2447 }
+		
+	option = {
+		name = "Бразилия суверенна"
+	}
+}
+country_event = {
+	id = 19374
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Римом. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = ITA
+		owns = 749
+		NOT = { capital = 749 }
+		has_country_flag = law_of_guarantees
+	}
+        immediate = { capital = 749 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19375
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Дели. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = HND
+		owns = 1236
+		NOT = { capital = 1236 }
+	}
+        immediate = { capital = 1236 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19376
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Стамбулом. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = TUR
+		owns = 860
+		NOT={OR={capital=860 has_country_flag=flight_to_ankara}}
+	}
+        immediate = { capital = 860 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19377
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Мадридом. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = SPA
+		owns = 487
+		NOT = { capital = 487 }
+	}
+        immediate = { capital = 487 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19378
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Токио. Мы немедленно перенесём туда свою столицу снова."
+	picture = "shinto"
+	trigger = {
+		tag = JAP
+		owns = 1649
+		NOT = { capital = 1649 }
+		has_country_flag = japanese_civil_war_has_happened
+	}
+        immediate = { capital = 1649 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19379
+	title = "Возвращение древней столицы"
+	desc = "Наша держава восстановила контроль над своей древней столицей - Москвой. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = SOV
+		owns = 1008
+		NOT = { capital = 1008 }
+	}
+        immediate = { capital = 1008 }
+		
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19380
+	title = "Возвращение новой столицы"
+	desc = "Наша держава восстановила контроль над своей новой столицей - Анкарой. Мы немедленно перенесём туда свою столицу снова."
+	picture = "romtroops"
+	trigger = {
+		tag = TUR
+		owns = 876
+		NOT = { capital = 876 }
+		has_country_flag = flight_to_ankara
+	}
+        immediate = { capital = 876 }
+		
+	option = {
+		name = "Наследие Ататюрка сохранено"
+	}
+}
+country_event = {
+	id = 19381
+	title = "Восстановление контроля над Пекином"
+	desc = "Наша держава восстановила контроль над одной из двух наших древних столиц, в которой находилась летняя резиденция императора - Пекином. Мы переносим туда свою столицу."
+	picture = "emperor_funeral"
+	trigger = {
+		tag = CHI
+		owns = 1612
+		NOT = { capital = 1612 }
+	}
+        immediate = { capital = 1612 }
+
+	option = {
+		name = "Наследие предков возвращено"
+	}
+}
+country_event = {
+	id = 19382
+	title = "Потеря летней столицы - Пекина"
+	desc = "Наша держава потеря контроль над своей древней столицей, в которой находилась летняя резиденция императора - Пекином. Теперь мы вынуждены перенести свою столицу в Нанкин."
+	picture = "emperor_funeral"
+	trigger = {
+	    	tag = CHI
+	    	NOT = {
+			OR = {
+				AND = { capital=1612 owns=1612 }
+				capital = 2221
+			}
+		}
+		owns = 2221
+	}
+        immediate = { capital = 2221 }
+
+	option = {
+		name = "Мы ещё вернём Пекин!"
+	}
+}
+country_event = {
+	id = 19383
+	title = "Победа $FROMCOUNTRY_ADJ$ борцов за независимость!"
+	desc = "$FROMCOUNTRY_ADJ$ борцы за независимость недавно захватили власть в державе $FROMCOUNTRY$, находившейся под нашим контролем."
+	picture = "rebellion"
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_country = {
+			limit = {
+				tag = FROM
+				has_country_modifier = mastering_country_market
+			}
+			country_event = 194998
+		}
+	}
+
+	option = {
+		name = "Постараемся сохранить отношения"
+		relation = { who = FROM value = 100 }
+		prestige = -40
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Наши войска туда ещё вернутся!"
+		relation = { who = FROM value = -400 }
+		diplomatic_influence = { who = THIS value = -200 }
+		leave_alliance = FROM
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 194998
+	title = "Прекращение освоения рынка бывшей метрополией"
+	desc = "$FROMCOUNTRY_ADJ$ олигархи больше не смогут осваивать наш рынок. Теперь он принадлежит только нам!"
+	picture = "rebellion"
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_modifier = mastering_country_market
+		any_owned = {
+			remove_province_modifier = mastering_region_mark
+			remove_province_modifier = mastering_the_region
+			remove_province_modifier = mastered_region
+		}
+		FROM = {
+			remove_country_modifier = mastering_vassal_market
+			capital_scope = {
+				add_province_modifier = { name = waiting_for_next_event duration = 60 }
+			}
+		}
+	}
+
+	option = {
+		name = "Ресурсы теперь принадлежат нам!"
+	}
+}
+country_event = {
+	id = 194999
+	title = "Выход из соц. лагеря"
+	desc = "Мы наконец сбросили оковы коммунистической партийной элиты с народа и можем спокойно заняться приватизацией."
+	picture = "capitalists"
+
+	trigger = {
+		is_independant = no
+		overlord = { government = proletarian_dictatorship }
+		NOT = { government = proletarian_dictatorship }
+	}
+
+	immediate = {
+		overlord = { release_vassal = THIS }
+	}
+
+	option = {
+		name = "Наконец я смогу купить себе яхту"
+	}
+}
+country_event = {
+	id = 178077
+	is_triggered_only = yes
+
+	title = "EVTNAME95011"
+	desc = "EVTDESC95011"
+	picture = "trinity"
+
+	option = {
+		name = "EVTOPTA63400"
+	}
+}
+country_event = {
+	id = 1800940
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	title = "EVTNAME1800940"
+	desc = "EVTDESC1800940"
+        picture = "trinity"
+
+	option = {
+		name = "С этим нужно что-то делать!"
+	}
+}
+# Gain Core event
+province_event = {
+	id = 2560
+	title = "EVTNAME2560"
+	desc = "EVTDESC2560"
+
+	trigger = {
+		NOT = { is_core = THIS }
+		is_colonial = no
+		NOT = {
+			state_scope = {
+				any_owned_province = {
+					OR = {
+						is_primary_culture = no
+						NOT = { controlled_by = THIS }
+					}
+				}
+			}
+		}
+		any_neighbor_province = { is_core = THIS }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.25
+			NOT = { average_militancy = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { average_militancy = 2 }
+		}
+		modifier = {
+			factor = 1.25
+		        average_militancy = 3
+			NOT = { average_militancy = 4 }
+		}
+		modifier = {
+			factor = 1.50
+		        average_militancy = 4
+			NOT = { average_militancy = 5 }
+		}
+		modifier = {
+			factor = 1.75
+		        average_militancy = 5
+			NOT = { average_militancy = 6 }
+		}
+		modifier = {
+			factor = 2.00
+		        average_militancy = 6
+			NOT = { average_militancy = 7 }
+		}
+		modifier = {
+			factor = 2.25
+		        average_militancy = 7
+			NOT = { average_militancy = 8 }
+		}
+		modifier = {
+			factor = 2.50
+		        average_militancy = 8
+			NOT = { average_militancy = 9 }
+		}
+		modifier = {
+			factor = 2.75
+		        average_militancy = 9
+			NOT = { average_militancy = 9.5 }
+		}
+		modifier = {
+			factor = 3.00
+		        average_militancy = 9.5
+		}
+	}
+
+	immediate = {
+		state_scope = { any_owned = { add_core = THIS }}
+	}
+
+	option = {
+		name = "EVTOPTA2560"
+	}
+}
+country_event = {
+	id = 19384
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	title = "Держава $FROMCOUNTRY$ денонсировала Женевские соглашения!"
+	desc = "$FROMCOUNTRY_ADJ$ правительство решило денонсировать все ранее подписанные державой $FROMCOUNTRY$ Женевские соглашения о цивилизованных способах ведения войны."
+        picture = "first_geneva_convention"
+
+	option = {
+		name = "Шовинизм превалирует над гуманизмом..."
+	}
+}
+country_event = {
+	id = 19385
+
+	is_triggered_only = yes
+
+	title = "Предложение о покупке зоны Суэцкого канала"
+	desc = "EVTDESC19385"
+        picture = "suez_canal_vintage_photo"
+
+	option = {
+		name = "Продать территорию"
+		money = 100000
+		FROM = { country_event = 19386 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = { NOT = { OR = {
+					military_score = 100
+					brigades_compare = 2
+					is_greater_power = yes
+					relation = { who = THIS value = 190 }
+				} } }
+			}
+		}
+	}
+	option = {
+		name = "Это наша земля. И денег мы не вернём!"
+		money = 100000
+		FROM = { country_event = 19387 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = { OR = {
+					military_score = 100
+					brigades_compare = 2
+					relation = { who = THIS value = 190 }
+				} }
+			}
+		}
+	}
+}
+country_event = {
+	id = 19386
+
+	is_triggered_only = yes
+
+	title = "Зона Суэцкого канала - ПРОДАНО!"
+	desc = "Египет согласился продать нам зону Суэцкого канала за 100 тысяч фунтов стерлингов. Данное приобретение позволит нам построить в этом месте канал в скором будущем."
+        picture = "suez_canal_vintage_photo"
+
+	option = {
+		name = "Отлично!"
+		FROM = { 1755 = { secede_province = THIS }}
+	}
+}
+country_event = {
+	id = 19387
+
+	is_triggered_only = yes
+
+	title = "Предложение отклонено, деньги не вернут!"
+	desc = "Правительство Египта не только отклонило наше предложение о покупке канала, но ещё и решило не возвращать нам денежные средства, отправленные в качестве задатка!"
+        picture = "suez_canal_vintage_photo"
+
+	option = {
+		name = "Проглотить обиду"
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = "Мы возьмём своё силой!"
+		war = { target = FROM attacker_goal = { casus_belli = get_suez_canal state_province_id = 1755 }}
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 19388
+
+	trigger = {
+		has_country_flag = building_suez_canal_flag
+		NOT = { is_canal_enabled = 2 }
+		1755 = { NOT = { has_province_modifier = building_suez_canal }}
+	}
+
+	title = "Построен Суэцкий канал"
+	desc = "В $YEAR$ году по Григорианскому календарю был построен Суэцкий канал, открывающий новую веху в торговле Запада и Востока!"
+        picture = "suez_canal"
+
+	immediate = {
+		enable_canal = 2
+		1755 = { set_province_flag = suez_canal }
+		owns = 1755
+		any_country = { limit = { ai = no } country_event = 19394 }
+	}
+
+	option = {
+		name = "Чудеса нашего времени!"
+		prestige = 50
+	}
+}
+country_event = {
+	id = 19389
+
+	trigger = {
+		NOT = { is_canal_enabled = 3 }
+		has_country_flag = building_panama_canal_flag
+		1723 = { NOT = { has_province_modifier = building_panama_canal }}
+	}
+
+	title = "Построен Панамский канал"
+	desc = "В $YEAR$ году наконец-то был построен Панамский канал, который сильно облегчит морскую торговлю странам Северной Америки."
+        picture = "panama_canal"
+
+	immediate = {
+		enable_canal = 3
+		1723 = { set_province_flag = panama_canal }
+		any_country = { limit = { ai = no } country_event = 19395 }
+	}
+
+	option = {
+		name = "Чудеса нашего времени!"
+		prestige = 50
+	}
+}
+country_event = {
+	id = 19390
+
+	trigger = {
+		NOT = { is_canal_enabled = 1 }
+		has_country_flag = building_kiel_canal_flag
+		369 = {
+			NOT = { has_province_modifier = building_kiel_canal }
+			owned_by = THIS
+		}
+	}
+
+	title = "Построен Кильский канал"
+	desc = "В $YEAR$ году был построен канал в Киле, который соединяет Балтийское и Северное моря в обход Датских проливов. Стратегическое значение данного канала просто невозможно переоценить!"
+        picture = "kiel_canal"
+
+	immediate = {
+		enable_canal = 1
+		369 = { set_province_flag = kiel_canal }
+		any_country = { limit = { ai = no } country_event = 19396 }
+	}
+
+	option = {
+		name = "Чудеса нашего времени!"
+		prestige = 50
+	}
+}
+country_event = {
+	id = 19391
+
+	trigger = {
+		NOT = {
+			owns = 1755
+			is_canal_enabled = 2
+		}
+		has_country_flag = building_suez_canal_flag
+	}
+
+	title = "Прекращение строительства Суэцкого канала"
+	desc = "Мы потеряли контроль над зоной Суэцкого канала и больше не можем продолжать его строительство. Этим займётся скорее всего уже новый владелец..."
+	major = yes
+
+	immediate = {
+		clr_country_flag = building_suez_canal_flag
+	}
+
+	option = {
+		name = "Нам достаточно и старых морских путей!"
+	}
+}
+country_event = {
+	id = 19392
+
+	trigger = {
+		NOT = {
+			owns = 1723
+			is_canal_enabled = 3
+		}
+		has_country_flag = building_panama_canal_flag
+	}
+
+	title = "Прекращение строительства Панамского канала"
+	desc = "Мы потеряли контроль над зоной Панамского канала и больше не можем продолжать его строительство. Этим займётся скорее всего уже новый владелец..."
+	major = yes
+
+	immediate = {
+		clr_country_flag = building_panama_canal_flag
+	}
+
+	option = {
+		name = "Нам достаточно и старых морских путей!"
+	}
+}
+country_event = {
+	id = 19393
+
+	trigger = {
+		NOT = {
+			owns = 369
+			is_canal_enabled = 1
+		}
+		has_country_flag = building_kiel_canal_flag
+	}
+
+	title = "Прекращение строительства Кильского канала"
+	desc = "Мы потеряли контроль над зоной Кильского канала и больше не можем продолжать его строительство. Этим займётся скорее всего уже новый владелец..."
+	major = yes
+
+	immediate = {
+		clr_country_flag = building_kiel_canal_flag
+	}
+
+	option = {
+		name = "Нам достаточно и старых морских путей!"
+	}
+}
+country_event = {
+	id = 19394
+
+	is_triggered_only = yes
+
+	title = "Построен Суэцкий канал"
+	desc = "В $YEAR$ году по Григорианскому календарю был построен Суэцкий канал, открывающий новую веху в торговле Запада и Востока!"
+        picture = "suez_canal"
+
+	option = {
+		name = "Чудеса нашего времени!"
+	}
+}
+country_event = {
+	id = 19395
+
+	is_triggered_only = yes
+
+	title = "Построен Панамский канал"
+	desc = "В $YEAR$ году наконец-то был построен Панамский канал, который сильно облегчит морскую торговлю странам Северной Америки."
+        picture = "panama_canal"
+
+	option = {
+		name = "Чудеса нашего времени!"
+	}
+}
+country_event = {
+	id = 19396
+
+	is_triggered_only = yes
+
+	title = "Построен Кильский канал"
+	desc = "В $YEAR$ году был построен канал в Киле, который соединяет Балтийское и Северное моря в обход Датских проливов. Стратегическое значение данного канала просто невозможно переоценить!"
+        picture = "kiel_canal"
+
+	option = {
+		name = "Чудеса нашего времени!"
+	}
+}
+country_event = {
+	id = 19402
+	title = "$COUNTRY_ADJ$ капитуляция"
+	desc = "EVTDESC19402"
+	picture = "capitulation"
+
+	trigger = {
+		OR = {
+			AND = {
+				capital_scope = {
+					NOT = { controlled_by = THIS }
+				}
+				OR = {
+					has_country_modifier = bad_debter
+					war_exhaustion = 100
+				}
+			}
+			AND = {
+				capital_scope = {
+					NOT = { controlled_by = THIS }
+				}
+				any_owned_province = {
+					is_core = THIS
+					terrain = urban
+				}
+				NOT = { any_owned_province = {
+					is_core = THIS
+					terrain = urban
+					controlled_by = THIS
+				}}
+			}
+		}
+		NOT = { has_country_modifier = surrendered_country }
+		ai = no
+		war_countries = { ai = no }
+	}
+
+	immediate = {
+		add_country_modifier = { name = revanchism duration = 10950 }
+		add_country_modifier = { name = surrendered_country duration = 365 }
+		capital_scope = { controller = { country_event = 19403 }}
+		any_country = {
+			limit = { ai = no }
+			country_event = 19404
+		}
+		war_exhaustion = 50
+	}
+
+	option = {
+		name = "Мы больше не в силах сражаться..."
+	}
+}
+country_event = {
+	id = 19403
+	title = "$FROMCOUNTRY_ADJ$ капитуляция"
+	desc = "EVTDESC19403"
+	picture = "afterwar_parade"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Ура! Ура! Ура!"
+		FROM = { capital_scope = {
+			state_scope = {
+				any_owned = { change_controller = THIS }
+			}
+		}}
+	}
+}
+country_event = {
+	id = 19404
+	title = "$FROMCOUNTRY_ADJ$ капитуляция"
+	desc = "EVTDESC19404"
+	picture = "capitulation"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Мы осведомлены"
+	}
+}
+country_event = {
+	id = 19407
+	title = "Вычисление незаморских регионов"
+	desc = "Страна была только образована или потеряла столицу. Необходимо полностью вычислить все незаморские регионы."
+	major = yes
+
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = core_regions_calculated }
+			NOT = { capital_scope = { has_province_modifier = core_reg }}
+		}
+		NOT = {
+			tag = COM
+			any_owned_province = { has_province_modifier = calculation_of_core_regions }
+		}
+	}
+
+	immediate = {
+		set_country_flag = core_regions_calculated
+		capital_scope = { state_scope = { any_owned = {
+			add_province_modifier = { name = core_reg duration = -1 }
+		}}}
+		any_owned = { add_province_modifier = { name = calculation_of_core_regions duration = -1 }}
+	}
+
+	option = {
+		name = "Хорошо"
+	}
+}
+country_event = {
+	id = 19408
+	title = "Держава $FROMCOUNTRY$ отменяет проход войск"
+	desc = "$FROMCOUNTRY_ADJ$ правительство приняло решение об отмене права на проход наших войск по их территории. Как мы поступим в этой ситуации?"
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Оккупировать их страну"
+		end_military_access = FROM
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = prepare_war }
+		}
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Примем как состоявшийся факт"
+		end_military_access = FROM
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 19409
+	title = "Блокада Чёрного моря"
+	desc = "Наши славные военно-морские силы установили полную морскую блокаду Чёрного моря на выходе из него в Средиземное."
+	picture = "black_sea"
+
+	trigger = {
+		war = yes
+		war_countries = {
+			OR = {
+				owns = 817
+				owns = 674
+				owns = 968
+				owns = 967
+				owns = 976
+				owns = 979
+				owns = 1049
+				owns = 1096
+				owns = 886
+				owns = 882
+				owns = 883
+				owns = 862
+			}
+		}
+		OR = {
+			2772 = { country_units_in_province = THIS }
+			2773 = { country_units_in_province = THIS }
+		}
+		NOT = { has_country_flag = blockade_of_black_sea }
+	}
+
+	immediate = {
+		set_country_flag = blockade_of_black_sea
+	}
+
+	option = {
+		name = "Отлично"
+	}
+}
+country_event = {
+	id = 19410
+	title = "Снятие блокады Чёрного моря"
+	desc = "Полная морская блокада Чёрного моря была прекращена."
+	picture = "black_sea"
+
+	trigger = {
+		has_country_flag = blockade_of_black_sea
+		NOT = { OR = {
+			AND = {
+				war = yes
+				war_countries = { OR = {
+					owns = 817
+					owns = 674
+					owns = 968
+					owns = 967
+					owns = 976
+					owns = 979
+					owns = 1049
+					owns = 1096
+					owns = 886
+					owns = 882
+					owns = 883
+					owns = 862
+				}}
+				OR = {
+					2772 = { country_units_in_province = THIS }
+					2773 = { country_units_in_province = THIS }
+				}
+			}
+			war = no
+		}}
+	}
+
+	immediate = {
+		clr_country_flag = blockade_of_black_sea
+	}
+
+	option = {
+		name = "Есть необходимость установить её снова?"
+	}
+}
+country_event = {
+	id = 19411
+	title = "Блокада Балтийского моря"
+	desc = "Наши славные военно-морские силы установили полную морскую блокаду Балтийского моря на выходе из него в Северное."
+	picture = "baltic_sea"
+
+	trigger = {
+		war = yes
+		NOT = { has_country_flag = blockade_of_baltic_sea }
+		war_countries = {
+			OR = {
+				owns = 547
+				owns = 546
+				owns = 690
+				owns = 695
+				owns = 365
+				owns = 354
+				owns = 350
+				owns = 994
+				owns = 343
+				owns = 338
+				owns = 318
+				owns = 317
+				owns = 322
+				owns = 335
+			}
+		}
+		OR = {
+			AND = {
+				NOT = { is_canal_enabled = 1 }
+				OR = {
+					2711 = { country_units_in_province = THIS }
+					2712 = { country_units_in_province = THIS }
+					2720 = { country_units_in_province = THIS }
+				}
+			}
+			AND = {
+				is_canal_enabled = 1
+				2721 = { country_units_in_province = THIS }
+				OR = {
+					2711 = { country_units_in_province = THIS }
+					2712 = { country_units_in_province = THIS }
+					2720 = { country_units_in_province = THIS }
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = blockade_of_baltic_sea
+	}
+
+	option = {
+		name = "Отлично"
+	}
+}
+country_event = {
+	id = 19412
+	title = "Снятие блокады Балтийского моря"
+	desc = "Полная морская блокада Балтийского моря была прекращена."
+	picture = "baltic_sea"
+
+	trigger = {
+		has_country_flag = blockade_of_baltic_sea
+		NOT = {
+			AND = {
+				war = yes
+				war_countries = { OR = {
+					owns = 547
+					owns = 546
+					owns = 690
+					owns = 695
+					owns = 365
+					owns = 354
+					owns = 350
+					owns = 994
+					owns = 343
+					owns = 338
+					owns = 318
+					owns = 317
+					owns = 322
+					owns = 335
+				}}
+				OR = {
+					AND = {
+						NOT = { is_canal_enabled = 1 }
+						OR = {
+							2711 = { country_units_in_province = THIS }
+							2712 = { country_units_in_province = THIS }
+							2720 = { country_units_in_province = THIS }
+						}
+					}
+					AND = {
+						is_canal_enabled = 1
+						2721 = { country_units_in_province = THIS }
+						OR = {
+							2711 = { country_units_in_province = THIS }
+							2712 = { country_units_in_province = THIS }
+							2720 = { country_units_in_province = THIS }
+						}
+					}
+				}
+			}
+			war = no
+		}
+	}
+
+	immediate = {
+		clr_country_flag = blockade_of_baltic_sea
+	}
+
+	option = {
+		name = "Есть необходимость установить её снова?"
+	}
+}
+country_event = {
+	id = 19413
+	title = "Обретение независимости"
+	desc = "Наш бывший сюзерен был стёрт с карты мира. Мы более не являемся сателлитом."
+	picture = "baltic_sea"
+
+	trigger = {
+		is_vassal = yes
+		overlord = {
+			exists = no
+		}
+	}
+
+	immediate = {
+		overlord = {
+			release_vassal = THIS
+			leave_alliance = THIS
+		}
+	}
+
+	option = {
+		name = "Великолепно"
+	}
+}
+
+###############################################################
+########	Annexation of overseas states		#######
+###############################################################
+province_event = {
+	id = 19414
+	title = "Оккупация врагом заморского региона $STATENAME$!"
+	desc = "Враг недавно оккупировал территорию нашего заморского региона $STATENAME$. Нам необходимо срочно его отбить!"
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = yes
+
+	trigger = {
+		owner = {
+			war = yes
+			has_country_flag = core_regions_calculated
+			NOT = { has_country_modifier = surrendered_country }
+		}
+		controller = {
+			NOT = {
+				tag = THIS
+				tag = REB
+			}
+			civilized = yes
+			has_country_flag = occupation_permitted
+		}
+		NOT = {
+			has_province_modifier = core_reg
+			has_country_modifier = calculation_of_core_regions
+		}
+		state_scope = {
+			NOT = {
+				any_owned_province = { OR = {
+					has_province_modifier = region_occupied_1
+					controlled_by = THIS
+					controlled_by = REB
+                         	}}
+                   	}
+                }
+	}
+
+        immediate = {
+		state_scope = {
+			any_owned = {
+				add_province_modifier = { name = region_occupied_1 duration = -1 }
+				add_province_modifier = { name = region_occupied_2 duration = 730 }
+			}
+		}
+        }
+
+	option = {
+		name = "У нас есть там войска?!"
+	}
+}
+province_event = {
+	id = 19415
+	title = "Переход контроля над регионом $STATENAME$(<500k) врагу!"
+	desc = "Наш заморский регион $STATENAME$ слишком долго находился в руках врага. Контроль над регионом переходит оккупировавшей его державе."
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = no
+
+	trigger = {
+                owner = {
+			war = yes
+			NOT = { has_country_modifier = surrendered_country }
+		}
+                has_province_modifier = region_occupied_1
+                NOT = {
+			has_province_modifier = region_occupied_2
+			controlled_by = THIS
+			state_scope = { total_pops = 500000 }
+			controller = {
+				OR = {
+					badboy = 0.75
+					has_country_flag = liberate_not_conquer
+				}
+			}
+		}
+        }
+
+        immediate = {
+		state_scope = {
+			any_owned = {
+				add_province_modifier = {
+					name = reg_transfer
+					duration = -1
+				}
+			}
+		}
+		controller = {
+			limit = { civilized = yes }
+			country_event = 19416
+		}
+		prestige_factor = -0.025
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "Невероятное унижение..."
+	}
+}
+country_event = {
+	id = 19416
+	title = "Переход контроля над одним из регионов державы $FROMCOUNTRY$(<500k) нашей стране!"
+	desc = "Наша страна взяла регион врага под военный контроль и присвоила его ввиду слабости предыдущей метрополии, которая не смогла обеспечить защиту своих владений."
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = yes
+	is_triggered_only = yes
+
+        immediate = {
+		FROM = {
+			random_state = {
+				limit = {
+					any_owned_province = {
+						controlled_by = THIS
+						NOT = { has_province_modifier = region_occupied_2 }
+						has_province_modifier = region_occupied_1
+						has_province_modifier = reg_transfer
+					}
+				}
+				any_owned = { secede_province = THIS }
+			}
+		}
+		badboy = 7.5
+        }
+
+	option = {
+		name = "Отпразднуем победу!"
+	}
+}
+province_event = {
+	id = 19417
+	title = "Переход контроля над регионом $STATENAME$(>500k) врагу!"
+	desc = "Наш заморский регион $STATENAME$ слишком долго находился в руках врага. Контроль над регионом переходит оккупировавшей его державе."
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = no
+
+	trigger = {
+                owner = {
+			war = yes
+			NOT = { has_country_modifier = surrendered_country }
+		}
+                has_province_modifier = region_occupied_1
+		state_scope = {
+			total_pops = 500000
+			NOT = { total_pops = 1000000 }
+		}
+                NOT = {
+			has_province_modifier = region_occupied_2
+			controlled_by = THIS
+			controller = {
+				OR = {
+					badboy = 0.75
+					has_country_flag = liberate_not_conquer
+				}
+			}
+		}
+        }
+
+        immediate = {
+		state_scope = {
+			any_owned = {
+				add_province_modifier = {
+					name = reg_transfer_500k
+					duration = -1
+				}
+			}
+		}
+		controller = {
+			limit = { civilized = yes }
+			country_event = 19418
+		}
+		prestige_factor = -0.05
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "Невероятное унижение..."
+	}
+}
+country_event = {
+	id = 19418
+	title = "Переход контроля над одним из регионов державы $FROMCOUNTRY$(>500k) нашей стране!"
+	desc = "Наша страна взяла регион врага под военный контроль и присвоила его ввиду слабости предыдущей метрополии, которая не смогла обеспечить защиту своих владений."
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = yes
+	is_triggered_only = yes
+
+        immediate = {
+		FROM = {
+			random_state = {
+				limit = {
+					any_owned_province = {
+						controlled_by = THIS
+						NOT = { has_province_modifier = region_occupied_2 }
+						has_province_modifier = region_occupied_1
+						has_province_modifier = reg_transfer_500k
+					}
+				}
+				any_owned = { secede_province = THIS }
+			}
+		}
+		badboy = 10
+        }
+
+	option = {
+		name = "Отпразднуем победу!"
+	}
+}
+province_event = {
+	id = 19419
+	title = "Переход контроля над регионом $STATENAME$(>1kk) врагу!"
+	desc = "Наш заморский регион $STATENAME$ слишком долго находился в руках врага. Контроль над регионом переходит оккупировавшей его державе."
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = no
+
+	trigger = {
+                owner = {
+			war = yes
+			NOT = { has_country_modifier = surrendered_country }
+		}
+                has_province_modifier = region_occupied_1
+		state_scope = {
+			total_pops = 1000000
+			NOT = { total_pops = 2000000 }
+		}
+                NOT = {
+			has_province_modifier = region_occupied_2
+			controlled_by = THIS
+			controller = {
+				OR = {
+					badboy = 0.75
+					has_country_flag = liberate_not_conquer
+				}
+			}
+		}
+        }
+
+        immediate = {
+		state_scope = {
+			any_owned = {
+				add_province_modifier = {
+					name = reg_transfer_1kk
+					duration = -1
+				}
+			}
+		}
+		controller = {
+			limit = { civilized = yes }
+			country_event = 19420
+		}
+		prestige_factor = -0.075
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "Невероятное унижение..."
+	}
+}
+country_event = {
+	id = 19420
+	title = "Переход контроля над одним из регионов державы $FROMCOUNTRY$(>1kk) нашей стране!"
+	desc = "Наша страна взяла регион врага под военный контроль и присвоила его ввиду слабости предыдущей метрополии, которая не смогла обеспечить защиту своих владений."
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = yes
+	is_triggered_only = yes
+
+        immediate = {
+		FROM = {
+			random_state = {
+				limit = {
+					any_owned_province = {
+						controlled_by = THIS
+						NOT = { has_province_modifier = region_occupied_2 }
+						has_province_modifier = region_occupied_1
+						has_province_modifier = reg_transfer_1kk
+					}
+				}
+				any_owned = { secede_province = THIS }
+			}
+		}
+		badboy = 15
+        }
+
+	option = {
+		name = "Отпразднуем победу!"
+	}
+}
+province_event = {
+	id = 19421
+	title = "Переход контроля над регионом $STATENAME$(>2kk) врагу!"
+	desc = "Наш заморский регион $STATENAME$ слишком долго находился в руках врага. Контроль над регионом переходит оккупировавшей его державе."
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = no
+
+	trigger = {
+                owner = {
+			war = yes
+			NOT = { has_country_modifier = surrendered_country }
+		}
+                has_province_modifier = region_occupied_1
+		state_scope = { total_pops = 2000000 }
+                NOT = {
+			has_province_modifier = region_occupied_2
+			controlled_by = THIS
+			controller = {
+				OR = {
+					badboy = 0.75
+					has_country_flag = liberate_not_conquer
+				}
+			}
+		}
+        }
+
+        immediate = {
+		state_scope = {
+			any_owned = {
+				add_province_modifier = {
+					name = reg_transfer_2kk
+					duration = -1
+				}
+			}
+		}
+		controller = {
+			limit = { civilized = yes }
+			country_event = 19422
+		}
+		prestige_factor = -0.10
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "Невероятное унижение..."
+	}
+}
+country_event = {
+	id = 19422
+	title = "Переход контроля над одним из регионов державы $FROMCOUNTRY$(>2kk) нашей стране!"
+	desc = "Наша страна взяла регион врага под военный контроль и присвоила его ввиду слабости предыдущей метрополии, которая не смогла обеспечить защиту своих владений."
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = yes
+	is_triggered_only = yes
+
+        immediate = {
+		FROM = {
+			random_state = {
+				limit = {
+					any_owned_province = {
+						controlled_by = THIS
+						NOT = { has_province_modifier = region_occupied_2 }
+						has_province_modifier = region_occupied_1
+						has_province_modifier = reg_transfer_2kk
+					}
+				}
+				any_owned = { secede_province = THIS }
+			}
+		}
+		badboy = 20
+        }
+
+	option = {
+		name = "Отпразднуем победу!"
+	}
+}
+country_event = {
+	id = 19423
+	title = "Вытеснение оккупантов с наших заморских территорий!"
+	desc = "Наши победоносные войска недавно освободили один из наших заморских регионов от контроля вражеских войск."
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = yes
+
+	trigger = {
+		OR = {
+			any_owned_province = {
+				has_province_modifier = region_occupied_1
+				OR = {
+					controlled_by = THIS
+					controlled_by = REB
+				}
+			}
+			AND = {
+				war = no
+				any_owned_province = { has_province_modifier = region_occupied_1 }
+			}
+		}
+        }
+
+        immediate = {
+		any_state = {
+			limit = {
+				any_owned_province = {
+					OR = {
+						controlled_by = THIS
+						controlled_by = REB
+					}
+					has_province_modifier = region_occupied_1
+				}
+			}
+			any_owned = {
+				limit = {
+					has_province_modifier = region_occupied_1
+				}
+				remove_province_modifier = region_occupied_1
+				remove_province_modifier = region_occupied_2
+			}
+		}
+        }
+
+	option = {
+		name = "Превосходно!"
+	}
+}
+province_event = {
+	id = 19424
+	title = "Освобождение врагом региона $STATENAME$!"
+	desc = "Наш заморский регион $STATENAME$ слишком долго находился в руках врага. Оккупировавшая регион держава решила освободить его, а не захватывать."
+	picture = "colonial_uprising"
+
+        allow_multiple_instances = no
+
+	trigger = {
+                owner = {
+			war = yes
+			NOT = { has_country_modifier = surrendered_country }
+		}
+		controller = {
+			has_country_flag = liberate_not_conquer
+		}
+                has_province_modifier = region_occupied_1
+                NOT = {
+			has_province_modifier = region_occupied_2
+			controlled_by = THIS
+			state_scope = { any_owned_province = { is_core = THIS }}
+			terrain = tropical_island
+		}
+        }
+
+        immediate = {
+		state_scope = {
+			any_owned = { secede_province = COM }
+		}
+		prestige_factor = -0.05
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "Невероятное унижение..."
+	}
+}
+country_event = {
+	id = 19425
+	title = "EVTNAME19425"
+	desc = "EVTDESC19425"
+	picture = "algerian_pirates"
+
+	trigger = {
+		civilized = yes
+		NOT = {
+			has_global_flag = puted_algerian_piracy_to_the_end
+			has_country_modifier = algerian_pirates
+			tag = ALD
+		}
+        }
+
+        immediate = {
+		add_country_modifier = { name = algerian_pirates duration = -1 }
+        }
+
+	option = {
+		name = "Кто-нибудь займётся этой проблемой!?"
+	}
+}
+country_event = {
+	id = 19426
+	title = "EVTNAME19426"
+	desc = "EVTDESC19426"
+	picture = "end_of_algerian_piracy"
+
+	trigger = {
+		has_global_flag = puted_algerian_piracy_to_the_end
+		has_country_modifier = algerian_pirates
+        }
+
+        immediate = {
+		remove_country_modifier = algerian_pirates
+        }
+
+	option = {
+		name = "Наконец-то"
+	}
+}
+country_event = {
+	id = 19427
+	title = "EVTNAME19427"
+	desc = "EVTDESC19427"
+	picture = "barricade"
+
+	is_triggered_only = yes
+
+        immediate = {
+		add_country_modifier = {
+			name = breakdown_of_the_concert_of_europe
+			duration = 3650
+		}
+        }
+
+	option = {
+		name = "Если они хотят войны, то они её получат"
+	}
+}
+country_event = {
+	id = 19428
+	title = "EVTNAME19428"
+	desc = "EVTDESC19428"
+	picture = "victorious"
+
+	trigger = {
+		has_global_flag = breakdown_of_the_concert_of_europe
+		has_country_modifier = concert_of_europe
+		NOT = { has_country_modifier = breakdown_of_the_concert_of_europe }
+	}
+
+        immediate = {
+		add_country_modifier = { name = shame_of_external_policy duration = 7300 }
+		remove_country_modifier = concert_of_europe
+		prestige_factor = -0.10
+        }
+
+	option = {
+		name = "Нестерпимое унижение"
+	}
+}
+country_event = {
+	id = 19429
+	title = "Нарушитель Венской системы"
+	desc = ""
+
+	is_triggered_only = yes
+
+	option = { name = "" }
+}
+country_event = {
+	id = 19430
+	title = "Нарушение баланса сил в Европе"
+	desc = "EVTDESC19430"
+	picture = "foundation_of_german_empire"
+
+	trigger = {
+		exists = GER
+		exists = ITA
+		OR = {
+			has_country_modifier = concert_of_europe
+			has_country_flag = breaking_of_the_concert_of_europe
+		}
+	}
+
+	immediate = {
+		clr_global_flag = breakdown_of_the_concert_of_europe
+		clr_country_flag = breaking_of_the_concert_of_europe
+		remove_country_modifier = concert_of_europe
+		remove_country_modifier = breakdown_of_the_concert_of_europe
+	}
+
+	option = {
+		name = "Тревожные времена для Европы..."
+	}
+}
+country_event = {
+	id = 19431
+	title = "EVTNAME19431"
+	desc = "EVTDESC19431"
+	picture = "prussian_troops"
+
+	trigger = {
+		has_country_modifier = concert_of_europe
+		nationalvalue = nv_imperialism
+		year = 1870
+	}
+
+	immediate = {
+		remove_country_modifier = concert_of_europe
+		any_country = {
+			limit = {
+				has_country_modifier = concert_of_europe
+			}
+			country_event = 19432
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19431"
+	}
+}
+country_event = {
+	id = 19432
+	title = "EVTNAME19431"
+	desc = "EVTDESC19431"
+	picture = "prussian_troops"
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_modifier = concert_of_europe
+	}
+
+	option = {
+		name = "EVTOPTA19431"
+	}
+}
+
+country_event = {
+	id = 19433
+	title = "EVTNAME19433"
+	desc = "EVTDESC19433"
+	picture = "chicagofire"
+
+	trigger = {
+		is_vassal = yes
+		capital_scope = {
+			controller = {
+				war_with = THIS
+				NOT = { tag = THIS }
+			}
+			NOT = { has_province_modifier = capital_occupied_1 }
+		}
+	}
+
+        immediate = {
+		capital_scope = {
+			add_province_modifier = { name = capital_occupied_1 duration = -1 }
+			add_province_modifier = { name = capital_occupied_2 duration = 730 }
+		}
+        }
+
+	option = {
+		name = "EVTOPTA19433"
+	}
+}
+country_event = {
+	id = 19434
+	title = "EVTNAME19434"
+	desc = "EVTDESC19434"
+	picture = "Celebration"
+
+	trigger = {
+		capital_scope = {
+			has_province_modifier = capital_occupied_1
+		}
+		OR = {
+			capital_scope = {
+				controller = { tag = THIS }
+			}
+			war = no
+		}
+        }
+
+        immediate = {
+		capital_scope = {
+			remove_province_modifier = capital_occupied_1
+			remove_province_modifier = capital_occupied_2
+		}
+        }
+
+	option = {
+		name = "EVTOPTA19434"
+	}
+}

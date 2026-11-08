@@ -1,0 +1,9 @@
+owner = ENG
+controller = ENG
+add_core = HND
+add_core = HYD
+trade_goods = tobacco
+life_rating = 35
+terrain = urban
+state_building = { level = 2 building = cotton_plantation_2 upgrade = yes }
+colonial = 2

@@ -1,0 +1,530 @@
+#Sphere of Influence
+BEL = {
+	value = 0		#relation
+	level = 1		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+EGY = {
+	value = 200 		#relation
+	level = 4 		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+LUX = {
+	value = 200		#relation
+	level = 3		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+NET = {
+	value = 0
+	level = 1
+	influence_value = 0
+}
+SPA = {
+	value = 0
+	level = 1
+	influence_value = 0
+}
+LUC = {
+	value = 200
+	level = 5
+	influence_value = 0
+}
+PAP = {
+	value = 200		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 100
+	military_access = yes
+}
+ALD = {
+	value = -400		#relation
+	level = 0		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+SIC = {
+	value = 0		#relation
+	level = 1		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+SWI = {
+	value = 100		#relation
+	level = 3		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+SAR = {
+	value = 200		#relation
+	level = 0		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+GRE = {
+	value = 75	        #relation
+	level = 2		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 10
+}
+BAD = {	
+	value = 25
+	level = 3
+	influence_value = 0
+}
+army = {
+	name = "Guarde Royale"
+	location = 425
+	regiment = {
+		name= "1.Guarde Royale"
+		type = infantry
+		home = 399
+	}
+	regiment = {
+		name= "2.Guarde Royale"
+		type = infantry
+		home = 399
+	}
+	regiment = {
+		name= "3.Guarde Royale"
+		type = infantry
+		home = 402
+	}
+	regiment = {
+		name= "4.Guarde Royale"
+		type = infantry
+		home = 402
+	}
+	regiment = {
+		name= "1.1иre Division d'Infanterie"
+		type = infantry
+		home = 402
+	}
+	regiment = {
+		name= "2.1иre Division d'Infanterie"
+		type = infantry
+		home = 408
+	}
+	regiment = {
+		name= "3.1иre Division d'Infanterie"
+		type = engineer
+		home = 408
+	}
+	regiment = {
+		name= "1.2иme Division d'Infanterie"
+		type = engineer
+		home = 411
+	}
+	regiment = {
+		name= "2.2иme Division d'Infanterie"
+		type = engineer
+		home = 411
+	}
+	regiment = {
+		name= "3.2иme Division d'Infanterie"
+		type = dragoon
+		home = 412
+	}
+}
+army = {
+	name = "1 Division d'Infanterie"
+	location = 411
+
+	regiment = {
+		name= "2.11иme Division d'Infanterie"
+		type = infantry
+		home = 418
+	}
+	regiment = {
+		name= "3.11иme Division d'Infanterie"
+		type = infantry
+		home = 418
+	}
+	regiment = {
+		name= "3.Cavalerie de la Guarde"
+		type = infantry
+		home = 418
+	}
+	regiment = {
+		name= "4.Cavalerie de la Guarde"
+		type = infantry
+		home = 420
+	}
+	regiment = {
+		name= "1.3иme Division d'Infanterie"
+		type = infantry
+		home = 420
+	}
+	regiment = {
+		name= "2.3иme Division d'Infanterie"
+		type = infantry
+		home = 420
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = dragoon
+		home = 425
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = engineer
+		home = 425
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = engineer
+		home = 428
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = engineer
+		home = 428
+	}
+}
+army = {
+	name = "2 Division d'Infanterie"
+	location = 470
+
+	regiment = {
+		name= "2.11иme Division d'Infanterie"
+		type = infantry
+		home = 432
+	}
+	regiment = {
+		name= "3.11иme Division d'Infanterie"
+		type = infantry
+		home = 436
+	}
+	regiment = {
+		name= "3.Cavalerie de la Guarde"
+		type = infantry
+		home = 436
+	}
+	regiment = {
+		name= "4.Cavalerie de la Guarde"
+		type = infantry
+		home = 442
+	}
+	regiment = {
+		name= "1.3иme Division d'Infanterie"
+		type = infantry
+		home = 438
+	}
+	regiment = {
+		name= "2.3иme Division d'Infanterie"
+		type = infantry
+		home = 438
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = dragoon
+		home = 448
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = engineer
+		home = 448
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = engineer
+		home = 451
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = engineer
+		home = 451
+	}
+}
+army = {
+	name = "3 Division d'Infanterie"
+	location = 460
+
+	regiment = {
+		name= "2.11иme Division d'Infanterie"
+		type = infantry
+		home = 451
+	}
+	regiment = {
+		name= "3.11иme Division d'Infanterie"
+		type = infantry
+		home = 455
+	}
+	regiment = {
+		name= "3.Cavalerie de la Guarde"
+		type = infantry
+		home = 455
+	}
+	regiment = {
+		name= "4.Cavalerie de la Guarde"
+		type = infantry
+		home = 458
+	}
+	regiment = {
+		name= "1.3иme Division d'Infanterie"
+		type = infantry
+		home = 458
+	}
+	regiment = {
+		name= "2.3иme Division d'Infanterie"
+		type = infantry
+		home = 458
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = dragoon
+		home = 461
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = engineer
+		home = 461
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = engineer
+		home = 467
+	}
+	regiment = {
+		name= "3.3иme Division d'Infanterie"
+		type = engineer
+		home = 467
+	}
+}
+navy = {
+        name = "Escadron de l'ouest"
+	location = 420
+	ship = {
+		name= "Асмодей"
+		type = frigate
+	}
+	ship = {
+		name= "Гомер"
+		type = frigate
+	}
+	ship = {
+		name= "Дарьен"
+		type = frigate
+	}
+	ship = {
+		name= "Лабрадор"
+		type = frigate
+	}
+	ship = {
+		name= "Уллоа"
+		type = frigate
+	}
+	ship = {
+		name= "Канада"
+		type = frigate
+	}
+	ship = {
+		name= "Кристофор Колумб"
+		type = frigate
+	}
+	ship = {
+		name= "Эльдорадо"
+		type = frigate
+	}
+	ship = {
+		name= "Магеллан"
+		type = frigate
+	}
+	ship = {
+		name= "Ориноко"
+		type = frigate
+	}
+}
+navy = {
+        name = "Escadron nord"
+	location = 400
+	ship = {
+		name= "Альбатрос"
+		type = frigate
+	}
+	ship = {
+		name= "Декарт"
+		type = frigate
+	}
+	ship = {
+		name= "Вобан"
+		type = frigate
+	}
+	ship = {
+		name= "Каффарелли"
+		type = frigate
+	}
+	ship = {
+		name= "Могадор"
+		type = frigate
+	}
+	ship = {
+		name= "Помоне"
+		type = frigate
+	}
+	ship = {
+		name= "Белонь"
+		type = frigate
+	}
+	ship = {
+		name= "Фудр"
+		type = frigate
+	}
+	ship = {
+		name= "Императрица Евгения"
+		type = frigate
+	}
+	ship = {
+		name= "Одасьез"
+		type = frigate
+	}
+}
+navy = {
+        name = "Marine indienne"
+	location = 1312
+	ship = {
+		name= "Цирцея"
+		type = frigate
+	}
+	ship = {
+		name= "Гермиона"
+		type = frigate
+	}
+}
+navy = {
+        name = "Marine africaine"
+	location = 1783
+	ship = {
+		name= "Юнона"
+		type = frigate
+	}
+	ship = {
+		name= "Магисьен"
+		type = frigate
+	}
+	ship = {
+		name= "Тамис"
+		type = frigate
+	}
+}
+navy = {
+	name = "Escadron principal"
+	location = 470
+	ship = {
+		name= "Triton"
+		type = manowar
+	}
+	ship = {
+		name= "Etats de Bourgogne"
+		type = manowar
+	}
+	ship = {
+		name= "Souverain"
+		type = manowar
+	}
+	ship = {
+		name= "Marengo"
+		type = manowar
+	}
+	ship = {
+		name= "Ville de Marseilles"
+		type = manowar
+	}
+	ship = {
+		name= "Hercule"
+		type = manowar
+	}
+	ship = {
+		name= "Montebello "
+		type = manowar
+	}
+	ship = {
+		name= "Centaure"
+		type = manowar
+	}
+	ship = {
+		name= "Jupiter"
+		type = manowar
+	}
+	ship = {
+		name= "Duc d’Angouleme"
+		type = manowar
+	}
+	ship = {
+		name= "Hercules"
+		type = manowar
+	}
+	ship = {
+		name= "Genereux"
+		type = manowar
+	}
+	ship = {
+		name= "Diadиme"
+		type = manowar
+	}
+	ship = {
+		name= "Couronne"
+		type = manowar
+	}
+	ship = {
+		name= "Suffren"
+		type = manowar
+	}
+	ship = {
+		name= "Виль де Лион"
+		type = manowar
+	}
+	ship = {
+		name= "Луи XIV"
+		type = manowar
+	}
+	ship = {
+		name= "Кастильоне"
+		type = manowar
+	}
+	ship = {
+		name= "Виль де Бордо"
+		type = manowar
+	}
+	ship = {
+		name= "Тюренн"
+		type = manowar
+	}
+}
+navy = {
+	name = "Flotte debarquement"
+	location = 461
+	ship = {
+		name= "6иme Flotille de Transport"
+		type = clipper_transport
+	}
+	ship = {
+		name= "4иme Flotille de Transport"
+		type = clipper_transport
+	}
+	ship = {
+		name= "5иme Flotille de Transport"
+		type = clipper_transport
+	}
+	ship = {
+		name= "6иme Flotille de Transport"
+		type = clipper_transport
+	}
+	ship = {
+		name= "6иme Flotille de Transport"
+		type = clipper_transport
+	}
+	ship = {
+		name= "6иme Flotille de Transport"
+		type = clipper_transport
+	}
+	ship = {
+		name= "6иme Flotille de Transport"
+		type = clipper_transport
+	}
+	ship = {
+		name= "6иme Flotille de Transport"
+		type = clipper_transport
+	}
+	ship = {
+		name= "6иme Flotille de Transport"
+		type = clipper_transport
+	}
+	ship = {
+		name= "6иme Flotille de Transport"
+		type = clipper_transport
+	}
+}

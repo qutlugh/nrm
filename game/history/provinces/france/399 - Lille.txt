@@ -1,0 +1,10 @@
+owner = FRA
+controller = FRA
+add_core = FRA
+trade_goods = coal
+life_rating = 32
+state_building = { level = 4 building = coal_mine_5 upgrade = yes }
+state_building = { level = 3 building = ironworks upgrade = yes }
+state_building = { level = 3 building = coke_oven upgrade = yes }
+state_building = { level = 5 building = steel_factory upgrade = yes }
+state_building = { level = 2 building = lumber_mill upgrade = yes }

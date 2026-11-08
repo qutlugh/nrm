@@ -1,0 +1,35 @@
+storm_troopers = {
+	icon = 12
+	
+	type = land
+	sprite = Engineer
+	active = no
+	unit_type = infantry
+	primary_culture = yes
+	
+	#Core Abilities
+	priority = 30
+	max_strength = 3
+	default_organisation = 100
+	maximum_speed = 7.00
+	weighted_value = 8.0
+
+	#Building Costs
+	build_time = 80
+	build_cost = {
+		military_supplies = 100
+	}
+
+	supply_consumption = 1.0
+	supply_cost = {
+		military_supplies = 0.15
+	}
+
+	#Land Abilties
+	reconnaissance = 1
+	attack = 18
+	defence = 9
+	discipline = 1.25
+	support = 0
+	maneuver = 2
+}

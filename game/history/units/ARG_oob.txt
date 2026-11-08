@@ -1,0 +1,111 @@
+BOL = {
+	value = 200
+	level = 3
+	influence_value = 100
+	military_access = yes
+}
+CHL = {
+	value = 200
+	level = 3
+	influence_value = 100
+	military_access = yes
+}
+PEU = {
+	value = 200
+	level = 3
+	influence_value = 100
+	military_access = yes
+}
+
+army = {
+	name = "Army of Rio de la Plata"
+	location = 2359
+
+	regiment = {
+		name= "1. Division de Infanteria"
+		type = infantry
+		home = 2348
+	}
+	regiment = {
+		name= "2. Division de Infanteria"
+		type = infantry
+		home = 2348
+	}
+	regiment = {
+		name= "3. Division de Infanteria"
+		type = infantry
+		home = 2348
+	}
+	regiment = {
+		name= "4. Division de Infanteria"
+		type = infantry
+		home = 2348
+	}
+	regiment = {
+		name= "5. Division de Infanteria"
+		type = infantry
+		home = 2348
+	}
+	regiment = {
+		name= "6. Division de Infanteria"
+		type = engineer
+		home = 2349
+	}
+	regiment = {
+		name= "7. Division de Infanteria"
+		type = engineer
+		home = 2349
+	}
+	regiment = {
+		name= "8. Division de Infanteria"
+		type = engineer
+		home = 2350
+	}
+	regiment = {
+		name= "9. Division de Infanteria"
+		type = dragoon
+		home = 2348
+	}
+}
+
+
+army = {
+	name = "Army of Liberta"
+	location = 2375
+
+	regiment = {
+		name= "1. Division de Infanteria"
+		type = infantry
+		home = 2351
+	}
+	regiment = {
+		name= "2. Division de Infanteria"
+		type = infantry
+		home = 2352
+	}
+	regiment = {
+		name= "3. Division de Infanteria"
+		type = infantry
+		home = 2356
+	}
+	regiment = {
+		name= "4. Division de Infanteria"
+		type = infantry
+		home = 2356
+	}
+	regiment = {
+		name= "5. Division de Infanteria"
+		type = engineer
+		home = 2362
+	}
+	regiment = {
+		name= "6. Division de Infanteria"
+		type = engineer
+		home = 2362
+	}
+	regiment = {
+		name= "7. Division de Infanteria"
+		type = dragoon
+		home = 2379
+	}
+}

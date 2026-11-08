@@ -1,0 +1,6 @@
+owner = GWA
+controller = GWA
+add_core = HND
+add_core = GWA
+trade_goods = silk
+life_rating = 35

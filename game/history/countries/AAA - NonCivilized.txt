@@ -1,0 +1,14 @@
+primary_culture = platinean
+religion = catholic
+government = absolute_monarchy
+nationalvalue = nv_archaic_economy
+ruling_party = AAA_conservative
+upper_house = {
+	fascist = 0
+	liberal = 0
+	conservative = 100
+	reactionary = 0
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}

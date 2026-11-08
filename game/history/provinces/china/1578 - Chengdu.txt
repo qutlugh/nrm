@@ -1,0 +1,7 @@
+add_core = YNN
+owner = CHI
+controller = CHI
+add_core = CHI
+trade_goods = tea
+life_rating = 30
+terrain = urban

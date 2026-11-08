@@ -1,0 +1,6 @@
+owner = TUR
+controller = TUR
+add_core = IRQ
+add_core = KUR
+trade_goods = precious_metal
+life_rating = 40

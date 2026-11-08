@@ -1,0 +1,7 @@
+# NRM new file
+# maintenance of buildings like railroads, naval ports and forts
+# only railroads are maintaining yet
+
+infrastructure = {
+	locomotives = 0.1
+}

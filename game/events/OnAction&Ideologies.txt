@@ -1,0 +1,761 @@
+#$STATE$ Joins $COUNTRY$
+country_event = {
+	id = 70000
+	title = "EVTNAME70000"
+	desc = "EVTDESC70000"
+	picture = "Slaves"
+	trigger = {
+		country = {
+			slavery = yes_slavery
+			tag = USA
+		}
+	}
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+
+	option = {
+		name = "EVTOPTA70000"
+		is_slave = yes
+		country = {
+			any_state = {
+				limit = { is_slave = no }
+				any_pop = { consciousness = 3 }
+			}
+			any_state = {
+				limit = { is_slave = yes }
+				any_pop = { consciousness = -3 }
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "EVTOPTB70000"
+		is_slave = no
+		country = {
+			any_state = {
+				limit = { is_slave = yes }
+				any_pop = { consciousness = 3 }
+			}
+			any_state = {
+				limit = { is_slave = no }
+				any_pop = { consciousness = -3 }
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+# Nation that owns your debt goes bankrupt
+country_event = {
+	id = 70002
+	title = "EVTNAME70002"
+	desc = "EVTDESC70002"
+	picture = "Bankruptcy"
+	trigger = {
+		NOT = { tag = FROM }
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA70002"
+		casus_belli = { target = FROM type = gunboat }
+		casus_belli = { target = FROM type=prepare_war months = 12 }
+	}
+}
+# Nation that owns your debt goes bankrupt in definace of our gunboats
+country_event = {
+	id = 70003
+	title = "EVTNAME70002"
+	desc = "EVTDESC70002"
+	picture = "Bankruptcy"
+	trigger = {
+		NOT = { tag = FROM }
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA70002"
+		casus_belli = { target = FROM type = cut_down_to_size months = 60 }
+		casus_belli = { target = FROM type = prepare_war months = 12 }
+	}
+}
+
+#####################
+# Enable Socialists
+#####################
+country_event = {
+	id = 1000
+	title = "Манифест коммунистической партии"
+	desc = "EVTDESC1000"
+	news = yes
+	news_desc_long = "EVTDESC1000_NEWS_LONG"
+	news_desc_medium = "EVTDESC1000_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC1000_NEWS_SHORT"
+	picture = "the_communist_manifesto"
+
+	trigger = {
+		NOT = { is_ideology_enabled = socialist }
+		year = 1848
+		capital_scope = { continent = europe }
+		literacy = 0.4
+	}
+	mean_time_to_happen = { months = 6 }
+
+	immediate = {
+		enable_ideology = socialist
+		any_pop = {
+			limit = { OR = {
+				pop_type = farmers
+				pop_type = labourers
+			}}
+			ideology = { value = socialist factor = 0.10 }
+		}
+		any_pop = {
+			limit = { pop_type = craftsmen }
+			ideology = { value = socialist factor = 0.50 }
+		}
+		farmers = { consciousness = 3 }
+		labourers = { consciousness = 3 }
+		craftsmen = { consciousness = 9 }
+		any_country = {
+			limit = {
+				civilized = yes
+				OR = {
+					capital_scope = { continent = europe }
+					literacy = 0.3
+				}
+			}
+			country_event = 1001
+		}
+		set_global_flag = communist_manifest_was_published
+	}
+
+	option = {
+		name = "С этой пропагандой необходимо бороться!"
+	}
+}
+country_event = {
+	id = 1001
+	title = "Манифест коммунистической партии"
+	desc = "EVTDESC1000"
+	picture = "the_communist_manifesto"
+
+	is_triggered_only = yes
+
+	immediate = {
+		any_pop = {
+			limit = { OR = {
+				pop_type = farmers
+				pop_type = labourers
+			}}
+			ideology = { value = socialist factor = 0.10 }
+		}
+		any_pop = {
+			limit = { pop_type = craftsmen }
+			ideology = { value = socialist factor = 0.50 }
+		}
+		farmers = { consciousness = 3 }
+		labourers = { consciousness = 3 }
+		craftsmen = { consciousness = 9 }
+	}
+
+	option = {
+		name = "С этой пропагандой необходимо бороться!"
+	}
+}
+#####################
+# Enable Communists
+#####################
+country_event = {
+	id = 1002
+	title = "EVTNAME1001"
+	desc = "EVTDESC1001"
+	news = yes
+	news_desc_long = "EVTDESC1001_NEWS_LONG"
+	news_desc_medium = "EVTDESC1001_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC1001_NEWS_SHORT"
+	picture = "Socialism"
+	
+	trigger = {
+		year = 1880
+		is_ideology_enabled = socialist
+		NOT = { is_ideology_enabled = communist }
+		civilized = yes
+		literacy = 0.5
+		OR = {
+			planned_economy = 10
+			pro_atheism = 10
+			pro_military = 15
+			unemployment = 0.2
+			AND = {
+				NOT = { poor_strata_life_needs = 0.9 }
+				average_militancy = 3
+			}
+		}
+	}
+	fire_only_once = yes
+
+        immediate = { enable_ideology = communist }
+
+	option = {
+		name = "EVTOPTA1001"
+	}
+}
+##########################
+# Enable Anarcho-Liberal
+##########################
+country_event = {
+	id = 1003
+	title = "EVTNAME1002"
+	desc = "EVTDESC1002"
+	news = yes
+	news_desc_long = "EVTDESC1002_NEWS_LONG"
+	news_desc_medium = "EVTDESC1002_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC1002_NEWS_SHORT"
+	picture = "AnarchoLiberals"
+	
+	trigger = {
+		NOT = { is_ideology_enabled = anarcho_liberal }
+		year = 1850
+		civilized = yes
+		literacy = 0.7
+		OR = {
+			laissez_faire = 15
+			pluralism = 10
+			anti_military = 20
+			political_reform_want = 0.5
+			unemployment = 0.2
+		}
+	}
+	fire_only_once = yes
+
+        immediate = { enable_ideology = anarcho_liberal }
+
+	option = {
+		name = "EVTOPTA1002"
+	}
+}
+##################
+# Enable Fascist
+##################
+country_event = {
+	id = 1004
+	title = "EVTNAME1003"
+	desc = "EVTDESC1003"
+	news = yes
+	news_desc_long = "EVTDESC1003_NEWS_LONG"
+	news_desc_medium = "EVTDESC1003_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC1003_NEWS_SHORT"
+	picture = "Fascist"
+	
+	trigger = {
+		year = 1905
+		is_ideology_enabled = communist
+		OR = {
+			AND = {
+				has_recently_lost_war = yes
+				revanchism = 0.01
+			}
+			AND = { any_neighbor_country = { government = proletarian_dictatorship }}
+		}
+		NOT = { is_ideology_enabled = fascist }
+	}
+	fire_only_once = yes
+	
+        immediate = { enable_ideology = fascist }
+
+	option = {
+		name = "EVTOPTA1003"
+	}
+}
+######################################################
+# Переход в другие общественно-экономические формации
+######################################################
+country_event = {
+	id = 1006
+	title = "Переход к индустриальному капитализму"
+	desc = "EVTDESC1006"
+	picture = "industrial_society"
+
+	trigger = {
+		nationalvalue = nv_commercial_capitalism
+		OR = {
+			industrial_score = 1000
+			AND = { industrial_score = 950 literacy = 0.05 }
+			AND = { industrial_score = 900 literacy = 0.10 }
+			AND = { industrial_score = 850 literacy = 0.15 }
+			AND = { industrial_score = 800 literacy = 0.20 }
+			AND = { industrial_score = 750 literacy = 0.25 }
+			AND = { industrial_score = 700 literacy = 0.30 }
+			AND = { industrial_score = 650 literacy = 0.35 }
+			AND = { industrial_score = 600 literacy = 0.40 }
+			AND = { industrial_score = 550 literacy = 0.45 }
+			AND = { industrial_score = 500 literacy = 0.50 }
+			AND = { industrial_score = 450 literacy = 0.55 }
+			AND = { industrial_score = 400 literacy = 0.60 }
+			AND = { industrial_score = 350 literacy = 0.65 }
+			AND = { industrial_score = 300 literacy = 0.70 }
+			AND = { industrial_score = 250 literacy = 0.75 }
+			AND = { industrial_score = 200 literacy = 0.80 }
+			AND = { industrial_score = 150 literacy = 0.85 }
+			AND = { industrial_score = 100 literacy = 0.90 }
+			AND = { industrial_score = 50 literacy = 0.95 }
+		}
+		NOT = {
+			nationalvalue = nv_industrial_capitalism
+			private_property = prohibited
+		}
+	}
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.9
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 150
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 200
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 250
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 300
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 350
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 400
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 450
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 500
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_country = { nationalvalue = nv_industrial_capitalism }
+		}
+	}
+
+	option = {
+		name = "Паровые машины обогатят нас!"
+		political_reform = enshrined
+		nationalvalue = nv_industrial_capitalism
+	}
+}
+country_event = {
+	id = 1007
+	title = "Добро пожаловать в клуб, $COUNTRY$!"
+	desc = "EVTDESC1007"
+	picture = "colonial_wars"
+
+	trigger = {
+		nationalvalue = nv_industrial_capitalism
+		OR = {
+			industrial_score = 2000
+			AND = { industrial_score = 1900 literacy = 0.05 }
+			AND = { industrial_score = 1800 literacy = 0.10 }
+			AND = { industrial_score = 1700 literacy = 0.15 }
+			AND = { industrial_score = 1600 literacy = 0.20 }
+			AND = { industrial_score = 1500 literacy = 0.25 }
+			AND = { industrial_score = 1400 literacy = 0.30 }
+			AND = { industrial_score = 1300 literacy = 0.35 }
+			AND = { industrial_score = 1200 literacy = 0.40 }
+			AND = { industrial_score = 1100 literacy = 0.45 }
+			AND = { industrial_score = 1000 literacy = 0.50 }
+			AND = { industrial_score = 950 literacy = 0.55 }
+			AND = { industrial_score = 900 literacy = 0.60 }
+			AND = { industrial_score = 850 literacy = 0.65 }
+			AND = { industrial_score = 800 literacy = 0.70 }
+			AND = { industrial_score = 750 literacy = 0.75 }
+			AND = { industrial_score = 700 literacy = 0.80 }
+			AND = { industrial_score = 650 literacy = 0.85 }
+			AND = { industrial_score = 600 literacy = 0.90 }
+			AND = { industrial_score = 550 literacy = 0.95 }
+			AND = { industrial_score = 500 literacy = 0.99 }
+		}
+		NOT = {
+			nationalvalue = nv_imperialism
+			private_property = prohibited
+		}
+	}
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.9
+			industrial_score = 500
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 600
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 700
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 800
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 900
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 1000
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 1100
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 1200
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 1300
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 1400
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 1500
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 1600
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 1700
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 1800
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 1900
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 2100
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 2200
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 2300
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 2400
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 2500
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.25
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.50
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 0.75
+		}
+		modifier = {
+			factor = 0.9
+			badboy = 1
+		}
+		modifier = {
+			factor = 0.9
+			war = yes
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_country = { nationalvalue = nv_imperialism }
+		}
+	}
+
+	option = {
+		name = "Где мой кусочек пирога?"
+		political_reform = enshrined
+		nationalvalue = nv_imperialism
+	}
+}
+country_event = {
+	id = 1008
+	title = "Построение социалистического общества"
+	desc = "EVTDESC1008"
+	picture = "socialism_was_built"
+
+	trigger = {
+		OR = {
+			industrial_score = 500
+			AND = { industrial_score = 450 literacy = 0.1 }
+			AND = { industrial_score = 400 literacy = 0.2 }
+			AND = { industrial_score = 350 literacy = 0.3 }
+			AND = { industrial_score = 300 literacy = 0.4 }
+			AND = { industrial_score = 250 literacy = 0.5 }
+			AND = { industrial_score = 200 literacy = 0.6 }
+			AND = { industrial_score = 150 literacy = 0.7 }
+			AND = { industrial_score = 100 literacy = 0.8 }
+			AND = { industrial_score = 50 literacy = 0.9 }
+		}
+		private_property = prohibited
+		NOT = { nationalvalue = nv_socialism }
+	}
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.9
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 200
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 300
+		}
+		modifier = {
+			factor = 0.9
+			industrial_score = 400
+		}
+		modifier = {
+			factor = 0.8
+			industrial_score = 500
+		}
+		modifier = {
+			factor = 0.8
+			industrial_score = 600
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { badboy = 1.00 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { badboy = 0.50 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { badboy = 0.75 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { average_militancy = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { average_militancy = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { average_militancy = 5 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { average_militancy = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { average_militancy = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			war = no
+		}
+		modifier = {
+			factor = 0.5
+			any_neighbor_country = { nationalvalue = nv_socialism }
+		}
+	}
+
+	option = {
+		name = "Вперёд, к коммунизму!"
+		political_reform = prohibited
+		nationalvalue = nv_socialism
+		any_pop = {
+			limit = {
+				pop_type = capitalists
+			}
+			pop_type = state_managers
+		}
+	}
+}
+country_event = {
+	id = 1009
+	title = "Крушение $COUNTRY_ADJ$ социализма"
+	desc = "EVTDESC1009"
+	picture = "socialism_was_crushed"
+
+	trigger = {
+		nationalvalue = nv_socialism
+		NOT = { private_property = prohibited }
+	}
+
+	option = {
+		name = "Если будут бунтовать - расстреляем!"
+		political_reform = enshrined
+		nationalvalue = nv_imperialism
+		any_pop = {
+			limit = {
+				pop_type = capitalists
+			}
+			pop_type = state_managers
+		}
+	}
+}
+country_event = {
+	id = 1010
+	title = "Развитие в стране коммерческого капитализма"
+	desc = "EVTDESC1010"
+	picture = "capitalists2"
+
+	trigger = {
+		nationalvalue = nv_archaic_economy
+		civilized = yes
+	}
+
+	option = {
+		name = "Ещё ни одна нация не была разрушена торговлей!"
+		nationalvalue = nv_commercial_capitalism
+	}
+}
+######################################################
+# Распространение либеральных идей
+######################################################
+country_event = {
+	id = 1016
+	title = "Распространение либерализма и республиканских идей"
+	desc = "EVTDESC1016"
+	picture = "french_revolution"
+
+	trigger = {
+		government = democracy
+		any_neighbor_country = {
+			any_owned_province = {
+				has_province_modifier = core_reg
+				any_neighbor_province = {
+					has_province_modifier = core_reg
+					owner = { tag = THIS }
+				}
+			}
+			civilized = yes
+			NOT = {
+				OR = {
+					government = democracy
+					government = hms_government
+				}
+			}
+		}
+	}
+
+        mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 2
+			NOT = { liberal = 0.05 }
+		}
+		modifier = {
+			factor = 1.75
+			liberal = 0.05
+			NOT = { liberal = 0.10 }
+		}
+		modifier = {
+			factor = 1.5
+			liberal = 0.10
+			NOT = { liberal = 0.15 }
+		}
+		modifier = {
+			factor = 1.25
+			liberal = 0.15
+			NOT = { liberal = 0.20 }
+		}
+		modifier = {
+			factor = 0.75
+			liberal = 0.20
+			NOT = { liberal = 0.25 }
+		}
+		modifier = {
+			factor = 0.75
+			liberal = 0.25
+			NOT = { liberal = 0.30 }
+		}
+		modifier = {
+			factor = 0.75
+			liberal = 0.30
+		}
+	}
+
+        option = {
+		name = "Дадим им эту методичку!"
+		random_country = {
+			limit = {
+				civilized = yes
+				NOT = { OR = {
+					government = democracy
+					government = hms_government
+				}}
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = { tag = THIS }
+					}
+				}
+			}
+			country_event = 1017
+			relation = { who = THIS value = -400 }
+		}
+        }
+}
+country_event = {
+	id = 1017
+	title = "Распространение идей республиканства из державы $FROMCOUNTRY$"
+	desc = "EVTDESC1017"
+	picture = "french_revolution"
+
+	is_triggered_only = yes
+
+        option = {
+		name = "Запретить все якобинские издания! Цензура!"
+                any_pop = {
+			limit = { NOT = { pop_type = aristocrats }}
+			ideology = {
+				value = liberal
+				factor = 0.03
+			}
+			consciousness = 2
+		}
+        }
+}

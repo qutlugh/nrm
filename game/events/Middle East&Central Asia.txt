@@ -1,0 +1,62 @@
+country_event = {
+	title = "westernize_nation_title"
+	desc = "westernize_nation_desc"
+	picture = "Prosper"
+
+	id = 290000
+	is_triggered_only = yes
+
+	trigger = { tag = PER year = 2000 }
+
+	immediate = {
+		activate_technology = sentimentalism
+		activate_technology = classicism_n_early_romanticism
+		activate_technology = late_enlightenment_philosophy
+		activate_technology = idealism
+		activate_technology = malthusian_thought
+		activate_technology = nihilism_i_anarchism
+		activate_technology = enlightenment_thought
+		activate_technology = constitutionalism_thought
+		activate_technology = fundamentals_of_psychology
+		activate_technology = introspectionism
+		activate_technology = water_wheel_power
+		activate_technology = experimental_steam_engine
+		activate_technology = manufactories
+		activate_technology = publishing_industry
+		activate_technology = mechanized_mining
+		activate_technology = clean_coal
+		activate_technology = animal-powered_railroad
+		activate_technology = basic_chemistry
+		activate_technology = thermodynamics
+		activate_technology = joint-stock_companies
+		activate_technology = private_banks
+		activate_technology = no_standard
+		activate_technology = bimetallism
+		activate_technology = physiocracy
+		activate_technology = early_classical_theory_and_critique
+		activate_technology = state_mercantilism
+		activate_technology = freedom_of_trade
+		activate_technology = division_of_labour
+		activate_technology = guild_based_production
+		remove_country_modifier = educational_reform
+		remove_country_modifier = military_reform
+		remove_country_modifier = western_influences
+		remove_country_modifier = uncivilized_isolationism
+		remove_country_modifier = sayings_of_the_dutch
+		remove_country_modifier = extraterritoriality_granted
+		any_owned = {
+			remove_province_modifier = western_presence
+			remove_province_modifier = foreign_smugglers
+			remove_province_modifier = foreign_trading_post
+			remove_province_modifier = local_opium_habit
+			remove_province_modifier = european_military_mission
+			remove_province_modifier = legation_quarter
+			remove_province_modifier = kettler_denkmal
+		}
+	}
+
+	option = {				
+		name = "EVTOPTA90910"
+		prestige = 160
+	}
+}

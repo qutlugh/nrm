@@ -1,0 +1,81 @@
+# British empire
+alliance=
+{
+	first="ENG"
+	second="SWE"
+	end_date="1936.1.1"
+	start_date="1821.1.1"
+}
+alliance=
+{
+	first="ENG"
+	second="SIC"
+	end_date="1936.1.1"
+	start_date="1821.1.1"
+}
+alliance=
+{
+	first="ENG"
+	second="POR"
+	end_date="1936.1.1"
+	start_date="1821.1.1"
+}
+
+# South America
+alliance=
+{
+	first="BOL"
+	second="PEU"
+	end_date="2000.1.1"
+	start_date="1821.1.1"
+}
+
+# China
+alliance=
+{
+	first="CHI"
+	second="KOR"
+	end_date="2000.1.1"
+	start_date="1821.1.1"
+}
+
+# Russia
+alliance=
+{
+	first="RUS"
+	second="FIN"
+	end_date="2000.1.1"
+	start_date="1821.1.1"
+}
+
+# Holy Alliance
+alliance=
+{
+	first="RUS"
+	second="PRU"
+	end_date="2000.1.1"
+	start_date="1821.1.1"
+}
+alliance=
+{
+	first="RUS"
+	second="AUS"
+	end_date="2000.1.1"
+	start_date="1821.1.1"
+}
+alliance=
+{
+	first="PRU"
+	second="AUS"
+	end_date="2000.1.1"
+	start_date="1821.1.1"
+}
+
+# Denmark
+alliance=
+{
+	first="DEN"
+	second="HOL"
+	end_date="2000.1.1"
+	start_date="1821.1.1"
+}

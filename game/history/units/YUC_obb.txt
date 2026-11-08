@@ -1,0 +1,38 @@
+army = {
+	name = "Army of Yucatan"
+	location = 2184
+	regiment = {
+		name= "1.Division Comonfort"
+		type = infantry
+		home = 2183
+	}
+
+	regiment = {
+		name= "2.Division Comonfort"
+		type = infantry
+		home = 2183
+	}
+
+	regiment = {
+		name= "3.Division Comonfort"
+		type = infantry
+		home = 2184
+	}
+	regiment = {
+		name= "1.Division Cos"
+		type = infantry
+		home = 2184
+	}
+
+	regiment = {
+		name= "2.Division Cos"
+		type = infantry
+		home = 2185
+	}
+
+	regiment = {
+		name= "2.Division Cos"
+		type = infantry
+		home = 2185
+	}
+}

@@ -1,0 +1,11 @@
+owner = FRA
+controller = FRA
+add_core = FRA
+trade_goods = fish
+life_rating = 31
+state_building = { level = 1 building = grain_farm_5 upgrade = yes }
+state_building = { level = 7 building = lumber_mill upgrade = yes }
+state_building = { level = 3 building = clipper_shipyard upgrade = yes }
+state_building = { level = 2 building = steel_factory upgrade = yes }
+state_building = { level = 4 building = tools_factory upgrade = yes }
+state_building = { level = 2 building = coal_energy_factory upgrade = yes }

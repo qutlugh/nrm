@@ -1,0 +1,123 @@
+#Relations
+PEU=
+{
+	value=200
+}
+MEX=
+{
+	value=200
+}
+BOL=
+{
+	value=200
+}
+
+army = {
+	name = "1st liberation army"
+	location = 2259
+	regiment = {
+		name= "1. Brigada de Infanteria"
+		type = infantry
+		home = 2255
+	}
+	regiment = {
+		name= "2. Brigada de Infanteria"
+		type = infantry
+		home = 2255
+	}
+	regiment = {
+		name= "3. Brigada de Infanteria"
+		type = infantry
+		home = 2255
+	}
+	regiment = {
+		name= "4. Brigada de Infanteria"
+		type = infantry
+		home = 2255
+	}
+	regiment = {
+		name= "5. Brigada de Infanteria"
+		type = infantry
+		home = 2255
+	}
+	regiment = {
+		name= "6. Brigada de Infanteria"
+		type = infantry
+		home = 2252
+	}
+	regiment = {
+		name= "7. Brigada de Infanteria"
+		type = engineer
+		home = 2247
+	}
+	regiment = {
+		name= "8. Brigada de Infanteria"
+		type = engineer
+		home = 2247
+	}
+	regiment = {
+		name= "9. Brigada de Infanteria"
+		type = engineer
+		home = 2247
+	}
+	regiment = {
+		name= "10. Brigada de Infanteria"
+		type = dragoon
+		home = 2250
+	}
+}
+
+army = {
+	name = "2nd liberation army"
+	location = 2281
+	regiment = {
+		name= "1. Brigada de Infanteria"
+		type = infantry
+		home = 2279
+	}
+	regiment = {
+		name= "2. Brigada de Infanteria"
+		type = infantry
+		home = 2279
+	}
+	regiment = {
+		name= "3. Brigada de Infanteria"
+		type = infantry
+		home = 2279
+	}
+	regiment = {
+		name= "4. Brigada de Infanteria"
+		type = infantry
+		home = 2279
+	}
+	regiment = {
+		name= "5. Brigada de Infanteria"
+		type = infantry
+		home = 2264
+	}
+	regiment = {
+		name= "6. Brigada de Infanteria"
+		type = infantry
+		home = 2264
+	}
+	regiment = {
+		name= "7. Brigada de Infanteria"
+		type = engineer
+		home = 2264
+	}
+	regiment = {
+		name= "8. Brigada de Infanteria"
+		type = engineer
+		home = 2268
+	}
+	regiment = {
+		name= "9. Brigada de Infanteria"
+		type = engineer
+		home = 2280
+	}
+	regiment = {
+		name= "10. Brigada de Infanteria"
+		type = dragoon
+		home = 2251
+	}
+}

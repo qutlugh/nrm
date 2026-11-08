@@ -1,0 +1,16 @@
+owner = ENG
+controller = ENG
+add_core = ENG
+trade_goods = fish
+life_rating = 40
+railroad = 1
+terrain = urban
+state_building = { level = 5 building = coal_mine_5 upgrade = yes }
+state_building = { level = 7 building = fabric_factory upgrade = yes }
+state_building = { level = 3 building = regular_clothes_factory upgrade = yes }
+state_building = { level = 3 building = luxury_clothes_factory upgrade = yes }
+state_building = { level = 1 building = luxury_furniture_factory upgrade = yes }
+state_building = { level = 2 building = furniture_factory upgrade = yes }
+state_building = { level = 6 building = clipper_shipyard upgrade = yes }
+state_building = { level = 1 building = locomotives_factory upgrade = yes }
+naval_base = 1

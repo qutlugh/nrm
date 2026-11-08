@@ -1,0 +1,4621 @@
+###########################################################################
+#Colonial Uprisings
+# 
+#14500 - 14990
+#
+###########################################################################
+# The Heart of Darkness
+country_event = {
+	id = 14670
+	title = "EVTNAME14670"
+	desc = "EVTDESC14670"
+	news = yes
+	news_desc_long = "EVTDESC14670_NEWS_LONG"
+	news_desc_medium = "EVTDESC14670_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC14670_NEWS_SHORT"
+	major = yes
+
+	trigger = {
+		colonial_nation = yes
+		biologism = 1
+		prestige = 200
+	}
+
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { mass_politics = 1 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA14670"
+		prestige = -50
+		
+	}
+	
+	option = {
+		name = "EVTOPTB14670"
+		random_state = {
+			limit = { is_colonial = yes }
+			any_pop = {
+				consciousness = 9
+                                militancy = 9
+			}
+		}
+	}
+}
+#Colonial Recruitment
+country_event = {
+	id = 14680
+	title = "EVTNAME14680"
+	desc = "EVTDESC14680"
+	picture = "emigration"
+
+	trigger = {
+		colonial_nation = yes
+		invention = mission_to_civilize
+		any_owned_province = {
+			state_scope = {
+				is_colonial = yes
+				NOT = { total_pops = 750000 }
+			}
+		}
+                NOT = { tag = USA }
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 6
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 7
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { average_consciousness = 3 }
+		}
+	}
+	option = {
+		name = "EVTOPTA14680"
+		random_state = {
+			limit = {
+				NOT = { total_pops = 750000 }
+				is_colonial = yes
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = colonial_recruitment
+					duration = 720
+				}
+			}
+		}
+	}
+}
+# A Boatload of Bananas
+country_event = {
+	id = 14700
+	title = "EVTNAME14700"
+	desc = "EVTDESC14700"
+	picture = "emigration"
+	
+	trigger = {
+		colonial_nation = yes
+		market_regulations = 1
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 0.9
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.9
+			nationalism_n_imperialism = 1
+		}
+		modifier = {
+			factor = 0.9
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 0.8
+			invention = refrigerator_technology
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA14700"
+		any_pop = { militancy = -2 }
+	}
+}
+
+# Colonial Weariness
+country_event = {
+	id = 14720
+	title = "EVTNAME14720"
+	desc = "EVTDESC14720"
+	picture = "Administration"
+	
+	trigger = {
+		colonial_nation = yes
+		average_consciousness = 4
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { poor_strata_life_needs = 0.9 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { prestige = 160 }
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			war = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA14720"
+		any_owned = {
+			limit = { is_colonial = no }
+			any_pop = { consciousness = 0.5 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14720"
+		prestige = -20
+		war_exhaustion = 1
+	}
+}
+
+# Model Colony
+country_event = {
+	id = 14740
+	title = "EVTNAME14740"
+	desc = "EVTDESC14740"
+	news = yes
+	news_desc_long = "EVTDESC14740_NEWS_LONG"
+	news_desc_medium = "EVTDESC14740_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC14740_NEWS_SHORT"
+	major = yes
+	
+	trigger = {
+		colonial_nation = yes
+		administration_spending = 0.6
+		education_spending = 0.6
+		military_spending = 0.6
+		NOT = {
+			num_of_revolts = 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1500
+		modifier = {
+			factor = 0.9
+			NOT = { average_militancy = 4 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { average_consciousness = 4 }
+		}
+		modifier = {	
+			factor = 0.9
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 1.5
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 0.9
+			education_spending = 0.9
+		}
+		modifier = {
+			factor = 0.9
+			administration_spending = 0.9
+		}
+		modifier = {
+			factor = 0.9
+			military_spending = 0.9
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA14740"
+		prestige = 20
+		years_of_research = 0.1
+		random_state = {
+			any_pop = {
+				militancy = -4
+				consciousness = -4
+			}
+		}
+	}
+}
+
+# Colonial Policy Debated
+country_event = {
+	id = 14750
+	title = "EVTNAME14750"
+	desc = "EVTDESC14750"
+	picture = "colonial_uprising"
+	
+	trigger = {
+		colonial_nation = yes
+		OR = {
+			government = hms_government
+			government = democracy
+			government = prussian_constitutionalism
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1000
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 6
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 4
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA14750"
+		upper_house = {
+			ideology = conservative
+			value = 0.05
+		}
+		prestige = 15
+	}
+	
+	option = {
+		name = "EVTOPTB14750"
+		upper_house = {
+			ideology = liberal
+			value = 0.05
+		}
+	}
+}
+
+#The Capital of An Empire
+country_event = {
+	id = 14770
+	title = "EVTNAME14770"
+	desc = "EVTDESC14770"
+	picture = "Waitangi"
+	
+	trigger = {
+		colonial_nation = yes
+		prestige = 200
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 0.9
+			NOT = {
+				average_consciousness = 3
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				average_militancy = 3
+			}
+		}
+		modifier = {
+			factor = 0.9
+			OR = {
+				jingoism = 10
+				pro_military = 10
+			}
+		}
+		modifier = {
+			factor = 0.9
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 3
+		}
+		modifier = {
+			factor = 1.5
+			average_consciousness = 5
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA14770"
+		prestige = 20
+		capital_scope = {
+			any_pop = {
+				militancy = -2
+				consciousness = -2
+			}
+		}
+	}
+}
+
+# Archeological Discoveries
+country_event = {
+	id = 14800
+	title = "EVTNAME14800"
+	desc = "EVTDESC14800"
+	picture = "colonial_uprising"
+	
+	trigger = {
+		colonial_nation = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 0.9
+			analytic_philosophy = 1
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 6
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA14800"
+		prestige = 10
+		random_state = {
+			limit = { is_colonial = yes }
+			any_pop = { militancy = -2 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14800"
+		prestige = 15
+		any_pop = { consciousness = 2 }
+	}
+}
+####################### NRM decolonisation #######################
+country_event = {
+	id = 14801
+	title = "EVTNAME14801"
+	desc = "EVTDESC14801"
+	picture = "ilich2"
+	
+        is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA14801"
+		badboy = -10
+		prestige = 80
+		set_country_flag = supply_anticolonial_league
+		any_country = {
+			limit = { government = proletarian_dictatorship }
+			relation = { who = THIS value = 400 }
+                }
+		any_pop = {
+			limit = { is_accepted_culture = no }
+			militancy = -9
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { government = proletarian_dictatorship }
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14801"
+		badboy = 10
+		prestige = -80
+		set_country_flag = say_no_anticolonial_league
+		any_country = {
+			limit = { government = proletarian_dictatorship }
+			relation = { who = THIS value = -400 }
+		}
+		any_pop = {
+			limit = { is_accepted_culture = no }
+			militancy = 9
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 14802
+	title = "EVTNAME14802"
+	desc = "EVTDESC14802"
+	picture = "hindustan"
+	
+	trigger = {
+		civilized = yes
+		OR = {
+			AND = {
+				is_disarmed = yes
+				NOT = { has_country_modifier = supporting_colonial_administration }
+			}
+			has_global_flag = anticolonial_league_south_asia_chosen
+		}
+		OR = {
+			any_owned_province = { is_core = HND NOT = { is_core = THIS }}
+			any_owned_province = { is_core = PAK NOT = { is_core = THIS }}
+			any_owned_province = { is_core = BNG NOT = { is_core = THIS }}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+		}
+		modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+		}
+		modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+		}
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+		}
+		modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+		}
+		modifier = {
+			factor = 0.25
+			badboy = 1.75
+		}
+		modifier = {
+			factor = 0.01
+			badboy = 2
+		}
+	}
+
+	immediate = {
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+	}
+
+	option = {
+		name = "EVTOPTA14802"
+		any_owned = { limit = { is_core  = HND NOT = { is_core = THIS }} secede_province = HND }
+		HND = {
+			government = democracy
+			capital = 1236
+			1297={change_province_name="Мумбаи" state_scope={change_region_name="Мумбаи"}}
+			1236={change_province_name="Нью-Дели" state_scope={change_region_name="Нью-Дели"}}
+			country_event = 14811
+		}
+		any_owned = { limit = { is_core  = PAK NOT = { is_core = THIS }} secede_province = PAK }
+		PAK = {
+			capital = 1230
+			government = presidential_dictatorship
+			1230 = { change_province_name = "Исламабад" }
+			country_event = 14811
+		}
+		any_owned = { limit = { is_core  = SRI NOT = { is_core = THIS }} secede_province = SRI }
+		SRI = { country_event = 14811 }
+	}
+}
+country_event = {
+	id = 14806
+	title = "Попросить коммунистов о помощи?"
+	desc = "Мы можем попросить военно-технической и иной помощи в нашей борьбе у страны-лидера коммунистического блока. Нам придётся стать коммунистами."
+
+	is_triggered_only = yes
+        major = yes
+	
+	option = {
+		name = "Попросить"
+                random_country = {
+			limit = {
+				has_country_flag = communist_world_leader
+				NOT = { tag = THIS }
+			}
+			country_event = 14807
+		}
+		any_country = {
+			limit = { any_owned_province = { is_core = THIS }}
+			country_event = 14810
+		}
+
+		ai_chance = {
+			factor = 99
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = has_communist_world_leader }
+			}
+		}
+	}
+
+        option = {
+		name = "Сами справимся"
+		any_country = {
+			limit = { any_owned_province = { is_core = THIS }}
+			country_event = 14810
+		}
+
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = 14807
+	title = "Просьба о поддержке революционеров державы $FROMCOUNTRY$"
+	desc = "Борцы за независимость из державы $FROMCOUNTRY$ просят нас оказать им военно-техническую и дипломатическую поддержку их движения за обретения независимости."
+	picture = "ilich2"
+
+	is_triggered_only = yes
+        allow_multiple_instances = yes
+
+	option = {
+		name = "Конечно помочь!"
+		FROM = { country_event = 14808 }
+		prestige = 20
+
+		ai_chance = { factor = 1 }
+	}
+
+        option = {
+		name = "Не помогать"
+                FROM = { country_event = 14809 }
+                prestige = -40
+
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 14808
+	title = "Помощь оказана"
+	desc = "Наши коммунистические друзья из державы $FROMCOUNTRY$ решили оказать нам военно-техническую помощь в нашей освободительной борьбе!"
+
+	is_triggered_only = yes
+        major = yes
+	
+	option = {
+		name = "Спасибо братья!"
+		civilized = yes
+		government = proletarian_dictatorship
+		FROM = {
+			diplomatic_influence = { who = THIS value = 400 }
+			relation = { who = THIS value = 400 }
+		}
+		activate_technology = post_napoleonic_thought
+		activate_technology = strategic_mobility
+		activate_technology = muzzle_loaded_rifles
+		activate_technology = caplock_rifles
+		activate_technology = iron_muzzle_loaded_artillery
+		activate_technology = iron_breech_loaded_artillery
+		activate_technology = improved_communication_systems
+		activate_technology = military_plans
+		activate_technology = army_professionalism
+		activate_technology = military_academies
+		activate_technology = post_nelsonian_thought
+		activate_technology = battleship_column_doctrine
+		activate_technology = steamers_with_paddle_wheel
+		activate_technology = marine_engineering_basics
+		activate_technology = alphabetic_flag_signaling
+		activate_technology = naval_plans
+		activate_technology = naval_professionalism
+		activate_technology = naval_academies
+		activate_technology = private_banks
+		activate_technology = stock_exchange
+		activate_technology = bimetallism
+		activate_technology = ad_hoc_money_bill_printing
+		activate_technology = early_classical_theory_and_critique
+		activate_technology = late_classical_theory
+		activate_technology = freedom_of_trade
+		activate_technology = market_structure
+		activate_technology = guild_based_production
+		activate_technology = organized_factories
+		activate_technology = classicism_n_early_romanticism
+		activate_technology = romanticism
+		activate_technology = idealism
+		activate_technology = materialism
+		activate_technology = nihilism_i_anarchism
+		activate_technology = positivism
+		activate_technology = constitutionalism_thought
+		activate_technology = ideological_thought
+		activate_technology = introspectionism
+		activate_technology = associationism
+		activate_technology = experimental_steam_engine
+		activate_technology = practical_steam_engine
+		activate_technology = publishing_industry
+		activate_technology = mechanical_production
+		activate_technology = clean_coal
+		activate_technology = ferrous_metallurgy
+		activate_technology = experimental_railroad
+		activate_technology = early_railroad
+		activate_technology = thermodynamics
+		activate_technology = medicine
+	}
+}
+country_event = {
+	id = 14809
+	title = "В помощи отказано"
+	desc = "Лицемерные коммунисты из державы $FROMCOUNTRY$ решили не оказывать нам помощи в нашей борьбе. Без них справимся."
+
+	is_triggered_only = yes
+        major = yes
+	
+	option = {
+		name = "Мы сами по себе"
+		FROM = {
+			diplomatic_influence = { who = THIS value = -400 }
+			relation = { who = THIS value = -400 }
+		}
+	}
+}
+country_event = {
+	id = 14810
+	title = "Независимость державы $FROMCOUNTRY$"
+	desc = "Страна $FROMCOUNRY$ объявила о своей независимости и требует вернуть её территории. Местное население уже взбунтовалось и развесило везде флаги державы $FROMCOUNTY$!"
+
+	is_triggered_only = yes
+        major = yes
+        allow_multiple_instances = yes
+
+	option = {
+		name = "Вернуть"
+		badboy = -5
+		any_owned = {
+			limit = {
+				is_core = FROM
+				NOT = { is_core = THIS }
+			}
+			secede_province = FROM
+		}
+		FROM = { relation = { who = THIS value = 200 }}
+		ai_chance = {
+			factor = 1
+			modifier = { government = fascist_dictatorship  factor = 0 }
+		}
+	}
+
+	option = {
+		name = "Оставить себе"
+		badboy = 5
+		FROM = { relation = { who = THIS value = -400 }}
+		ai_chance = {
+			factor = 1
+			modifier = { NOT = { government = fascist_dictatorship } factor = 0 }
+		}
+	}
+}
+country_event = {
+	id = 14811
+	title = "Мирное обретение независимости"
+	desc = "Мы получили независимость от нашей метрополии мирным путём, но всё же есть некоторые наши национальные территории, над которыми у нас нет контроля."
+
+	is_triggered_only = yes
+        major = yes
+
+        immediate = {
+		civilized = yes
+		activate_technology = napoleonic_thought
+		activate_technology = flintlock_rifles
+		activate_technology = bronze_muzzle_loaded_artillery
+		activate_technology = military_staff_system
+		activate_technology = army_command_principle
+		activate_technology = nelsonian_thought
+		activate_technology = clipper_design
+		activate_technology = marine_chronometers
+		activate_technology = the_command_principle
+		activate_technology = joint-stock_companies
+		activate_technology = no_standard
+		activate_technology = physiocracy
+		activate_technology = state_mercantilism
+		activate_technology = division_of_labour
+		activate_technology = sentimentalism
+		activate_technology = late_enlightenment_philosophy
+		activate_technology = idealism
+		activate_technology = malthusian_thought
+		activate_technology = enlightenment_thought
+		activate_technology = fundamentals_of_psychology
+		activate_technology = water_wheel_power
+		activate_technology = manufactories
+		activate_technology = mechanized_mining
+		activate_technology = animal-powered_railroad
+		activate_technology = basic_chemistry
+        }
+
+	option = {
+		name = "Потребовать их обратно!"
+	        any_country = {
+			limit = { any_owned_province = { is_core = THIS }}
+			country_event = 14810
+	        }
+                FROM = {
+			diplomatic_influence = { who = THIS value = 400 }
+		}
+	}
+}
+country_event = {
+	id = 14812
+	title = "EVTNAME14812"
+	desc = "EVTDESC14812"
+	picture = "french_indochina"
+	
+	trigger = {
+		civilized = yes
+		OR = {
+			AND = {
+				is_disarmed = yes
+				NOT = { has_country_modifier = supporting_colonial_administration }
+			}
+			has_global_flag = anticolonial_league_south_east_asia_chosen
+		}
+		OR = {
+			any_owned_province = { is_core = PHI NOT = { is_core = THIS }}
+			any_owned_province = { is_core = BUR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = SIA NOT = { is_core = THIS }}
+			any_owned_province = { is_core = DAI NOT = { is_core = THIS }}
+			any_owned_province = { is_core = CAM NOT = { is_core = THIS }}
+			any_owned_province = { is_core = LUA NOT = { is_core = THIS }}
+			any_owned_province = { is_core = MLY NOT = { is_core = THIS }}
+			any_owned_province = { is_core = INO NOT = { is_core = THIS }}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+		}
+		modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+		}
+		modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+		}
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+		}
+		modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+		}
+		modifier = {
+			factor = 0.25
+			badboy = 1.75
+		}
+		modifier = {
+			factor = 0.01
+			badboy = 2
+		}
+	}
+
+        immediate = {
+		random_country={limit={tag=BUR exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=SIA exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=DAI exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=CAM exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=LUA exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=MLY exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=INO exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=PHI exists=yes}set_country_flag=exists_now}
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "EVTOPTA14812"
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = BUR NOT = { is_core = THIS }} secede_province = BUR }
+		any_owned = { limit = { is_core = SIA NOT = { is_core = THIS }} secede_province = SIA }
+		any_owned = { limit = { is_core = DAI NOT = { is_core = THIS }} secede_province = DAI }
+		any_owned = { limit = { is_core = CAM NOT = { is_core = THIS }} secede_province = CAM }
+		any_owned = { limit = { is_core = LUA NOT = { is_core = THIS }} secede_province = LUA }
+		any_owned = { limit = { is_core = MLY NOT = { is_core = THIS }} secede_province = MLY }
+		any_owned = { limit = { is_core = INO NOT = { is_core = THIS }} secede_province = INO }
+		any_owned = { limit = { is_core = PHI NOT = { is_core = THIS }} secede_province = PHI }
+                random_country={limit={tag=BUR NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=SIA NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=DAI NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=CAM NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=LUA NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=MLY NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=INO NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=PHI NOT={has_country_flag=exists_now}}country_event=14811}
+                BUR={clr_country_flag=exists_now}
+                SIA={clr_country_flag=exists_now}
+                DAI={clr_country_flag=exists_now}
+                CAM={clr_country_flag=exists_now}
+                LUA={clr_country_flag=exists_now}
+                MLY={clr_country_flag=exists_now}
+                INO={clr_country_flag=exists_now}
+                PHI={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				government = fascist_dictatorship
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14812"
+		badboy = 10
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = BUR NOT = { is_core = THIS }} secede_province = BUR }
+		any_owned = { limit = { is_core = SIA NOT = { is_core = THIS }} secede_province = SIA }
+		any_owned = { limit = { is_core = DAI NOT = { is_core = THIS }} secede_province = DAI }
+		any_owned = { limit = { is_core = CAM NOT = { is_core = THIS }} secede_province = CAM }
+		any_owned = { limit = { is_core = LUA NOT = { is_core = THIS }} secede_province = LUA }
+		any_owned = { limit = { is_core = MLY NOT = { is_core = THIS }} secede_province = MLY }
+		any_owned = { limit = { is_core = INO NOT = { is_core = THIS }} secede_province = INO }
+		any_owned = { limit = { is_core = PHI NOT = { is_core = THIS }} secede_province = PHI }
+                random_country={limit={tag=BUR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=SIA NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=DAI NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=CAM NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=LUA NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=MLY NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=INO NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=PHI NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                BUR={clr_country_flag=exists_now}
+                SIA={clr_country_flag=exists_now}
+                DAI={clr_country_flag=exists_now}
+                CAM={clr_country_flag=exists_now}
+                LUA={clr_country_flag=exists_now}
+                MLY={clr_country_flag=exists_now}
+                INO={clr_country_flag=exists_now}
+                PHI={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { government = fascist_dictatorship }
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {
+	id = 14813
+	title = "Метрополия объявила нам войну!"
+	desc = "Империалисты из нашей бывшей метрополии, державы $FROMCOUNTRY$ сопротивляются нашей освободительной борьбе и решают подавить наше восстание."
+
+	is_triggered_only = yes
+        major = yes
+
+	option = {
+		name = "Будем сражаться"
+		civilized = yes
+		activate_technology = napoleonic_thought
+		activate_technology = flintlock_rifles
+		activate_technology = bronze_muzzle_loaded_artillery
+		activate_technology = military_staff_system
+		activate_technology = army_command_principle
+		activate_technology = nelsonian_thought
+		activate_technology = clipper_design
+		activate_technology = marine_chronometers
+		activate_technology = the_command_principle
+		activate_technology = joint-stock_companies
+		activate_technology = no_standard
+		activate_technology = physiocracy
+		activate_technology = state_mercantilism
+		activate_technology = division_of_labour
+		activate_technology = sentimentalism
+		activate_technology = late_enlightenment_philosophy
+		activate_technology = idealism
+		activate_technology = malthusian_thought
+		activate_technology = enlightenment_thought
+		activate_technology = fundamentals_of_psychology
+		activate_technology = water_wheel_power
+		activate_technology = manufactories
+		activate_technology = mechanized_mining
+		activate_technology = animal-powered_railroad
+		activate_technology = basic_chemistry
+		country_event = 14806
+		FROM = {
+			casus_belli = { target = THIS type = conquest months = 12 }
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquest }
+				#defender_goal = { casus_belli = status_quo }
+			}
+		}
+	}
+}
+country_event = {
+	id = 14814
+	title = "EVTNAME14814"
+	desc = "EVTDESC14814"
+	picture = "french_indochina"
+	
+	trigger = {
+		civilized = yes
+		OR = {
+			AND = {
+				is_disarmed = yes
+				NOT = { has_country_modifier = supporting_colonial_administration }
+			}
+			has_global_flag = anticolonial_league_south_asia_chosen
+		}
+		OR = {
+			any_owned_province = { is_core = NEP NOT = { is_core = THIS }}
+			any_owned_province = { is_core = BHU NOT = { is_core = THIS }}
+		}
+	}
+	
+	mean_time_to_happen = {
+	        months = 100
+                modifier = {
+                     factor = 1.5
+                     government = fascist_dictatorship
+                }
+                modifier = {
+                     factor = 1.5
+                     has_global_flag = supports_colonial_nations
+                     NOT = { government = fascist_dictatorship }
+                }
+                modifier = {
+                     factor = 0.01
+                     has_country_flag = supply_anticolonial_league
+                }
+                modifier = {
+                     factor = 0.01
+                     government = proletarian_dictatorship
+                }
+                modifier = {
+                     factor = 0.75
+                     war_exhaustion = 25
+                }
+                modifier = {
+                     factor = 0.50
+                     war_exhaustion = 50
+                }
+                modifier = {
+                     factor = 0.25
+                     war_exhaustion = 75
+                }
+                modifier = {
+                     factor = 0.01
+                     war_exhaustion = 100
+                }
+                modifier = {
+                     factor = 0.75
+                     badboy = 1.25
+                     NOT = { badboy = 1.5 }
+                }
+                modifier = {
+                     factor = 0.50
+                     badboy = 1.50
+                     NOT = { badboy = 1.75 }
+                }
+                modifier = {
+                     factor = 0.25
+                     badboy = 1.75
+                }
+                modifier = {
+                     factor = 0.01
+                     badboy = 2
+                }
+	}
+
+        immediate = {
+                random_country={limit={tag=NEP exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=BHU exists=yes}set_country_flag=exists_now}
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "EVTOPTA14814"
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = NEP NOT = { is_core = THIS }} secede_province = NEP }
+		any_owned = { limit = { is_core = BHU NOT = { is_core = THIS }} secede_province = BHU }
+		random_country={limit={tag=NEP NOT={has_country_flag=exists_now}}country_event=14811}
+		random_country={limit={tag=BHU NOT={has_country_flag=exists_now}}country_event=14811}
+		NEP={clr_country_flag=exists_now}
+		BHU={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				government = fascist_dictatorship
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14814"
+		badboy = 10
+                prestige_factor = -0.1
+		any_owned = { limit = { is_core = NEP NOT = { is_core = THIS }} secede_province = NEP }
+		any_owned = { limit = { is_core = BHU NOT = { is_core = THIS }} secede_province = BHU }
+		random_country={limit={tag=NEP NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		random_country={limit={tag=BHU NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		NEP={clr_country_flag=exists_now}
+		BHU={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { government = fascist_dictatorship }
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {
+	id = 14815
+	title = "EVTNAME14815"
+	desc = "EVTDESC14815"
+	picture = "saud"
+
+	trigger = {
+		civilized = yes
+		OR = {
+			AND = {
+				is_disarmed = yes
+				NOT = { has_country_modifier = supporting_colonial_administration }
+			}
+			has_global_flag = anticolonial_league_middle_east_chosen
+		}
+		OR = {
+			any_owned_province = { is_core = PER NOT = { is_core = THIS }}
+			any_owned_province = { is_core = AFG NOT = { is_core = THIS }}
+			any_owned_province = { is_core = IRQ NOT = { is_core = THIS }}
+			any_owned_province = { is_core = SYR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = LBN NOT = { is_core = THIS }}
+			any_owned_province = { is_core = JOR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = PLS NOT = { is_core = THIS }}
+			any_owned_province = { is_core = EGY NOT = { is_core = THIS }}
+			any_owned_province = { is_core = SAU NOT = { is_core = THIS }}
+			any_owned_province = { is_core = OMA NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ABU NOT = { is_core = THIS }}
+			any_owned_province = { is_core = YEM NOT = { is_core = THIS }}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+		}
+		modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+		}
+		modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+		}
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+		}
+		modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+		}
+		modifier = {
+			factor = 0.25
+			badboy = 1.75
+		}
+		modifier = {
+			factor = 0.01
+			badboy = 2
+		}
+	}
+
+        immediate = {
+                random_country={limit={tag=PER exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=AFG exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=IRQ exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=SYR exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=LBN exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=JOR exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=PLS exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=EGY exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=SAU exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=OMA exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ABU exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=YEM exists=yes}set_country_flag=exists_now}
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "EVTOPTA14815"
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = PER NOT = { is_core = THIS }} secede_province = PER }
+		any_owned = { limit = { is_core = AFG NOT = { is_core = THIS }} secede_province = AFG }
+		any_owned = { limit = { is_core = IRQ NOT = { is_core = THIS }} secede_province = IRQ }
+		any_owned = { limit = { is_core = SYR NOT = { is_core = THIS }} secede_province = SYR }
+		any_owned = { limit = { is_core = LBN NOT = { is_core = THIS }} secede_province = LBN }
+		any_owned = { limit = { is_core = JOR NOT = { is_core = THIS }} secede_province = JOR }
+		any_owned = { limit = { is_core = PLS NOT = { is_core = THIS }} secede_province = PLS }
+		any_owned = { limit = { is_core = EGY NOT = { is_core = THIS }} secede_province = EGY }
+		any_owned = { limit = { is_core = SAU NOT = { is_core = THIS }} secede_province = SAU }
+		any_owned = { limit = { is_core = OMA NOT = { is_core = THIS }} secede_province = OMA }
+		any_owned = { limit = { is_core = ABU NOT = { is_core = THIS }} secede_province = ABU }
+		any_owned = { limit = { is_core = YEM NOT = { is_core = THIS }} secede_province = YEM }
+                random_country={limit={tag=PER NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=AFG NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=IRQ NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=SYR NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=LBN NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=JOR NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=PLS NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=EGY NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=SAU NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=OMA NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=ABU NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=YEM NOT={has_country_flag=exists_now}}country_event=14811}
+                PER={clr_country_flag=exists_now}
+                AFG={clr_country_flag=exists_now}
+                IRQ={clr_country_flag=exists_now}
+                SYR={clr_country_flag=exists_now}
+                LBN={clr_country_flag=exists_now}
+                JOR={clr_country_flag=exists_now}
+                PLS={clr_country_flag=exists_now}
+                EGY={clr_country_flag=exists_now}
+                SAU={clr_country_flag=exists_now}
+                OMA={clr_country_flag=exists_now}
+                ABU={clr_country_flag=exists_now}
+                YEM={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				government = fascist_dictatorship
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14815"
+		badboy = 10
+                prestige_factor = -0.1
+		any_owned = { limit = { is_core = PER NOT = { is_core = THIS }} secede_province = PER }
+		any_owned = { limit = { is_core = AFG NOT = { is_core = THIS }} secede_province = AFG }
+		any_owned = { limit = { is_core = IRQ NOT = { is_core = THIS }} secede_province = IRQ }
+		any_owned = { limit = { is_core = SYR NOT = { is_core = THIS }} secede_province = SYR }
+		any_owned = { limit = { is_core = LBN NOT = { is_core = THIS }} secede_province = LBN }
+		any_owned = { limit = { is_core = JOR NOT = { is_core = THIS }} secede_province = JOR }
+		any_owned = { limit = { is_core = PLS NOT = { is_core = THIS }} secede_province = PLS }
+		any_owned = { limit = { is_core = EGY NOT = { is_core = THIS }} secede_province = EGY }
+		any_owned = { limit = { is_core = SAU NOT = { is_core = THIS }} secede_province = SAU }
+		any_owned = { limit = { is_core = OMA NOT = { is_core = THIS }} secede_province = OMA }
+		any_owned = { limit = { is_core = ABU NOT = { is_core = THIS }} secede_province = ABU }
+		any_owned = { limit = { is_core = YEM NOT = { is_core = THIS }} secede_province = YEM }
+                random_country={limit={tag=PER NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=AFG NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=IRQ NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=SYR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=LBN NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=JOR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=PLS NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=EGY NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=SAU NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=OMA NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=ABU NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=YEM NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                PER={clr_country_flag=exists_now}
+                AFG={clr_country_flag=exists_now}
+                IRQ={clr_country_flag=exists_now}
+                SYR={clr_country_flag=exists_now}
+                LBN={clr_country_flag=exists_now}
+                JOR={clr_country_flag=exists_now}
+                PLS={clr_country_flag=exists_now}
+                EGY={clr_country_flag=exists_now}
+                SAU={clr_country_flag=exists_now}
+                OMA={clr_country_flag=exists_now}
+                ABU={clr_country_flag=exists_now}
+                YEM={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+                        	NOT = { government = fascist_dictatorship }
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {
+	id = 14816
+	title = "EVTNAME14816"
+	desc = "EVTDESC14816"
+	picture = "saud"
+	
+	trigger = {
+		civilized = yes
+		OR = {
+			AND = {
+				is_disarmed = yes
+				NOT = { has_country_modifier = supporting_colonial_administration }
+			}
+			has_global_flag = anticolonial_league_maghreb_chosen
+		}
+		OR = {
+			any_owned_province = { is_core = MOR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = LIV NOT = { is_core = THIS }}
+			any_owned_province = { is_core = TUN NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ALD NOT = { is_core = THIS }}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+		}
+		modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+		}
+		modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+		}
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+		}
+		modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+		}
+		modifier = {
+			factor = 0.25
+			badboy = 1.75
+		}
+		modifier = {
+			factor = 0.01
+			badboy = 2
+		}
+	}
+
+        immediate = {
+                random_country={limit={tag=MOR exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=LIV exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=TUN exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ALD exists=yes}set_country_flag=exists_now}
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "EVTOPTA14816"
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = MOR NOT = { is_core = THIS }} secede_province = MOR }
+		any_owned = { limit = { is_core = LIV NOT = { is_core = THIS }} secede_province = LIV }
+		any_owned = { limit = { is_core = TUN NOT = { is_core = THIS }} secede_province = TUN }
+		any_owned = { limit = { is_core = ALD NOT = { is_core = THIS }} secede_province = ALD }
+		random_country={limit={tag=MOR NOT={has_country_flag=exists_now}}country_event=14811}
+		random_country={limit={tag=LIV NOT={has_country_flag=exists_now}}country_event=14811}
+		random_country={limit={tag=TUN NOT={has_country_flag=exists_now}}country_event=14811}
+		random_country={limit={tag=ALD NOT={has_country_flag=exists_now}}country_event=14811}
+		MOR={clr_country_flag=exists_now}
+		LIV={clr_country_flag=exists_now}
+		TUN={clr_country_flag=exists_now}
+		ALD={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				government = fascist_dictatorship
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14816"
+		badboy = 10
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = MOR NOT = { is_core = THIS }} secede_province = MOR }
+		any_owned = { limit = { is_core = LIV NOT = { is_core = THIS }} secede_province = LIV }
+		any_owned = { limit = { is_core = TUN NOT = { is_core = THIS }} secede_province = TUN }
+		any_owned = { limit = { is_core = ALD NOT = { is_core = THIS }} secede_province = ALD }
+		random_country={limit={tag=MOR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		random_country={limit={tag=LIV NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		random_country={limit={tag=TUN NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		random_country={limit={tag=ALD NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		MOR={clr_country_flag=exists_now}
+		LIV={clr_country_flag=exists_now}
+		TUN={clr_country_flag=exists_now}
+		ALD={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { government = fascist_dictatorship }
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {
+	id = 14817
+	title = "EVTNAME14817"
+	desc = "EVTDESC14817"
+	picture = "chinese_revolution_army"
+	
+	trigger = {
+		civilized = yes
+		OR = {
+			AND = {
+				is_disarmed = yes
+				NOT = { has_country_modifier = supporting_colonial_administration }
+			}
+			has_global_flag = anticolonial_league_east_asia_chosen
+		}
+		OR = {
+			any_owned_province = { is_core = KOR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = MGL NOT = { is_core = THIS }}
+			any_owned_province = { is_core = MCK NOT = { is_core = THIS }}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+		}
+		modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+		}
+		modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+		}
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+		}
+		modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+		}
+		modifier = {
+			factor = 0.25
+			badboy = 1.75
+		}
+		modifier = {
+			factor = 0.01
+			badboy = 2
+		}
+	}
+
+        immediate = {
+                random_country={limit={tag=MGL exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=KOR exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=MCK exists=yes}set_country_flag=exists_now}
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "EVTOPTA14817"
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = MGL NOT = { is_core = THIS }} secede_province = MGL }
+		any_owned = { limit = { is_core = KOR NOT = { is_core = THIS }} secede_province = KOR }
+		any_owned = { limit = { is_core = MCK NOT = { is_core = THIS }} secede_province = MCK }
+                random_country={limit={tag=MGL NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=KOR NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=MCK NOT={has_country_flag=exists_now}}country_event=14811}
+                MGL={clr_country_flag=exists_now}
+                KOR={clr_country_flag=exists_now}
+                MCK={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				government = fascist_dictatorship
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14817"
+		badboy = 10
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = MGL NOT = { is_core = THIS }} secede_province = MGL }
+		any_owned = { limit = { is_core = KOR NOT = { is_core = THIS }} secede_province = KOR }
+		any_owned = { limit = { is_core = MCK NOT = { is_core = THIS }} secede_province = MCK }
+                random_country={limit={tag=MGL NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=KOR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=MCK NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                MGL={clr_country_flag=exists_now}
+                KOR={clr_country_flag=exists_now}
+                MCK={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { government = fascist_dictatorship }
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {
+	id = 14818
+	title = "EVTNAME14818"
+	desc = "EVTDESC14818"
+	picture = "chinese_revolution_army"
+	
+	trigger = {
+		civilized = yes
+		OR = {
+			AND = {
+				is_disarmed = yes
+				NOT = { has_country_modifier = supporting_colonial_administration }
+			}
+			has_global_flag = anticolonial_league_east_asia_chosen
+		}
+		any_owned_province = { is_core = CHI NOT = { is_core = THIS }}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+		}
+		modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+		}
+		modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+		}
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+		}
+		modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+		}
+		modifier = {
+			factor = 0.25
+			badboy = 1.75
+		}
+		modifier = {
+			factor = 0.01
+			badboy = 2
+		}
+	}
+
+	immediate = {
+                any_owned = { limit = { is_core = CHI NOT = { is_core = THIS }} secede_province = CHI }
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+	}
+
+	option = {
+		name = "EVTOPTA14818"
+		prestige_factor = -0.05
+	}
+}
+country_event = {
+	id = 14821
+	title = "EVTNAME14821"
+	desc = "EVTDESC14821"
+	picture = "mahdi"
+
+	trigger = {
+		civilized = yes
+		OR = {
+			AND = {
+				is_disarmed = yes
+				NOT = { has_country_modifier = supporting_colonial_administration }
+			}
+			has_global_flag = anticolonial_league_equatorial_africa_chosen
+		}
+		OR = {
+			any_owned_province = { is_core = TSW NOT = { is_core = THIS }}
+			any_owned_province = { is_core = RHO NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ZAM NOT = { is_core = THIS }}
+			any_owned_province = { is_core = MOZ NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ANG NOT = { is_core = THIS }}
+			any_owned_province = { is_core = TNZ NOT = { is_core = THIS }}
+			any_owned_province = { is_core = KNY NOT = { is_core = THIS }}
+			any_owned_province = { is_core = UGA NOT = { is_core = THIS }}
+			any_owned_province = { is_core = SOM NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ERT NOT = { is_core = THIS }}
+			any_owned_province = { is_core = CHD NOT = { is_core = THIS }}
+			any_owned_province = { is_core = CAR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = CGO NOT = { is_core = THIS }}
+			any_owned_province = { is_core = GAB NOT = { is_core = THIS }}
+			any_owned_province = { is_core = CMR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = NIG NOT = { is_core = THIS }}
+			any_owned_province = { is_core = NGR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = BEN NOT = { is_core = THIS }}
+			any_owned_province = { is_core = TOG NOT = { is_core = THIS }}
+			any_owned_province = { is_core = MLI NOT = { is_core = THIS }}
+			any_owned_province = { is_core = MAU NOT = { is_core = THIS }}
+			any_owned_province = { is_core = SNG NOT = { is_core = THIS }}
+			any_owned_province = { is_core = GNE NOT = { is_core = THIS }}
+			any_owned_province = { is_core = IVC NOT = { is_core = THIS }}
+			any_owned_province = { is_core = SLE NOT = { is_core = THIS }}
+			any_owned_province = { is_core = NAM NOT = { is_core = THIS }}
+			any_owned_province = { is_core = RHV NOT = { is_core = THIS }}
+			any_owned_province = { is_core = GAN NOT = { is_core = THIS }}
+			any_owned_province = { is_core = CNG NOT = { is_core = THIS }}
+			any_owned_province = { is_core = SUD NOT = { is_core = THIS }}
+			any_owned_province = { is_core = MLW NOT = { is_core = THIS }}
+			any_owned_province = { is_core = RWA NOT = { is_core = THIS }}
+			any_owned_province = { is_core = BRD NOT = { is_core = THIS }}
+			any_owned_province = { is_core = GMB NOT = { is_core = THIS }}
+			any_owned_province = { is_core = GBS NOT = { is_core = THIS }}
+			any_owned_province = { is_core = DJI NOT = { is_core = THIS }}
+			any_owned_province = { is_core = SAF NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ETH NOT = { is_core = THIS }}
+			any_owned_province = { is_core = LIB NOT = { is_core = THIS }}
+			any_owned_province = { is_core = MAD NOT = { is_core = THIS }}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+		}
+		modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+		}
+		modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+		}
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+		}
+		modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+		}
+		modifier = {
+			factor = 0.25
+			badboy = 1.75
+		}
+		modifier = {
+			factor = 0.01
+			badboy = 2
+		}
+	}
+
+        immediate = {
+                random_country={limit={tag=TSW exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=RHO exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ZAM exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=MOZ exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ANG exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=TNZ exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=KNY exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=UGA exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=SOM exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ERT exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=CHD exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=CAR exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=CGO exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=GAB exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=CMR exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=NIG exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=NGR exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=BEN exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=TOG exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=MLI exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=MAU exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=SNG exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=GNE exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=IVC exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=SLE exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=NAM exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=RHV exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=GAN exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=CNG exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=SUD exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=MLW exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=RWA exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=BRD exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=GMB exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=GBS exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=DJI exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=SAF exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ETH exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=LIB exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=MAD exists=yes}set_country_flag=exists_now}
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "EVTOPTA14821"
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = TSW NOT = { is_core = THIS }} secede_province = TSW }
+		any_owned = { limit = { is_core = RHO NOT = { is_core = THIS }} secede_province = RHO }
+		any_owned = { limit = { is_core = ZAM NOT = { is_core = THIS }} secede_province = ZAM }
+		any_owned = { limit = { is_core = MOZ NOT = { is_core = THIS }} secede_province = MOZ }
+		any_owned = { limit = { is_core = ANG NOT = { is_core = THIS }} secede_province = ANG }
+		any_owned = { limit = { is_core = TNZ NOT = { is_core = THIS }} secede_province = TNZ }
+		any_owned = { limit = { is_core = KNY NOT = { is_core = THIS }} secede_province = KNY }
+		any_owned = { limit = { is_core = UGA NOT = { is_core = THIS }} secede_province = UGA }
+		any_owned = { limit = { is_core = SOM NOT = { is_core = THIS }} secede_province = SOM }
+		any_owned = { limit = { is_core = ERT NOT = { is_core = THIS }} secede_province = ERT }
+		any_owned = { limit = { is_core = CHD NOT = { is_core = THIS }} secede_province = CHD }
+		any_owned = { limit = { is_core = CAR NOT = { is_core = THIS }} secede_province = CAR }
+		any_owned = { limit = { is_core = CGO NOT = { is_core = THIS }} secede_province = CGO }
+		any_owned = { limit = { is_core = GAB NOT = { is_core = THIS }} secede_province = GAB }
+		any_owned = { limit = { is_core = CMR NOT = { is_core = THIS }} secede_province = CMR }
+		any_owned = { limit = { is_core = NIG NOT = { is_core = THIS }} secede_province = NIG }
+		any_owned = { limit = { is_core = NGR NOT = { is_core = THIS }} secede_province = NGR }
+		any_owned = { limit = { is_core = BEN NOT = { is_core = THIS }} secede_province = BEN }
+		any_owned = { limit = { is_core = TOG NOT = { is_core = THIS }} secede_province = TOG }
+		any_owned = { limit = { is_core = MLI NOT = { is_core = THIS }} secede_province = MLI }
+		any_owned = { limit = { is_core = MAU NOT = { is_core = THIS }} secede_province = MAU }
+		any_owned = { limit = { is_core = SNG NOT = { is_core = THIS }} secede_province = SNG }
+		any_owned = { limit = { is_core = GNE NOT = { is_core = THIS }} secede_province = GNE }
+		any_owned = { limit = { is_core = IVC NOT = { is_core = THIS }} secede_province = IVC }
+		any_owned = { limit = { is_core = SLE NOT = { is_core = THIS }} secede_province = SLE }
+		any_owned = { limit = { is_core = NAM NOT = { is_core = THIS }} secede_province = NAM }
+		any_owned = { limit = { is_core = RHV NOT = { is_core = THIS }} secede_province = RHV }
+		any_owned = { limit = { is_core = GAN NOT = { is_core = THIS }} secede_province = GAN }
+		any_owned = { limit = { is_core = CNG NOT = { is_core = THIS }} secede_province = CNG }
+		any_owned = { limit = { is_core = SUD NOT = { is_core = THIS }} secede_province = SUD }
+		any_owned = { limit = { is_core = MLW NOT = { is_core = THIS }} secede_province = MLW }
+		any_owned = { limit = { is_core = RWA NOT = { is_core = THIS }} secede_province = RWA }
+		any_owned = { limit = { is_core = BRD NOT = { is_core = THIS }} secede_province = BRD }
+		any_owned = { limit = { is_core = GMB NOT = { is_core = THIS }} secede_province = GMB }
+		any_owned = { limit = { is_core = GBS NOT = { is_core = THIS }} secede_province = GBS }
+		any_owned = { limit = { is_core = DJI NOT = { is_core = THIS }} secede_province = DJI }
+		any_owned = { limit = { is_core = SAF NOT = { is_core = THIS }} secede_province = SAF }
+		any_owned = { limit = { is_core = ETH NOT = { is_core = THIS }} secede_province = ETH }
+		any_owned = { limit = { is_core = LIB NOT = { is_core = THIS }} secede_province = LIB }
+		any_owned = { limit = { is_core = MAD NOT = { is_core = THIS }} secede_province = MAD }
+                random_country={limit={tag=TSW NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=RHO NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=ZAM NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=MOZ NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=ANG NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=TNZ NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=KNY NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=UGA NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=SOM NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=ERT NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=CHD NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=CAR NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=CGO NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=GAB NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=CMR NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=NIG NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=NGR NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=BEN NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=TOG NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=MLI NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=MAU NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=SNG NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=GNE NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=IVC NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=SLE NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=NAM NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=RHV NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=GAN NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=CNG NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=SUD NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=MLW NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=RWA NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=BRD NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=GMB NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=GBS NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=DJI NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=SAF NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=ETH NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=LIB NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=MAD NOT={has_country_flag=exists_now}}country_event=14811}
+                TSW={clr_country_flag=exists_now}
+                RHO={clr_country_flag=exists_now}
+                ZAM={clr_country_flag=exists_now}
+                MOZ={clr_country_flag=exists_now}
+                ANG={clr_country_flag=exists_now}
+                TNZ={clr_country_flag=exists_now}
+                KNY={clr_country_flag=exists_now}
+                UGA={clr_country_flag=exists_now}
+                SOM={clr_country_flag=exists_now}
+                ERT={clr_country_flag=exists_now}
+                CHD={clr_country_flag=exists_now}
+                CAR={clr_country_flag=exists_now}
+                CGO={clr_country_flag=exists_now}
+                GAB={clr_country_flag=exists_now}
+                CMR={clr_country_flag=exists_now}
+                NIG={clr_country_flag=exists_now}
+                NGR={clr_country_flag=exists_now}
+                BEN={clr_country_flag=exists_now}
+                TOG={clr_country_flag=exists_now}
+                MLI={clr_country_flag=exists_now}
+                MAU={clr_country_flag=exists_now}
+                SNG={clr_country_flag=exists_now}
+                GNE={clr_country_flag=exists_now}
+                IVC={clr_country_flag=exists_now}
+                SLE={clr_country_flag=exists_now}
+                NAM={clr_country_flag=exists_now}
+                RHV={clr_country_flag=exists_now}
+                GAN={clr_country_flag=exists_now}
+                CNG={clr_country_flag=exists_now}
+                SUD={clr_country_flag=exists_now}
+                MLW={clr_country_flag=exists_now}
+                RWA={clr_country_flag=exists_now}
+                BRD={clr_country_flag=exists_now}
+                GMB={clr_country_flag=exists_now}
+                GBS={clr_country_flag=exists_now}
+                DJI={clr_country_flag=exists_now}
+                SAF={clr_country_flag=exists_now}
+                ETH={clr_country_flag=exists_now}
+                LIB={clr_country_flag=exists_now}
+                MAD={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				government = fascist_dictatorship
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14821"
+		badboy = 10
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = TSW NOT = { is_core = THIS }} secede_province = TSW }
+		any_owned = { limit = { is_core = RHO NOT = { is_core = THIS }} secede_province = RHO }
+		any_owned = { limit = { is_core = ZAM NOT = { is_core = THIS }} secede_province = ZAM }
+		any_owned = { limit = { is_core = MOZ NOT = { is_core = THIS }} secede_province = MOZ }
+		any_owned = { limit = { is_core = ANG NOT = { is_core = THIS }} secede_province = ANG }
+		any_owned = { limit = { is_core = TNZ NOT = { is_core = THIS }} secede_province = TNZ }
+		any_owned = { limit = { is_core = KNY NOT = { is_core = THIS }} secede_province = KNY }
+		any_owned = { limit = { is_core = UGA NOT = { is_core = THIS }} secede_province = UGA }
+		any_owned = { limit = { is_core = SOM NOT = { is_core = THIS }} secede_province = SOM }
+		any_owned = { limit = { is_core = ERT NOT = { is_core = THIS }} secede_province = ERT }
+		any_owned = { limit = { is_core = CHD NOT = { is_core = THIS }} secede_province = CHD }
+		any_owned = { limit = { is_core = CAR NOT = { is_core = THIS }} secede_province = CAR }
+		any_owned = { limit = { is_core = CGO NOT = { is_core = THIS }} secede_province = CGO }
+		any_owned = { limit = { is_core = GAB NOT = { is_core = THIS }} secede_province = GAB }
+		any_owned = { limit = { is_core = CMR NOT = { is_core = THIS }} secede_province = CMR }
+		any_owned = { limit = { is_core = NIG NOT = { is_core = THIS }} secede_province = NIG }
+		any_owned = { limit = { is_core = NGR NOT = { is_core = THIS }} secede_province = NGR }
+		any_owned = { limit = { is_core = BEN NOT = { is_core = THIS }} secede_province = BEN }
+		any_owned = { limit = { is_core = TOG NOT = { is_core = THIS }} secede_province = TOG }
+		any_owned = { limit = { is_core = MLI NOT = { is_core = THIS }} secede_province = MLI }
+		any_owned = { limit = { is_core = MAU NOT = { is_core = THIS }} secede_province = MAU }
+		any_owned = { limit = { is_core = SNG NOT = { is_core = THIS }} secede_province = SNG }
+		any_owned = { limit = { is_core = GNE NOT = { is_core = THIS }} secede_province = GNE }
+		any_owned = { limit = { is_core = IVC NOT = { is_core = THIS }} secede_province = IVC }
+		any_owned = { limit = { is_core = SLE NOT = { is_core = THIS }} secede_province = SLE }
+		any_owned = { limit = { is_core = NAM NOT = { is_core = THIS }} secede_province = NAM }
+		any_owned = { limit = { is_core = RHV NOT = { is_core = THIS }} secede_province = RHV }
+		any_owned = { limit = { is_core = GAN NOT = { is_core = THIS }} secede_province = GAN }
+		any_owned = { limit = { is_core = CNG NOT = { is_core = THIS }} secede_province = CNG }
+		any_owned = { limit = { is_core = SUD NOT = { is_core = THIS }} secede_province = SUD }
+		any_owned = { limit = { is_core = MLW NOT = { is_core = THIS }} secede_province = MLW }
+		any_owned = { limit = { is_core = RWA NOT = { is_core = THIS }} secede_province = RWA }
+		any_owned = { limit = { is_core = BRD NOT = { is_core = THIS }} secede_province = BRD }
+		any_owned = { limit = { is_core = GMB NOT = { is_core = THIS }} secede_province = GMB }
+		any_owned = { limit = { is_core = GBS NOT = { is_core = THIS }} secede_province = GBS }
+		any_owned = { limit = { is_core = DJI NOT = { is_core = THIS }} secede_province = DJI }
+		any_owned = { limit = { is_core = SAF NOT = { is_core = THIS }} secede_province = SAF }
+		any_owned = { limit = { is_core = ETH NOT = { is_core = THIS }} secede_province = ETH }
+		any_owned = { limit = { is_core = LIB NOT = { is_core = THIS }} secede_province = LIB }
+		any_owned = { limit = { is_core = MAD NOT = { is_core = THIS }} secede_province = MAD }
+                random_country={limit={tag=TSW NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=RHO NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=ZAM NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=MOZ NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=ANG NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=TNZ NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=KNY NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=UGA NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=SOM NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=ERT NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=CHD NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=CAR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=CGO NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=GAB NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=CMR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=NIG NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=NGR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=BEN NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=TOG NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=MLI NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=MAU NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=SNG NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=GNE NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=IVC NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=SLE NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=NAM NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=RHV NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=GAN NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=CNG NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=SUD NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=MLW NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=RWA NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=BRD NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=GMB NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=GBS NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=DJI NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=SAF NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=ETH NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=LIB NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=MAD NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                TSW={clr_country_flag=exists_now}
+                RHO={clr_country_flag=exists_now}
+                ZAM={clr_country_flag=exists_now}
+                MOZ={clr_country_flag=exists_now}
+                ANG={clr_country_flag=exists_now}
+                TNZ={clr_country_flag=exists_now}
+                KNY={clr_country_flag=exists_now}
+                UGA={clr_country_flag=exists_now}
+                SOM={clr_country_flag=exists_now}
+                ERT={clr_country_flag=exists_now}
+                CHD={clr_country_flag=exists_now}
+                CAR={clr_country_flag=exists_now}
+                CGO={clr_country_flag=exists_now}
+                GAB={clr_country_flag=exists_now}
+                CMR={clr_country_flag=exists_now}
+                NIG={clr_country_flag=exists_now}
+                NGR={clr_country_flag=exists_now}
+                BEN={clr_country_flag=exists_now}
+                TOG={clr_country_flag=exists_now}
+                MLI={clr_country_flag=exists_now}
+                MAU={clr_country_flag=exists_now}
+                SNG={clr_country_flag=exists_now}
+                GNE={clr_country_flag=exists_now}
+                IVC={clr_country_flag=exists_now}
+                SLE={clr_country_flag=exists_now}
+                NAM={clr_country_flag=exists_now}
+                RHV={clr_country_flag=exists_now}
+                GAN={clr_country_flag=exists_now}
+                CNG={clr_country_flag=exists_now}
+                SUD={clr_country_flag=exists_now}
+                MLW={clr_country_flag=exists_now}
+                RWA={clr_country_flag=exists_now}
+                BRD={clr_country_flag=exists_now}
+                GMB={clr_country_flag=exists_now}
+                GBS={clr_country_flag=exists_now}
+                DJI={clr_country_flag=exists_now}
+                SAF={clr_country_flag=exists_now}
+                ETH={clr_country_flag=exists_now}
+                LIB={clr_country_flag=exists_now}
+                MAD={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { government = fascist_dictatorship }
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {
+	id = 14822
+	title = "EVTNAME14822"
+	desc = "EVTDESC14822"
+	picture = "mexico_soldiers"
+	
+	trigger = {
+		civilized = yes
+		OR = {
+			AND = {
+				is_disarmed = yes
+				NOT = { has_country_modifier = supporting_colonial_administration }
+			}
+			has_global_flag = anticolonial_league_latin_america_chosen
+		}
+		OR = {
+			any_owned_province = { is_core = BRZ NOT = { is_core = THIS }}
+			any_owned_province = { is_core = NIC NOT = { is_core = THIS }}
+			any_owned_province = { is_core = COS NOT = { is_core = THIS }}
+			any_owned_province = { is_core = GUA NOT = { is_core = THIS }}
+			any_owned_province = { is_core = MEX NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ELS NOT = { is_core = THIS }}
+			any_owned_province = { is_core = PNM NOT = { is_core = THIS }}
+			any_owned_province = { is_core = CLM NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ARG NOT = { is_core = THIS }}
+			any_owned_province = { is_core = PEU NOT = { is_core = THIS }}
+			any_owned_province = { is_core = VNZ NOT = { is_core = THIS }}
+			any_owned_province = { is_core = CHL NOT = { is_core = THIS }}
+			any_owned_province = { is_core = BOL NOT = { is_core = THIS }}
+			any_owned_province = { is_core = URU NOT = { is_core = THIS }}
+			any_owned_province = { is_core = PRG NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ECU NOT = { is_core = THIS }}
+			any_owned_province = { is_core = CUB NOT = { is_core = THIS }}
+			any_owned_province = { is_core = HAI NOT = { is_core = THIS }}
+			any_owned_province = { is_core = GUY NOT = { is_core = THIS }}
+			any_owned_province = { is_core = SUR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = DOM NOT = { is_core = THIS }}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+		}
+		modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+		}
+		modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+		}
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+		}
+		modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+		}
+		modifier = {
+			factor = 0.25
+			badboy = 1.75
+		}
+		modifier = {
+			factor = 0.01
+			badboy = 2
+		}
+	}
+
+        immediate = {
+                random_country={limit={tag=BRZ exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=NIC exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=COS exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=GUA exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=MEX exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ELS exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=PNM exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=CLM exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ARG exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=PEU exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=VNZ exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=CHL exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=BOL exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=URU exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=PRG exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ECU exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=CUB exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=HAI exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=GUY exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=SUR exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=DOM exists=yes}set_country_flag=exists_now}
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "EVTOPTA14822"
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = BRZ NOT = { is_core = THIS }} secede_province = BRZ }
+		any_owned = { limit = { is_core = NIC NOT = { is_core = THIS }} secede_province = NIC }
+		any_owned = { limit = { is_core = COS NOT = { is_core = THIS }} secede_province = COS }
+		any_owned = { limit = { is_core = GUA NOT = { is_core = THIS }} secede_province = GUA }
+		any_owned = { limit = { is_core = MEX NOT = { is_core = THIS }} secede_province = MEX }
+		any_owned = { limit = { is_core = ELS NOT = { is_core = THIS }} secede_province = ELS }
+		any_owned = { limit = { is_core = PNM NOT = { is_core = THIS }} secede_province = PNM }
+		any_owned = { limit = { is_core = CLM NOT = { is_core = THIS }} secede_province = CLM }
+		any_owned = { limit = { is_core = ARG NOT = { is_core = THIS }} secede_province = ARG }
+		any_owned = { limit = { is_core = PEU NOT = { is_core = THIS }} secede_province = PEU }
+		any_owned = { limit = { is_core = VNZ NOT = { is_core = THIS }} secede_province = VNZ }
+		any_owned = { limit = { is_core = CHL NOT = { is_core = THIS }} secede_province = CHL }
+		any_owned = { limit = { is_core = BOL NOT = { is_core = THIS }} secede_province = BOL }
+		any_owned = { limit = { is_core = URU NOT = { is_core = THIS }} secede_province = URU }
+		any_owned = { limit = { is_core = PRG NOT = { is_core = THIS }} secede_province = PRG }
+		any_owned = { limit = { is_core = ECU NOT = { is_core = THIS }} secede_province = ECU }
+		any_owned = { limit = { is_core = CUB NOT = { is_core = THIS }} secede_province = CUB }
+		any_owned = { limit = { is_core = HAI NOT = { is_core = THIS }} secede_province = HAI }
+		any_owned = { limit = { is_core = GUY NOT = { is_core = THIS }} secede_province = GUY }
+		any_owned = { limit = { is_core = SUR NOT = { is_core = THIS }} secede_province = SUR }
+		any_owned = { limit = { is_core = DOM NOT = { is_core = THIS }} secede_province = DOM }
+                random_country={limit={tag=BRZ NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=NIC NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=COS NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=GUA NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=MEX NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=ELS NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=PNM NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=CLM NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=ARG NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=PEU NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=VNZ NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=CHL NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=BOL NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=URU NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=PRG NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=ECU NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=CUB NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=HAI NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=GUY NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=SUR NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=DOM NOT={has_country_flag=exists_now}}country_event=14811}
+                BRZ={clr_country_flag=exists_now}
+                NIC={clr_country_flag=exists_now}
+                COS={clr_country_flag=exists_now}
+                GUA={clr_country_flag=exists_now}
+                MEX={clr_country_flag=exists_now}
+                ELS={clr_country_flag=exists_now}
+                PNM={clr_country_flag=exists_now}
+                CLM={clr_country_flag=exists_now}
+                ARG={clr_country_flag=exists_now}
+                PEU={clr_country_flag=exists_now}
+                VNZ={clr_country_flag=exists_now}
+                CHL={clr_country_flag=exists_now}
+                BOL={clr_country_flag=exists_now}
+                URU={clr_country_flag=exists_now}
+                PRG={clr_country_flag=exists_now}
+                ECU={clr_country_flag=exists_now}
+                CUB={clr_country_flag=exists_now}
+                HAI={clr_country_flag=exists_now}
+                GUY={clr_country_flag=exists_now}
+                SUR={clr_country_flag=exists_now}
+                DOM={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				government = fascist_dictatorship
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14822"
+		badboy = 10
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = BRZ NOT = { is_core = THIS }} secede_province = BRZ }
+		any_owned = { limit = { is_core = NIC NOT = { is_core = THIS }} secede_province = NIC }
+		any_owned = { limit = { is_core = COS NOT = { is_core = THIS }} secede_province = COS }
+		any_owned = { limit = { is_core = GUA NOT = { is_core = THIS }} secede_province = GUA }
+		any_owned = { limit = { is_core = MEX NOT = { is_core = THIS }} secede_province = MEX }
+		any_owned = { limit = { is_core = ELS NOT = { is_core = THIS }} secede_province = ELS }
+		any_owned = { limit = { is_core = PNM NOT = { is_core = THIS }} secede_province = PNM }
+		any_owned = { limit = { is_core = CLM NOT = { is_core = THIS }} secede_province = CLM }
+		any_owned = { limit = { is_core = ARG NOT = { is_core = THIS }} secede_province = ARG }
+		any_owned = { limit = { is_core = PEU NOT = { is_core = THIS }} secede_province = PEU }
+		any_owned = { limit = { is_core = VNZ NOT = { is_core = THIS }} secede_province = VNZ }
+		any_owned = { limit = { is_core = CHL NOT = { is_core = THIS }} secede_province = CHL }
+		any_owned = { limit = { is_core = BOL NOT = { is_core = THIS }} secede_province = BOL }
+		any_owned = { limit = { is_core = URU NOT = { is_core = THIS }} secede_province = URU }
+		any_owned = { limit = { is_core = PRG NOT = { is_core = THIS }} secede_province = PRG }
+		any_owned = { limit = { is_core = ECU NOT = { is_core = THIS }} secede_province = ECU }
+		any_owned = { limit = { is_core = CUB NOT = { is_core = THIS }} secede_province = CUB }
+		any_owned = { limit = { is_core = HAI NOT = { is_core = THIS }} secede_province = HAI }
+		any_owned = { limit = { is_core = GUY NOT = { is_core = THIS }} secede_province = GUY }
+		any_owned = { limit = { is_core = SUR NOT = { is_core = THIS }} secede_province = SUR }
+		any_owned = { limit = { is_core = DOM NOT = { is_core = THIS }} secede_province = DOM }
+                random_country={limit={tag=BRZ NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=NIC NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=COS NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=GUA NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=MEX NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=ELS NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=PNM NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=CLM NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=ARG NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=PEU NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=VNZ NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=CHL NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=BOL NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=URU NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=PRG NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=ECU NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=CUB NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=HAI NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=GUY NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=SUR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=DOM NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                BRZ={clr_country_flag=exists_now}
+                NIC={clr_country_flag=exists_now}
+                COS={clr_country_flag=exists_now}
+                GUA={clr_country_flag=exists_now}
+                MEX={clr_country_flag=exists_now}
+                ELS={clr_country_flag=exists_now}
+                PNM={clr_country_flag=exists_now}
+                CLM={clr_country_flag=exists_now}
+                ARG={clr_country_flag=exists_now}
+                PEU={clr_country_flag=exists_now}
+                VNZ={clr_country_flag=exists_now}
+                CHL={clr_country_flag=exists_now}
+                BOL={clr_country_flag=exists_now}
+                URU={clr_country_flag=exists_now}
+                PRG={clr_country_flag=exists_now}
+                ECU={clr_country_flag=exists_now}
+                CUB={clr_country_flag=exists_now}
+                HAI={clr_country_flag=exists_now}
+                GUY={clr_country_flag=exists_now}
+                SUR={clr_country_flag=exists_now}
+                DOM={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { government = fascist_dictatorship }
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {
+	id = 14823
+	title = "EVTNAME14823"
+	desc = "EVTDESC14823"
+	picture = "balkan"
+	
+	trigger = {
+		civilized = yes
+		OR = {
+			AND = {
+				is_disarmed = yes
+				NOT = { has_country_modifier = supporting_colonial_administration }
+			}
+			has_global_flag = anticolonial_league_balkan_chosen
+		}
+		OR = {
+			any_owned_province = { is_core = YUG NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ALB NOT = { is_core = THIS }}
+			any_owned_province = { is_core = GRE NOT = { is_core = THIS }}
+			any_owned_province = { is_core = BUL NOT = { is_core = THIS }}
+			any_owned_province = { is_core = ROM NOT = { is_core = THIS }}
+			any_owned_province = { is_core = CYP NOT = { is_core = THIS }}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+		}
+		modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+		}
+		modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+		}
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+		}
+		modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+		}
+		modifier = {
+			factor = 0.25
+			badboy = 1.75
+		}
+		modifier = {
+			factor = 0.01
+			badboy = 2
+		}
+	}
+
+        immediate = {
+                random_country={limit={tag=YUG exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ALB exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=CYP exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=GRE exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=BUL exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=ROM exists=yes}set_country_flag=exists_now}
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "EVTOPTA14823"
+		prestige_factor = -0.05
+                any_owned = { limit = { is_core = YUG NOT = { is_core = THIS }} secede_province = YUG }
+                any_owned = { limit = { is_core = ALB NOT = { is_core = THIS }} secede_province = ALB }
+                any_owned = { limit = { is_core = CYP NOT = { is_core = THIS }} secede_province = CYP }
+                any_owned = { limit = { is_core = GRE NOT = { is_core = THIS }} secede_province = GRE }
+                any_owned = { limit = { is_core = BUL NOT = { is_core = THIS }} secede_province = BUL }
+                any_owned = { limit = { is_core = ROM NOT = { is_core = THIS }} secede_province = ROM }
+                random_country={limit={tag=YUG NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=ALB NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=CYP NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=GRE NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=BUL NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=ROM NOT={has_country_flag=exists_now}}country_event=14811}
+                YUG={clr_country_flag=exists_now}
+                ALB={clr_country_flag=exists_now}
+                CYP={clr_country_flag=exists_now}
+                GRE={clr_country_flag=exists_now}
+                BUL={clr_country_flag=exists_now}
+                ROM={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				government = fascist_dictatorship
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB14823"
+		badboy = 10
+		prestige_factor = -0.05
+                any_owned = { limit = { is_core = YUG NOT = { is_core = THIS }} secede_province = YUG }
+                any_owned = { limit = { is_core = ALB NOT = { is_core = THIS }} secede_province = ALB }
+                any_owned = { limit = { is_core = CYP NOT = { is_core = THIS }} secede_province = CYP }
+                any_owned = { limit = { is_core = GRE NOT = { is_core = THIS }} secede_province = GRE }
+                any_owned = { limit = { is_core = BUL NOT = { is_core = THIS }} secede_province = BUL }
+                any_owned = { limit = { is_core = ROM NOT = { is_core = THIS }} secede_province = ROM }
+                random_country={limit={tag=YUG NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=ALB NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=CYP NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=GRE NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=BUL NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=ROM NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                YUG={clr_country_flag=exists_now}
+                ALB={clr_country_flag=exists_now}
+                CYP={clr_country_flag=exists_now}
+                GRE={clr_country_flag=exists_now}
+                BUL={clr_country_flag=exists_now}
+                ROM={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { government = fascist_dictatorship }
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {
+	id = 148233
+	title = "EVTNAME148233"
+	desc = "EVTDESC148233"
+	picture = "saud"
+	
+	trigger = {
+		civilized = yes
+		is_disarmed = yes
+		NOT = { has_country_modifier = supporting_colonial_administration }
+		OR = {
+			any_owned_province = { is_core = KAZ NOT = { is_core = THIS }}
+			any_owned_province = { is_core = KYR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = TAJ NOT = { is_core = THIS }}
+			any_owned_province = { is_core = TKM NOT = { is_core = THIS }}
+			any_owned_province = { is_core = UZB NOT = { is_core = THIS }}
+		}
+	}
+	
+	mean_time_to_happen = {
+	        months = 100
+                modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+                }
+                modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+                }
+                modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+                }
+                modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+                }
+                modifier = {
+			factor = 0.75
+			war_exhaustion = 25
+                }
+                modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+                }
+                modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+                }
+                modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+                }
+                modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+                }
+                modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+                }
+                modifier = {
+			factor = 0.25
+			badboy = 1.75
+                }
+                modifier = {
+			factor = 0.01
+			badboy = 2
+                }
+	}
+
+        immediate = {
+		random_country={limit={tag=KAZ exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=KYR exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=TAJ exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=TKM exists=yes}set_country_flag=exists_now}
+		random_country={limit={tag=UZB exists=yes}set_country_flag=exists_now}
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "EVTOPTA148233"
+		prestige_factor = -0.05
+                any_owned = { limit = { is_core = KAZ NOT = { is_core = THIS }} secede_province = KAZ }
+                any_owned = { limit = { is_core = KYR NOT = { is_core = THIS }} secede_province = KYR }
+                any_owned = { limit = { is_core = TAJ NOT = { is_core = THIS }} secede_province = TAJ }
+                any_owned = { limit = { is_core = TKM NOT = { is_core = THIS }} secede_province = TKM }
+                any_owned = { limit = { is_core = UZB NOT = { is_core = THIS }} secede_province = UZB }
+		random_country={limit={tag=KAZ NOT={has_country_flag=exists_now}}country_event=14811}
+		random_country={limit={tag=KYR NOT={has_country_flag=exists_now}}country_event=14811}
+		random_country={limit={tag=TAJ NOT={has_country_flag=exists_now}}country_event=14811}
+		random_country={limit={tag=TKM NOT={has_country_flag=exists_now}}country_event=14811}
+		random_country={limit={tag=UZB NOT={has_country_flag=exists_now}}country_event=14811}
+		KAZ={clr_country_flag=exists_now}
+		KYR={clr_country_flag=exists_now}
+		TAJ={clr_country_flag=exists_now}
+		TKM={clr_country_flag=exists_now}
+		UZB={clr_country_flag=exists_now}
+                ai_chance = {
+			factor = 1
+			modifier = { government = fascist_dictatorship factor = 0 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTB148233"
+		badboy = 10
+		prestige_factor = -0.05
+                any_owned = { limit = { is_core = KAZ NOT = { is_core = THIS }} secede_province = KAZ }
+                any_owned = { limit = { is_core = KYR NOT = { is_core = THIS }} secede_province = KYR }
+                any_owned = { limit = { is_core = TAJ NOT = { is_core = THIS }} secede_province = TAJ }
+                any_owned = { limit = { is_core = TKM NOT = { is_core = THIS }} secede_province = TKM }
+                any_owned = { limit = { is_core = UZB NOT = { is_core = THIS }} secede_province = UZB }
+		random_country={limit={tag=KAZ NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		random_country={limit={tag=KYR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		random_country={limit={tag=TAJ NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		random_country={limit={tag=TKM NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		random_country={limit={tag=UZB NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+		KAZ={clr_country_flag=exists_now}
+		KYR={clr_country_flag=exists_now}
+		TAJ={clr_country_flag=exists_now}
+		TKM={clr_country_flag=exists_now}
+		UZB={clr_country_flag=exists_now}
+                ai_chance = {
+			factor = 1
+			modifier = { NOT = { government = fascist_dictatorship } factor = 0 }
+		}
+	}
+}
+country_event = {
+	id = 148234
+	title = "EVTNAME148234"
+	desc = "EVTDESC148234"
+	picture = "europa"
+	
+	trigger = {
+		civilized = yes
+		is_disarmed = yes
+		NOT = { has_country_modifier = supporting_colonial_administration }
+		OR = {
+			any_owned_province = { is_core = CZH NOT = { is_core = THIS }}
+			any_owned_province = { is_core = POL NOT = { is_core = THIS }}
+			any_owned_province = { is_core = HUN NOT = { is_core = THIS }}
+			any_owned_province = { is_core = EST NOT = { is_core = THIS }}
+			any_owned_province = { is_core = LIT NOT = { is_core = THIS }}
+			any_owned_province = { is_core = LAT NOT = { is_core = THIS }}
+			any_owned_province = { is_core = FIN NOT = { is_core = THIS }}
+			any_owned_province = { is_core = BEL NOT = { is_core = THIS }}
+			any_owned_province = { is_core = NOR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = POR NOT = { is_core = THIS }}
+			any_owned_province = { is_core = DEN NOT = { is_core = THIS }}
+			any_owned_province = { is_core = SWI NOT = { is_core = THIS }}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 1.5
+			government = fascist_dictatorship
+		}
+		modifier = {
+			factor = 1.5
+			has_global_flag = supports_colonial_nations
+			NOT = { government = fascist_dictatorship }
+		}
+		modifier = {
+			factor = 0.01
+			has_country_flag = supply_anticolonial_league
+		}
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.50
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.25
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.01
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 0.75
+			badboy = 1.25
+			NOT = { badboy = 1.5 }
+		}
+		modifier = {
+			factor = 0.50
+			badboy = 1.50
+			NOT = { badboy = 1.75 }
+		}
+		modifier = {
+			factor = 0.25
+			badboy = 1.75
+		}
+		modifier = {
+			factor = 0.01
+			badboy = 2
+		}
+	}
+
+        immediate = {
+                random_country={limit={tag=CZH exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=POL exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=HUN exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=EST exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=LIT exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=LAT exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=FIN exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=BEL exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=NOR exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=POR exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=DEN exists=yes}set_country_flag=exists_now}
+                random_country={limit={tag=SWI exists=yes}set_country_flag=exists_now}
+		add_country_modifier = {
+			name = the_likelihood_of_a_financial_crisis_alt
+			duration = 1460
+		}
+        }
+
+	option = {
+		name = "EVTOPTA148234"
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = CZH NOT = { is_core = THIS }} secede_province = CZH }
+		any_owned = { limit = { is_core = POL NOT = { is_core = THIS }} secede_province = POL }
+		any_owned = { limit = { is_core = HUN NOT = { is_core = THIS }} secede_province = HUN }
+		any_owned = { limit = { is_core = EST NOT = { is_core = THIS }} secede_province = EST }
+		any_owned = { limit = { is_core = LIT NOT = { is_core = THIS }} secede_province = LIT }
+		any_owned = { limit = { is_core = LAT NOT = { is_core = THIS }} secede_province = LAT }
+		any_owned = { limit = { is_core = FIN NOT = { is_core = THIS }} secede_province = FIN }
+		any_owned = { limit = { is_core = BEL NOT = { is_core = THIS }} secede_province = BEL }
+		any_owned = { limit = { is_core = NOR NOT = { is_core = THIS }} secede_province = NOR }
+		any_owned = { limit = { is_core = POR NOT = { is_core = THIS }} secede_province = POR }
+		any_owned = { limit = { is_core = DEN NOT = { is_core = THIS }} secede_province = DEN }
+		any_owned = { limit = { is_core = SWI NOT = { is_core = THIS }} secede_province = SWI }
+                random_country={limit={tag=CZH NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=POL NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=HUN NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=EST NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=LIT NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=LAT NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=FIN NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=BEL NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=NOR NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=POR NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=DEN NOT={has_country_flag=exists_now}}country_event=14811}
+                random_country={limit={tag=SWI NOT={has_country_flag=exists_now}}country_event=14811}
+                CZH={clr_country_flag=exists_now}
+                POL={clr_country_flag=exists_now}
+                HUN={clr_country_flag=exists_now}
+                EST={clr_country_flag=exists_now}
+                LIT={clr_country_flag=exists_now}
+                LAT={clr_country_flag=exists_now}
+                FIN={clr_country_flag=exists_now}
+                BEL={clr_country_flag=exists_now}
+                NOR={clr_country_flag=exists_now}
+                POR={clr_country_flag=exists_now}
+                DEN={clr_country_flag=exists_now}
+                SWI={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				government = fascist_dictatorship
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB148234"
+		badboy = 10
+		prestige_factor = -0.05
+		any_owned = { limit = { is_core = CZH NOT = { is_core = THIS }} secede_province = CZH }
+		any_owned = { limit = { is_core = POL NOT = { is_core = THIS }} secede_province = POL }
+		any_owned = { limit = { is_core = HUN NOT = { is_core = THIS }} secede_province = HUN }
+		any_owned = { limit = { is_core = EST NOT = { is_core = THIS }} secede_province = EST }
+		any_owned = { limit = { is_core = LIT NOT = { is_core = THIS }} secede_province = LIT }
+		any_owned = { limit = { is_core = LAT NOT = { is_core = THIS }} secede_province = LAT }
+		any_owned = { limit = { is_core = FIN NOT = { is_core = THIS }} secede_province = FIN }
+		any_owned = { limit = { is_core = BEL NOT = { is_core = THIS }} secede_province = BEL }
+		any_owned = { limit = { is_core = NOR NOT = { is_core = THIS }} secede_province = NOR }
+		any_owned = { limit = { is_core = POR NOT = { is_core = THIS }} secede_province = POR }
+		any_owned = { limit = { is_core = DEN NOT = { is_core = THIS }} secede_province = DEN }
+		any_owned = { limit = { is_core = SWI NOT = { is_core = THIS }} secede_province = SWI }
+                random_country={limit={tag=CZH NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=POL NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=HUN NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=EST NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=LIT NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=LAT NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=FIN NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=BEL NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=NOR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=POR NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=DEN NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                random_country={limit={tag=SWI NOT={has_country_flag=exists_now}}country_event=14813 add_country_modifier={name=war_for_independance duration=1825}}
+                CZH={clr_country_flag=exists_now}
+                POL={clr_country_flag=exists_now}
+                HUN={clr_country_flag=exists_now}
+                EST={clr_country_flag=exists_now}
+                LIT={clr_country_flag=exists_now}
+                LAT={clr_country_flag=exists_now}
+                FIN={clr_country_flag=exists_now}
+                BEL={clr_country_flag=exists_now}
+                NOR={clr_country_flag=exists_now}
+                POR={clr_country_flag=exists_now}
+                DEN={clr_country_flag=exists_now}
+                SWI={clr_country_flag=exists_now}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				NOT = { government = fascist_dictatorship }
+				factor = 0
+			}
+		}
+	}
+}
+############################ Anticolonial league ##############################################################################################################
+country_event = {
+	id = 14824
+	title = "EVNTNAME14824"
+	desc = "EVNTDESC14824"
+	picture = "Administration"
+
+	trigger = {
+		has_global_flag = anticolonial_league_formed
+                has_country_flag = anticolonial_league_works_here
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = anti_colonial_league_works
+			}
+		}
+	}
+
+        immediate = {
+                clr_global_flag = anticolonial_league_south_asia_chosen
+                clr_global_flag = anticolonial_league_south_east_asia_chosen
+                clr_global_flag = anticolonial_league_middle_east_chosen
+                clr_global_flag = anticolonial_league_east_asia_chosen
+                clr_global_flag = anticolonial_league_equatorial_africa_chosen
+                clr_global_flag = anticolonial_league_latin_america_chosen
+                clr_global_flag = anticolonial_league_maghreb_chosen
+                clr_global_flag = anticolonial_league_balkan_chosen
+        }
+
+	option = {
+		name = "Прекратить деятельность антиколониальной лиги"
+                clr_global_flag = anticolonial_league_formed
+                clr_country_flag = anticolonial_league_works_here
+	}
+	option = {
+		name = "Южная Азия. Индия должна быть свободной!"
+                set_global_flag = anticolonial_league_south_asia_chosen
+		capital_scope = {
+			add_province_modifier = {
+				name = anti_colonial_league_works
+				duration = 1825
+			}
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 14825
+		}
+	}
+	option = {
+		name = "Юго-Восточная Азия. Вьетнамцы готовы драться, надо им только помочь."
+                set_global_flag = anticolonial_league_south_east_asia_chosen
+		capital_scope = {
+			add_province_modifier = {
+				name = anti_colonial_league_works
+				duration = 1825
+			}
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 14826
+		}
+	}
+	option = {
+		name = "Ближний Восток. Арабы устали от колониальной эксплуатации."
+                set_global_flag = anticolonial_league_middle_east_chosen
+		capital_scope = {
+			add_province_modifier = {
+				name = anti_colonial_league_works
+				duration = 1825
+			}
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 1482
+		}
+	}
+	option = {
+		name = "Восточная Азия. Китай уже давно проснулся, пора ему помочь."
+                set_global_flag = anticolonial_league_east_asia_chosen
+		capital_scope = {
+			add_province_modifier = {
+				name = anti_colonial_league_works
+				duration = 1825
+			}
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 14828
+		}
+	}
+	option = {
+		name = "Экваториальная Африка. Сердце тьмы должно увидеть свет!"
+                set_global_flag = anticolonial_league_equatorial_africa_chosen
+		capital_scope = {
+			add_province_modifier = {
+				name = anti_colonial_league_works
+				duration = 1825
+			}
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 14829
+		}
+	}
+	option = {
+		name = "Латинская Америка. Пора поставить Янки на место."
+                set_global_flag = anticolonial_league_latin_america_chosen
+		capital_scope = {
+			add_province_modifier = {
+				name = anti_colonial_league_works
+				duration = 1825
+			}
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 14830
+		}
+	}
+	option = {
+		name = "Магриб. Алжир, Марокко и Ливия получат нашу помощь."
+                set_global_flag = anticolonial_league_maghreb_chosen
+		capital_scope = {
+			add_province_modifier = {
+				name = anti_colonial_league_works
+				duration = 1825
+			}
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 14831
+		}
+	}
+	option = {
+		name = "Балканы. Эта пороховая бочка должна быть потушена."
+                set_global_flag = anticolonial_league_balkan_chosen
+		capital_scope = {
+			add_province_modifier = {
+				name = anti_colonial_league_works
+				duration = 1825
+			}
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 14832
+		}
+	}
+}
+country_event = {
+	id = 14825
+	title = "Антиколониальная лига решила поддержать Южную Азию."
+	desc = "Заседание Антиколониальной лиги $YEAR$ года решило оказать всемерную помощь повстанцам Южной Азии. Они надеются увидеть независимость Индии."
+	picture = "hindustan"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Предстоит борьба..."
+	}
+}
+country_event = {
+	id = 14826
+	title = "Антиколониальная лига решила помочь странам Юго-Восточной Азии."
+	desc = "Заседание Антиколониальной лиги $YEAR$ года решило оказать всемерную помощь повстанцам Юго-Восточной Азии. Они уверены, что вьетнамцы будут стойко биться за свободу до конца!"
+	picture = "french_indochina"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Предстоит борьба..."
+	}
+}
+country_event = {
+	id = 14827
+	title = "Антиколониальная лига решила оказать помощь Ближнему Востоку."
+	desc = "Заседание Антиколониальной лиги $YEAR$ года решило оказать всемерную помощь повстанцам Ближнего Востока. Регион по их мнению уже давно готов освободиться."
+	picture = "saud"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Предстоит борьба..."
+	}
+}
+country_event = {
+	id = 14828
+	title = "Антиколониальная лига решила поддерживать страны Восточной Азии."
+	desc = "Заседание Антиколониальной лиги $YEAR$ года решило оказать всемерную помощь повстанцам Восточной Азии. Спящий тигр должен проснуться, считают они."
+	picture = "chinese_revolution_army"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Предстоит борьба..."
+	}
+}
+country_event = {
+	id = 14829
+	title = "Антиколониальная лига сделала акцент на Экваториальной Африке."
+	desc = "Заседание Антиколониальной лиги $YEAR$ года решило оказать всемерную помощь повстанцам Экваториальной Африки. Жестокая колониальная эксплуатация Африки, по их мнению должна быть прекращена."
+	picture = "mahdi"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Предстоит борьба..."
+	}
+}
+country_event = {
+	id = 14830
+	title = "Антиколониальная лига решила поддерживать Латинскую Америку."
+	desc = "Заседание Антиколониальной лиги $YEAR$ года решило оказать всемерную помощь повстанцам Латинской Америки. Оккупация стран Латинской Америки незаконна по версии Антиколониальной лиги."
+	picture = "mexico_soldiers"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Предстоит борьба..."
+	}
+}
+country_event = {
+	id = 14831
+	title = "Антиколониальная лига решила оказать поддержку странам Магриба."
+	desc = "Заседание Антиколониальной лиги $YEAR$ года решило оказать всемерную помощь повстанцам Магриба. Колонильные владения являются по их мнению аморальными и должны быть освобождены."
+	picture = "saud"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Предстоит борьба..."
+	}
+}
+country_event = {
+	id = 14832
+	title = "Антиколониальная лига решила поддержать Балканские страны."
+	desc = "Заседание Антиколониальной лиги $YEAR$ года решило оказать всемерную помощь Балканским повстанцам. Балканские народы по их мнению уже многие столетия томятся в составе империй и должны быть освобождены."
+	picture = "balkan"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Предстоит борьба..."
+	}
+}
+country_event = {
+	id = 14833
+	title = "Деколонизация"
+	desc = "EVTDESC14833"
+	picture = "anticolonialism"
+	
+	trigger = {
+		government = proletarian_dictatorship
+		any_owned_province = {
+			NOT = {
+				is_core = THIS
+				terrain = tropical_island
+			}
+		}
+	}
+
+	option = {
+		name = "Все угнетённые обретут свободу!"
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ENG
+			}
+			secede_province = ENG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				RUS = { exists = yes }
+				is_core = RUS
+			}
+			secede_province = RUS
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = FRA
+			}
+			secede_province = FRA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				GER = { exists = yes }
+				is_core = GER
+			}
+			secede_province = GER
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				NGF = { exists = yes }
+				is_core = NGF
+			}
+			secede_province = NGF
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				PRU = { exists = yes }
+				is_core = PRU
+			}
+			secede_province = PRU
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ANH
+			}
+			secede_province = ANH
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BAD
+			}
+			secede_province = BAD
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BAV
+			}
+			secede_province = BAV
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BRA
+			}
+			secede_province = BRA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BRE
+			}
+			secede_province = BRE
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = COB
+			}
+			secede_province = COB
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = FRM
+			}
+			secede_province = FRM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = HAM
+			}
+			secede_province = HAM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = HAN
+			}
+			secede_province = HAN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = HES
+			}
+			secede_province = HES
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = HEK
+			}
+			secede_province = HEK
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = HOL
+			}
+			secede_province = HOL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LIP
+			}
+			secede_province = LIP
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LUB
+			}
+			secede_province = LUB
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LUX
+			}
+			secede_province = LUX
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MEC
+			}
+			secede_province = MEC
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MEI
+			}
+			secede_province = MEI
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = NAS
+			}
+			secede_province = NAS
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = OLD
+			}
+			secede_province = OLD
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SAX
+			}
+			secede_province = SAX
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = WEI
+			}
+			secede_province = WEI
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = WUR
+			}
+			secede_province = WUR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				ITA = { exists = yes }
+				is_core = ITA
+			}
+			secede_province = ITA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LOM
+			}
+			secede_province = LOM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LUC
+			}
+			secede_province = LUC
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MOD
+			}
+			secede_province = MOD
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = PAP
+			}
+			secede_province = PAP
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = PAR
+			}
+			secede_province = PAR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SIC
+			}
+			secede_province = SIC
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TUS
+			}
+			secede_province = TUS
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = VEN
+			}
+			secede_province = VEN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MLT
+			}
+			secede_province = MLT
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				KUK = { exists = yes }
+				is_core = KUK
+			}
+			secede_province = KUK
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				SGF = { exists = yes }
+				is_core = SGF
+			}
+			secede_province = SGF
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = AUS
+			}
+			secede_province = AUS
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = USA
+			}
+			secede_province = USA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = JAP
+			}
+			secede_province = JAP
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				SOV = { exists = yes }
+				is_core = SOV
+			}
+			secede_province = SOV
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = DEN
+			}
+			secede_province = DEN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = FIN
+			}
+			secede_province = FIN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = NOR
+			}
+			secede_province = NOR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ICL
+			}
+			secede_province = ICL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SWE
+			}
+			secede_province = SWE
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				SCA = { exists = yes }
+				is_core = SCA
+			}
+			secede_province = SCA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BEL
+			}
+			secede_province = BEL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = NET
+			}
+			secede_province = NET
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CAT
+			}
+			secede_province = CAT
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = IRE
+			}
+			secede_province = IRE
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = POR
+			}
+			secede_province = POR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SCO
+			}
+			secede_province = SCO
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SPA
+			}
+			secede_province = SPA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BOH
+			}
+			secede_province = BOH
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = KRA
+			}
+			secede_province = KRA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = HUN
+			}
+			secede_province = HUN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = EST
+			}
+			secede_province = EST
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LIT
+			}
+			secede_province = LIT
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LAT
+			}
+			secede_province = LAT
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = POL
+			}
+			secede_province = POL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SLV
+			}
+			secede_province = SLV
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SWI
+			}
+			secede_province = SWI
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = UKR
+			}
+			secede_province = UKR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CZH
+			}
+			secede_province = CZH
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BYE
+			}
+			secede_province = BYE
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				YUG = { exists = yes }
+				is_core = YUG
+			}
+			secede_province = YUG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ALB
+			}
+			secede_province = ALB
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BOS
+			}
+			secede_province = BOS
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BUL
+			}
+			secede_province = BUL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CRO
+			}
+			secede_province = CRO
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CYP
+			}
+			secede_province = CYP
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = GRE
+			}
+			secede_province = GRE
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MOL
+			}
+			secede_province = MOL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MON
+			}
+			secede_province = MON
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ROM
+			}
+			secede_province = ROM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SER
+			}
+			secede_province = SER
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SLO
+			}
+			secede_province = SLO
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TUR
+			}
+			secede_province = TUR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = WAL
+			}
+			secede_province = WAL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LIV
+			}
+			secede_province = LIV
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ALD
+			}
+			secede_province = ALD
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CNG
+			}
+			secede_province = CNG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = EGY
+			}
+			secede_province = EGY
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ETH
+			}
+			secede_province = ETH
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MAD
+			}
+			secede_province = MAD
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LIB
+			}
+			secede_province = LIB
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MOR
+			}
+			secede_province = MOR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SAF
+			}
+			secede_province = SAF
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ORA
+			}
+			secede_province = ORA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TRN
+			}
+			secede_province = TRN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ZUL
+			}
+			secede_province = ZUL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SOK
+			}
+			secede_province = SOK
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = RHO
+			}
+			secede_province = RHO
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TUN
+			}
+			secede_province = TUN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ANG
+			}
+			secede_province = ANG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BEN
+			}
+			secede_province = BEN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BRD
+			}
+			secede_province = BRD
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = UGA
+			}
+			secede_province = UGA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CAR
+			}
+			secede_province = CAR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CGO
+			}
+			secede_province = CGO
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CHD
+			}
+			secede_province = CHD
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CMR
+			}
+			secede_province = CMR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ERT
+			}
+			secede_province = ERT
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = GAB
+			}
+			secede_province = GAB
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = GMB
+			}
+			secede_province = GMB
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = GNE
+			}
+			secede_province = GNE
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = IVC
+			}
+			secede_province = IVC
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = KNY
+			}
+			secede_province = KNY
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MLI
+			}
+			secede_province = MLI
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MLW
+			}
+			secede_province = MLW
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MOZ
+			}
+			secede_province = MOZ
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = NGR
+			}
+			secede_province = NGR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = NIG
+			}
+			secede_province = NIG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = RWA
+			}
+			secede_province = RWA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SLE
+			}
+			secede_province = SLE
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SNG
+			}
+			secede_province = SNG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SOM
+			}
+			secede_province = SOM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TNZ
+			}
+			secede_province = TNZ
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TOG
+			}
+			secede_province = TOG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TSW
+			}
+			secede_province = TSW
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ZAM
+			}
+			secede_province = ZAM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MAU
+			}
+			secede_province = MAU
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = NAM
+			}
+			secede_province = NAM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = RHV
+			}
+			secede_province = RHV
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = GAN
+			}
+			secede_province = GAN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = GBS
+			}
+			secede_province = GBS
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = DJI
+			}
+			secede_province = DJI
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SUD
+			}
+			secede_province = SUD
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = DAG
+			}
+			secede_province = DAG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CIR
+			}
+			secede_province = CIR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = KUR
+			}
+			secede_province = KUR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ABU
+			}
+			secede_province = ABU
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = AFG
+			}
+			secede_province = AFG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ARM
+			}
+			secede_province = ARM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = AZB
+			}
+			secede_province = AZB
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = GEO
+			}
+			secede_province = GEO
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = IRQ
+			}
+			secede_province = IRQ
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = OMA
+			}
+			secede_province = OMA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = PER
+			}
+			secede_province = PER
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = YEM
+			}
+			secede_province = YEM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = JOR
+			}
+			secede_province = JOR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LBN
+			}
+			secede_province = LBN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = PLS
+			}
+			secede_province = PLS
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = KAZ
+			}
+			secede_province = KAZ
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = KYR
+			}
+			secede_province = KYR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TAJ
+			}
+			secede_province = TAJ
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TKM
+			}
+			secede_province = TKM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = UZB
+			}
+			secede_province = UZB
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SAU
+			}
+			secede_province = SAU
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SYR
+			}
+			secede_province = SYR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = HND
+			}
+			secede_province = HND
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BNG
+			}
+			secede_province = BNG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = PAK
+			}
+			secede_province = PAK
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SRI
+			}
+			secede_province = SRI
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = NEP
+			}
+			secede_province = NEP
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BHU
+			}
+			secede_province = BHU
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BRU
+			}
+			secede_province = BRU
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BUR
+			}
+			secede_province = BUR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CAM
+			}
+			secede_province = CAM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = DAI
+			}
+			secede_province = DAI
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = KOR
+			}
+			secede_province = KOR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = LUA
+			}
+			secede_province = LUA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SIA
+			}
+			secede_province = SIA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TIB
+			}
+			secede_province = TIB
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MGL
+			}
+			secede_province = MGL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MCK
+			}
+			secede_province = MCK
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CHI
+			}
+			secede_province = CHI
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = INO
+			}
+			secede_province = INO
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = PHI
+			}
+			secede_province = PHI
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MLY
+			}
+			secede_province = MLY
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = RYU
+			}
+			secede_province = RYU
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = TKG
+			}
+			secede_province = TKG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CAN
+			}
+			secede_province = CAN
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = COS
+			}
+			secede_province = COS
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CUB
+			}
+			secede_province = CUB
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ELS
+			}
+			secede_province = ELS
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = GUA
+			}
+			secede_province = GUA
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = HAI
+			}
+			secede_province = HAI
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = HAW
+			}
+			secede_province = HAW
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = MEX
+			}
+			secede_province = MEX
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = HON
+			}
+			secede_province = HON
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = NIC
+			}
+			secede_province = NIC
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = PNM
+			}
+			secede_province = PNM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ARG
+			}
+			secede_province = ARG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BOL
+			}
+			secede_province = BOL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = BRZ
+			}
+			secede_province = BRZ
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CHL
+			}
+			secede_province = CHL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = CLM
+			}
+			secede_province = CLM
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = ECU
+			}
+			secede_province = ECU
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = GUY
+			}
+			secede_province = GUY
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = PEU
+			}
+			secede_province = PEU
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = PRG
+			}
+			secede_province = PRG
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = SUR
+			}
+			secede_province = SUR
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = URU
+			}
+			secede_province = URU
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = VNZ
+			}
+			secede_province = VNZ
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = AST
+			}
+			secede_province = AST
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = NZL
+			}
+			secede_province = NZL
+		}
+		any_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				is_core = PAU
+			}
+			secede_province = PAU
+		}
+	}
+}

@@ -1,0 +1,16 @@
+owner = AUS
+controller = AUS
+add_core = AUS
+add_core = BOH
+add_core = CZH
+trade_goods = iron_ore
+terrain = urban
+life_rating = 35
+state_building = { level = 1 building = iron_mine_5 upgrade = yes }
+state_building = { level = 1 building = coke_oven upgrade = yes }
+state_building = { level = 1 building = ironworks upgrade = yes }
+state_building = { level = 1 building = steel_factory upgrade = yes }
+state_building = { level = 1 building = coal_energy_factory upgrade = yes }
+state_building = { level = 1 building = cement_factory upgrade = yes }
+state_building = { level = 1 building = building_materials_factory upgrade = yes }
+state_building = { level = 1 building = bakery upgrade = yes }

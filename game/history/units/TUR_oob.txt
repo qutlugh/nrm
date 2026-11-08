@@ -1,0 +1,228 @@
+#Sphere of Influence
+CIR = {
+	value = 200		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 100
+}
+DAG = {
+	value = 200		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 100
+}
+PER = {
+	value = -200		#relation
+	level = 1		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 0
+}
+EGY = {
+	value = -200		#relation
+	level = 1		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 0
+}
+GRE = {
+	value = -200		#relation
+	level = 1		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 0
+}
+TUN = {
+	value = 200		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 50
+}
+MON = {
+	value = -200		#relation
+	level = 1		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 0
+}
+SER = {
+	value = -100		#relation
+	level = 2		#3=cordial, 4 = friendly, 5 = sphere
+	influence_value = 0
+	military_access = yes
+}
+army = {
+	name = "Army of Anatolia"
+	location = 876
+	regiment = {
+		name= "5. Piyade Tümeni"
+		type = infantry
+		home = 863
+	}
+	regiment = {
+		name= "6. Piyade Tümeni"
+		type = infantry
+		home = 863
+	}
+	regiment = {
+		name= "7. Piyade Tümeni"
+		type = infantry
+		home = 873
+	}
+	regiment = {
+		name= "8. Piyade Tümeni"
+		type = infantry
+		home = 882
+	}
+	regiment = {
+		name= "1. Redif Kars"
+		type = infantry
+		home = 882
+	}
+	regiment = {
+		name= "2. Redif Kars"
+		type = infantry
+		home = 890
+	}
+}
+army = {
+	name = "Army of Ottoman Empire"
+	location = 828
+	regiment = {
+		name= "5. Piyade Tümeni"
+		type = infantry
+		home = 893
+	}
+	regiment = {
+		name= "6. Piyade Tümeni"
+		type = infantry
+		home = 893
+	}
+	regiment = {
+		name= "7. Piyade Tümeni"
+		type = infantry
+		home = 894
+	}
+	regiment = {
+		name= "8. Piyade Tümeni"
+		type = infantry
+		home = 894
+	}
+	regiment = {
+		name= "1. Redif Kars"
+		type = infantry
+		home = 894
+	}
+	regiment = {
+		name= "2. Redif Kars"
+		type = infantry
+		home = 674
+	}
+}
+army = {
+	name = "Balkan army"
+	location = 809
+	regiment = {
+		name= "5. Piyade Tümeni"
+		type = infantry
+		home = 674
+	}
+	regiment = {
+		name= "7. Piyade Tümeni"
+		type = infantry
+		home = 806
+	}
+	regiment = {
+		name= "8. Piyade Tümeni"
+		type = infantry
+		home = 806
+	}
+	regiment = {
+		name= "1. Redif Kars"
+		type = infantry
+		home = 809
+	}
+	regiment = {
+		name= "2. Redif Kars"
+		type = infantry
+		home = 809
+	}
+}
+army = {
+	name = "Caucasus army"
+	location = 1049
+	regiment = {
+		name= "5. Piyade Tümeni"
+		type = infantry
+		home = 832
+	}
+	regiment = {
+		name= "6. Piyade Tümeni"
+		type = infantry
+		home = 860
+	}
+	regiment = {
+		name= "7. Piyade Tümeni"
+		type = infantry
+		home = 860
+	}
+	regiment = {
+		name= "8. Piyade Tümeni"
+		type = infantry
+		home = 809
+	}
+}
+navy = {
+	name = "Ottoman Navy"
+	location = 883
+
+	ship = {
+		name= "Tevfik Nyuma"
+		type = manowar
+	}
+	ship = {
+		name= "Bisharet Nyuma"
+		type = manowar
+	}
+	ship = {
+		name= "Killid i Barhi"
+		type = manowar
+	}
+	ship = {
+		name= "Melek i Barhi"
+		type = frigate
+	}
+	ship = {
+		name= "Sayyad i Barhi"
+		type = frigate
+	}
+	ship = {
+		name= "Gulbang i Nusret"
+		type = frigate
+	}
+	ship = {
+		name= "Jebel Andaz"
+		type = frigate
+	}
+	ship = {
+		name= "Iskenderiya"
+		type = frigate
+	}
+	ship = {
+		name= "Badere i Zaffar"
+		type = frigate
+	}
+	ship = {
+		name= "Mahubey Subham"
+		type = frigate
+	}
+	ship = {
+		name= "1st Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "2nd Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+	ship = {
+		name= "3rd Transport Flotilla"
+		type = clipper_transport
+	}
+}

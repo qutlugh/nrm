@@ -1,0 +1,5 @@
+owner = TKM
+controller = TKM
+add_core = TKM
+trade_goods = cotton
+life_rating = 40

@@ -1,0 +1,1521 @@
+#From;To;Type;Through;Data;Comment
+
+# Hawaii
+2226;2218;sea;3150;0;Kauai-Oahu
+2218;2223;sea;3150;0;Oahu-Maui
+2223;658;sea;3150;0;Maui-Hawaii
+
+# American Straits
+13;14;sea;3011;0;Vancouver Crossing
+14;78;sea;3011;0;Vancouver Crossing
+62;75;sea;2946;0;Straits of Belle Isle
+68;70;sea;2944;0;Cabot Strait
+2399;2400;land;2399;0;1st Argentinean strait
+2399;2400;land;2400;0;2nd Argentinean strait
+2334;2335;land;2335;0;1st Chilean strait
+2334;2335;land;2334;0;2nd Chilean strait
+
+# African Straits
+2036;2048;sea;2901;0;Zanzibar Strait
+
+# European Straits
+385;375;sea;2722;0;Netherlands
+254;271;sea;2737;0;Irish Strait
+334;372;land;334;0;Eresund
+334;372;land;372;0;Eresund
+353;349;land;353;0;Ezel
+353;349;land;349;0;Reval
+353;358;sea;2709;0;Strait of Riga
+372;373;land;372;0;Fyn-Sjaelland
+372;373;land;373;0;Fyn-Sjaelland
+371;373;land;371;0;Fyn-Jylland
+371;373;land;371;0;Fyn-Jylland
+375;385;sea;2722;0;Bay of Holland
+473;766;sea;2751;0;Sassari Strait
+859;865;land;859;0;Dardanelles Strait
+859;865;land;865;0;Dardanelles Strait
+860;861;land;860;0;Golden Horn
+860;861;land;861;0;Golden Horn
+759;763;land;759;0;Strait of Messina
+759;763;land;763;0;Strait of Messina
+267;2229;land;267;0;Scapa Flow 1
+267;2229;land;2229;0;Scapa Flow 2
+
+# Indonesian Straits
+1162;1165;sea;2788;0;Bahrain Strait
+1403;1413;sea;2805;0;Sunda Strait
+1420;1438;land;1420;0;Bali Strait 1
+1420;1438;land;1438;0;Bali Strait 2
+1438;1442;sea;2811;0;Lombok Strait
+1442;1440;sea;2811;0;Sumbawa Strait
+1404;1399;land;1404;0;Palembang Strait 1
+1404;1399;land;1399;0;Palembang Strait 2
+1440;1439;sea;2808;0;Flores Strait
+1439;1441;sea;2809;0;Sumba Strait
+1444;1446;sea;2809;0;Dili Strait
+1444;1445;sea;2809;0;Kaupeng Strait
+1445;1443;sea;2809;0;Roti Strait
+1418;1421;land;1418;0;Madura Strait 1
+1418;1421;land;1421;0;Madura Strait 2
+1439;1444;sea;2809;0;Alor Strait
+
+# Japan, China & Korea
+1088;1089;sea;2839;0;Kuril islands
+1640;1660;land;1640;0;Fukuoka Strait
+1640;1660;land;1660;0;Fukuoka Strait
+1642;1672;land;1642;0;Hakodate Strait
+1642;1672;land;1672;0;Hakodate Strait
+1664;1666;land;1664;0;Matsuyama Strait
+1664;1666;land;1666;0;Matsuyama Strait
+1667;1655;land;1667;0;Setto Strait
+1667;1655;land;1655;0;Setto Strait
+1638;1666;land;1666;0;Hiroshima Strait
+1638;1666;land;1638;0;Hiroshima Strait
+1495;1499;land;1495;0;First Hainan Strait
+1495;1499;land;1499;0;Second Hainan Strait
+1493;1493;sea;2824;0;Macao
+1493;1496;sea;2824;0;Hong Kong
+
+# Philippines
+1455;1458;sea;2848;0;Isla Verde passages
+1458;1459;sea;2848;0;Mindoro Bay
+1457;1461;sea;2849;0;Tacloban Strait
+1461;2565;sea;2850;0;Cebu Strait
+1461;1463;sea;2850;0;Surigao Strait
+2565;1460;sea;1460;0;Tanon Strait
+
+# Oceanian Straits
+2512;2516;sea;2876;0;Cook Strait #NZ
+2512;2516;sea;2881;0;Cook Strait #NZ
+2537;1531;sea;2858;0;Villan Strait #New Britain-New Ireland
+
+# Tibet
+1326;1589;impassable;0;0;scary mountain
+1326;1592;impassable;0;0;scary mountain
+1329;1589;impassable;0;0;scary mountain
+1329;1590;impassable;0;0;scary mountain
+1329;1590;impassable;0;0;scary mountain
+1238;1592;impassable;0;0;scary mountain
+1244;1592;impassable;0;0;scary mountain
+1235;1592;impassable;0;0;scary mountain
+1226;1592;impassable;0;0;scary mountain
+1327;1592;impassable;0;0;scary mountain
+1328;1592;impassable;0;0;scary mountain
+1225;1594;impassable;0;0;scary mountain
+1226;1594;impassable;0;0;scary mountain
+1210;1594;impassable;0;0;scary mountain
+1328;1589;impassable;0;0;scary mountain
+1590;1341;impassable;0;0;scary mountain
+
+# Caucasus
+1051;1095;impassable;0;0;scary mountain
+1051;1092;impassable;0;0;scary mountain
+1056;1092;impassable;0;0;scary mountain
+1054;1092;impassable;0;0;scary mountain
+1054;1091;impassable;0;0;scary mountain
+1055;1091;impassable;0;0;scary mountain
+1053;1091;impassable;0;0;scary mountain
+1052;1104;impassable;0;0;scary mountain
+1052;1091;impassable;0;0;scary mountain
+1107;1112;impassable;0;0;scary mountain
+1106;1112;impassable;0;0;scary mountain
+1100;1112;impassable;0;0;scary mountain
+1100;1109;impassable;0;0;scary mountain
+
+# Iran - Turkmenistan
+1116;1205;impassable;0;0;scary mountain
+1150;1205;impassable;0;0;scary mountain
+1150;1204;impassable;0;0;scary mountain
+
+# Carpathian mountains
+661;662;impassable;0;0;scary mountain
+661;663;impassable;0;0;scary mountain
+660;663;impassable;0;0;scary mountain
+660;672;impassable;0;0;scary mountain
+660;668;impassable;0;0;scary mountain
+660;667;impassable;0;0;scary mountain
+
+# Alpine Mountains
+609;465;impassable;0;0;scary mountain
+609;722;impassable;0;0;scary mountain
+607;465;impassable;0;0;scary mountain
+607;433;impassable;0;0;scary mountain
+607;432;impassable;0;0;scary mountain
+605;722;impassable;0;0;scary mountain
+606;722;impassable;0;0;scary mountain
+2568;722;impassable;0;0;scary mountain
+2568;726;impassable;0;0;scary mountain
+2568;727;impassable;0;0;scary mountain
+611;727;impassable;0;0;scary mountain
+611;614;impassable;0;0;scary mountain
+611;735;impassable;0;0;scary mountain
+603;614;impassable;0;0;scary mountain
+603;587;impassable;0;0;scary mountain
+604;587;impassable;0;0;scary mountain
+604;410;impassable;0;0;scary mountain
+604;432;impassable;0;0;scary mountain
+608;432;impassable;0;0;scary mountain
+721;465;impassable;0;0;scary mountain
+
+# Iran
+1122;1124;impassable;0;0;scary mountain
+1122;1125;impassable;0;0;scary mountain
+1128;1125;impassable;0;0;scary mountain
+1128;1129;impassable;0;0;scary mountain
+1127;1129;impassable;0;0;scary mountain
+1127;1130;impassable;0;0;scary mountain
+1137;1130;impassable;0;0;scary mountain
+1137;1139;impassable;0;0;scary mountain
+1139;1135;impassable;0;0;scary mountain
+1139;1141;impassable;0;0;scary mountain
+
+# Andean mountains
+2334;2399;impassable;0;0;scary mountain
+2335;2400;impassable;0;0;scary mountain
+2333;2399;impassable;0;0;scary mountain
+2333;2398;impassable;0;0;scary mountain
+2333;2397;impassable;0;0;scary mountain
+2332;2397;impassable;0;0;scary mountain
+2332;2394;impassable;0;0;scary mountain
+2332;2391;impassable;0;0;scary mountain
+2328;2391;impassable;0;0;scary mountain
+2329;2391;impassable;0;0;scary mountain
+2331;2391;impassable;0;0;scary mountain
+2327;2391;impassable;0;0;scary mountain
+2327;2390;impassable;0;0;scary mountain
+2324;2390;impassable;0;0;scary mountain
+2324;2388;impassable;0;0;scary mountain
+2324;2389;impassable;0;0;scary mountain
+2326;2388;impassable;0;0;scary mountain
+2323;2388;impassable;0;0;scary mountain
+2322;2388;impassable;0;0;scary mountain
+2322;2385;impassable;0;0;scary mountain
+2322;2375;impassable;0;0;scary mountain
+2305;2368;impassable;0;0;scary mountain
+2305;2370;impassable;0;0;scary mountain
+2314;2315;impassable;0;0;scary mountain
+2314;2371;impassable;0;0;scary mountain
+2314;2370;impassable;0;0;scary mountain
+2314;2313;impassable;0;0;scary mountain
+2312;2313;impassable;0;0;scary mountain
+2312;2311;impassable;0;0;scary mountain
+2303;2321;impassable;0;0;scary mountain
+2301;2321;impassable;0;0;scary mountain
+2301;2549;impassable;0;0;scary mountain
+2300;2549;impassable;0;0;scary mountain
+2300;2286;impassable;0;0;scary mountain
+
+# South-East Asia
+1341;1602;impassable;0;0;scary mountain
+1342;1602;impassable;0;0;scary mountain
+1340;1602;impassable;0;0;scary mountain
+1338;1602;impassable;0;0;scary mountain
+1338;1603;impassable;0;0;scary mountain
+1356;1603;impassable;0;0;scary mountain
+1372;1603;impassable;0;0;scary mountain
+1371;1603;impassable;0;0;scary mountain
+1371;1502;impassable;0;0;scary mountain
+1357;1358;impassable;0;0;scary mountain
+1361;1358;impassable;0;0;scary mountain
+1361;1359;impassable;0;0;scary mountain
+
+# Kashgar
+1210;1594;impassable;0;0;scary mountain
+1208;1594;impassable;0;0;scary mountain
+1190;1594;impassable;0;0;scary mountain
+1190;1597;impassable;0;0;scary mountain
+1186;1597;impassable;0;0;scary mountain
+1186;1595;impassable;0;0;scary mountain
+1188;1595;impassable;0;0;scary mountain
+
+# Pyrenees
+496;460;impassable;0;0;scary mountain
+499;457;impassable;0;0;scary mountain
+500;460;impassable;0;0;scary mountain
+
+# Kashmir
+1210;1225;impassable;0;0;scary mountain
+1210;1223;impassable;0;0;scary mountain
+1210;1208;impassable;0;0;scary mountain
+1210;1207;impassable;0;0;scary mountain
+1211;1207;impassable;0;0;scary mountain
+1216;1223;impassable;0;0;scary mountain
+1216;1225;impassable;0;0;scary mountain
+1216;1218;impassable;0;0;scary mountain
+1206;1212;impassable;0;0;scary mountain
+1206;1212;impassable;0;0;scary mountain
+1147;1212;impassable;0;0;scary mountain
+1148;1212;impassable;0;0;scary mountain
+1217;1218;impassable;0;0;scary mountain
+
+#Kalat
+1220;1215;impassable;0;0;scary mountain
+1220;1214;impassable;0;0;scary mountain
+1220;1144;impassable;0;0;scary mountain
+1221;1144;impassable;0;0;scary mountain
+1222;1144;impassable;0;0;scary mountain
+1222;1146;impassable;0;0;scary mountain
+
+# The canals
+2711;2721;canal;369;1;Kiel Canal
+2781;2769;canal;1755;2;Suez Canal
+2968;3001;canal;1723;3;Panama Canal
+
+# Straits
+2238;2711;impassable;0;0;dutch straits #Dutch straits
+2238;2711;canal;372;4;dutch straits
+2746;2747;impassable;0;0;gibraltar #Gibraltar
+2746;826;canal;517;5;gibraltar
+2773;2774;impassable;0;0;bosfor #Bosfor
+2773;2774;canal;860;6;bosfor
+2773;2772;impassable;0;0;dardanelles #Dardanelles
+2773;2772;canal;859;7;dardanelles
+
+# Landing restrictions
+# Great lakes & Caribbean sea
+3116;51;impassable;0;0;can't land here
+3116;177;impassable;0;0;can't land here
+3116;158;impassable;0;0;can't land here
+3116;160;impassable;0;0;can't land here
+3115;177;impassable;0;0;can't land here
+3115;161;impassable;0;0;can't land here
+3115;159;impassable;0;0;can't land here
+3115;171;impassable;0;0;can't land here
+3115;174;impassable;0;0;can't land here
+3115;176;impassable;0;0;can't land here
+3114;177;impassable;0;0;can't land here
+3114;176;impassable;0;0;can't land here
+3114;175;impassable;0;0;can't land here
+3114;173;impassable;0;0;can't land here
+3114;54;impassable;0;0;can't land here
+3114;53;impassable;0;0;can't land here
+3114;52;impassable;0;0;can't land here
+3114;51;impassable;0;0;can't land here
+3113;54;impassable;0;0;can't land here
+3113;55;impassable;0;0;can't land here
+3113;180;impassable;0;0;can't land here
+3113;228;impassable;0;0;can't land here
+3113;236;impassable;0;0;can't land here
+3112;55;impassable;0;0;can't land here
+3112;56;impassable;0;0;can't land here
+3112;236;impassable;0;0;can't land here
+3112;237;impassable;0;0;can't land here
+3112;238;impassable;0;0;can't land here
+3112;239;impassable;0;0;can't land here
+2971;2210;impassable;0;0;can't land here
+2971;2211;impassable;0;0;can't land here
+2971;2212;impassable;0;0;can't land here
+2965;2209;impassable;0;0;can't land here
+2958;200;impassable;0;0;can't land here
+2958;2209;impassable;0;0;can't land here
+2958;2210;impassable;0;0;can't land here
+2978;2210;impassable;0;0;can't land here
+2978;2211;impassable;0;0;can't land here
+2978;2212;impassable;0;0;can't land here
+2977;2212;impassable;0;0;can't land here
+2977;2214;impassable;0;0;can't land here
+2974;2214;impassable;0;0;can't land here
+2979;2214;impassable;0;0;can't land here
+2977;2215;impassable;0;0;can't land here
+2977;2216;impassable;0;0;can't land here
+2969;2215;impassable;0;0;can't land here
+2974;2216;impassable;0;0;can't land here
+# North & South America
+3001;2204;impassable;0;0;can't land here
+3001;2208;impassable;0;0;can't land here
+2953;223;impassable;0;0;can't land here
+2953;229;impassable;0;0;can't land here
+3015;2631;impassable;0;0;can't land here
+3014;2631;impassable;0;0;can't land here
+3014;5;impassable;0;0;can't land here
+3014;4;impassable;0;0;can't land here
+3133;5;impassable;0;0;can't land here
+3133;4;impassable;0;0;can't land here
+3130;5;impassable;0;0;can't land here
+3134;4;impassable;0;0;can't land here
+3135;4;impassable;0;0;can't land here
+3131;4;impassable;0;0;can't land here
+3132;4;impassable;0;0;can't land here
+3135;3;impassable;0;0;can't land here
+3013;3;impassable;0;0;can't land here
+3013;4;impassable;0;0;can't land here
+3012;2630;impassable;0;0;can't land here
+3012;2;impassable;0;0;can't land here
+3012;1;impassable;0;0;can't land here
+3012;15;impassable;0;0;can't land here
+3011;2576;impassable;0;0;can't land here
+3011;15;impassable;0;0;can't land here
+3011;14;impassable;0;0;can't land here
+3010;81;impassable;0;0;can't land here
+3010;2127;impassable;0;0;can't land here
+3010;85;impassable;0;0;can't land here
+3009;2336;impassable;0;0;can't land here
+3009;2552;impassable;0;0;can't land here
+3009;84;impassable;0;0;can't land here
+3009;87;impassable;0;0;can't land here
+3009;2553;impassable;0;0;can't land here
+3009;89;impassable;0;0;can't land here
+3008;89;impassable;0;0;can't land here
+3008;90;impassable;0;0;can't land here
+3008;2139;impassable;0;0;can't land here
+3007;2139;impassable;0;0;can't land here
+3007;2138;impassable;0;0;can't land here
+3006;2139;impassable;0;0;can't land here
+3006;2138;impassable;0;0;can't land here
+3006;2140;impassable;0;0;can't land here
+3006;2137;impassable;0;0;can't land here
+3006;2157;impassable;0;0;can't land here
+3006;2161;impassable;0;0;can't land here
+3005;2161;impassable;0;0;can't land here
+3005;2169;impassable;0;0;can't land here
+3005;2171;impassable;0;0;can't land here
+3004;2171;impassable;0;0;can't land here
+3004;2178;impassable;0;0;can't land here
+3003;2182;impassable;0;0;can't land here
+3003;2187;impassable;0;0;can't land here
+3003;2191;impassable;0;0;can't land here
+3002;2192;impassable;0;0;can't land here
+3002;2197;impassable;0;0;can't land here
+3002;2198;impassable;0;0;can't land here
+3002;2202;impassable;0;0;can't land here
+3001;2205;impassable;0;0;can't land here
+3001;2206;impassable;0;0;can't land here
+3001;2004;impassable;0;0;can't land here
+3001;2008;impassable;0;0;can't land here
+3001;2253;impassable;0;0;can't land here
+3001;2258;impassable;0;0;can't land here
+3000;2281;impassable;0;0;can't land here
+2999;2291;impassable;0;0;can't land here
+2998;2292;impassable;0;0;can't land here
+2998;2298;impassable;0;0;can't land here
+2998;2297;impassable;0;0;can't land here
+2997;2304;impassable;0;0;can't land here
+2997;2308;impassable;0;0;can't land here
+2997;2307;impassable;0;0;can't land here
+2997;2309;impassable;0;0;can't land here
+2997;2305;impassable;0;0;can't land here
+2996;2322;impassable;0;0;can't land here
+2996;2323;impassable;0;0;can't land here
+2996;2326;impassable;0;0;can't land here
+2995;2326;impassable;0;0;can't land here
+2995;2329;impassable;0;0;can't land here
+2994;2329;impassable;0;0;can't land here
+2994;2328;impassable;0;0;can't land here
+2994;2333;impassable;0;0;can't land here
+2993;2333;impassable;0;0;can't land here
+2993;2334;impassable;0;0;can't land here
+686;2334;impassable;0;0;can't land here
+2992;2335;impassable;0;0;can't land here
+2992;2400;impassable;0;0;can't land here
+2992;2334;impassable;0;0;can't land here
+2992;2399;impassable;0;0;can't land here
+2991;2399;impassable;0;0;can't land here
+2990;2396;impassable;0;0;can't land here
+2990;2398;impassable;0;0;can't land here
+2990;2355;impassable;0;0;can't land here
+2990;2354;impassable;0;0;can't land here
+2990;2352;impassable;0;0;can't land here
+2989;2352;impassable;0;0;can't land here
+2989;2351;impassable;0;0;can't land here
+2989;2359;impassable;0;0;can't land here
+2989;2345;impassable;0;0;can't land here
+2989;2347;impassable;0;0;can't land here
+2988;2347;impassable;0;0;can't land here
+2988;2464;impassable;0;0;can't land here
+2988;2461;impassable;0;0;can't land here
+2987;2461;impassable;0;0;can't land here
+2987;2455;impassable;0;0;can't land here
+2987;2451;impassable;0;0;can't land here
+2987;2448;impassable;0;0;can't land here
+2986;2448;impassable;0;0;can't land here
+2986;2449;impassable;0;0;can't land here
+2986;2439;impassable;0;0;can't land here
+2985;2439;impassable;0;0;can't land here
+2985;2435;impassable;0;0;can't land here
+2985;2434;impassable;0;0;can't land here
+2984;2434;impassable;0;0;can't land here
+2984;2428;impassable;0;0;can't land here
+2984;2431;impassable;0;0;can't land here
+2983;2431;impassable;0;0;can't land here
+2983;2426;impassable;0;0;can't land here
+2983;2424;impassable;0;0;can't land here
+2982;2415;impassable;0;0;can't land here
+2982;2414;impassable;0;0;can't land here
+2981;2414;impassable;0;0;can't land here
+2980;2243;impassable;0;0;can't land here
+2980;2276;impassable;0;0;can't land here
+2975;2269;impassable;0;0;can't land here
+2973;2269;impassable;0;0;can't land here
+2973;2267;impassable;0;0;can't land here
+2972;2268;impassable;0;0;can't land here
+2972;2272;impassable;0;0;can't land here
+2972;2271;impassable;0;0;can't land here
+2972;2255;impassable;0;0;can't land here
+2968;2255;impassable;0;0;can't land here
+2968;2253;impassable;0;0;can't land here
+2968;2208;impassable;0;0;can't land here
+2968;2206;impassable;0;0;can't land here
+2968;2205;impassable;0;0;can't land here
+2968;2203;impassable;0;0;can't land here
+2968;2198;impassable;0;0;can't land here
+2968;2200;impassable;0;0;can't land here
+2967;2200;impassable;0;0;can't land here
+2967;2196;impassable;0;0;can't land here
+2966;2195;impassable;0;0;can't land here
+2966;2194;impassable;0;0;can't land here
+2966;2188;impassable;0;0;can't land here
+2966;2190;impassable;0;0;can't land here
+2966;2185;impassable;0;0;can't land here
+2965;2185;impassable;0;0;can't land here
+2965;2183;impassable;0;0;can't land here
+2964;2183;impassable;0;0;can't land here
+2963;2183;impassable;0;0;can't land here
+2963;2165;impassable;0;0;can't land here
+2963;2164;impassable;0;0;can't land here
+2962;2163;impassable;0;0;can't land here
+2962;2149;impassable;0;0;can't land here
+2961;2149;impassable;0;0;can't land here
+2961;138;impassable;0;0;can't land here
+2961;137;impassable;0;0;can't land here
+2961;133;impassable;0;0;can't land here
+2961;141;impassable;0;0;can't land here
+2960;141;impassable;0;0;can't land here
+2960;140;impassable;0;0;can't land here
+2960;194;impassable;0;0;can't land here
+2960;197;impassable;0;0;can't land here
+2960;198;impassable;0;0;can't land here
+2959;198;impassable;0;0;can't land here
+2959;199;impassable;0;0;can't land here
+2959;200;impassable;0;0;can't land here
+2956;200;impassable;0;0;can't land here
+2956;199;impassable;0;0;can't land here
+2955;199;impassable;0;0;can't land here
+2955;204;impassable;0;0;can't land here
+2955;210;impassable;0;0;can't land here
+2954;210;impassable;0;0;can't land here
+2954;207;impassable;0;0;can't land here
+2954;213;impassable;0;0;can't land here
+2954;220;impassable;0;0;can't land here
+2954;219;impassable;0;0;can't land here
+2954;212;impassable;0;0;can't land here
+2954;222;impassable;0;0;can't land here
+2953;231;impassable;0;0;can't land here
+2953;232;impassable;0;0;can't land here
+2953;241;impassable;0;0;can't land here
+2953;3229;impassable;0;0;can't land here
+2953;242;impassable;0;0;can't land here
+2952;242;impassable;0;0;can't land here
+2952;244;impassable;0;0;can't land here
+2952;249;impassable;0;0;can't land here
+2945;249;impassable;0;0;can't land here
+2945;68;impassable;0;0;can't land here
+2945;72;impassable;0;0;can't land here
+3022;71;impassable;0;0;can't land here
+3022;72;impassable;0;0;can't land here
+2944;73;impassable;0;0;can't land here
+2944;72;impassable;0;0;can't land here
+2944;74;impassable;0;0;can't land here
+2944;68;impassable;0;0;can't land here
+2944;75;impassable;0;0;can't land here
+2944;69;impassable;0;0;can't land here
+2943;69;impassable;0;0;can't land here
+2943;67;impassable;0;0;can't land here
+2943;61;impassable;0;0;can't land here
+2943;62;impassable;0;0;can't land here
+2946;62;impassable;0;0;can't land here
+2947;74;impassable;0;0;can't land here
+2948;74;impassable;0;0;can't land here
+2948;75;impassable;0;0;can't land here
+2936;2625;impassable;0;0;can't land here
+2936;76;impassable;0;0;can't land here
+2937;45;impassable;0;0;can't land here
+2938;2627;impassable;0;0;can't land here
+2938;2592;impassable;0;0;can't land here
+2942;44;impassable;0;0;can't land here
+2941;2592;impassable;0;0;can't land here
+2941;2626;impassable;0;0;can't land here
+2941;44;impassable;0;0;can't land here
+2939;2626;impassable;0;0;can't land here
+2939;2593;impassable;0;0;can't land here
+2939;60;impassable;0;0;can't land here
+2939;2628;impassable;0;0;can't land here
+2939;48;impassable;0;0;can't land here
+2939;47;impassable;0;0;can't land here
+2940;47;impassable;0;0;can't land here
+2940;37;impassable;0;0;can't land here
+2940;2595;impassable;0;0;can't land here
+2940;43;impassable;0;0;can't land here
+2940;44;impassable;0;0;can't land here
+# Japan
+2829;1664;impassable;0;0;can't land here
+2829;1662;impassable;0;0;can't land here
+2829;1660;impassable;0;0;can't land here
+2829;1640;impassable;0;0;can't land here
+2829;1641;impassable;0;0;can't land here
+2843;1662;impassable;0;0;can't land here
+2843;1663;impassable;0;0;can't land here
+2843;1664;impassable;0;0;can't land here
+2843;1660;impassable;0;0;can't land here
+2843;1666;impassable;0;0;can't land here
+2843;1667;impassable;0;0;can't land here
+2843;1640;impassable;0;0;can't land here
+2843;1639;impassable;0;0;can't land here
+2843;1659;impassable;0;0;can't land here
+2843;1656;impassable;0;0;can't land here
+2844;1656;impassable;0;0;can't land here
+2844;1658;impassable;0;0;can't land here
+2844;1676;impassable;0;0;can't land here
+2844;1649;impassable;0;0;can't land here
+2844;1650;impassable;0;0;can't land here
+2844;1653;impassable;0;0;can't land here
+2844;1669;impassable;0;0;can't land here
+2840;1669;impassable;0;0;can't land here
+2840;1670;impassable;0;0;can't land here
+2840;1672;impassable;0;0;can't land here
+2840;1642;impassable;0;0;can't land here
+2839;1644;impassable;0;0;can't land here
+2839;1643;impassable;0;0;can't land here
+2831;1642;impassable;0;0;can't land here
+2841;1642;impassable;0;0;can't land here
+2841;1672;impassable;0;0;can't land here
+2841;1671;impassable;0;0;can't land here
+2841;1673;impassable;0;0;can't land here
+2841;1645;impassable;0;0;can't land here
+2841;1646;impassable;0;0;can't land here
+2841;1647;impassable;0;0;can't land here
+2841;1659;impassable;0;0;can't land here
+2842;1641;impassable;0;0;can't land here
+# Great Britain
+2727;299;impassable;0;0;can't land here
+2725;297;impassable;0;0;can't land here
+2724;297;impassable;0;0;can't land here
+2724;303;impassable;0;0;can't land here
+2724;302;impassable;0;0;can't land here
+2723;301;impassable;0;0;can't land here
+2723;293;impassable;0;0;can't land here
+2732;292;impassable;0;0;can't land here
+2732;280;impassable;0;0;can't land here
+2732;2409;impassable;0;0;can't land here
+2733;2409;impassable;0;0;can't land here
+2733;270;impassable;0;0;can't land here
+2733;268;impassable;0;0;can't land here
+2733;266;impassable;0;0;can't land here
+2735;266;impassable;0;0;can't land here
+2735;267;impassable;0;0;can't land here
+2736;267;impassable;0;0;can't land here
+2736;270;impassable;0;0;can't land here
+2737;270;impassable;0;0;can't land here
+2737;271;impassable;0;0;can't land here
+2737;272;impassable;0;0;can't land here
+2737;279;impassable;0;0;can't land here
+2737;285;impassable;0;0;can't land here
+2737;276;impassable;0;0;can't land here
+2737;265;impassable;0;0;can't land here
+2737;256;impassable;0;0;can't land here
+2737;255;impassable;0;0;can't land here
+2737;257;impassable;0;0;can't land here
+2738;276;impassable;0;0;can't land here
+2738;260;impassable;0;0;can't land here
+2738;274;impassable;0;0;can't land here
+2738;262;impassable;0;0;can't land here
+2738;265;impassable;0;0;can't land here
+2726;274;impassable;0;0;can't land here
+2726;296;impassable;0;0;can't land here
+2726;298;impassable;0;0;can't land here
+2726;299;impassable;0;0;can't land here
+2740;260;impassable;0;0;can't land here
+2740;261;impassable;0;0;can't land here
+2740;258;impassable;0;0;can't land here
+2739;258;impassable;0;0;can't land here
+2739;259;impassable;0;0;can't land here
+2739;257;impassable;0;0;can't land here
+2736;257;impassable;0;0;can't land here
+# France & Benelux
+2728;442;impassable;0;0;can't land here
+2728;422;impassable;0;0;can't land here
+2728;423;impassable;0;0;can't land here
+2728;458;impassable;0;0;can't land here
+2729;460;impassable;0;0;can't land here
+2729;459;impassable;0;0;can't land here
+2728;459;impassable;0;0;can't land here
+2727;422;impassable;0;0;can't land here
+2725;421;impassable;0;0;can't land here
+2725;424;impassable;0;0;can't land here
+2725;418;impassable;0;0;can't land here
+2724;402;impassable;0;0;can't land here
+2724;2128;impassable;0;0;can't land here
+2724;418;impassable;0;0;can't land here
+2723;400;impassable;0;0;can't land here
+2723;378;impassable;0;0;can't land here
+2722;375;impassable;0;0;can't land here
+2722;377;impassable;0;0;can't land here
+2722;384;impassable;0;0;can't land here
+2722;385;impassable;0;0;can't land here
+2721;383;impassable;0;0;can't land here
+# Germany & Scandinavia
+2721;543;impassable;0;0;can't land here
+2721;539;impassable;0;0;can't land here
+2721;531;impassable;0;0;can't land here
+2721;528;impassable;0;0;can't land here
+2721;369;impassable;0;0;can't land here
+2721;370;impassable;0;0;can't land here
+2721;2557;impassable;0;0;can't land here
+2721;371;impassable;0;0;can't land here
+2721;368;impassable;0;0;can't land here
+2720;367;impassable;0;0;can't land here
+2720;310;impassable;0;0;can't land here
+2712;310;impassable;0;0;can't land here
+2712;367;impassable;0;0;can't land here
+2712;312;impassable;0;0;can't land here
+2712;316;impassable;0;0;can't land here
+2712;329;impassable;0;0;can't land here
+2711;367;impassable;0;0;can't land here
+2711;366;impassable;0;0;can't land here
+2711;2557;impassable;0;0;can't land here
+2711;371;impassable;0;0;can't land here
+2711;370;impassable;0;0;can't land here
+2238;370;impassable;0;0;can't land here
+2711;373;impassable;0;0;can't land here
+2711;372;impassable;0;0;can't land here
+2238;373;impassable;0;0;can't land here
+2711;329;impassable;0;0;can't land here
+2238;334;impassable;0;0;can't land here
+2238;335;impassable;0;0;can't land here
+2238;530;impassable;0;0;can't land here
+2711;369;impassable;0;0;can't land here
+2238;544;impassable;0;0;can't land here
+2238;548;impassable;0;0;can't land here
+2238;679;impassable;0;0;can't land here
+2238;680;impassable;0;0;can't land here
+2710;680;impassable;0;0;can't land here
+2710;691;impassable;0;0;can't land here
+2710;698;impassable;0;0;can't land here
+2710;253;impassable;0;0;can't land here
+2710;646;impassable;0;0;can't land here
+2238;334;impassable;0;0;can't land here
+2710;332;impassable;0;0;can't land here
+2708;331;impassable;0;0;can't land here
+2710;331;impassable;0;0;can't land here
+2708;325;impassable;0;0;can't land here
+2708;326;impassable;0;0;can't land here
+2706;343;impassable;0;0;can't land here
+2706;346;impassable;0;0;can't land here
+2705;318;impassable;0;0;can't land here
+2705;320;impassable;0;0;can't land here
+2705;321;impassable;0;0;can't land here
+2705;346;impassable;0;0;can't land here
+2705;336;impassable;0;0;can't land here
+2719;308;impassable;0;0;can't land here
+2719;309;impassable;0;0;can't land here
+2719;310;impassable;0;0;can't land here
+2718;306;impassable;0;0;can't land here
+2717;306;impassable;0;0;can't land here
+2717;307;impassable;0;0;can't land here
+2707;340;impassable;0;0;can't land here
+# White sea
+2716;982;impassable;0;0;can't land here
+2716;983;impassable;0;0;can't land here
+2716;2588;impassable;0;0;can't land here
+2716;984;impassable;0;0;can't land here
+2716;985;impassable;0;0;can't land here
+2716;2589;impassable;0;0;can't land here
+2716;986;impassable;0;0;can't land here
+2716;2688;impassable;0;0;can't land here
+2716;2687;impassable;0;0;can't land here
+2716;2614;impassable;0;0;can't land here
+2716;2684;impassable;0;0;can't land here
+2519;2614;impassable;0;0;can't land here
+2519;2684;impassable;0;0;can't land here
+2519;2613;impassable;0;0;can't land here
+2519;2659;impassable;0;0;can't land here
+2519;2680;impassable;0;0;can't land here
+# Russian Baltic coast
+2710;359;impassable;0;0;can't land here
+2709;359;impassable;0;0;can't land here
+2709;358;impassable;0;0;can't land here
+2709;357;impassable;0;0;can't land here
+2709;355;impassable;0;0;can't land here
+2709;351;impassable;0;0;can't land here
+2709;349;impassable;0;0;can't land here
+2709;353;impassable;0;0;can't land here
+2707;353;impassable;0;0;can't land here
+2707;349;impassable;0;0;can't land here
+2707;997;impassable;0;0;can't land here
+2707;996;impassable;0;0;can't land here
+2707;339;impassable;0;0;can't land here
+# Black sea
+2775;675;impassable;0;0;can't land here
+2775;678;impassable;0;0;can't land here
+2775;970;impassable;0;0;can't land here
+2775;965;impassable;0;0;can't land here
+2775;964;impassable;0;0;can't land here
+2776;964;impassable;0;0;can't land here
+2776;966;impassable;0;0;can't land here
+2776;967;impassable;0;0;can't land here
+2776;973;impassable;0;0;can't land here
+2776;1047;impassable;0;0;can't land here
+2776;1048;impassable;0;0;can't land here
+2776;965;impassable;0;0;can't land here
+2777;1049;impassable;0;0;can't land here
+2777;1095;impassable;0;0;can't land here
+2777;1094;impassable;0;0;can't land here
+2777;884;impassable;0;0;can't land here
+2777;880;impassable;0;0;can't land here
+2774;880;impassable;0;0;can't land here
+2774;881;impassable;0;0;can't land here
+2774;675;impassable;0;0;can't land here
+2774;818;impassable;0;0;can't land here
+2774;814;impassable;0;0;can't land here
+2774;861;impassable;0;0;can't land here
+2773;861;impassable;0;0;can't land here
+2773;860;impassable;0;0;can't land here
+2773;863;impassable;0;0;can't land here
+2773;864;impassable;0;0;can't land here
+2773;828;impassable;0;0;can't land here
+2773;859;impassable;0;0;can't land here
+2773;858;impassable;0;0;can't land here
+2773;830;impassable;0;0;can't land here
+2773;823;impassable;0;0;can't land here
+# Spain, Portugal & Mediterranean region
+2729;493;impassable;0;0;can't land here
+2729;478;impassable;0;0;can't land here
+2731;478;impassable;0;0;can't land here
+2731;475;impassable;0;0;can't land here
+2731;474;impassable;0;0;can't land here
+2743;476;impassable;0;0;can't land here
+2744;476;impassable;0;0;can't land here
+2744;522;impassable;0;0;can't land here
+2744;524;impassable;0;0;can't land here
+2745;524;impassable;0;0;can't land here
+2745;527;impassable;0;0;can't land here
+2745;511;impassable;0;0;can't land here
+826;517;impassable;0;0;can't land here
+2745;512;impassable;0;0;can't land here
+2746;513;impassable;0;0;can't land here
+2746;1685;impassable;0;0;can't land here
+2746;1686;impassable;0;0;can't land here
+2746;1687;impassable;0;0;can't land here
+2746;1688;impassable;0;0;can't land here
+2747;513;impassable;0;0;can't land here
+2747;515;impassable;0;0;can't land here
+2747;1688;impassable;0;0;can't land here
+2747;1704;impassable;0;0;can't land here
+2747;1706;impassable;0;0;can't land here
+2747;506;impassable;0;0;can't land here
+2748;506;impassable;0;0;can't land here
+2748;505;impassable;0;0;can't land here
+2748;504;impassable;0;0;can't land here
+2748;502;impassable;0;0;can't land here
+2748;501;impassable;0;0;can't land here
+2749;501;impassable;0;0;can't land here
+2749;499;impassable;0;0;can't land here
+2749;464;impassable;0;0;can't land here
+2749;463;impassable;0;0;can't land here
+2749;467;impassable;0;0;can't land here
+2750;467;impassable;0;0;can't land here
+2750;472;impassable;0;0;can't land here
+2750;725;impassable;0;0;can't land here
+2753;766;impassable;0;0;can't land here
+2753;765;impassable;0;0;can't land here
+2751;766;impassable;0;0;can't land here
+2751;725;impassable;0;0;can't land here
+2751;746;impassable;0;0;can't land here
+2751;748;impassable;0;0;can't land here
+2756;765;impassable;0;0;can't land here
+2756;766;impassable;0;0;can't land here
+2756;748;impassable;0;0;can't land here
+2756;749;impassable;0;0;can't land here
+2756;2567;impassable;0;0;can't land here
+2756;755;impassable;0;0;can't land here
+2757;755;impassable;0;0;can't land here
+2757;761;impassable;0;0;can't land here
+2757;760;impassable;0;0;can't land here
+2757;759;impassable;0;0;can't land here
+2757;763;impassable;0;0;can't land here
+2757;762;impassable;0;0;can't land here
+2754;1706;impassable;0;0;can't land here
+2754;1701;impassable;0;0;can't land here
+2755;1701;impassable;0;0;can't land here
+2755;1726;impassable;0;0;can't land here
+2755;1709;impassable;0;0;can't land here
+2758;1726;impassable;0;0;can't land here
+2758;1728;impassable;0;0;can't land here
+2758;1730;impassable;0;0;can't land here
+2759;1733;impassable;0;0;can't land here
+2759;1734;impassable;0;0;can't land here
+2759;762;impassable;0;0;can't land here
+2759;764;impassable;0;0;can't land here
+2760;764;impassable;0;0;can't land here
+2760;763;impassable;0;0;can't land here
+2760;759;impassable;0;0;can't land here
+2760;760;impassable;0;0;can't land here
+2764;760;impassable;0;0;can't land here
+2764;758;impassable;0;0;can't land here
+2764;824;impassable;0;0;can't land here
+2764;826;impassable;0;0;can't land here
+2764;853;impassable;0;0;can't land here
+2763;756;impassable;0;0;can't land here
+2763;853;impassable;0;0;can't land here
+2763;852;impassable;0;0;can't land here
+2763;2582;impassable;0;0;can't land here
+2763;850;impassable;0;0;can't land here
+2763;782;impassable;0;0;can't land here
+2762;757;impassable;0;0;can't land here
+2762;753;impassable;0;0;can't land here
+2762;782;impassable;0;0;can't land here
+2762;781;impassable;0;0;can't land here
+2762;752;impassable;0;0;can't land here
+2761;752;impassable;0;0;can't land here
+2761;742;impassable;0;0;can't land here
+2761;731;impassable;0;0;can't land here
+2761;733;impassable;0;0;can't land here
+2761;736;impassable;0;0;can't land here
+2761;778;impassable;0;0;can't land here
+2761;774;impassable;0;0;can't land here
+2761;781;impassable;0;0;can't land here
+2766;1735;impassable;0;0;can't land here
+2766;1736;impassable;0;0;can't land here
+2767;1736;impassable;0;0;can't land here
+2767;1737;impassable;0;0;can't land here
+2767;839;impassable;0;0;can't land here
+2767;847;impassable;0;0;can't land here
+2767;848;impassable;0;0;can't land here
+2768;1737;impassable;0;0;can't land here
+2768;1753;impassable;0;0;can't land here
+2768;1746;impassable;0;0;can't land here
+2769;1746;impassable;0;0;can't land here
+2769;920;impassable;0;0;can't land here
+2769;1756;impassable;0;0;can't land here
+2769;916;impassable;0;0;can't land here
+2769;915;impassable;0;0;can't land here
+2769;856;impassable;0;0;can't land here
+2770;914;impassable;0;0;can't land here
+2770;856;impassable;0;0;can't land here
+2770;894;impassable;0;0;can't land here
+2770;857;impassable;0;0;can't land here
+2770;895;impassable;0;0;can't land here
+2771;875;impassable;0;0;can't land here
+2771;872;impassable;0;0;can't land here
+2771;848;impassable;0;0;can't land here
+2771;847;impassable;0;0;can't land here
+2765;824;impassable;0;0;can't land here
+2765;825;impassable;0;0;can't land here
+2765;837;impassable;0;0;can't land here
+2765;842;impassable;0;0;can't land here
+2765;839;impassable;0;0;can't land here
+2765;841;impassable;0;0;can't land here
+2772;872;impassable;0;0;can't land here
+2772;821;impassable;0;0;can't land here
+2772;869;impassable;0;0;can't land here
+2773;865;impassable;0;0;can't land here
+2772;864;impassable;0;0;can't land here
+2772;839;impassable;0;0;can't land here
+2772;840;impassable;0;0;can't land here
+2772;842;impassable;0;0;can't land here
+2772;835;impassable;0;0;can't land here
+2772;838;impassable;0;0;can't land here
+2772;836;impassable;0;0;can't land here
+2772;822;impassable;0;0;can't land here
+2772;823;impassable;0;0;can't land here
+2772;829;impassable;0;0;can't land here
+2772;830;impassable;0;0;can't land here
+# Africa
+2768;1752;impassable;0;0;can't land here
+2781;1772;impassable;0;0;can't land here
+2923;1776;impassable;0;0;can't land here
+2759;1731;impassable;0;0;can't land here
+2758;1731;impassable;0;0;can't land here
+2747;1684;impassable;0;0;can't land here
+2925;2563;impassable;0;0;can't land here
+2925;1693;impassable;0;0;can't land here
+2924;1693;impassable;0;0;can't land here
+2924;1694;impassable;0;0;can't land here
+2924;1695;impassable;0;0;can't land here
+2924;1696;impassable;0;0;can't land here
+2924;1773;impassable;0;0;can't land here
+2924;1774;impassable;0;0;can't land here
+2923;1774;impassable;0;0;can't land here
+2923;1775;impassable;0;0;can't land here
+2923;1784;impassable;0;0;can't land here
+2922;1784;impassable;0;0;can't land here
+2922;2573;impassable;0;0;can't land here
+2922;1788;impassable;0;0;can't land here
+2922;1792;impassable;0;0;can't land here
+2921;1877;impassable;0;0;can't land here
+2920;1888;impassable;0;0;can't land here
+2920;1884;impassable;0;0;can't land here
+2920;1892;impassable;0;0;can't land here
+2919;1892;impassable;0;0;can't land here
+2919;1908;impassable;0;0;can't land here
+2919;1907;impassable;0;0;can't land here
+2918;1919;impassable;0;0;can't land here
+2918;1931;impassable;0;0;can't land here
+2918;1934;impassable;0;0;can't land here
+2918;1957;impassable;0;0;can't land here
+2918;1956;impassable;0;0;can't land here
+2918;1958;impassable;0;0;can't land here
+2918;1973;impassable;0;0;can't land here
+2917;1973;impassable;0;0;can't land here
+2917;1974;impassable;0;0;can't land here
+2917;2000;impassable;0;0;can't land here
+2917;2001;impassable;0;0;can't land here
+2916;2001;impassable;0;0;can't land here
+2916;2003;impassable;0;0;can't land here
+2916;2004;impassable;0;0;can't land here
+2914;2083;impassable;0;0;can't land here
+2914;2084;impassable;0;0;can't land here
+2913;2084;impassable;0;0;can't land here
+2913;2088;impassable;0;0;can't land here
+2913;2090;impassable;0;0;can't land here
+2913;2091;impassable;0;0;can't land here
+2912;2091;impassable;0;0;can't land here
+2912;2098;impassable;0;0;can't land here
+2911;2098;impassable;0;0;can't land here
+2911;2100;impassable;0;0;can't land here
+2911;2113;impassable;0;0;can't land here
+2910;2113;impassable;0;0;can't land here
+2910;2051;impassable;0;0;can't land here
+2910;2059;impassable;0;0;can't land here
+2909;2059;impassable;0;0;can't land here
+2909;2061;impassable;0;0;can't land here
+2909;2117;impassable;0;0;can't land here
+2909;2122;impassable;0;0;can't land here
+2902;2122;impassable;0;0;can't land here
+2902;2120;impassable;0;0;can't land here
+2903;2120;impassable;0;0;can't land here
+2907;2120;impassable;0;0;can't land here
+2907;2119;impassable;0;0;can't land here
+3080;2118;impassable;0;0;can't land here
+3080;2117;impassable;0;0;can't land here
+2902;2061;impassable;0;0;can't land here
+2902;2063;impassable;0;0;can't land here
+2902;2039;impassable;0;0;can't land here
+2901;2039;impassable;0;0;can't land here
+2901;2036;impassable;0;0;can't land here
+2901;2029;impassable;0;0;can't land here
+2901;2037;impassable;0;0;can't land here
+2900;2030;impassable;0;0;can't land here
+2900;1870;impassable;0;0;can't land here
+2900;1871;impassable;0;0;can't land here
+2899;1871;impassable;0;0;can't land here
+2899;1872;impassable;0;0;can't land here
+2784;1872;impassable;0;0;can't land here
+2784;1173;impassable;0;0;can't land here
+2784;1175;impassable;0;0;can't land here
+2783;1176;impassable;0;0;can't land here
+2783;1873;impassable;0;0;can't land here
+2783;1874;impassable;0;0;can't land here
+2782;1875;impassable;0;0;can't land here
+2782;1412;impassable;0;0;can't land here
+2782;1180;impassable;0;0;can't land here
+2782;1179;impassable;0;0;can't land here
+2782;1851;impassable;0;0;can't land here
+2782;1849;impassable;0;0;can't land here
+2782;1155;impassable;0;0;can't land here
+2781;1833;impassable;0;0;can't land here
+2781;1152;impassable;0;0;can't land here
+2781;1834;impassable;0;0;can't land here
+2781;1154;impassable;0;0;can't land here
+2781;1770;impassable;0;0;can't land here
+2781;1756;impassable;0;0;can't land here
+2781;921;impassable;0;0;can't land here
+2781;922;impassable;0;0;can't land here
+# Asia
+2785;1174;impassable;0;0;can't land here
+2785;1172;impassable;0;0;can't land here
+2786;1172;impassable;0;0;can't land here
+2786;1171;impassable;0;0;can't land here
+2787;1171;impassable;0;0;can't land here
+2787;1169;impassable;0;0;can't land here
+2787;1168;impassable;0;0;can't land here
+2787;1167;impassable;0;0;can't land here
+2787;1146;impassable;0;0;can't land here
+2787;1145;impassable;0;0;can't land here
+2787;1141;impassable;0;0;can't land here
+2788;1141;impassable;0;0;can't land here
+2788;1138;impassable;0;0;can't land here
+2788;1132;impassable;0;0;can't land here
+2788;935;impassable;0;0;can't land here
+2789;1146;impassable;0;0;can't land here
+2789;1293;impassable;0;0;can't land here
+2790;1292;impassable;0;0;can't land here
+2790;1293;impassable;0;0;can't land here
+2790;1295;impassable;0;0;can't land here
+2790;1296;impassable;0;0;can't land here
+2790;1297;impassable;0;0;can't land here
+2791;1301;impassable;0;0;can't land here
+2791;1302;impassable;0;0;can't land here
+2792;1302;impassable;0;0;can't land here
+2792;1317;impassable;0;0;can't land here
+2792;1319;impassable;0;0;can't land here
+2793;1319;impassable;0;0;can't land here
+2793;1310;impassable;0;0;can't land here
+2793;1322;impassable;0;0;can't land here
+2793;1321;impassable;0;0;can't land here
+3067;1324;impassable;0;0;can't land here
+3067;1322;impassable;0;0;can't land here
+2794;1322;impassable;0;0;can't land here
+2794;1310;impassable;0;0;can't land here
+2794;1307;impassable;0;0;can't land here
+2794;1306;impassable;0;0;can't land here
+2795;1261;impassable;0;0;can't land here
+2795;1305;impassable;0;0;can't land here
+2796;1257;impassable;0;0;can't land here
+2796;1345;impassable;0;0;can't land here
+2797;1345;impassable;0;0;can't land here
+2797;1331;impassable;0;0;can't land here
+2797;1330;impassable;0;0;can't land here
+2798;1344;impassable;0;0;can't land here
+2800;1352;impassable;0;0;can't land here
+2800;1344;impassable;0;0;can't land here
+2801;1352;impassable;0;0;can't land here
+2801;1389;impassable;0;0;can't land here
+2801;2575;impassable;0;0;can't land here
+2801;1388;impassable;0;0;can't land here
+2801;1387;impassable;0;0;can't land here
+2801;1405;impassable;0;0;can't land here
+2801;1406;impassable;0;0;can't land here
+2801;1401;impassable;0;0;can't land here
+2814;1387;impassable;0;0;can't land here
+2814;1401;impassable;0;0;can't land here
+2814;1386;impassable;0;0;can't land here
+2814;1385;impassable;0;0;can't land here
+2814;1400;impassable;0;0;can't land here
+2814;1398;impassable;0;0;can't land here
+2814;1390;impassable;0;0;can't land here
+2814;1426;impassable;0;0;can't land here
+2816;1426;impassable;0;0;can't land here
+2815;1390;impassable;0;0;can't land here
+2815;1391;impassable;0;0;can't land here
+2817;1354;impassable;0;0;can't land here
+2817;1383;impassable;0;0;can't land here
+2817;1382;impassable;0;0;can't land here
+2817;1367;impassable;0;0;can't land here
+2818;1354;impassable;0;0;can't land here
+2818;1353;impassable;0;0;can't land here
+2818;1351;impassable;0;0;can't land here
+2819;1380;impassable;0;0;can't land here
+2819;1381;impassable;0;0;can't land here
+2819;1379;impassable;0;0;can't land here
+2822;1379;impassable;0;0;can't land here
+2822;1377;impassable;0;0;can't land here
+2822;1375;impassable;0;0;can't land here
+2823;1375;impassable;0;0;can't land here
+2823;1376;impassable;0;0;can't land here
+2823;1373;impassable;0;0;can't land here
+2823;1374;impassable;0;0;can't land here
+2823;1499;impassable;0;0;can't land here
+2823;1495;impassable;0;0;can't land here
+2823;1501;impassable;0;0;can't land here
+2824;1493;impassable;0;0;can't land here
+2824;1497;impassable;0;0;can't land here
+2825;1494;impassable;0;0;can't land here
+2825;1487;impassable;0;0;can't land here
+2825;1484;impassable;0;0;can't land here
+2825;1611;impassable;0;0;can't land here
+2825;2562;impassable;0;0;can't land here
+2845;1485;impassable;0;0;can't land here
+2846;1485;impassable;0;0;can't land here
+2846;2562;impassable;0;0;can't land here
+2846;1456;impassable;0;0;can't land here
+2826;1611;impassable;0;0;can't land here
+2826;1610;impassable;0;0;can't land here
+2826;1609;impassable;0;0;can't land here
+2826;1604;impassable;0;0;can't land here
+2826;1606;impassable;0;0;can't land here
+2826;1540;impassable;0;0;can't land here
+2826;1541;impassable;0;0;can't land here
+2826;1543;impassable;0;0;can't land here
+2827;1543;impassable;0;0;can't land here
+2827;1542;impassable;0;0;can't land here
+2827;1571;impassable;0;0;can't land here
+2827;1565;impassable;0;0;can't land here
+2827;1635;impassable;0;0;can't land here
+2827;1636;impassable;0;0;can't land here
+2827;1628;impassable;0;0;can't land here
+2828;1569;impassable;0;0;can't land here
+2828;1565;impassable;0;0;can't land here
+2828;1567;impassable;0;0;can't land here
+2828;1570;impassable;0;0;can't land here
+2828;1480;impassable;0;0;can't land here
+2828;1479;impassable;0;0;can't land here
+2828;1620;impassable;0;0;can't land here
+2828;1619;impassable;0;0;can't land here
+2828;1626;impassable;0;0;can't land here
+2828;1627;impassable;0;0;can't land here
+2828;1625;impassable;0;0;can't land here
+2829;1628;impassable;0;0;can't land here
+2828;1636;impassable;0;0;can't land here
+2829;1635;impassable;0;0;can't land here
+2829;1634;impassable;0;0;can't land here
+2842;1634;impassable;0;0;can't land here
+2842;1631;impassable;0;0;can't land here
+2830;1631;impassable;0;0;can't land here
+2830;1630;impassable;0;0;can't land here
+2830;1621;impassable;0;0;can't land here
+2830;1623;impassable;0;0;can't land here
+2830;1622;impassable;0;0;can't land here
+2831;1082;impassable;0;0;can't land here
+2831;2228;impassable;0;0;can't land here
+2831;2231;impassable;0;0;can't land here
+2832;2231;impassable;0;0;can't land here
+2832;1084;impassable;0;0;can't land here
+2832;1086;impassable;0;0;can't land here
+2837;1086;impassable;0;0;can't land here
+2833;2641;impassable;0;0;can't land here
+2833;1084;impassable;0;0;can't land here
+2833;1072;impassable;0;0;can't land here
+2834;2639;impassable;0;0;can't land here
+2834;2618;impassable;0;0;can't land here
+2835;2618;impassable;0;0;can't land here
+2835;2638;impassable;0;0;can't land here
+2835;2663;impassable;0;0;can't land here
+2835;1073;impassable;0;0;can't land here
+2835;2616;impassable;0;0;can't land here
+2835;2633;impassable;0;0;can't land here
+2836;2618;impassable;0;0;can't land here
+2836;1074;impassable;0;0;can't land here
+2838;1074;impassable;0;0;can't land here
+2895;1074;impassable;0;0;can't land here
+2895;2633;impassable;0;0;can't land here
+2896;2633;impassable;0;0;can't land here
+2896;1616;impassable;0;0;can't land here
+2897;2616;impassable;0;0;can't land here
+2897;2634;impassable;0;0;can't land here
+2897;2637;impassable;0;0;can't land here
+2897;2590;impassable;0;0;can't land here
+2832;1087;impassable;0;0;can't land here
+2831;1087;impassable;0;0;can't land here
+2839;1087;impassable;0;0;can't land here
+2847;1456;impassable;0;0;can't land here
+2848;1458;impassable;0;0;can't land here
+2849;1456;impassable;0;0;can't land here
+2847;1455;impassable;0;0;can't land here
+2849;1455;impassable;0;0;can't land here
+2849;1457;impassable;0;0;can't land here
+2849;1458;impassable;0;0;can't land here
+2849;1460;impassable;0;0;can't land here
+2849;1461;impassable;0;0;can't land here
+2850;1460;impassable;0;0;can't land here
+2850;2565;impassable;0;0;can't land here
+2850;1461;impassable;0;0;can't land here
+2850;1462;impassable;0;0;can't land here
+2850;1463;impassable;0;0;can't land here
+2855;1461;impassable;0;0;can't land here
+2853;1463;impassable;0;0;can't land here
+2851;1462;impassable;0;0;can't land here
+2851;1463;impassable;0;0;can't land here
+2852;1463;impassable;0;0;can't land here
+2851;1459;impassable;0;0;can't land here
+2821;1459;impassable;0;0;can't land here
+2850;1459;impassable;0;0;can't land here
+2848;1459;impassable;0;0;can't land here
+# Indonesia & Australia
+2802;1405;impassable;0;0;can't land here
+2802;1407;impassable;0;0;can't land here
+2803;1409;impassable;0;0;can't land here
+2803;1408;impassable;0;0;can't land here
+2804;1408;impassable;0;0;can't land here
+2804;1410;impassable;0;0;can't land here
+2805;1410;impassable;0;0;can't land here
+2805;1403;impassable;0;0;can't land here
+2805;1414;impassable;0;0;can't land here
+2805;1413;impassable;0;0;can't land here
+2813;1398;impassable;0;0;can't land here
+2813;1403;impassable;0;0;can't land here
+2813;1404;impassable;0;0;can't land here
+2813;1415;impassable;0;0;can't land here
+2813;1417;impassable;0;0;can't land here
+2813;1418;impassable;0;0;can't land here
+2813;1426;impassable;0;0;can't land here
+2813;1427;impassable;0;0;can't land here
+2816;1394;impassable;0;0;can't land here
+2816;1395;impassable;0;0;can't land here
+2821;1395;impassable;0;0;can't land here
+2821;1396;impassable;0;0;can't land here
+2821;1397;impassable;0;0;can't land here
+2851;1397;impassable;0;0;can't land here
+2812;1397;impassable;0;0;can't land here
+2812;1425;impassable;0;0;can't land here
+2812;1429;impassable;0;0;can't land here
+2812;1424;impassable;0;0;can't land here
+2812;1435;impassable;0;0;can't land here
+2812;1432;impassable;0;0;can't land here
+2811;1427;impassable;0;0;can't land here
+2811;1424;impassable;0;0;can't land here
+2811;1432;impassable;0;0;can't land here
+2811;1418;impassable;0;0;can't land here
+2811;1421;impassable;0;0;can't land here
+2811;1420;impassable;0;0;can't land here
+2811;1438;impassable;0;0;can't land here
+2811;1442;impassable;0;0;can't land here
+2811;1440;impassable;0;0;can't land here
+2811;1439;impassable;0;0;can't land here
+2806;1414;impassable;0;0;can't land here
+2806;1416;impassable;0;0;can't land here
+2807;1416;impassable;0;0;can't land here
+2807;1420;impassable;0;0;can't land here
+2807;1438;impassable;0;0;can't land here
+2808;1438;impassable;0;0;can't land here
+2808;1442;impassable;0;0;can't land here
+2808;1440;impassable;0;0;can't land here
+2808;1441;impassable;0;0;can't land here
+2808;1439;impassable;0;0;can't land here
+2809;2501;impassable;0;0;can't land here
+2809;1441;impassable;0;0;can't land here
+2809;1439;impassable;0;0;can't land here
+2809;1444;impassable;0;0;can't land here
+2809;1445;impassable;0;0;can't land here
+2809;1443;impassable;0;0;can't land here
+2809;1446;impassable;0;0;can't land here
+2810;1431;impassable;0;0;can't land here
+2810;1430;impassable;0;0;can't land here
+2810;1436;impassable;0;0;can't land here
+2810;1437;impassable;0;0;can't land here
+2810;1439;impassable;0;0;can't land here
+2810;1444;impassable;0;0;can't land here
+2854;1444;impassable;0;0;can't land here
+2853;1453;impassable;0;0;can't land here
+2856;1453;impassable;0;0;can't land here
+2856;1454;impassable;0;0;can't land here
+2862;1453;impassable;0;0;can't land here
+2862;1454;impassable;0;0;can't land here
+2862;1451;impassable;0;0;can't land here
+2857;2531;impassable;0;0;can't land here
+2857;1454;impassable;0;0;can't land here
+2863;2529;impassable;0;0;can't land here
+2863;1560;impassable;0;0;can't land here
+2863;2505;impassable;0;0;can't land here
+2863;2506;impassable;0;0;can't land here
+2863;2488;impassable;0;0;can't land here
+2863;2604;impassable;0;0;can't land here
+2861;2501;impassable;0;0;can't land here
+2861;2505;impassable;0;0;can't land here
+2860;2529;impassable;0;0;can't land here
+2860;2528;impassable;0;0;can't land here
+2860;2488;impassable;0;0;can't land here
+2858;2530;impassable;0;0;can't land here
+2858;2528;impassable;0;0;can't land here
+2864;2488;impassable;0;0;can't land here
+2864;2487;impassable;0;0;can't land here
+2864;2484;impassable;0;0;can't land here
+2865;2484;impassable;0;0;can't land here
+2865;2470;impassable;0;0;can't land here
+2865;2469;impassable;0;0;can't land here
+2866;2469;impassable;0;0;can't land here
+2866;2472;impassable;0;0;can't land here
+2867;2479;impassable;0;0;can't land here
+2867;2477;impassable;0;0;can't land here
+2868;2477;impassable;0;0;can't land here
+2868;2493;impassable;0;0;can't land here
+2868;2494;impassable;0;0;can't land here
+2868;2492;impassable;0;0;can't land here
+2869;2492;impassable;0;0;can't land here
+2869;2496;impassable;0;0;can't land here
+2869;2504;impassable;0;0;can't land here
+2870;2498;impassable;0;0;can't land here
+2870;2504;impassable;0;0;can't land here
+2870;2497;impassable;0;0;can't land here
+2871;2499;impassable;0;0;can't land here
+2872;2502;impassable;0;0;can't land here
+2872;2499;impassable;0;0;can't land here
+2872;2602;impassable;0;0;can't land here
+2873;2501;impassable;0;0;can't land here
+2873;2602;impassable;0;0;can't land here
+2878;2571;impassable;0;0;can't land here
+2878;2510;impassable;0;0;can't land here
+2879;2571;impassable;0;0;can't land here
+2879;2511;impassable;0;0;can't land here
+2879;2512;impassable;0;0;can't land here
+2876;2510;impassable;0;0;can't land here
+2876;2512;impassable;0;0;can't land here
+2876;2516;impassable;0;0;can't land here
+2876;2514;impassable;0;0;can't land here
+2876;2513;impassable;0;0;can't land here
+2880;2513;impassable;0;0;can't land here
+2881;2512;impassable;0;0;can't land here
+2881;2516;impassable;0;0;can't land here
+2881;2513;impassable;0;0;can't land here
+# Greenland, Iceland & JanMayen
+2935;2636;impassable;0;0;can't land here
+2934;2636;impassable;0;0;can't land here
+2933;2636;impassable;0;0;can't land here
+2937;2636;impassable;0;0;can't land here
+2937;2227;impassable;0;0;can't land here
+2933;2227;impassable;0;0;can't land here
+2935;251;impassable;0;0;can't land here
+2933;2632;impassable;0;0;can't land here
+2930;2632;impassable;0;0;can't land here
+2928;2632;impassable;0;0;can't land here
+2928;2591;impassable;0;0;can't land here
+2929;2591;impassable;0;0;can't land here
+2930;2591;impassable;0;0;can't land here
+# Hawaii islands
+3150;658;impassable;0;0;can't land here
+3150;2226;impassable;0;0;can't land here
+3150;2223;impassable;0;0;can't land here
+
+# Greenland wastelands
+251;2636;impassable;0;0;wasteland
+
+# Wasteland of Sahara
+1716;1696;impassable;0;0;wasteland
+1716;1773;impassable;0;0;wasteland
+1716;1782;impassable;0;0;wasteland
+1717;1782;impassable;0;0;wasteland
+1699;1716;impassable;0;0;wasteland
+1698;1716;impassable;0;0;wasteland
+1698;1714;impassable;0;0;wasteland
+1697;1714;impassable;0;0;wasteland
+1715;1714;impassable;0;0;wasteland
+1715;1720;impassable;0;0;wasteland
+1713;1720;impassable;0;0;wasteland
+1713;1711;impassable;0;0;wasteland
+1713;1712;impassable;0;0;wasteland
+1710;1712;impassable;0;0;wasteland
+1729;1712;impassable;0;0;wasteland
+1729;1719;impassable;0;0;wasteland
+1729;1744;impassable;0;0;wasteland
+1730;1744;impassable;0;0;wasteland
+1731;1744;impassable;0;0;wasteland
+1731;1732;impassable;0;0;wasteland
+1733;1732;impassable;0;0;wasteland
+1733;1740;impassable;0;0;wasteland
+1734;1740;impassable;0;0;wasteland
+1735;1740;impassable;0;0;wasteland
+1735;1738;impassable;0;0;wasteland
+1736;1738;impassable;0;0;wasteland
+1737;1738;impassable;0;0;wasteland
+1737;1754;impassable;0;0;wasteland
+1753;1754;impassable;0;0;wasteland
+1752;1754;impassable;0;0;wasteland
+1752;1759;impassable;0;0;wasteland
+1751;1759;impassable;0;0;wasteland
+1747;1759;impassable;0;0;wasteland
+1750;1759;impassable;0;0;wasteland
+1765;1759;impassable;0;0;wasteland
+1765;1760;impassable;0;0;wasteland
+1762;1760;impassable;0;0;wasteland
+1767;1760;impassable;0;0;wasteland
+1766;1761;impassable;0;0;wasteland
+1767;1761;impassable;0;0;wasteland
+1835;1761;impassable;0;0;wasteland
+2564;1761;impassable;0;0;wasteland
+2564;1758;impassable;0;0;wasteland
+2564;1739;impassable;0;0;wasteland
+2564;2585;impassable;0;0;wasteland
+1842;2585;impassable;0;0;wasteland
+1825;2585;impassable;0;0;wasteland
+1826;2585;impassable;0;0;wasteland
+1825;1741;impassable;0;0;wasteland
+1814;1741;impassable;0;0;wasteland
+1814;1721;impassable;0;0;wasteland
+1813;1721;impassable;0;0;wasteland
+1807;1721;impassable;0;0;wasteland
+1807;1722;impassable;0;0;wasteland
+1806;1722;impassable;0;0;wasteland
+1806;1717;impassable;0;0;wasteland
+
+# Canadian wastelands
+62;76;impassable;0;0;wasteland
+62;2625;impassable;0;0;wasteland
+62;59;impassable;0;0;wasteland
+61;59;impassable;0;0;wasteland
+61;60;impassable;0;0;wasteland
+63;60;impassable;0;0;wasteland
+63;48;impassable;0;0;wasteland
+51;48;impassable;0;0;wasteland
+50;48;impassable;0;0;wasteland
+50;2628;impassable;0;0;wasteland
+50;2594;impassable;0;0;wasteland
+49;2594;impassable;0;0;wasteland
+49;39;impassable;0;0;wasteland
+36;39;impassable;0;0;wasteland
+36;40;impassable;0;0;wasteland
+41;40;impassable;0;0;wasteland
+30;40;impassable;0;0;wasteland
+30;32;impassable;0;0;wasteland
+30;34;impassable;0;0;wasteland
+30;33;impassable;0;0;wasteland
+35;33;impassable;0;0;wasteland
+35;27;impassable;0;0;wasteland
+35;34;impassable;0;0;wasteland
+29;27;impassable;0;0;wasteland
+26;27;impassable;0;0;wasteland
+26;22;impassable;0;0;wasteland
+25;22;impassable;0;0;wasteland
+25;24;impassable;0;0;wasteland
+25;19;impassable;0;0;wasteland
+21;19;impassable;0;0;wasteland
+20;19;impassable;0;0;wasteland
+13;19;impassable;0;0;wasteland
+13;16;impassable;0;0;wasteland
+15;16;impassable;0;0;wasteland
+1;16;impassable;0;0;wasteland
+1;17;impassable;0;0;wasteland
+2;17;impassable;0;0;wasteland
+2;6;impassable;0;0;wasteland
+2630;6;impassable;0;0;wasteland
+2630;2599;impassable;0;0;wasteland
+3;2599;impassable;0;0;wasteland
+3;5;impassable;0;0;wasteland
+4;5;impassable;0;0;wasteland
+
+#Australian wastelands
+2499;2500;impassable;0;0;wasteland
+2499;2502;impassable;0;0;wasteland
+2497;2500;impassable;0;0;wasteland
+2498;2500;impassable;0;0;wasteland
+2498;2504;impassable;0;0;wasteland
+2488;2604;impassable;0;0;wasteland
+2487;2604;impassable;0;0;wasteland
+2487;2489;impassable;0;0;wasteland
+2485;2489;impassable;0;0;wasteland
+2485;2490;impassable;0;0;wasteland
+2486;2490;impassable;0;0;wasteland
+2474;2490;impassable;0;0;wasteland
+2474;2475;impassable;0;0;wasteland
+2473;2475;impassable;0;0;wasteland
+2481;2475;impassable;0;0;wasteland
+2491;2475;impassable;0;0;wasteland
+2494;2475;impassable;0;0;wasteland
+2494;2495;impassable;0;0;wasteland
+2494;2496;impassable;0;0;wasteland
+2492;2496;impassable;0;0;wasteland
+
+#Russian wastelands
+981;985;impassable;0;0;wasteland
+987;985;impassable;0;0;wasteland
+2700;985;impassable;0;0;wasteland
+2699;2700;impassable;0;0;wasteland
+2689;2700;impassable;0;0;wasteland
+2689;1026;impassable;0;0;wasteland
+1026;2685;impassable;0;0;wasteland
+2685;1062;impassable;0;0;wasteland
+1062;2682;impassable;0;0;wasteland
+1062;2690;impassable;0;0;wasteland
+2690;1066;impassable;0;0;wasteland
+1065;1066;impassable;0;0;wasteland
+2683;1065;impassable;0;0;wasteland
+2683;2646;impassable;0;0;wasteland
+1063;2646;impassable;0;0;wasteland
+1063;2691;impassable;0;0;wasteland
+1077;1070;impassable;0;0;wasteland
+1076;1070;impassable;0;0;wasteland
+1076;2656;impassable;0;0;wasteland
+2677;2656;impassable;0;0;wasteland
+2677;2694;impassable;0;0;wasteland
+2677;2695;impassable;0;0;wasteland
+2676;2695;impassable;0;0;wasteland
+2645;2695;impassable;0;0;wasteland
+2650;2645;impassable;0;0;wasteland
+1069;2645;impassable;0;0;wasteland
+1069;2644;impassable;0;0;wasteland
+2672;2644;impassable;0;0;wasteland
+2669;2644;impassable;0;0;wasteland
+1080;2669;impassable;0;0;wasteland
+1080;2641;impassable;0;0;wasteland
+2685;1058;impassable;0;0;wasteland
+
+#tag COM
+3183;2123;impassable;0;0;can't land here

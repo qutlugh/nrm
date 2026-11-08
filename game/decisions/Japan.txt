@@ -1,0 +1,638 @@
+political_decisions = {
+	support_zaibatsu = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = zaibatsu_supported
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		
+		allow = {
+			money = 100000
+			business_regulations = 1
+			has_country_flag = oath_in_five_articles_was_given
+		}
+		
+		effect = {
+			money = -100000
+			research_points = 30000
+			set_country_flag = zaibatsu_supported
+			add_country_modifier = { name = zaibatsu duration = -1 }
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					OR = { 
+						pop_type = artisans
+						pop_type = clerks
+						pop_type = craftsmen
+						pop_type = farmers
+						pop_type = aristocrats
+						pop_type = capitalists
+					}
+				}
+				money = 1000
+			}
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					NOT = { location = { trade_goods = precious_metal }}
+					OR = {
+						pop_type = labourers
+						pop_type = skilledworker
+					}
+				}
+				money = 1000
+			}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	rename_the_sakhalin_jap = {
+		picture = sakhalin
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			has_global_flag = russia_has_renamed_the_sakhalin
+                        primary_culture = japanese
+                        owns = 1086
+			owns = 1087
+		}
+		allow = {}
+		effect = {
+                        1086 = {
+				change_province_name = "Погоби"
+				state_scope = { change_region_name = "§R(Неф-2)§! Карафуто" }
+			}
+			1087 = { change_province_name = "Оотомари" }
+                        CHI_1086 = { add_core = THIS }
+			clr_global_flag = russia_has_renamed_the_sakhalin
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	annex_korea = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = has_annexed_korea
+                        	KOR = { all_core = { owned_by = THIS }}
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			tag = JAP
+                        KOR = {
+				OR = {
+					AND = {
+						exists = no
+						all_core = {
+							NOT = { owned_by = THIS }
+							controlled_by = THIS
+						}
+					}
+					AND = {
+						exists = yes
+						vassal_of = THIS
+					}
+				}
+			}
+		}
+		effect = {
+                        1624 = {
+				owner = {
+					any_owned = {
+						limit = {
+							is_core = KOR
+							controlled_by = THIS
+						}
+						secede_province = THIS
+					}
+				}
+			}
+                        1619 = {
+				owner = {
+					any_owned = {
+						limit = {
+							is_core = KOR
+							controlled_by = THIS
+						}
+						secede_province = THIS
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					tag = KOR
+					exists = yes
+				}
+				annex_to = THIS
+			}
+			set_country_flag = has_annexed_korea
+			badboy = 20
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	charter_oath = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = oath_in_five_articles_was_given
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			tag = JAP
+		}
+		effect = {
+			research_points = 10000
+			prestige = 200
+			plurality = 20
+			capital = 1649
+			1649 = { change_province_name = "Токио" }
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					OR = { 
+						pop_type = artisans
+						pop_type = clerks
+						pop_type = craftsmen
+						pop_type = farmers
+						pop_type = aristocrats
+						pop_type = capitalists
+					}
+				}
+				money = 1000
+			}
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					NOT = { location = { trade_goods = precious_metal }}
+					OR = {
+						pop_type = labourers
+						pop_type = skilledworker
+					}
+				}
+				money = 1000
+			}
+			set_country_flag = oath_in_five_articles_was_given
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	meiji_constitution = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = meiji_constitution_was_issued
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			has_country_flag = oath_in_five_articles_was_given
+			has_country_flag = meiji_social_reform_completed
+			state_n_government = 1
+			offset_printing = 1
+		}
+		effect = {
+			prestige = 300
+			political_reform = universal_weighted_voting
+			political_reform = non_secret_ballots
+			political_reform = limited
+			government = hms_government
+			set_country_flag = meiji_constitution_was_issued
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	abolition_of_the_han_system = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = han_system_abolished
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			has_country_flag = oath_in_five_articles_was_given
+			state_n_government = 1
+		}
+		effect = {
+			plurality = -10
+			prestige = 100
+			political_reform = unitary
+			set_country_flag = han_system_abolished
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	fukoku_kyohei = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = meiji_industrial_reform_completed
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			has_country_flag = oath_in_five_articles_was_given
+			has_country_flag = iwakura_mission_completed
+			has_country_flag = han_system_abolished
+		}
+		effect = {
+			add_country_modifier = { name = meiji_industrialisation duration = 7300 }
+			set_country_flag = meiji_industrial_reform_completed
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	meiji_social_reform = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = meiji_social_reform_completed
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			has_country_flag = oath_in_five_articles_was_given
+			has_country_flag = meiji_educational_reform_completed
+			has_country_flag = meiji_agrarian_reform_completed
+			has_country_flag = meiji_military_reform_completed
+			has_country_flag = iwakura_mission_completed
+		}
+		effect = {
+			prestige = 100
+			plurality = 20
+			political_reform = yes_meeting
+			political_reform = appointed
+			political_reform = reverence_for_religion
+			political_reform = landed_voting
+			political_reform = harassment
+			government = prussian_constitutionalism
+			set_country_flag = meiji_social_reform_completed
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	meiji_educational_reform = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = meiji_educational_reform_completed
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			has_country_flag = oath_in_five_articles_was_given
+			has_country_flag = iwakura_mission_completed
+			functionalism = 1
+			money = 100000
+		}
+		effect = {
+			money = -100000
+			social_reform = good_schools
+			social_reform = child_labour_prohibited
+			set_country_flag = meiji_educational_reform_completed
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	meiji_agrarian_reform = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = meiji_agrarian_reform_completed
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			has_country_flag = oath_in_five_articles_was_given
+			has_country_flag = iwakura_mission_completed
+			business_banks = 1
+		}
+		effect = {
+			add_country_modifier = { name = japanese_agrarian_reform_completed duration = 5475 }
+			farmers = { militancy = 4 }
+			aristocrats = { militancy = 6 }
+			set_country_flag = meiji_agrarian_reform_completed
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	meiji_military_reform = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = meiji_military_reform_completed
+				tech_school = naval_tech_school
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			has_country_flag = oath_in_five_articles_was_given
+			has_country_flag = iwakura_mission_completed
+			money = 50000
+		}
+		effect = {
+			money = -50000
+                        tech_school = naval_tech_school
+			political_reform = two_year_draft
+			add_country_modifier = { name = japanese_military_reform duration = 7300 }
+			set_country_flag = meiji_military_reform_completed
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	japanese_mobilization_reform = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = mobilization_reform_established_jap
+				conscription = one_year_draft
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			money = 100000
+			has_country_flag = meiji_military_reform_completed
+		}
+		effect = {
+			money = -100000
+			political_reform = one_year_draft
+			set_country_flag = mobilization_reform_established_jap
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	iwakura_mission = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = iwakura_mission_completed
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+		}
+		allow = {
+			has_country_flag = oath_in_five_articles_was_given
+			money = 25000
+		}
+		effect = {
+			money = -25000
+			add_country_modifier = { name = iwakura_mission_completed duration = 7300 }
+			any_greater_power = { relation = { who = THIS value = 100 }}
+			set_country_flag = iwakura_mission_completed
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	colonize_sakhalin_jap = {
+		picture = sakhalin
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+			1086 = { empty = yes }
+			1087 = { empty = yes }
+			1088 = { empty = yes }
+			1089 = { empty = yes }
+		}
+		allow = {
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			invention = mission_to_civilize
+			money = 50000
+		}
+		effect = {
+			money = -50000
+			prestige = 50
+                        1086 = { secede_province = THIS life_rating = 30 }
+			1087 = { secede_province = THIS life_rating = 30 }
+                        1088 = { secede_province = THIS life_rating = 30 }
+			1089 = { secede_province = THIS life_rating = 30 }
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	occupation_of_formosa = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = formosa_was_occupied
+				year = 1890
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+			CHI_2562 = { owned_by = CHI }
+		}
+		allow = {
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+			state_n_government = 1
+			total_amount_of_ships = 30
+			JAP_1654 = { owned_by = THIS }
+			NOT = {
+				OR = {
+					year = 1890
+					relation = { who = CHI value = 0 }
+					badboy = 0.5
+				}
+			}
+		}
+		effect = {
+			set_country_flag = formosa_was_occupied
+			badboy = 15
+			CHI = { CHI_2562 = { secede_province = THIS }}
+			CHI = { country_event = 160006 }
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	japanese_agriculture_modernisation = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = japanese_industrial_reform
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+			has_country_flag = danger_of_starvation_flag
+		}
+		allow = {
+			has_country_flag = oath_in_five_articles_was_given
+			experimental_steam_engine = 1
+		}
+		effect = {
+			clr_country_flag = danger_of_starvation_flag
+			any_owned = {
+				limit = { has_province_modifier = danger_of_starvation }
+				remove_province_modifier = danger_of_starvation
+			}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	colonization_of_hokkaido = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = hokkaido_colonized
+				any_owned_province = { has_building = selector }
+			}
+                        primary_culture = japanese
+			
+		}
+		allow = {
+			year = 1830
+			owns = 1643
+		}
+		effect = {
+			JAP_1642 = {
+				add_province_modifier = {
+					name = hokaido_japanese_resettlement
+					duration = 10950
+				}
+			}
+			set_country_flag = hokkaido_colonized
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	japanese_naval_program = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = japanese_naval_program_carried_out
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = japanese
+		}
+		allow = {
+			naval_risk_management = 1
+			main_armament = 1
+		}
+		effect = {
+			add_country_modifier = { name = japanese_naval_program1 duration = 5475 }
+			any_owned = {
+				limit = { has_province_modifier = core_reg is_coastal = yes }
+				add_province_modifier = { name = japanese_naval_program2 duration = 5475 }
+			}
+			any_greater_power = { country_event = 1500112 }
+			set_country_flag = japanese_naval_program_carried_out
+		}
+	        ai_will_do = { factor = 1 }
+	}
+}

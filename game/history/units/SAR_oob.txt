@@ -1,0 +1,128 @@
+army = {
+	name = "Esercito di Sardegna"
+	location = 720
+	regiment = {
+		name= "1.Fanteria di Linea"
+		type = infantry
+		home = 720
+	}
+	regiment = {
+		name= "2.Fanteria di Linea"
+		type = infantry
+		home = 720
+	}
+	regiment = {
+		name= "3.Fanteria di Linea"
+		type = infantry
+		home = 720
+	}
+	regiment = {
+		name= "4.Fanteria di Linea"
+		type = infantry
+		home = 720
+	}
+	regiment = {
+		name= "5.Fanteria di Linea"
+		type = infantry
+		home = 720
+	}
+	regiment = {
+		name= "6.Fanteria di Linea"
+		type = infantry
+		home = 765
+	}
+	regiment = {
+		name= "1.Carabinieri"
+		type = dragoon
+		home = 465
+	}
+
+}
+navy = {
+	name = "Armata di Transporti"
+	location = 765
+	ship = {
+		name= "Эуро"
+		type = frigate
+	}
+	ship = {
+		name= "Остро"
+		type = frigate
+	}
+	ship = {
+		name= "Нембо"
+		type = frigate
+	}
+	ship = {
+		name= "Турбине"
+		type = frigate
+	}
+	ship = {
+		name= "Акуилоне"
+		type = frigate
+	}
+	ship = {
+		name= "Бореа"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Дзеффиро"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Эсперо"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Артильере"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Берсальере"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Корацциере"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Гарибальдино"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Гранатmере"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Ланчиере"
+		type = clipper_transport
+	}
+	ship = {
+		name= "Альпино"
+		type = clipper_transport
+	}
+}
+navy = {
+	name = "Armata di Mare"
+	location = 724
+	ship = {
+		name= "Базиликата"
+		type = manowar
+	}
+	ship = {
+		name= "Куарто"
+		type = manowar
+	}
+	ship = {
+		name= "Венеция"
+		type = manowar
+	}
+	ship = {
+		name= "Тренто"
+		type = manowar
+	}
+	ship = {
+		name= "Валле д'Аоста"
+		type = manowar
+	}
+}

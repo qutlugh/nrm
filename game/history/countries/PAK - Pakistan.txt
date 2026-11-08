@@ -1,0 +1,46 @@
+capital = 1218
+primary_culture = panjabi
+culture = pashtun
+religion = sunni
+government = presidential_dictatorship
+plurality = 10
+nationalvalue = nv_archaic_economy
+literacy = 0.16
+civilized = yes
+#is_releasable_vassal = no
+
+# Political reforms
+upper_house_composition = appointed
+private_property = enshrined
+state_religion = religious_state
+slavery = no_slavery
+vote_franschise = wealth_weighted_voting
+voting_system = first_past_the_post
+public_meetings = no_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+political_parties = harassment
+minorities_reform = limited
+conscription = mandatory_service
+
+# Social reforms
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = no_safety
+unemployment_subsidies = no_subsidies
+pensions = no_pensions
+health_care = no_health_care
+school_reforms = no_schools
+child_labour = child_labour_allowed
+
+ruling_party = PAK_conservative
+last_election = 1836.1.1
+upper_house = {
+	fascist = 0
+	liberal = 10
+	conservative = 85
+	reactionary = 5
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}

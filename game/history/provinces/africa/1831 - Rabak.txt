@@ -1,0 +1,6 @@
+owner = SNR
+controller = SNR
+add_core = SNR
+add_core = SUD
+trade_goods = grain
+life_rating = 15

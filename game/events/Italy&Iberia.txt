@@ -1,0 +1,1367 @@
+##########################################################################
+##########################        Italy        ###########################
+##########################################################################
+#Concordat With The Vatican
+country_event = {
+
+	id = 35700
+	news = yes
+	news_desc_long = "EVTDESC35700_NEWS_LONG"
+	news_desc_medium = "EVTDESC35700_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC35700_NEWS_SHORT"
+
+	trigger = {
+		tag = PAP
+		year = 1891
+		NOT = {
+			year = 1894
+			has_global_flag = RerumNovarum
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1892
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1893
+		}
+	}
+
+	title = "EVTNAME35700"
+	desc = "EVTDESC35700"
+	picture = "pope"
+
+	option = {
+		name = "EVTOPTA35700" 
+		prestige = 10
+		labourers = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+		soldiers = { consciousness = 1 }
+		set_global_flag = RerumNovarum		
+	}
+}
+country_event = {
+
+	id = 35400 #see 31507 for AUS parallel event
+
+	trigger = {
+		tag = LOM
+		year = 1842
+		NOT = {
+			year = 1845
+			has_global_flag = Nabucco
+		}
+	
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1843
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1844
+		}
+	}
+
+	title = "EVTNAME35400"
+	desc = "EVTDESC35400"
+	picture = "theatre"
+
+	option = {
+		name = "EVTOPTA35400" 
+		prestige = 5
+		any_pop = { 
+			limit = { has_pop_culture = italian } 
+			consciousness = 1 
+		}
+		set_global_flag = Nabucco
+	}
+}
+country_event = {
+
+	id = 35300
+
+	trigger = {
+		tag = ITA
+		year = 1910
+		NOT = { year = 1913 }
+		
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1911
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1912
+		}
+	}
+
+	title = "EVTNAME35300"
+	desc = "EVTDESC35300"
+	picture = "theatre"
+
+	option = {
+		name = "EVTOPTA35300" 
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 35301
+
+	trigger = {
+		tag = ITA
+		year = 1902
+		NOT = { year = 1905 }
+		
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1903
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1904
+		}
+	}
+
+	title = "EVTNAME35301"
+	desc = "EVTDESC35301"
+	picture = "theatre"
+
+	option = {
+		name = "EVTOPTA35301" 
+		prestige = 10
+	}
+}
+country_event = {
+
+	id = 35302 #Parallel to PAP35700
+	title = "EVTNAME35700"
+	desc = "EVTDESC35700"
+	picture = "pope"
+	
+	trigger = {
+		tag = ITA
+		year = 1891
+		NOT = {
+			year = 1894
+			exists = PAP
+			has_global_flag = RerumNovarum
+		}
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1892
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1893
+		}
+	}
+
+	option = {
+		name = "EVTOPTA35700" 
+		prestige = 10
+		labourers = { consciousness = 1 }
+		craftsmen = { consciousness = 1 }
+		artisans = { consciousness = 1 }
+		soldiers = { consciousness = 1 }
+		set_global_flag = RerumNovarum		
+	}
+}
+country_event = {
+	id = 35303
+	title = "EVTNAME35303"
+	desc = "EVTDESC35303"
+	picture = "Artillery"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Прекрасная сделка!"
+                FROM={country_event={id=35304 days=10}}
+                set_country_flag = deal_with_italy
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "Это не в наших интересах"
+                FROM={country_event={id=35305 days=10}}
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 35304
+	title = "Согласие Франции"
+	desc = "Франция согласилась на условия нашего договора. Они выступят на нашей стороне против австрийцев."
+	picture = "Artillery"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Где моя сабля?!"
+                create_alliance = FROM
+                any_country = {
+			limit = {
+				ai = yes
+				alliance_with = AUS
+			}
+			leave_alliance = AUS
+		}
+                AUS = { relation = { who = THIS value = -200 }}
+                FRA = { relation = { who = THIS value = 200 }}
+                relation = { who = AUS value= -400 }
+		729 = {
+			owner = { country_event = 353044 }
+		}
+	}
+}
+country_event = {
+	id = 353044
+	title = "Италия объявляет нам войну!"
+	desc = "Италия требует от нас вернуть им их исконные территории! Что мы будем делать?"
+	picture = "Artillery"
+	is_triggered_only = yes
+
+	option = {
+		name = "Где моя сабля?!"
+		FROM = {
+			war = {
+				target = THIS
+				call_ally = yes
+				attacker_goal={casus_belli=acquire_core_state state_province_id=726}
+				attacker_goal={casus_belli=acquire_core_state state_province_id=729}
+			}
+		}
+		set_global_flag = second_italian_war_of_independence_started
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "Вернуть территории"
+		set_global_flag = second_italian_war_of_independence_did_not_started
+		any_owned = {
+			limit = { is_core = ITA }
+			secede_province = ITA
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 35305
+	title = "Отказ Франции"
+	desc = "Франция отказалсь от подписания предложенного ранее нами договора о совместной войне с Австрией."
+	picture = "Artillery"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Печально"
+                relation = { who = FROM value = -100 }
+	}
+}
+country_event = {
+	id = 35306
+	title = "Нарушенные обещания"
+	desc = "Мы нарушили обещания, данные нам итальянцам. В мире это будет расценено как вероломное предательство!"
+	picture = "Artillery"
+
+	trigger = {
+		tag = FRA
+		has_country_flag = deal_with_italy
+		has_global_flag = second_italian_war_of_independence_started
+		NOT = { has_global_flag = deal_completed }
+		OR = {
+			729 = {
+				owner = {
+					war_with = ITA
+					NOT = { war_with = THIS }
+				}
+			}
+			AND = {
+				729 = {
+					owner = {
+						NOT = { war_with = ITA }
+					}
+				}
+				ITA = { NOT = { owns = 729 }}
+			}
+		}
+        }
+        fire_only_once = yes
+
+        immediate = {
+                badboy = 10
+                prestige_factor = -0.10
+        }
+
+	option = {
+		name = "Мы так не договаривались!"
+	}
+}
+country_event = {
+	id = 35307
+	title = "Выполнение договора"
+	desc = "Мы выполнили свою часть сделки и теперь подошла очередь итальянцев выполнять свою. Они передают нам Савойю и Ниццу, как было уговорено ранее."
+	picture = "war_ended"
+
+	trigger = {
+		tag = FRA
+		has_country_flag = deal_with_italy
+		OR = {
+			has_global_flag = second_italian_war_of_independence_started
+			has_global_flag = second_italian_war_of_independence_did_not_started
+		}
+		ITA = {
+			NOT = {
+				OR = {
+					war_with = AUS
+					war_with = KUK
+				}
+			}
+			owns = 729
+		}	
+		NOT = { has_country_flag = the_contract_is_executed }
+        }
+
+        immediate = {
+                ITA = {
+			465 = {
+				remove_core = ITA
+				remove_core = SAR
+				add_core = THIS
+				secede_province = THIS
+			}
+			466 = {
+				remove_core = ITA
+				remove_core = SAR
+				add_core = THIS
+				secede_province = THIS
+			}
+			472 = {
+				remove_core = ITA
+				remove_core = SAR
+				add_core = THIS
+				secede_province = THIS
+			}
+			country_event = { id = 35308 days = 10 }
+		}
+		set_country_flag = the_contract_is_executed
+		set_global_flag = deal_completed
+        }
+
+	option = {
+		name = "У нашего союза большое будущее!"
+	}
+}
+country_event = {
+	id = 35308
+	title = "Выполнение договора"
+	desc = "Французы выполнили свою часть сделки и теперь подошла наша очередь выполнять свою. Мы должны передать им Савойю и Ниццу, как было уговорено ранее."
+	picture = "war_ended"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "У нашего союза большое будущее!"
+	}
+}
+#Italian Red Shirt Unification
+country_event = {
+	title = "EVTNAME11103"
+	desc = "EVTDESC11103"
+	picture = "garibaldi"
+
+	id = 11103
+
+	trigger = {
+		has_global_flag = liberal_revolutions_should_now_fire
+		NOT = { has_global_flag = italian_unification }
+        }
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			year = 1849
+		}
+		modifier = {
+			factor = 0.5
+			year = 1850
+		}
+		modifier = {
+			factor = 0.5
+			year = 1851
+		}
+		modifier = {
+			factor = 0.5
+			year = 1852
+		}
+		modifier = {
+			factor = 0.5
+			year = 1853
+		}
+	}
+
+        immediate = {
+		set_global_flag = italian_unification
+		any_country = {
+			limit = { AI = no }
+			country_event = 11106
+		}
+        }
+
+	option = {
+		name = "EVTOPTA11103"
+	}
+}
+country_event = {
+	id = 11104
+
+	title = "Движение Гарибальди"
+	desc = "EVTDESC11104"
+	picture = "garibaldi"
+
+	trigger = {
+		primary_culture = italian
+		has_global_flag = italian_unification
+		NOT = {
+			has_country_modifier = risorgimento
+			has_global_flag = italy_formed
+			AI = no
+		}
+        }
+
+        immediate = {
+		add_country_modifier = { name = risorgimento duration = -1 }
+        }
+
+	option = {
+		name = "Можем ли мы им сопротивляться?"
+	}
+}
+country_event = {
+	id = 11105
+
+	title = "Итальянская морская программа"
+	desc = "EVTDESC11105"
+	picture = "italian_naval_program"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Неужели у них может получиться? Ха-ха-ха!"
+	}
+}
+country_event = {
+	title = "EVTNAME11103"
+	desc = "EVTDESC11103"
+	picture = "garibaldi"
+
+	id = 11106
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA11106"
+	}
+}
+country_event = {
+	id = 11107
+
+	title = "EVTNAME11107"
+	desc = "EVTDESC11107"
+	picture = "garibaldi"
+
+	trigger = {
+		primary_culture = italian
+		has_country_modifier = risorgimento
+		OR = {
+			is_independant = yes
+			overlord = { primary_culture = italian }
+		}
+		AI = yes
+        }
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			factor = 0.5
+			year = 1849
+		}
+		modifier = {
+			factor = 0.5
+			year = 1850
+		}
+		modifier = {
+			factor = 0.5
+			year = 1851
+		}
+		modifier = {
+			factor = 0.5
+			year = 1852
+		}
+		modifier = {
+			factor = 0.5
+			year = 1853
+		}
+		modifier = {
+			factor = 0.01
+			year = 1855
+		}
+	}
+
+	option = {
+		name = "EVTOPTA11107"
+		random_country = {
+			limit = {
+				OR = {
+					AND = {
+						primary_culture = italian
+						AI = no
+					}
+					primary_culture = italian
+				}
+			}
+			inherit = THIS
+			any_owned = {
+				limit = {
+					is_core = THIS
+					NOT = { has_province_modifier = core_reg }
+				}
+				add_province_modifier = { name = core_reg duration = -1 }
+			}
+		}
+	}
+}
+country_event = {
+	id = 11108
+
+	title = "EVTNAME11108"
+	desc = "EVTDESC11108"
+	picture = "garibaldi2"
+
+	is_triggered_only = yes
+
+	immediate = {
+		726 = {
+			state_scope = {
+				any_owned = { secede_province = FROM }
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA11108"
+                war = {
+			target = FROM
+			attacker_goal = { casus_belli = acquire_state_event state_province_id = 726 }
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB11108"
+		prestige_factor = -0.10
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 11109
+
+	title = "EVTNAME11109"
+	desc = "EVTDESC11109"
+	picture = "garibaldi2"
+
+	is_triggered_only = yes
+
+	immediate = {
+		729 = {
+			state_scope = {
+				any_owned = { secede_province = FROM }
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA11109"
+                war = {
+			target = FROM
+			attacker_goal = { casus_belli = acquire_state_event state_province_id = 729 }
+		}
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPTB11109"
+		prestige_factor = -0.10
+		ai_chance = { factor = 0 }
+	}
+}
+##########################################################################
+##########################        Spain        ###########################
+##########################################################################
+country_event = {
+
+	id = 37700
+	news = yes
+	news_desc_long = "EVTDESC37700_NEWS_LONG"
+	news_desc_medium = "EVTDESC37700_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC37700_NEWS_SHORT"
+
+	trigger = {
+		tag = SPA
+		year = 1837
+		NOT = { year = 1840 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1838
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1839
+		}
+	}
+
+	title = "EVTNAME37700"
+	desc = "EVTDESC37700"
+	picture = "Upperhouse"
+
+	option = {
+		name = "EVTOPTA37700"
+		clergymen = {
+			scaled_militancy = {
+				factor = -2
+				ideology = conservative
+			}
+		}
+		clergymen = {
+			scaled_militancy = {
+				factor = -3
+				ideology = reactionary
+			}
+		}
+		aristocrats = {
+			scaled_militancy = {
+				factor = -2
+				ideology = conservative
+			}
+		}
+		aristocrats = {
+			scaled_militancy = {
+				factor = -3
+				ideology = reactionary
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB37700"
+		clergymen = {
+			scaled_militancy = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		clergymen = {
+			scaled_militancy = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+		clergymen = {
+			scaled_consciousness = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		clergymen = {
+			scaled_consciousness = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+		aristocrats = {
+			scaled_militancy = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		aristocrats = {
+			scaled_militancy = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+		aristocrats = {
+			scaled_consciousness = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		aristocrats = {
+			scaled_consciousness = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 37701
+	news = yes
+	news_desc_long = "EVTDESC37701_NEWS_LONG"
+	news_desc_medium = "EVTDESC37701_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC37701_NEWS_SHORT"
+
+	trigger = {
+		tag = SPA
+		year = 1851
+		owns = 2209 #Havana
+		NOT = { year = 1854 war_with = USA }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1852
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1853
+		}
+	}
+
+	title = "EVTNAME37701"
+	desc = "EVTDESC37701"
+	picture = "Execution"
+
+	option = {
+		name = "EVTOPTA37701"
+		relation = { who = USA value = -100 }
+	}
+}
+country_event = {
+
+	id = 37702
+
+	trigger = {
+		tag = SPA
+		year = 1851
+		owns = 2209 #Havana
+		NOT = { year = 1885 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1886
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1887
+		}
+	}
+
+	title = "EVTNAME37702"
+	desc = "EVTDESC37702"
+	picture = "Cubanrebels"
+
+	option = {
+		name = "EVTOPTA37702"
+		relation = { who = USA value = -100 }
+		SPA_2209 = {
+			any_pop = {
+				limit = { has_pop_culture = caribeno }
+				militancy = 7
+			}
+			any_pop = {
+				limit = { has_pop_culture = africans }
+				militancy = 7
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 37706
+	news = yes
+	news_desc_long = "EVTDESC37706_NEWS_LONG"
+	news_desc_medium = "EVTDESC37706_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC37706_NEWS_SHORT"
+
+	trigger = {
+		tag = SPA
+		year = 1907
+		NOT = { year = 1915 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1908
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1910
+		}
+	}
+
+	title = "EVTNAME37706"
+	desc = "EVTDESC37706"
+	picture = "picaso"
+
+	option = {
+		name = "EVTOPTA37706" 
+		prestige = 20
+	}
+}
+country_event = {
+
+	id = 37707
+
+	trigger = {
+		tag = SPA
+		year = 1854
+		government = hms_government
+		NOT = { year = 1858 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1855
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1856
+		}
+	}
+
+	title = "EVTNAME37707"
+	desc = "EVTDESC37707"
+	picture = "Administration"
+
+	option = {
+		name = "EVTOPTA37707"
+		farmers = {
+			militancy = 2
+			consciousness = 2
+		}
+	}
+	option = {
+		name = "EVTOPTB37707"
+		clergymen = {
+			scaled_militancy = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		clergymen = {
+			scaled_militancy = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+		clergymen = {
+			scaled_consciousness = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		clergymen = {
+			scaled_consciousness = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC37707"
+		clergymen = {
+			scaled_consciousness = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		clergymen = {
+			scaled_consciousness = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+		aristocrats = {
+			scaled_consciousness = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		aristocrats = {
+			scaled_consciousness = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+		capitalists = {
+			scaled_consciousness = {
+				factor = 2
+				ideology = conservative
+			}
+		}
+		capitalists = {
+			scaled_consciousness = {
+				factor = 3
+				ideology = reactionary
+			}
+		}
+	}
+}
+#Madoz's Deamortisation
+country_event = {
+
+	id = 37708
+
+	trigger = {
+		tag = SPA
+		year = 1842
+		NOT = { year = 1846 }
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 5
+		modifier = {
+			factor = 0.75 #increase likelihood to happen
+			year = 1855
+		}
+		modifier = {
+			factor = 0.95 #increase likelihood to happen
+			year = 1856
+		}
+	}
+
+	title = "EVTNAME37708"
+	desc = "EVTDESC37708"
+	picture = "Administration"
+
+	option = {
+		name = "EVTOPTA37708"
+		officers = {
+			militancy = 1
+			consciousness = 1
+		}
+		soldiers = {
+			militancy = 1
+			consciousness = 1
+		}
+		artisans = {
+			militancy = -1
+			consciousness = -1
+		}
+		craftsmen = {
+			militancy = -1
+			consciousness = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB37708"
+		officers = {
+			militancy = -1
+			consciousness = -1
+		}
+		soldiers = {
+			militancy = -1
+			consciousness = -1
+		}
+		artisans = {
+			militancy = 1
+			consciousness = 1
+		}
+		craftsmen = {
+			militancy = 1
+			consciousness = 1
+		}
+	}
+}
+country_event = {
+
+	id = 37709
+
+	trigger = {
+		tag = SPA
+		has_country_flag = portuguese_assimilation
+		POR_521 = { owned_by = THIS }
+		POR_525 = { owned_by = THIS }
+		POR_518 = { owned_by = THIS }
+		NOT = {
+			has_country_flag = assimilated_portuguese_nation
+			521 = { has_province_modifier = assimilation_of_portuguese_nation }
+		}
+	}
+
+	title = "Конец ассимиляции португальцев"
+	desc = "Наша держава успешно ассимилировала португальцев, и как мы и предполагали — всё обошлось не без конфузов, но в целом государство справилось со своей задачей."
+	picture = "iberian_union"
+
+	immediate = {
+		add_accepted_culture = portuguese
+		any_pop = { limit = { culture = portuguese } militancy = 9 }
+		set_country_flag = assimilated_portuguese_nation
+	}
+
+	option = {
+		name = "Так держать!"
+	}
+}
+country_event = {
+
+	id = 37710
+
+	trigger = {
+		tag = SPA
+		MEX = {
+			war_with = THIS
+			NOT = {
+				has_country_modifier = latin_american_war_for_independance
+				has_country_flag = recognized_independence
+			}
+		}
+		NOT = { badboy = 0.5 }
+	}
+	mean_time_to_happen = { months = 6 }
+
+	title = "Независимость Мексики"
+	desc = "Мексика уже достаточно долго находится в состоянии войны с $COUNTRY_ADJ$ вооружёнными силами и объявила на весь мир о своей уже фактической независимости."
+	picture = "chilean_declaration_of_independence"
+
+	option = {
+		name = "Этого никогда не будет!"
+		badboy = 15
+		MEX = { add_country_modifier = { name = latin_american_war_for_independance duration = 1825 }}
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Пришло время мира"
+		end_war = MEX
+		MEX = { set_country_flag = recognized_independence }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 37711
+
+	trigger = {
+		tag = SPA
+		MEX = {
+			war_with = THIS
+			NOT = {
+				has_country_modifier = latin_american_war_for_independance
+				has_country_flag = recognized_independence
+			}
+		}
+		badboy = 0.5
+	}
+	mean_time_to_happen = { months = 6 }
+
+	title = "Независимость Мексики"
+	desc = "Мексика уже достаточно долго находится в состоянии войны с $COUNTRY_ADJ$ вооружёнными силами и объявила на весь мир о своей уже фактической независимости."
+	picture = "chilean_declaration_of_independence"
+
+	option = {
+		name = "Пришло время мира"
+		end_war = MEX
+		MEX = { set_country_flag = recognized_independence }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 37712
+
+	trigger = {
+		tag = SPA
+		GCO = {
+			war_with = THIS
+			NOT = {
+				has_country_modifier = latin_american_war_for_independance
+				has_country_flag = recognized_independence
+			}
+		}
+		NOT = { badboy = 0.5 }
+	}
+	mean_time_to_happen = { months = 6 }
+
+	title = "Независимость Великой Колумбии"
+	desc = "Великая Колумбия уже достаточно долго находится в состоянии войны с $COUNTRY_ADJ$ вооружёнными силами и объявила на весь мир о своей уже фактической независимости."
+	picture = "chilean_declaration_of_independence"
+
+	option = {
+		name = "Этого никогда не будет!"
+		badboy = 15
+		GCO = { add_country_modifier = { name = latin_american_war_for_independance duration = 1825 }}
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Пришло время мира"
+		end_war = GCO
+		GCO = { set_country_flag = recognized_independence }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 37713
+
+	trigger = {
+		tag = SPA
+		GCO = {
+			war_with = THIS
+			NOT = {
+				has_country_modifier = latin_american_war_for_independance
+				has_country_flag = recognized_independence
+			}
+		}
+		badboy = 0.5
+	}
+	mean_time_to_happen = { months = 6 }
+
+	title = "Независимость Великой Колумбии"
+	desc = "Великая Колумбия уже достаточно долго находится в состоянии войны с $COUNTRY_ADJ$ вооружёнными силами и объявила на весь мир о своей уже фактической независимости."
+	picture = "chilean_declaration_of_independence"
+
+	option = {
+		name = "Пришло время мира"
+		end_war = GCO
+		GCO = { set_country_flag = recognized_independence }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 37714
+
+	trigger = {
+		tag = SPA
+		PEU = {
+			war_with = THIS
+			NOT = {
+				has_country_modifier = latin_american_war_for_independance
+				has_country_flag = recognized_independence
+			}
+		}
+		NOT = { badboy = 0.5 }
+	}
+	mean_time_to_happen = { months = 6 }
+
+	title = "Независимость Перу"
+	desc = "Перу уже достаточно долго находится в состоянии войны с $COUNTRY_ADJ$ вооружёнными силами и объявила на весь мир о своей уже фактической независимости."
+	picture = "chilean_declaration_of_independence"
+
+	option = {
+		name = "Этого никогда не будет!"
+		badboy = 15
+		PEU = { add_country_modifier = { name = latin_american_war_for_independance duration = 1825 }}
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Пришло время мира"
+		end_war = PEU
+		PEU = { set_country_flag = recognized_independence }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 37715
+
+	trigger = {
+		tag = SPA
+		PEU = {
+			war_with = THIS
+			NOT = {
+				has_country_modifier = latin_american_war_for_independance
+				has_country_flag = recognized_independence
+			}
+		}
+		badboy = 0.5
+	}
+	mean_time_to_happen = { months = 6 }
+
+	title = "Независимость Перу"
+	desc = "Перу уже достаточно долго находится в состоянии войны с $COUNTRY_ADJ$ вооружёнными силами и объявила на весь мир о своей уже фактической независимости."
+	picture = "chilean_declaration_of_independence"
+
+	option = {
+		name = "Пришло время мира"
+		end_war = PEU
+		PEU = { set_country_flag = recognized_independence }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 37716
+
+	trigger = {
+		tag = SPA
+		BOL = {
+			war_with = THIS
+			NOT = {
+				has_country_modifier = latin_american_war_for_independance
+				has_country_flag = recognized_independence
+			}
+		}
+		NOT = { badboy = 0.5 }
+	}
+	mean_time_to_happen = { months = 6 }
+
+	title = "Независимость Боливии"
+	desc = "Боливия уже достаточно долго находится в состоянии войны с $COUNTRY_ADJ$ вооружёнными силами и объявила на весь мир о своей уже фактической независимости."
+	picture = "chilean_declaration_of_independence"
+
+	option = {
+		name = "Этого никогда не будет!"
+		badboy = 15
+		BOL = { add_country_modifier = { name = latin_american_war_for_independance duration = 1825 }}
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Пришло время мира"
+		end_war = BOL
+		BOL = { set_country_flag = recognized_independence }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 37717
+
+	trigger = {
+		tag = SPA
+		BOL = {
+			war_with = THIS
+			NOT = {
+				has_country_modifier = latin_american_war_for_independance
+				has_country_flag = recognized_independence
+			}
+		}
+		badboy = 0.5
+	}
+	mean_time_to_happen = { months = 6 }
+
+	title = "Независимость Боливии"
+	desc = "Боливия уже достаточно долго находится в состоянии войны с $COUNTRY_ADJ$ вооружёнными силами и объявила на весь мир о своей уже фактической независимости."
+	picture = "chilean_declaration_of_independence"
+
+	option = {
+		name = "Пришло время мира"
+		end_war = BOL
+		BOL = { set_country_flag = recognized_independence }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 37718
+
+	trigger = {
+		tag = SPA
+		CHL = {
+			war_with = THIS
+			NOT = {
+				has_country_modifier = latin_american_war_for_independance
+				has_country_flag = recognized_independence
+			}
+		}
+		NOT = { badboy = 0.5 }
+	}
+	mean_time_to_happen = { months = 6 }
+
+	title = "Независимость Чили"
+	desc = "Чили уже достаточно долго находится в состоянии войны с $COUNTRY_ADJ$ вооружёнными силами и объявила на весь мир о своей уже фактической независимости."
+	picture = "chilean_declaration_of_independence"
+
+	option = {
+		name = "Этого никогда не будет!"
+		badboy = 15
+		CHL = { add_country_modifier = { name = latin_american_war_for_independance duration = 1825 }}
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Пришло время мира"
+		end_war = CHL
+		CHL = { set_country_flag = recognized_independence }
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+
+	id = 37719
+
+	trigger = {
+		tag = SPA
+		CHL = {
+			war_with = THIS
+			NOT = {
+				has_country_modifier = latin_american_war_for_independance
+				has_country_flag = recognized_independence
+			}
+		}
+		badboy = 0.5
+	}
+	mean_time_to_happen = { months = 6 }
+
+	title = "Независимость Чили"
+	desc = "Чили уже достаточно долго находится в состоянии войны с $COUNTRY_ADJ$ вооружёнными силами и объявила на весь мир о своей уже фактической независимости."
+	picture = "chilean_declaration_of_independence"
+
+	option = {
+		name = "Пришло время мира"
+		end_war = CHL
+		CHL = { set_country_flag = recognized_independence }
+		ai_chance = { factor = 1 }
+	}
+}

@@ -1,0 +1,5 @@
+trade_goods = sulphur
+life_rating = 40
+owner = NET
+controller = NET
+add_core = INO

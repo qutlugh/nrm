@@ -1,0 +1,42 @@
+cruiser = {
+	icon = 10
+	naval_icon = 8
+	
+	type = naval
+	sprite = Cruiser
+	active = no
+	capital = yes
+	unit_type = light_ship #big_ship
+	move_sound = steam_move
+	select_sound = steam_selected
+	colonial_points = 100
+	can_build_overseas = no
+	floating_flag = yes
+
+	#Core Abilities
+	priority = 20
+	max_strength = 100
+	default_organisation = 75
+	maximum_speed = 18
+	weighted_value = 8
+
+	#Building Costs
+	build_time = 150
+	build_cost = {
+		navy_supplies = 1000
+	}
+	limit_per_port = -1
+	supply_consumption_score = 0
+	min_port_level = 5
+
+	supply_consumption = 1.0
+	supply_cost = {
+                navy_supplies = 0.3
+	}
+	
+	#Naval Abilties
+	hull = 150
+	gun_power = 50
+	fire_range = 0.8
+	evasion = 0.3
+}

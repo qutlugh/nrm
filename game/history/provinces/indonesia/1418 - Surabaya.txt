@@ -1,0 +1,7 @@
+owner = NET
+controller = NET
+add_core = INO
+trade_goods = sulphur
+life_rating = 40
+state_building = { level = 4 building = sulphur_mine_10 upgrade = yes }
+colonial = 2

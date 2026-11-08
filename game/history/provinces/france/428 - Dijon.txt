@@ -1,0 +1,12 @@
+owner = FRA
+controller = FRA
+add_core = FRA
+trade_goods = fruit
+life_rating = 31
+state_building = { level = 2 building = timber_lodge_2 upgrade = yes }
+state_building = { level = 2 building = ammunition_factory upgrade = yes }
+state_building = { level = 2 building = packing_plant upgrade = yes }
+state_building = { level = 2 building = artillery_factory upgrade = yes }
+state_building = { level = 2 building = canned_cattle_factory upgrade = yes }
+state_building = { level = 3 building = fertilizer_factory upgrade = yes }
+state_building = { level = 4 building = explosives_factory upgrade = yes }

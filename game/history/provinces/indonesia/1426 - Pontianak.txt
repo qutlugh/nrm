@@ -1,0 +1,5 @@
+trade_goods = grain
+add_core = INO
+life_rating = 40
+owner = NET
+controller = NET

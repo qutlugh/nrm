@@ -1,0 +1,1363 @@
+country_event = {
+
+	id = 1
+
+	trigger = {
+		tag = COM
+		exists = USA
+		year = 1910
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "US birthrate"
+	desc = " "
+	picture = "ballet"
+
+	option = {
+		name = " "
+		USA = {
+			all_core = {
+				remove_province_modifier = literacy_0
+				remove_province_modifier = literacy_5
+				remove_province_modifier = literacy_10
+				remove_province_modifier = literacy_15
+				remove_province_modifier = literacy_20
+				remove_province_modifier = literacy_25
+				remove_province_modifier = literacy_30
+				remove_province_modifier = literacy_35
+				remove_province_modifier = literacy_40
+				remove_province_modifier = literacy_45
+				remove_province_modifier = literacy_50
+				remove_province_modifier = literacy_55
+				remove_province_modifier = literacy_60
+				remove_province_modifier = literacy_65
+				remove_province_modifier = literacy_70
+				remove_province_modifier = literacy_75
+				remove_province_modifier = literacy_80
+				remove_province_modifier = literacy_85
+				remove_province_modifier = literacy_90
+				remove_province_modifier = literacy_95
+				remove_province_modifier = literacy_100
+			}
+			country_event = { id = 7 days = 31 }
+		}
+		add_country_modifier = { name = changing_birthrate_of_some_country duration = 60 }
+	}
+}
+country_event = {
+
+	id = 2
+
+	trigger = {
+		tag = COM
+		OR = {
+			exists = ITA
+			exists = SAR
+			exists = SIC
+			exists = LOM
+			exists = LUC
+			exists = MOD
+			exists = PAP
+			exists = PAR
+			exists = TUS
+			exists = VEN
+			exists = MLT
+		}
+		year = 1890
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "Italian birthrate"
+	desc = " "
+	picture = "ballet"
+
+	option = {
+		name = " "
+		ITA = {
+			all_core = {
+				remove_province_modifier = literacy_0
+				remove_province_modifier = literacy_5
+				remove_province_modifier = literacy_10
+				remove_province_modifier = literacy_15
+				remove_province_modifier = literacy_20
+				remove_province_modifier = literacy_25
+				remove_province_modifier = literacy_30
+				remove_province_modifier = literacy_35
+				remove_province_modifier = literacy_40
+				remove_province_modifier = literacy_45
+				remove_province_modifier = literacy_50
+				remove_province_modifier = literacy_55
+				remove_province_modifier = literacy_60
+				remove_province_modifier = literacy_65
+				remove_province_modifier = literacy_70
+				remove_province_modifier = literacy_75
+				remove_province_modifier = literacy_80
+				remove_province_modifier = literacy_85
+				remove_province_modifier = literacy_90
+				remove_province_modifier = literacy_95
+				remove_province_modifier = literacy_100
+			}
+		}
+		random_country = {
+			limit = { primary_culture = italian }
+			country_event = { id = 12 days = 31 }
+		}
+		add_country_modifier = { name = changing_birthrate_of_some_country duration = 60 }
+	}
+}
+country_event = {
+
+	id = 3
+
+	trigger = {
+		tag = COM
+		exists = TUR
+		year = 1940
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "Turkish birthrate"
+	desc = " "
+	picture = "ballet"
+
+	option = {
+		name = " "
+		TUR = {
+			all_core = {
+				remove_province_modifier = literacy_0
+				remove_province_modifier = literacy_5
+				remove_province_modifier = literacy_10
+				remove_province_modifier = literacy_15
+				remove_province_modifier = literacy_20
+				remove_province_modifier = literacy_25
+				remove_province_modifier = literacy_30
+				remove_province_modifier = literacy_35
+				remove_province_modifier = literacy_40
+				remove_province_modifier = literacy_45
+				remove_province_modifier = literacy_50
+				remove_province_modifier = literacy_55
+				remove_province_modifier = literacy_60
+				remove_province_modifier = literacy_65
+				remove_province_modifier = literacy_70
+				remove_province_modifier = literacy_75
+				remove_province_modifier = literacy_80
+				remove_province_modifier = literacy_85
+				remove_province_modifier = literacy_90
+				remove_province_modifier = literacy_95
+				remove_province_modifier = literacy_100
+			}
+			country_event = { id = 7 days = 31 }
+		}
+		add_country_modifier = { name = changing_birthrate_of_some_country duration = 60 }
+	}
+}
+country_event = {
+
+	id = 4
+
+	trigger = {
+		tag = COM
+		exists = NET
+		year = 1850
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "Dutch birthrate"
+	desc = " "
+	picture = "ballet"
+
+	option = {
+		name = " "
+		NET = {
+			all_core = {
+				remove_province_modifier = literacy_0
+				remove_province_modifier = literacy_5
+				remove_province_modifier = literacy_10
+				remove_province_modifier = literacy_15
+				remove_province_modifier = literacy_20
+				remove_province_modifier = literacy_25
+				remove_province_modifier = literacy_30
+				remove_province_modifier = literacy_35
+				remove_province_modifier = literacy_40
+				remove_province_modifier = literacy_45
+				remove_province_modifier = literacy_50
+				remove_province_modifier = literacy_55
+				remove_province_modifier = literacy_60
+				remove_province_modifier = literacy_65
+				remove_province_modifier = literacy_70
+				remove_province_modifier = literacy_75
+				remove_province_modifier = literacy_80
+				remove_province_modifier = literacy_85
+				remove_province_modifier = literacy_90
+				remove_province_modifier = literacy_95
+				remove_province_modifier = literacy_100
+			}
+			country_event = { id = 7 days = 31 }
+		}
+		add_country_modifier = { name = changing_birthrate_of_some_country duration = 60 }
+	}
+}
+country_event = {
+
+	id = 5
+
+	trigger = {
+		tag = COM
+		OR = {
+			exists = SWE
+			exists = SCA
+		}
+		year = 1900
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "Sweden birthrate"
+	desc = " "
+	picture = "ballet"
+
+	option = {
+		name = " "
+		SWE = {
+			all_core = {
+				remove_province_modifier = literacy_0
+				remove_province_modifier = literacy_5
+				remove_province_modifier = literacy_10
+				remove_province_modifier = literacy_15
+				remove_province_modifier = literacy_20
+				remove_province_modifier = literacy_25
+				remove_province_modifier = literacy_30
+				remove_province_modifier = literacy_35
+				remove_province_modifier = literacy_40
+				remove_province_modifier = literacy_45
+				remove_province_modifier = literacy_50
+				remove_province_modifier = literacy_55
+				remove_province_modifier = literacy_60
+				remove_province_modifier = literacy_65
+				remove_province_modifier = literacy_70
+				remove_province_modifier = literacy_75
+				remove_province_modifier = literacy_80
+				remove_province_modifier = literacy_85
+				remove_province_modifier = literacy_90
+				remove_province_modifier = literacy_95
+				remove_province_modifier = literacy_100
+			}
+		}
+		random_country = {
+			limit = { OR = {
+				tag = SWE
+				tag = SCA
+			}}
+			country_event = { id = 7 days = 31 }
+		}
+		add_country_modifier = { name = changing_birthrate_of_some_country duration = 60 }
+	}
+}
+country_event = {
+
+	id = 6
+
+	trigger = {
+		tag = COM
+		OR = {
+			exists = RUS
+			exists = SOV
+		}
+		year = 1910
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "Russian birthrate"
+	desc = " "
+	picture = "ballet"
+
+	option = {
+		name = " "
+		random_country = {
+			limit = { OR = {
+				AND = {
+					tag = RUS
+					NOT = { exists = SOV }
+				}
+				tag = SOV
+			}}
+			all_core = {
+				remove_province_modifier = literacy_0
+				remove_province_modifier = literacy_5
+				remove_province_modifier = literacy_10
+				remove_province_modifier = literacy_15
+				remove_province_modifier = literacy_20
+				remove_province_modifier = literacy_25
+				remove_province_modifier = literacy_30
+				remove_province_modifier = literacy_35
+				remove_province_modifier = literacy_40
+				remove_province_modifier = literacy_45
+				remove_province_modifier = literacy_50
+				remove_province_modifier = literacy_55
+				remove_province_modifier = literacy_60
+				remove_province_modifier = literacy_65
+				remove_province_modifier = literacy_70
+				remove_province_modifier = literacy_75
+				remove_province_modifier = literacy_80
+				remove_province_modifier = literacy_85
+				remove_province_modifier = literacy_90
+				remove_province_modifier = literacy_95
+				remove_province_modifier = literacy_100
+			}
+			country_event = { id = 8 days = 31 }
+		}
+		add_country_modifier = { name = changing_birthrate_of_some_country duration = 60 }
+	}
+}
+country_event = {
+
+	id = 7
+
+	is_triggered_only = yes
+
+        immediate = {
+		all_core = {
+			limit = { life_rating = 40 }
+			life_rating = -5
+		}
+        }
+
+	title = "EVTNAME7"
+	desc = "EVTDESC7"
+	picture = "ballet"
+
+	option = {
+		name = "EVTOPTA7"
+		COM = { country_event = 9 }
+	}
+}
+country_event = {
+
+	id = 8
+
+	is_triggered_only = yes
+
+        immediate = {
+		all_core = {
+			limit = {
+				life_rating = 40
+				NOT = { is_core = TUR }
+			}
+			life_rating = -5
+		}
+        }
+
+	title = "EVTNAME7"
+	desc = "EVTDESC7"
+	picture = "ballet"
+
+	option = {
+		name = "EVTOPTA7"
+		COM = { country_event = 9 }
+	}
+}
+country_event = {
+
+	id = 9
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = COM
+		NOT = { has_country_modifier = changing_birthrate_of_some_country }
+	}
+
+	title = "Birthrate calculation"
+	desc = " "
+	picture = "ballet"
+
+	option = {
+		name = " "
+		any_country = {
+			any_state = {
+				limit = {
+					NOT = {
+						literacy = 0.05
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_0
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_0 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.05
+					NOT = {
+						literacy = 0.10
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_5
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_5 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.10
+					NOT = {
+						literacy = 0.15
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_10
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_10 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.15
+					NOT = {
+						literacy = 0.20
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_15
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_15 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.20
+					NOT = {
+						literacy = 0.25
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_20
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_20 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.25
+					NOT = {
+						literacy = 0.30
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_25
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_25 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.30
+					NOT = {
+						literacy = 0.35
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_30
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_30 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.35
+					NOT = {
+						literacy = 0.40
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_35
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_35 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.40
+					NOT = {
+						literacy = 0.45
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_40
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_40 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.45
+					NOT = {
+						literacy = 0.50
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_45
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_45 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.50
+					NOT = {
+						literacy = 0.55
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_50
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_50 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.55
+					NOT = {
+						literacy = 0.60
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_55
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_55 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.60
+					NOT = {
+						literacy = 0.65
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_60
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_60 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.65
+					NOT = {
+						literacy = 0.70
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_65
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_65 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.70
+					NOT = {
+						literacy = 0.75
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_70
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_70 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.75
+					NOT = {
+						literacy = 0.80
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_75
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_75 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.80
+					NOT = {
+						literacy = 0.85
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_80
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_80 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.85
+					NOT = {
+						literacy = 0.90
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_85
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_85 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.90
+					NOT = {
+						literacy = 0.95
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_90
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_95
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_90 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 0.95
+					NOT = {
+						literacy = 1
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_95
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_100
+					add_province_modifier = { name = literacy_95 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					literacy = 1
+					NOT = {
+						is_colonial = yes
+						any_owned_province = {
+							has_province_modifier = literacy_100
+						}
+					}
+				}
+				any_owned = {
+					remove_province_modifier = literacy_0
+					remove_province_modifier = literacy_5
+					remove_province_modifier = literacy_10
+					remove_province_modifier = literacy_15
+					remove_province_modifier = literacy_20
+					remove_province_modifier = literacy_25
+					remove_province_modifier = literacy_30
+					remove_province_modifier = literacy_35
+					remove_province_modifier = literacy_40
+					remove_province_modifier = literacy_45
+					remove_province_modifier = literacy_50
+					remove_province_modifier = literacy_55
+					remove_province_modifier = literacy_60
+					remove_province_modifier = literacy_65
+					remove_province_modifier = literacy_70
+					remove_province_modifier = literacy_75
+					remove_province_modifier = literacy_80
+					remove_province_modifier = literacy_85
+					remove_province_modifier = literacy_90
+					remove_province_modifier = literacy_95
+					add_province_modifier = { name = literacy_100 duration = -1 }
+				}
+			}
+			any_state = {
+				limit = {
+					is_colonial = yes
+					NOT = { has_province_modifier = colonial_state_birthrate }
+				}
+				any_owned = {
+					add_province_modifier = { name = colonial_state_birthrate duration = -1 }
+				}
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 10
+
+	trigger = {
+		tag = COM
+		exists = ENG
+		year = 1870
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "British birthrate"
+	desc = " "
+	picture = "ballet"
+
+	option = {
+		name = " "
+		ENG = {
+			all_core = {
+				remove_province_modifier = literacy_0
+				remove_province_modifier = literacy_5
+				remove_province_modifier = literacy_10
+				remove_province_modifier = literacy_15
+				remove_province_modifier = literacy_20
+				remove_province_modifier = literacy_25
+				remove_province_modifier = literacy_30
+				remove_province_modifier = literacy_35
+				remove_province_modifier = literacy_40
+				remove_province_modifier = literacy_45
+				remove_province_modifier = literacy_50
+				remove_province_modifier = literacy_55
+				remove_province_modifier = literacy_60
+				remove_province_modifier = literacy_65
+				remove_province_modifier = literacy_70
+				remove_province_modifier = literacy_75
+				remove_province_modifier = literacy_80
+				remove_province_modifier = literacy_85
+				remove_province_modifier = literacy_90
+				remove_province_modifier = literacy_95
+				remove_province_modifier = literacy_100
+			}
+			country_event = { id = 7 days = 31 }
+		}
+		add_country_modifier = { name = changing_birthrate_of_some_country duration = 60 }
+	}
+}
+country_event = {
+
+	id = 11
+
+	trigger = {
+		tag = COM
+		OR = {
+			exists = PRU
+			exists = GER
+			exists = NGF
+		}
+		year = 1910
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "German birthrate"
+	desc = " "
+	picture = "ballet"
+
+	option = {
+		name = " "
+		GER = {
+			all_core = {
+				remove_province_modifier = literacy_0
+				remove_province_modifier = literacy_5
+				remove_province_modifier = literacy_10
+				remove_province_modifier = literacy_15
+				remove_province_modifier = literacy_20
+				remove_province_modifier = literacy_25
+				remove_province_modifier = literacy_30
+				remove_province_modifier = literacy_35
+				remove_province_modifier = literacy_40
+				remove_province_modifier = literacy_45
+				remove_province_modifier = literacy_50
+				remove_province_modifier = literacy_55
+				remove_province_modifier = literacy_60
+				remove_province_modifier = literacy_65
+				remove_province_modifier = literacy_70
+				remove_province_modifier = literacy_75
+				remove_province_modifier = literacy_80
+				remove_province_modifier = literacy_85
+				remove_province_modifier = literacy_90
+				remove_province_modifier = literacy_95
+				remove_province_modifier = literacy_100
+			}
+		}
+		random_country = {
+			limit = {
+				primary_culture = north_german
+				capital_scope = { is_core = GER }
+				OR = {
+					ai = no
+					AND = {
+						ai = yes
+						NOT = {
+							PRU = { ai = no }
+							NGF = { ai = no }
+							GER = { ai = no }
+						}
+					}
+				}
+			}
+			country_event = { id = 13 days = 31 }
+		}
+		add_country_modifier = { name = changing_birthrate_of_some_country duration = 60 }
+	}
+}
+country_event = {
+
+	id = 12
+
+	is_triggered_only = yes
+
+        immediate = {
+		ITA = {
+			all_core = {
+				limit = { life_rating = 40 }
+				life_rating = -5
+			}
+		}
+        }
+
+	title = "EVTNAME7"
+	desc = "EVTDESC7"
+	picture = "ballet"
+
+	option = {
+		name = "EVTOPTA7"
+		COM = { country_event = 9 }
+	}
+}
+country_event = {
+
+	id = 13
+
+	is_triggered_only = yes
+
+        immediate = {
+		GER = {
+			all_core = {
+				limit = { life_rating = 40 }
+				life_rating = -5
+			}
+		}
+        }
+
+	title = "EVTNAME7"
+	desc = "EVTDESC7"
+	picture = "ballet"
+
+	option = {
+		name = "EVTOPTA7"
+		COM = { country_event = 9 }
+	}
+}
+country_event = {
+
+	id = 14
+
+	trigger = {
+		tag = COM
+		exists = JAP
+		year = 1900
+	}
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	title = "Japanese birthrate"
+	desc = " "
+	picture = "ballet"
+
+	option = {
+		name = " "
+		JAP = {
+			all_core = {
+				remove_province_modifier = literacy_0
+				remove_province_modifier = literacy_5
+				remove_province_modifier = literacy_10
+				remove_province_modifier = literacy_15
+				remove_province_modifier = literacy_20
+				remove_province_modifier = literacy_25
+				remove_province_modifier = literacy_30
+				remove_province_modifier = literacy_35
+				remove_province_modifier = literacy_40
+				remove_province_modifier = literacy_45
+				remove_province_modifier = literacy_50
+				remove_province_modifier = literacy_55
+				remove_province_modifier = literacy_60
+				remove_province_modifier = literacy_65
+				remove_province_modifier = literacy_70
+				remove_province_modifier = literacy_75
+				remove_province_modifier = literacy_80
+				remove_province_modifier = literacy_85
+				remove_province_modifier = literacy_90
+				remove_province_modifier = literacy_95
+				remove_province_modifier = literacy_100
+			}
+			country_event = { id = 7 days = 31 }
+		}
+		add_country_modifier = { name = changing_birthrate_of_some_country duration = 60 }
+	}
+}

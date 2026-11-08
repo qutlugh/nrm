@@ -1,0 +1,523 @@
+domestic_politics =
+{
+	immigration =
+	{
+		immigrant_attract = 5.0 #increases attactiveness to immigrants by 500 %
+		icon = 3
+	}
+	colonial_exploitation = 
+	{
+		craftsmen = 1.00 #100% more likeley to become this type
+		pop_militancy_modifier = 0.10
+		limit = {
+			state_scope = {
+				is_colonial = yes
+				has_factories = yes
+			}
+		}
+		outliner_show_as_percent = yes
+		icon = 41
+	}
+	support_factories = 
+	{
+		local_factory_output = 0.10
+		local_factory_input = -0.02
+		icon = 38
+		limit = {
+			civilized = yes
+			state_scope = { has_factories = yes }
+		}
+	}
+	support_rgo = 
+	{
+		local_RGO_output = 0.40
+		icon = 39
+		limit = {
+			state_scope = { is_colonial = no }
+		}
+	}
+	free_medicine = 
+	{
+		life_rating = 0.06
+		min_social_spending = 0.01
+		pension_level = 0.02
+		unemployment_benefit = 0.02
+		icon = 37
+		limit = {
+			civilized = yes
+			health_care = good_health_care
+			state_scope = {
+				is_colonial = no
+				NOT = { any_owned_province = {
+					life_rating = 36
+				}}
+			}
+		}
+	}
+	scorched_earth_tactics = 
+	{
+		local_RGO_output = -2
+		local_factory_throughput = -2
+		pop_militancy_modifier = 0.5
+		war_exhaustion = 0.01
+		max_attrition = 7.5
+		icon = 34
+		limit = {
+			civilized = yes
+			NOT = {
+				state_scope = {
+					any_owned_province = {
+						NOT = { AND = {
+							is_core = THIS
+							has_province_modifier = core_reg
+						}}
+					}
+				}
+			}
+			OR = {
+				AND = {
+					is_greater_power = yes
+					war_countries = { is_greater_power = yes }
+				}
+				AND = {
+					is_secondary_power = yes
+					war_countries = { OR = {
+						is_greater_power = yes
+						is_secondary_power = yes
+					}}
+				}
+				AND = {
+					NOT = { OR = {
+						is_secondary_power = yes
+						is_greater_power = yes
+					}}
+					war = yes
+				}
+			}
+		}
+	}
+	national_guard =
+	{
+		pop_militancy_modifier = -0.25
+		local_RGO_output = -2
+		local_factory_throughput = -2
+		icon = 47
+		limit = {
+			civilized = yes
+			state_scope = { NOT = { any_owned_province = { NOT = { is_core = THIS }}}}
+		}
+	}
+}
+special_projects = 
+{
+        support_military_shipyards =
+	{
+		icon = 20
+                local_ship_build = -0.20
+		local_repair = 0.20
+                limit = {
+			ai = no
+			civilized = yes
+			state_scope = { any_owned_province = { has_building = naval_base }}
+                }
+	}
+	military_priority_of_infrastructure = 
+	{
+		supply_limit = 10
+		local_factory_throughput = -0.40
+		icon = 45
+                limit = {
+			ai = no
+			NOT = { state_scope = {
+				any_owned_province = { NOT = {
+					NOT = { controlled_by = THIS }
+					is_blockaded = no
+				}}
+			}}
+                }
+	}
+	reactionary_focus_by_superpower =
+        {
+                own_provinces = no
+
+		pop_militancy_modifier = -0.5
+                pop_consciousness_modifier = -0.5
+		outliner_show_as_percent = yes
+		flashpoint_tension = 0.001
+		icon = 27
+
+                limit = {
+			ai = no
+			THIS = { has_country_flag = capitalists_world_leader }
+			owner = { NOT = { has_country_flag = communist_world_leader }}
+                }
+	}
+	communist_focus_by_superpower =
+        {
+                own_provinces = no
+
+		pop_militancy_modifier = 0.5
+                pop_consciousness_modifier = 0.5
+		outliner_show_as_percent = yes
+		flashpoint_tension = 0.001
+		icon = 30
+
+                limit = {
+			ai = no
+			THIS = { has_country_flag = communist_world_leader }
+			owner = { NOT = { has_country_flag = capitalists_world_leader }}
+                }
+	}
+        support_nationalist_movement =
+	{
+		own_provinces = no
+
+		pop_militancy_modifier = 1
+		flashpoint_tension = 0.001
+		outliner_show_as_percent = yes
+		icon = 36
+
+                limit = {
+			ai = no
+			state_scope = { any_owned_province = { is_core = THIS }}
+                }
+	}
+        support_from_military_ships =
+	{
+		icon = 40
+                own_provinces = no
+                
+                movement_cost = 2
+		max_attrition = 5
+		outliner_show_as_percent = yes
+		flashpoint_tension = 0.001
+                limit = {
+			ai = no
+			civilized = yes
+			state_scope = { any_owned_province = { is_coastal = yes }}
+			state_scope = { NOT = { any_owned_province = { is_coastal = yes is_blockaded = no }}}
+			controller = { war_with = THIS }
+                }
+	}
+	genocyde =
+	{
+		population_growth = -0.002
+		pop_militancy_modifier = 0.5
+		icon = 48
+		limit = {
+			government = fascist_dictatorship
+			state_scope = { NOT = { any_owned_province = { is_core = THIS }}}
+		}
+	}
+}
+party_loyalty_focus =
+{
+	fascist_focus =
+	{
+		ideology = fascist
+		pop_militancy_modifier = 0.10
+		pop_consciousness_modifier = -0.10
+		loyalty_value = 0.01 # By that much pops will be more loyal
+		icon = 26
+	}
+	reactionary_focus =
+	{
+		ideology = reactionary
+		loyalty_value = 0.01 # By that much pops will be more loyal
+		icon = 27
+	}
+	conservative_focus =
+	{
+		ideology = conservative
+		loyalty_value = 0.01 # By that much pops will be more loyal
+		icon = 28
+	}
+	socialist_focus =
+	{
+		ideology = socialist
+		pop_consciousness_modifier = 0.10
+		loyalty_value = 0.01 # By that much pops will be more loyal
+		icon = 29
+	}
+	#communist_focus =
+	#{
+	#	ideology = communist
+	#	pop_militancy_modifier = 0.10
+	#	pop_consciousness_modifier = 0.10
+	#	loyalty_value = 0.01 # By that much pops will be more loyal
+	#	icon = 30
+	#}
+	liberal_focus =
+	{
+		ideology = liberal
+		pop_consciousness_modifier = 0.10
+		loyalty_value = 0.01 # By that much pops will be more loyal
+		icon = 31
+	}
+	anarcho_liberal_focus =
+	{
+		ideology = anarcho_liberal
+		pop_consciousness_modifier = 0.10
+		loyalty_value = 0.01 # By that much pops will be more loyal
+		icon = 32
+	}
+}
+promotion_focus =
+{
+	promote_aristocrats =
+	{
+		aristocrats = 0.30 #30% more likeley to become this type
+		icon = 5
+		outliner_show_as_percent = yes
+	}
+	promote_state_managers =
+	{
+		state_managers = 0.30 #30% more likeley to become this type
+		icon = 6
+		outliner_show_as_percent = yes
+		limit = {
+			private_property = prohibited
+			state_scope = {
+				has_factories = yes
+				is_colonial = no
+			}
+		}
+	}
+	promote_bureaucrats =
+	{
+		bureaucrats = 0.30 #30% more likeley to become this type
+		icon = 7
+		outliner_show_as_percent = yes
+		limit = {
+			state_scope = {
+				is_colonial = no
+				NOT = { bureaucrats = 0.015 }
+			}
+		}
+	}
+	promote_capitalists =
+	{
+		capitalists = 0.30 #30% more likeley to become this type
+		icon = 8
+		outliner_show_as_percent = yes
+		limit = {
+			NOT = { country = { private_property = prohibited }}
+			state_scope = { has_factories = yes is_colonial = no }
+		}
+	}
+	promote_clergymen =
+	{
+		clergymen = 0.30 #30% more likeley to become this type
+		icon = 9
+		outliner_show_as_percent = yes
+		limit = {
+			state_scope = {
+				is_colonial = no
+				NOT = { clergymen = 0.04 }
+			}
+		}
+	}
+	promote_clerks =
+	{
+		clerks = 0.30 #30% more likeley to become this type
+		icon = 10
+		outliner_show_as_percent = yes
+		limit = { state_scope = { has_factories = yes is_colonial = no }}
+	}
+	promote_craftsmen =
+	{
+		craftsmen = 0.30 #30% more likeley to become this type
+		icon = 11
+		outliner_show_as_percent = yes
+		limit = { state_scope = { has_factories = yes is_colonial = no }}
+	}
+	promote_farmers =
+	{
+		farmers = 0.30 #30% more likeley to become this type
+		icon = 12
+		outliner_show_as_percent = yes
+	}
+	promote_officers =
+	{
+		officers = 0.30 #30% more likeley to become this type
+		icon = 13
+		outliner_show_as_percent = yes
+		limit = {
+			state_scope = {
+				is_colonial = no
+			}
+		}
+	}
+	promote_soldiers =
+	{
+		soldiers = 0.30 #30% more likeley to become this type
+		icon = 14
+		outliner_show_as_percent = yes
+		limit = {
+			NOT = {
+				AND = {
+					nationalvalue = nv_archaic_economy
+					state_scope = { soldiers = 0.025 }
+				}
+				AND = {
+					nationalvalue = nv_commercial_capitalism
+					state_scope = { soldiers = 0.050 }
+				}
+				AND = {
+					nationalvalue = nv_industrial_capitalism
+					state_scope = { soldiers = 0.075 }
+				}
+				AND = {
+					nationalvalue = nv_imperialism
+					state_scope = { soldiers = 0.100 }
+				}
+				AND = {
+					nationalvalue = nv_socialism
+					state_scope = { soldiers = 0.100 }
+				}
+			}
+		}
+	}
+	promote_reservists =
+	{
+		reservists = 0.30 #30% more likeley to become this type
+		icon = 15
+		outliner_show_as_percent = yes
+		limit = { state_scope = { has_factories = yes is_colonial = no }}
+	}
+}
+production_focus =
+{
+	#automation_focus =
+	#{
+	#	aeroplanes = 24.5
+	#	barrels = 24.5
+	#	automobiles = 24.5
+	#	military_aeroplanes = 24.5
+	#	icon = 17
+	#	limit = { year = 1890 civilized = yes }
+	#}
+	#electrical_focus =
+	#{
+	#	radio = 24.5
+	#	telephones = 24.5
+	#	electric_gear = 24.5
+	#	icon = 18
+	#	limit = { year = 1890 civilized = yes }
+	#}
+	#chemical_focus =
+	#{
+	#	fuel = 24.5
+	#	oil = 24.5
+	#	rubber = 24.5
+	#	silk = 24.5
+	#	icon = 19
+	#	limit = { year = 1870 civilized = yes }
+	#}
+	#shipping_focus =
+	#{
+	#	steamer_convoy = 24.5
+	#	clipper_convoy = 24.5
+	#	navy_supplies = 24.5
+	#	icon = 20
+	#	limit = { civilized = yes }
+	#}
+	#textile_focus =
+	#{
+	#	luxury_clothes = 24.5
+	#	regular_clothes = 24.5
+	#	fabric = 24.5
+	#	dye = 24.5
+	#	icon = 21
+	#	limit = { civilized = yes }
+	#}
+	#wood_focus = 
+	#{
+	#	paper = 24.5
+	#	luxury_furniture = 24.5
+	#	furniture = 24.5
+	#	lumber = 24.5
+	#	icon = 22
+	#	limit = { civilized = yes }
+	#}
+	#basic_industry_focus =
+	#{
+	#	steel = 24.5
+	#	machine_parts = 24.5
+	#	cement = 24.5
+	#	icon = 23
+	#	limit = { civilized = yes }
+	#}
+	#armaments_focus = 
+	#{
+	#	artillery1 = 24.5
+	#	ammunition = 24.5
+	#	canned_food = 24.5
+	#	military_supplies = 24.5
+	#	explosives = 24.5
+	#	icon = 24
+	#	limit = { civilized = yes }
+	#}
+	#consumer_focus = 
+	#{
+	#	liquor = 24.5
+	#	wine = 24.5
+	#	glass = 24.5
+	#	icon = 25
+	#	limit = { civilized = yes }
+	#}
+	#encourage_rail = 
+	#{
+	#	railroads = 900 #Capitalists 900% more likeley to choose railroads
+	#	icon = 2
+	#	limit = { civilized = yes }
+	#}
+}
+propaganda_focuses =
+{
+	propaganda =
+	{
+		pop_consciousness_modifier = -1
+		outliner_show_as_percent = yes
+		limit = {
+			state_scope = {
+				NOT = {
+					any_owned_province = {
+						NOT = {
+							controlled_by = THIS
+						}
+					}
+				}
+			}
+		}
+		icon = 42
+	}
+	science_support =
+	{
+		scientists = 0.10 #10% more likeley to become this type
+		icon = 46
+		outliner_show_as_percent = yes
+		limit = {
+			civilized = yes
+			state_scope = {
+				is_colonial = no
+				NOT = { scientists = 0.003 }
+			}
+		}
+	}
+	emigration =
+	{
+		immigrant_push = 2
+		icon = 44
+		limit = { state_scope = { NOT = { any_owned_province = { NOT = { is_core = THIS }}}}}
+	}
+	assimilation_support =
+	{
+		assimilation_rate = 3
+		icon = 49
+		limit = {
+			civilized = yes
+			state_scope = { is_colonial = no }
+		}
+	}
+}

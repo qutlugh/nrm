@@ -1,0 +1,833 @@
+political_decisions = {
+	crown_empress_of_india = {
+		news = yes
+		news_desc_long = "empress_of_india_NEWS_LONG"
+		news_desc_medium = "empress_of_india_NEWS_MEDIUM"
+		news_desc_short = "empress_of_india_NEWS_SHORT"
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = empress_of_india
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			tag = ENG
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			ENG_1251 = { owned_by = THIS }
+			ENG_1291 = { owned_by = THIS }
+			HYD_1283 = { owned_by = THIS }
+			NAG_1277 = { owned_by = THIS }
+			MYS_1314 = { owned_by = THIS }
+			ENG_1317 = { owned_by = THIS }
+			ENG_1304 = { owned_by = THIS }
+			ENG_1305 = { owned_by = THIS }
+			ENG_1297 = { owned_by = THIS }
+			ENG_1261 = { owned_by = THIS }
+			ENG_1251 = { owned_by = THIS }
+			ENG_1247 = { owned_by = THIS }
+			ENG_1275 = { owned_by = THIS }
+			ENG_1236 = { owned_by = THIS }
+			ENG_1264 = { owned_by = THIS }
+			PAN_1227 = { owned_by = THIS }
+			SIN_1288 = { owned_by = THIS }
+		}
+		effect = {
+			prestige = 100
+			any_pop = {
+				limit = {
+					OR = {
+						has_pop_culture = indian
+						has_pop_culture = bengali
+						has_pop_culture = panjabi
+					}
+				}
+				militancy = -6
+			}
+			set_global_flag = empress_of_india
+		}
+	}
+	repeal_the_corn_laws = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = corn_laws_repealed_flag
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			OR = {
+				has_country_modifier = corn_laws
+				any_owned_province = {
+					has_country_modifier = corn_laws_local
+				}
+			}
+		}
+		allow = {
+			has_country_flag = irish_famine_en_flag
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = great_famine
+				}
+			}
+		}
+		effect = {
+			remove_country_modifier = corn_laws
+			any_owned = {
+				limit = { has_province_modifier = corn_laws_local }
+				remove_province_modifier = corn_laws_local
+			}
+			any_pop = { militancy = -5 consciousness = -5 }
+			set_country_flag = corn_laws_repealed_flag
+		}
+	}
+        build_the_bigben = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = the_bigben_was_built
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+		}
+		allow = {
+		        cheap_steel = 1
+                        money = 500000
+		}
+		effect = {
+			300 = {
+                                set_province_flag = bigben
+				add_province_modifier = {
+					name = the_bigben
+					duration = -1
+				}
+			}
+                        money = -500000
+			prestige = 200
+			set_country_flag = the_bigben_was_built
+		}
+	}
+	found_the_bbc = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = we_are_live_from_london
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			year = 1900
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+		}
+		allow = {
+			invention = national_radio_networks
+		}
+		effect = {
+			any_country = {
+				limit = { OR = { government = hms_government government = democracy }}
+				relation = { who = THIS value = 100 }
+			}
+			any_country = {
+				limit = {
+					NOT = {
+						OR = {
+							government = hms_government
+							government = democracy
+							government = proletarian_dictatorship
+						}
+					}
+				}
+				relation = { who = THIS value = -100 }
+				any_pop = { ideology = { value = liberal factor = 0.10 } consciousness = 3 }
+			}
+			any_pop = { limit = { is_accepted_culture = yes } militancy = -2 }
+			prestige = 50
+			set_country_flag = we_are_live_from_london
+		}
+	}
+	the_scotland_yard = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = elementary_my_dear_watson
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+		}
+		allow = {
+			realism = 1
+		}
+		effect = {
+			add_country_modifier = { name = the_yard duration = -1 }
+			set_country_flag = elementary_my_dear_watson
+		}
+	}
+	rhodesia_charter = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = ian_would_be_proud
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			owns = 2068
+			owns = 2069
+			owns = 2070
+			owns = 2071
+			owns = 2072
+			owns = 2073
+			owns = 2635
+		}
+		allow = {
+			invention = mission_to_civilize
+		}
+		effect = {
+			prestige = 10
+			2068 = {
+				change_province_name = "Солсбери"
+				state_scope = { change_region_name = "Южная Родезия" }
+			}
+			set_country_flag = ian_would_be_proud
+		}
+	}
+	webster_ashburton_treaty = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = webster_ashburton_signed
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+                        owns = 250
+		}
+		allow = {
+			slavery = no_slavery
+		}
+		effect = {
+			USA = { country_event = 16265 }
+			set_country_flag = webster_ashburton_signed
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1842 }
+			}
+		}
+	}
+	give_independence_to_india = {
+		alert = no
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = india_got_independance
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			NOT = { exists = HND }
+		}
+		allow = {
+			war = no
+			revolution_n_counterrevolution = 1
+			HND = { any_core = { owned_by = THIS }}
+		}
+		effect = {
+			remove_country_modifier = pax_britannica
+			PAK = { all_core = { remove_core = HND }}
+			release = HND
+			HND = {
+			   	government = democracy
+			    	capital = 1236
+				create_alliance = THIS
+				relation = { who = THIS value = 400 }
+				political_reform = federation
+				civilized = yes
+			}
+			release = PAK
+			PAK = {
+			    	capital = 1230
+			    	government = presidential_dictatorship
+				1230 = { change_province_name = "Исламабад" }
+				create_alliance = THIS
+				relation = { who = THIS value = 400 }
+				political_reform = unitary
+				civilized = yes
+			}
+			BNG = {
+			    	all_core = { remove_core = PAK }
+				civilized = yes
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+	make_scapa_flow_the_main_fleet_base = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = scapa_flow_is_main_fleet_base_now
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			owns = 2229
+		}
+		allow = {
+			naval_directionism = 1
+			2229 = { has_building = naval_base }
+		}
+		effect = {
+			2229 = { add_province_modifier = { name = main_fleet_base duration = -1 }}
+			set_country_flag = scapa_flow_is_main_fleet_base_now
+		}
+	}
+	build_londons_underground = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = underground_in_london_was_built
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			owns = 300
+		}
+		allow = {
+			steel_railroad = 1
+			money = 300000
+		}
+		effect = {
+			money = -300000
+			300 = { add_province_modifier = { name = underground duration = -1 }}
+			set_country_flag = underground_in_london_was_built
+		}
+	}
+	naval_defence_act = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = naval_defence_act_was_adopted
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			any_owned_province = { is_coastal = yes has_province_modifier = core_reg }
+		}
+		allow = {
+			naval_risk_management = 1
+			blue_and_brown_water_schools = 1
+			state_n_government = 1
+		}
+		effect = {
+			any_owned = {
+				limit = { is_coastal = yes has_province_modifier = core_reg }
+				add_province_modifier = { name = naval_defence_act_modifier duration = 3650 }
+			}
+			set_country_flag = naval_defence_act_was_adopted
+		}
+	}
+	invasion_in_afghanistan = {
+		picture = a_way_to_india
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = invaded_afghanistan_eng
+				any_owned_province = { has_building = selector }
+			}
+			AFG = { exists = yes is_independant = yes }
+			tag = ENG
+			year = 1838
+		}
+		allow = {
+			is_greater_power = yes
+			NOT = {
+				OR = {
+					relation = { who = RUS value = 0 }
+					military_access = AFG
+					badboy = 0.75
+				}
+			}
+			AFG = {
+				NOT = {
+					OR = {
+						alliance_with = THIS
+						part_of_sphere = yes
+						relation = { who = THIS value = 0 }
+					}
+				}
+				any_owned_province = {
+					any_neighbor_province = {
+						owner = { OR = { tag = THIS vassal_of = THIS }}
+					}
+				}
+			}
+		}
+		effect = {
+			badboy = 10
+			casus_belli = { target = AFG type = make_puppet months = 1 }
+			war = { target = AFG attacker_goal = { casus_belli = make_puppet }}
+			set_country_flag = invaded_afghanistan_eng
+		}
+	        ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1838 }
+			}
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}
+	separate_ulster_from_ireland = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = separated_ulster_from_ireland
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+		}
+		allow = {
+			IRE = { all_core = { owned_by = THIS }}
+			254 = {
+				is_core = IRE
+				is_core = THIS
+				owned_by = THIS
+			}
+			revolution_n_counterrevolution = 1
+			NOT = { badboy = 0.5 }
+		}
+		effect = {
+			badboy = 15
+			ENG_254 = { remove_core = IRE }
+			any_pop = { limit = { culture = irish } militancy = 6 }
+			set_country_flag = separated_ulster_from_ireland
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	treaty_of_gandamak = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = signed_treaty_of_gandamak
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+		}
+		allow = {
+			AFG = {
+				owns = 1219 owns = 1218 owns = 1220
+				1209 = { controlled_by = THIS }
+			}
+			war_with = AFG
+			OR = {
+				any_neighbor_country = { tag = AFG }
+				AFG = { any_neighbor_country = { vassal_of = THIS }}
+			}
+			NOT = { badboy = 0.5 }
+		}
+		effect = {
+			prestige = 50
+			badboy = 5
+			1219 = {
+				secede_province = THIS
+				remove_core = AFG
+				add_core = HND
+				add_core = PAK
+			}
+			1218 = {
+				secede_province = THIS
+				remove_core = AFG
+				add_core = HND
+				add_core = PAK
+			}
+			1220 = {
+				secede_province = THIS
+				remove_core = AFG
+				add_core = HND
+				add_core = PAK
+			}
+			diplomatic_influence = { who = AFG value = 200 }
+			end_war = AFG
+			set_country_flag = signed_treaty_of_gandamak
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	solve_south_african_border_dispute = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = south_african_border_dispute_solved
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			owns = 2087
+		}
+		allow = {
+			ORA_2103 = {
+				owned_by = THIS
+				is_colonial = yes
+			}
+			TRN_2108 = {
+				owned_by = THIS
+				is_colonial = yes
+			}
+			ZUL_2113 = {
+				owned_by = THIS
+				is_colonial = yes
+			}
+		}
+		effect = {
+			prestige = 200
+			set_country_flag = south_african_border_dispute_solved
+			ORA_2103 = { remove_core = ORA }
+			TRN_2108 = { remove_core = TRN }
+			ZUL_2113 = { remove_core = ZUL }
+			any_owned = {
+				limit = { is_core = SAF }
+				add_province_modifier = { name = british_colonial_migration duration = -1 }
+			}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	new_capital_of_british_india = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				exists = HND
+				has_country_flag = new_capital_of_british_india_has_been_built
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+		}
+		allow = {
+			owns = 1236
+			owns = 1297
+			money = 300000
+			year = 1900
+		}
+		effect = {
+			prestige = 150
+			money = -300000
+			1236={change_province_name="Нью-Дели" state_scope={change_region_name="§R(Чай-5)§! Нью-Дели"}}
+			1297={change_province_name="Мумбаи" state_scope={change_region_name="§R(Хлп-2)§! Мумбаи"}}
+			set_country_flag = new_capital_of_british_india_has_been_built
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	constitution_act_1867 = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = canada_formed
+				exists = CAN
+				any_owned_province = { has_building = selector }
+			}
+			any_owned_province = { is_core = CAN }
+			tag = ENG
+		}
+		allow = {
+			year = 1867
+			CAN = { any_core = { owned_by = THIS }}
+		}
+		effect = {
+			prestige = 50
+			release_vassal = CAN
+			CAN = { set_country_flag = not_mastered_yet_vassal }
+			create_alliance = CAN
+			relation = { who = CAN value = 400 }
+			diplomatic_influence = { who = CAN value = 200 }
+			set_global_flag = canada_formed
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	constitutional_convention_1891 = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = australia_formed
+				exists = AST
+				any_owned_province = { has_building = selector }
+			}
+			any_owned_province = { is_core = AST }
+			tag = ENG
+		}
+		allow = {
+			year = 1891
+			AST = { any_core = { owned_by = THIS }}
+		}
+		effect = {
+			prestige = 50
+			release_vassal = AST
+			AST = { set_country_flag = not_mastered_yet_vassal }
+			create_alliance = AST
+			relation = { who = AST value = 400 }
+			diplomatic_influence = { who = AST value = 200 }
+			set_global_flag = australia_formed
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	grant_new_zealand_status_of_dominion = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = new_zealand_formed
+				exists = NZL
+				any_owned_province = { has_building = selector }
+			}
+			any_owned_province = { is_core = NZL }
+			tag = ENG
+		}
+		allow = {
+			year = 1907
+			NZL = { any_core = { owned_by = THIS }}
+		}
+		effect = {
+			prestige = 50
+			release_vassal = NZL
+			NZL = { set_country_flag = not_mastered_yet_vassal }
+			create_alliance = NZL
+			relation = { who = NZL value = 400 }
+			diplomatic_influence = { who = NZL value = 200 }
+			set_global_flag = new_zealand_formed
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	south_africa_act_1909 = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = south_africa_formed
+				exists = SAF
+				any_owned_province = { has_building = selector }
+			}
+			any_owned_province = { is_core = SAF }
+			tag = ENG
+		}
+		allow = {
+			year = 1909
+			SAF = { any_core = { owned_by = THIS }}
+		}
+		effect = {
+			prestige = 50
+			release_vassal = SAF
+			SAF = { set_country_flag = not_mastered_yet_vassal }
+			create_alliance = SAF
+			relation = { who = SAF value = 400 }
+			diplomatic_influence = { who = SAF value = 200 }
+			set_global_flag = south_africa_formed
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	draw_mcmahon_line = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = mcmahon_line_was_drew
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			1593 = { owned_by = CHI }
+			has_country_modifier = pax_britannica
+		}
+		allow = {
+			is_greater_power = yes
+			state_n_government = 1
+			owns = 1260
+		}
+		effect = {
+			prestige = 50
+			CHI = { country_event = 160007 }
+			set_country_flag = mcmahon_line_was_drew
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	recover_westminster_palace = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = westminster_was_recovered
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			has_country_flag = westminster_palace_was_burned
+		}
+		allow = {
+			romanticism = 1
+			money = 300000
+		}
+		effect = {
+			money = -300000
+			prestige = 250
+			set_country_flag = westminster_was_recovered
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	denounce_paris_peace_treaty = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = ENG
+			has_country_modifier = paris_peace_treaty
+		}
+		allow = {
+			NOT = {
+				badboy = 0.25
+				truce_with = USA
+				relation = { who = USA value = 0 }
+			}
+		}
+		effect = {
+			badboy = 30
+			USA = { country_event = 44148 }
+			any_greater_power = { country_event = 44327 }
+			remove_country_modifier = paris_peace_treaty
+		}
+	        ai_will_do = { factor = 0 }
+	}
+}

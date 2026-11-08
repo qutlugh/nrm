@@ -1,0 +1,7 @@
+owner = ENG
+controller = ENG
+add_core = IRE
+terrain = urban
+trade_goods = grain
+life_rating = 35
+state_building = { level = 2 building = grain_farm_2 upgrade = yes }

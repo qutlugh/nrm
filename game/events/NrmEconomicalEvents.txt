@@ -1,0 +1,2793 @@
+#100100-100200 IDs
+
+###start
+country_event = {
+	id = 100100
+	title = "EVTNAME100100"
+	desc = "EVTDESC100100"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA100100"
+		set_country_flag = currency_reforming
+		add_country_modifier = { name = little_denomination duration = 1825 }
+		any_pop = {
+			limit = { NOT = { strata = rich }}
+			money = 5
+		}
+	}
+
+	option = {
+		name = "EVTOPTB100100"
+		set_country_flag = currency_reforming
+		add_country_modifier = { name = middle_denomination duration = 1825 }
+		any_pop = {
+			limit = { NOT = { strata = rich }}
+			money = 10
+		}
+	}
+
+	option = {
+		name = "EVTOPTC100100"
+		set_country_flag = currency_reforming
+		add_country_modifier = { name = large_denomination duration = 1825 }
+		any_pop = {
+			limit = { NOT = { strata = rich }}
+			money = 15
+		}
+	}
+
+	option = {
+		name = "EVTOPTD100100"
+	}
+}
+country_event = {
+	id = 100101
+	title = "EVTNAME100101"
+	desc = "EVTDESC100101"
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA100101"
+		set_country_flag = currency_reforming
+		add_country_modifier = { name = little_devaluation duration = 1825 }
+		any_pop = {
+			limit = { strata = rich }
+			money = 50
+		}
+	}
+
+	option = {
+		name = "EVTOPTB100101"
+		set_country_flag = currency_reforming
+		add_country_modifier = { name = middle_devaluation duration = 1825 }
+		any_pop = {
+			limit = { strata = rich }
+			money = 100
+		}
+	}
+
+	option = {
+		name = "EVTOPTC100101"
+		set_country_flag = currency_reforming
+		add_country_modifier = { name = large_devaluation duration = 1825 }
+		any_pop = {
+			limit = { strata = rich }
+			money = 150
+		}
+	}
+
+	option = {
+		name = "EVTOPTD100101"
+	}
+}
+################################### Selling & Buying warships ####################################################################################################
+country_event = {
+	id = 100138
+	title = "Заказ транспортных параходов!"
+	desc = "Держава $FROMCOUNTRY$ хочет заказать у нас 10 транспортных пароходов. Продать ли нам скоростные пароходы и по какой цене?"
+	picture = "steamer_transport"
+
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+
+	immediate = {
+		FROM = { set_country_flag = has_chartered_ships_flag }
+	}
+
+	option = {
+	     name = "Отказать"
+             FROM = { country_event = 100139 }
+	}
+	option = {
+		name = "100k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_steamer_transports
+		}
+		steamer_convoy = -2500
+		set_country_flag = invested_in_steamer_transports
+	}
+	option = {
+		name = "250k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_steamer_transports
+		}
+		steamer_convoy = -2500
+		set_country_flag = invested_in_steamer_transports
+	}
+	option = {
+		name = "500k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_steamer_transports
+		}
+		steamer_convoy = -2500
+		set_country_flag = invested_in_steamer_transports
+	}
+	option = {
+		name = "1kk"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_steamer_transports
+		}
+		steamer_convoy = -2500
+		set_country_flag = invested_in_steamer_transports
+	}
+}
+country_event = {
+	id = 100139
+	title = "В заказе ОТКАЗАНО!"
+	desc = "Держава $FROMCOUNTRY$ отказала нам в заказе на строительство кораблей на её верфях."
+        picture = "Administration"
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_modifier = has_chartered_ships
+		clr_country_flag = has_chartered_ships_flag
+	}
+
+	option = {
+		name = "Они теряют наши деньги!"
+	}
+}
+country_event = {
+	id = 100140
+	title = "Указана стоимость заказа - 100.000$"
+	desc = "Держава $FROMCOUNTRY$ указала стоимость заказа строительства кораблей на её верфях в 100.000$. Пойдём ли мы на такую сделку?"
+	picture = "deal"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Отказаться от заказа"
+		FROM = { country_event = 100153 }
+		remove_country_modifier = has_chartered_ships
+		clr_country_flag = chartered_steamer_transports
+		clr_country_flag = chartered_commerce_raiders
+		clr_country_flag = chartered_monitors
+		clr_country_flag = chartered_ironclads
+		clr_country_flag = chartered_protected_cruisers
+		clr_country_flag = chartered_battleships
+		clr_country_flag = chartered_dreadnoughts
+		clr_country_flag = has_chartered_ships_flag
+	}
+        option = {
+		name = "Заключить сделку"
+		money = -100000
+		FROM = { country_event = 100145 }
+	}
+}
+country_event = {
+	id = 100141
+	title = "Указана стоимость заказа - 250.000$"
+	desc = "Держава $FROMCOUNTRY$ указала стоимость заказа строительства кораблей на её верфях в 250.000$. Пойдём ли мы на такую сделку?"
+	picture = "deal"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Отказаться от заказа"
+		FROM = { country_event = 100153 }
+		remove_country_modifier = has_chartered_ships
+		clr_country_flag = chartered_steamer_transports
+		clr_country_flag = chartered_commerce_raiders
+		clr_country_flag = chartered_monitors
+		clr_country_flag = chartered_ironclads
+		clr_country_flag = chartered_protected_cruisers
+		clr_country_flag = chartered_battleships
+		clr_country_flag = chartered_dreadnoughts
+		clr_country_flag = has_chartered_ships_flag
+	}
+        option = {
+		name = "Заключить сделку"
+		money = -250000
+		FROM = { country_event = 100146 }
+	}
+}
+country_event = {
+	id = 100142
+	title = "Указана стоимость заказа - 500.000$"
+	desc = "Держава $FROMCOUNTRY$ указала стоимость заказа строительства кораблей на её верфях в 500.000$. Пойдём ли мы на такую сделку?"
+	picture = "deal"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Отказаться от заказа"
+		FROM = { country_event = 100153 }
+		remove_country_modifier = has_chartered_ships
+		clr_country_flag = chartered_steamer_transports
+		clr_country_flag = chartered_commerce_raiders
+		clr_country_flag = chartered_monitors
+		clr_country_flag = chartered_ironclads
+		clr_country_flag = chartered_protected_cruisers
+		clr_country_flag = chartered_battleships
+		clr_country_flag = chartered_dreadnoughts
+		clr_country_flag = has_chartered_ships_flag
+	}
+        option = {
+		name = "Заключить сделку"
+		money = -500000
+		FROM = { country_event = 100147 }
+	}
+}
+country_event = {
+	id = 100143
+	title = "Указана стоимость заказа - 1.000.000$"
+	desc = "Держава $FROMCOUNTRY$ указала стоимость заказа строительства кораблей на её верфях в 1.000.000$. Пойдём ли мы на такую сделку?"
+	picture = "deal"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Отказаться от заказа"
+		FROM = { country_event = 100153 }
+		remove_country_modifier = has_chartered_ships
+		clr_country_flag = chartered_steamer_transports
+		clr_country_flag = chartered_commerce_raiders
+		clr_country_flag = chartered_monitors
+		clr_country_flag = chartered_ironclads
+		clr_country_flag = chartered_protected_cruisers
+		clr_country_flag = chartered_battleships
+		clr_country_flag = chartered_dreadnoughts
+		clr_country_flag = has_chartered_ships_flag
+	}
+        option = {
+		name = "Заключить сделку"
+		money = -1000000
+ 		FROM = { country_event = 100148 }
+	}
+}
+country_event = {
+	id = 100145
+	title = "Заключение контракта стоимостью 100.000$"
+	desc = "Держава $FROMCOUNTRY$ заключила с нами сделку на поставку ей кораблей в течении года. Стоимость контракта 100.000$."
+	picture = "deal"
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = invested_in_steamer_transports
+		clr_country_flag = invested_in_commerce_raiders
+		clr_country_flag = invested_in_ironclads
+		clr_country_flag = invested_in_protected_cruisers
+		clr_country_flag = invested_in_battleships
+		clr_country_flag = invested_in_dreadnoughts
+		money = 100000
+	}
+
+	option = {
+		name = "Прекрасно"
+	}
+}
+country_event = {
+	id = 100146
+	title = "Заключение контракта стоимостью 250.000$"
+	desc = "Держава $FROMCOUNTRY$ заключила с нами сделку на поставку ей кораблей в течении года. Стоимость контракта 250.000$."
+	picture = "deal"
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = invested_in_steamer_transports
+		clr_country_flag = invested_in_commerce_raiders
+		clr_country_flag = invested_in_ironclads
+		clr_country_flag = invested_in_protected_cruisers
+		clr_country_flag = invested_in_battleships
+		clr_country_flag = invested_in_dreadnoughts
+		money = 250000
+	}
+
+	option = {
+		name = "Прекрасно"
+	}
+}
+country_event = {
+	id = 100147
+	title = "Заключение контракта стоимостью 500.000$"
+	desc = "Держава $FROMCOUNTRY$ заключила с нами сделку на поставку ей кораблей в течении года. Стоимость контракта 500.000$."
+	picture = "deal"
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = invested_in_steamer_transports
+		clr_country_flag = invested_in_commerce_raiders
+		clr_country_flag = invested_in_ironclads
+		clr_country_flag = invested_in_protected_cruisers
+		clr_country_flag = invested_in_battleships
+		clr_country_flag = invested_in_dreadnoughts
+		money = 500000
+	}
+
+	option = {
+		name = "Прекрасно"
+	}
+}
+country_event = {
+	id = 100148
+	title = "Заключение контракта стоимостью 1.000.000$"
+	desc = "Держава $FROMCOUNTRY$ заключила с нами сделку на поставку ей кораблей в течении года. Стоимость контракта 1.000.000$."
+	picture = "deal"
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = invested_in_steamer_transports
+		clr_country_flag = invested_in_commerce_raiders
+		clr_country_flag = invested_in_ironclads
+		clr_country_flag = invested_in_protected_cruisers
+		clr_country_flag = invested_in_battleships
+		clr_country_flag = invested_in_dreadnoughts
+		money = 1000000
+	}
+
+	option = {
+		name = "Прекрасно"
+	}
+}
+country_event = {
+	id = 100150
+	title = "Прибытие заказа - транспортные пароходы!"
+	desc = "Заказанные нами 10 транспортных пароходов были переброшены на одну из наших военно-морских баз."
+	picture = "steamer_transport"
+
+	trigger = {
+		has_country_flag = has_chartered_ships_flag
+		has_country_flag = chartered_steamer_transports
+		any_owned_province = {
+			has_province_modifier = core_reg
+			is_coastal = yes
+			is_blockaded = no
+		}
+		NOT = { has_country_modifier = has_chartered_ships }
+        }
+
+	immediate = {
+		clr_country_flag = chartered_steamer_transports_flag
+		clr_country_flag = has_chartered_ships_flag
+	}
+
+	option = {
+		name = "Великолепно!"
+		random_owned = {
+			limit = {
+				has_province_modifier = core_reg
+				is_coastal = yes
+				is_blockaded = no
+			}
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+			sub_unit = { type = steam_transport value = current }
+		}
+	}
+}
+country_event = {
+	id = 100151
+	title = "Заказ рейдеров!"
+	desc = "Держава $FROMCOUNTRY$ хочет заказать у нас 5 рейдеров. Продать ли нам манёвренные рейдеры и по какой цене?"
+	picture = "commerce_raider"
+
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+
+	immediate = {
+		FROM = { set_country_flag = has_chartered_ships_flag }
+	}
+
+	option = {
+		name = "Отказать"
+		FROM = { country_event = 100139 }
+	}
+	option = {
+		name = "100k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_commerce_raiders
+		}
+		steamer_convoy=-2500
+		set_country_flag = invested_in_commerce_raiders
+	}
+	option = {
+		name = "250k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_commerce_raiders
+		}
+		steamer_convoy=-2500
+		set_country_flag = invested_in_commerce_raiders
+	}
+	option = {
+		name = "500k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_commerce_raiders
+		}
+		steamer_convoy=-2500
+		set_country_flag = invested_in_commerce_raiders
+	}
+	option = {
+		name = "1kk"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_commerce_raiders
+		}
+		steamer_convoy=-2500
+		set_country_flag = invested_in_commerce_raiders
+	}
+}
+country_event = {
+	id = 100152
+	title = "Прибытие заказа - рейдеры!"
+	desc = "Заказанные нами 5 рейдеров были переброшены на одну из наших военно-морских баз."
+	picture = "commerce_raider"
+
+	trigger = {
+		has_country_flag = has_chartered_ships_flag
+		has_country_flag = chartered_commerce_raiders
+		NOT = { has_country_modifier = has_chartered_ships }
+		any_owned_province = {
+			has_province_modifier = core_reg
+			is_coastal = yes
+			is_blockaded = no
+		}
+        }
+
+	immediate = {
+		clr_country_flag = chartered_commerce_raiders
+		clr_country_flag = has_chartered_ships_flag
+	}
+
+	option = {
+		name = "Великолепно!"
+		random_owned = {
+			limit = {
+				has_province_modifier = core_reg
+				is_coastal = yes
+				is_blockaded = no
+			}
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+			sub_unit = { type = commerce_raider value = current }
+		}
+	}
+}
+country_event = {
+	id = 100153
+	title = "Держава $FROMCOUNTRY$ отказалась от заказа"
+	desc = "Посол из державы $FROMCOUNTRY$ вежливо отказался от сделанного ранее заказа. Возможно его не устроила указанная нами цена контракта."
+	picture = "burning_money"
+
+	is_triggered_only = yes
+
+	immediate = { set_country_flag = received_a_refusal }
+
+	option = {
+		name = "Странно..."
+	}
+}
+country_event = {
+	id = 100156
+	title = "Заказ броненосцев!"
+	desc = "Держава $FROMCOUNTRY$ хочет заказать у нас 5 броненосцев. Продать ли нам мощные броненосцы и по какой цене?"
+	picture = "ironclad"
+
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+
+	immediate = {
+		FROM = { set_country_flag = has_chartered_ships_flag }
+	}
+
+	option = {
+		name = "Отказать"
+		FROM = { country_event = 100139 }
+	}
+	option = {
+		name = "100k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_ironclads
+		}
+		steamer_convoy=-5000
+		set_country_flag = invested_in_ironclads
+	}
+	option = {
+		name = "250k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_ironclads
+		}
+		steamer_convoy=-5000
+		set_country_flag = invested_in_ironclads
+	}
+	option = {
+		name = "500k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_ironclads
+		}
+		steamer_convoy=-5000
+		set_country_flag = invested_in_ironclads
+	}
+	option = {
+		name = "1kk"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_ironclads
+		}
+		steamer_convoy=-5000
+		set_country_flag = invested_in_ironclads
+	}
+}
+country_event = {
+	id = 100157
+	title = "Прибытие заказа - броненосцы!"
+	desc = "Заказанные нами 5 броненосцев были переброшены на одну из наших военно-морских баз."
+	picture = "ironclad"
+
+	trigger = {
+		has_country_flag = has_chartered_ships_flag
+		has_country_flag = chartered_ironclads
+		NOT = { has_country_modifier = has_chartered_ships }
+		any_owned_province = {
+			has_province_modifier = core_reg
+			is_coastal = yes
+			is_blockaded = no
+		}
+        }
+
+	immediate = {
+		clr_country_flag = chartered_ironclads
+		clr_country_flag = has_chartered_ships_flag
+	}
+
+	option = {
+		name = "Великолепно!"
+		random_owned = {
+			limit = {
+				has_province_modifier = core_reg
+				is_coastal = yes
+				is_blockaded = no
+			}
+			sub_unit = { type = ironclad value = current }
+			sub_unit = { type = ironclad value = current }
+			sub_unit = { type = ironclad value = current }
+			sub_unit = { type = ironclad value = current }
+			sub_unit = { type = ironclad value = current }
+		}
+	}
+}
+country_event = {
+	id = 100158
+	title = "Заказ крейсеров!"
+	desc = "Держава $FROMCOUNTRY$ хочет заказать у нас 5 крейсеров. Продать ли нам быстроходные крейсеры и по какой цене?"
+	picture = "cruiser"
+
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+
+	immediate = {
+		FROM = { set_country_flag = has_chartered_ships_flag }
+	}
+
+	option = {
+		name = "Отказать"
+		FROM = { country_event = 100139 }
+	}
+	option = {
+		name = "100k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_protected_cruisers
+		}
+		navy_supplies = -5000
+		set_country_flag = invested_in_protected_cruisers
+	}
+	option = {
+		name = "250k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_protected_cruisers
+		}
+		navy_supplies = -5000
+		set_country_flag = invested_in_protected_cruisers
+	}
+	option = {
+		name = "500k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_protected_cruisers
+		}
+		navy_supplies = -5000
+		set_country_flag = invested_in_protected_cruisers
+	}
+	option = {
+		name = "1kk"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_protected_cruisers
+		}
+		navy_supplies = -5000
+		set_country_flag = invested_in_protected_cruisers
+	}
+}
+country_event = {
+	id = 100159
+	title = "Прибытие заказа - крейсеры!"
+	desc = "Заказанные нами 5 крейсеров были переброшены на одну из наших военно-морских баз."
+	picture = "cruiser"
+
+	trigger = {
+		has_country_flag = has_chartered_ships_flag
+		has_country_flag = chartered_protected_cruisers
+		NOT = { has_country_modifier = has_chartered_ships }
+		any_owned_province = {
+			has_province_modifier = core_reg
+			is_coastal = yes
+			is_blockaded = no
+		}
+        }
+
+	immediate = {
+		clr_country_flag = chartered_protected_cruisers
+		clr_country_flag = has_chartered_ships_flag
+	}
+
+	option = {
+		name = "Великолепно!"
+		random_owned = {
+			limit = {
+				has_province_modifier = core_reg
+				is_coastal = yes
+				is_blockaded = no
+			}
+			sub_unit = { type = cruiser value = current }
+			sub_unit = { type = cruiser value = current }
+			sub_unit = { type = cruiser value = current }
+			sub_unit = { type = cruiser value = current }
+			sub_unit = { type = cruiser value = current }
+		}
+	}
+}
+country_event = {
+	id = 100160
+	title = "Заказ линкора!"
+	desc = "Держава $FROMCOUNTRY$ хочет заказать у нас линкор. Продать ли нам прекрасный линкор и по какой цене?"
+	picture = "battleship"
+
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+
+	immediate = {
+		FROM = { set_country_flag = has_chartered_ships_flag }
+	}
+
+	option = {
+		name = "Отказать"
+		FROM = { country_event = 100139 }
+	}
+	option = {
+		name = "100k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_battleships
+		}
+		navy_supplies = -3000
+		set_country_flag = invested_in_battleships
+	}
+	option = {
+	     name = "250k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_battleships
+		}
+		navy_supplies = -3000
+		set_country_flag = invested_in_battleships
+	}
+	option = {
+		name = "500k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_battleships
+		}
+		navy_supplies = -3000
+		set_country_flag = invested_in_battleships
+	}
+	option = {
+		name = "1kk"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_battleships
+		}
+		navy_supplies = -3000
+		set_country_flag = invested_in_battleships
+	}
+}
+country_event = {
+	id = 100161
+	title = "Прибытие заказа - линкор!"
+	desc = "Заказанный нами линкор был переброшен на одну из наших военно-морских баз."
+	picture = "battleship"
+
+	trigger = {
+		has_country_flag = has_chartered_ships_flag
+		has_country_flag = chartered_battleships
+		NOT = { has_country_modifier = has_chartered_ships }
+		any_owned_province = {
+			has_province_modifier = core_reg
+			is_coastal = yes
+			is_blockaded = no
+		}
+        }
+
+	immediate = {
+		clr_country_flag = chartered_battleships
+		clr_country_flag = has_chartered_ships_flag
+	}
+
+	option = {
+		name = "Великолепно!"
+		random_owned = {
+			limit = {
+				has_province_modifier = core_reg
+				is_coastal = yes
+				is_blockaded = no
+			}
+			sub_unit = { type = battleship value = current }
+		}
+	}
+}
+country_event = {
+	id = 100162
+	title = "Заказ дредноута!"
+	desc = "Держава $FROMCOUNTRY$ хочет заказать у нас дредноут. Продать ли нам новейший дредноут и по какой цене?"
+	picture = "dreadnought"
+
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+
+	immediate = {
+		FROM = { set_country_flag = has_chartered_ships_flag }
+	}
+
+	option = {
+		name = "Отказать"
+		FROM = { country_event = 100139 }
+	}
+	option = {
+		name = "100k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_dreadnoughts
+		}
+		navy_supplies = -5000
+		set_country_flag = invested_in_dreadnoughts
+	}
+	option = {
+		name = "250k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_dreadnoughts
+		}
+		navy_supplies = -5000
+		set_country_flag = invested_in_dreadnoughts
+	}
+	option = {
+		name = "500k"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_dreadnoughts
+		}
+		navy_supplies = -5000
+		set_country_flag = invested_in_dreadnoughts
+	}
+	option = {
+		name = "1kk"
+		FROM = {
+			country_event = 100143
+			add_country_modifier = { name = has_chartered_ships duration = 365 }
+			set_country_flag = chartered_dreadnoughts
+		}
+		navy_supplies = -5000
+		set_country_flag = invested_in_dreadnoughts
+	}
+}
+country_event = {
+	id = 100163
+	title = "Прибытие заказа - дредноут!"
+	desc = "Заказанный нами дредноут был переброшен на одну из наших военно-морских баз."
+	picture = "dreadnought"
+
+	trigger = {
+		has_country_flag = has_chartered_ships_flag
+		has_country_flag = chartered_dreadnoughts
+		NOT = { has_country_modifier = has_chartered_ships }
+		any_owned_province = {
+			has_province_modifier = core_reg
+			is_coastal = yes
+			is_blockaded = no
+		}
+        }
+
+	immediate = {
+		clr_country_flag = chartered_dreadnoughts
+		clr_country_flag = has_chartered_ships_flag
+	}
+
+	option = {
+		name = "Великолепно!"
+		random_owned = {
+			limit = {
+				has_province_modifier = core_reg
+				is_coastal = yes
+				is_blockaded = no
+			}
+			sub_unit = { type = dreadnought value = current }
+		}
+	}
+}
+country_event = {
+	id = 100164
+	title = "Потерянные инвестиции в транспортные пароходы"
+	desc = "Мы можем вернуть половину вложенных в строительство транспортных пароходов средств, продав наш заказ заинтересованным частным лицам."
+	picture = "burning_money"
+
+	trigger = {
+		has_country_flag = invested_in_steamer_transports
+		has_country_flag = received_a_refusal
+        }
+
+	immediate = {
+		clr_country_flag = invested_in_steamer_transports
+		clr_country_flag = received_a_refusal
+		steamer_convoy = 2500
+	}
+
+	option = {
+		name = "Хоть что-то"
+	}
+}
+country_event = {
+	id = 100165
+	title = "Потерянные инвестиции в рейдеры"
+	desc = "Мы можем вернуть половину вложенных в строительство рейдеров средств, продав наш заказ заинтересованным частным лицам."
+	picture = "burning_money"
+
+	trigger = {
+		has_country_flag = invested_in_commerce_raiders
+		has_country_flag = received_a_refusal
+        }
+
+	immediate = {
+		clr_country_flag = invested_in_commerce_raiders
+		clr_country_flag = received_a_refusal
+		steamer_convoy = 2500
+	}
+
+	option = {
+		name = "Хоть что-то"
+	}
+}
+country_event = {
+	id = 100167
+	title = "Потерянные инвестиции в броненосцы"
+	desc = "Мы можем вернуть половину вложенных в строительство броненосцев средств, продав наш заказ заинтересованным частным лицам."
+	picture = "burning_money"
+
+	trigger = {
+		has_country_flag = invested_in_ironclads
+		has_country_flag = received_a_refusal
+        }
+
+	immediate = {
+		clr_country_flag = invested_in_ironclads
+		clr_country_flag = received_a_refusal
+		steamer_convoy = 5000
+	}
+
+	option = {
+		name = "Хоть что-то"
+	}
+}
+country_event = {
+	id = 100168
+	title = "Потерянные инвестиции в крейсеры"
+	desc = "Мы можем вернуть половину вложенных в строительство крейсеров средств, продав наш заказ заинтересованным частным лицам."
+	picture = "burning_money"
+
+	trigger = {
+		has_country_flag = invested_in_protected_cruisers
+		has_country_flag = received_a_refusal
+        }
+
+	immediate = {
+		clr_country_flag = invested_in_protected_cruisers
+		clr_country_flag = received_a_refusal
+		navy_supplies = 5000
+	}
+
+	option = {
+		name = "Хоть что-то"
+	}
+}
+country_event = {
+	id = 100169
+	title = "Потерянные инвестиции в линкор"
+	desc = "Мы можем вернуть половину вложенных в строительство линкора средств, продав наш заказ заинтересованным частным лицам."
+	picture = "burning_money"
+
+	trigger = {
+		has_country_flag = invested_in_battleships
+		has_country_flag = received_a_refusal
+        }
+
+	immediate = {
+		clr_country_flag = invested_in_battleships
+		clr_country_flag = received_a_refusal
+		navy_supplies = 3000
+	}
+
+	option = {
+		name = "Хоть что-то"
+	}
+}
+country_event = {
+	id = 100170
+	title = "Потерянные инвестиции в дредноут"
+	desc = "Мы можем вернуть половину вложенных в строительство дредноута средств, продав наш заказ заинтересованным частным лицам."
+	picture = "burning_money"
+
+	trigger = {
+             has_country_flag = invested_in_dreadnoughts
+             has_country_flag = received_a_refusal
+        }
+
+	immediate = {
+		clr_country_flag = invested_in_dreadnoughts
+		clr_country_flag = received_a_refusal
+		navy_supplies = 5000
+	}
+
+	option = {
+		name = "Хоть что-то"
+	}
+}
+##################################### NRM Province transfer #################################################################################
+country_event = {
+	id = 100171
+	title = "Обмен регионами"
+	desc = "Держава $FROMCOUNTRY$ предложила нам обмен регионами. Как мы поступим?"
+        picture = "Expansion"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Одобрить обмен"
+		FROM = { country_event = 100172 }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Отказаться"
+		FROM = { country_event = 100173 }
+		ai_chance = { factor = 0 }
+	}
+}
+country_event = {
+	id = 100172
+	title = "ОБМЕН ОДОБРЕН"
+	desc = "Держава $FROMCOUNTRY$ одобрила обмен регионами."
+        picture = "Expansion"
+
+	is_triggered_only = yes
+
+        immediate = {
+		FROM = {
+			any_owned = {
+				limit = {
+					controlled_by = FROM
+					has_province_modifier = province_ready_to_transfer
+				}
+				selector = -1
+				secede_province = THIS
+				remove_province_modifier = province_ready_to_transfer
+				add_province_modifier = { name = mastered_region duration = -1 }
+			}
+			#any_owned = {
+			#	limit = { NOT = { state_scope = { any_owned_province = {
+			#		is_capital = yes
+			#	}}}}
+			#	remove_province_modifier = core_reg
+			#}
+			#any_owned = {
+			#	add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+			#}
+		}
+		any_owned = {
+			limit = {
+				controlled_by = THIS
+				has_province_modifier = province_ready_to_transfer
+			}
+			selector = -1
+			secede_province = FROM
+			remove_province_modifier = province_ready_to_transfer
+			add_province_modifier = { name = mastered_region duration = -1 }
+		}
+		#any_owned = {
+		#	limit = { NOT = { state_scope = { any_owned_province = {
+		#		is_capital = yes
+		#	}}}}
+		#	remove_province_modifier = core_reg
+		#}
+		#any_owned = {
+		#	add_province_modifier = { name = calculation_of_core_regions duration = -1 }
+		#}
+        }
+
+	option = {
+		name = "Прекрасно"
+	}
+}
+country_event = {
+	id = 100173
+	title = "В ОБМЕНЕ ОТКАЗАНО"
+	desc = "Держава $FROMCOUNTRY$ отказалась обмениваться регионами."
+        picture = "Expansion"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Печально"
+	}
+}
+
+########################################## Financial crisis #####################################################################################################
+country_event = {
+	id = 100174
+	title = "Преддверие финансового краха"
+	desc = "EVTDESC100174"
+        picture = "capitalists"
+
+	trigger = {
+		OR = {
+			nationalvalue = nv_commercial_capitalism
+			nationalvalue = nv_industrial_capitalism
+			nationalvalue = nv_imperialism
+		}
+		NOT = {
+			private_property = prohibited
+			has_country_modifier = financial_crisis
+			has_country_modifier = the_likelihood_of_a_financial_crisis
+			has_country_modifier = mastering_vassal_market
+			has_country_modifier = mastering_market_of_great_power
+			has_country_modifier = country_market_is_open
+			any_owned_province = {
+				NOT = { has_province_modifier = mastered_region }
+			}
+			capital_scope = {
+				has_province_modifier = waiting_for_next_event
+			}
+		}
+		is_independant = yes
+		ai = no
+	}
+
+	immediate = {
+		add_country_modifier = { name = the_likelihood_of_a_financial_crisis duration = -1 }
+	}
+
+	option = {
+		name = "Для чего тогда нам нужны армия и флот?!"
+	}
+}
+country_event = {
+	id = 100175
+	title = "Новые рынки для инвестиций"
+	desc = "EVTDESC100175"
+        picture = "capitalists2"
+
+	trigger = {
+		has_country_modifier = the_likelihood_of_a_financial_crisis
+		OR = {
+			any_owned_province = {
+				has_province_modifier = mastering_region_mark
+			}
+			has_country_modifier = mastering_vassal_market
+			has_country_modifier = mastering_market_of_great_power
+		}
+	}
+
+	immediate = {
+		remove_country_modifier = the_likelihood_of_a_financial_crisis
+	}
+
+	option = {
+		name = "Отлично сработано!"
+	}
+}
+country_event = {
+	id = 100176
+	title = "Финансовый кризис"
+	desc = "EVTDESCSC"
+        picture = "stock_crash"
+
+	trigger = {
+		ai = no
+		OR = {
+			nationalvalue = nv_commercial_capitalism
+			nationalvalue = nv_industrial_capitalism
+			nationalvalue = nv_imperialism
+		}
+		OR = {
+			has_country_modifier = the_likelihood_of_a_financial_crisis
+			has_country_modifier = bad_debter
+			AND = {
+				has_country_modifier = the_likelihood_of_a_financial_crisis_alt
+				NOT = { has_country_modifier = cut_taxes }
+			}
+		}
+		NOT = {
+			government = proletarian_dictatorship
+			has_country_modifier = financial_crisis
+			has_country_modifier = country_market_is_open
+			has_country_modifier = recent_financial_crisis
+			AND = {
+				OR = {
+					any_owned_province = {
+						NOT = { has_province_modifier = mastered_region }
+					}
+					has_country_modifier = mastering_vassal_market
+				}
+				NOT = {
+					has_country_modifier = the_likelihood_of_a_financial_crisis_alt
+					has_country_modifier = bad_debter
+				}
+			}
+			AND = {
+				war = yes
+				OR = {
+					war_countries = {
+						ai = no
+						war_exhaustion = 10
+					}
+					war_exhaustion = 10
+				}
+			}
+		}
+        }
+
+        mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			has_country_flag = minister_of_economics2flag
+		}
+		modifier = {
+			factor = 0.95
+			nationalvalue = nv_industrial_capitalism
+		}
+		modifier = {
+			factor = 0.90
+			nationalvalue = nv_imperialism
+		}
+		### Taxes on rich class effect
+		modifier = {
+			factor = 1.5
+			NOT = { rich_tax = 0.35 }
+		}
+		modifier = {
+			factor = 0.50
+			rich_tax = 0.50
+		}
+		##############################
+		modifier = {
+			factor = 0.95
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.95
+			rank = 7
+		}
+		modifier = {
+			factor = 0.95
+			rank = 6
+		}
+		modifier = {
+			factor = 0.95
+			rank = 5
+		}
+		modifier = {
+			factor = 0.95
+			rank = 4
+		}
+		modifier = {
+			factor = 0.95
+			rank = 3
+		}
+		modifier = {
+			factor = 0.95
+			rank = 2
+		}
+		modifier = {
+			factor = 0.95
+			rank = 1
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 50
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 150
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 200
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 250
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 300
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 350
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 400
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 450
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 500
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 550
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 600
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 650
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 700
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 750
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 800
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 850
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 900
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 950
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 1000
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 1100
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 1200
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 1300
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 1400
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 1500
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 1600
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 1700
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 1800
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 1900
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 2100
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 2200
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 2300
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 2400
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 2500
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 2600
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 2700
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 2800
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 2900
+		}
+		modifier = {
+			factor = 0.95
+			industrial_score = 3000
+		}
+		modifier = {
+			factor = 0.95
+			wage_reform = trinket_wage
+		}
+		modifier = {
+			factor = 0.90
+			wage_reform = low_minimum_wage
+		}
+		modifier = {
+			factor = 0.85
+			wage_reform = acceptable_minimum_wage
+		}
+		modifier = {
+			factor = 0.80
+			wage_reform = good_minimum_wage
+		}
+		modifier = {
+			factor = 0.95
+			safety_regulations = trinket_safety
+		}
+		modifier = {
+			factor = 0.90
+			safety_regulations = low_safety
+		}
+		modifier = {
+			factor = 0.85
+			safety_regulations = acceptable_safety
+		}
+		modifier = {
+			factor = 0.80
+			safety_regulations = good_safety
+		}
+		modifier = {
+			factor = 0.95
+			health_care = trinket_health_care
+		}
+		modifier = {
+			factor = 0.90
+			health_care = low_health_care
+		}
+		modifier = {
+			factor = 0.85
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.80
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.95
+			work_hours = fourteen_hours
+		}
+		modifier = {
+			factor = 0.90
+			work_hours = twelve_hours
+		}
+		modifier = {
+			factor = 0.85
+			work_hours = ten_hours
+		}
+		modifier = {
+			factor = 0.80
+			work_hours = eight_hours
+		}
+		modifier = {
+			factor = 0.95
+			child_labour = child_labour_regulated
+		}
+		modifier = {
+			factor = 0.90
+			child_labour = child_labour_prohibited
+		}
+	}
+	immediate = {
+		remove_country_modifier = the_likelihood_of_a_financial_crisis
+		remove_country_modifier = the_likelihood_of_a_financial_crisis_alt
+		add_country_modifier = { name = financial_crisis duration = 1460 }
+		add_province_modifier = { name = recent_financial_crisis duration = 3650 }
+		any_country = {
+			limit = { vassal_of = THIS }
+			country_event = 100178
+		}
+		any_country = {
+			limit = { ai = no }
+			country_event = 100204
+		}
+	}
+	option = {
+		name = "Рынок скоро сам приведёт себя в равновесие"
+	}
+}
+province_event = {
+	id = 100177
+	title = "Регион $STATE$ полностью освоен"
+	desc = "Регион $STATE$ был освоен полностью нашим правящим классом. Необходимо искать новые территории для освоения, иначе нам не избежать финансового краха!"
+
+	trigger = {
+		owner = {
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+		}
+		NOT = {
+			has_province_modifier = mastering_the_region
+			has_province_modifier = mastered_region
+		}
+		OR = {
+			has_province_modifier = mastering_region_mark
+			province_id = 517
+			province_id = 1723
+			province_id = 1755
+			province_id = 331
+			province_id = 2336
+		}
+	}
+
+	immediate = {
+		state_scope = {
+			any_owned = {
+				remove_province_modifier = mastering_region_mark
+				add_province_modifier = { name = mastered_region duration = -1 }
+			}
+		}
+		owner = { capital_scope = {
+			add_province_modifier = { name = waiting_for_next_event duration = 60 }
+		}}
+	}
+
+	option = {
+		name = "Главное, что я в доле!"
+	}
+}
+country_event = {
+	id = 100178
+	title = "Финансовый кризис в метрополии"
+	desc = "EVTDESC100180"
+        picture = "stock_crash"
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_country_modifier = { name = financial_crisis duration = 1460 }
+	}
+
+	option = {
+		name = "Наша метрополия слабеет..."
+	}
+}
+province_event = {
+	id = 100179
+	title = "Освоение мелкого региона $STATE$"
+	desc = "EVTDESCMASTERING"
+
+	trigger = {
+		owner = {
+			is_independant = yes
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+		}
+		NOT = {
+			AND = {
+				owner = { OR = {
+					has_country_modifier = mastering_vassal_market
+					any_owned_province = {
+						has_province_modifier = mastering_region_mark
+					}
+				}}
+				NOT = { state_scope = { any_owned_province = {
+					has_province_modifier = mastering_region_mark
+				}}}
+			}
+			owner = { has_country_modifier = financial_crisis }
+			has_province_modifier = calculation_of_core_regions
+			has_province_modifier = mastering_the_region
+			has_province_modifier = mastering_region_mark
+			has_province_modifier = mastered_region
+			province_id = 517
+			province_id = 1723
+			province_id = 1755
+			province_id = 331
+			province_id = 2336
+		}
+		state_scope = {
+			NOT = { total_pops = 250000 }
+		}
+	}
+
+	immediate = {
+		state_scope = {
+			any_owned = {
+				remove_province_modifier = mastered_region
+				remove_province_modifier = mastering_the_region
+				remove_province_modifier = mastering_region_mark
+			}
+		}
+		state_scope = {
+			any_owned = {
+				add_province_modifier = { name = mastering_region_mark duration = -1 }
+				add_province_modifier = { name = mastering_the_region duration = 1095 }
+			}
+		}
+	}
+
+	option = {
+		name = "Мне тоже с этого что-нибудь перепадёт?"
+	}
+}
+province_event = {
+	id = 100180
+	title = "Освоение малого региона $STATE$"
+	desc = "EVTDESCMASTERING"
+
+	trigger = {
+		owner = {
+			is_independant = yes
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+		}
+		NOT = {
+			AND = {
+				owner = { OR = {
+					has_country_modifier = mastering_vassal_market
+					any_owned_province = {
+						has_province_modifier = mastering_region_mark
+					}
+				}}
+				NOT = { state_scope = { any_owned_province = {
+					has_province_modifier = mastering_region_mark
+				}}}
+			}
+			owner = { has_country_modifier = financial_crisis }
+			has_province_modifier = calculation_of_core_regions
+			has_province_modifier = mastering_the_region
+			has_province_modifier = mastering_region_mark
+			has_province_modifier = mastered_region
+			province_id = 517
+			province_id = 1723
+			province_id = 1755
+			province_id = 331
+			province_id = 2336
+		}
+		state_scope = {
+			total_pops = 250000
+			NOT = { total_pops = 500000 }
+		}
+	}
+
+	immediate = {
+		state_scope = {
+			any_owned = {
+				remove_province_modifier = mastered_region
+				remove_province_modifier = mastering_the_region
+				remove_province_modifier = mastering_region_mark
+			}
+		}
+		state_scope = {
+			any_owned = {
+				add_province_modifier = { name = mastering_region_mark duration = -1 }
+				add_province_modifier = { name = mastering_the_region duration = 1460 }
+			}
+		}
+	}
+
+	option = {
+		name = "Мне тоже с этого что-нибудь перепадёт?"
+	}
+}
+province_event = {
+	id = 100181
+	title = "Освоение среднего региона $STATE$"
+	desc = "EVTDESCMASTERING"
+
+	trigger = {
+		owner = {
+			is_independant = yes
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+		}
+		NOT = {
+			AND = {
+				owner = { OR = {
+					has_country_modifier = mastering_vassal_market
+					any_owned_province = {
+						has_province_modifier = mastering_region_mark
+					}
+				}}
+				NOT = { state_scope = { any_owned_province = {
+					has_province_modifier = mastering_region_mark
+				}}}
+			}
+			owner = { has_country_modifier = financial_crisis }
+			has_province_modifier = calculation_of_core_regions
+			has_province_modifier = mastering_the_region
+			has_province_modifier = mastering_region_mark
+			has_province_modifier = mastered_region
+			province_id = 517
+			province_id = 1723
+			province_id = 1755
+			province_id = 331
+			province_id = 2336
+		}
+		state_scope = {
+			total_pops = 500000
+			NOT = { total_pops = 1000000 }
+		}
+	}
+
+	immediate = {
+		state_scope = {
+			any_owned = {
+				remove_province_modifier = mastered_region
+				remove_province_modifier = mastering_the_region
+				remove_province_modifier = mastering_region_mark
+			}
+		}
+		state_scope = {
+			any_owned = {
+				add_province_modifier = { name = mastering_region_mark duration = -1 }
+				add_province_modifier = { name = mastering_the_region duration = 1825 }
+			}
+		}
+	}
+
+	option = {
+		name = "Мне тоже с этого что-нибудь перепадёт?"
+	}
+}
+province_event = {
+	id = 100182
+	title = "Освоение крупного региона $STATE$"
+	desc = "EVTDESCMASTERING"
+
+	trigger = {
+		owner = {
+			is_independant = yes
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+		}
+		NOT = {
+			AND = {
+				owner = { OR = {
+					has_country_modifier = mastering_vassal_market
+					any_owned_province = {
+						has_province_modifier = mastering_region_mark
+					}
+				}}
+				NOT = { state_scope = { any_owned_province = {
+					has_province_modifier = mastering_region_mark
+				}}}
+			}
+			owner = { has_country_modifier = financial_crisis }
+			has_province_modifier = calculation_of_core_regions
+			has_province_modifier = mastering_the_region
+			has_province_modifier = mastering_region_mark
+			has_province_modifier = mastered_region
+			province_id = 517
+			province_id = 1723
+			province_id = 1755
+			province_id = 331
+			province_id = 2336
+		}
+		state_scope = {
+			total_pops = 1000000
+			NOT = { total_pops = 1500000 }
+		}
+	}
+
+	immediate = {
+		state_scope = {
+			any_owned = {
+				remove_province_modifier = mastered_region
+				remove_province_modifier = mastering_the_region
+				remove_province_modifier = mastering_region_mark
+			}
+		}
+		state_scope = {
+			any_owned = {
+				add_province_modifier = { name = mastering_region_mark duration = -1 }
+				add_province_modifier = { name = mastering_the_region duration = 2190 }
+			}
+		}
+	}
+
+	option = {
+		name = "Мне тоже с этого что-нибудь перепадёт?"
+	}
+}
+province_event = {
+	id = 100183
+	title = "Освоение большого региона $STATE$"
+	desc = "EVTDESCMASTERING"
+
+	trigger = {
+		owner = {
+			is_independant = yes
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+		}
+		NOT = {
+			AND = {
+				owner = { OR = {
+					has_country_modifier = mastering_vassal_market
+					any_owned_province = {
+						has_province_modifier = mastering_region_mark
+					}
+				}}
+				NOT = { state_scope = { any_owned_province = {
+					has_province_modifier = mastering_region_mark
+				}}}
+			}
+			owner = { has_country_modifier = financial_crisis }
+			has_province_modifier = calculation_of_core_regions
+			has_province_modifier = mastering_the_region
+			has_province_modifier = mastering_region_mark
+			has_province_modifier = mastered_region
+			province_id = 517
+			province_id = 1723
+			province_id = 1755
+			province_id = 331
+			province_id = 2336
+		}
+		state_scope = {
+			total_pops = 1500000
+			NOT = { total_pops = 2000000 }
+		}
+	}
+
+	immediate = {
+		state_scope = {
+			any_owned = {
+				remove_province_modifier = mastered_region
+				remove_province_modifier = mastering_the_region
+				remove_province_modifier = mastering_region_mark
+			}
+		}
+		state_scope = {
+			any_owned = {
+				add_province_modifier = { name = mastering_region_mark duration = -1 }
+				add_province_modifier = { name = mastering_the_region duration = 2555 }
+			}
+		}
+	}
+
+	option = {
+		name = "Мне тоже с этого что-нибудь перепадёт?"
+	}
+}
+province_event = {
+	id = 100184
+	title = "Освоение огромного региона $STATE$"
+	desc = "EVTDESCMASTERING"
+
+	trigger = {
+		owner = {
+			is_independant = yes
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+		}
+		NOT = {
+			AND = {
+				owner = { OR = {
+					has_country_modifier = mastering_vassal_market
+					any_owned_province = {
+						has_province_modifier = mastering_region_mark
+					}
+				}}
+				NOT = { state_scope = { any_owned_province = {
+					has_province_modifier = mastering_region_mark
+				}}}
+			}
+			owner = { has_country_modifier = financial_crisis }
+			has_province_modifier = calculation_of_core_regions
+			has_province_modifier = mastering_the_region
+			has_province_modifier = mastering_region_mark
+			has_province_modifier = mastered_region
+			province_id = 517
+			province_id = 1723
+			province_id = 1755
+			province_id = 331
+			province_id = 2336
+		}
+		state_scope = {
+			total_pops = 2000000
+		}
+	}
+
+	immediate = {
+		state_scope = {
+			any_owned = {
+				remove_province_modifier = mastered_region
+				remove_province_modifier = mastering_the_region
+				remove_province_modifier = mastering_region_mark
+			}
+		}
+		state_scope = {
+			any_owned = {
+				add_province_modifier = { name = mastering_region_mark duration = -1 }
+				add_province_modifier = { name = mastering_the_region duration = 2920 }
+			}
+		}
+	}
+
+	option = {
+		name = "Мне тоже с этого что-нибудь перепадёт?"
+	}
+}
+country_event = {
+	id = 100185
+	title = "Освоение нашего рынка державой $OVERLORD$"
+	desc = "Олигархи из метрополии осваивают рынок нашей страны, инвестируя во всё, что поможет им в ближайшем будущем получить существенную прибыль и приумножить свои несметные богатства."
+        picture = "capitalists2"
+
+	trigger = {
+		is_independant = no
+		has_country_flag = not_mastered_yet_vassal
+		OR = {
+			nationalvalue = nv_commercial_capitalism
+			nationalvalue = nv_industrial_capitalism
+			nationalvalue = nv_imperialism
+		}
+		overlord = {
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+			NOT = {
+				any_owned_province = {
+					NOT = { has_province_modifier = mastered_region }
+				}
+				has_country_modifier = financial_crisis
+			}
+		}
+		NOT = {
+			has_country_modifier = mastered_country_market
+			has_country_modifier = mastering_country_market
+			total_pops = 500000
+			overlord = {
+				has_country_modifier = mastering_vassal_market
+			}
+		}
+	}
+
+	immediate = {
+		add_country_modifier = { name = mastering_country_market duration = -1 }
+		overlord = { country_event = 100186 }
+	}
+
+	option = {
+		name = "А я с этого что-нибудь получу?"
+	}
+}
+country_event = {
+	id = 100186
+	title = "Освоение мелкого рынка сателлита $FROMCOUNTRY$"
+	desc = "Как и ожидалось, наши уважаемые владельцы огромных состояний ринулись осваивать недавно заполученный нашей державой рынок целой страны, которую мы недавно освободили от тирании!"
+        picture = "capitalists"
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_country_modifier = { name = mastering_vassal_market duration = 1460 }
+	}
+
+	option = {
+		name = "Великолепно! Главное, чтобы и мне что-нибудь досталось"
+	}
+}
+country_event = {
+	id = 100187
+	title = "Освоение нашего рынка державой $OVERLORD$"
+	desc = "Олигархи из метрополии осваивают рынок нашей страны, инвестируя во всё, что поможет им в ближайшем будущем получить существенную прибыль и приумножить свои несметные богатства."
+        picture = "capitalists2"
+
+	trigger = {
+		is_independant = no
+		has_country_flag = not_mastered_yet_vassal
+		OR = {
+			nationalvalue = nv_commercial_capitalism
+			nationalvalue = nv_industrial_capitalism
+			nationalvalue = nv_imperialism
+		}
+		overlord = {
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+			NOT = {
+				any_owned_province = {
+					NOT = { has_province_modifier = mastered_region }
+				}
+				has_country_modifier = financial_crisis
+			}
+		}
+		total_pops = 500000
+		NOT = {
+			total_pops = 1000000
+			has_country_modifier = mastered_country_market
+			has_country_modifier = mastering_country_market
+			overlord = {
+				has_country_modifier = mastering_vassal_market
+			}
+		}
+	}
+
+	immediate = {
+		add_country_modifier = { name = mastering_country_market duration = -1 }
+		overlord = { country_event = 100188 }
+	}
+
+	option = {
+		name = "А я с этого что-нибудь получу?"
+	}
+}
+country_event = {
+	id = 100188
+	title = "Освоение небольшого рынка сателлита $FROMCOUNTRY$"
+	desc = "Как и ожидалось, наши уважаемые владельцы огромных состояний ринулись осваивать недавно заполученный нашей державой рынок целой страны, которую мы недавно освободили от тирании!"
+        picture = "capitalists"
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_country_modifier = { name = mastering_vassal_market duration = 1825 }
+	}
+
+	option = {
+		name = "Великолепно! Главное, чтобы и мне что-нибудь досталось"
+	}
+}
+country_event = {
+	id = 100189
+	title = "Освоение нашего рынка державой $OVERLORD$"
+	desc = "Олигархи из метрополии осваивают рынок нашей страны, инвестируя во всё, что поможет им в ближайшем будущем получить существенную прибыль и приумножить свои несметные богатства."
+        picture = "capitalists2"
+
+	trigger = {
+		is_independant = no
+		has_country_flag = not_mastered_yet_vassal
+		OR = {
+			nationalvalue = nv_commercial_capitalism
+			nationalvalue = nv_industrial_capitalism
+			nationalvalue = nv_imperialism
+		}
+		overlord = {
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+			NOT = {
+				any_owned_province = {
+					NOT = { has_province_modifier = mastered_region }
+				}
+				has_country_modifier = financial_crisis
+			}
+		}
+		total_pops = 1000000
+		NOT = {
+			total_pops = 1500000
+			has_country_modifier = mastered_country_market
+			has_country_modifier = mastering_country_market
+			overlord = {
+				has_country_modifier = mastering_vassal_market
+			}
+		}
+	}
+
+	immediate = {
+		add_country_modifier = { name = mastering_country_market duration = -1 }
+		overlord = { country_event = 100190 }
+	}
+
+	option = {
+		name = "А я с этого что-нибудь получу?"
+	}
+}
+country_event = {
+	id = 100190
+	title = "Освоение среднего рынка сателлита $FROMCOUNTRY$"
+	desc = "Как и ожидалось, наши уважаемые владельцы огромных состояний ринулись осваивать недавно заполученный нашей державой рынок целой страны, которую мы недавно освободили от тирании!"
+        picture = "capitalists"
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_country_modifier = { name = mastering_vassal_market duration = 2190 }
+	}
+
+	option = {
+		name = "Великолепно! Главное, чтобы и мне что-нибудь досталось"
+	}
+}
+country_event = {
+	id = 100191
+	title = "Освоение нашего рынка державой $OVERLORD$"
+	desc = "Олигархи из метрополии осваивают рынок нашей страны, инвестируя во всё, что поможет им в ближайшем будущем получить существенную прибыль и приумножить свои несметные богатства."
+        picture = "capitalists2"
+
+	trigger = {
+		is_independant = no
+		has_country_flag = not_mastered_yet_vassal
+		OR = {
+			nationalvalue = nv_commercial_capitalism
+			nationalvalue = nv_industrial_capitalism
+			nationalvalue = nv_imperialism
+		}
+		overlord = {
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+			NOT = {
+				any_owned_province = {
+					NOT = { has_province_modifier = mastered_region }
+				}
+				has_country_modifier = financial_crisis
+			}
+		}
+		total_pops = 1500000
+		NOT = {
+			total_pops = 2000000
+			has_country_modifier = mastered_country_market
+			has_country_modifier = mastering_country_market
+			overlord = {
+				has_country_modifier = mastering_vassal_market
+			}
+		}
+	}
+
+	immediate = {
+		add_country_modifier = { name = mastering_country_market duration = -1 }
+		overlord = { country_event = 100192 }
+	}
+
+	option = {
+		name = "А я с этого что-нибудь получу?"
+	}
+}
+country_event = {
+	id = 100192
+	title = "Освоение крупного рынка сателлита $FROMCOUNTRY$"
+	desc = "Как и ожидалось, наши уважаемые владельцы огромных состояний ринулись осваивать недавно заполученный нашей державой рынок целой страны, которую мы недавно освободили от тирании!"
+        picture = "capitalists"
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_country_modifier = { name = mastering_vassal_market duration = 2555 }
+	}
+
+	option = {
+		name = "Великолепно! Главное, чтобы и мне что-нибудь досталось"
+	}
+}
+country_event = {
+	id = 100193
+	title = "Освоение нашего рынка державой $OVERLORD$"
+	desc = "Олигархи из метрополии осваивают рынок нашей страны, инвестируя во всё, что поможет им в ближайшем будущем получить существенную прибыль и приумножить свои несметные богатства."
+        picture = "capitalists2"
+
+	trigger = {
+		is_independant = no
+		has_country_flag = not_mastered_yet_vassal
+		OR = {
+			nationalvalue = nv_commercial_capitalism
+			nationalvalue = nv_industrial_capitalism
+			nationalvalue = nv_imperialism
+		}
+		overlord = {
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+			NOT = {
+				any_owned_province = {
+					NOT = { has_province_modifier = mastered_region }
+				}
+				has_country_modifier = financial_crisis
+			}
+		}
+		total_pops = 2000000
+		NOT = {
+			total_pops = 3000000
+			has_country_modifier = mastered_country_market
+			has_country_modifier = mastering_country_market
+			overlord = {
+				has_country_modifier = mastering_vassal_market
+			}
+		}
+	}
+
+	immediate = {
+		add_country_modifier = { name = mastering_country_market duration = -1 }
+		overlord = { country_event = 100194 }
+	}
+
+	option = {
+		name = "А я с этого что-нибудь получу?"
+	}
+}
+country_event = {
+	id = 100194
+	title = "Освоение большого рынка сателлита $FROMCOUNTRY$"
+	desc = "Как и ожидалось, наши уважаемые владельцы огромных состояний ринулись осваивать недавно заполученный нашей державой рынок целой страны, которую мы недавно освободили от тирании!"
+        picture = "capitalists"
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_country_modifier = { name = mastering_vassal_market duration = 2920 }
+	}
+
+	option = {
+		name = "Великолепно! Главное, чтобы и мне что-нибудь досталось"
+	}
+}
+country_event = {
+	id = 100195
+	title = "Независимость!"
+	desc = "Наша держава получила независимость от бывшей метрополии и теперь наша буржуазия сама сможет осваивать рынок нашей страны!"
+	picture = "chilean_declaration_of_independence"
+
+	trigger = {
+		is_independant = yes
+		OR = {
+			has_country_flag = not_mastered_yet_vassal
+			has_country_modifier = mastering_country_market
+			has_country_modifier = mastered_country_market
+		}
+	}
+
+	immediate = {
+		clr_country_flag = not_mastered_yet_vassal
+		remove_country_modifier = mastering_country_market
+		remove_country_modifier = mastered_country_market
+		any_owned = {
+			remove_province_modifier = mastering_region_mark
+			remove_province_modifier = mastering_the_region
+			remove_province_modifier = mastered_region
+		}
+	}
+
+	option = {
+		name = "И как же мы распорядимся нашей свободой?"
+	}
+}
+country_event = {
+	id = 100196
+	title = "Освоение нашего рынка державой $OVERLORD$"
+	desc = "Олигархи из метрополии осваивают рынок нашей страны, инвестируя во всё, что поможет им в ближайшем будущем получить существенную прибыль и приумножить свои несметные богатства."
+        picture = "capitalists2"
+
+	trigger = {
+		is_independant = no
+		has_country_flag = not_mastered_yet_vassal
+		OR = {
+			nationalvalue = nv_commercial_capitalism
+			nationalvalue = nv_industrial_capitalism
+			nationalvalue = nv_imperialism
+		}
+		overlord = {
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+			NOT = {
+				any_owned_province = {
+					NOT = { has_province_modifier = mastered_region }
+				}
+				has_country_modifier = financial_crisis
+			}
+		}
+		total_pops = 3000000
+		NOT = {
+			total_pops = 4000000
+			has_country_modifier = mastered_country_market
+			has_country_modifier = mastering_country_market
+			overlord = {
+				has_country_modifier = mastering_vassal_market
+			}
+		}
+	}
+
+	immediate = {
+		add_country_modifier = { name = mastering_country_market duration = -1 }
+		overlord = { country_event = 100197 }
+	}
+
+	option = {
+		name = "А я с этого что-нибудь получу?"
+	}
+}
+country_event = {
+	id = 100197
+	title = "Освоение огромного рынка сателлита $FROMCOUNTRY$"
+	desc = "Как и ожидалось, наши уважаемые владельцы огромных состояний ринулись осваивать недавно заполученный нашей державой рынок целой страны, которую мы недавно освободили от тирании!"
+        picture = "capitalists"
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_country_modifier = { name = mastering_vassal_market duration = 3285 }
+	}
+
+	option = {
+		name = "Великолепно! Главное, чтобы и мне что-нибудь досталось"
+	}
+}
+country_event = {
+	id = 100198
+	title = "Освоение нашего рынка державой $OVERLORD$"
+	desc = "Олигархи из метрополии осваивают рынок нашей страны, инвестируя во всё, что поможет им в ближайшем будущем получить существенную прибыль и приумножить свои несметные богатства."
+        picture = "capitalists2"
+
+	trigger = {
+		is_independant = no
+		has_country_flag = not_mastered_yet_vassal
+		OR = {
+			nationalvalue = nv_commercial_capitalism
+			nationalvalue = nv_industrial_capitalism
+			nationalvalue = nv_imperialism
+		}
+		overlord = {
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+			NOT = {
+				any_owned_province = {
+					NOT = { has_province_modifier = mastered_region }
+				}
+				has_country_modifier = financial_crisis
+			}
+		}
+		total_pops = 4000000
+		NOT = {
+			total_pops = 5000000
+			has_country_modifier = mastered_country_market
+			has_country_modifier = mastering_country_market
+			overlord = {
+				has_country_modifier = mastering_vassal_market
+			}
+		}
+	}
+
+	immediate = {
+		add_country_modifier = { name = mastering_country_market duration = -1 }
+		overlord = { country_event = 100199 }
+	}
+
+	option = {
+		name = "А я с этого что-нибудь получу?"
+	}
+}
+country_event = {
+	id = 100199
+	title = "Освоение громадного рынка сателлита $FROMCOUNTRY$"
+	desc = "Как и ожидалось, наши уважаемые владельцы огромных состояний ринулись осваивать недавно заполученный нашей державой рынок целой страны, которую мы недавно освободили от тирании!"
+        picture = "capitalists"
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_country_modifier = { name = mastering_vassal_market duration = 3650 }
+	}
+
+	option = {
+		name = "Великолепно! Главное, чтобы и мне что-нибудь досталось"
+	}
+}
+country_event = {
+	id = 100200
+	title = "Освоение нашего рынка державой $OVERLORD$"
+	desc = "Олигархи из метрополии осваивают рынок нашей страны, инвестируя во всё, что поможет им в ближайшем будущем получить существенную прибыль и приумножить свои несметные богатства."
+        picture = "capitalists2"
+
+	trigger = {
+		is_independant = no
+		has_country_flag = not_mastered_yet_vassal
+		OR = {
+			nationalvalue = nv_commercial_capitalism
+			nationalvalue = nv_industrial_capitalism
+			nationalvalue = nv_imperialism
+		}
+		overlord = {
+			OR = {
+				nationalvalue = nv_commercial_capitalism
+				nationalvalue = nv_industrial_capitalism
+				nationalvalue = nv_imperialism
+			}
+			NOT = {
+				any_owned_province = {
+					NOT = { has_province_modifier = mastered_region }
+				}
+				has_country_modifier = financial_crisis
+			}
+		}
+		NOT = {
+			has_country_modifier = mastered_country_market
+			has_country_modifier = mastering_country_market
+			overlord = {
+				has_country_modifier = mastering_vassal_market
+			}
+		}
+		total_pops = 5000000
+	}
+
+	immediate = {
+		add_country_modifier = { name = mastering_country_market duration = -1 }
+		overlord = { country_event = 100201 }
+	}
+
+	option = {
+		name = "А я с этого что-нибудь получу?"
+	}
+}
+country_event = {
+	id = 100201
+	title = "Освоение гигантского рынка сателлита $FROMCOUNTRY$"
+	desc = "Как и ожидалось, наши уважаемые владельцы огромных состояний ринулись осваивать недавно заполученный нашей державой рынок целой страны, которую мы недавно освободили от тирании!"
+        picture = "capitalists"
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_country_modifier = { name = mastering_vassal_market duration = 4015 }
+	}
+
+	option = {
+		name = "Великолепно! Главное, чтобы и мне что-нибудь досталось"
+	}
+}
+country_event = {
+	id = 100202
+	title = "Ранний выход из кризиса"
+	desc = "EVTDESC100205"
+	picture = "capitalists2"
+
+	trigger = {
+		has_country_modifier = financial_crisis
+		war = yes
+		OR = {
+			war_countries = {
+				ai = no
+				war_exhaustion = 10
+			}
+			war_exhaustion = 10
+		}
+	}
+
+	immediate = {
+		remove_country_modifier = financial_crisis
+	}
+
+	option = {
+		name = "Это всё конечно хорошо, но с войной надо заканчивать!"
+	}
+}
+country_event = {
+	id = 100203
+	title = "Метрополией $OVERLORD$ освоен наш рынок!"
+	desc = "Капиталисты метрополии полностью освоили рынок нашей страны и он больше не приносит им той прибыли, на которую они изначально расчитывали."
+        picture = "capitalists2"
+
+	trigger = {
+		is_independant = no
+		overlord = {
+			NOT = { has_country_modifier = mastering_vassal_market }
+		}
+		has_country_modifier = mastering_country_market
+	}
+
+	immediate = {
+		remove_country_modifier = mastering_country_market
+		clr_country_flag = not_mastered_yet_vassal
+		add_country_modifier = { name = mastered_country_market duration = -1 }
+		overlord = { capital_scope = {
+			add_province_modifier = { name = waiting_for_next_event duration = 60 }
+		}}
+		any_owned = {
+			remove_province_modifier = mastering_region_mark
+			remove_province_modifier = mastering_the_region
+			add_province_modifier = { name = mastered_region duration = -1 }
+		}
+	}
+
+	option = {
+		name = "Ну яхту я себе уже купил, коттедж построил"
+	}
+}
+country_event = {
+	id = 100204
+	title = "Крах $FROMCOUNTRY_ADJ$ фондовой биржи"
+	desc = "EVTDESC100198"
+        picture = "stock_crash"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Кажется это их ослабило?"
+	}
+}
+############### Licences to produce weapons ##################################
+country_event = {
+	id = 100205
+	title = "Лицензия на капсульные ружья §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ желает приобрести у нас лицензию на производство капсульных ружей. Это заметно повысит их боевой потенциал, но негативно скажется на престиже нашей державы."
+        picture = "caplock_rifle"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Продадим им лицензию"
+		prestige_factor = -0.05
+		FROM = {
+			country_event = 100207
+			set_country_flag = caplock_rifle_license_bought
+		}
+	}
+	option = {
+		name = "Отказать в лицензии"
+		FROM = { country_event = 100206 }
+	}
+}
+country_event = {
+	id = 100206
+	title = "Согласие на продажу лицензии §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ согласилась продать нам лицензию на производство типа вооружений, который мы пока производить сами не в состоянии."
+        picture = "thumbs_up"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Великолепно!"
+	}
+}
+country_event = {
+	id = 100207
+	title = "Отказ в продаже лицензии §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ отказалась продавать нам лицензию на производство типа вооружений, который мы пока производить сами не в состоянии."
+        picture = "picture_no"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Печально"
+	}
+}
+country_event = {
+	id = 100208
+	title = "Лицензия на казнозарядные винтовки §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ желает приобрести у нас лицензию на производство казнозарядных винтовок. Это заметно повысит их боевой потенциал, но негативно скажется на престиже нашей державы."
+        picture = "breech_loading_rifle"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Продадим им лицензию"
+		prestige_factor = -0.05
+		FROM = {
+			country_event = 100207
+			set_country_flag = breech_loaded_rifle_license_bought
+		}
+	}
+	option = {
+		name = "Отказать в лицензии"
+		FROM = { country_event = 100206 }
+	}
+}
+country_event = {
+	id = 100209
+	title = "Лицензия на винтовки со скользящим затвором §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ желает приобрести у нас лицензию на производство винтовок со скользящим затвором. Это заметно повысит их боевой потенциал, но негативно скажется на престиже нашей державы."
+        picture = "bolt_action_rifle"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Продадим им лицензию"
+		prestige_factor = -0.05
+		FROM = {
+			country_event = 100207
+			set_country_flag = bolt_action_rifle_license_bought
+		}
+	}
+	option = {
+		name = "Отказать в лицензии"
+		FROM = { country_event = 100206 }
+	}
+}
+country_event = {
+	id = 100210
+	title = "Лицензия на пулемёт Максима §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ желает приобрести у нас лицензию на производство пулемётов Максима. Это заметно повысит их боевой потенциал, но негативно скажется на престиже нашей державы."
+        picture = "maxim_gun"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Продадим им лицензию"
+		prestige_factor = -0.05
+		FROM = {
+			country_event = 100207
+			set_country_flag = maxim_gun_license_bought
+		}
+	}
+	option = {
+		name = "Отказать в лицензии"
+		FROM = { country_event = 100206 }
+	}
+}
+country_event = {
+	id = 100211
+	title = "Лицензия на ручной пулемёт §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ желает приобрести у нас лицензию на производство ручных пулемётов. Это заметно повысит их боевой потенциал, но негативно скажется на престиже нашей державы."
+        picture = "light_machine_gun"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Продадим им лицензию"
+		prestige_factor = -0.05
+		FROM = {
+			country_event = 100207
+			set_country_flag = light_machine_gun_license_bought
+		}
+	}
+	option = {
+		name = "Отказать в лицензии"
+		FROM = { country_event = 100206 }
+	}
+}
+country_event = {
+	id = 100212
+	title = "Лицензия на самозарядные винтовки §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ желает приобрести у нас лицензию на производство самозарядных винтовок. Это заметно повысит их боевой потенциал, но негативно скажется на престиже нашей державы."
+        picture = "semi_automatic_rifle"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Продадим им лицензию"
+		prestige_factor = -0.05
+		FROM = {
+			country_event = 100207
+			set_country_flag = semi_automatic_rifle_license_bought
+		}
+	}
+	option = {
+		name = "Отказать в лицензии"
+		FROM = { country_event = 100206 }
+	}
+}
+country_event = {
+	id = 100213
+	title = "Лицензия на ручные противотанковые гранатомёты §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ желает приобрести у нас лицензию на производство ручных противотанковых гранатомётов. Это заметно повысит их боевой потенциал, но негативно скажется на престиже нашей державы."
+        picture = "panzerschreck"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Продадим им лицензию"
+		prestige_factor = -0.05
+		FROM = {
+			country_event = 100207
+			set_country_flag = RPG_license_bought
+		}
+	}
+	option = {
+		name = "Отказать в лицензии"
+		FROM = { country_event = 100206 }
+	}
+}
+country_event = {
+	id = 100214
+	title = "Лицензия на автоматические винтовки §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ желает приобрести у нас лицензию на производство автоматических винтовок. Это заметно повысит их боевой потенциал, но негативно скажется на престиже нашей державы."
+        picture = "ak_47"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Продадим им лицензию"
+		prestige_factor = -0.05
+		FROM = {
+			country_event = 100207
+			set_country_flag = assault_rifle_license_bought
+		}
+	}
+	option = {
+		name = "Отказать в лицензии"
+		FROM = { country_event = 100206 }
+	}
+}
+country_event = {
+	id = 100215
+	title = "Лицензия на нарезные полевые орудия §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ желает приобрести у нас лицензию на производство нарезных полевых орудий. Это заметно повысит их боевой потенциал, но негативно скажется на престиже нашей державы."
+        picture = "rifled_field_gun"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Продадим им лицензию"
+		prestige_factor = -0.05
+		FROM = {
+			country_event = 100207
+			set_country_flag = rifled_field_guns_license_bought
+		}
+	}
+	option = {
+		name = "Отказать в лицензии"
+		FROM = { country_event = 100206 }
+	}
+}
+country_event = {
+	id = 100216
+	title = "Лицензия на гаубицы §Y($FROMCOUNTRY$)§!"
+	desc = "Держава $FROMCOUNTRY$ желает приобрести у нас лицензию на производство гаубиц. Это заметно повысит их боевой потенциал, но негативно скажется на престиже нашей державы."
+        picture = "howitzer_ww1"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Продадим им лицензию"
+		prestige_factor = -0.05
+		FROM = {
+			country_event = 100207
+			set_country_flag = howitzers_license_bought
+		}
+	}
+	option = {
+		name = "Отказать в лицензии"
+		FROM = { country_event = 100206 }
+	}
+}

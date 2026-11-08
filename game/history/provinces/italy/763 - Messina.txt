@@ -1,0 +1,7 @@
+owner = SIC
+controller = SIC
+add_core = SIC
+add_core = ITA
+trade_goods = sulphur
+life_rating = 40
+state_building = { level = 10 building = sulphur_mine_15 upgrade = yes }

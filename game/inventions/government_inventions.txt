@@ -1,0 +1,89 @@
+#nuclear_reaction
+nuclear_reaction_tests = {
+	limit = { nuclear_reaction = 1 }
+	news = no
+	chance = {
+		base = 100
+	}
+	effect = {
+		shared_prestige = 300
+	}
+}
+#expiditionary_forces
+colonial_artillery = {
+	limit = {
+		expiditionary_forces = 1
+		OR = {
+			is_greater_power = yes
+			colonial_nation = yes
+			is_secondary_power = yes
+		}
+	}
+	chance = {
+		base = 0
+		modifier = {
+			factor = 25
+			colonial_nation = yes
+		}
+		modifier = {
+			factor = 25
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 25
+			is_secondary_power = yes
+		}
+	}
+	effect = {
+		activate_unit = col_arty
+	}
+}
+#quinine
+french_foreign_legion = {
+	limit = { quinine = 1 }
+	news = no
+	chance = {
+		base = 0
+		modifier = {
+			factor = 25
+			TAG = FRA
+		}
+	}
+	effect = {
+		col_inf = {
+			default_organisation = 5
+			defence = 1
+			attack = 1
+			supply_consumption = 0.10
+		}
+	}
+}
+#big_stick_policy
+big_stick_policy_invention = {
+	limit = { big_stick_policy = 1 }
+	news = no
+	chance = {
+		base = 100
+	}
+	effect = {
+	}
+	badboy = -0.05
+}
+praise_of_foreigners = {
+	limit = { big_stick_policy = 1 }
+	news = no
+	chance = {
+		base = 0
+		modifier = {
+			factor = 25
+			TAG = FRA
+		}
+	}
+	effect = {
+		col_inf = {
+			default_organisation = 3
+			supply_consumption = 0.05
+		}
+	}
+	
+}

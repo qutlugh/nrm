@@ -1,0 +1,723 @@
+# Tuberculosis
+country_event = {
+	id = 21000
+	title = "EVTNAME21000"
+	desc = "EVTDESC21000"
+	picture = "disease"
+	
+	trigger = {
+		NOT = {
+			OR = {
+				poor_strata_everyday_needs = 0.5
+				health_care = good_health_care
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 700
+		
+		modifier = {
+			factor = 0.75
+			NOT = { poor_strata_life_needs = 0.9 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { poor_strata_everyday_needs = 0.1 }
+		}
+		modifier = {
+			factor = 1.5
+			organic_chemistry = 1
+		}
+		modifier = {
+			factor = 1.5
+			health_care = trinket_health_care
+		}
+		modifier = {
+			factor = 2.0
+			health_care = low_health_care
+		}
+		modifier = {
+			factor = 3.0
+			health_care = acceptable_health_care
+		}
+	}
+
+	option = {
+		name = "EVTOPTA21000"
+		random_state = {
+			limit = { is_colonial = no }
+			any_owned = { add_province_modifier = { name = tuberculosis_pandemic duration = 1825 }}
+		}
+	}
+}
+#Famine!
+country_event = {
+	id = 21010
+	title = "EVTNAME21010"
+	desc = "EVTDESC21010"
+	picture = "starving"
+	
+	trigger = {
+		NOT = {
+			OR = {
+				poor_strata_life_needs = 0.9
+				health_care = good_health_care
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 700
+		modifier = {
+			factor = 1.5
+			health_care = trinket_health_care
+		}
+		modifier = {
+			factor = 2.0
+			health_care = low_health_care
+		}
+		modifier = {
+			factor = 3.0
+			health_care = acceptable_health_care
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA21010"
+		random_state = {
+			limit = { is_colonial = no }
+			any_owned = { add_province_modifier = { name = local_famine duration = 1825 }}
+		}
+	}
+}
+#Typhoid Fever
+country_event = {
+	id = 21020
+	title = "EVTNAME21020"
+	desc = "EVTDESC21020"
+	picture = "disease"
+	
+	trigger = {
+		NOT = {
+			OR = {
+				poor_strata_everyday_needs = 0.5
+				health_care = good_health_care
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 700
+		modifier = {
+			factor = 0.75
+			NOT = { poor_strata_everyday_needs = 0.8 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { poor_strata_life_needs = 0.9 }
+		}
+		modifier = {
+			factor = 1.25
+			organic_chemistry = 1
+		}
+		modifier = {
+			factor = 1.5
+			health_care = trinket_health_care
+		}
+		modifier = {
+			factor = 2.0
+			health_care = low_health_care
+		}
+		modifier = {
+			factor = 3.0
+			health_care = acceptable_health_care
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA21020"
+		random_state = {
+			limit = { is_colonial = no }
+			any_owned = { add_province_modifier = { name = typhoid_fever duration = 1825 }}
+		}
+	}
+}
+#Strange Influenza
+country_event = {
+	id = 21030
+	title = "EVTNAME21030"
+	desc = "EVTDESC21030"
+	picture = "disease"
+	
+	trigger = {
+		NOT = {
+			OR = {
+				poor_strata_life_needs = 0.9
+				health_care = good_health_care
+				has_country_modifier = pandemic_influenza
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 0.8
+			NOT = { poor_strata_everyday_needs = 0.5 }
+		}
+		modifier = {
+			factor = 0.8
+			invention = aerial_bacteria_and_antiseptic_principle
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { poor_strata_life_needs = 0.9 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { organic_chemistry = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			organic_chemistry = 1
+		}
+		modifier = {
+			factor = 0.25
+			any_neighbor_country = { has_country_modifier = pandemic_influenza }
+		}
+		modifier = {
+			factor = 1.5
+			health_care = trinket_health_care
+		}
+		modifier = {
+			factor = 2.0
+			health_care = low_health_care
+		}
+		modifier = {
+			factor = 3.0
+			health_care = acceptable_health_care
+		}
+	}
+
+	option = {
+		name = "EVTOPTA21030"
+		add_country_modifier = {
+			name = pandemic_influenza
+			duration = 365
+		}
+	}
+}
+#Smallpox
+country_event = {
+	id = 21040
+	title = "EVTNAME21040"
+	desc = "EVTDESC21040"
+	picture = "smallpox"
+	
+	trigger = {
+		NOT = {
+			OR = {
+				poor_strata_everyday_needs = 0.5
+				health_care = good_health_care
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 700
+		modifier = {
+			factor = 0.8
+			NOT = { poor_strata_life_needs = 0.9 }
+		}
+		modifier = {
+			factor = 0.8
+			invention = aerial_bacteria_and_antiseptic_principle
+		}
+		modifier = {
+			factor = 1.25
+			organic_chemistry = 1
+		}
+		modifier = {
+			factor = 1.5
+			health_care = trinket_health_care
+		}
+		modifier = {
+			factor = 2.0
+			health_care = low_health_care
+		}
+		modifier = {
+			factor = 3.0
+			health_care = acceptable_health_care
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA21040"
+		random_state = {
+			limit = { is_colonial = no }
+			any_owned = { add_province_modifier = { name = smallpox duration = 1825 }}
+		}
+	}
+}
+#Vaccination campaign
+country_event = {
+	id = 21041
+	title = "EVTNAME21041"
+	desc = "EVTDESC21041"
+	picture = "vaccination"
+	
+	trigger = {
+		invention = vaccination
+		health_care = no_health_care
+	}
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 96
+		modifier = {
+			factor = 0.75
+			OR = {
+				government = democracy
+				government = hms_government
+			}
+		}
+		modifier = {
+			factor = 0.95
+			government = prussian_constitutionalism
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				government = absolute_monarchy
+				government = presidential_dictatorship
+			}
+		}
+		modifier = {
+			factor = 0.7
+			has_global_flag = vaccination_started
+		}
+		modifier = {
+			factor = 0.9
+			high_n_low_pressure_steam_engines = 1
+		}
+		modifier = {
+			factor = 0.9
+			steam_turbine = 1
+		}
+		modifier = {
+			factor = 0.9
+			interchangeable_parts = 1
+		}
+		modifier = {
+			factor = 0.9
+			semi_automatization = 1
+		}
+		modifier = {
+			factor = 0.9
+			cheap_iron = 1
+		}
+		modifier = {
+			factor = 0.9
+			cheap_steel = 1
+		}
+		modifier = {
+			factor = 0.9
+			iron_railroad = 1
+		}
+		modifier = {
+			factor = 0.9
+			steel_railroad = 1
+		}
+		modifier = {
+			factor = 0.9
+			inorganic_chemistry = 1
+		}
+		modifier = {
+			factor = 0.9
+			organic_chemistry = 1
+		}
+		modifier = {
+			factor = 0.9
+			darwinism_tech = 1
+		}
+		modifier = {
+			factor = 0.9
+			biologism = 1
+		}
+		modifier = {
+			factor = 0.9
+			business_banks = 1
+		}
+		modifier = {
+			factor = 0.9
+			investment_banks = 1
+		}
+		modifier = {
+			factor = 0.9
+			private_bank_money_bill_printing = 1
+		}
+		modifier = {
+			factor = 0.9
+			central_bank_money_bill_printing = 1
+		}
+		modifier = {
+			factor = 0.9
+			collectivist_theory = 1
+		}
+		modifier = {
+			factor = 0.9
+			the_historical_theory = 1
+		}
+		modifier = {
+			factor = 0.9
+			scientific_management = 1
+		}
+		modifier = {
+			factor = 0.9
+			time_saving_measures = 1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA21041"
+		social_reform = trinket_health_care
+		set_global_flag = vaccination_started
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "EVTOPTB21041"
+		any_pop = {
+			limit = { is_accepted_culture = yes }
+			dominant_issue = {
+				value = trinket_health_care
+				factor = 0.50
+			}
+			dominant_issue = {
+				value = state_controlled
+				factor = 0.50
+			}
+			militancy = 7
+			consciousness = 7
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+
+	id = 21042
+
+	trigger = {
+		OR = {
+			health_care = trinket_health_care
+			health_care = low_health_care
+			health_care = acceptable_health_care
+			health_care = good_health_care
+		}
+		invention = vaccination
+		any_state = {
+			is_colonial = no
+			any_owned_province = {
+				NOT = { has_province_modifier = vaccinated_state }
+			}
+		}
+		NOT = { any_owned_province = { has_province_modifier = healthcare_innovation_implementation }}
+	}
+
+	title = "EVTNAME21042"
+	desc = "EVTDESC21042"
+	picture = "vaccine"
+
+	option = {
+		name = "EVTOPTA21042"
+		random_state = {
+			limit = {
+				is_colonial = no
+				any_owned_province = { NOT = { has_province_modifier = vaccinated_state }}
+			}
+			any_owned = {
+				add_province_modifier = { name = vaccinated_state duration = -1 }
+				add_province_modifier = { name = healthcare_innovation_implementation duration = 365 }
+			}
+		}
+		random_state = {
+			limit = {
+				is_colonial = no
+				any_owned_province = { NOT = { has_province_modifier = vaccinated_state }}
+			}
+			any_owned = {
+				add_province_modifier = { name = vaccinated_state duration = -1 }
+				add_province_modifier = { name = healthcare_innovation_implementation duration = 365 }
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 21043
+
+	trigger = {
+		NOT = {
+			health_care = trinket_health_care
+			health_care = low_health_care
+			health_care = acceptable_health_care
+			health_care = good_health_care
+		}
+		any_owned_province = { has_province_modifier = vaccinated_state }
+	}
+
+	title = "EVTNAME21043"
+	desc = "EVTDESC21043"
+	picture = "vaccine"
+
+	immediate = {
+		any_owned = {
+			remove_province_modifier = vaccinated_state
+			remove_province_modifier = healthcare_innovation_implementation
+		}
+	}
+
+	option = {
+		name = "EVTOPTA21043"
+	}
+}
+country_event = {
+
+	id = 21044
+
+	trigger = {
+		OR = {
+			health_care = low_health_care
+			health_care = acceptable_health_care
+			health_care = good_health_care
+		}
+		invention = aerial_bacteria_and_antiseptic_principle
+		any_state = {
+			is_colonial = no
+			any_owned_province = {
+				NOT = { has_province_modifier = antiseptics_implemented }
+			}
+		}
+		NOT = {
+			any_owned_province = { has_province_modifier = healthcare_innovation_implementation }
+			any_owned_province = {
+				is_colonial = no
+				NOT = { has_province_modifier = vaccinated_state }
+			}
+		}
+	}
+
+	title = "EVTNAME21044"
+	desc = "EVTDESC21044"
+	picture = "antiseptic"
+
+	option = {
+		name = "EVTOPTA21044"
+		random_state = {
+			limit = {
+				is_colonial = no
+				any_owned_province = { NOT = { has_province_modifier = antiseptics_implemented }}
+			}
+			any_owned = {
+				add_province_modifier = { name = antiseptics_implemented duration = -1 }
+				add_province_modifier = { name = healthcare_innovation_implementation duration = 365 }
+			}
+		}
+		random_state = {
+			limit = {
+				is_colonial = no
+				any_owned_province = { NOT = { has_province_modifier = antiseptics_implemented }}
+			}
+			any_owned = {
+				add_province_modifier = { name = antiseptics_implemented duration = -1 }
+				add_province_modifier = { name = healthcare_innovation_implementation duration = 365 }
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 21045
+
+	trigger = {
+		NOT = {
+			health_care = low_health_care
+			health_care = acceptable_health_care
+			health_care = good_health_care
+		}
+		any_owned_province = { has_province_modifier = antiseptics_implemented }
+	}
+
+	title = "EVTNAME21045"
+	desc = "EVTDESC21045"
+	picture = "antiseptic"
+
+	immediate = {
+		any_owned = {
+			remove_province_modifier = antiseptics_implemented
+			remove_province_modifier = healthcare_innovation_implementation
+		}
+	}
+
+	option = {
+		name = "EVTOPTA21045"
+	}
+}
+country_event = {
+
+	id = 21046
+
+	trigger = {
+		OR = {
+			health_care = acceptable_health_care
+			health_care = good_health_care
+		}
+		invention = x_rays
+		any_state = {
+			is_colonial = no
+			any_owned_province = {
+				NOT = { has_province_modifier = x_rays_implemented }
+			}
+		}
+		NOT = {
+			any_owned_province = { has_province_modifier = healthcare_innovation_implementation }
+			any_owned_province = {
+				is_colonial = no
+				NOT = { has_province_modifier = antiseptics_implemented }
+			}
+		}
+	}
+
+	title = "EVTNAME21046"
+	desc = "EVTDESC21046"
+	picture = "x_rays"
+
+	option = {
+		name = "EVTOPTA21046"
+		random_state = {
+			limit = {
+				is_colonial = no
+				any_owned_province = { NOT = { has_province_modifier = x_rays_implemented }}
+			}
+			any_owned = {
+				add_province_modifier = { name = x_rays_implemented duration = -1 }
+				add_province_modifier = { name = healthcare_innovation_implementation duration = 365 }
+			}
+		}
+		random_state = {
+			limit = {
+				is_colonial = no
+				any_owned_province = { NOT = { has_province_modifier = x_rays_implemented }}
+			}
+			any_owned = {
+				add_province_modifier = { name = x_rays_implemented duration = -1 }
+				add_province_modifier = { name = healthcare_innovation_implementation duration = 365 }
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 21047
+
+	trigger = {
+		NOT = {
+			health_care = acceptable_health_care
+			health_care = good_health_care
+		}
+		any_owned_province = { has_province_modifier = x_rays_implemented }
+	}
+
+	title = "EVTNAME21047"
+	desc = "EVTDESC21047"
+	picture = "x_rays"
+
+	immediate = {
+		any_owned = {
+			remove_province_modifier = x_rays_implemented
+			remove_province_modifier = healthcare_innovation_implementation
+		}
+	}
+
+	option = {
+		name = "EVTOPTA21047"
+	}
+}
+country_event = {
+
+	id = 21048
+
+	trigger = {
+		health_care = good_health_care
+		invention = penicillium
+		any_state = {
+			is_colonial = no
+			any_owned_province = {
+				NOT = { has_province_modifier = antibiotics_implemented }
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = healthcare_innovation_implementation
+			}
+			any_owned_province = {
+				is_colonial = no
+				NOT = { has_province_modifier = x_rays_implemented }
+			}
+		}
+	}
+
+	title = "EVTNAME21048"
+	desc = "EVTDESC21048"
+	picture = "penicillin"
+
+	option = {
+		name = "EVTOPTA21048"
+		random_state = {
+			limit = {
+				is_colonial = no
+				any_owned_province = { NOT = { has_province_modifier = antibiotics_implemented }}
+			}
+			any_owned = {
+				add_province_modifier = { name = antibiotics_implemented duration = -1 }
+				add_province_modifier = { name = healthcare_innovation_implementation duration = 365 }
+			}
+		}
+		random_state = {
+			limit = {
+				is_colonial = no
+				any_owned_province = { NOT = { has_province_modifier = antibiotics_implemented }}
+			}
+			any_owned = {
+				add_province_modifier = { name = antibiotics_implemented duration = -1 }
+				add_province_modifier = { name = healthcare_innovation_implementation duration = 365 }
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 21049
+
+	trigger = {
+		NOT = { health_care = good_health_care }
+		any_owned_province = { has_province_modifier = antibiotics_implemented }
+	}
+
+	title = "EVTNAME21049"
+	desc = "EVTDESC21049"
+	picture = "penicillin"
+
+	immediate = {
+		any_owned = {
+			remove_province_modifier = antibiotics_implemented
+			remove_province_modifier = healthcare_innovation_implementation
+		}
+	}
+
+	option = {
+		name = "EVTOPTA21049"
+	}
+}

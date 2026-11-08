@@ -1,0 +1,3 @@
+add_core = CAR
+trade_goods = grain
+life_rating = 15

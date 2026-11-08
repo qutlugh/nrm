@@ -1,0 +1,973 @@
+political_decisions = {
+	# Mexican — American war
+	Texas_defend = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = texas_defended
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			exists = TEX
+			TEX = { war_with = MEX }
+		}
+		allow = {
+			TEX = { national_provinces_occupied = 0.01 }
+		}
+		effect = {
+			create_alliance = TEX
+			military_access = TEX
+			relation = { who = TEX value = 400 }
+			diplomatic_influence = { who = TEX value = 200 }
+			TEX = { end_war = MEX }
+			MEX = {
+				casus_belli = { target = THIS type = conquest months = 1 }
+				war = {
+					target = TEX
+					attacker_goal = { casus_belli = conquest }
+				}
+			}
+			set_country_flag = texas_defended
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+			        NOT = { TEX = { national_provinces_occupied = 0.10 } }
+			}
+		}
+	}
+	apply_for_USA_statehood = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = usstatehood_we_have_applied
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			exists = TEX
+			TEX = { OR = { vassal_of = THIS is_independant = yes }}
+		}
+		allow = {
+			ideological_thought = 1
+			government = democracy
+			NOT = { TEX = { war_with = MEX }}
+			year = 1845
+		}
+		effect = {
+			set_country_flag = usstatehood_we_have_applied
+			TEX = { country_event = { id = 16251 days = 5 }}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	manifest_destiny = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = manifest_destiny_flag
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			89 = { NOT = { is_core = THIS }}
+			103 = { NOT = { is_core = THIS }}
+			97 = { NOT = { is_core = THIS }}
+		}
+		allow = {
+			TEX = { exists = no }
+			132 = { owned_by = THIS }
+		}
+		effect = {
+			badboy = 10
+			MEX_85 = { add_core = THIS }
+			MEX_100 = { add_core = THIS }
+			MEX_94 = { add_core = THIS }
+			TEX_132 = { add_core = THIS remove_core = TEX }
+			relation = { who = MEX value = -200 }
+			set_country_flag = manifest_destiny_flag
+		}
+		ai_will_do = { factor = 1 }
+	}
+	californian_purchase = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = you_did_try_to_buy_california
+				owns = 89
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			89 = { owned_by = MEX }
+			97 = { owned_by = MEX }
+			103 = { owned_by = MEX }
+		}
+		allow = {
+			has_country_flag = manifest_destiny_flag
+			89 = { is_core = THIS }
+			97 = { is_core = THIS }
+			103 = { is_core = THIS }
+			money = 100000
+		}
+		effect = {
+			set_country_flag = you_did_try_to_buy_california
+			MEX = { country_event = { id=44138 days=10 }}
+			money = -100000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	guadalupe_hidalgo_treaty = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = guadalupe_hidalgo_treaty_assigned
+				owns = 89
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			89 = { owned_by = MEX }
+			97 = { owned_by = MEX }
+			103 = { owned_by = MEX }
+		}
+		allow = {
+			has_country_flag = you_did_try_to_buy_california
+			war_with = MEX
+			89 = { controlled_by = THIS }
+			97 = { controlled_by = THIS }
+			103 = { controlled_by = THIS }
+			MEX = {
+				OR = {
+					capital_scope = { controlled_by = THIS }
+					war_exhaustion = 50
+				}
+			}
+			money = 100000
+		}
+		effect = {
+			badboy = 5
+			set_country_flag = guadalupe_hidalgo_treaty_assigned
+			MEX = { country_event = { id=16259 days=10 }}
+			money = -100000
+		}
+		ai_will_do = { factor = 1 }
+	}
+	gadsden_purchase = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			has_country_flag=guadalupe_hidalgo_treaty_assigned
+			84 = { owned_by=THIS }
+			102 = { owned_by = MEX }
+			NOT = { has_country_flag = gadsden_purchase_offered }
+		}
+		allow = {
+			NOT = { war_with = MEX }
+			relation = { who=MEX value=100 }
+			money = 75000
+			year = 1853
+		}
+		effect = {
+			badboy = 5
+			set_country_flag = gadsden_purchase_offered
+			money = -75000
+			MEX = { set_country_flag = gadsden_purchase_mex }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	#A House Divided
+	enact_anaconda_plan = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			war_with = CSA
+			NOT = { has_global_flag = anaconda_plan_active }
+		}
+		allow = {
+			CSA = { blockade = 1 }
+		}
+		effect = {
+			CSA = { add_country_modifier = { name = anaconda_plan duration = 3650 }}
+			set_global_flag = anaconda_plan_active
+		}
+		ai_will_do = { factor = 1 }
+	}
+	bixby_letter = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = bixby_letter_sent
+				has_country_flag = has_used_radical_reconstruction
+				has_country_flag = redeemed_the_slaves
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			has_global_flag = american_civil_war_has_happened
+		}
+		
+		allow = {
+			war_exhaustion = 50
+		}
+		
+		effect = {
+			set_country_flag = bixby_letter_sent
+			war_exhaustion = -50
+		}
+		ai_will_do = { factor = 1 }
+	}
+	emancipation_proclamation = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = emancipation
+				has_country_flag = redeemed_the_slaves
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			has_global_flag = american_civil_war_has_happened
+		}
+		allow = {
+			OR = {
+				NOT = { exists = CSA }
+				war_with = CSA
+				CSA = { exists = yes war = no }
+			}
+		}
+		effect = {
+			set_country_flag = emancipation
+		        clr_country_flag = the_slavery_debate
+			political_reform = no_slavery
+                        remove_country_modifier = the_slavery_debate
+			any_country = {
+                               limit = { slavery = no_slavery }
+			       relation = { who = THIS value = 20 }
+			}
+			any_country = {
+                               limit = { slavery = yes_slavery }
+			       relation = { who = THIS value = -40 }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	shermans_march_to_the_sea = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			war_with = CSA
+			NOT = { has_country_flag = sherman_marched_to_the_sea }
+		}		
+		allow = {
+			controls = 201
+			controls = 2555
+			controls = 204
+		}
+		effect = {
+			set_country_flag = sherman_marched_to_the_sea
+			CSA = { war_exhaustion = 50 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	enact_radical_reconstruction = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = has_used_radical_reconstruction
+				has_country_flag = redeemed_the_slaves
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			has_global_flag = american_civil_war_has_happened
+		}
+		allow = {
+			slavery = no_slavery
+			CSA = { exists = no }
+		}
+		effect = {
+			country_event = { id = 44143 days = 10 }
+			remove_country_modifier = american_civil_war
+			set_country_flag = has_used_radical_reconstruction
+		}
+		ai_will_do = { factor = 1 }
+	}
+	enact_the_homestead_act = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = redeemed_the_slaves
+				has_country_flag = homestead_act_enacted
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			government = democracy
+		}
+		allow = {
+			OR = {
+				has_country_flag = has_used_radical_reconstruction
+				has_country_flag = redeemed_the_slaves
+			}
+		}
+		effect = {
+			set_country_flag = homestead_act_enacted
+			add_country_modifier = { name = the_homestead_act duration = 18250 }
+			any_owned = {
+				limit = {
+					is_core = THIS
+					continent = north_america
+					has_province_modifier = core_reg
+				}
+				add_province_modifier = {
+					name = the_homestead_act_local
+					duration = 18250
+				}
+			}
+				
+		}
+		ai_will_do = { factor = 1 }
+	}
+	#CSA
+	king_cotton = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = CSA
+			war_with = USA
+			not = { has_country_flag = haskingcotton }
+		}
+		allow = {
+			any_owned_province = { produces = cotton }
+		}
+		effect = {
+			set_country_flag = haskingcotton
+			prestige = 50
+			any_greater_power = {
+				limit = { NOT = { war_with = THIS }}
+				casus_belli = { target = USA type = prepare_war months = 12 }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	form_kellys_irish_brigade = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = CSA
+			war_with = USA
+			NOT = { has_country_flag = kellys_irish_brigade }
+		}
+		allow = {
+			war_exhaustion = 50
+		}
+		effect = {
+			war_exhaustion = -25
+			set_country_flag = kellys_irish_brigade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	raise_the_bonnie_blue_flag = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = CSA
+			NOT = { has_country_flag = bonnie_blue_flag }
+		}
+		allow = {
+			war_with = USA
+		}
+		effect = {
+			define_general = {
+				name = "Robert E.Lee"
+				personality = trait_offensive_7
+				background = trait_defence_5
+			}
+			define_general = {
+				name = "Thomas Jackson"
+				personality = trait_offensive_5
+				background = trait_defence_1
+			}
+			set_country_flag = bonnie_blue_flag
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# Compromise with South
+	redeem_slaves_from_the_south = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			slavery = yes_slavery
+		}
+		allow = {
+			has_country_modifier = the_slavery_debate
+			CSA = { exists = no }
+			money = 1000000
+		}
+		effect = {
+			remove_country_modifier = the_slavery_debate
+			clr_country_flag = the_slavery_debate
+			political_reform = no_slavery
+			set_global_flag = american_civil_war_has_happened
+			set_country_flag = redeemed_the_slaves
+			CSA = { all_core = { remove_core = CSA }}
+			any_pop = {
+				scaled_militancy = { factor = -9 issue = no_slavery }
+				scaled_militancy = { factor = -9 issue = yes_slavery }
+			}
+			money = -1000000
+			prestige_factor = -0.50
+		}
+		ai_will_do = { factor = 1 }
+	}
+	ostend_manifesto = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = ostend_manifesto_published
+				has_global_flag = american_civil_war_has_happened
+				any_owned_province = { has_building = selector }
+			}
+		  	tag = USA
+			slavery = yes_slavery
+			SPA_2209 = {
+				is_slave = yes
+				is_colonial = yes
+			}
+		}
+		allow = {
+			average_consciousness = 5
+			NOT = {
+				OR = {
+					alliance_with = SPA
+					military_access = SPA
+					SPA = { military_access = THIS }
+				}
+			}
+		}
+		effect = {
+			add_casus_belli = {
+				target = SPA
+				type = humiliate
+				months = 12
+			}
+			war = {
+				target = SPA
+				attacker_goal = { casus_belli = place_in_the_sun state_province_id = 2209 }
+				defender_goal = { casus_belli = humiliate }
+			}
+			any_pop = {
+				scaled_consciousness = { factor = -4 issue = yes_slavery }
+				scaled_consciousness = { factor = -2 issue = no_slavery }
+			}
+			set_country_flag = ostend_manifesto_published
+		}
+		ai_will_do = { factor = 0 }
+	}
+	wilmot_proviso = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = wilmot_proviso_providing
+				has_global_flag = american_civil_war_has_happened
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			slavery = yes_slavery
+		}
+		allow = {
+			MEX_94 = { owned_by = THIS }
+			MEX_85 = { owned_by = THIS }
+			MEX_100 = { owned_by = THIS }
+		}
+		effect = {
+			any_pop = {
+				scaled_consciousness = { factor = -1 issue = no_slavery }
+				scaled_militancy = { factor = -0.5 issue = no_slavery }
+			}
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					OR = { 
+						pop_type = artisans
+						pop_type = clerks
+						pop_type = craftsmen
+						pop_type = farmers
+					}
+				}
+				money = 1000
+			}
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					NOT = { location = { trade_goods = precious_metal }}
+					OR = {
+						pop_type = labourers
+						pop_type = skilledworker
+					}
+				}
+				money = 1000
+			}
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					OR = {
+						pop_type = aristocrats
+						pop_type = capitalists
+					}
+				}
+				money = 1000
+			}
+			set_country_flag = wilmot_proviso_providing
+			relation = { who = MEX value = 300 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# American expansion
+	american_industrial_boom = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = american_industrial_boom_1
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+		}
+		allow = {
+			experimental_railroad = 1
+			guild_based_production = 1
+		}
+		effect = {
+			add_country_modifier = { name = american_industrial_revolution duration = 36500 }
+			set_country_flag = american_industrial_boom_1
+                        any_pop = { limit = { is_accepted_culture = yes } money = 200 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	annex_hawaii = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = hawaii_was_annexed
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+                        2218 = { NOT = { is_core = THIS }}
+		}
+		allow = {
+                        owns = 89
+			state_n_government = 1
+			2218 = {
+				OR = {
+					owned_by = THIS
+					owner = { vassal_of = THIS }
+				}
+			}
+		}
+		effect = {
+			HAW_658 = { add_core = USA }
+			inherit = HAW
+			HAW_658 = { add_core = AAB }
+			release = AAB
+			inherit = AAB
+			HAW_658 = { remove_core = AAB }
+			set_country_flag = hawaii_was_annexed
+		}
+		ai_will_do = { factor = 1 }
+	}
+	alaskan_purchase = {
+		 potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = you_did_try
+				any_owned_province = { has_building = selector }
+			}
+			year = 1860
+                        owns = 89
+			tag = USA
+			1 = {
+				owner = {
+					OR = {
+						tag = RUS
+						tag = SOV
+					}
+				}
+			}
+		}
+		allow = {
+			nationalism_n_imperialism = 1
+			money = 200000
+                        slavery = no_slavery
+		}
+		effect = {
+			USA_1 = {
+				add_core = USA
+                                remove_core = RUS
+			}
+			1 = { owner = { country_event = 32509 }}
+			set_global_flag = you_did_try
+		}
+		ai_will_do = { factor = 1 }
+	}
+	foundation_of_general_electric = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = general_electric_founded
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			has_country_flag = american_industrial_boom_1
+		}
+		allow = {
+		       invention = edison_light_bulb
+		}
+		effect = {
+			tech_school = american_tech_school
+			research_points = 30000
+			set_country_flag = general_electric_founded
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					OR = { 
+						pop_type = artisans
+						pop_type = clerks
+						pop_type = craftsmen
+						pop_type = farmers
+						pop_type = aristocrats
+						pop_type = capitalists
+					}
+				}
+				money=1000
+			}
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					NOT = { location = { trade_goods = precious_metal }}
+					OR = {
+						pop_type = labourers
+						pop_type = skilledworker
+					}
+				}
+				money=1000
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	support_panamanian_rebellion = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = panama_rebellion_supported
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			PNM = {
+				exists = no
+				all_core = { owned_by = CLM }
+			}
+		}
+		allow = {
+			is_greater_power = yes
+			state_n_government = 1
+			money = 100000
+			NOT = {
+				OR = {
+					alliance_with = CLM
+					relation = { who = CLM value = 0 }
+					military_access = CLM
+				}
+			}
+		}
+		effect = {
+			money = -100000
+			CLM = { release = PNM }
+			create_alliance = PNM
+			diplomatic_influence = { who = PNM value = 200 }
+			relation = { who = PNM value = 400 }
+			CLM = {
+				casus_belli = { target = PNM type = conquest months = 1 }
+				war = { target = PNM attacker_goal = { casus_belli = conquest }}
+			}
+			PNM = { 1723 = { secede_province = THIS }}
+			set_country_flag = panama_rebellion_supported
+		}
+		ai_will_do = { factor = 1 }
+	}
+	build_rushmore = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = rushmore_was_built
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			122 = { owned_by = THIS }
+		}
+		allow = {
+			is_greater_power = yes
+			122 = { controlled_by = THIS }
+			high_culture = 1
+		}
+		effect = {
+			prestige = 200
+			set_country_flag = rushmore_was_built
+		}
+		ai_will_do = { factor = 1 }
+	}
+	develop_pearl_harbour = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = pearl_harbor_developed
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+		}
+		allow = {
+			money = 150000
+			naval_nco_training = 1
+			2218 = {
+				owned_by = THIS
+				controlled_by = THIS
+			}
+		}
+		effect = {
+			money = -150000
+			2218 = {
+				add_province_modifier = { name = main_fleet_base duration = -1 }
+			}
+			set_country_flag = pearl_harbor_developed
+		}
+		ai_will_do = { factor = 1 }
+	}
+	expand_norfolk_shipyard = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = norfolk_shipyard_has_been_built
+				any_owned_province = { has_building = selector }
+			}
+			tag = USA
+			has_global_flag = american_civil_war_has_happened
+			214 = { owned_by = THIS }
+		}
+		allow = {
+			money = 100000
+			weapon_platforms = 1
+			214 = { controlled_by = THIS }
+		}
+		effect = {
+			money = -100000
+			214 = {
+				add_province_modifier = { name = norfolk_shipyard duration = -1 }
+			}
+			set_country_flag = norfolk_shipyard_has_been_built
+		}
+		ai_will_do = { factor = 1 }
+	}
+	denounce_paris_peace_treaty_usa = {
+		picture = denounce_paris_peace_treaty
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			ENG = { has_country_modifier = paris_peace_treaty }
+			tag = USA
+		}
+		allow = {
+			NOT = {
+				badboy = 0.25
+				truce_with = ENG
+				relation = { who = ENG value = 0 }
+			}
+		}
+		effect = {
+			badboy = 30
+			ENG = { country_event = 44149 }
+			any_greater_power = { country_event = 44150 }
+		}
+	        ai_will_do = { factor = 0 }
+	}
+}

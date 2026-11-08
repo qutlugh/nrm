@@ -1,0 +1,1136 @@
+# An Age of Liberalism
+country_event = {
+	id = 10001
+	title = "EVTNAME10001"
+	desc = "EVTDESC10001"
+	picture = "AgeOfRevolutions"
+
+	trigger = {
+		capital_scope = { continent = europe }
+		literacy = 0.3
+		year = 1840
+		NOT = {
+			OR = {
+				tag = TUR
+				has_country_flag = liberal_revolution_in_progress
+				has_country_flag = liberal_revolution_fired
+				has_country_flag = had_liberal_revolution
+				is_ideology_enabled = socialist
+				vote_franschise = universal_weighted_voting
+				vote_franschise = universal_voting
+			}
+		}
+		NOT = { has_global_flag = liberal_revolutions_should_now_fire }
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.1
+			has_global_flag = liberal_revolution_somewhere
+		}
+	}
+
+	immediate = {
+		add_country_modifier = { name=global_liberal_agitation duration=-1 }
+		any_pop={limit={location={is_colonial=no}}ideology={value=liberal factor=0.05}consciousness=1}
+		set_global_flag = liberal_revolution_somewhere
+		set_country_flag = liberal_revolution_in_progress
+	}
+
+	option = {
+		name = "EVTOPTA10001"
+	}
+}
+#Springtime of Nations
+country_event = {
+	id = 10000
+	title = "EVTNAME10000"
+	desc = "EVTDESC10000"
+	picture = "Riot"
+
+	trigger = {
+		has_country_flag = liberal_revolution_in_progress
+		has_country_modifier = global_liberal_agitation
+		year = 1847
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.50
+			political_reform_want = 0.07
+		}
+		modifier = {
+			factor = 0.25
+			political_reform_want = 0.09
+		}
+		modifier = {
+			factor = 1.1
+			has_country_modifier = anti_jacobin_tract
+		}
+		modifier = {
+			factor = 1.25
+			not = { political_reform_want = 0.05 }
+		}
+		modifier = {
+			factor = 0.01
+			has_global_flag = liberal_revolutions_should_now_fire
+		}
+	}
+
+	immediate = {
+		remove_country_modifier = global_liberal_agitation
+		add_country_modifier = { name=springtime_of_nations duration=1825 }
+		any_pop = {
+			scaled_militancy = {
+				ideology = liberal
+				factor = 6
+			}
+		}
+		any_owned = {
+			limit = {
+				liberal = 20
+				average_consciousness = 4
+			}
+			remove_province_modifier = liberal_agitation
+		}
+		set_global_flag = liberal_revolutions_should_now_fire
+		clr_country_flag = liberal_revolution_in_progress
+		set_country_flag = liberal_revolution_fired
+	}
+
+	option = {
+		name = "EVTOPTA10000"
+	}
+}
+#End of The Liberal Revolution
+country_event = {
+	title = "EVTNAME10050"
+	desc = "EVTDESC10050"
+	picture = "AgeOfRevolutions"
+
+	id = 10051
+
+	trigger = {
+		OR = {
+			has_country_flag = liberal_revolution_in_progress
+			has_country_flag = liberal_revolution_fired
+		}
+		OR = {
+			vote_franschise = universal_weighted_voting
+			vote_franschise = universal_voting
+		}
+		OR = {
+			political_parties = gerrymandering
+			political_parties = non_secret_ballots
+			political_parties = secret_ballots
+		}
+		NOT = { num_of_revolts = 1 }
+	}
+
+	immediate = {
+		any_owned = {
+			limit = {
+				is_colonial = no
+			}
+			any_pop = {
+				militancy = -9
+				consciousness = -9
+			}
+		}
+		remove_country_modifier = global_liberal_agitation
+		remove_country_modifier = springtime_of_nations
+		clr_country_flag = liberal_revolution_fired
+		clr_country_flag = liberal_revolution_in_progress
+		set_country_flag = had_liberal_revolution
+	}
+
+	option = {
+		name = "EVTOPTA10050"
+	}
+}
+#Potato Blight
+country_event = {
+	title = "EVTNAME10100"
+	desc = "EVTDESC10100"
+	id = 10100
+	picture = "Demonstration"
+	
+	trigger = {
+		continent = europe
+		civilized = yes
+		NOT = {
+			health_care = good_health_care
+			inorganic_chemistry = 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 250
+		modifier = {
+			factor = 0.8
+			any_owned_province = {
+				has_province_modifier = potato_blight
+			}
+		}
+		modifier = {
+			factor = 0.9
+				NOT = {
+					medicine = 1
+				}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				poor_strata_life_needs = 0.8
+			}
+		}
+		modifier = {
+			factor = 1.5
+			poor_strata_life_needs = 0.95
+		}
+		
+	}
+	option = {
+		name = "EVTOPTB10100"
+		
+		random_owned = { 
+			limit = {
+				is_colonial = no
+				NOT = {
+					has_province_modifier = potato_blight
+					poor_strata_everyday_needs = 0.9
+				}
+			}
+			add_province_modifier = {
+				name = potato_blight
+				duration = 180
+			}
+			state_scope = {
+				any_pop = {
+					consciousness = 3
+				}
+			}
+		}
+		prestige = -10
+
+	}
+	option = {
+		name = "EVTOPTA10100"
+			random_owned = { 
+				limit = {
+					is_colonial = no
+					NOT = {
+						has_province_modifier = potato_blight
+						poor_strata_everyday_needs = 0.9
+					}
+				}
+			state_scope = {
+				any_owned = {
+					add_province_modifier = {
+						name = potato_blight
+						duration = 365
+					}
+				}
+			}
+		}
+	}
+}
+
+#Potato Famine Debated
+country_event = {
+	title = "EVTNAME10105"
+	desc = "EVTDESC10105"
+	id = 10105
+	picture = "Metis"
+
+	trigger = {
+		has_country_flag = liberal_revolution_in_progress
+		any_owned_province = {
+			has_province_modifier = potato_blight
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.9
+			political_reform_want = 0.02
+		}
+		modifier = {
+			factor = 0.9
+			political_reform_want = 0.03
+		}
+		modifier = {
+			factor = 0.9
+			political_reform_want = 0.04
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 5
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				average_consciousness = 5
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTA10105"
+		random_state = {
+			limit = {
+				is_colonial = no
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = liberal_agitation
+					duration = 730
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB10105"
+		any_pop = {
+			limit = {
+				location = {
+					is_colonial = no
+				}
+			}
+			ideology = {
+				value = liberal
+				factor = 0.02
+			}
+			consciousness = 0.5
+		}
+	}
+}
+
+#Nationalist Poet
+country_event = {
+	title = "EVTNAME10110"
+	desc = "EVTDESC10110"
+	id = 10110
+	picture = "Demonstration"
+
+	trigger = {
+		has_country_flag = liberal_revolution_in_progress
+		average_consciousness = 3
+	}
+
+	mean_time_to_happen = {
+		months = 25
+		modifier = {
+			factor = 0.8
+			liberal = 5
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 10
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 15
+		}
+		modifier = {
+			factor = 0.9
+			political_reform_want = 0.05
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				average_consciousness = 5
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10110"
+		random_state = {
+			limit = {
+				is_colonial = no
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = liberal_agitation
+					duration = 730
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB10110"
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.03
+			}
+			militancy = 1
+		}
+	}
+}
+
+#Liberal Newspaper
+country_event = {
+	title = "EVTNAME10120"
+	desc = "EVTDESC10120"
+	id = 10120	
+	picture = "Liberator"
+	
+	trigger = {
+			has_country_flag = liberal_revolution_in_progress
+			NOT = {
+				press_rights = free_press
+			}
+		
+	}
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 10
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 15
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				average_consciousness = 4
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10120"
+		random_owned = { 
+				limit = {
+					is_colonial = no
+					liberal = 5
+					NOT = {
+						has_province_modifier = liberal_agitation
+					}
+				}
+		
+		add_province_modifier = {
+			name = liberal_agitation
+			duration = 730
+			}
+		}
+		
+		random_owned = { 
+				limit = {
+					is_colonial = no
+					liberal = 5
+					NOT = {
+						has_province_modifier = liberal_agitation
+					}
+				}
+		
+		add_province_modifier = {
+			name = liberal_agitation
+			duration = 730
+			}
+		}
+		
+		random_owned = { 
+				limit = {
+					is_colonial = no
+					liberal = 5
+					NOT = {
+						has_province_modifier = liberal_agitation
+					}
+				}
+		
+		add_province_modifier = {
+			name = liberal_agitation
+			duration = 730
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB10120"
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.1
+			}
+			consciousness = 0.5
+		}
+	}
+}
+
+#Cholera Epedemic!
+country_event = {
+	title = "EVTNAME10230"
+	desc = "EVTDESC10230"
+	picture = "Cholera"
+
+	id = 10230
+
+	trigger = {
+		NOT = {
+			health_care = good_health_care
+			poor_strata_everyday_needs = 0.95
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 250
+		modifier = {
+			factor = 0.9
+			NOT = {
+				poor_strata_life_needs = 0.9
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				poor_strata_life_needs = 0.85
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				poor_strata_everyday_needs = 0.9
+			}
+		}
+		modifier = {
+			factor = 3
+			medicine = 1
+		}
+		modifier = {
+			factor = 2
+			electricity = 1
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 10
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 15
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 20
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 25
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 35
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 40
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10230"
+		random_province = {
+			add_province_modifier = {
+				name = cholera_epidemic_small
+				duration = 180
+			}
+			any_pop = {
+				consciousness = 2
+				militancy = -1
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB10230"
+		random_province = {
+			add_province_modifier = {
+				name = cholera_epidemic_big
+				duration = 365
+			}
+			any_pop = {
+				consciousness = -2
+			}
+		}
+	}
+}
+
+#Cholera Spreads
+province_event = {
+	title = "EVTNAME10240"
+	desc = "EVTDESC10240"
+	id = 10240
+
+	trigger = {
+		any_neighbor_province = {
+			OR = {
+				has_province_modifier = cholera_epidemic_small
+				has_province_modifier = cholera_epidemic_big
+			}
+		}
+		NOT = {
+			has_province_modifier = cholera_epidemic_small
+			has_province_modifier = cholera_epidemic_big
+			owner = { health_care = good_health_care }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.9
+			NOT = {
+				poor_strata_life_needs = 0.9
+			}
+		}
+
+		modifier = {
+			factor = 4
+			owner = {
+				medicine = 1
+			}
+		}
+		modifier = {
+			factor = 2
+			owner = {
+				electricity = 1
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				poor_strata_everyday_needs = 0.9
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10240"
+		random_list = {
+			10 = {
+				add_province_modifier = {
+					name = cholera_epidemic_big
+					duration = 730
+				}
+			}
+			10 = {
+				add_province_modifier = {
+					name = cholera_epidemic_small
+					duration = 365
+				}
+			}
+		}
+	}
+}
+
+#Liberals capitalise on the Cholera Epidemic
+country_event = {
+	title = "EVTNAME10250"
+	desc = "EVTDESC10250"
+	id = 10250
+	picture = "Cholera"
+
+	trigger = {
+		has_country_flag = liberal_revolution_in_progress
+		any_owned_province = {
+			has_province_modifier = cholera_epidemic_big
+			has_province_modifier = cholera_epidemic_small
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 20
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 0.9
+			political_reform_want = 0.05
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				liberal = 10
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10250"
+		random_state = {
+			limit = {
+				is_colonial = no
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = liberal_agitation
+					duration = 730
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB10250"
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.05
+			}
+			consciousness = 0.5
+		}
+	}
+}
+
+# Student Association
+country_event = {
+	id = 10270
+	title = "EVTNAME10270"
+	desc = "EVTDESC10270"
+	picture = "Revolution"
+
+	trigger = {
+		has_country_flag = liberal_revolution_in_progress
+	}
+
+	mean_time_to_happen = {
+		months = 36
+
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 5
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 10
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				liberal = 5
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10270"
+		random_state = {
+			limit = {
+				is_colonial = no
+			}
+			any_owned = {
+				add_province_modifier = {
+					name = liberal_agitation
+					duration = 730
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB10270"
+		random_state = {
+			limit = {
+				is_colonial = no
+			}
+			any_pop = {
+				consciousness = 1
+				militancy = 2
+				ideology = {
+					value = liberal
+					factor = 0.05
+				}
+			}
+		}
+	}
+}
+
+# Classics Rediscovered
+country_event = {
+	id = 10280
+	title = "EVTNAME10280"
+	desc = "EVTDESC10280"
+	picture = "Finepeople"
+
+	trigger = {
+		literacy = 0.4
+		civilized = yes
+		romanticism = 1
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.9
+			literacy = 0.4
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 15
+		}
+		modifier = {
+			factor = 0.1
+			has_country_flag = liberal_revolution_in_progress
+		}
+		modifier = {
+			factor = 1.2
+			NOT = {
+				liberal = 10
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10280"
+		prestige = -20
+		rich_strata = {
+			militancy = 1
+		}
+	}
+
+	option = {
+		name = "EVTOPTB10280"
+		rich_strata = {
+			ideology = {
+				value = liberal
+				factor = 0.05
+			}
+			consciousness = 1
+		}
+	}
+}
+
+# Liberal Author
+country_event = {
+	id = 10290
+	title = "EVTNAME10290"
+	desc = "EVTDESC10290"
+	picture = "publishers"
+
+	trigger = {
+		literacy = 0.3
+		civilized = yes
+		average_consciousness = 3
+		NOT = {
+			press_rights = free_press
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 400
+		modifier = {
+			factor = 0.1
+			has_country_flag = liberal_revolution_in_progress
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 0.9
+			literacy = 0.4
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 20
+		}
+		modifier = {
+			factor = 1.2
+			NOT = {
+				liberal = 10
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10290"
+		random_state = {
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.15
+				}
+				consciousness = 1
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB10290"
+		middle_strata = {
+			ideology = {
+				value = liberal
+				factor = 0.03
+			}
+			consciousness = 0.5
+		}
+	}
+}
+
+# Chamber of Commerce Protests
+country_event = {
+	id = 10300
+	title = "EVTNAME10300"
+	desc = "EVTDESC10300"
+	picture = "Upperhouse"
+
+	trigger = {
+		NOT = {
+			economic_policy = laissez_faire
+			government = proletarian_dictatorship
+		}
+		has_pop_type = capitalists
+		average_consciousness = 2
+	}
+
+	mean_time_to_happen = {
+		months = 480
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = liberal_revolution_in_progress
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 5
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 20
+		}
+		modifier = {
+			factor = 1.1
+			NOT = {
+				liberal = 10
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10300"
+		random_state = {
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.05
+				}
+				consciousness = 1
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB10300"
+		capitalists = {
+			militancy = 1
+			ideology = {
+				value = liberal
+				factor = 0.1
+			}
+			consciousness = 1
+		}
+	}
+}
+
+#A Treatise on Economics
+country_event = {
+	id = 10310
+	title = "EVTNAME10320"
+	desc = "EVTDESC10320"
+	picture = "Demonstration"
+
+	trigger = {
+		freedom_of_trade = 1
+		civilized = yes
+		NOT = {
+			press_rights = state_press
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.1
+			has_country_flag = liberal_revolution_in_progress
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 1.4
+			is_ideology_enabled = socialist
+		}
+		modifier = {
+			factor = 1.4
+			market_regulations = 1
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10320"
+		middle_strata = {
+			ideology = {
+				value = liberal
+				factor = 0.1
+			}
+			militancy = 1
+		}
+		prestige = 10
+	}
+
+	option = {
+		name = "EVTOPTB10320"
+		poor_strata = {
+			militancy = -1
+			consciousness = 1
+		}
+	}
+}
+
+# Chartist Rallies
+country_event = {
+	id = 10330
+	title = "EVTNAME10330"
+	desc = "EVTDESC10330"
+	picture = "Demonstration"
+
+	trigger = {
+		NOT = {
+			OR = {
+				vote_franschise = universal_weighted_voting
+				vote_franschise = universal_voting
+			}
+		}
+		civilized = yes
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.2
+			has_country_flag = liberal_revolution_in_progress
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 3
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 15
+		}
+		modifier = {
+			factor = 2
+			public_meetings = no_meeting
+		}
+		modifier = {
+			factor = 1.4
+			NOT = {
+				liberal = 15
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA10330"
+		random_state = {
+			limit = {
+				is_colonial = no
+			}
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.1
+				}
+				militancy = 1
+				consciousness = 1
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB10330"
+		random_state = {
+			limit = {
+				is_colonial = no
+			}
+			any_pop = {
+				#reduce_pop = 0.99
+				militancy = 6
+			}
+		}
+	}
+}

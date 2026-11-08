@@ -1,0 +1,8 @@
+owner = PAN
+controller = PAN
+add_core = HND
+add_core = PAK
+add_core = PAN
+trade_goods = cotton
+terrain = urban
+life_rating = 35

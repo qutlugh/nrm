@@ -1,0 +1,5 @@
+owner = TUR
+controller = TUR
+add_core = LBN
+trade_goods = iron_ore
+life_rating = 40

@@ -1,0 +1,960 @@
+political_decisions = {
+	form_north_german_confederation = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				exists = NGF
+				exists = GER
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+			capital_scope = { is_core = NGF }
+		}
+		allow = {
+			NGF = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = { NOT = { primary_culture = north_german }}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 100
+ 			change_tag = NGF
+			remove_country_modifier = german_customs_union
+			any_country = {
+				limit = {
+					has_country_modifier = german_customs_union
+				}
+				remove_country_modifier = german_customs_union
+			}
+			political_reform = federation
+		}
+		ai_will_do = { factor = 1 }
+	}	
+	form_germany = {
+		news = yes
+		news_desc_long = "form_germany_NEWS_LONG"
+		news_desc_medium = "form_germany_NEWS_MEDIUM"
+		news_desc_short = "form_germany_NEWS_SHORT"
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				exists = GER
+				tag = KUK
+				any_owned_province = { has_building = selector }
+			}
+                	primary_culture = north_german
+		}
+		allow = {
+			OR = {
+				tag = NGF
+				tag = SGF
+			}
+			GER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = { NOT = { primary_culture = north_german }}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 300
+			change_tag = GER
+			capital = 549
+			remove_country_modifier = german_customs_union
+			any_country = {
+				limit = {
+					has_country_modifier = german_customs_union
+				}
+				remove_country_modifier = german_customs_union
+			}
+			political_reform = federation
+		}
+		ai_will_do = { factor = 1 }
+	}
+	ems_dispatch = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = ems_dispatch_sent
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				tag = PRU
+				tag = NGF
+			}
+			exists = FRA
+			government = absolute_monarchy
+		}
+		
+		allow = {
+                        year = 1840
+			NOT = {
+				relation = { who = FRA value = 0 }
+			}
+                        570 = {
+				owner = {
+					OR = {
+						tag = THIS
+						vassal_of = THIS
+						in_sphere = THIS
+					}
+				}
+			}
+		}
+		
+		effect = {
+			FRA = { country_event = 19200 }
+			set_country_flag = ems_dispatch_sent
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { year = 1850 }
+			}
+		}
+	}
+	construct_germania_werft = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = germania_werft_has_been_built
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+                        NOT = {
+				AND = {
+					exists = GER
+					THIS = {
+						NOT = { tag = GER }
+					}
+				}
+			}
+			owns = 369
+		}
+
+		allow = {
+			tag = GER
+                        tech_school = prussian_tech_school
+			weapon_platforms = 1
+			369 = { has_building = naval_base }
+		}
+
+		effect = {
+			set_global_flag = germania_werft_has_been_built
+			369 = { add_province_modifier = { name = germania_werft duration = -1 }}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	the_ruhr_boom = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = ruhr_boom_has_happened
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+                        NOT = {
+				AND = {
+					exists = GER
+					THIS = {
+						NOT = { tag = GER }
+					}
+				}
+			}
+		}
+		allow = {
+			tag = GER
+			organized_factories = 1
+			market_structure = 1
+			PRU_575 = { owned_by = THIS }
+			PRU_570 = { owned_by = THIS }
+			PRU_581 = { owned_by = THIS }
+			HES_2560 = { owned_by = THIS }
+		}
+		effect = {
+			add_country_modifier = { name = ruhr_boom duration = 14600 }
+			set_global_flag = ruhr_boom_has_happened
+			set_country_flag = ruhr_boom_has_happened1
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	support_ruhr_industrialism = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = ruhr_boom_supported
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+                        NOT = {
+				AND = {
+					exists = GER
+					THIS = {
+						NOT = { tag = GER }
+					}
+				}
+			}
+		}
+
+		allow = {
+			tag = GER
+			has_country_flag = ruhr_boom_has_happened1
+			business_banks = 1
+			PRU_575 = { owned_by = THIS }
+			PRU_570 = { owned_by = THIS }
+			PRU_581 = { owned_by = THIS }
+			HES_2560 = { owned_by = THIS }
+		}
+
+		effect = {
+			set_global_flag = ruhr_boom_supported
+			tech_school = prussian_tech_school
+			research_points = 50000
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					OR = { 
+						pop_type = artisans
+						pop_type = clerks
+						pop_type = craftsmen
+						pop_type = farmers
+						pop_type = aristocrats
+						pop_type = capitalists
+					}
+				}
+				money = 1000
+			}
+			any_pop = {
+				limit = {
+					is_accepted_culture = yes
+					NOT = { location = { trade_goods = precious_metal }}
+					OR = {
+						pop_type = labourers
+						pop_type = skilledworker
+					}
+				}
+				money = 1000
+			}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	die_wacht_am_rhein = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = watching_the_rhine
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				tag = GER
+				tag = NGF
+				tag = PRU
+			}
+			exists = FRA
+			FRA = { has_country_flag = crisis_on_the_rhine }
+		}
+		allow = {
+			NOT = { relation = { who = FRA value = 0 }}
+		}
+		effect = {
+			prestige = 25
+			set_country_flag = watching_the_rhine
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	niederwald_denkmal = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = niederwald_denkmal
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+                        NOT = {
+				exists = GER
+				THIS = {
+					NOT = { tag = GER }
+				}
+			}
+		}
+		allow = {
+			tag = GER
+			nationalism_n_imperialism = 1
+			money = 100000
+		}
+		effect = {
+			money = -100000
+			prestige = 100
+			set_country_flag = niederwald_denkmal
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	schwabing_circles = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = schwabing_encircled
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				tag = BAV
+				tag = SGF
+				tag = GER
+			}
+			owns = 599
+		}
+		allow = {
+			money = 50000
+			expressionism = 1
+		}
+		effect = {
+			money = -50000
+			prestige = 50
+			set_country_flag = schwabing_encircled
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	support_biesterfelds = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = lippe_dispute_solved
+				any_owned_province = { has_building = selector }
+			}
+			tag = LIP
+			year = 1880
+			exists = PRU
+		}
+		allow = {
+			is_independant = yes
+		}
+		effect = {
+			prestige = 25
+			set_country_flag = lippe_dispute_solved
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	support_schaumburgs = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = lippe_dispute_solved
+				any_owned_province = { has_building = selector }
+			}
+			tag = LIP
+			year = 1880
+			exists = PRU
+		}
+		allow = {
+			is_independant = yes
+		}
+		effect = {
+			relation = {
+				who = PRU
+				value = 200
+			}
+			set_country_flag = lippe_dispute_solved
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	das_zivilgesetzbuch = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = code_of_laws
+				any_owned_province = { has_building = selector }
+			}
+			tag = HES
+		}
+		allow = {
+			ideological_thought = 1
+		}
+		effect = {
+			prestige = 25
+			years_of_research = 0.05
+			any_pop = { militancy = -1 }
+			set_country_flag = code_of_laws
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	kaiser_wilhelms_land = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = wir_wollen_unseren_alten_kaiser_wilhelm_wiederhaben
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+                        NOT = {
+				AND = {
+					exists = GER
+					THIS = {
+						NOT = { tag = GER }
+					}
+				}
+			}
+			GER_2530 = { owned_by = THIS }
+		}
+		allow = {
+			tag = GER
+			nationalism_n_imperialism = 1
+		}
+		effect = {
+			prestige = 25
+			2531 = {
+				change_province_name = "Фридрих-Вильгельмсхафен"
+				state_scope = {
+					change_region_name = "Земля Кайзера Вильгельма"
+				}
+			}
+			set_country_flag = wir_wollen_unseren_alten_kaiser_wilhelm_wiederhaben
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	construct_the_walhalla = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				602 = { has_province_modifier = the_walhalla }
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+			owns = 602
+		}
+		allow = {
+			romanticism = 1
+			money = 100000
+		}
+		effect = {
+			money = -100000
+			602 = {
+				add_province_modifier = {
+					name = the_walhalla
+					duration = -1
+				}
+			}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	introduce_the_presbyteries = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = presbyteries_introduced
+				any_owned_province = { has_building = selector }
+			}
+			tag = HAN
+		}
+		allow = {
+			average_militancy = 3
+			NOT = { vassal_of = ENG }
+		}
+		effect = {
+			any_pop = {
+				limit = { has_pop_religion = protestant }
+				militancy = -3
+			}
+			set_country_flag = presbyteries_introduced
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	von_moltkes_staff_reforms = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = von_moltke
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+                        NOT = {
+				AND = {
+					exists = GER
+					THIS = {
+						NOT = { tag = GER }
+					}
+				}
+			}
+		}
+		allow = {
+			OR = {
+				has_country_modifier = prussian_militarism
+				tag = GER
+			}
+                        army_decision_making = 1
+		}
+		effect = {
+			remove_country_modifier = prussian_militarism
+			add_country_modifier = {
+				name = prussian_general_staff
+				duration = -1
+			}
+			set_country_flag = von_moltke
+		}
+		ai_will_do = { factor = 1 }
+	}
+	create_gestapo = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = gestapo_created
+				any_owned_province = { has_building = selector }
+			}
+			tag = GER
+                        government = fascist_dictatorship
+		}
+		allow = {}
+		effect = {
+                        set_country_flag = gestapo_created
+                        add_country_modifier = { name = gestapo duration = -1 }
+                        any_pop = {
+				limit = { is_accepted_culture = yes }
+				ideology = {
+					value = fascist
+					factor = 0.25
+				}
+				militancy = -9
+				consciousness = -9
+			}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	create_SS = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = SS_created
+				any_owned_province = { has_building = selector }
+			}
+			tag = GER
+                        government = fascist_dictatorship
+		}
+		allow = {}
+		effect = {
+                        set_country_flag = SS_created
+                        add_country_modifier = { name = SS duration = -1 }
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	reichsland_elsass = {
+		picture = alsace
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = germany_has_renamed_elsass
+				any_owned_province = { has_building = selector }
+			}
+			any_owned_province = {
+				any_neighbor_province = {
+					province_id = 412
+				}
+			}
+			primary_culture = north_german
+		}
+		allow = {
+			412 = {
+				owned_by = THIS
+				is_core = THIS
+			}
+		}
+		effect = {
+			409 = {
+				change_province_name = "Штрассбург"
+				state_scope = {
+					change_region_name = "§R(Жел-5)§! Эльзас-Лотаринген"
+				}
+			}
+			set_global_flag = germany_has_renamed_elsass
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	build_the_reichstag = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = reichstag_has_been_built
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+                        NOT = {
+				AND = {
+					exists = GER
+					THIS = {
+						NOT = { tag = GER }
+					}
+				}
+			}
+		}
+		allow = {
+			tag = GER
+			money = 350000
+			expressionism = 1
+			OR = {
+				government = prussian_constitutionalism
+				government = hms_government
+				government = democracy
+			}
+		}
+		effect = {
+			money = -350000
+			prestige = 100
+			549 = { add_province_modifier = { name = reichstag duration = -1 }}
+			set_country_flag = reichstag_has_been_built
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	start_expansion_into_new_guinea = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = has_claimed_new_guinea
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+                        NOT = {
+				AND = {
+					exists = GER
+					THIS = {
+						NOT = { tag = GER }
+					}
+				}
+			}
+			2530 = { empty = yes }
+		}
+		allow = {
+			tag = GER
+			money = 100000
+			rank = 14
+			invention = mission_to_civilize
+			invention = colonial_negotiations
+		}
+		effect = {
+			money = -100000
+			GER_2530 = { secede_province = THIS add_core = AAA }
+			release = AAA
+			AAA = { civilized = no all_core = { remove_core = AAA }}
+			inherit = AAA
+			set_country_flag = has_claimed_new_guinea
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	found_wilhelmshaven = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = wilhelmshaven_was_founded
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				tag = PRU
+				tag = NGF
+				tag = GER
+			}
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+		}
+		allow = {
+			540 = {
+				owned_by = THIS
+				has_building = naval_base
+			}
+		}
+		effect = {
+			540 = {
+				change_province_name = "Вильгельмсхафен"
+				add_province_modifier = { name = main_fleet_base duration = -1 }
+			}
+			set_country_flag = wilhelmshaven_was_founded
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	german_naval_program = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = german_naval_program_carried_out
+				any_owned_province = { has_building = selector }
+			}
+			primary_culture = north_german
+                        NOT = {
+				AND = {
+					exists = GER
+					THIS = {
+						NOT = { tag = GER }
+					}
+				}
+			}
+		}
+		allow = {
+			tag = GER
+			is_greater_power = yes
+			has_country_flag = wilhelmshaven_was_founded
+			naval_academies = 1
+			state_n_government = 1
+		}
+		effect = {
+			add_country_modifier = { name = german_naval_program1 duration = 5475 }
+			any_owned = {
+				limit = { has_province_modifier = core_reg is_coastal = yes }
+				add_province_modifier = { name = german_naval_program2 duration = 5475 }
+			}
+			any_greater_power = { country_event = 31311 }
+			set_country_flag = german_naval_program_carried_out
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	schlieffen_plan = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				396 = {
+					owner = {
+						OR = {
+							tag = THIS
+							tag = FRA
+						}
+					}
+				}
+				any_owned_province = { has_building = selector }
+			}
+			tag = GER
+		}
+		allow = {
+			396 = {
+				owner = {
+					NOT = { war_with = THIS }
+				}
+			}
+			war_with = FRA
+			has_country_modifier = prussian_general_staff
+		}
+		effect = {
+			396 = {
+				owner = {
+					war = {
+						target = THIS
+						attacker_goal = { casus_belli = prepare_war }
+					}
+				}
+			}
+		}
+	        ai_will_do = { factor = 0 }
+	}
+	question_of_austrian_leadership_in_germany = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = german_leadership_question
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				tag = PRU
+				tag = NGF
+			}
+			AUS = { has_country_modifier = austrian_leadership_in_germany }
+		}
+		allow = {
+			ideological_thought = 1
+			NOT = {
+				badboy = 0.5
+				truce_with = AUS
+			}
+		}
+		effect = {
+			badboy = 10
+			AUS = { country_event = 31320 }
+			set_country_flag = german_leadership_question
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	dissolve_german_customs_union = {
+		alert = no
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = PRU
+			has_country_modifier = german_customs_union
+		}
+		allow = {
+			NOT = { badboy = 0.5 }
+		}
+		effect = {
+			badboy = 20
+			remove_country_modifier = german_customs_union
+			any_country = {
+				limit = { has_country_modifier = german_customs_union }
+				remove_country_modifier = german_customs_union
+				country_event = 31321
+			}
+		}
+	        ai_will_do = { factor = 0 }
+	}
+}

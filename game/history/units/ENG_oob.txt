@@ -1,0 +1,801 @@
+#Sphere of Influence
+PER = {
+	value = -100 		#relation
+	level = 2		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+EGY = {
+	value = 100 		#relation
+	level = 3		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+NET = {
+	value = 100 		#relation
+	level = 0 		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+SIC = {
+	value = 200 		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 100
+	military_access = yes
+}
+DEN = {
+	value = 50		#relation
+	level = 2		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+POR = {
+	value = 200		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 100
+}
+SWE = {
+	value = 0		#relation
+	level = 2		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+HAN = {
+	value = 200
+	level = 3
+	influence_value = 0
+	military_access = yes
+}
+GRE = {
+	value = 50		#relation
+	level = 2		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+TRN = {
+	value = -200		#relation
+	level = 0		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+ORA = {
+	value = -200		#relation
+	level = 0		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+BUR = {
+	value = -200		#relation
+	level = 0		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+JOH = {
+	value = -200		#relation
+	level = 0		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+KUT = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+TRA = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+SIK = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+JOD = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+JAS = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+JAI = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+BIK = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+MEW = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+IND = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+GWA = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+BHO = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+BUN = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+ORI = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+NAG = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+BER = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+MYS = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+HYD = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+AWA = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	military_access = yes
+}
+
+# British military forces
+army = {
+	name = "Metropolitan army"
+	location = 300
+	regiment = {
+		name= "2.2nd Cavalry Division"
+		type = engineer
+		home = 273
+	}
+	regiment = {
+		name= "3.2nd Cavalry Division"
+		type = engineer
+		home = 266
+	}
+	regiment = {
+		name= "2.2nd Cavalry Division"
+		type = engineer
+		home = 277
+	}
+	regiment = {
+		name= "2.2nd Cavalry Division"
+		type = engineer
+		home = 277
+	}
+	regiment = {
+		name= "2.11th Division"
+		type = infantry
+		home = 271
+	}
+	regiment = {
+		name= "3.11th Division"
+		type = infantry
+		home = 271
+	}
+	regiment = {
+		name= "1.12th Division"
+		type = infantry
+		home = 271
+	}
+	regiment = {
+		name= "1.12th Division"
+		type = infantry
+		home = 273
+	}
+	regiment = {
+		name= "1.12th Division"
+		type = infantry
+		home = 277
+	}
+	regiment = {
+		name= "1.12th Division"
+		type = infantry
+		home = 280
+	}
+}
+army = {
+	name = "Gibraltar garrison"
+	location = 517
+	regiment = {
+		name= "1.1th Division"
+		type = infantry
+		home = 300
+	}
+	regiment = {
+		name= "1.2th Division"
+		type = infantry
+		home = 300
+	}
+	regiment = {
+		name= "1.3th Division"
+		type = infantry
+		home = 300
+	}
+	regiment = {
+		name= "1.4th Division"
+		type = infantry
+		home = 300
+	}
+	regiment = {
+		name= "1.4th Division"
+		type = infantry
+		home = 291
+	}
+	regiment = {
+		name= "1.4th Division"
+		type = infantry
+		home = 291
+	}
+	regiment = {
+		name= "1.7th Division"
+		type = engineer
+		home = 300
+	}
+	regiment = {
+		name= "1.8th Division"
+		type = engineer
+		home = 300
+	}
+	regiment = {
+		name= "1.8th Division"
+		type = engineer
+		home = 296
+	}
+	regiment = {
+		name= "1.8th Division"
+		type = engineer
+		home = 296
+	}
+}
+army = {
+	name = "Scottish cavalry"
+	location = 269
+	regiment = {
+		name= "1.1th Division"
+		type = dragoon
+		home = 254
+	}
+	regiment = {
+		name= "1.2th Division"
+		type = dragoon
+		home = 254
+	}
+	regiment = {
+		name= "1.3th Division"
+		type = dragoon
+		home = 284
+	}
+	regiment = {
+		name= "1.4th Division"
+		type = dragoon
+		home = 284
+	}
+	regiment = {
+		name= "1.4th Division"
+		type = dragoon
+		home = 284
+	}
+	regiment = {
+		name= "1.4th Division"
+		type = dragoon
+		home = 280
+	}
+	regiment = {
+		name= "1.7th Division"
+		type = dragoon
+		home = 266
+	}
+}
+navy = {
+	name = "Metropolitan Fleet"
+	location = 299
+	ship = {
+		name= "HMS Bellerophon"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Superb"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Temerair"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Saint Vincent"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Collingwood"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Vengard"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Waterloo"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Neptune"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Colossus"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Hercules"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Orion"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Monarch"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Conquerer"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Tanderer"
+		type = manowar
+	}
+	ship = {
+		name= "HMS King George"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Centurion"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Odeishes"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Abukir"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Ajax"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Marlboro"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Benbow"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Emperor of India"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Ageincourt"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Erin"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Canada"
+		type = manowar
+	}
+}
+navy = {
+	name = "Mediterranean Fleet"
+	location = 854
+
+	ship = {
+		name= "HMS Anson"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Howe"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Lion"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Royal Albert"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Windsor Castle"
+		type = manowar
+	}
+	ship = {
+		name= "HMS Royal Oak"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Royal Alfred"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Research"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Enterprise"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Favorite"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Zelos"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Ripals"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Lord Clyde"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Lord Warden"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Pallas"
+		type = frigate
+	}
+}
+navy = {
+	name = "Canadian station"
+	location = 71
+	ship = {
+		name= "HMS Bellerophon"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Penelope"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Hercules"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Monarch"
+		type = frigate
+	}
+}
+navy = {
+	name = "African station"
+	location = 1884
+	ship = {
+		name= "HMS Triumph"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Sultan"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Devastation"
+		type = frigate
+	}
+}
+navy = {
+	name = "Australian station"
+	location = 2468
+	ship = {
+		name= "HMS Ajax"
+		type = frigate
+	}
+}
+navy = {
+	name = "Cape of Good Hope station"
+	location = 2087
+	ship = {
+		name= "HMS Worspeight"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Orlando"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Andonted"
+		type = frigate
+	}
+}
+navy = {
+	name = "Ceylon station"
+	location = 1321
+	ship = {
+		name= "HMS Immortality"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Aurora"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Blake"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Blenheim"
+		type = frigate
+	}
+	ship = {
+		name= "HMS Edgar"
+		type = frigate
+	}
+}
+navy = {
+	name = "Asian landing squadron"
+	location = 1251
+
+	ship = {
+		name= "HMT Bristol"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Andonted"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Tweed"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Dryad"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Belvedera"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Pomone"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Roles"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Brighton"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Barham"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Boudicca"
+		type = clipper_transport
+	}
+}
+navy = {
+	name = "Metropolitan transport flotillia"
+	location = 273
+	ship = {
+		name= "HMT Bucephalus"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Dextrus"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Endymion"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Easter"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Blond"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Astrea"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Dartmouth"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Inconstant"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Shah"
+		type = clipper_transport
+	}
+	ship = {
+		name= "HMT Roles"
+		type = clipper_transport
+	}
+}
+
+# East India company military forces
+army = {
+	name = "Bombay garrison"
+	location = 1297
+	regiment = {
+		name= "1.2nd Cavalry Division"
+		type = col_inf
+		home = 1297
+	}
+	regiment = {
+		name= "2.2nd Cavalry Division"
+		type = col_inf
+		home = 1297
+	}
+	regiment = {
+		name= "3.2nd Cavalry Division"
+		type = col_inf
+		home = 1297
+	}
+	regiment = {
+		name= "1.11th Division"
+		type = col_inf
+		home = 1297
+	}
+	regiment = {
+		name= "2.11th Division"
+		type = col_inf
+		home = 1297
+	}
+	regiment = {
+		name= "3.11th Division"
+		type = col_inf
+		home = 1297
+	}
+	regiment = {
+		name= "1.12th Division"
+		type = col_inf
+		home = 1304
+	}
+	regiment = {
+		name= "2.12th Division"
+		type = col_inf
+		home = 1304
+	}
+}
+army = {
+	name = "Delhi garrison"
+	location = 1236
+	regiment = {
+		name= "1.2nd Cavalry Division"
+		type = col_inf
+		home = 1304
+	}
+	regiment = {
+		name= "2.2nd Cavalry Division"
+		type = col_inf
+		home = 1304
+	}
+	regiment = {
+		name= "3.2nd Cavalry Division"
+		type = col_inf
+		home = 1251
+	}
+	regiment = {
+		name= "1.11th Division"
+		type = col_inf
+		home = 1251
+	}
+	regiment = {
+		name= "2.11th Division"
+		type = col_inf
+		home = 1251
+	}
+	regiment = {
+		name= "3.11th Division"
+		type = col_inf
+		home = 1251
+	}
+	regiment = {
+		name= "1.12th Division"
+		type = col_inf
+		home = 1251
+	}
+	regiment = {
+		name= "2.12th Division"
+		type = col_inf
+		home = 1251
+	}
+}
+army = {
+	name = "Calcutta garrison"
+	location = 1251
+	regiment = {
+		name= "1.2nd Cavalry Division"
+		type = col_inf
+		home = 1243
+	}
+	regiment = {
+		name= "2.2nd Cavalry Division"
+		type = col_inf
+		home = 1243
+	}
+	regiment = {
+		name= "3.2nd Cavalry Division"
+		type = col_inf
+		home = 1243
+	}
+	regiment = {
+		name= "1.11th Division"
+		type = col_inf
+		home = 1243
+	}
+	regiment = {
+		name= "2.11th Division"
+		type = col_inf
+		home = 1236
+	}
+	regiment = {
+		name= "3.11th Division"
+		type = col_inf
+		home = 1236
+	}
+	regiment = {
+		name= "1.12th Division"
+		type = col_inf
+		home = 1236
+	}
+	regiment = {
+		name= "2.12th Division"
+		type = col_inf
+		home = 1236
+	}
+}

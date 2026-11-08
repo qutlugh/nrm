@@ -1,0 +1,6 @@
+owner = ENG
+controller = ENG
+add_core = HND
+add_core = HYD
+trade_goods = coal
+life_rating = 35

@@ -1,0 +1,19 @@
+army = {
+	name = "Army of Ali Pasha"
+	location = 807
+	regiment = {
+		name= "1. Taxiarchia Pezikou"
+		type = infantry
+		home = 849
+	}
+	regiment = {
+		name= "2. Taxiarchia Pezikou"
+		type = infantry
+		home = 849
+	}
+	regiment = {
+		name= "3. Taxiarchia Pezikou"
+		type = infantry
+		home = 849
+	}
+}

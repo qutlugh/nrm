@@ -1,0 +1,2494 @@
+political_decisions = {
+	buy&sell_on = { 
+		alert = no
+		picture = buy&sell
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+ 				has_country_flag = sell_and_buy_window
+ 				has_country_flag = politics_des_window
+ 				has_country_flag = givemoney
+ 				has_country_flag = nuke_des_window
+ 				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			set_country_flag = sell_and_buy_window
+		}
+		ai_will_do = { factor = 0 }
+	}
+	buy&sell_off = {
+		picture = buy&sell
+		alert = no
+		potential = {
+			has_country_flag = sell_and_buy_window
+			NOT = {
+				has_country_flag = opened_advisors_window
+				has_country_flag = charter_ships_window
+				has_country_flag = opened_patents_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			clr_country_flag = sell_and_buy_window
+		}
+		ai_will_do = { factor = 1 }
+	}
+	open_advisors_window = {
+		picture = advisors_window
+		alert = no
+		potential = {
+			has_country_flag = sell_and_buy_window
+			NOT = {
+				has_country_flag = opened_advisors_window
+				has_country_flag = charter_ships_window
+				has_country_flag = opened_patents_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			set_country_flag = opened_advisors_window
+		}
+		ai_will_do = { factor = 0 }
+	}
+	close_advisors_window = {
+		picture = advisors_window
+		alert = no
+		potential = {
+			has_country_flag = opened_advisors_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {}
+		effect = {
+			clr_country_flag = opened_advisors_window
+		}
+		ai_will_do = { factor = 1 }
+	}
+	send_scientists = {
+		alert = no
+		potential = {
+			has_country_flag = opened_advisors_window
+			NOT = {
+				has_country_modifier = has_sent_scientists
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {
+			civilized = yes
+			literacy = 0.30
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					NOT = {
+						has_country_flag = scientists_arrived
+						AND = {
+							has_country_modifier = scientists_is_working1
+							has_country_modifier = scientists_is_working2
+							has_country_modifier = scientists_is_working3
+							has_country_modifier = scientists_is_working4
+							has_country_modifier = scientists_is_working5
+						}
+					}
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 400083
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	send_military_advisors = {
+		alert = no
+		potential = {
+			has_country_flag = opened_advisors_window
+			NOT = {
+				has_country_modifier = has_sent_military_advisors
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				AND = {
+					NOT = { year = 1850 }
+					strategic_mobility = 1
+					caplock_rifles = 1
+					light_field_artillery = 1
+					military_plans = 1
+					military_academies = 1
+				}
+				AND = {
+					year = 1850
+					NOT = { year = 1870 }
+					point_defense_system = 1
+					breech_loaded_rifles = 1
+					flying_artillery = 1
+					military_statistics = 1
+					army_decision_making = 1
+				}
+				AND = {
+					year = 1870
+					NOT = { year = 1900 }
+					army_risk_management = 1
+					military_logistics = 1
+					rifled_field_guns = 1
+					bolt_action_rifles = 1
+					deep_defense_system = 1
+				}
+				AND = {
+					year = 1900
+					NOT = { year = 1915 }
+					trench_warfare = 1
+					machine_guns = 1
+					indirect_artillery_fire = 1
+					military_directionism = 1
+					army_nco_training = 1
+				}
+				AND = {
+					year = 1915
+					NOT = { year = 1930 }
+					great_war_experience = 1
+					aeronautics = 1
+					heavy_armament_dunno = 1
+					light_machine_gun = 1
+					infiltration = 1
+				}
+				AND = {
+					year = 1930
+					NOT = { year = 1940 }
+					interwar_experience = 1
+					radar_stations = 1
+					rocket_artillery = 1
+					semi_automatic_rifles = 1
+					interwar_doctrine = 1
+				}
+				AND = {
+					year = 1940
+					NOT = { year = 1955 }
+					tank_attacks_doctrine = 1
+					rocket_launcher = 1
+					strategic_aviation = 1
+					nuclear_strategy = 1
+					second_great_war_experience = 1
+				}
+				AND = {
+					year = 1955
+					combined_arms = 1
+					assault_rifles = 1
+					jet_fighter = 1
+					intercontinental_ballistic_missile = 1
+					combat_readiness = 1
+				}
+			}
+		}
+		allow = {
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					NOT = {
+						has_country_modifier = military_advisors_is_working
+						has_country_modifier = fleet_weakness
+					}
+					alliance_with = THIS
+					has_country_modifier = ready_to_trade
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 400043
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	send_navy_advisors = {
+		alert = no
+		potential = {
+			has_country_flag = opened_advisors_window
+			NOT = {
+				has_country_modifier = has_sent_navy_advisors
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				AND = {
+					NOT = { year = 1850 }
+					battleship_column_doctrine = 1
+					steamers = 1
+					fire_control_systems = 1
+					naval_plans = 1
+					naval_academies = 1
+				}
+				AND = {
+					year = 1850
+					NOT = { year = 1870 }
+					raider_group_doctrine = 1
+					iron_steamers = 1
+					weapon_platforms = 1
+					naval_statistics = 1
+					naval_decision_making = 1
+				}
+				AND = {
+					year = 1870
+					NOT = { year = 1900 }
+					blue_and_brown_water_schools = 1
+					steel_steamers = 1
+					main_armament = 1
+					naval_logistics = 1
+					naval_risk_management = 1
+				}
+				AND = {
+					year = 1900
+					NOT = { year = 1915 }
+					high_sea_battle_fleet = 1
+					steam_turbine_ships = 1
+					advanced_naval_design = 1
+					naval_directionism = 1
+					naval_nco_training = 1
+				}
+				AND = {
+					year = 1915
+					NOT = { year = 1930 }
+					doctrine_of_raider_warfare = 1
+					oil_driven_ships = 1
+					modern_naval_design = 1
+					naval_integration = 1
+					modern_naval_training = 1
+				}
+				AND = {
+					year = 1930
+					NOT = { year = 1940 }
+					modern_naval_doctrine = 1
+					turboshaft_ships = 1
+					large_caliber = 1
+					navy_system_based = 1
+					modern_communication_system = 1
+				}
+				AND = {
+					year = 1940
+					NOT = { year = 1955 }
+					nuclear_navy_doctrine = 1
+					hovercraft = 1
+					modern_targeting_systems = 1
+					rent_of_navy_bases = 1
+					strategic_command = 1
+				}
+				AND = {
+					year = 1955
+					rocket_supremacy = 1
+					modern_armor = 1
+					advanced_naval_rockets = 1
+					global_patrolling = 1
+					advanced_communication_system = 1
+				}
+			}
+		}
+		allow = {
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					NOT = {
+						has_country_modifier = navy_advisors_is_working
+						has_country_modifier = army_weakness
+					}
+					alliance_with = THIS
+					has_country_modifier = ready_to_trade
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 400045
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	send_economical_advisors = {
+		alert = no
+		potential = {
+			has_country_flag = opened_advisors_window
+			NOT = {
+				has_country_modifier = has_sent_economical_advisors
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				AND = {
+					NOT = { year = 1850 }
+					stock_exchange = 1
+					ad_hoc_money_bill_printing = 1
+					late_classical_theory = 1
+					market_structure = 1
+					organized_factories = 1
+				}
+				AND = {
+					year = 1850
+					NOT = { year = 1870 }
+					business_banks = 1
+					private_bank_money_bill_printing = 1
+					collectivist_theory = 1
+					business_regulations = 1
+					scientific_management = 1
+				}
+				AND = {
+					year = 1870
+					NOT = { year = 1890 }
+					investment_banks = 1
+					central_bank_money_bill_printing = 1
+					the_historical_theory = 1
+					market_regulations = 1
+					time_saving_measures = 1
+				}
+				AND = {
+					year = 1890
+					NOT = { year = 1910 }
+					investment_banks = 1
+					modern_central_bank_system = 1
+					neoclassical_theory = 1
+					economic_responsibility = 1
+					management_strategy = 1
+				}
+				AND = {
+					year = 1910
+					NOT = { year = 1925 }
+					mutual_funds = 1
+					market_determined_exchange_rates = 1
+					keynesian_economics = 1
+					giant_monopolies = 1
+					organizational_development = 1
+				}
+				AND = {
+					year = 1925
+					NOT = { year = 1940 }
+					trust_company = 1
+					advanced_central_bank_system = 1
+					monetarism = 1
+					government_interventionism = 1
+					time_management = 1
+				}
+				AND = {
+					year = 1940
+					NOT = { year = 1955 }
+					pension_fund = 1
+					world_finance_system = 1
+					institutional_economics = 1
+					the_world_market = 1
+					corporatism = 1
+				}
+				AND = {
+					year = 1955
+					stock_market_index = 1
+					derivative = 1
+					neoclassical_keynesian_synthesis = 1
+					planned_economy = 1
+					outsourcing = 1
+				}
+			}
+		}
+		allow = {
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					NOT = { has_country_modifier = economical_advisors_is_working }
+					alliance_with = THIS
+					has_country_modifier = ready_to_trade
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 400047
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	send_industrial_advisors = {
+               alert = no
+               potential = {
+			has_country_flag = opened_advisors_window
+			NOT = {
+				has_country_modifier = has_sent_industrial_advisors
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				AND = {
+					NOT = { year = 1850 }
+					practical_steam_engine = 1
+					mechanical_production = 1
+					ferrous_metallurgy = 1
+					medicine = 1
+					early_railroad = 1
+				}
+				AND = {
+					year = 1850
+					NOT = { year = 1870 }
+					high_n_low_pressure_steam_engines = 1
+					interchangeable_parts = 1
+					cheap_iron = 1
+					inorganic_chemistry = 1
+					iron_railroad = 1
+				}
+				AND = {
+					year = 1870
+					NOT = { year = 1890 }
+					steam_turbine = 1
+					semi_automatization = 1
+					cheap_steel = 1
+					organic_chemistry = 1
+					steel_railroad = 1
+				}
+				AND = {
+					year = 1890
+					NOT = { year = 1910 }
+					combustion_engine = 1
+					assembly_line = 1
+					advanced_metallurgy = 1
+					electricity = 1
+					integral_rail_system = 1
+				}
+				AND = {
+					year = 1910
+					NOT = { year = 1925 }
+					electrical_power_generation = 1
+					shift_work = 1
+					hydrometallurgy = 1
+					synthetic_polymers = 1
+					limited_access_roads = 1
+				}
+				AND = {
+					year = 1925
+					NOT = { year = 1940 }
+					electric_machine = 1
+					modern_automation = 1
+					electrometallurgy = 1
+					quantum_chemistry = 1
+					modern_infrastructure = 1
+				}
+				AND = {
+					year = 1940
+					NOT = { year = 1955 }
+					atom_energy = 1
+					advanced_machine_tools = 1
+					modern_metallurgy = 1
+					pharmaceutics = 1
+					diesel_locomotives = 1
+				}
+				AND = {
+					year = 1955
+					modern_steam_turbine = 1
+					industial_robotization = 1
+					advanced_ore_refining = 1
+					electric_locomotives = 1
+					transistors = 1
+				}
+			}
+		}
+		allow = {
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					NOT = { has_country_modifier = industrial_advisors_is_working }
+					alliance_with = THIS
+					has_country_modifier = ready_to_trade
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 400049
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	send_culture_advisors = {
+		alert = no
+		potential = {
+			has_country_flag = opened_advisors_window
+			NOT = {
+				has_country_modifier = has_sent_culture_advisors
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				AND = {
+					NOT = { year = 1850 }
+					romanticism = 1
+					materialism = 1
+					positivism = 1
+					ideological_thought = 1
+					associationism = 1
+				}
+				AND = {
+					year = 1850
+					NOT = { year = 1870 }
+					realism = 1
+					empiricism = 1
+					functionalism = 1
+					nationalism_n_imperialism = 1
+					associationism = 1
+				}
+				AND = {
+					year = 1870
+					NOT = { year = 1890 }
+					impressionism = 1
+					analytic_philosophy = 1
+					biologism = 1
+					state_n_government = 1
+					experimental_psychology = 1
+				}
+				AND = {
+					year = 1890
+					NOT = { year = 1910 }
+					expressionism = 1
+					analytic_philosophy = 1
+					social_science = 1
+					revolution_n_counterrevolution = 1
+					psychoanalysis = 1
+				}
+				AND = {
+					year = 1910
+					NOT = { year = 1925 }
+					the_avant_garde = 1
+					anti__rationalism = 1
+					social_alienation = 1
+					mass_politics = 1
+					behaviorism = 1
+				}
+				AND = {
+					year = 1925
+					NOT = { year = 1940 }
+					modernism = 1
+					logical_positivism = 1
+					social_alienation = 1
+					global_policy = 1
+					cognitive_psychology = 1
+				}
+				AND = {
+					year = 1940
+					NOT = { year = 1955 }
+					high_culture = 1
+					postmodernism = 1
+					overconsumerism = 1
+					anticolonialism = 1
+					social_psyhology = 1
+				}
+				AND = {
+					year = 1955
+					mass_culture = 1
+					pragmatism = 1
+					post_industrial_society = 1
+					bipolar_world = 1
+					humanistic_psychology = 1
+				}
+			}
+		}
+		allow = {
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					NOT = { has_country_modifier = culture_advisors_is_working }
+					alliance_with = THIS
+					has_country_modifier = ready_to_trade
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 400051
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	open_patents_window = {
+		picture = patents_window
+		alert = no
+		potential = {
+			has_country_flag = sell_and_buy_window
+			NOT = {
+				has_country_flag = opened_advisors_window
+				has_country_flag = opened_patents_window
+				has_country_flag = charter_ships_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			set_country_flag = opened_patents_window
+		}
+		ai_will_do = { factor = 0 }
+	}
+	close_patents_window = {
+		picture = patents_window
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {}
+		effect = {
+			clr_country_flag = opened_patents_window
+		}
+		ai_will_do = { factor = 1 }
+	}
+	machine_parts_patent = {
+		alert = yes
+		potential = {
+			NOT = {
+				invention = precision_work
+				has_country_flag = machine_parts_patent
+				any_owned_province = { has_building = selector }
+			}
+			has_country_flag = opened_patents_window
+		}
+		allow = {
+			publishing_industry = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = precision_work
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810157
+			}
+		}
+		ai_will_do = { factor = 0 }
+        }
+	gas_attack_buy_patent = {
+		alert = yes
+		potential = {
+			NOT = {
+				invention = gas_attack_capability
+				has_country_flag = gas_attack_patent
+				any_owned_province = { has_building = selector }
+			}
+			has_country_flag = opened_patents_window
+			year = 1900
+		}
+		allow = {
+			military_directionism = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = gas_attack_capability
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1800934
+			}
+		}
+		ai_will_do = { factor = 0 }
+        }
+	gas_defense_buy_patent = {
+                alert = yes
+		potential = {
+			NOT = {
+				invention = gas_defense_capability
+				has_country_flag = gas_defence_patent
+				any_owned_province = { has_building = selector }
+			}
+			has_country_flag = opened_patents_window
+			year = 1900
+		}
+		allow = {
+			military_directionism = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = gas_defense_capability
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1800935
+			}
+		}
+		ai_will_do = { factor = 0 }
+        }
+	buy_synthetic_dye_patent = {
+                alert = yes
+		potential = {
+			NOT = {
+				invention = synthetic_dye
+				has_country_flag = synthetic_dye_patent
+				any_owned_province = { has_building = selector }
+			}
+                 	has_country_flag = opened_patents_window
+			year = 1850
+		}
+		allow = {
+			organic_chemistry = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = synthetic_dye
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810094
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	buy_electric_gear_patent = {
+                alert = yes
+		potential = {
+			NOT = {
+				invention = edison_light_bulb
+				has_country_flag = electric_gear_patent
+				any_owned_province = { has_building = selector }
+			}
+			has_country_flag = opened_patents_window
+			year = 1890
+		}
+		allow = {
+			electricity = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = edison_light_bulb
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810097
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	buy_synthetic_oil_patent = {
+                alert = yes
+		potential = {
+			NOT = {
+				invention = import_substitution_industrialization
+				has_country_flag = synthetic_oil_patent
+				any_owned_province = { has_building = selector }
+			}
+			has_country_flag = opened_patents_window
+			year = 1890
+		}
+		allow = {
+			economic_responsibility = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = import_substitution_industrialization
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810100
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	buy_high_precision_optics_patent = {
+                alert = yes
+		potential = {
+			NOT = {
+				invention = high_precision_optics
+				has_country_flag = high_precision_optics_patent
+				any_owned_province = { has_building = selector }
+			}
+                 	has_country_flag = opened_patents_window
+			year = 1910
+		}
+		allow = {
+			shift_work = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = high_precision_optics
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810154
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	buy_cracking_tech = {
+                alert = yes
+		potential = {
+			NOT = {
+				invention = cracking
+				has_country_flag = cracking_patent
+				any_owned_province = { has_building = selector }
+			}
+                 	has_country_flag = opened_patents_window
+			year = 1870
+		}
+		allow = {
+			organic_chemistry = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = cracking
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810160
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	buy_steamer_transports_license = {
+                alert = yes
+		picture = charter_steam_transport
+		potential = {
+			NOT = {
+				invention = steamer_transports
+				has_country_flag = steamer_transports_flag
+				any_owned_province = { has_building = selector }
+			}
+                 	has_country_flag = opened_patents_window
+		}
+		allow = {
+			steamers_with_paddle_wheel = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = steamer_transports
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810172
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	buy_raiders_license = {
+                alert = yes
+		picture = charter_commerce_raiders
+		potential = {
+			NOT = {
+				invention = commerce_raiders
+				has_country_flag = commerce_raiders_flag
+				any_owned_province = { has_building = selector }
+			}
+                 	has_country_flag = opened_patents_window
+			year = 1830
+		}
+		allow = {
+			steamers = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = commerce_raiders
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810162
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	buy_ironclads_license = {
+                alert = yes
+		picture = charter_ironclads
+		potential = {
+			NOT = {
+				invention = ironclads
+				has_country_flag = ironclads_flag
+				any_owned_province = { has_building = selector }
+			}
+                 	has_country_flag = opened_patents_window
+			year = 1850
+		}
+		allow = {
+			iron_steamers = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = ironclads
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810164
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	buy_cruisers_license = {
+                alert = yes
+		picture = charter_protected_cruisers
+		potential = {
+			NOT = {
+				invention = protected_cruisers
+				has_country_flag = cruisers_flag
+				any_owned_province = { has_building = selector }
+			}
+                 	has_country_flag = opened_patents_window
+			year = 1870
+		}
+		allow = {
+			steel_steamers = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = protected_cruisers
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810166
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	buy_battleships_license = {
+                alert = yes
+		picture = charter_battleships
+		potential = {
+			NOT = {
+				invention = modern_battleships
+				has_country_flag = battleships_flag
+				any_owned_province = { has_building = selector }
+			}
+                 	has_country_flag = opened_patents_window
+			year = 1930
+		}
+		allow = {
+			turboshaft_ships = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = modern_battleships
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810168
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	buy_dreadnoughts_license = {
+                alert = yes
+		picture = charter_dreadnoughts
+		potential = {
+			NOT = {
+				invention = dreadnoughts
+				has_country_flag = dreadnoughts_flag
+				any_owned_province = { has_building = selector }
+			}
+                 	has_country_flag = opened_patents_window
+			year = 1900
+		}
+		allow = {
+			steam_turbine_ships = 1
+			NOT = {
+				has_country_modifier = you_did_try_to_buy_patent
+				has_country_modifier = bad_debter
+			}
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					invention = dreadnoughts
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 1810170
+			}
+	    }
+	    ai_will_do = { factor = 0 }
+        }
+	caplock_rifle_license = {
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			invention = muzzle_loaded_rifle_armament
+			NOT = {
+				invention = caplock_rifle_armament
+				has_country_flag = caplock_rifle_license_bought
+				any_owned_province = { has_building = selector }
+			}
+			year = 1830
+		}
+		allow = {
+			caplock_rifles = 1
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					invention = caplock_rifle_armament
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100205
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	breech_loaded_rifle_license = {
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			invention = caplock_rifle_armament
+			NOT = {
+				invention = breech_loaded_rifle_armament
+				has_country_flag = breech_loaded_rifle_license_bought
+				any_owned_province = { has_building = selector }
+			}
+			year = 1850
+		}
+		allow = {
+			breech_loaded_rifles = 1
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					invention = breech_loaded_rifle_armament
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100208
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	bolt_action_rifle_license = {
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			invention = breech_loaded_rifle_armament
+			NOT = {
+				invention = bolt_action_rifle_armament
+				has_country_flag = bolt_action_rifle_license_bought
+				any_owned_province = { has_building = selector }
+			}
+			year = 1870
+		}
+		allow = {
+			bolt_action_rifles = 1
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					invention = bolt_action_rifle_armament
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100209
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	maxim_gun_license = {
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			invention = bolt_action_rifle_armament
+			NOT = {
+				invention = maxim_gun
+				has_country_flag = maxim_gun_license_bought
+				any_owned_province = { has_building = selector }
+			}
+			year = 1900
+		}
+		allow = {
+			machine_guns = 1
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					invention = maxim_gun
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100210
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	light_machine_gun_license = {
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			invention = maxim_gun
+			NOT = {
+				invention = light_machine_gun_armament
+				has_country_flag = light_machine_gun_license_bought
+				any_owned_province = { has_building = selector }
+			}
+			year = 1915
+		}
+		allow = {
+			light_machine_gun = 1
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					invention = light_machine_gun_armament
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100211
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	semi_automatic_rifle_license = {
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			invention = light_machine_gun_armament
+			NOT = {
+				invention = semi_automatic_rifle
+				has_country_flag = semi_automatic_rifle_license_bought
+				any_owned_province = { has_building = selector }
+			}
+			year = 1930
+		}
+		allow = {
+			semi_automatic_rifles = 1
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					invention = semi_automatic_rifle
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100212
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	RPG_license = {
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			invention = semi_automatic_rifle
+			NOT = {
+				invention = RPG
+				has_country_flag = RPG_license_bought
+				any_owned_province = { has_building = selector }
+			}
+			year = 1940
+		}
+		allow = {
+			rocket_launcher = 1
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					invention = RPG
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100213
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	assault_rifle_license = {
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			invention = RPG
+			NOT = {
+				invention = assault_rifle
+				has_country_flag = assault_rifle_license_bought
+				any_owned_province = { has_building = selector }
+			}
+			year = 1955
+		}
+		allow = {
+			assault_rifles = 1
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					invention = assault_rifle
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100214
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	rifled_field_guns_license = {
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			NOT = {
+				invention = rifled_field_guns
+				has_country_flag = rifled_field_guns_license_bought
+				any_owned_province = { has_building = selector }
+			}
+			year = 1870
+		}
+		allow = {
+			rifled_field_guns = 1
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					invention = rifled_field_guns
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100215
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	howitzers_license = {
+		alert = no
+		potential = {
+			has_country_flag = opened_patents_window
+			invention = rifled_field_guns
+			NOT = {
+				invention = howitzers
+				has_country_flag = howitzers_license_bought
+				any_owned_province = { has_building = selector }
+			}
+			year = 1900
+		}
+		allow = {
+			indirect_artillery_fire = 1
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					invention = howitzers
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 195 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100216
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	charter_ships_window_on = { 
+		picture = charter_ships_window_image
+		alert = no
+		potential = {
+			has_country_flag = sell_and_buy_window
+			NOT = {
+				has_country_flag = opened_advisors_window
+				has_country_flag = charter_ships_window
+				has_country_flag = opened_patents_window
+				any_owned_province = { has_building = selector }
+			}
+		}
+		allow = {}
+		effect = {
+			set_country_flag = charter_ships_window
+		}
+		ai_will_do = { factor = 0 }
+	}
+	charter_ships_window_off = {
+		picture = charter_ships_window_image
+		alert = no
+		potential = {
+			has_country_flag = charter_ships_window
+			NOT = { any_owned_province = { has_building = selector }}
+		}
+		allow = {}
+		effect = {
+			clr_country_flag = charter_ships_window
+		}
+		ai_will_do = { factor = 1 }
+	}
+	charter_steam_transport = {
+		alert = no
+		potential = {
+			NOT = {
+				has_country_flag = has_chartered_ships_flag
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				any_greater_power = { invention = steamer_transports }
+				any_neighbor_country = { invention = steamer_transports }
+			}
+			has_country_flag = charter_ships_window
+                }
+		allow = {
+			any_owned_province = { has_province_modifier = core_reg is_coastal = yes }
+			NOT = { has_country_modifier = bad_debter }
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					steamer_convoy = 2500
+					invention = steamer_transports
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100138
+			}
+		}
+		ai_will_do = { factor = 0 }
+        }
+	charter_commerce_raiders = {
+		alert = no
+		potential = {
+			NOT = {
+				has_country_flag = has_chartered_ships_flag
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				any_greater_power = { invention = commerce_raiders }
+				any_neighbor_country = { invention = commerce_raiders }
+			}
+			has_country_flag = charter_ships_window
+                }
+		allow = {
+			any_owned_province = { has_province_modifier = core_reg is_coastal = yes }
+			NOT = { has_country_modifier = bad_debter }
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					steamer_convoy = 2500
+					invention = commerce_raiders
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100151
+			}
+	        }
+                ai_will_do = { factor = 0 }
+        }
+	charter_ironclads = {
+		alert = no
+		potential = {
+			NOT = {
+				has_country_flag = has_chartered_ships_flag
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				any_greater_power = { invention = ironclads }
+				any_neighbor_country = { invention = ironclads }
+			}
+			has_country_flag = charter_ships_window
+                }
+		allow = {
+			any_owned_province = { has_province_modifier = core_reg is_coastal = yes }
+			NOT = { has_country_modifier = bad_debter }
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					steamer_convoy = 5000
+					invention = ironclads
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100156
+			}
+	        }
+                ai_will_do = { factor = 0 }
+        }
+	charter_protected_cruisers = {
+		alert = no
+		potential = {
+			NOT = {
+				has_country_flag = has_chartered_ships_flag
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				any_greater_power = { invention = protected_cruisers }
+				any_neighbor_country = { invention = protected_cruisers }
+			}
+			has_country_flag = charter_ships_window
+                }
+		allow = {
+			any_owned_province = { has_province_modifier = core_reg is_coastal = yes }
+			NOT = { has_country_modifier = bad_debter }
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					navy_supplies = 5000
+					invention = protected_cruisers
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100158
+			}
+	        }
+                ai_will_do = { factor = 0 }
+        }
+	charter_battleships = {
+                alert = no
+		potential = {
+			NOT = {
+				has_country_flag = has_chartered_ships_flag
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				any_greater_power = { invention = modern_battleships }
+				any_neighbor_country = { invention = modern_battleships }
+			}
+			has_country_flag = charter_ships_window
+                }
+		allow = {
+			any_owned_province = { has_province_modifier = core_reg is_coastal = yes }
+			NOT = { has_country_modifier = bad_debter }
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					navy_supplies = 3000
+					invention = modern_battleships
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100160
+			}
+	        }
+                ai_will_do = { factor = 0 }
+        }
+	charter_dreadnoughts = {
+		alert = no
+		potential = {
+			NOT = {
+				has_country_flag = has_chartered_ships_flag
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				any_greater_power = { invention = dreadnoughts }
+				any_neighbor_country = { invention = dreadnoughts }
+			}
+			has_country_flag = charter_ships_window
+                }
+		allow = {
+			any_owned_province = { has_province_modifier = core_reg is_coastal = yes }
+			NOT = { has_country_modifier = bad_debter }
+			## Blockade condition
+			OR = {
+				NOT = { has_country_modifier = metropoly_blockaded1 }
+				any_owned_province = {
+					has_province_modifier = core_reg
+					any_neighbor_province = {
+						has_province_modifier = core_reg
+						owner = {
+							NOT = { tag = THIS }
+							has_country_modifier = ready_to_trade
+							alliance_with = THIS
+							relation = { who = THIS value = 190 }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					navy_supplies = 5000
+					invention = dreadnoughts
+					has_country_modifier = ready_to_trade
+					alliance_with = THIS
+					relation = { who = THIS value = 190 }
+					OR = {
+						NOT = { has_country_modifier = metropoly_blockaded1 }
+						any_owned_province = {
+							has_province_modifier = core_reg
+							any_neighbor_province = {
+								has_province_modifier = core_reg
+								owner = { tag = THIS }
+							}
+						}
+					}
+				}
+				country_event = 100162
+			}
+	        }
+                ai_will_do = { factor = 0 }
+        }
+}

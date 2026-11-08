@@ -1,0 +1,8 @@
+owner = KAS
+controller = KAS
+add_core = HND
+add_core = PAK
+add_core = PAN
+add_core = KAS
+trade_goods = grain
+life_rating = 35

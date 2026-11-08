@@ -1,0 +1,5 @@
+owner = MEX
+controller = SPAadd_core = MEX
+terrain = urban
+trade_goods = grain
+life_rating = 40state_building = { level = 1 building = dye_plantation_10 upgrade = yes }state_building = { level = 1 building = coke_oven upgrade = yes }state_building = { level = 1 building = ironworks upgrade = yes }state_building = { level = 1 building = steel_factory upgrade = yes }state_building = { level = 1 building = coal_energy_factory upgrade = yes }state_building = { level = 1 building = cement_factory upgrade = yes }state_building = { level = 1 building = building_materials_factory upgrade = yes }state_building = { level = 1 building = bakery upgrade = yes }

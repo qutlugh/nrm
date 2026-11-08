@@ -1,0 +1,3 @@
+add_core = ERT
+trade_goods = fruit
+life_rating = 15

@@ -1,0 +1,13 @@
+owner = USA
+controller = USAadd_core = USA
+trade_goods = grain
+life_rating = 40
+terrain = urban
+state_building = { level = 2 building = grain_farm_10 upgrade = yes }
+state_building = { level = 1 building = machine_parts_factory upgrade = yes }
+state_building = { level = 1 building = coke_oven upgrade = yes }
+state_building = { level = 3 building = steel_factory upgrade = yes }
+state_building = { level = 2 building = ironworks upgrade = yes }
+state_building = { level = 2 building = building_materials_factory upgrade = yes }
+state_building = { level = 3 building = cement_factory upgrade = yes }
+state_building = { level = 6 building = tools_factory upgrade = yes }

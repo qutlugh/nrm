@@ -1,0 +1,180 @@
+political_decisions = {
+	liberian_constitution = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = LIB
+			has_country_flag = liberia_liberated
+			NOT = { has_country_flag = liberian_constitution_enacted }
+		}
+		allow = {
+			constitutionalism_thought = 1
+		}
+		effect = {
+			USA = {
+				release_vassal = THIS
+				diplomatic_influence = { who = THIS value = 200 }
+			}
+			set_country_flag = liberian_constitution_enacted
+			political_reform = no_slavery
+			political_reform = universal_weighted_voting
+			political_reform = yes_meeting
+			political_reform = free_press
+			political_reform = all_trade_unions
+			political_reform = first_past_the_post
+			political_reform = gerrymandering
+			prestige = 25
+			any_pop = { consciousness = 5 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	die_groot_trek = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = the_great_trek
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				tag = ORA
+				tag = TRN
+			}
+		}
+		allow = {
+			prestige = 25
+		}
+		effect = {
+			set_global_flag = the_great_trek
+			any_owned = { add_province_modifier = { name = trek_boers duration = 3650 }}
+			ENG = { any_pop = { limit = { culture = boer } militancy = 2 }}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	attack_the_laagers = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = piet_retief_massacre
+				any_owned_province = { has_building = selector }
+			}
+			tag = ZUL
+			has_global_flag = the_great_trek
+			OR = {
+				exists = ORA
+				exists = TRN
+			}
+		}
+		allow = {
+			OR = {
+				NOT = { relation = { who = ORA value = 100 }}
+				NOT = { relation = { who = TRN value = 100 }}
+			}
+		}
+		effect = {
+			prestige = 25
+			badboy = 5
+			set_global_flag = piet_retief_massacre
+			2111 = { any_pop = { limit = { culture = boer } move_pop = 2106 }}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	sand_river_convention = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = had_sand_river_convention
+				any_owned_province = { is_core = ENG }
+				any_owned_province = { has_building = selector }
+			}
+			tag = TRN
+		}
+		allow = {
+			relation = { who = ENG value = 75 }
+			prestige = 25
+			state_n_government = 1
+		}
+		effect = {
+			political_reform = no_slavery
+			set_country_flag = had_sand_river_convention
+			relation = { who = ENG value = 25 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	orange_river_convention = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = had_orange_river_convention
+				any_owned_province = { is_core = ENG }
+				any_owned_province = { has_building = selector }
+			}
+			tag = ORA
+		}
+		allow = {
+			relation = { who = ENG value = 75 }
+			prestige = 25
+			state_n_government = 1
+		}
+		effect = {
+			political_reform = no_slavery
+			set_country_flag = had_orange_river_convention
+			relation = { who = ENG value = 25 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	adopt_die_stem = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = SAF
+			NOT = { has_country_flag = has_die_stem }
+		}
+		allow = {
+			the_avant_garde = 1
+		}
+		effect = {
+			prestige = 50
+			set_country_flag = has_die_stem
+		}
+	}
+}

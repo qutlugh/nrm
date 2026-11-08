@@ -1,0 +1,1377 @@
+country_event = {
+	id = 200000
+	title = "Мягкая зима в северном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 11
+		NOT = { has_country_flag = mild_winter_in_north_hemisphere }
+	}
+
+	option = {
+		name = "ok"
+		set_country_flag = mild_winter_in_north_hemisphere
+		FRA_425={add_province_modifier={name=mild_winter duration=87}}
+		FRA_418={add_province_modifier={name=mild_winter duration=87}}
+		FRA_420={add_province_modifier={name=mild_winter duration=87}}
+		FRA_435={add_province_modifier={name=mild_winter duration=87}}
+		FRA_428={add_province_modifier={name=mild_winter duration=87}}
+		FRA_404={add_province_modifier={name=mild_winter duration=87}}
+		FRA_411={add_province_modifier={name=mild_winter duration=87}}
+		FRA_399={add_province_modifier={name=mild_winter duration=87}}
+		FRA_412={add_province_modifier={name=mild_winter duration=87}}
+		ENG_300={add_province_modifier={name=mild_winter duration=87}}
+		ENG_296={add_province_modifier={name=mild_winter duration=87}}
+		ENG_291={add_province_modifier={name=mild_winter duration=87}}
+		ENG_284={add_province_modifier={name=mild_winter duration=87}}
+		ENG_273={add_province_modifier={name=mild_winter duration=87}}
+		ENG_277={add_province_modifier={name=mild_winter duration=87}}
+		ENG_280={add_province_modifier={name=mild_winter duration=87}}
+		ENG_271={add_province_modifier={name=mild_winter duration=87}}
+		ENG_266={add_province_modifier={name=mild_winter duration=87}}
+		ENG_254={add_province_modifier={name=mild_winter duration=87}}
+		ENG_263={add_province_modifier={name=mild_winter duration=87}}
+		ENG_260={add_province_modifier={name=mild_winter duration=87}}
+		SWI_605={add_province_modifier={name=mild_winter duration=87}}
+		SWI_603={add_province_modifier={name=mild_winter duration=87}}
+		BEL_387={add_province_modifier={name=mild_winter duration=87}}
+		BEL_394={add_province_modifier={name=mild_winter duration=87}}
+		NET_375={add_province_modifier={name=mild_winter duration=87}}
+		NET_385={add_province_modifier={name=mild_winter duration=87}}
+		NET_381={add_province_modifier={name=mild_winter duration=87}}
+		PRU_570={add_province_modifier={name=mild_winter duration=87}}
+		BAD_586={add_province_modifier={name=mild_winter duration=87}}
+		WUR_589={add_province_modifier={name=mild_winter duration=87}}
+		BAV_599={add_province_modifier={name=mild_winter duration=87}}
+		BAV_595={add_province_modifier={name=mild_winter duration=87}}
+		PRU_575={add_province_modifier={name=mild_winter duration=87}}
+		HES_2560={add_province_modifier={name=mild_winter duration=87}}
+		PRU_581={add_province_modifier={name=mild_winter duration=87}}
+		HAN_534={add_province_modifier={name=mild_winter duration=87}}
+		PRU_553={add_province_modifier={name=mild_winter duration=87}}
+		SAX_558={add_province_modifier={name=mild_winter duration=87}}
+		PRU_549={add_province_modifier={name=mild_winter duration=87}}
+		MEC_544={add_province_modifier={name=mild_winter duration=87}}
+		PRU_682={add_province_modifier={name=mild_winter duration=87}}
+		PRU_546={add_province_modifier={name=mild_winter duration=87}}
+		PRU_547={add_province_modifier={name=mild_winter duration=87}}
+		PRU_695={add_province_modifier={name=mild_winter duration=87}}
+		PRU_696={add_province_modifier={name=mild_winter duration=87}}
+		PRU_701={add_province_modifier={name=mild_winter duration=87}}
+		DEN_367={add_province_modifier={name=mild_winter duration=87}}
+		DEN_372={add_province_modifier={name=mild_winter duration=87}}
+		SWE_329={add_province_modifier={name=mild_winter duration=87}}
+		SWE_331={add_province_modifier={name=mild_winter duration=87}}
+		SWE_322={add_province_modifier={name=mild_winter duration=87}}
+		SWE_313={add_province_modifier={name=mild_winter duration=87}}
+		SWE_309={add_province_modifier={name=mild_winter duration=87}}
+		AUS_618={add_province_modifier={name=mild_winter duration=87}}
+		AUS_619={add_province_modifier={name=mild_winter duration=87}}
+		AUS_622={add_province_modifier={name=mild_winter duration=87}}
+		AUS_625={add_province_modifier={name=mild_winter duration=87}}
+		AUS_626={add_province_modifier={name=mild_winter duration=87}}
+		AUS_633={add_province_modifier={name=mild_winter duration=87}}
+		AUS_637={add_province_modifier={name=mild_winter duration=87}}
+		AUS_702={add_province_modifier={name=mild_winter duration=87}}
+		AUS_662={add_province_modifier={name=mild_winter duration=87}}
+		AUS_623={add_province_modifier={name=mild_winter duration=87}}
+		AUS_641={add_province_modifier={name=mild_winter duration=87}}
+		AUS_647={add_province_modifier={name=mild_winter duration=87}}
+		AUS_654={add_province_modifier={name=mild_winter duration=87}}
+		MOL_673={add_province_modifier={name=mild_winter duration=87}}
+		WAL_665={add_province_modifier={name=mild_winter duration=87}}
+		AUS_771={add_province_modifier={name=mild_winter duration=87}}
+		TUR_788={add_province_modifier={name=mild_winter duration=87}}
+		SER_794={add_province_modifier={name=mild_winter duration=87}}
+		TUR_803={add_province_modifier={name=mild_winter duration=87}}
+		TUR_809={add_province_modifier={name=mild_winter duration=87}}
+		TUR_884={add_province_modifier={name=mild_winter duration=87}}
+		TUR_885={add_province_modifier={name=mild_winter duration=87}}
+		RUS_710={add_province_modifier={name=mild_winter duration=87}}
+		RUS_706={add_province_modifier={name=mild_winter duration=87}}
+		RUS_955={add_province_modifier={name=mild_winter duration=87}}
+		RUS_707={add_province_modifier={name=mild_winter duration=87}}
+		RUS_947={add_province_modifier={name=mild_winter duration=87}}
+		RUS_958={add_province_modifier={name=mild_winter duration=87}}
+		RUS_962={add_province_modifier={name=mild_winter duration=87}}
+		RUS_676={add_province_modifier={name=mild_winter duration=87}}
+		RUS_980={add_province_modifier={name=mild_winter duration=87}}
+		RUS_965={add_province_modifier={name=mild_winter duration=87}}
+		RUS_964={add_province_modifier={name=mild_winter duration=87}}
+		RUS_360={add_province_modifier={name=mild_winter duration=87}}
+		RUS_354={add_province_modifier={name=mild_winter duration=87}}
+		RUS_979={add_province_modifier={name=mild_winter duration=87}}
+		RUS_1041={add_province_modifier={name=mild_winter duration=87}}
+		RUS_1048={add_province_modifier={name=mild_winter duration=87}}
+		RUS_1052={add_province_modifier={name=mild_winter duration=87}}
+		RUS_1090={add_province_modifier={name=mild_winter duration=87}}
+		RUS_1098={add_province_modifier={name=mild_winter duration=87}}
+		RUS_1182={add_province_modifier={name=mild_winter duration=87}}
+		RUS_1185={add_province_modifier={name=mild_winter duration=87}}
+		KOK_1190={add_province_modifier={name=mild_winter duration=87}}
+		CHI_1490={add_province_modifier={name=mild_winter duration=87}}
+		CHI_1613={add_province_modifier={name=mild_winter duration=87}}
+		CHI_1532={add_province_modifier={name=mild_winter duration=87}}
+		CHI_1557={add_province_modifier={name=mild_winter duration=87}}
+		CHI_2062={add_province_modifier={name=mild_winter duration=87}}
+		CHI_1576={add_province_modifier={name=mild_winter duration=87}}
+		CHI_1563={add_province_modifier={name=mild_winter duration=87}}
+		CHI_1618={add_province_modifier={name=mild_winter duration=87}}
+		CHI_1614={add_province_modifier={name=mild_winter duration=87}}
+		CHI_1600={add_province_modifier={name=mild_winter duration=87}}
+		KOR_1624={add_province_modifier={name=mild_winter duration=87}}
+		JAP_1640={add_province_modifier={name=mild_winter duration=87}}
+		JAP_1665={add_province_modifier={name=mild_winter duration=87}}
+		JAP_1655={add_province_modifier={name=mild_winter duration=87}}
+		JAP_1657={add_province_modifier={name=mild_winter duration=87}}
+		JAP_1675={add_province_modifier={name=mild_winter duration=87}}
+		JAP_1647={add_province_modifier={name=mild_winter duration=87}}
+		JAP_1649={add_province_modifier={name=mild_winter duration=87}}
+		JAP_1672={add_province_modifier={name=mild_winter duration=87}}
+		ENG_13={add_province_modifier={name=mild_winter duration=87}}
+		USA_106={add_province_modifier={name=mild_winter duration=87}}
+		USA_126={add_province_modifier={name=mild_winter duration=87}}
+		USA_219={add_province_modifier={name=mild_winter duration=87}}
+		USA_223={add_province_modifier={name=mild_winter duration=87}}
+		USA_232={add_province_modifier={name=mild_winter duration=87}}
+		PAN_1224={add_province_modifier={name=mild_winter duration=87}}
+		BUK_1207={add_province_modifier={name=mild_winter duration=87}}
+		RUS_977={add_province_modifier={name=mild_winter duration=87}}
+		RUS_1037={add_province_modifier={name=mild_winter duration=87}}
+		RUS_1060={add_province_modifier={name=mild_winter duration=87}}
+		RUS_1102={add_province_modifier={name=mild_winter duration=87}}
+		USA_151={add_province_modifier={name=mild_winter duration=87}}
+		USA_78={add_province_modifier={name=mild_winter duration=87}}
+		USA_168={add_province_modifier={name=mild_winter duration=87}}
+		USA_178={add_province_modifier={name=mild_winter duration=87}}
+		USA_247={add_province_modifier={name=mild_winter duration=87}}
+		USA_243={add_province_modifier={name=mild_winter duration=87}}
+		USA_158={add_province_modifier={name=mild_winter duration=87}}
+		ENG_46={add_province_modifier={name=mild_winter duration=87}}
+		ENG_58={add_province_modifier={name=mild_winter duration=87}}
+		ENG_68={add_province_modifier={name=mild_winter duration=87}}
+		MON_2582={add_province_modifier={name=mild_winter duration=87}}
+	}
+}
+country_event = {
+	id = 200001
+	title = "Суровая зима в северном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 10
+		NOT = { has_country_flag = cold_winter_in_north_hemisphere }
+	}
+
+	option = {
+		name = "ok"
+		set_country_flag = cold_winter_in_north_hemisphere
+		SWE_308={add_province_modifier={name=cold_winter duration=148}}
+		SWE_318={add_province_modifier={name=cold_winter duration=148}}
+		RUS_336={add_province_modifier={name=cold_winter duration=148}}
+		RUS_340={add_province_modifier={name=cold_winter duration=148}}
+		TIB_1591={add_province_modifier={name=cold_winter duration=148}}
+		RUS_349={add_province_modifier={name=cold_winter duration=148}}
+		RUS_943={add_province_modifier={name=cold_winter duration=148}}
+		RUS_1009={add_province_modifier={name=cold_winter duration=148}}
+		RUS_1008={add_province_modifier={name=cold_winter duration=148}}
+		RUS_994={add_province_modifier={name=cold_winter duration=148}}
+		RUS_339={add_province_modifier={name=cold_winter duration=148}}
+		RUS_998={add_province_modifier={name=cold_winter duration=148}}
+		RUS_1020={add_province_modifier={name=cold_winter duration=148}}
+		RUS_990={add_province_modifier={name=cold_winter duration=148}}
+		RUS_1026={add_province_modifier={name=cold_winter duration=148}}
+		RUS_2685={add_province_modifier={name=cold_winter duration=148}}
+		RUS_1184={add_province_modifier={name=cold_winter duration=148}}
+		RUS_1064={add_province_modifier={name=cold_winter duration=148}}
+		RUS_1469={add_province_modifier={name=cold_winter duration=148}}
+		RUS_1075={add_province_modifier={name=cold_winter duration=148}}
+		CHI_2608={add_province_modifier={name=cold_winter duration=148}}
+		RUS_1079={add_province_modifier={name=cold_winter duration=148}}
+		RUS_2589={add_province_modifier={name=cold_winter duration=148}}
+		CHI_1082={add_province_modifier={name=cold_winter duration=148}}
+		CHI_1553={add_province_modifier={name=cold_winter duration=148}}
+		KOR_1619={add_province_modifier={name=cold_winter duration=148}}
+		JAP_1642={add_province_modifier={name=cold_winter duration=148}}
+		CHI_1086={add_province_modifier={name=cold_winter duration=148}}
+		USA_1={add_province_modifier={name=cold_winter duration=148}}
+		ENG_74={add_province_modifier={name=cold_winter duration=148}}
+		ENG_30={add_province_modifier={name=cold_winter duration=148}}
+		USA_91={add_province_modifier={name=cold_winter duration=148}}
+		USA_118={add_province_modifier={name=cold_winter duration=148}}
+		ICL_252={add_province_modifier={name=cold_winter duration=148}}
+	}
+}
+country_event = {
+	id = 200002
+	title = "Вечная мерзлота"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		OR = {
+			251={NOT={has_province_modifier=eternal_frost}}
+		}
+	}
+
+	option = {
+		name = "ok"
+		DEN_251={add_province_modifier={name=eternal_frost duration=-1}}
+	}
+}
+country_event = {
+	id = 200003
+	title = "Окончание мягкой зимы в северном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		has_country_flag = mild_winter_in_north_hemisphere
+		month = 2
+		NOT = { month = 5 }
+	}
+
+	option = {
+		name = "ok"
+		clr_country_flag = mild_winter_in_north_hemisphere
+		set_country_flag = mud_after_mild_winter_nh
+		FRA_425={add_province_modifier={name=mud duration=29}}
+		FRA_418={add_province_modifier={name=mud duration=29}}
+		FRA_420={add_province_modifier={name=mud duration=29}}
+		FRA_435={add_province_modifier={name=mud duration=29}}
+		FRA_428={add_province_modifier={name=mud duration=29}}
+		FRA_404={add_province_modifier={name=mud duration=29}}
+		FRA_411={add_province_modifier={name=mud duration=29}}
+		FRA_399={add_province_modifier={name=mud duration=29}}
+		FRA_412={add_province_modifier={name=mud duration=29}}
+		ENG_300={add_province_modifier={name=mud duration=29}}
+		ENG_296={add_province_modifier={name=mud duration=29}}
+		ENG_291={add_province_modifier={name=mud duration=29}}
+		ENG_284={add_province_modifier={name=mud duration=29}}
+		ENG_273={add_province_modifier={name=mud duration=29}}
+		ENG_277={add_province_modifier={name=mud duration=29}}
+		ENG_280={add_province_modifier={name=mud duration=29}}
+		ENG_271={add_province_modifier={name=mud duration=29}}
+		ENG_266={add_province_modifier={name=mud duration=29}}
+		ENG_254={add_province_modifier={name=mud duration=29}}
+		ENG_263={add_province_modifier={name=mud duration=29}}
+		ENG_260={add_province_modifier={name=mud duration=29}}
+		SWI_605={add_province_modifier={name=mud duration=29}}
+		SWI_603={add_province_modifier={name=mud duration=29}}
+		BEL_387={add_province_modifier={name=mud duration=29}}
+		BEL_394={add_province_modifier={name=mud duration=29}}
+		NET_375={add_province_modifier={name=mud duration=29}}
+		NET_385={add_province_modifier={name=mud duration=29}}
+		NET_381={add_province_modifier={name=mud duration=29}}
+		PRU_570={add_province_modifier={name=mud duration=29}}
+		BAD_586={add_province_modifier={name=mud duration=29}}
+		WUR_589={add_province_modifier={name=mud duration=29}}
+		BAV_599={add_province_modifier={name=mud duration=29}}
+		BAV_595={add_province_modifier={name=mud duration=29}}
+		PRU_575={add_province_modifier={name=mud duration=29}}
+		HES_2560={add_province_modifier={name=mud duration=29}}
+		PRU_581={add_province_modifier={name=mud duration=29}}
+		HAN_534={add_province_modifier={name=mud duration=29}}
+		PRU_553={add_province_modifier={name=mud duration=29}}
+		SAX_558={add_province_modifier={name=mud duration=29}}
+		PRU_549={add_province_modifier={name=mud duration=29}}
+		MEC_544={add_province_modifier={name=mud duration=29}}
+		PRU_682={add_province_modifier={name=mud duration=29}}
+		PRU_546={add_province_modifier={name=mud duration=29}}
+		PRU_547={add_province_modifier={name=mud duration=29}}
+		PRU_695={add_province_modifier={name=mud duration=29}}
+		PRU_696={add_province_modifier={name=mud duration=29}}
+		PRU_701={add_province_modifier={name=mud duration=29}}
+		DEN_367={add_province_modifier={name=mud duration=29}}
+		DEN_372={add_province_modifier={name=mud duration=29}}
+		SWE_329={add_province_modifier={name=mud duration=29}}
+		SWE_331={add_province_modifier={name=mud duration=29}}
+		SWE_322={add_province_modifier={name=mud duration=29}}
+		SWE_313={add_province_modifier={name=mud duration=29}}
+		SWE_309={add_province_modifier={name=mud duration=29}}
+		AUS_618={add_province_modifier={name=mud duration=29}}
+		AUS_619={add_province_modifier={name=mud duration=29}}
+		AUS_622={add_province_modifier={name=mud duration=29}}
+		AUS_625={add_province_modifier={name=mud duration=29}}
+		AUS_626={add_province_modifier={name=mud duration=29}}
+		AUS_633={add_province_modifier={name=mud duration=29}}
+		AUS_637={add_province_modifier={name=mud duration=29}}
+		AUS_702={add_province_modifier={name=mud duration=29}}
+		AUS_662={add_province_modifier={name=mud duration=29}}
+		AUS_623={add_province_modifier={name=mud duration=29}}
+		AUS_641={add_province_modifier={name=mud duration=29}}
+		AUS_647={add_province_modifier={name=mud duration=29}}
+		AUS_654={add_province_modifier={name=mud duration=29}}
+		MOL_673={add_province_modifier={name=mud duration=29}}
+		WAL_665={add_province_modifier={name=mud duration=29}}
+		AUS_771={add_province_modifier={name=mud duration=29}}
+		TUR_788={add_province_modifier={name=mud duration=29}}
+		SER_794={add_province_modifier={name=mud duration=29}}
+		TUR_803={add_province_modifier={name=mud duration=29}}
+		TUR_809={add_province_modifier={name=mud duration=29}}
+		TUR_884={add_province_modifier={name=mud duration=29}}
+		TUR_885={add_province_modifier={name=mud duration=29}}
+		RUS_710={add_province_modifier={name=mud duration=29}}
+		RUS_706={add_province_modifier={name=mud duration=29}}
+		RUS_955={add_province_modifier={name=mud duration=29}}
+		RUS_707={add_province_modifier={name=mud duration=29}}
+		RUS_947={add_province_modifier={name=mud duration=29}}
+		RUS_958={add_province_modifier={name=mud duration=29}}
+		RUS_962={add_province_modifier={name=mud duration=29}}
+		RUS_676={add_province_modifier={name=mud duration=29}}
+		RUS_980={add_province_modifier={name=mud duration=29}}
+		RUS_965={add_province_modifier={name=mud duration=29}}
+		RUS_964={add_province_modifier={name=mud duration=29}}
+		RUS_360={add_province_modifier={name=mud duration=29}}
+		RUS_354={add_province_modifier={name=mud duration=29}}
+		RUS_979={add_province_modifier={name=mud duration=29}}
+		RUS_1041={add_province_modifier={name=mud duration=29}}
+		RUS_1048={add_province_modifier={name=mud duration=29}}
+		RUS_1052={add_province_modifier={name=mud duration=29}}
+		RUS_1090={add_province_modifier={name=mud duration=29}}
+		RUS_1098={add_province_modifier={name=mud duration=29}}
+		RUS_1182={add_province_modifier={name=mud duration=29}}
+		RUS_1185={add_province_modifier={name=mud duration=29}}
+		KOK_1190={add_province_modifier={name=mud duration=29}}
+		CHI_1490={add_province_modifier={name=mud duration=29}}
+		CHI_1613={add_province_modifier={name=mud duration=29}}
+		CHI_1532={add_province_modifier={name=mud duration=29}}
+		CHI_1557={add_province_modifier={name=mud duration=29}}
+		CHI_2062={add_province_modifier={name=mud duration=29}}
+		CHI_1576={add_province_modifier={name=mud duration=29}}
+		CHI_1563={add_province_modifier={name=mud duration=29}}
+		CHI_1618={add_province_modifier={name=mud duration=29}}
+		CHI_1614={add_province_modifier={name=mud duration=29}}
+		CHI_1600={add_province_modifier={name=mud duration=29}}
+		KOR_1624={add_province_modifier={name=mud duration=29}}
+		JAP_1640={add_province_modifier={name=mud duration=29}}
+		JAP_1665={add_province_modifier={name=mud duration=29}}
+		JAP_1655={add_province_modifier={name=mud duration=29}}
+		JAP_1657={add_province_modifier={name=mud duration=29}}
+		JAP_1675={add_province_modifier={name=mud duration=29}}
+		JAP_1647={add_province_modifier={name=mud duration=29}}
+		JAP_1649={add_province_modifier={name=mud duration=29}}
+		JAP_1672={add_province_modifier={name=mud duration=29}}
+		ENG_13={add_province_modifier={name=mud duration=29}}
+		USA_106={add_province_modifier={name=mud duration=29}}
+		USA_126={add_province_modifier={name=mud duration=29}}
+		USA_219={add_province_modifier={name=mud duration=29}}
+		USA_223={add_province_modifier={name=mud duration=29}}
+		USA_232={add_province_modifier={name=mud duration=29}}
+		PAN_1224={add_province_modifier={name=mud duration=29}}
+		BUK_1207={add_province_modifier={name=mud duration=29}}
+		RUS_977={add_province_modifier={name=mud duration=29}}
+		RUS_1037={add_province_modifier={name=mud duration=29}}
+		RUS_1060={add_province_modifier={name=mud duration=29}}
+		RUS_1102={add_province_modifier={name=mud duration=29}}
+		USA_151={add_province_modifier={name=mud duration=29}}
+		USA_78={add_province_modifier={name=mud duration=29}}
+		USA_168={add_province_modifier={name=mud duration=29}}
+		USA_178={add_province_modifier={name=mud duration=29}}
+		USA_247={add_province_modifier={name=mud duration=29}}
+		USA_243={add_province_modifier={name=mud duration=29}}
+		USA_158={add_province_modifier={name=mud duration=29}}
+		ENG_46={add_province_modifier={name=mud duration=29}}
+		ENG_58={add_province_modifier={name=mud duration=29}}
+		ENG_68={add_province_modifier={name=mud duration=29}}
+		MON_2582={add_province_modifier={name=mud duration=29}}
+	}
+}
+country_event = {
+	id = 200004
+	title = "Окончание суровой зимы в северном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		has_country_flag = cold_winter_in_north_hemisphere
+		month = 3
+		NOT = { month = 5 }
+	}
+
+	option = {
+		name = "ok"
+		clr_country_flag = cold_winter_in_north_hemisphere
+		set_country_flag = mud_after_cold_winter_nh
+		SWE_308={add_province_modifier={name=mud duration=58}}
+		SWE_318={add_province_modifier={name=mud duration=58}}
+		RUS_336={add_province_modifier={name=mud duration=58}}
+		RUS_340={add_province_modifier={name=mud duration=58}}
+		TIB_1591={add_province_modifier={name=mud duration=58}}
+		RUS_349={add_province_modifier={name=mud duration=58}}
+		RUS_943={add_province_modifier={name=mud duration=58}}
+		RUS_1009={add_province_modifier={name=mud duration=58}}
+		RUS_1008={add_province_modifier={name=mud duration=58}}
+		RUS_994={add_province_modifier={name=mud duration=58}}
+		RUS_339={add_province_modifier={name=mud duration=58}}
+		RUS_998={add_province_modifier={name=mud duration=58}}
+		RUS_1020={add_province_modifier={name=mud duration=58}}
+		RUS_990={add_province_modifier={name=mud duration=58}}
+		RUS_1026={add_province_modifier={name=mud duration=58}}
+		RUS_2685={add_province_modifier={name=mud duration=58}}
+		RUS_1184={add_province_modifier={name=mud duration=58}}
+		RUS_1064={add_province_modifier={name=mud duration=58}}
+		RUS_1469={add_province_modifier={name=mud duration=58}}
+		RUS_1075={add_province_modifier={name=mud duration=58}}
+		CHI_2608={add_province_modifier={name=mud duration=58}}
+		RUS_1079={add_province_modifier={name=mud duration=58}}
+		RUS_2589={add_province_modifier={name=mud duration=58}}
+		CHI_1082={add_province_modifier={name=mud duration=58}}
+		CHI_1553={add_province_modifier={name=mud duration=58}}
+		KOR_1619={add_province_modifier={name=mud duration=58}}
+		JAP_1642={add_province_modifier={name=mud duration=58}}
+		CHI_1086={add_province_modifier={name=mud duration=58}}
+		USA_1={add_province_modifier={name=mud duration=58}}
+		ENG_30={add_province_modifier={name=mud duration=58}}
+		ENG_74={add_province_modifier={name=mud duration=58}}
+		USA_91={add_province_modifier={name=mud duration=58}}
+		USA_118={add_province_modifier={name=mud duration=58}}
+		ICL_252={add_province_modifier={name=mud duration=58}}
+	}
+}
+country_event = {
+	id = 200005
+	title = "Засыхание грязи в северном полушарии после мягкой зимы"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		has_country_flag = mud_after_mild_winter_nh
+		has_country_flag = autumn_mud_before_mild_winter
+		month = 3
+	}
+
+	option = {
+		name = "ok"
+		clr_country_flag = mud_after_mild_winter_nh
+		clr_country_flag = autumn_mud_before_mild_winter
+	}
+}
+country_event = {
+	id = 200006
+	title = "Засыхание грязи в северном полушарии после суровой зимы"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		has_country_flag = mud_after_cold_winter_nh
+		has_country_flag = autumn_mud_before_cold_winter
+		month = 4
+	}
+
+	option = {
+		name = "ok"
+		clr_country_flag = mud_after_cold_winter_nh
+		clr_country_flag = autumn_mud_before_cold_winter
+	}
+}
+country_event = {
+	id = 200007
+	title = "Жаркое лето в северном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 4
+		NOT = { OR = { has_country_flag = hot_summer_in_north_hemisphere month = 8 }}
+	}
+
+	option = {
+		name = "ok"
+		set_country_flag = hot_summer_in_north_hemisphere
+		FRA_461={add_province_modifier={name=hot duration=120}}
+		FRA_467={add_province_modifier={name=hot duration=120}}
+		FRA_451={add_province_modifier={name=hot duration=120}}
+		FRA_445={add_province_modifier={name=hot duration=120}}
+		FRA_458={add_province_modifier={name=hot duration=120}}
+		SAR_720={add_province_modifier={name=hot duration=120}}
+		SPA_498={add_province_modifier={name=hot duration=120}}
+		SPA_492={add_province_modifier={name=hot duration=120}}
+		SPA_474={add_province_modifier={name=hot duration=120}}
+		SPA_477={add_province_modifier={name=hot duration=120}}
+		SPA_487={add_province_modifier={name=hot duration=120}}
+		SPA_503={add_province_modifier={name=hot duration=120}}
+		SPA_484={add_province_modifier={name=hot duration=120}}
+		SPA_512={add_province_modifier={name=hot duration=120}}
+		SPA_513={add_province_modifier={name=hot duration=120}}
+		SPA_517={add_province_modifier={name=hot duration=120}}
+		SAR_765={add_province_modifier={name=hot duration=120}}
+		MOD_739={add_province_modifier={name=hot duration=120}}
+		AUS_729={add_province_modifier={name=hot duration=120}}
+		AUS_768={add_province_modifier={name=hot duration=120}}
+		AUS_726={add_province_modifier={name=hot duration=120}}
+		TUS_744={add_province_modifier={name=hot duration=120}}
+		PAP_752={add_province_modifier={name=hot duration=120}}
+		TUR_853={add_province_modifier={name=hot duration=120}}
+		TUR_806={add_province_modifier={name=hot duration=120}}
+		TUR_832={add_province_modifier={name=hot duration=120}}
+		GRE_837={add_province_modifier={name=hot duration=120}}
+		EGY_843={add_province_modifier={name=hot duration=120}}
+		TUR_805={add_province_modifier={name=hot duration=120}}
+		TUR_809={add_province_modifier={name=hot duration=120}}
+		TUR_860={add_province_modifier={name=hot duration=120}}
+		TUR_863={add_province_modifier={name=hot duration=120}}
+		TUR_881={add_province_modifier={name=hot duration=120}}
+		TUR_876={add_province_modifier={name=hot duration=120}}
+		TUR_894={add_province_modifier={name=hot duration=120}}
+		TUR_884={add_province_modifier={name=hot duration=120}}
+		TUR_889={add_province_modifier={name=hot duration=120}}
+		TUR_885={add_province_modifier={name=hot duration=120}}
+		TUR_855={add_province_modifier={name=hot duration=120}}
+		PER_1112={add_province_modifier={name=hot duration=120}}
+		RUS_1098={add_province_modifier={name=hot duration=120}}
+		RUS_1102={add_province_modifier={name=hot duration=120}}
+		RUS_1090={add_province_modifier={name=hot duration=120}}
+		RUS_1052={add_province_modifier={name=hot duration=120}}
+		RUS_1048={add_province_modifier={name=hot duration=120}}
+		RUS_979={add_province_modifier={name=hot duration=120}}
+		RUS_980={add_province_modifier={name=hot duration=120}}
+		RUS_965={add_province_modifier={name=hot duration=120}}
+		RUS_964={add_province_modifier={name=hot duration=120}}
+		RUS_1041={add_province_modifier={name=hot duration=120}}
+		RUS_1182={add_province_modifier={name=hot duration=120}}
+		RUS_1185={add_province_modifier={name=hot duration=120}}
+		KHI_1191={add_province_modifier={name=hot duration=120}}
+		KOK_1190={add_province_modifier={name=hot duration=120}}
+		BUK_1207={add_province_modifier={name=hot duration=120}}
+		CHI_1600={add_province_modifier={name=hot duration=120}}
+		CHI_1557={add_province_modifier={name=hot duration=120}}
+		CHI_1490={add_province_modifier={name=hot duration=120}}
+		CHI_1613={add_province_modifier={name=hot duration=120}}
+		CHI_1532={add_province_modifier={name=hot duration=120}}
+		CHI_2062={add_province_modifier={name=hot duration=120}}
+		CHI_1576={add_province_modifier={name=hot duration=120}}
+		CHI_1618={add_province_modifier={name=hot duration=120}}
+		CHI_1563={add_province_modifier={name=hot duration=120}}
+		CHI_1614={add_province_modifier={name=hot duration=120}}
+		CHI_1513={add_province_modifier={name=hot duration=120}}
+		CHI_1472={add_province_modifier={name=hot duration=120}}
+		CHI_1476={add_province_modifier={name=hot duration=120}}
+		CHI_1539={add_province_modifier={name=hot duration=120}}
+		CHI_1473={add_province_modifier={name=hot duration=120}}
+		CHI_1516={add_province_modifier={name=hot duration=120}}
+		CHI_1523={add_province_modifier={name=hot duration=120}}
+		CHI_1581={add_province_modifier={name=hot duration=120}}
+		CHI_1578={add_province_modifier={name=hot duration=120}}
+		CHI_1529={add_province_modifier={name=hot duration=120}}
+		CHI_1611={add_province_modifier={name=hot duration=120}}
+		KOR_1624={add_province_modifier={name=hot duration=120}}
+		JAP_1660={add_province_modifier={name=hot duration=120}}
+		JAP_1640={add_province_modifier={name=hot duration=120}}
+		JAP_1665={add_province_modifier={name=hot duration=120}}
+		JAP_1655={add_province_modifier={name=hot duration=120}}
+		JAP_1657={add_province_modifier={name=hot duration=120}}
+		JAP_1675={add_province_modifier={name=hot duration=120}}
+		JAP_1647={add_province_modifier={name=hot duration=120}}
+		JAP_1649={add_province_modifier={name=hot duration=120}}
+		USA_78={add_province_modifier={name=hot duration=120}}
+		USA_106={add_province_modifier={name=hot duration=120}}
+		USA_126={add_province_modifier={name=hot duration=120}}
+		USA_151={add_province_modifier={name=hot duration=120}}
+		USA_168={add_province_modifier={name=hot duration=120}}
+		USA_178={add_province_modifier={name=hot duration=120}}
+		USA_223={add_province_modifier={name=hot duration=120}}
+		USA_232={add_province_modifier={name=hot duration=120}}
+		USA_219={add_province_modifier={name=hot duration=120}}
+		USA_211={add_province_modifier={name=hot duration=120}}
+		USA_2556={add_province_modifier={name=hot duration=120}}
+		USA_185={add_province_modifier={name=hot duration=120}}
+		PAN_1224={add_province_modifier={name=hot duration=120}}
+		RUS_1037={add_province_modifier={name=hot duration=120}}
+		RUS_1060={add_province_modifier={name=hot duration=120}}
+		RUS_977={add_province_modifier={name=hot duration=120}}
+		RUS_958={add_province_modifier={name=hot duration=120}}
+		RUS_962={add_province_modifier={name=hot duration=120}}
+		RUS_977={add_province_modifier={name=hot duration=120}}
+	}
+}
+country_event = {
+	id = 200008
+	title = "Окончание жаркого лета в северном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		has_country_flag = hot_summer_in_north_hemisphere
+		month = 8
+	}
+
+	option = {
+		name = "ok"
+		clr_country_flag = hot_summer_in_north_hemisphere
+	}
+}
+country_event = {
+	id = 200009
+	title = "Постоянная жара в северном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 2
+		NOT = { OR = { has_country_flag = usually_hot_in_north_hemisphere month = 11 }}
+	}
+
+	option = {
+		name = "ok"
+		set_country_flag = usually_hot_in_north_hemisphere
+		MOR_1693={add_province_modifier={name=hot duration=272}}
+		MOR_1686={add_province_modifier={name=hot duration=272}}
+		MOR_1683={add_province_modifier={name=hot duration=272}}
+		FRA_1700={add_province_modifier={name=hot duration=272}}
+		ALD_1708={add_province_modifier={name=hot duration=272}}
+		TUN_1726={add_province_modifier={name=hot duration=272}}
+		EGY_1754={add_province_modifier={name=hot duration=272}}
+		EGY_1750={add_province_modifier={name=hot duration=272}}
+		EGY_1755={add_province_modifier={name=hot duration=272}}
+		EGY_1756={add_province_modifier={name=hot duration=272}}
+		EGY_1762={add_province_modifier={name=hot duration=272}}
+		EGY_1755={add_province_modifier={name=hot duration=272}}
+		EGY_921={add_province_modifier={name=hot duration=272}}
+		EGY_910={add_province_modifier={name=hot duration=272}}
+		EGY_915={add_province_modifier={name=hot duration=272}}
+		EGY_903={add_province_modifier={name=hot duration=272}}
+		TUR_931={add_province_modifier={name=hot duration=272}}
+		TUR_923={add_province_modifier={name=hot duration=272}}
+		PER_1121={add_province_modifier={name=hot duration=272}}
+		RUS_1196={add_province_modifier={name=hot duration=272}}
+		PER_1138={add_province_modifier={name=hot duration=272}}
+		AFG_1214={add_province_modifier={name=hot duration=272}}
+		AFG_1217={add_province_modifier={name=hot duration=272}}
+		KAL_1221={add_province_modifier={name=hot duration=272}}
+		SIN_1288={add_province_modifier={name=hot duration=272}}
+		PAN_1227={add_province_modifier={name=hot duration=272}}
+		ENG_1264={add_province_modifier={name=hot duration=272}}
+		ENG_1236={add_province_modifier={name=hot duration=272}}
+		ENG_1243={add_province_modifier={name=hot duration=272}}
+		ENG_1291={add_province_modifier={name=hot duration=272}}
+		ENG_1275={add_province_modifier={name=hot duration=272}}
+		NAG_1277={add_province_modifier={name=hot duration=272}}
+		ENG_1261={add_province_modifier={name=hot duration=272}}
+		ENG_1297={add_province_modifier={name=hot duration=272}}
+		HYD_1283={add_province_modifier={name=hot duration=272}}
+		ENG_1305={add_province_modifier={name=hot duration=272}}
+		MYS_1314={add_province_modifier={name=hot duration=272}}
+		ENG_1317={add_province_modifier={name=hot duration=272}}
+		ENG_1304={add_province_modifier={name=hot duration=272}}
+		ENG_1247={add_province_modifier={name=hot duration=272}}
+		ENG_1252={add_province_modifier={name=hot duration=272}}
+		ENG_1251={add_province_modifier={name=hot duration=272}}
+		ENG_1258={add_province_modifier={name=hot duration=272}}
+		BUR_1339={add_province_modifier={name=hot duration=272}}
+		BUR_1334={add_province_modifier={name=hot duration=272}}
+		BUR_1330={add_province_modifier={name=hot duration=272}}
+		ENG_1343={add_province_modifier={name=hot duration=272}}
+		SIA_1355={add_province_modifier={name=hot duration=272}}
+		SIA_1358={add_province_modifier={name=hot duration=272}}
+		SIA_1392={add_province_modifier={name=hot duration=272}}
+		ENG_1384={add_province_modifier={name=hot duration=272}}
+		SIA_1366={add_province_modifier={name=hot duration=272}}
+		LUA_1356={add_province_modifier={name=hot duration=272}}
+		ANN_1383={add_province_modifier={name=hot duration=272}}
+		ANN_1371={add_province_modifier={name=hot duration=272}}
+		CHI_1578={add_province_modifier={name=hot duration=272}}
+		CHI_1601={add_province_modifier={name=hot duration=272}}
+		CHI_1504={add_province_modifier={name=hot duration=272}}
+		CHI_1499={add_province_modifier={name=hot duration=272}}
+		CHI_1550={add_province_modifier={name=hot duration=272}}
+		CHI_1487={add_province_modifier={name=hot duration=272}}
+		CHI_2562={add_province_modifier={name=hot duration=272}}
+		ENG_1321={add_province_modifier={name=hot duration=272}}
+		NET_1398={add_province_modifier={name=hot duration=272}}
+		NET_1413={add_province_modifier={name=hot duration=272}}
+		NET_1423={add_province_modifier={name=hot duration=272}}
+		BRU_1394={add_province_modifier={name=hot duration=272}}
+		BAL_1438={add_province_modifier={name=hot duration=272}}
+		NET_1449={add_province_modifier={name=hot duration=272}}
+		NET_1451={add_province_modifier={name=hot duration=272}}
+		GER_2530={add_province_modifier={name=hot duration=272}}
+		AST_2528={add_province_modifier={name=hot duration=272}}
+		SPA_1455={add_province_modifier={name=hot duration=272}}
+		SPA_1463={add_province_modifier={name=hot duration=272}}
+		HAW_658={add_province_modifier={name=hot duration=272}}
+		JAP_1654={add_province_modifier={name=hot duration=272}}
+		MEX_85={add_province_modifier={name=hot duration=272}}
+		MEX_94={add_province_modifier={name=hot duration=272}}
+		MEX_100={add_province_modifier={name=hot duration=272}}
+		TEX_132={add_province_modifier={name=hot duration=272}}
+		USA_143={add_province_modifier={name=hot duration=272}}
+		USA_139={add_province_modifier={name=hot duration=272}}
+		USA_201={add_province_modifier={name=hot duration=272}}
+		MEX_2138={add_province_modifier={name=hot duration=272}}
+		MEX_2142={add_province_modifier={name=hot duration=272}}
+		MEX_2146={add_province_modifier={name=hot duration=272}}
+		MEX_2151={add_province_modifier={name=hot duration=272}}
+		MEX_2161={add_province_modifier={name=hot duration=272}}
+		MEX_2170={add_province_modifier={name=hot duration=272}}
+		MEX_2162={add_province_modifier={name=hot duration=272}}
+		MEX_2183={add_province_modifier={name=hot duration=272}}
+		UCA_2186={add_province_modifier={name=hot duration=272}}
+		UCA_2191={add_province_modifier={name=hot duration=272}}
+		UCA_2194={add_province_modifier={name=hot duration=272}}
+		UCA_2197={add_province_modifier={name=hot duration=272}}
+		UCA_2201={add_province_modifier={name=hot duration=272}}
+		CLM_1723={add_province_modifier={name=hot duration=272}}
+		CLM_1724={add_province_modifier={name=hot duration=272}}
+		SPA_2209={add_province_modifier={name=hot duration=272}}
+		HAI_2213={add_province_modifier={name=hot duration=272}}
+		ENG_2217={add_province_modifier={name=hot duration=272}}
+		ENG_2224={add_province_modifier={name=hot duration=272}}
+		CLM_2251={add_province_modifier={name=hot duration=272}}
+		CLM_2247={add_province_modifier={name=hot duration=272}}
+		CLM_2259={add_province_modifier={name=hot duration=272}}
+		CLM_2262={add_province_modifier={name=hot duration=272}}
+		VNZ_2268={add_province_modifier={name=hot duration=272}}
+		VNZ_2265={add_province_modifier={name=hot duration=272}}
+		VNZ_2278={add_province_modifier={name=hot duration=272}}
+		ECU_2279={add_province_modifier={name=hot duration=272}}
+		PEU_2289={add_province_modifier={name=hot duration=272}}
+		TUR_873={add_province_modifier={name=hot duration=272}}
+		TUR_869={add_province_modifier={name=hot duration=272}}
+		SIC_763={add_province_modifier={name=hot duration=272}}
+		SIC_754={add_province_modifier={name=hot duration=272}}
+		SIC_753={add_province_modifier={name=hot duration=272}}
+	}
+}
+country_event = {
+	id = 200010
+	title = "Смягчение постоянной жары в северном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 11
+		has_country_flag = usually_hot_in_north_hemisphere
+	}
+
+	option = {
+		name = "ok"
+		clr_country_flag = usually_hot_in_north_hemisphere
+	}
+}
+country_event = {
+	id = 200011
+	title = "Всегда жара"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		OR = {
+			1696={NOT={has_province_modifier=hot}}
+			1782={NOT={has_province_modifier=hot}}
+			1783={NOT={has_province_modifier=hot}}
+			1788={NOT={has_province_modifier=hot}}
+			1877={NOT={has_province_modifier=hot}}
+			1801={NOT={has_province_modifier=hot}}
+			1879={NOT={has_province_modifier=hot}}
+			1884={NOT={has_province_modifier=hot}}
+			1798={NOT={has_province_modifier=hot}}
+			1901={NOT={has_province_modifier=hot}}
+			1803={NOT={has_province_modifier=hot}}
+			1808={NOT={has_province_modifier=hot}}
+			1887={NOT={has_province_modifier=hot}}
+			1893={NOT={has_province_modifier=hot}}
+			1892={NOT={has_province_modifier=hot}}
+			1907={NOT={has_province_modifier=hot}}
+			1914={NOT={has_province_modifier=hot}}
+			1919={NOT={has_province_modifier=hot}}
+			1923={NOT={has_province_modifier=hot}}
+			1930={NOT={has_province_modifier=hot}}
+			1931={NOT={has_province_modifier=hot}}
+			1960={NOT={has_province_modifier=hot}}
+			1927={NOT={has_province_modifier=hot}}
+			1939={NOT={has_province_modifier=hot}}
+			1937={NOT={has_province_modifier=hot}}
+			1816={NOT={has_province_modifier=hot}}
+			1818={NOT={has_province_modifier=hot}}
+			1813={NOT={has_province_modifier=hot}}
+			1825={NOT={has_province_modifier=hot}}
+			1838={NOT={has_province_modifier=hot}}
+			1834={NOT={has_province_modifier=hot}}
+			1827={NOT={has_province_modifier=hot}}
+			1848={NOT={has_province_modifier=hot}}
+			1854={NOT={has_province_modifier=hot}}
+			1864={NOT={has_province_modifier=hot}}
+			1867={NOT={has_province_modifier=hot}}
+			1868={NOT={has_province_modifier=hot}}
+			1843={NOT={has_province_modifier=hot}}
+			1965={NOT={has_province_modifier=hot}}
+			1956={NOT={has_province_modifier=hot}}
+			1972={NOT={has_province_modifier=hot}}
+			1978={NOT={has_province_modifier=hot}}
+			1992={NOT={has_province_modifier=hot}}
+			1990={NOT={has_province_modifier=hot}}
+			2019={NOT={has_province_modifier=hot}}
+			2034={NOT={has_province_modifier=hot}}
+			2026={NOT={has_province_modifier=hot}}
+			2029={NOT={has_province_modifier=hot}}
+			2039={NOT={has_province_modifier=hot}}
+			2024={NOT={has_province_modifier=hot}}
+			1977={NOT={has_province_modifier=hot}}
+			1984={NOT={has_province_modifier=hot}}
+			1987={NOT={has_province_modifier=hot}}
+			2016={NOT={has_province_modifier=hot}}
+			2014={NOT={has_province_modifier=hot}}
+			2006={NOT={has_province_modifier=hot}}
+			2003={NOT={has_province_modifier=hot}}
+			2078={NOT={has_province_modifier=hot}}
+			2083={NOT={has_province_modifier=hot}}
+			2074={NOT={has_province_modifier=hot}}
+			2068={NOT={has_province_modifier=hot}}
+			2049={NOT={has_province_modifier=hot}}
+			2053={NOT={has_province_modifier=hot}}
+			2060={NOT={has_province_modifier=hot}}
+			2117={NOT={has_province_modifier=hot}}
+			2121={NOT={has_province_modifier=hot}}
+			1151={NOT={has_province_modifier=hot}}
+			1157={NOT={has_province_modifier=hot}}
+			1162={NOT={has_province_modifier=hot}}
+			1166={NOT={has_province_modifier=hot}}
+			1173={NOT={has_province_modifier=hot}}
+			2497={NOT={has_province_modifier=hot}}
+			2491={NOT={has_province_modifier=hot}}
+			2483={NOT={has_province_modifier=hot}}
+			2454={NOT={has_province_modifier=hot}}
+			1097={NOT={has_province_modifier=hot}}
+			1979={NOT={has_province_modifier=hot}}
+			2408={NOT={has_province_modifier=hot}}
+			2401={NOT={has_province_modifier=hot}}
+			2410={NOT={has_province_modifier=hot}}
+			2416={NOT={has_province_modifier=hot}}
+			2427={NOT={has_province_modifier=hot}}
+			2428={NOT={has_province_modifier=hot}}
+			2439={NOT={has_province_modifier=hot}}
+			2446={NOT={has_province_modifier=hot}}
+			2447={NOT={has_province_modifier=hot}}
+			2338={NOT={has_province_modifier=hot}}
+			2317={NOT={has_province_modifier=hot}}
+			2321={NOT={has_province_modifier=hot}}
+			2343={NOT={has_province_modifier=hot}}
+			2067={NOT={has_province_modifier=hot}}
+		}
+	}
+
+	option = {
+		name = "ok"
+		MOR_1696={add_province_modifier={name=hot duration=-1}}
+		MAU_1782={add_province_modifier={name=hot duration=-1}}
+		FRA_1783={add_province_modifier={name=hot duration=-1}}
+		FRA_1788={add_province_modifier={name=hot duration=-1}}
+		FRA_1877={add_province_modifier={name=hot duration=-1}}
+		FRA_1801={add_province_modifier={name=hot duration=-1}}
+		FRA_1879={add_province_modifier={name=hot duration=-1}}
+		FRA_1884={add_province_modifier={name=hot duration=-1}}
+		FRA_1798={add_province_modifier={name=hot duration=-1}}
+		FRA_1901={add_province_modifier={name=hot duration=-1}}
+		FRA_1803={add_province_modifier={name=hot duration=-1}}
+		FRA_1808={add_province_modifier={name=hot duration=-1}}
+		ENG_1887={add_province_modifier={name=hot duration=-1}}
+		FRA_1893={add_province_modifier={name=hot duration=-1}}
+		FRA_1892={add_province_modifier={name=hot duration=-1}}
+		FRA_1907={add_province_modifier={name=hot duration=-1}}
+		FRA_1914={add_province_modifier={name=hot duration=-1}}
+		FRA_1919={add_province_modifier={name=hot duration=-1}}
+		FRA_1923={add_province_modifier={name=hot duration=-1}}
+		FRA_1930={add_province_modifier={name=hot duration=-1}}
+		FRA_1931={add_province_modifier={name=hot duration=-1}}
+		ENG_1960={add_province_modifier={name=hot duration=-1}}
+		FRA_1927={add_province_modifier={name=hot duration=-1}}
+		FRA_1939={add_province_modifier={name=hot duration=-1}}
+		FRA_1937={add_province_modifier={name=hot duration=-1}}
+		FRA_1816={add_province_modifier={name=hot duration=-1}}
+		ENG_1818={add_province_modifier={name=hot duration=-1}}
+		FRA_1813={add_province_modifier={name=hot duration=-1}}
+		ENG_1825={add_province_modifier={name=hot duration=-1}}
+		EGY_1838={add_province_modifier={name=hot duration=-1}}
+		EGY_1834={add_province_modifier={name=hot duration=-1}}
+		EGY_1827={add_province_modifier={name=hot duration=-1}}
+		ENG_1848={add_province_modifier={name=hot duration=-1}}
+		ETH_1854={add_province_modifier={name=hot duration=-1}}
+		ETH_1864={add_province_modifier={name=hot duration=-1}}
+		ETH_1867={add_province_modifier={name=hot duration=-1}}
+		ENG_1868={add_province_modifier={name=hot duration=-1}}
+		ENG_1843={add_province_modifier={name=hot duration=-1}}
+		FRA_1965={add_province_modifier={name=hot duration=-1}}
+		ENG_1956={add_province_modifier={name=hot duration=-1}}
+		FRA_1972={add_province_modifier={name=hot duration=-1}}
+		FRA_1978={add_province_modifier={name=hot duration=-1}}
+		BEL_1992={add_province_modifier={name=hot duration=-1}}
+		BEL_1990={add_province_modifier={name=hot duration=-1}}
+		ENG_2019={add_province_modifier={name=hot duration=-1}}
+		ENG_2034={add_province_modifier={name=hot duration=-1}}
+		ENG_2026={add_province_modifier={name=hot duration=-1}}
+		ENG_2029={add_province_modifier={name=hot duration=-1}}
+		ENG_2039={add_province_modifier={name=hot duration=-1}}
+		ENG_2024={add_province_modifier={name=hot duration=-1}}
+		BEL_1977={add_province_modifier={name=hot duration=-1}}
+		BEL_1984={add_province_modifier={name=hot duration=-1}}
+		BEL_1987={add_province_modifier={name=hot duration=-1}}
+		ENG_2016={add_province_modifier={name=hot duration=-1}}
+		ENG_2014={add_province_modifier={name=hot duration=-1}}
+		POR_2006={add_province_modifier={name=hot duration=-1}}
+		POR_2003={add_province_modifier={name=hot duration=-1}}
+		ENG_2078={add_province_modifier={name=hot duration=-1}}
+		ENG_2083={add_province_modifier={name=hot duration=-1}}
+		ENG_2074={add_province_modifier={name=hot duration=-1}}
+		ENG_2068={add_province_modifier={name=hot duration=-1}}
+		POR_2049={add_province_modifier={name=hot duration=-1}}
+		POR_2053={add_province_modifier={name=hot duration=-1}}
+		POR_2060={add_province_modifier={name=hot duration=-1}}
+		MAD_2117={add_province_modifier={name=hot duration=-1}}
+		MAD_2121={add_province_modifier={name=hot duration=-1}}
+		HDJ_1151={add_province_modifier={name=hot duration=-1}}
+		NEJ_1157={add_province_modifier={name=hot duration=-1}}
+		ABU_1162={add_province_modifier={name=hot duration=-1}}
+		OMA_1166={add_province_modifier={name=hot duration=-1}}
+		YEM_1173={add_province_modifier={name=hot duration=-1}}
+		ENG_2497={add_province_modifier={name=hot duration=-1}}
+		ENG_2491={add_province_modifier={name=hot duration=-1}}
+		ENG_2483={add_province_modifier={name=hot duration=-1}}
+		AST_2454={add_province_modifier={name=hot duration=-1}}
+		FRA_1097={add_province_modifier={name=hot duration=-1}}
+		ENG_1979={add_province_modifier={name=hot duration=-1}}
+		NET_2240={add_province_modifier={name=hot duration=-1}}
+		FRA_2241={add_province_modifier={name=hot duration=-1}}
+		BRZ_2408={add_province_modifier={name=hot duration=-1}}
+		BRZ_2401={add_province_modifier={name=hot duration=-1}}
+		BRZ_2410={add_province_modifier={name=hot duration=-1}}
+		BRZ_2416={add_province_modifier={name=hot duration=-1}}
+		BRZ_2427={add_province_modifier={name=hot duration=-1}}
+		BRZ_2428={add_province_modifier={name=hot duration=-1}}
+		BRZ_2439={add_province_modifier={name=hot duration=-1}}
+		BRZ_2446={add_province_modifier={name=hot duration=-1}}
+		BRZ_2447={add_province_modifier={name=hot duration=-1}}
+		PRG_2338={add_province_modifier={name=hot duration=-1}}
+		BOL_2317={add_province_modifier={name=hot duration=-1}}
+		BOL_2321={add_province_modifier={name=hot duration=-1}}
+		PRG_2343={add_province_modifier={name=hot duration=-1}}
+		ENG_2067={add_province_modifier={name=hot duration=-1}}
+	}
+}
+country_event = {
+	id = 200012
+	title = "Жаркое лето в южном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 10
+		NOT = { has_country_flag = hot_summer_in_south_hemisphere }
+	}
+
+	option = {
+		name = "ok"
+		set_country_flag = hot_summer_in_south_hemisphere
+		ENG_2087={add_province_modifier={name=hot duration=150}}
+		ENG_2092={add_province_modifier={name=hot duration=150}}
+		ENG_2096={add_province_modifier={name=hot duration=150}}
+		ZUL_2113={add_province_modifier={name=hot duration=150}}
+		ORA_2103={add_province_modifier={name=hot duration=150}}
+		TRN_2108={add_province_modifier={name=hot duration=150}}
+		ENG_2468={add_province_modifier={name=hot duration=150}}
+		ENG_2476={add_province_modifier={name=hot duration=150}}
+		ENG_2509={add_province_modifier={name=hot duration=150}}
+		ENG_2513={add_province_modifier={name=hot duration=150}}
+		PEU_2291={add_province_modifier={name=hot duration=150}}
+		PEU_2300={add_province_modifier={name=hot duration=150}}
+		PEU_2297={add_province_modifier={name=hot duration=150}}
+		PEU_2303={add_province_modifier={name=hot duration=150}}
+		BOL_2314={add_province_modifier={name=hot duration=150}}
+		BOL_2321={add_province_modifier={name=hot duration=150}}
+		BOL_2305={add_province_modifier={name=hot duration=150}}
+		ARG_2368={add_province_modifier={name=hot duration=150}}
+		BRZ_2306={add_province_modifier={name=hot duration=150}}
+		BRZ_2462={add_province_modifier={name=hot duration=150}}
+		BRZ_2467={add_province_modifier={name=hot duration=150}}
+		URU_2344={add_province_modifier={name=hot duration=150}}
+		ARG_2357={add_province_modifier={name=hot duration=150}}
+		ARG_2377={add_province_modifier={name=hot duration=150}}
+		ARG_2387={add_province_modifier={name=hot duration=150}}
+		ARG_2384={add_province_modifier={name=hot duration=150}}
+		ARG_2363={add_province_modifier={name=hot duration=150}}
+		ARG_2355={add_province_modifier={name=hot duration=150}}
+		ARG_2393={add_province_modifier={name=hot duration=150}}
+		CHL_2322={add_province_modifier={name=hot duration=150}}
+		CHL_2327={add_province_modifier={name=hot duration=150}}
+	}
+}
+country_event = {
+	id = 200013
+	title = "Окончание жаркого лета в южном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 3
+		NOT = { month = 10 }
+		has_country_flag = hot_summer_in_south_hemisphere
+	}
+
+	option = {
+		name = "ok"
+		clr_country_flag = hot_summer_in_south_hemisphere
+	}
+}
+country_event = {
+	id = 200014
+	title = "Мягкая зима в южном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 5
+		NOT={OR={has_country_flag=mild_winter_in_south_hemisphere month=8}}
+	}
+
+	option = {
+		name = "ok"
+		set_country_flag = mild_winter_in_south_hemisphere
+		ARG_2355={add_province_modifier={name=mild_winter duration=90}}
+		ARG_2393={add_province_modifier={name=mild_winter duration=90}}
+		ARG_2391={add_province_modifier={name=mild_winter duration=90}}
+		CHL_2332={add_province_modifier={name=mild_winter duration=90}}
+	}
+}
+country_event = {
+	id = 200015
+	title = "Окончание мягкой зимы в южном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 8
+		NOT = { month = 10 }
+		has_country_flag = mild_winter_in_south_hemisphere
+	}
+
+	option = {
+		name = "ok"
+		clr_country_flag = mild_winter_in_south_hemisphere
+		set_country_flag = mud_after_mild_winter_sh
+		ARG_2355={add_province_modifier={name=mud duration=60}}
+		ARG_2393={add_province_modifier={name=mud duration=60}}
+		ARG_2391={add_province_modifier={name=mud duration=60}}
+		CHL_2332={add_province_modifier={name=mud duration=60}}
+	}
+}
+country_event = {
+	id = 200016
+	title = "Засыхание грязи в южном полушарии"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 10
+		has_country_flag = mud_after_mild_winter_sh
+	}
+
+	option = {
+		name = "ok"
+		clr_country_flag = mud_after_mild_winter_sh
+	}
+}
+country_event = {
+	id = 200017
+	title = "Сезон дождей"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 11
+		NOT = { has_country_flag = rain_season }
+	}
+
+	option = {
+		name = "ok"
+		set_country_flag = rain_season
+		ANN_1371={add_province_modifier={name=monsoons duration=88}}
+		ANN_1383={add_province_modifier={name=monsoons duration=88}}
+		SIA_1366={add_province_modifier={name=monsoons duration=88}}
+		LUA_1356={add_province_modifier={name=monsoons duration=88}}
+		SPA_1455={add_province_modifier={name=monsoons duration=88}}
+		SPA_1463={add_province_modifier={name=monsoons duration=88}}
+		SIA_1358={add_province_modifier={name=monsoons duration=88}}
+		SIA_1392={add_province_modifier={name=monsoons duration=88}}
+		SIA_1355={add_province_modifier={name=monsoons duration=88}}
+		ENG_1384={add_province_modifier={name=monsoons duration=88}}
+		ENG_1343={add_province_modifier={name=monsoons duration=88}}
+		BUR_1330={add_province_modifier={name=monsoons duration=88}}
+		BUR_1334={add_province_modifier={name=monsoons duration=88}}
+		BUR_1339={add_province_modifier={name=monsoons duration=88}}
+		NET_1413={add_province_modifier={name=monsoons duration=88}}
+		BAL_1438={add_province_modifier={name=monsoons duration=88}}
+		NET_1449={add_province_modifier={name=monsoons duration=88}}
+		NET_1451={add_province_modifier={name=monsoons duration=88}}
+		GER_2530={add_province_modifier={name=monsoons duration=88}}
+		AST_2528={add_province_modifier={name=monsoons duration=88}}
+		ENG_1317={add_province_modifier={name=monsoons duration=88}}
+		MYS_1314={add_province_modifier={name=monsoons duration=88}}
+		ENG_1297={add_province_modifier={name=monsoons duration=88}}
+		MAD_2121={add_province_modifier={name=monsoons duration=88}}
+		MAD_2117={add_province_modifier={name=monsoons duration=88}}
+		ENG_1887={add_province_modifier={name=monsoons duration=88}}
+		FRA_1879={add_province_modifier={name=monsoons duration=88}}
+		FRA_1893={add_province_modifier={name=monsoons duration=88}}
+		FRA_1892={add_province_modifier={name=monsoons duration=88}}
+		FRA_1972={add_province_modifier={name=monsoons duration=88}}
+		FRA_1978={add_province_modifier={name=monsoons duration=88}}
+		BEL_1977={add_province_modifier={name=monsoons duration=88}}
+		FRA_1892={add_province_modifier={name=monsoons duration=88}}
+		BEL_1990={add_province_modifier={name=monsoons duration=88}}
+		BEL_1992={add_province_modifier={name=monsoons duration=88}}
+		ENG_1321={add_province_modifier={name=monsoons duration=88}}
+		MEX_2183={add_province_modifier={name=monsoons duration=88}}
+		UCA_2186={add_province_modifier={name=monsoons duration=88}}
+		UCA_2194={add_province_modifier={name=monsoons duration=88}}
+		UCA_2197={add_province_modifier={name=monsoons duration=88}}
+		UCA_2201={add_province_modifier={name=monsoons duration=88}}
+		BRZ_2408={add_province_modifier={name=monsoons duration=88}}
+		BRZ_2401={add_province_modifier={name=monsoons duration=88}}
+		BRZ_2410={add_province_modifier={name=monsoons duration=88}}
+		BRZ_2416={add_province_modifier={name=monsoons duration=88}}
+		BRZ_2427={add_province_modifier={name=monsoons duration=88}}
+		BRZ_2428={add_province_modifier={name=monsoons duration=88}}
+		BRZ_2439={add_province_modifier={name=monsoons duration=88}}
+		CLM_1723={add_province_modifier={name=monsoons duration=88}}
+		CLM_1724={add_province_modifier={name=monsoons duration=88}}
+		CLM_2251={add_province_modifier={name=monsoons duration=88}}
+		CLM_2262={add_province_modifier={name=monsoons duration=88}}
+		VNZ_2278={add_province_modifier={name=monsoons duration=88}}
+		ENG_1979={add_province_modifier={name=monsoons duration=88}}
+		NET_2240={add_province_modifier={name=monsoons duration=88}}
+		FRA_2241={add_province_modifier={name=monsoons duration=88}}
+		VNZ_2265={add_province_modifier={name=monsoons duration=88}}
+		VNZ_2268={add_province_modifier={name=monsoons duration=88}}
+		PEU_2289={add_province_modifier={name=monsoons duration=88}}
+		BOL_2317={add_province_modifier={name=monsoons duration=88}}
+		BOL_2321={add_province_modifier={name=monsoons duration=88}}
+		ENG_2224={add_province_modifier={name=monsoons duration=88}}
+		ENG_2217={add_province_modifier={name=monsoons duration=88}}
+		SPA_2209={add_province_modifier={name=monsoons duration=88}}
+		HAI_2213={add_province_modifier={name=monsoons duration=88}}
+	}
+}
+country_event = {
+	id = 200018
+	title = "Окончание сезона дождей"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 2
+		has_country_flag = rain_season
+	}
+
+	option = {
+		name = "ok"
+		clr_country_flag = rain_season
+	}
+}
+country_event = {
+	id = 200019
+	title = "Осенняя распутица перед мягкой зимой"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 9
+		NOT = { has_country_flag = autumn_mud_before_mild_winter }
+	}
+
+	option = {
+		name = "ok"
+		set_country_flag = autumn_mud_before_mild_winter
+		FRA_425={add_province_modifier={name=mud duration=58}}
+		FRA_418={add_province_modifier={name=mud duration=58}}
+		FRA_420={add_province_modifier={name=mud duration=58}}
+		FRA_435={add_province_modifier={name=mud duration=58}}
+		FRA_428={add_province_modifier={name=mud duration=58}}
+		FRA_404={add_province_modifier={name=mud duration=58}}
+		FRA_411={add_province_modifier={name=mud duration=58}}
+		FRA_399={add_province_modifier={name=mud duration=58}}
+		FRA_412={add_province_modifier={name=mud duration=58}}
+		ENG_300={add_province_modifier={name=mud duration=58}}
+		ENG_296={add_province_modifier={name=mud duration=58}}
+		ENG_291={add_province_modifier={name=mud duration=58}}
+		ENG_284={add_province_modifier={name=mud duration=58}}
+		ENG_273={add_province_modifier={name=mud duration=58}}
+		ENG_277={add_province_modifier={name=mud duration=58}}
+		ENG_280={add_province_modifier={name=mud duration=58}}
+		ENG_271={add_province_modifier={name=mud duration=58}}
+		ENG_266={add_province_modifier={name=mud duration=58}}
+		ENG_254={add_province_modifier={name=mud duration=58}}
+		ENG_263={add_province_modifier={name=mud duration=58}}
+		ENG_260={add_province_modifier={name=mud duration=58}}
+		SWI_605={add_province_modifier={name=mud duration=58}}
+		SWI_603={add_province_modifier={name=mud duration=58}}
+		BEL_387={add_province_modifier={name=mud duration=58}}
+		BEL_394={add_province_modifier={name=mud duration=58}}
+		NET_375={add_province_modifier={name=mud duration=58}}
+		NET_385={add_province_modifier={name=mud duration=58}}
+		NET_381={add_province_modifier={name=mud duration=58}}
+		PRU_570={add_province_modifier={name=mud duration=58}}
+		BAD_586={add_province_modifier={name=mud duration=58}}
+		WUR_589={add_province_modifier={name=mud duration=58}}
+		BAV_599={add_province_modifier={name=mud duration=58}}
+		BAV_595={add_province_modifier={name=mud duration=58}}
+		PRU_575={add_province_modifier={name=mud duration=58}}
+		HES_2560={add_province_modifier={name=mud duration=58}}
+		PRU_581={add_province_modifier={name=mud duration=58}}
+		HAN_534={add_province_modifier={name=mud duration=58}}
+		PRU_553={add_province_modifier={name=mud duration=58}}
+		SAX_558={add_province_modifier={name=mud duration=58}}
+		PRU_549={add_province_modifier={name=mud duration=58}}
+		MEC_544={add_province_modifier={name=mud duration=58}}
+		PRU_682={add_province_modifier={name=mud duration=58}}
+		PRU_546={add_province_modifier={name=mud duration=58}}
+		PRU_547={add_province_modifier={name=mud duration=58}}
+		PRU_695={add_province_modifier={name=mud duration=58}}
+		PRU_696={add_province_modifier={name=mud duration=58}}
+		PRU_701={add_province_modifier={name=mud duration=58}}
+		DEN_367={add_province_modifier={name=mud duration=58}}
+		DEN_372={add_province_modifier={name=mud duration=58}}
+		SWE_329={add_province_modifier={name=mud duration=58}}
+		SWE_331={add_province_modifier={name=mud duration=58}}
+		SWE_322={add_province_modifier={name=mud duration=58}}
+		SWE_313={add_province_modifier={name=mud duration=58}}
+		SWE_309={add_province_modifier={name=mud duration=58}}
+		AUS_618={add_province_modifier={name=mud duration=58}}
+		AUS_619={add_province_modifier={name=mud duration=58}}
+		AUS_622={add_province_modifier={name=mud duration=58}}
+		AUS_625={add_province_modifier={name=mud duration=58}}
+		AUS_626={add_province_modifier={name=mud duration=58}}
+		AUS_633={add_province_modifier={name=mud duration=58}}
+		AUS_637={add_province_modifier={name=mud duration=58}}
+		AUS_702={add_province_modifier={name=mud duration=58}}
+		AUS_662={add_province_modifier={name=mud duration=58}}
+		AUS_623={add_province_modifier={name=mud duration=58}}
+		AUS_641={add_province_modifier={name=mud duration=58}}
+		AUS_647={add_province_modifier={name=mud duration=58}}
+		AUS_654={add_province_modifier={name=mud duration=58}}
+		MOL_673={add_province_modifier={name=mud duration=58}}
+		WAL_665={add_province_modifier={name=mud duration=58}}
+		AUS_771={add_province_modifier={name=mud duration=58}}
+		TUR_788={add_province_modifier={name=mud duration=58}}
+		SER_794={add_province_modifier={name=mud duration=58}}
+		TUR_803={add_province_modifier={name=mud duration=58}}
+		TUR_809={add_province_modifier={name=mud duration=58}}
+		TUR_884={add_province_modifier={name=mud duration=58}}
+		TUR_885={add_province_modifier={name=mud duration=58}}
+		RUS_710={add_province_modifier={name=mud duration=58}}
+		RUS_706={add_province_modifier={name=mud duration=58}}
+		RUS_955={add_province_modifier={name=mud duration=58}}
+		RUS_707={add_province_modifier={name=mud duration=58}}
+		RUS_947={add_province_modifier={name=mud duration=58}}
+		RUS_958={add_province_modifier={name=mud duration=58}}
+		RUS_962={add_province_modifier={name=mud duration=58}}
+		RUS_676={add_province_modifier={name=mud duration=58}}
+		RUS_980={add_province_modifier={name=mud duration=58}}
+		RUS_965={add_province_modifier={name=mud duration=58}}
+		RUS_964={add_province_modifier={name=mud duration=58}}
+		RUS_360={add_province_modifier={name=mud duration=58}}
+		RUS_354={add_province_modifier={name=mud duration=58}}
+		RUS_979={add_province_modifier={name=mud duration=58}}
+		RUS_1041={add_province_modifier={name=mud duration=58}}
+		RUS_1048={add_province_modifier={name=mud duration=58}}
+		RUS_1052={add_province_modifier={name=mud duration=58}}
+		RUS_1090={add_province_modifier={name=mud duration=58}}
+		RUS_1098={add_province_modifier={name=mud duration=58}}
+		RUS_1182={add_province_modifier={name=mud duration=58}}
+		RUS_1185={add_province_modifier={name=mud duration=58}}
+		KOK_1190={add_province_modifier={name=mud duration=58}}
+		CHI_1490={add_province_modifier={name=mud duration=58}}
+		CHI_1613={add_province_modifier={name=mud duration=58}}
+		CHI_1532={add_province_modifier={name=mud duration=58}}
+		CHI_1557={add_province_modifier={name=mud duration=58}}
+		CHI_2062={add_province_modifier={name=mud duration=58}}
+		CHI_1576={add_province_modifier={name=mud duration=58}}
+		CHI_1563={add_province_modifier={name=mud duration=58}}
+		CHI_1618={add_province_modifier={name=mud duration=58}}
+		CHI_1614={add_province_modifier={name=mud duration=58}}
+		CHI_1600={add_province_modifier={name=mud duration=58}}
+		KOR_1624={add_province_modifier={name=mud duration=58}}
+		JAP_1640={add_province_modifier={name=mud duration=58}}
+		JAP_1665={add_province_modifier={name=mud duration=58}}
+		JAP_1655={add_province_modifier={name=mud duration=58}}
+		JAP_1657={add_province_modifier={name=mud duration=58}}
+		JAP_1675={add_province_modifier={name=mud duration=58}}
+		JAP_1647={add_province_modifier={name=mud duration=58}}
+		JAP_1649={add_province_modifier={name=mud duration=58}}
+		JAP_1672={add_province_modifier={name=mud duration=58}}
+		ENG_13={add_province_modifier={name=mud duration=58}}
+		USA_106={add_province_modifier={name=mud duration=58}}
+		USA_126={add_province_modifier={name=mud duration=58}}
+		USA_219={add_province_modifier={name=mud duration=58}}
+		USA_223={add_province_modifier={name=mud duration=58}}
+		USA_232={add_province_modifier={name=mud duration=58}}
+		PAN_1224={add_province_modifier={name=mud duration=58}}
+		BUK_1207={add_province_modifier={name=mud duration=58}}
+		RUS_977={add_province_modifier={name=mud duration=58}}
+		RUS_1037={add_province_modifier={name=mud duration=58}}
+		RUS_1060={add_province_modifier={name=mud duration=58}}
+		RUS_1102={add_province_modifier={name=mud duration=58}}
+		USA_151={add_province_modifier={name=mud duration=58}}
+		USA_78={add_province_modifier={name=mud duration=58}}
+		USA_158={add_province_modifier={name=mud duration=58}}
+		USA_168={add_province_modifier={name=mud duration=58}}
+		USA_178={add_province_modifier={name=mud duration=58}}
+		USA_247={add_province_modifier={name=mud duration=58}}
+		USA_243={add_province_modifier={name=mud duration=58}}
+		ENG_46={add_province_modifier={name=mud duration=58}}
+		ENG_58={add_province_modifier={name=mud duration=58}}
+		ENG_68={add_province_modifier={name=mud duration=58}}
+		MON_2582={add_province_modifier={name=mud duration=58}}
+	}
+}
+country_event = {
+	id = 200020
+	title = "Осенняя распутица перед суровой зимой"
+	desc = " "
+
+	trigger = {
+		tag = COM
+		month = 9
+		NOT = { has_country_flag = autumn_mud_before_cold_winter }
+	}
+
+	option = {
+		name = "ok"
+		set_country_flag = autumn_mud_before_cold_winter
+		SWE_308={add_province_modifier={name=mud duration=28}}
+		SWE_318={add_province_modifier={name=mud duration=28}}
+		RUS_336={add_province_modifier={name=mud duration=28}}
+		RUS_340={add_province_modifier={name=mud duration=28}}
+		TIB_1591={add_province_modifier={name=mud duration=28}}
+		RUS_349={add_province_modifier={name=mud duration=28}}
+		RUS_943={add_province_modifier={name=mud duration=28}}
+		RUS_1009={add_province_modifier={name=mud duration=28}}
+		RUS_1008={add_province_modifier={name=mud duration=28}}
+		RUS_994={add_province_modifier={name=mud duration=28}}
+		RUS_339={add_province_modifier={name=mud duration=28}}
+		RUS_998={add_province_modifier={name=mud duration=28}}
+		RUS_1020={add_province_modifier={name=mud duration=28}}
+		RUS_990={add_province_modifier={name=mud duration=28}}
+		RUS_1026={add_province_modifier={name=mud duration=28}}
+		RUS_2685={add_province_modifier={name=mud duration=28}}
+		RUS_1184={add_province_modifier={name=mud duration=28}}
+		RUS_1064={add_province_modifier={name=mud duration=28}}
+		RUS_1469={add_province_modifier={name=mud duration=28}}
+		RUS_1075={add_province_modifier={name=mud duration=28}}
+		CHI_2608={add_province_modifier={name=mud duration=28}}
+		RUS_1079={add_province_modifier={name=mud duration=28}}
+		RUS_2589={add_province_modifier={name=mud duration=28}}
+		CHI_1082={add_province_modifier={name=mud duration=28}}
+		CHI_1553={add_province_modifier={name=mud duration=28}}
+		KOR_1619={add_province_modifier={name=mud duration=28}}
+		JAP_1642={add_province_modifier={name=mud duration=28}}
+		CHI_1086={add_province_modifier={name=mud duration=28}}
+		USA_1={add_province_modifier={name=mud duration=28}}
+		ENG_30={add_province_modifier={name=mud duration=28}}
+		ENG_74={add_province_modifier={name=mud duration=28}}
+		USA_91={add_province_modifier={name=mud duration=28}}
+		USA_118={add_province_modifier={name=mud duration=28}}
+		ICL_252={add_province_modifier={name=mud duration=28}}
+	}
+}

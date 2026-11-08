@@ -1,0 +1,141 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+# these names can NOT be removed or changes, as the code uses them....
+##########################################################################
+# Difficulty Modifiers
+##########################################################################
+very_easy_player = {
+}
+easy_player = {
+}
+hard_player = {
+}
+very_hard_player = {
+}
+very_easy_ai = {
+
+}
+easy_ai = {
+}
+hard_ai = {
+}
+very_hard_ai = {
+}
+##########################################################################
+# Provincial Static Modifiers
+##########################################################################
+overseas = {
+}
+coastal = {
+	local_repair = -0.40
+}
+non_coastal = {
+}
+coastal_sea = {
+}
+sea_zone = {
+	max_attrition = 3      #Maximum Attrition is 3%
+}
+land_province = {
+	max_attrition = 1	#Maximum Attrition is 1%
+	supply_limit = 7
+}
+blockaded = {
+}
+no_adjacent_controlled = {
+	immigrant_attract = -5
+}
+core = {
+	immigrant_attract = 2
+}
+has_siege = {
+	supply_limit = -50
+}
+occupied = {
+	immigrant_attract = -5
+}
+nationalism = {
+}
+infrastructure = {
+	supply_limit = 5
+	local_factory_throughput = 0.50
+	local_factory_output = 0.05
+	local_RGO_output = 0.50
+        movement_cost = -0.70
+}
+##########################################################################
+# Global Static Modifiers
+##########################################################################
+base_values = {
+	mobilization_impact = 1000
+	#land_attack_modifier = -8
+	#land_defence_modifier = -8
+	#naval_attack_modifier = -8
+	#naval_defence_modifier = -8
+	#mobilisation_size = -1.00
+}
+war = {
+	max_war_exhaustion = 100	#base max at war.
+}
+peace = {
+	max_war_exhaustion = 50		#base max at peace.
+}
+disarming = {
+        mobilisation_size = -0.50
+}
+war_exhaustion = {
+	core_pop_consciousness_modifier = 0.01
+	cb_generation_speed_modifier = -0.003
+	social_reform_desire = 0.01
+	political_reform_desire = 0.01
+	#education_efficiency_modifier = -0.01
+	global_immigrant_attract = -0.02
+	global_assimilation_rate = -0.04
+	unit_recruitment_time = 0.01
+}
+badboy = {
+	global_immigrant_attract = -0.01
+	global_assimilation_rate = -0.02
+	non_accepted_pop_militancy_modifier = 0.002
+	cb_generation_speed_modifier = -0.01
+	factory_output = -0.0025
+	prestige = -0.004
+	research_points_modifier = -0.005
+	diplomatic_points_modifier = -0.01
+}
+debt_default_to = {
+}
+bad_debter = {
+	education_efficiency_modifier = -0.5
+}
+great_power = {
+}
+second_power = {
+}
+civ_nation = {
+}
+unciv_nation = {
+	education_efficiency_modifier = -0.50
+	diplomatic_points_modifier = -1
+}
+average_literacy = {
+	research_points = 6
+	leadership_modifier = 1
+	global_immigrant_attract = 0.20
+	self_unciv_economic_modifier = -0.40
+	self_unciv_military_modifier = -0.40
+	education_efficiency_modifier = -0.60
+}
+plurality = {
+	research_points_modifier = 0.01
+}
+generalised_debt_default = {
+}
+total_occupation = {
+	war_exhaustion = 0.05
+}
+total_blockaded = {
+}
+in_bankrupcy = {
+}

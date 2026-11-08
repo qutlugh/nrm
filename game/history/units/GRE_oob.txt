@@ -1,0 +1,45 @@
+army = {
+	name = "Greek rebellion army"
+	location = 805
+	regiment = {
+		name= "6. Taxiarchia Pezikou"
+		type = infantry
+		home = 839
+	}
+	regiment = {
+		name= "7. Taxiarchia Pezikou"
+		type = infantry
+		home = 839
+	}
+	regiment = {
+		name= "1. Taxiarchia Pezikou"
+		type = infantry
+		home = 834
+	}
+	regiment = {
+		name= "2. Taxiarchia Pezikou"
+		type = infantry
+		home = 834
+	}
+	regiment = {
+		name= "3. Taxiarchia Pezikou"
+		type = infantry
+		home = 834
+	}
+}
+navy = {
+	name = "Hellenic Navy"
+	location = 805
+	ship = {
+		name= "Amalia"
+		type = frigate
+	}
+	ship = {
+		name= "Loudovikos"
+		type = frigate
+	}
+	ship = {
+		name= "Leda"
+		type = frigate
+	}
+}

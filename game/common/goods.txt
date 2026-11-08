@@ -1,0 +1,274 @@
+# goods types, organized by category
+
+military_goods = {
+	ammunition = {
+		cost = 8.75
+		color = { 208 202 127 }
+		available_from_start = no
+	}
+	artillery1 = {
+		cost = 30.00
+		color = { 145 130 86 }
+		available_from_start = no
+	}
+	canned_food = {
+		cost = 8.00
+		color = { 255 39 12 }
+		available_from_start = no
+	}
+	military_supplies = {
+		cost = 25.00
+		color = { 255 39 12 }
+		available_from_start = no
+	}
+	navy_supplies = {
+		cost = 75.00
+		color = { 255 39 12 }
+		available_from_start = no
+	}
+	barrels = {
+		cost = 49.00
+		color = { 55 41 9 }
+		available_from_start = no
+	}
+	military_aeroplanes = {
+		cost = 70.00
+		color = { 221 213 182 }
+		available_from_start = no
+	}
+}
+raw_material_goods = {
+	cotton = {
+		cost = 1.0
+		color = { 255 255 255 }
+	}
+	dye = {
+		cost = 6.00
+		color = { 69 0 182 }
+	}
+	wool = {
+		cost = 1.0
+		color = { 234 195 158 }
+	}
+	silk = {
+		cost = 5.0
+		color = { 125 158 43 }
+	}
+	coal = {
+		cost = 1.15
+		color = { 11 29 77 }
+	}
+	sulphur = {
+		cost = 3.0
+		color = { 181 228 102 }
+	}
+	iron_ore = {
+		cost = 1.75
+		color = { 111 111 111 }
+	}
+	timber = {
+		cost = 0.45
+		color = { 146 72 17 }
+	}
+	tropical_wood = {
+		cost = 2.7
+		color = { 213 177 118 }
+	}
+	rubber = {
+		cost = 3.5
+		color = { 123 110 86 }
+	}
+	oil = {
+		cost = 6.0
+		color = { 0 0 0 }
+	}
+	precious_metal = {
+		cost = 3.2
+		color = { 253 199 110 }
+		money = yes
+                tradeable = no
+	}
+	tobacco = {
+		cost = 0.55
+		color = { 100 69 30 }
+	}
+}
+industrial_goods = {
+	steel = {
+		cost = 2.35
+		color = { 95 128 147 }
+	}
+	cement = {
+		cost = 8.0
+		color = { 185 187 164 }
+	}
+	iron = {
+		cost = 3.5
+		color = { 185 187 164 }
+	}
+        coking_coal = {
+		cost = 2.3
+		color = { 185 187 164 }
+	}
+	machine_parts = {
+		cost = 18.25
+		color = { 177 198 196 }
+		available_from_start = no
+	}
+	glass = {
+		cost = 1.45
+		color = { 201 200 199 }
+	}
+	fuel = {
+		cost = 12.50
+		color = { 145 110 89 }
+		available_from_start = no
+	}
+	fertilizer = {
+		cost = 5.0
+		color = { 133 101 35 }
+	}
+	explosives = {
+		cost = 10.00
+		color = { 192 68 20 }
+		available_from_start = no
+	}
+	clipper_convoy = {
+		cost = 21.00
+		color = { 21 65 30 }
+		overseas_penalty = yes
+		available_from_start = no
+	}
+	steamer_convoy = {
+		cost = 32.50
+		color = { 76 18 0 }
+		overseas_penalty = yes
+		available_from_start = no
+	}
+	electric_gear = {
+		cost = 8.00
+		available_from_start = no
+		color = { 255 255 0 }
+	}
+	fabric = {
+		cost = 0.9
+		color = { 186 50 40 }
+	}
+	lumber = {
+		cost = 0.5
+		color = { 180 94 26 }
+	}
+	paper = {
+		cost = 1.7
+		color = { 216 185 77 }
+	}
+	building_materials = {
+		cost = 10.0
+		color = { 116 85 23 }
+	}
+}
+consumer_goods = {
+	cattle = {
+		cost = 3.0
+		color = { 84 227 40 }
+	}
+	fish = {
+		cost = 4.0
+		color = { 128 98 73 }
+	}
+	fruit = {
+		cost = 0.9
+		color = { 255 0 0 }
+	}
+	grain = {
+		cost = 1.1
+		color = { 219 157 36 }
+	}
+	tea = {	
+		cost = 1.3
+		color = { 201 135 15 }
+	}
+	coffee = { 
+		cost = 1.05
+		color = { 27 19 7 }
+	}
+	opium = {
+		cost = 4
+		color = { 114 162 47 }
+	}
+	automobiles = {	
+		cost = 35.00
+		color = { 61 67 64 }
+		available_from_start = no
+	}
+	telephones = { 
+		cost = 8.00
+		color = { 123 112 54 }
+		available_from_start = no
+	}
+	wine = {
+		cost = 4.85
+		color = { 123 0 54 }
+	}
+	liquor = {
+		cost = 3.2
+		color = { 76 5 0 }
+	}
+	regular_clothes = {
+		cost = 2.9
+		color = { 217 17 19 }
+	}
+	luxury_clothes = {
+		cost = 32.50
+		color = { 234 227 40 }
+	}
+	furniture = {
+		cost = 2.45
+		color = { 173 129 40 }
+	}
+	luxury_furniture = {
+		cost = 29.50
+		color = { 255 140 184 }
+	}
+	radio = {
+		cost = 8.00
+		color = { 129 63 6 }
+		available_from_start = no
+	}
+	aeroplanes = {
+		cost = 55.00
+		color = { 221 213 182 }
+		available_from_start = no
+	}
+	tobacco_products = {
+		cost = 1.1
+		color = { 159 23 16 }
+	}
+	printing_products = {
+		cost = 1.7
+		color = { 21 124 142 }
+	}
+	food_products = {
+		cost = 2.5
+		color = { 21 124 142 }
+	}
+	tools = {
+		cost = 4.2
+		color = { 114 123 116 }
+	}
+	subsidiary_farm = {
+		cost = 0.3
+		color = { 253 199 110 }
+		money = yes
+                tradeable = no
+	}
+	energy = {
+		cost = 10.0
+		color = { 21 239 42 }
+	}
+	locomotives = {
+		cost = 10.0
+		color = { 21 239 42 }
+		available_from_start = no
+	}
+}

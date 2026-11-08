@@ -1,0 +1,37 @@
+howitzer = {
+	icon = 13
+	
+	type = land
+	sprite = Artillery
+	active = no
+	unit_type = support
+	floating_flag = no
+	primary_culture = yes
+
+	#Core Abilities
+	priority = 20
+	max_strength = 2
+	default_organisation = 15
+	maximum_speed = 2.00
+	weighted_value = 1.0
+
+	#Building Costs
+	build_time = 60
+	build_cost = {
+		military_supplies = 300
+	}
+
+	supply_consumption = 1.0
+	supply_cost = {
+		military_supplies = 0.32
+	}
+
+	#Land Abilties
+	reconnaissance = 0
+	attack = 4
+	defence = 4
+	discipline = 1
+	support = 4
+	maneuver = 1
+	siege = 1
+}

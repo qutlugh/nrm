@@ -1,0 +1,654 @@
+political_decisions = {
+	establish_the_sovnarkom = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = big_brother_is_watching
+				any_owned_province = { has_building = selector }
+			}
+			tag = SOV
+			government = proletarian_dictatorship
+		}
+		allow = {
+			mass_politics = 1
+		}
+		effect = {
+			any_pop = {
+				militancy = -4
+				consciousness = -4
+				ideology = {
+					value = communist
+					factor = 0.20
+				}
+			}
+			prestige = 100
+			set_country_flag = big_brother_is_watching
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	create_ussr = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+			tag = RUS
+			is_ideology_enabled = communist
+		}
+		allow = {
+			government = proletarian_dictatorship
+			NOT = {
+				any_owned_province = {
+					NOT = { is_core = THIS }
+				}
+			}
+		}
+		effect = {
+			prestige = 1000
+			change_tag = SOV
+			capital = 1008
+			998={change_province_name="Калинин" state_scope={change_region_name="§R(Дре-10)§! Калинин"}}
+			1048={change_province_name="Краснодар" state_scope={change_region_name="§R(Зер-10)§! Краснодар"}}
+			972 = { change_province_name = "Днепропетровск" }
+			994 = { change_province_name = "Ленинград" state_scope={change_region_name="§R(Дре-2)§! Ленинград"}}
+			975 = { change_province_name = "Сталино" }
+			1020 = { change_province_name = "Горький" }
+			1039 = { change_province_name = "Сталинград" }
+			1049 = { change_province_name = "Сочи" }
+			1058 = { change_province_name = "Свердловск" }
+			1207 = { change_province_name = "Сталинабад" }
+			1034 = { change_province_name = "Куйбышев" state_scope={change_region_name="§R(Жел-5)§! Куйбышев"}}
+			980 = { change_province_name = "Ворошиловград" }
+			976 = { change_province_name = "Жданов" }
+			1105 = { change_province_name = "Кировабад" }
+			1194 = { change_province_name = "Шевченко" }
+			1184 = { change_province_name = "Целиноград" }
+			1186 = { change_province_name = "Алма-Ата" }
+			1185 = { change_province_name = "Жамбыл" }
+			1189 = { change_province_name = "Фрунзе" }
+			1201 = { change_province_name = "Ленинабад" }
+			1196 = { change_province_name = "Дашховуз" }
+			1205 = { change_province_name = "Красноводск" }
+			1098 = { change_province_name = "Ереван" }
+			1099 = { change_province_name = "Ленинакан" }
+			1026 = { change_province_name = "Молотов" state_scope={change_region_name="§R(Жел-10)§! Молотов"}}
+			987 = { change_province_name = "Сыктывкар" }
+			1041 = { change_province_name = "Степной" }
+			349 = { change_province_name = "Таллин" }
+			POL = {
+				add_casus_belli = { target = THIS type = install_communism months = 240 }
+				add_casus_belli = { target = THIS type = prepare_war months = 240 }
+			}
+			MOL = { all_core = { remove_core = MOL }}
+			676 = { add_core = MOL }
+			677 = { add_core = MOL }
+			RUS = { all_core = { add_core = SOV }}
+			UKR = { all_core = { add_core = SOV remove_core = RUS }}
+			BYE = { all_core = { add_core = SOV remove_core = RUS }}
+			GEO = { all_core = { add_core = SOV remove_core = RUS }}
+			ARM = { all_core = { add_core = SOV remove_core = RUS }}
+			AZB = { all_core = { add_core = SOV remove_core = RUS }}
+			MOL = { all_core = { add_core = SOV remove_core = RUS }}
+			EST = { all_core = { add_core = SOV remove_core = RUS }}
+			LIT = { all_core = { add_core = SOV remove_core = RUS }}
+			LAT = { all_core = { add_core = SOV remove_core = RUS }}
+			UZB = { all_core = { add_core = SOV remove_core = RUS }}
+			KAZ = { all_core = { add_core = SOV remove_core = RUS }}
+			KYR = { all_core = { add_core = SOV remove_core = RUS }}
+			TAJ = { all_core = { add_core = SOV remove_core = RUS }}
+			TKM = { all_core = { add_core = SOV remove_core = RUS }}
+			political_reform = federation
+			add_accepted_culture = russian
+			add_accepted_culture = byelorussian
+			add_accepted_culture = ukrainian
+			add_accepted_culture = georgian
+			add_accepted_culture = armenian
+			add_accepted_culture = tatar
+			add_accepted_culture = turkmen
+			add_accepted_culture = uzbek
+			add_accepted_culture = kazak
+			add_accepted_culture = kirgiz
+			add_accepted_culture = azerbaijani
+			add_accepted_culture = north_caucasian
+			remove_country_modifier = civil_war2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	rm_soviet_industrialisation = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				any_owned_province = { has_building = selector }
+			}
+                	tag = SOV
+                	NOT = { has_country_flag = soviet_industrialisation_activated }
+                }
+
+		allow = {
+			market_regulations = 1
+			literacy = 0.5
+		}
+
+		effect = {
+                        add_country_modifier = { name = soviet_industrialisation duration = 3650 }
+			research_points = 30000
+                        set_country_flag = soviet_industrialisation_activated
+                        set_country_flag = soviet_industrialisation_started
+                        tech_school = soviet_tech_school
+                }
+	        ai_will_do = { factor = 1 }
+        }
+	five_year_plan_army = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+                        	has_country_modifier = five_year_plan_navy_modifier
+                        	has_country_modifier = five_year_plan_industry_modifier
+                        	has_country_modifier = five_year_plan_culture_modifier
+                        	has_country_modifier = five_year_plan_army_modifier
+                        	has_country_modifier = five_year_plan_likbez_modifier
+                        	has_country_modifier = five_year_plan_recovery_after_war_modifier
+				any_owned_province = { has_building = selector }
+			}
+			government = proletarian_dictatorship
+                }
+		allow = {
+                	economic_policy = planned_economy
+		}
+		effect = {
+                        add_country_modifier = { name = five_year_plan_army_modifier duration = 1825 }
+                }
+	        ai_will_do = { factor = 0 }
+        }
+	five_year_plan_culture = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+                        	has_country_modifier = five_year_plan_navy_modifier
+                        	has_country_modifier = five_year_plan_industry_modifier
+                        	has_country_modifier = five_year_plan_culture_modifier
+                        	has_country_modifier = five_year_plan_army_modifier
+                        	has_country_modifier = five_year_plan_likbez_modifier
+                        	has_country_modifier = five_year_plan_recovery_after_war_modifier
+				any_owned_province = { has_building = selector }
+			}
+			government = proletarian_dictatorship
+                }
+		allow = {
+                	economic_policy = planned_economy
+		}
+		effect = {
+                        add_country_modifier = { name = five_year_plan_culture_modifier duration = 1825 }
+                }
+	        ai_will_do = { factor = 0 }
+        }
+	five_year_plan_industry = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+                        	has_country_modifier = five_year_plan_navy_modifier
+                        	has_country_modifier = five_year_plan_industry_modifier
+                        	has_country_modifier = five_year_plan_culture_modifier
+                        	has_country_modifier = five_year_plan_army_modifier
+                        	has_country_modifier = five_year_plan_likbez_modifier
+                        	has_country_modifier = five_year_plan_recovery_after_war_modifier
+				any_owned_province = { has_building = selector }
+			}
+			government = proletarian_dictatorship
+                }
+		allow = {
+                	economic_policy = planned_economy
+		}
+		effect = {
+                        add_country_modifier = { name = five_year_plan_industry_modifier duration = 1825 }
+                }
+	        ai_will_do = { factor = 1 }
+        }
+	five_year_plan_navy = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+                        	has_country_modifier = five_year_plan_navy_modifier
+                        	has_country_modifier = five_year_plan_industry_modifier
+                        	has_country_modifier = five_year_plan_culture_modifier
+                        	has_country_modifier = five_year_plan_army_modifier
+                        	has_country_modifier = five_year_plan_likbez_modifier
+                        	has_country_modifier = five_year_plan_recovery_after_war_modifier
+				any_owned_province = { has_building = selector }
+			}
+			government = proletarian_dictatorship
+                }
+		allow = {
+                	economic_policy = planned_economy
+		}
+		effect = {
+                        add_country_modifier = { name = five_year_plan_navy_modifier duration = 1825 }
+                        any_owned = {
+				limit = {
+					is_core = THIS
+					has_building = naval_base
+				}
+				add_province_modifier = {
+					name = five_year_plan_navy_local_modifier
+					duration = 1825
+				}
+                        }
+                }
+	        ai_will_do = { factor = 0 }
+        }
+	five_year_plan_likbez = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+                        	has_country_modifier = five_year_plan_navy_modifier
+                        	has_country_modifier = five_year_plan_industry_modifier
+                        	has_country_modifier = five_year_plan_culture_modifier
+                        	has_country_modifier = five_year_plan_army_modifier
+                        	has_country_modifier = five_year_plan_likbez_modifier
+                        	has_country_modifier = five_year_plan_recovery_after_war_modifier
+				any_owned_province = { has_building = selector }
+			}
+			government = proletarian_dictatorship
+                }
+		allow = {
+                	economic_policy = planned_economy
+			NOT = { literacy = 0.90 }
+		}
+		effect = {
+                        add_country_modifier = { name = five_year_plan_likbez_modifier duration = 1825 }
+                }
+	        ai_will_do = { factor = 1 }
+        }
+	five_year_plan_recovery_after_war = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+                        	has_country_modifier = five_year_plan_navy_modifier
+                        	has_country_modifier = five_year_plan_industry_modifier
+                        	has_country_modifier = five_year_plan_culture_modifier
+                        	has_country_modifier = five_year_plan_army_modifier
+                        	has_country_modifier = five_year_plan_likbez_modifier
+                        	has_country_modifier = five_year_plan_recovery_after_war_modifier
+				any_owned_province = { has_building = selector }
+			}
+			government = proletarian_dictatorship
+                }
+		allow = {
+                	economic_policy = planned_economy
+			war_exhaustion = 10
+			war = no
+		}
+		effect = {
+                        add_country_modifier = { name = five_year_plan_recovery_after_war_modifier duration = 1825 }
+                }
+	        ai_will_do = { factor = 0 }
+        }
+	create_cheka = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = cheka_created
+				any_owned_province = { has_building = selector }
+			}
+			tag = SOV
+		}
+		allow = {
+                        government = proletarian_dictatorship
+		}
+		effect = {
+                        set_country_flag = cheka_created
+                        add_country_modifier = { name = cheka duration = -1 }
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	socialist_homeland_is_in_danger = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_modifier = socialist_homeland_is_in_danger_modifier
+				any_owned_province = { has_building = selector }
+			}
+			OR = {
+				tag = SOV
+				AND = {
+					tag = RUS
+					government = proletarian_dictatorship
+				}
+			}
+		}
+		allow = {
+			war = yes
+			national_provinces_occupied = 0.10
+		}
+		effect = {
+                        add_country_modifier = { name = socialist_homeland_is_in_danger_modifier duration = 365 }
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	soviet_karelia = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = karelia_is_soviet
+				any_owned_province = { has_building = selector }
+			}
+			339 = {
+				is_core = FIN
+				NOT = { AND = { owned_by = THIS is_core = THIS }}
+				owner = { NOT = { AND = { tag = FIN government = proletarian_dictatorship }}}
+			}
+			982 = {
+				is_core = FIN
+				NOT = { AND = { owned_by = THIS is_core = THIS }}
+				owner = { NOT = { AND = { tag = FIN government = proletarian_dictatorship }}}
+			}
+			tag = SOV
+		}
+		allow = {
+			339 = { controlled_by = THIS }
+			982 = { controlled_by = THIS }
+		}
+		effect = {
+			badboy = 10
+			339 = {
+				add_core = THIS
+				remove_core = FIN
+				secede_province = THIS
+			}
+			982 = {
+				add_core = THIS
+				remove_core = FIN
+				secede_province = THIS
+			}
+			set_country_flag = karelia_is_soviet
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	create_komintern = {
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = komintern_is_worked
+				any_owned_province = { has_building = selector }
+			}
+			government = proletarian_dictatorship
+			has_country_flag = communist_world_leader
+                }
+		allow = {
+			revolution_n_counterrevolution = 1
+		}
+		effect = {
+			prestige = 250
+			any_country = {
+				limit = { NOT = { government = proletarian_dictatorship }}
+				relation = { who = THIS value = -400 }
+			}
+			any_country = {
+				limit = { government = proletarian_dictatorship }
+				set_country_flag = komintern_worked_in_country
+			}
+                        add_country_modifier = { name = komintern_is_working duration = -1 }
+			set_country_flag = komintern_worked_in_country
+			set_global_flag = komintern_is_worked
+		}
+	        ai_will_do = { factor = 1 }
+	}
+	form_anticolonial_league = {
+                alert = yes
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_global_flag = anticolonial_league_formed
+				any_owned_province = { has_building = selector }
+			}
+                        government = proletarian_dictatorship
+                        has_country_flag = communist_world_leader
+		}
+		
+		allow = {
+			mass_politics = 1
+			NOT = {
+				any_owned_province = {
+					NOT = { is_core = THIS }
+				}
+			}
+		}
+		
+		effect = {
+			set_global_flag = anticolonial_league_formed
+			set_country_flag = anticolonial_league_works_here
+			any_pop = {
+				limit = { is_accepted_culture = no }
+				militancy = 9
+			}
+			any_country = {
+				limit = {
+					colonial_nation = yes
+					NOT = {
+						has_country_flag = say_no_anticolonial_league
+						has_country_flag = supply_anticolonial_league
+					}
+				}
+				country_event = { id = 14801 days = 30 }
+			}
+		}
+	        ai_will_do = { factor = 0 }
+	}
+	become_communist_world_leader = {
+                alert = yes
+                picture = form_anticolonial_league
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = communist_world_leader
+				has_global_flag = has_communist_world_leader
+				any_greater_power = {
+					OR = {
+						has_country_flag = communist_world_leader
+						government = fascist_dictatorship
+					}
+				}
+				any_owned_province = { has_building = selector }
+			}
+			government = proletarian_dictatorship
+		}
+		allow = {
+			government = proletarian_dictatorship
+			OR = {
+				ruling_party_ideology = communist
+				ruling_party_ideology = socialist
+			}
+			military_score = 1000
+			rank = 4
+		}
+		effect = {
+			set_country_flag = communist_world_leader
+			set_global_flag = has_communist_world_leader
+			any_country = {
+				limit = { ai = no }
+				country_event = 1810052
+			}
+			remove_country_modifier = sanction
+		}
+		ai_will_do = { factor = 1 }
+	}
+	become_new_communist_world_leader = {
+                alert = yes
+                picture = form_anticolonial_league
+		potential = {
+			NOT = {
+				has_country_flag = resources_des_window
+				has_country_flag = international_des_window
+				has_country_flag = politics_des_window 
+				has_country_flag = givemoney
+				has_country_flag = nuke_des_window
+				has_country_flag = sell_and_buy_window
+				has_country_flag = ministry_cabinet_opened
+				has_country_flag = communist_world_leader
+				any_owned_province = { has_building = selector }
+			}
+			government = proletarian_dictatorship
+			is_greater_power = yes
+			has_global_flag = has_communist_world_leader
+		}
+		allow = {
+			government = proletarian_dictatorship
+			OR = {
+				AND = {
+					any_greater_power = {
+						has_country_flag = communist_world_leader
+						NOT = { rank = 7 }
+					}
+					THIS = { rank = 7 }
+				}
+				AND = {
+					any_greater_power = {
+						has_country_flag = communist_world_leader
+						NOT = { rank = 6 }
+					}
+					THIS = { rank = 6 }
+				}
+				AND = {
+					any_greater_power = {
+						has_country_flag = communist_world_leader
+						NOT = { rank = 5 }
+					}
+					THIS = { rank = 5 }
+				}
+				AND = {
+					any_greater_power = {
+						has_country_flag = communist_world_leader
+						NOT = { rank = 4 }
+					}
+					THIS = { rank = 4 }
+				}
+				AND = {
+					any_greater_power = {
+						has_country_flag = communist_world_leader
+						NOT = { rank = 3 }
+					}
+					THIS = { rank = 3 }
+				}
+   				AND = {
+					any_greater_power = {
+						has_country_flag = communist_world_leader
+						NOT = { rank = 2 }
+					}
+					THIS = { rank = 2 }
+				}
+				AND = {
+					any_greater_power = {
+						has_country_flag = communist_world_leader
+						NOT = { rank = 1 }
+					}
+					THIS = { rank = 1 }
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = { has_country_flag = communist_world_leader }
+				country_event = 1810044
+			}
+		}
+	        ai_will_do = { factor = 1 }
+	}
+}
