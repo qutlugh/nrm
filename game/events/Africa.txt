@@ -152,6 +152,7 @@ province_event = {
 			is_core = INO
 		}
 		NOT = { life_rating = 20 }
+		owner = { NOT = { has_country_flag = western_medicine_introduced } }
 		OR = {
 			owner = { invention = colonial_negotiations }
 			any_greater_power = { invention = colonial_negotiations }
@@ -161,6 +162,7 @@ province_event = {
 
 	option = {
 		name = "Пусть плодятся, нам нужны рабочие руки!"
+		owner = { set_country_flag = western_medicine_introduced }
 		state_scope = { any_owned = {
 			limit = { NOT = { life_rating = 20 } }
 			life_rating = 25
