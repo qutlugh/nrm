@@ -1185,7 +1185,7 @@ iron_mine_5 = {
 	provinces = {
 		275 409 722 398 579 682 319 879
 		1017 1034 1701 1811 1525 1670 519
-		2497 1262 885 1118
+		2497 1262 885 1118 963
 	}
 	production_type = iron_mine_production
 	strategic_factory = yes
@@ -1229,7 +1229,7 @@ iron_mine_10 = {
 
 	default_enabled = yes
 	provinces = {
-		489 326 1031 226 2443 1552 2485 963
+		489 326 1031 226 2443 1552 2485
 	}
 	production_type = iron_mine_production
 	strategic_factory = yes
