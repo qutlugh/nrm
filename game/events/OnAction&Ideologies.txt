@@ -518,22 +518,35 @@ country_event = {
 
 	trigger = {
 		OR = {
-			industrial_score = 500
-			AND = { industrial_score = 450 literacy = 0.1 }
-			AND = { industrial_score = 400 literacy = 0.2 }
-			AND = { industrial_score = 350 literacy = 0.3 }
-			AND = { industrial_score = 300 literacy = 0.4 }
-			AND = { industrial_score = 250 literacy = 0.5 }
-			AND = { industrial_score = 200 literacy = 0.6 }
-			AND = { industrial_score = 150 literacy = 0.7 }
-			AND = { industrial_score = 100 literacy = 0.8 }
-			AND = { industrial_score = 50 literacy = 0.9 }
+			AND = {
+				government = proletarian_dictatorship
+				NOT = { has_country_flag = nrm_communist_pop_conversion }
+			}
+			AND = {
+				NOT = { government = proletarian_dictatorship }
+				OR = {
+					industrial_score = 500
+					AND = { industrial_score = 450 literacy = 0.1 }
+					AND = { industrial_score = 400 literacy = 0.2 }
+					AND = { industrial_score = 350 literacy = 0.3 }
+					AND = { industrial_score = 300 literacy = 0.4 }
+					AND = { industrial_score = 250 literacy = 0.5 }
+					AND = { industrial_score = 200 literacy = 0.6 }
+					AND = { industrial_score = 150 literacy = 0.7 }
+					AND = { industrial_score = 100 literacy = 0.8 }
+					AND = { industrial_score = 50 literacy = 0.9 }
+				}
+				private_property = prohibited
+				NOT = { nationalvalue = nv_socialism }
+			}
 		}
-		private_property = prohibited
-		NOT = { nationalvalue = nv_socialism }
 	}
 	mean_time_to_happen = {
 		months = 60
+		modifier = {
+			factor = 0.01
+			government = proletarian_dictatorship
+		}
 		modifier = {
 			factor = 0.9
 			industrial_score = 100
@@ -602,8 +615,17 @@ country_event = {
 
 	option = {
 		name = "Вперёд, к коммунизму!"
-		political_reform = prohibited
-		nationalvalue = nv_socialism
+		random_owned = {
+			limit = { owner = { NOT = { government = proletarian_dictatorship } } }
+			owner = {
+				political_reform = prohibited
+				nationalvalue = nv_socialism
+			}
+		}
+		random_owned = {
+			limit = { owner = { government = proletarian_dictatorship } }
+			owner = { set_country_flag = nrm_communist_pop_conversion }
+		}
 		any_pop = {
 			limit = {
 				pop_type = capitalists
@@ -619,20 +641,37 @@ country_event = {
 	picture = "socialism_was_crushed"
 
 	trigger = {
-		nationalvalue = nv_socialism
-		NOT = { private_property = prohibited }
+		NOT = { government = proletarian_dictatorship }
+		OR = {
+			has_country_flag = nrm_communist_pop_conversion
+			AND = {
+				nationalvalue = nv_socialism
+				NOT = { private_property = prohibited }
+			}
+		}
 	}
 
 	option = {
 		name = "Если будут бунтовать - расстреляем!"
-		political_reform = enshrined
-		nationalvalue = nv_imperialism
+		random_owned = {
+			limit = {
+				owner = {
+					nationalvalue = nv_socialism
+					NOT = { private_property = prohibited }
+				}
+			}
+			owner = {
+				political_reform = enshrined
+				nationalvalue = nv_imperialism
+			}
+		}
 		any_pop = {
 			limit = {
-				pop_type = capitalists
+				pop_type = state_managers
 			}
-			pop_type = state_managers
+			pop_type = capitalists
 		}
+		clr_country_flag = nrm_communist_pop_conversion
 	}
 }
 country_event = {
