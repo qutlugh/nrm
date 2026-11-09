@@ -1183,9 +1183,31 @@ iron_mine_5 = {
 
 	default_enabled = yes
 	provinces = {
-		275 409 722 398 579 682 2236 319 879
+		275 409 722 398 579 682 319 879
 		1017 1034 1701 1811 1525 1670 519
 		2497 1262 885 1118
+	}
+	production_type = iron_mine_production
+	strategic_factory = yes
+	pop_build_factory = yes
+}
+iron_mine_8 = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 8
+	goods_cost =
+	{
+		tools = 500
+		building_materials = 500
+	}
+	time = 30
+	visibility = yes
+	onmap = no
+
+	default_enabled = yes
+	provinces = {
+		2236
 	}
 	production_type = iron_mine_production
 	strategic_factory = yes

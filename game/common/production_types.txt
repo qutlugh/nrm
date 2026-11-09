@@ -131,6 +131,7 @@ ironworks = {
 				has_building = iron_mine_1
 				has_building = iron_mine_2
 				has_building = iron_mine_5
+				has_building = iron_mine_8
 				has_building = iron_mine_10
 				has_building = iron_mine_15
 			}
@@ -1165,6 +1166,7 @@ pyrite_roasting_factory = {
 				has_building = iron_mine_1
 				has_building = iron_mine_2
 				has_building = iron_mine_5
+				has_building = iron_mine_8
 				has_building = iron_mine_10
 				has_building = iron_mine_15
 			}

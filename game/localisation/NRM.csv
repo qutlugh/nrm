@@ -5013,6 +5013,8 @@ iron_mine_2;Железная шахта (Мелкая);X
 iron_mine_2_desc; ;X
 iron_mine_5;Железная шахта (Средняя);X
 iron_mine_5_desc; ;X
+iron_mine_8;Железная шахта (до 8 уровня);X
+iron_mine_8_desc; ;X
 iron_mine_10;Железная шахта (Большая);X
 iron_mine_10_desc; ;X
 iron_mine_15;Железная шахта (Огромная);X
