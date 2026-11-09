@@ -406,13 +406,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1800937 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём оружие массового поражения!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1800937 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -434,13 +434,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 18009377 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Плохая сделка"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 18009377 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -3080,13 +3080,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810095 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810095 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -3122,13 +3122,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810098 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810098 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -3164,13 +3164,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810101 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810101 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -4374,13 +4374,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810155 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810155 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -4436,13 +4436,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810158 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810158 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -4506,13 +4506,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810161 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810161 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -4548,13 +4548,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810163 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810163 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -4590,13 +4590,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810165 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810165 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -4632,13 +4632,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810167 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810167 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -4674,13 +4674,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810169 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810169 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -4716,13 +4716,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810171 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810171 }
 		ai_chance = { factor = 1 }
 	}
 }
@@ -4758,13 +4758,13 @@ country_event = {
 	option = {
 		name = "Продать"
 		prestige_factor = -0.05
-                FROM = { country_event = 1810173 }
+                FROM = { country_event = 1800936 }
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Мы не продаём наши секреты!"
-		FROM = { country_event = 1800936 }
+		FROM = { country_event = 1810173 }
 		ai_chance = { factor = 1 }
 	}
 }
