@@ -541,10 +541,7 @@ political_decisions = {
 				has_country_flag = communist_world_leader
 				has_global_flag = has_communist_world_leader
 				any_greater_power = {
-					OR = {
-						has_country_flag = communist_world_leader
-						government = fascist_dictatorship
-					}
+					has_country_flag = communist_world_leader
 				}
 				any_owned_province = { has_building = selector }
 			}
