@@ -3016,21 +3016,12 @@ country_event = {
 	desc = "ќдна из великих держав включила нашу славную страну в сферу своего вли€ни€, с чем мы категорически не согласны. ћы будем этому противодействовать!"
 
 	trigger = {
+		ai = yes
 		OR = {
-			ai = no
-			tag = USA
-			tag = FRA
-			tag = ENG
-			tag = TUR
-			tag = JAP
-			tag = GER
-			tag = RUS
-			tag = SOV
-			tag = NGF
+			tag = AUS
 			tag = PRU
+			tag = GER
 			tag = KUK
-			tag = ITA
-			tag = SPA
 		}
 		number_of_states = 3
 		part_of_sphere = yes
